@@ -93,7 +93,7 @@
 							<top>20</top>
 							<width>84</width>
 							<height>120</height>
-							<texture fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
 							<bordertexture>colors/white.png</bordertexture>
 							<bordersize>1</bordersize>
@@ -197,7 +197,7 @@
 							<top>20</top>
 							<width>84</width>
 							<height>120</height>
-							<texture fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
 							<bordertexture>colors/white.png</bordertexture>
 							<bordersize>1</bordersize>
@@ -472,7 +472,7 @@
 							<top>20</top>
 							<width>84</width>
 							<height>120</height>
-							<texture fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+							<texture fallback="DefaultVideo.png">$VAR[InfoWallThumbVar]</texture>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
 							<bordertexture>colors/white.png</bordertexture>
 							<bordersize>1</bordersize>
@@ -525,7 +525,7 @@
 							<top>20</top>
 							<width>84</width>
 							<height>120</height>
-							<texture fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+							<texture fallback="DefaultVideo.png">$VAR[InfoWallThumbVar]</texture>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
 							<bordertexture>colors/white.png</bordertexture>
 							<bordersize>1</bordersize>
