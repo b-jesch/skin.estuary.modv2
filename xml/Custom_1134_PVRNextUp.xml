@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1134">
+	<onload>Dialog.Close(fullscreeninfo,true)</onload>
+	<visible>Window.IsActive(fullscreenvideo) + VideoPlayer.Content(livetv) + !Skin.HasSetting(disable_PVRNextUp)</visible>
+	<visible>!Window.IsVisible(VideoOSD.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRChannelGuide.xml) + !Window.IsVisible(DialogFullScreenInfo.xml) + !Window.IsVisible(Custom_1135_PVROverlay.xml)</visible>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(videoosd) + Window.IsVisible(fullscreenvideo) + [String.IsEqual(PVR.EpgEventRemainingTime,00:30) | String.IsEqual(PVR.EpgEventRemainingTime,00:29) | String.IsEqual(PVR.EpgEventRemainingTime,00:28) | String.IsEqual(PVR.EpgEventRemainingTime,00:27) | String.IsEqual(PVR.EpgEventRemainingTime,00:26) | String.IsEqual(PVR.EpgEventRemainingTime,00:25) | String.IsEqual(PVR.EpgEventRemainingTime,00:24) | String.IsEqual(PVR.EpgEventRemainingTime,00:23) | String.IsEqual(PVR.EpgEventRemainingTime,00:22) | String.IsEqual(PVR.EpgEventRemainingTime,00:21) | String.IsEqual(PVR.EpgEventRemainingTime,00:20) | String.IsEqual(PVR.EpgEventRemainingTime,00:19) | String.IsEqual(PVR.EpgEventRemainingTime,00:18) | String.IsEqual(PVR.EpgEventRemainingTime,00:17) | String.IsEqual(PVR.EpgEventRemainingTime,00:16) | String.IsEqual(PVR.EpgEventRemainingTime,00:15) | String.IsEqual(PVR.EpgEventRemainingTime,00:14) | String.IsEqual(PVR.EpgEventRemainingTime,00:13) | String.IsEqual(PVR.EpgEventRemainingTime,00:12) | String.IsEqual(PVR.EpgEventRemainingTime,00:11) | String.IsEqual(PVR.EpgEventRemainingTime,00:10) | String.IsEqual(PVR.EpgEventRemainingTime,00:09) | String.IsEqual(PVR.EpgEventRemainingTime,00:08) | String.IsEqual(PVR.EpgEventRemainingTime,00:07) | String.IsEqual(PVR.EpgEventRemainingTime,00:06) | String.IsEqual(PVR.EpgEventRemainingTime,00:05)]</visible>
+			<right>64</right>
+			<bottom>90</bottom>
+			<width>378</width>
+			<height>324</height>
+			<control type="image">
+				<top>30</top>
+				<width>378</width>
+				<height>256</height>
+				<texture>dialogs/nextup/nextup.png</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="image" description="blackline">
+				<top>30</top>
+				<width>378</width>
+				<height>36</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture>dialogs/nextup/nextup.png</texture>
+			</control>
+			<control type="label">
+				<top>30</top>
+				<width>378</width>
+				<height>36</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<textoffsetx>5</textoffsetx>
+				<font>font12</font>
+				<shadowcolor>black</shadowcolor>
+				<label>[UPPERCASE]$LOCALIZE[40196][/UPPERCASE]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="image" id="123123">
+				<top>76</top>
+				<left>10</left>
+				<width>358</width>
+				<height>200</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.NextTitle]&amp;channel=$INFO[VideoPlayer.ChannelName]&amp;type=landscape,fanart,thumb,poster</texture>
+			</control>
+			<control type="image">
+				<top>76</top>
+				<left>10</left>
+				<width>358</width>
+				<height>200</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="DefaultVideoFanart.png">$INFO[Player.Art(thumb)]</texture>
+				<visible>String.IsEmpty(Control.GetLabel(123123))</visible>
+			</control>
+			<control type="image">
+				<top>286</top>
+				<width>378</width>
+				<height>68</height>
+				<texture colordiffuse="$VAR[SkinColorVar]">colors/white.png</texture>
+			</control>
+			<control type="label">
+				<top>286</top>
+				<width>378</width>
+				<height>68</height>
+				<font>font12</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx>5</textoffsetx>
+				<scroll>true</scroll>
+				<label>$INFO[VideoPlayer.NextTitle]</label>
+			</control>
+		</control>
+	</controls>
+</window>

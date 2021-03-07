@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="5533">
+    <defaultcontrol always="true">2000</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <include>Animation_DialogPopupOpenClose</include>
+	<depth>DepthOSD</depth>
+    <controls>
+        <control type="group">
+            <centerleft>50%</centerleft>
+            <width>600</width>
+            <top>390</top>
+            <control type="image">
+                <left>5</left>
+                <top>5</top>
+                <width>600</width>
+                <height>174</height>
+                <texture colordiffuse="dialog_tint">colors/white.png</texture>
+            </control>
+            <control type="group">
+                <left>17</left>
+                <top>16</top>
+                <!-- Window Title -->
+                <control type="label" id="1700">
+                    <left>20</left>
+                    <top>10</top>
+                    <width>540</width>
+                    <height>30</height>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <label />
+                    <align>center</align>
+                    <visible>true</visible>
+                </control>
+                <control type="label" id="1701">
+                    <left>10</left>
+                    <top>50</top>
+                    <width>560</width>
+                    <height>30</height>
+                    <font>font13_title</font>
+                    <textcolor>$VAR[SkinColorVar]</textcolor>
+                    <label />
+                    <align>center</align>
+                    <visible>true</visible>
+                </control>
+                <control type="label" id="1702">
+                    <left>10</left>
+                    <top>70</top>
+                    <width>560</width>
+                    <height>30</height>
+                    <font>font13_title</font>
+                    <textcolor>$VAR[SkinColorVar]</textcolor>
+                    <label />
+                    <align>center</align>
+                    <visible>true</visible>
+                </control>
+                <control type="label" id="1703">
+                    <left>10</left>
+                    <top>90</top>
+                    <width>560</width>
+                    <height>30</height>
+                    <font>font13_title</font>
+                    <textcolor>$VAR[SkinColorVar]</textcolor>
+                    <label />
+                    <align>center</align>
+                    <visible>true</visible>
+                </control>
+                <control type="progress" id="1704">
+                    <left>10</left>
+                    <top>140</top>
+                    <width>555</width>
+                    <height>12</height>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

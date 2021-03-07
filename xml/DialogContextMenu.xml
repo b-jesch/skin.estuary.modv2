@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>996</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+		<origin x="50%" y="400">Window.IsActive(Home)</origin>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<left>-1920</left>
+			<top>-1080</top>
+			<width>5760</width>
+			<height>3240</height>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<texture colordiffuse="B0FFFFFF">colors/black.png</texture>
+		</control>
+		<control type="button">
+			<left>-1920</left>
+			<top>-1080</top>
+			<width>5760</width>
+			<height>3240</height>
+			<texturefocus />
+			<texturenofocus />
+			<onclick>Action(close)</onclick>
+		</control>
+		<control type="group">
+			<animation effect="slide" end="0,-263" time="0" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(Custom_1132_MoviesSetsInfo.xml)">Conditional</animation>
+			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(home)">Conditional</animation>
+			<animation effect="slide" end="-340,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40005]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-370,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40005]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="0,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[535])">Conditional</animation>
+			<animation effect="slide" end="0,-60" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31107])">Conditional</animation>
+			<animation effect="slide" end="-96,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20021]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-128,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20021]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="12,-50" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31101])">Conditional</animation>
+			<animation effect="slide" end="44,-110" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31100]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="0,-110" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31100]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-19,-50" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40016]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-39,-50" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40016]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-6,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-20,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-6,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40015]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-20,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40015]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="2.5,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20445]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="0,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20445]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40017]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40017]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40146]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="0,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40146]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-40,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20020]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-40,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20020]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<control type="group">
+			<width>510</width>
+			<height>80</height>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<bottom>0</bottom>
+				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<height>70</height>
+				<texture colordiffuse="$VAR[SkinColorVar]" border="2">colors/white70.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<height>70</height>
+				<texture colordiffuse="$VAR[GradientColorVar]" border="2">lists/focus-gradient.png</texture>
+				<visible>Skin.HasSetting(EnableGradientColor)</visible>
+			</control>
+			<control type="label">
+				<left>20</left>
+				<top>0</top>
+				<right>80</right>
+				<height>70</height>
+				<font>font32_title</font>
+				<label>$LOCALIZE[40024]</label>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="button" id="22002">
+				<description>button overlay to avoid closing in dialog area</description>
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<bottom>0</bottom>
+				<texturefocus />
+				<texturenofocus />
+			</control>
+			<control type="radiobutton">
+				<right>10</right>
+				<top>11</top>
+				<width>48</width>
+				<height>48</height>
+				<radiowidth>48</radiowidth>
+				<radioheight>48</radioheight>
+				<texturefocus />
+				<texturenofocus />
+				<label/>
+				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
+				<onclick>Action(close)</onclick>
+				<visible>!Skin.HasSetting(touchmode)</visible>
+			</control>
+			<control type="button">
+				<right>10</right>
+				<top>11</top>
+				<width>48</width>
+				<height>48</height>
+				<texturefocus>dialogs/close.png</texturefocus>
+				<texturenofocus>dialogs/close.png</texturenofocus>
+				<onclick>Action(close)</onclick>
+				<visible>Skin.HasSetting(touchmode)</visible>
+			</control>
+		</control>
+			<control type="image" id="999">
+				<description>background image</description>
+				<left>0</left>
+				<top>80</top>
+				<width>510</width>
+				<height>780</height>
+				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+			</control>
+			<control type="grouplist" id="996">
+				<description>grouplist for context buttons</description>
+				<left>0</left>
+				<top>80</top>
+				<width>510</width>
+				<height max="780">auto</height>
+				<usecontrolcoords>true</usecontrolcoords>
+			</control>
+			<include content="UpDownArrows">
+				<param name="container_id" value="996" />
+				<param name="posx" value="201" />
+				<param name="up_posy" value="-120" />
+				<param name="down_posy" value="878" />
+			</include>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<left>0</left>
+			<top></top>
+			<width>510</width>
+			<height>65</height>
+			<align>center</align>
+			<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+			<texturenofocus />
+		</control>
+	</controls>
+</window>

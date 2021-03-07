@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="View_501_Banner">
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<left>80</left>
+			<top>0</top>
+			<visible>Control.IsVisible(501)</visible>
+			<include>Visible_Right</include>
+			<control type="panel" id="501">
+				<right>0</right>
+				<top>0</top>
+				<width>1840</width>
+				<height>100%</height>
+				<oninfo condition="String.IsEqual(ListItem.DBType,set)">ActivateWindow(1132)</oninfo>
+				<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
+				<onright>531</onright>
+				<onup>501</onup>
+				<ondown>501</ondown>
+				<viewtype label="20020">wide</viewtype>
+				<preloaditems>2</preloaditems>
+				<pagecontrol>531</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				<animation effect="slide" end="-20,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+				<itemlayout height="275" width="900">
+					<control type="group">
+						<top>130</top>
+						<control type="image">
+							<left>-2</left>
+							<top>-2</top>
+							<width>864</width>
+							<height>242</height>
+							<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-bannerlayout.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+							<visible>Skin.HasSetting(show_borders)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>238</height>
+							<texture background="true">dialogs/dialog-bg-nobo.png</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>Skin.HasSetting(show_borders)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>238</height>
+							<texture background="true">dialogs/dialog-bg-nobo.png</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+							<visible>!Skin.HasSetting(show_borders)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>195</height>
+							<texture background="true">$INFO[ListItem.Art(banner)]</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>195</height>
+							<texture background="true" fallback="DefaultBanner.png">$INFO[ListItem.Art(fanart)]</texture>
+							<aspectratio aligny="center" align="center">scale</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
+						</control>
+						<control type="image">
+							<left>40</left>
+							<top>30</top>
+							<width>348</width>
+							<height>135</height>
+							<texture background="true">$VAR[LibraryClearLogoVar]</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>195</height>
+							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">DefaultBackBanner.png</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<top>175</top>
+							<width>760</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font25_title</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<visible>Container.Content(movies)</visible>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<top>175</top>
+							<width>560</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font25_title</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<visible>Container.Content(tvshows)</visible>
+						</control>
+						<control type="image">
+							<left>30</left>
+							<top>181</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+						</control>
+						<control type="image">
+							<right>75</right>
+							<top>183</top>
+							<width>28</width>
+							<height>28</height>
+							<texture>lists/played-total.png</texture>
+							<visible>String.IsEqual(Listitem.dbtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						</control>
+						<control type="label">
+							<right>118</right>
+							<top>175</top>
+							<width>150</width>
+							<height>43</height>
+							<font>font25_title</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$VAR[BannerLabel2Var]</label>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>20</top>
+							<width>820</width>
+							<height>198</height>
+							<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
+						</control>
+						<control type="image">
+							<left>18</left>
+							<top>18</top>
+							<width>824</width>
+							<height>202</height>
+							<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>228</top>
+							<width>820</width>
+							<height>4</height>
+							<texture>dialogs/back.png</texture>
+							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+						</control>
+						<control type="progress">
+							<left>20</left>
+							<top>200</top>
+							<width>820</width>
+							<height>1</height>
+							<texturebg></texturebg>
+							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+							<info>ListItem.PercentPlayed</info>
+							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+						</control>
+						<control type="group">
+							<left>405</left>
+							<top>1</top>
+							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircle</include>
+						</control>
+						<control type="group">
+							<left>405</left>
+							<top>1</top>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircleGreyed</include>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="275" width="900">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+       					</animation>
+						<top>130</top>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>238</height>
+							<texture background="true">dialogs/dialog-bg-nobo.png</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<left>-6</left>
+							<top>-6</top>
+							<width>872</width>
+							<height>250</height>
+							<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<left>-6</left>
+							<top>-6</top>
+							<width>872</width>
+							<height>250</height>
+							<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
+							<bordersize>20</bordersize>
+							<visible>Skin.HasSetting(EnableGradientColor)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>195</height>
+							<texture background="true">$INFO[ListItem.Art(banner)]</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>195</height>
+							<texture background="true" fallback="DefaultBanner.png">$INFO[ListItem.Art(fanart)]</texture>
+							<aspectratio aligny="center" align="center">scale</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
+						</control>
+						<control type="image">
+							<left>40</left>
+							<top>30</top>
+							<width>348</width>
+							<height>135</height>
+							<texture background="true">$VAR[LibraryClearLogoVar]</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>195</height>
+							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">DefaultBackBanner.png</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<top>175</top>
+							<width>760</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font25_title</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<visible>Container.Content(movies)</visible>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<top>175</top>
+							<width>560</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font25_title</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<visible>Container.Content(tvshows)</visible>
+						</control>
+						<control type="image">
+							<left>30</left>
+							<top>181</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+						</control>
+						<control type="image">
+							<right>75</right>
+							<top>183</top>
+							<width>28</width>
+							<height>28</height>
+							<texture>lists/played-total.png</texture>
+							<visible>String.IsEqual(Listitem.dbtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						</control>
+						<control type="label">
+							<right>118</right>
+							<top>175</top>
+							<width>150</width>
+							<height>43</height>
+							<font>font25_title</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$VAR[BannerLabel2Var]</label>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>228</top>
+							<width>820</width>
+							<height>4</height>
+							<texture>dialogs/back.png</texture>
+							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+						</control>
+						<control type="progress">
+							<left>20</left>
+							<top>200</top>
+							<width>820</width>
+							<height>1</height>
+							<texturebg></texturebg>
+							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+							<info>ListItem.PercentPlayed</info>
+							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+						</control>
+						<control type="group">
+							<left>405</left>
+							<top>1</top>
+							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircle</include>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+</includes>

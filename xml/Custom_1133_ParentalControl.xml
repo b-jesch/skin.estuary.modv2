@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1133">
+	<defaultcontrol always="true">101</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="image">
+			<left>-2000</left>
+			<top>-2000</top>
+			<width>6000</width>
+			<height>6000</height>
+			<animation effect="fade" time="300">VisibleChange</animation>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<texture colordiffuse="E6FFFFFF">colors/black.png</texture>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="" />
+		</include>
+		<control type="group">
+			<depth>DepthBars</depth>
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+				<aspectratio>keep</aspectratio>
+				<width>56</width>
+				<height>56</height>
+				<texture colordiffuse="$VAR[SkinColorVar]">icons/logo.png</texture>
+			</control>
+			<control type="image">
+				<left>40</left>
+				<top>10</top>
+				<aspectratio>keep</aspectratio>
+				<width>192</width>
+				<height>36</height>
+				<texture>icons/logo-text.png</texture>
+			</control>
+		</control>
+		<control type="image">
+			<top>120</top>
+			<width>2560</width>
+			<height>121</height>
+			<centerleft>50%</centerleft>
+			<texture>dialogs/logo-password.png</texture>
+		</control>
+		<control type="image">
+			<centertop>50%</centertop>
+			<width>452</width>
+			<height>452</height>
+			<centerleft>50%</centerleft>
+			<texture>icons/parental-control/lock_yes.png</texture>
+		</control>
+		<control type="textbox">
+			<left>50</left>
+			<right>50</right>
+			<top>450</top>
+			<bottom>50</bottom>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font36_title</font>
+			<label>$LOCALIZE[40191]</label>
+		</control>
+		<control type="button" id="101">
+			<left>0</left>
+			<top>0</top>
+			<right>0</right>
+			<bottom>0</bottom>
+			<label />
+			<onclick>Skin.SetString(temp2)</onclick>
+			<onclick>Skin.SetString(mypassword,$INFO[Skin.String(temp2)])</onclick>
+			<onclick>Notification($LOCALIZE[40187],$VAR[password_notification],5500,)</onclick>
+			<onclick>Close</onclick>
+			<onclick>Skin.Reset(temp2)</onclick>
+			<animation effect="fade" start="100" end="0" time="0" condition="true">Conditional</animation>
+		</control>
+	</controls>
+</window>

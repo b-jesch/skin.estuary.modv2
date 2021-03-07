@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="View_502_FanArt">
+		<control type="group">
+			<include>OpenClose_Left</include>
+			<visible>Control.IsVisible(502)</visible>
+			<include>Visible_Left</include>
+			<include content="ListContainer">
+				<param name="left" value="-5" />
+				<param name="right" value="1195" />
+				<param name="list_id" value="502" />
+				<param name="viewtype_label" value="$LOCALIZE[20445]" />
+			</include>
+		</control>
+		<control type="group">
+			<depth>DepthContentPanel</depth>
+			<include>OpenClose_Right</include>
+			<visible>Control.IsVisible(502)</visible>
+			<include>Visible_Right</include>
+			<control type="group">
+				<right>-20</right>
+				<width>1235</width>
+				<include content="ContentPanel">
+					<param name="width" value="1235" />
+					<param name="left" value="0" />
+					<param name="top" value="-20" />
+					<param name="flipx" value="true" />
+				</include>
+				<control type="multiimage">
+					<left>38</left>
+					<right>36</right>
+					<top>115</top>
+					<height>644</height>
+					<fadetime>300</fadetime>
+					<imagepath border="2" fallback="special://skin/extras/home-images/movies.jpg" background="true">$VAR[FanartImageVar]</imagepath>
+					<aspectratio align="center" aligny="bottom">scale</aspectratio>
+					<timeperimage>3000</timeperimage>
+					<randomize>true</randomize>
+				</control>
+				<control type="image">
+					<left>48</left>
+					<top>469</top>
+					<width>228</width>
+					<height>290</height>
+					<texture background="true">lists/panel.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!String.IsEqual(ListItem.DbType,musicvideo) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<left>53</left>
+					<top>474</top>
+					<width>218</width>
+					<height>300</height>
+					<texture background="true">$VAR[IconWallPosterVar]</texture>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture>colors/white.png</bordertexture>
+					<bordersize>2</bordersize>
+					<fadetime>300</fadetime>
+					<visible>!String.IsEqual(ListItem.DbType,musicvideo) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<left>48</left>
+					<top>469</top>
+					<width>310</width>
+					<height>290</height>
+					<texture background="true">lists/panel.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>String.IsEqual(ListItem.DbType,musicvideo)</visible>
+				</control>
+				<control type="image">
+					<left>53</left>
+					<top>474</top>
+					<width>300</width>
+					<height>300</height>
+					<texture background="true">$VAR[IconWallPosterVar]</texture>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture>colors/white.png</bordertexture>
+					<bordersize>2</bordersize>
+					<fadetime>300</fadetime>
+					<visible>String.IsEqual(ListItem.DbType,musicvideo)</visible>
+				</control>
+				<control type="group">
+					<top>472</top>
+					<left>1283</left>
+					<visible>Skin.HasSetting(enable_LibraryDiscArt)</visible>
+					<visible>!String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
+					<animation effect="slide" start="0,0" end="-375,0" time="300" tween="cubic" easing="out">VisibleChange</animation>
+					<animation effect="fade" start="100" end="0" time="0" condition="String.IsEmpty(ListItem.Art(discart))">Conditional</animation>
+					<animation effect="slide" end="640,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>302</width>
+						<height>302</height>
+						<texture background="true" colordiffuse="$VAR[SkinColorVar]">overlays/circle-302.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>302</width>
+						<height>302</height>
+						<texture background="true" colordiffuse="$VAR[GradientColorVar]">overlays/circle-302-gradient.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
+						<visible>Skin.HasSetting(EnableGradientColor)</visible>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<top>1</top>
+						<width>300</width>
+						<height>300</height>
+						<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</control>
+				<control type="image">
+					<left>38</left>
+					<right>36</right>
+					<top>580</top>
+					<height>180</height>
+					<fadetime>300</fadetime>
+					<texture background="true">dialogs/back.png</texture>
+					<aspectratio align="center" aligny="bottom">scale</aspectratio>
+					<visible>ListItem.IsCollection</visible>
+				</control>
+				<control type="list" id="50502">
+					<left>38</left>
+					<top>585</top>
+					<width>1161</width>
+					<height>170</height>
+					<orientation>horizontal</orientation>
+					<autoscroll time="1500">true</autoscroll>
+					<visible>ListItem.IsCollection</visible>
+					<fadetime>300</fadetime>
+					<itemgap>5</itemgap>
+					<animation effect="slide" end="516,0" time="0" condition="Integer.IsEqual(Container(50502).NumItems,1)">conditional</animation>
+					<animation effect="slide" end="451.5,0" time="0" condition="Integer.IsEqual(Container(50502).NumItems,2)">conditional</animation>
+					<animation effect="slide" end="387,0" time="0" condition="Integer.IsEqual(Container(50502).NumItems,3)">conditional</animation>
+					<animation effect="slide" end="322.5,0" time="0" condition="Integer.IsEqual(Container(50502).NumItems,4)">conditional</animation>
+					<animation effect="slide" end="258,0" time="0" condition="Integer.IsEqual(Container(50502).NumItems,5)">conditional</animation>
+					<animation effect="slide" end="193.5,0" time="0" condition="Integer.IsEqual(Container(50502).NumItems,6)">conditional</animation>
+					<animation effect="slide" end="129,0" time="0" condition="Integer.IsEqual(Container(50502).NumItems,7)">conditional</animation>
+					<animation effect="slide" end="64.5,0" time="0" condition="Integer.IsEqual(Container(50502).NumItems,8)">conditional</animation>
+					<focusedlayout height="170" width="129">
+						<control type="image">
+							<left>5</left>
+							<top>0</top>
+							<right>5</right>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(poster)]</texture>
+							<bordertexture>colors/white.png</bordertexture>
+							<bordersize>1</bordersize>
+						</control>
+					</focusedlayout>
+					<itemlayout height="170" width="129">
+						<control type="image">
+							<left>5</left>
+							<top>0</top>
+							<right>5</right>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(poster)]</texture>
+							<bordertexture>colors/white.png</bordertexture>
+							<bordersize>1</bordersize>
+						</control>
+					</itemlayout>
+					<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
+				</control>
+				<control type="group">
+					<left>1140</left>
+					<top>96</top>
+					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircle</include>
+					<visible>![Control.IsVisible(502) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[20359]) | String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
+				</control>
+				<control type="textbox">
+					<left>50</left>
+					<right>45</right>
+					<top>779</top>
+					<bottom>95</bottom>
+					<align>justify</align>
+					<label>$VAR[PlotSpoilerVar]</label>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<autoscroll delay="10000" time="5000" repeat="10000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEqual(Skin.Font, Arial) + !ListItem.IsCollection</visible>
+				</control>
+				<control type="textbox">
+					<left>50</left>
+					<right>45</right>
+					<top>779</top>
+					<bottom>75</bottom>
+					<align>justify</align>
+					<label>$VAR[PlotSpoilerVar]</label>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<autoscroll delay="10000" time="5000" repeat="10000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEqual(Skin.Font, Arial) + !ListItem.IsCollection</visible>
+				</control>
+				<control type="scrollbar" id="502600">
+					<left>20</left>
+					<top>list_y_offset</top>
+					<width>12</width>
+					<bottom>list_y_offset</bottom>
+					<onleft>502</onleft>
+					<onright condition="String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)">SetFocus(8000)</onright>
+					<orientation>vertical</orientation>
+					<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(502600)">conditional</animation>
+					<hitrect x="-30" y="0" w="120" h="100%" />
+				</control>
+				<control type="group">
+					<left>50</left>
+					<top>769</top>
+					<visible>ListItem.IsCollection</visible>
+					<control type="textbox">
+						<left>0</left>
+						<top>10</top>
+						<right>45</right>
+						<bottom>95</bottom>
+						<align>justify</align>
+						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="textbox">
+						<left>0</left>
+						<top>10</top>
+						<right>45</right>
+						<bottom>95</bottom>
+						<align>justify</align>
+						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
+						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="textbox">
+						<left>0</left>
+						<top>10</top>
+						<right>45</right>
+						<bottom>75</bottom>
+						<align>justify</align>
+						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="textbox">
+						<left>0</left>
+						<top>10</top>
+						<right>45</right>
+						<bottom>75</bottom>
+						<align>justify</align>
+						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
+						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="textbox">
+						<left>0</left>
+						<top>10</top>
+						<right>45</right>
+						<bottom>95</bottom>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<textcolor>80FFFFFF</textcolor>
+						<label>$LOCALIZE[19055]</label>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

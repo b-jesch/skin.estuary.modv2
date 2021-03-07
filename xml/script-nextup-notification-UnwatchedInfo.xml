@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <zorder>0</zorder>
+    <controls>
+        <control type="group">
+            <right>10</right>
+            <bottom>160</bottom>
+            <width>600</width>
+            <height>339</height>
+            <animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+            <control type="group">
+                <control type="image">
+                    <animation effect="fade" start="100" end="97" time="200" condition="true">Conditional</animation>
+                    <texture border="5">dialogs/nextup/nextupbox.png</texture>
+                </control>
+                <control type="group">
+                    <left>5</left>
+                    <right>5</right>
+                    <control type="image" id="5004">
+                        <width>100%</width>
+                        <height>210</height>
+                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                    </control>
+                    <control type="label" description="Title" id="5000">
+                        <width>100%</width>
+                        <left>267</left>
+                        <top>0</top>
+                        <height>40</height>
+                        <font>font12</font>
+                        <shadowcolor>black</shadowcolor>
+                        <visible>false</visible>
+                    </control>
+                    <control type="label" description="episode/season" id="5002">
+                        <width>100%</width>
+                        <left>267</left>
+                        <top>0</top>
+                        <height>40</height>
+                        <font>font12</font>
+                        <shadowcolor>black</shadowcolor>
+                        <visible>false</visible>
+                    </control>
+                    <control type="label" id="5003" description="rating">
+                        <left>35</left>
+                        <width>100%</width>
+                        <top>50</top>
+                        <height>40</height>
+                        <font>font20_title</font>
+                        <visible>false</visible>
+                    </control>
+                    <control type="textbox" description="Plot" id="5001">
+                        <align>left</align>
+                        <left>5</left>
+                        <right>5</right>
+                        <width>100%</width>
+                        <top>210</top>
+                        <height>123</height>
+                        <font>font10</font>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

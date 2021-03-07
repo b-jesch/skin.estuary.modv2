@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1137">
+	<defaultcontrol always="true">11000</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<height>930</height>
+			<centertop>50%</centertop>
+			<width>1000</width>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="1000" />
+				<param name="height" value="930" />
+				<param name="header_label" value="$LOCALIZE[40244]" />
+				<param name="header_id" value="1" />
+			</include>
+			<control type="group" id="11000">
+				<left>0</left>
+				<top>80</top>
+				<control type="grouplist" id="11100">
+					<width>1000</width>
+					<height>930</height>
+					<itemgap>0</itemgap>
+					<onup>11100</onup>
+					<ondown>11100</ondown>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="11111">
+						<label>$LOCALIZE[40245]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediasourceflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediasourceflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11112">
+						<label>$LOCALIZE[40246]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediaresolutionflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediaresolutionflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11113">
+						<label>$LOCALIZE[40247]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediavideocodecflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediavideocodecflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11114">
+						<label>$LOCALIZE[40248]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediaaspectratioflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediaaspectratioflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11115">
+						<label>$LOCALIZE[40249]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediaaudiocodecflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediaaudiocodecflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11116">
+						<label>$LOCALIZE[40250]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediaaudiochannelsflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediaaudiochannelsflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11117">
+						<label>$LOCALIZE[40251]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediadurationflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediadurationflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11118">
+						<label>$LOCALIZE[40252]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediaendtimeflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediaendtimeflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11119">
+						<label>$LOCALIZE[40253]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediastudioflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediastudioflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11120">
+						<label>$LOCALIZE[40254]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediarecordlabelflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediarecordlabelflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11121">
+						<label>$LOCALIZE[40255]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_moviessetflag)</selected>
+						<onclick>Skin.ToggleSetting(show_moviessetflag)</onclick>
+					</control>
+					<control type="radiobutton" id="11122">
+						<label>$LOCALIZE[40256]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_albumsartistlag)</selected>
+						<onclick>Skin.ToggleSetting(show_albumsartistlag)</onclick>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

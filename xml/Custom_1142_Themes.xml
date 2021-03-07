@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1142" type="dialog">
+	<zorder>9999</zorder>
+	<visible>!Window.IsVisible(startup) + !String.IsEmpty(Window(Home).Property(SplashStarted))</visible>
+	<controls>
+		<!-- Christmas -->
+		<control type="group">
+			<visible>$EXP[ChristmasTheme]</visible>
+			<control type="group">
+				<posx>1000</posx>
+				<control type="image">
+					<right>-300</right>
+					<bottom>1</bottom>
+					<width>286</width>
+					<height>80</height>
+					<texture>themes/christmas/sled.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="-2850,0" time="18000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>-150</left>
+				<animation effect="rotate" end="20" time="10000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>100</left>
+				<animation effect="rotate" end="22" time="9000" delay="400" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>125</left>
+				<animation effect="rotate" start="20" end="40" time="9000" delay="800" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>80</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="1000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>240</left>
+					<top>-40</top>
+					<width>22</width>
+					<height>22</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="8000" delay="1800" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="12000" delay="1500" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>300</left>
+				<animation effect="rotate" end="15" time="7000" delay="500" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>20</left>
+					<top>-60</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-190</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="9000" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-60,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="8000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>330</left>
+					<top>-110</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-110</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="-30,0" end="60,0" time="3300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>600</left>
+				<animation effect="rotate" start="15" end="30" time="12000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>100</left>
+					<top>-200</top>
+					<width>26</width>
+					<height>26</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-110</top>
+					<width>18</width>
+					<height>18</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="12000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>750</left>
+				<animation effect="rotate" end="22" time="9000" delay="400" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>900</left>
+				<animation effect="rotate" end="20" time="10000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>1100</left>
+				<animation effect="rotate" end="20" time="10000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>1350</left>
+				<animation effect="rotate" end="22" time="8000" delay="400" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>1600</left>
+				<animation effect="rotate" end="15" time="7000" delay="500" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>20</left>
+					<top>-60</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-190</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="9000" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-60,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="8000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>330</left>
+					<top>-110</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-110</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="-30,0" end="60,0" time="3300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>1850</left>
+				<animation effect="rotate" end="20" time="9500" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>2000</left>
+				<animation effect="rotate" end="20" time="12000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/christmas/snow3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>2200</left>
+				<animation effect="rotate" start="15" end="30" time="9000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>100</left>
+					<top>-200</top>
+					<width>26</width>
+					<height>26</height>
+					<texture>themes/christmas/snow4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/christmas/snow5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>themes/christmas/snow1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-110</top>
+					<width>18</width>
+					<height>18</height>
+					<texture>themes/christmas/snow2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="12000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<!-- Halloween -->
+		<control type="group">
+			<visible>$EXP[HalloweenTheme]</visible>
+			<control type="group">
+				<posx>-120</posx>
+				<animation effect="rotate" end="15" time="9000" delay="400" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>-120</posx>
+					<posy>300</posy>
+					<width>135</width>
+					<height>100</height>
+					<texture>themes/halloween/witch.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="2820,0" time="9000" delay="400" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,10" end="0,100" time="9000" delay="400" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<posx>1000</posx>
+				<animation effect="rotate" end="10" time="9000" delay="800" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<right>-300</right>
+					<bottom>1</bottom>
+					<width>122</width>
+					<height>80</height>
+					<texture>themes/halloween/ghost.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="-2850,0" time="13000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<!-- Easter -->
+		<control type="group">
+			<visible>$EXP[EasterTheme]</visible>
+			<control type="group">
+				<posx>-120</posx>
+				<animation effect="rotate" end="15" time="9000" delay="400" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>-120</posx>
+					<posy>300</posy>
+					<width>142</width>
+					<height>100</height>
+					<texture>themes/easter/bells.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="2820,0" time="9000" delay="400" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,10" end="0,100" time="9000" delay="400" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<posx>1000</posx>
+				<control type="image">
+					<right>-300</right>
+					<bottom>1</bottom>
+					<width>115</width>
+					<height>90</height>
+					<texture>themes/easter/bunny.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="-2850,0" time="18000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<!-- Valentine -->
+		<control type="group">
+			<visible>$EXP[ValentineTheme]</visible>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>-150</left>
+				<animation effect="rotate" end="20" time="10000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>100</left>
+				<animation effect="rotate" end="22" time="9000" delay="400" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>125</left>
+				<animation effect="rotate" start="20" end="40" time="9000" delay="800" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>80</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="1000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>240</left>
+					<top>-40</top>
+					<width>22</width>
+					<height>22</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="8000" delay="1800" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="12000" delay="1500" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>300</left>
+				<animation effect="rotate" end="15" time="7000" delay="500" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>20</left>
+					<top>-60</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-190</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="9000" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-60,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="8000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>330</left>
+					<top>-110</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-110</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="-30,0" end="60,0" time="3300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>600</left>
+				<animation effect="rotate" start="15" end="30" time="12000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>100</left>
+					<top>-200</top>
+					<width>26</width>
+					<height>26</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-110</top>
+					<width>18</width>
+					<height>18</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="12000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>750</left>
+				<animation effect="rotate" end="22" time="9000" delay="400" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>900</left>
+				<animation effect="rotate" end="20" time="10000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>1100</left>
+				<animation effect="rotate" end="20" time="10000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>1350</left>
+				<animation effect="rotate" end="22" time="8000" delay="400" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>1600</left>
+				<animation effect="rotate" end="15" time="7000" delay="500" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>20</left>
+					<top>-60</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-190</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="9000" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-60,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1620" time="8000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>330</left>
+					<top>-110</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-110</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="-30,0" end="60,0" time="3300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>1850</left>
+				<animation effect="rotate" end="20" time="9500" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>2000</left>
+				<animation effect="rotate" end="20" time="12000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>40</left>
+					<top>-180</top>
+					<width>19</width>
+					<height>19</height>
+					<texture>themes/valentine/rose3.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>28</width>
+					<height>28</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-210</top>
+					<width>17</width>
+					<height>17</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<left>2200</left>
+				<animation effect="rotate" start="15" end="30" time="9000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<control type="image">
+					<left>100</left>
+					<top>-200</top>
+					<width>26</width>
+					<height>26</height>
+					<texture>themes/valentine/rose4.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>-40</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>themes/valentine/rose5.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1420" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>260</left>
+					<top>-80</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>themes/valentine/rose1.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>390</left>
+					<top>-110</top>
+					<width>18</width>
+					<height>18</height>
+					<texture>themes/valentine/rose2.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="0,1320" time="12000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="30,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1000</posx>
+				<control type="image">
+					<right>-300</right>
+					<bottom>0</bottom>
+					<width>83</width>
+					<height>90</height>
+					<texture>themes/valentine/balloons.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="-2850,0" time="18000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,10" time="700" delay="100" reversible="true" loop="true" condition="true" tween="sine" easing="out">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

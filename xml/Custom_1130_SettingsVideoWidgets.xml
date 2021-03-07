@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1130">
+	<defaultcontrol always="true">11000</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<height>290</height>
+			<centertop>50%</centertop>
+			<width>1000</width>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="1000" />
+				<param name="height" value="290" />
+				<param name="header_label" value="$LOCALIZE[40105]" />
+				<param name="header_id" value="1" />
+			</include>
+			<control type="group" id="11000">
+				<left>0</left>
+				<top>80</top>
+				<control type="grouplist" id="11100">
+					<width>1000</width>
+					<height>240</height>
+					<itemgap>0</itemgap>
+					<onup>11100</onup>
+					<ondown>11100</ondown>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="11111">
+						<label>$LOCALIZE[40097] : $LOCALIZE[31148]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_videocategories)</selected>
+						<onclick>Skin.ToggleSetting(hide_videocategories)</onclick>
+					</control>
+					<control type="radiobutton" id="11112">
+						<label>$LOCALIZE[40097] : $LOCALIZE[20094]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_videosources)</selected>
+						<onclick>Skin.ToggleSetting(hide_videosources)</onclick>
+					</control>
+					<control type="radiobutton" id="11113">
+						<label>$LOCALIZE[40097] : $LOCALIZE[136]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_videoplaylists)</selected>
+						<onclick>Skin.ToggleSetting(hide_videoplaylists)</onclick>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

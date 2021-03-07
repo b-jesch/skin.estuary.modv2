@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">3012</defaultcontrol>
+    <zorder>0</zorder>
+    <controls>
+        <control type="image">
+            <right>104</right>
+            <bottom>374</bottom>
+            <width>400</width>
+            <height>225</height>
+            <aspectratio aligny="center">keep</aspectratio>
+            <texture>$VAR[PlayerClearArtVar]</texture>
+            <animation effect="fade" end="100" time="200">WindowOpen</animation>
+            <animation effect="fade" time="200">VisibleChange</animation>
+            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+            <animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+        </control>
+        <control type="group">
+            <animation effect="fade" end="100" time="200">WindowOpen</animation>
+            <animation effect="fade" time="200">VisibleChange</animation>
+            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+            <animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+            <right>64</right>
+            <bottom>64</bottom>
+            <width>480</width>
+            <height>270</height>
+            <control type="group">
+                <control type="image" description="blackline">
+                    <width>100%</width>
+                    <height>60</height>
+                    <bottom>250</bottom>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture>dialogs/nextup/nextup.png</texture>
+                </control>
+                <control type="label" description="text">
+                    <top>-52</top>
+                    <align>center</align>
+                    <height>64</height>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <label>[UPPERCASE]$LOCALIZE[40075][/UPPERCASE]</label>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="image" id="3005" description="fanart">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <fadetime>350</fadetime>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+                <control type="image" id="3010" description="landscape">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <fadetime>350</fadetime>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+                <control type="image" description="blackline">
+                    <width>100%</width>
+                    <height>64</height>
+                    <bottom>0</bottom>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture>dialogs/nextup/nextup.png</texture>
+                </control>
+                <control type="group">
+                    <height>64</height>
+                    <width>64</width>
+                    <centertop>110</centertop>
+                    <centerleft>50%</centerleft>
+                    <control type="image">
+                        <height>64</height>
+                        <width>64</width>
+                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <texture colordiffuse="$VAR[SkinColorVar]">dialogs/nextup/circle.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>-2</top>
+                        <align>center</align>
+                        <width>64</width>
+                        <height>64</height>
+                        <font>font24_title</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[Player.TimeRemaining(ss)]</label>
+                    </control>
+                </control>
+                <control type="button" id="3012">
+                    <description>Play</description>
+                    <right>64</right>
+                    <bottom>8</bottom>
+                    <width>48</width>
+                    <height>48</height>
+                    <label/>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textoffsetx>0</textoffsetx>
+                    <onleft>3013</onleft>
+                    <onright>3013</onright>
+                    <texturefocus colordiffuse="$VAR[SkinColorVar]">dialogs/nextup/nextupplay.png</texturefocus>
+                    <texturenofocus>dialogs/nextup/nextupplay.png</texturenofocus>
+                </control>
+                <control type="button" id="3013">
+                    <description>Cancel</description>
+                    <right>8</right>
+                    <bottom>8</bottom>
+                    <width>48</width>
+                    <height>48</height>
+                    <label/>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textoffsetx>0</textoffsetx>
+                    <onleft>3012</onleft>
+                    <onright>3012</onright>
+                    <texturefocus colordiffuse="$VAR[SkinColorVar]">dialogs/nextup/nextupstop.png</texturefocus>
+                    <texturenofocus>dialogs/nextup/nextupstop.png</texturenofocus>
+                </control>
+                <control type="group">
+                    <left>5</left>
+                    <right>120</right>
+                    <height>64</height>
+                    <bottom>0</bottom>
+                    <control type="label">
+                        <width>100%</width>
+                        <top>0</top>
+                        <height>64</height>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <shadowcolor>black</shadowcolor>
+                        <scroll>true</scroll>
+                        <label>$INFO[Control.GetLabel(3002)]$INFO[Control.GetLabel(3000), ,]</label>
+                    </control>
+                    <control type="label" description="episode/season info" id="3002">
+                        <visible>false</visible>
+                    </control>
+                    <control type="label" description="Title" id="3000">
+                        <visible>false</visible>
+                    </control>
+                    <control type="label" id="3003" description="rating">
+                        <visible>false</visible>
+                    </control>
+                    <control type="label" id="3004" description="year/runtime">
+                        <visible>false</visible>
+                    </control>
+                    <control type="textbox" id="3001" description="Plot">
+                        <visible>false</visible>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

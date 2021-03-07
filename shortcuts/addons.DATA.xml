@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label>24998</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultAddonsInstalled.png</icon>
+        <action>ActivateWindow(addonbrowser,addons://user/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>24004</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultAddonsRecentlyUpdated.png</icon>
+        <action>ActivateWindow(addonbrowser,addons://recently_updated/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>24033</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultAddonsRepo.png</icon>
+        <action>ActivateWindow(addonbrowser,addons://repos/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>24041</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultAddonsZip.png</icon>
+        <action>ActivateWindow(addonbrowser,addons://install/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>31145</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultAddonsSearch.png</icon>
+        <action>ActivateWindow(addonbrowser,addons://search/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>31131</label>
+        <label2>Common Shortcut</label2>
+        <icon>Settings.png</icon>
+        <action>ActivateWindow(systemsettings,addons)</action>
+    </shortcut>
+</shortcuts>

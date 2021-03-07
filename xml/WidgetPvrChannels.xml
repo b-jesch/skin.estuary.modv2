@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="WidgetListChannels">
+        <param name="item_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
+        <param name="icon">$INFO[ListItem.Icon]</param>
+        <param name="label">$INFO[ListItem.Label]</param>
+        <param name="label2">$INFO[ListItem.Title]</param>
+        <definition>
+            <include content="CategoryLabel">
+                <param name="label">$PARAM[widget_header]</param>
+                <param name="label_focus">$PARAM[widget_header_focus]</param>
+                <param name="list_id" value="$PARAM[list_id]"/>
+            </include>
+            <include content="BusyListSpinner">
+                <param name="list_id" value="$PARAM[list_id]"/>
+                <param name="posy" value="200"/>
+            </include>
+            <control type="panel" id="$PARAM[list_id]">
+                <left>-10</left>
+                <top>120</top>
+                <right>0</right>
+                <height>430</height>
+                <include content="WidgetListCommon">
+                    <param name="list_id" value="$PARAM[list_id]"/>
+                </include>
+                <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+                <itemlayout width="310" height="500">
+                    <control type="group">
+                        <left>70</left>
+                        <control type="image">
+                            <left>-2</left>
+                            <top>-2</top>
+                            <width>323</width>
+                            <height>344</height>
+                            <texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-picturelayout.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                            <bordertexture border="21">overlays/shadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                            <visible>Skin.HasSetting(show_borders)</visible>
+                        </control>
+                        <control type="image">
+                            <width>319</width>
+                            <height>340</height>
+                            <texture>dialogs/dialog-bg-nobo.png</texture>
+                            <bordersize>20</bordersize>
+                            <visible>Skin.HasSetting(show_borders)</visible>
+                        </control>
+                        <control type="image">
+                            <width>319</width>
+                            <height>340</height>
+                            <texture>dialogs/dialog-bg-nobo.png</texture>
+                            <bordertexture border="21">overlays/shadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                            <visible>!Skin.HasSetting(show_borders)</visible>
+                        </control>
+                        <control type="image">
+                            <top>43</top>
+                            <left>38</left>
+                            <width>245</width>
+                            <height>200</height>
+                            <texture fallback="DefaultTVShows.png">$PARAM[icon]</texture>
+                            <aspectratio>keep</aspectratio>
+                            <animation effect="slide" end="0,27" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+                        </control>
+                        <control type="label">
+                            <left>42</left>
+                            <top>247</top>
+                            <width>245</width>
+                            <height>70</height>
+                            <label>$PARAM[label]</label>
+                            <font>font12</font>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <align>center</align>
+                            <aligny>top</aligny>
+                            <visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+                        </control>
+                        <control type="label">
+                            <left>42</left>
+                            <top>277</top>
+                            <width>245</width>
+                            <height>65</height>
+                            <label>$PARAM[label2]</label>
+                            <font>font12</font>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <align>center</align>
+                            <aligny>top</aligny>
+                            <visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+                        </control>
+                        <control type="image">
+                            <left>260</left>
+                            <top>30</top>
+                            <width>32</width>
+                            <height>32</height>
+                            <texture>$VAR[WallWatchedIconVar]</texture>
+                        </control>
+                        <control type="image">
+                            <left>20</left>
+                            <top>330</top>
+                            <width>279</width>
+                            <height>4</height>
+                            <texture>dialogs/back.png</texture>
+                            <visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+                        </control>
+                        <control type="progress">
+                            <left>20</left>
+                            <top>302</top>
+                            <width>279</width>
+                            <height>1</height>
+                            <texturebg></texturebg>
+                            <midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+                            <info>ListItem.Progress</info>
+                            <visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="310" height="500">
+                    <control type="group">
+                        <depth>DepthContentPopout</depth>
+                        <left>70</left>
+                        <animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+                            <effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+                            <effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+                        </animation>
+                        <control type="image">
+                            <left>-2</left>
+                            <top>-2</top>
+                            <width>323</width>
+                            <height>344</height>
+                            <texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-picturelayout.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                            <bordertexture border="21">overlays/shadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                            <visible>Skin.HasSetting(show_borders)</visible>
+                        </control>
+                        <control type="image">
+                            <width>319</width>
+                            <height>340</height>
+                            <texture>dialogs/dialog-bg-nobo.png</texture>
+                            <bordersize>20</bordersize>
+                            <visible>Skin.HasSetting(show_borders)</visible>
+                        </control>
+                        <control type="image">
+                            <width>319</width>
+                            <height>340</height>
+                            <texture>dialogs/dialog-bg-nobo.png</texture>
+                            <bordertexture border="21">overlays/shadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                            <visible>!Skin.HasSetting(show_borders)</visible>
+                        </control>
+                        <control type="image">
+                            <top>-6</top>
+                            <left>-6</left>
+                            <width>331</width>
+                            <height>352</height>
+                            <texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
+                            <bordertexture border="21">overlays/shadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                        </control>
+                        <control type="image">
+                            <top>-6</top>
+                            <left>-6</left>
+                            <width>331</width>
+                            <height>352</height>
+                            <texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
+                            <bordersize>20</bordersize>
+                            <visible>Skin.HasSetting(EnableGradientColor)</visible>
+                        </control>
+                        <control type="image">
+                            <top>43</top>
+                            <left>38</left>
+                            <width>245</width>
+                            <height>200</height>
+                            <texture fallback="DefaultTVShows.png">$PARAM[icon]</texture>
+                            <aspectratio>keep</aspectratio>
+                            <animation effect="slide" end="0,27" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+                        </control>
+                        <control type="label">
+                            <left>42</left>
+                            <top>247</top>
+                            <width>245</width>
+                            <height>70</height>
+                            <label>$PARAM[label]</label>
+                            <font>font12</font>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <align>center</align>
+                            <scroll>true</scroll>
+                            <aligny>top</aligny>
+                            <visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+                        </control>
+                        <control type="label">
+                            <left>42</left>
+                            <top>277</top>
+                            <width>245</width>
+                            <height>65</height>
+                            <label>$PARAM[label2]</label>
+                            <font>font12</font>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <align>center</align>
+                            <scroll>true</scroll>
+                            <aligny>top</aligny>
+                            <visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+                        </control>
+                        <control type="image">
+                            <left>260</left>
+                            <top>30</top>
+                            <width>32</width>
+                            <height>32</height>
+                            <texture>$VAR[WallWatchedIconVar]</texture>
+                        </control>
+                        <control type="image">
+                            <left>20</left>
+                            <top>330</top>
+                            <width>279</width>
+                            <height>4</height>
+                            <texture>dialogs/back.png</texture>
+                            <visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+                        </control>
+                        <control type="progress">
+                            <left>20</left>
+                            <top>302</top>
+                            <width>279</width>
+                            <height>1</height>
+                            <texturebg></texturebg>
+                            <midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+                            <info>ListItem.Progress</info>
+                            <visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
+            </control>
+        </definition>
+    </include>
+</includes>

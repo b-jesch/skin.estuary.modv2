@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">5000</defaultcontrol>
+	<onload condition="!Skin.HasSetting(disable_PauseOnExtraInfos)">PlayerControl(Play)</onload>
+	<onunload condition="!Skin.HasSetting(disable_PauseOnExtraInfos)">PlayerControl(Play)</onunload>
+	<controls>
+		<include>DefaultBackground</include>
+		<!--<control type="image">
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="colors/black.png">$INFO[Window.Property(ImageFilter)]</texture>
+			<visible>String.IsEqual(Window.Property(Type),season) | String.IsEqual(Window.Property(Type),episode)</visible>
+		</control>
+		<control type="image">
+			<include>FullScreenDimensions</include>
+			<aspectratio align="center">scale</aspectratio>
+			<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+			<texture colordiffuse="$INFO[Window(home).Property(ImageColor)]">special://skin/extras/backgrounds/primary.jpg</texture>
+			<visible>String.IsEqual(Window.Property(Type),season) | String.IsEqual(Window.Property(Type),episode)</visible>
+		</control>-->
+		<control type="group">
+			<control type="group">
+				<top>50</top>
+				<left>50</left>
+				<include>OpenClose_Right</include>
+				<control type="image">
+					<top>-20</top>
+					<left>-20</left>
+					<width>340</width>
+					<height>467</height>
+					<texture>colors/black.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<depth>DepthContentPopout</depth>
+					<left>0</left>
+					<top>0</top>
+					<width>300</width>
+					<height>427</height>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="DefaultVideo.png">$INFO[Window.Property(Thumb)]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>OpenClose_Right</include>
+				<left>384</left>
+				<right>30</right>
+				<top>50</top>
+				<control type="label">
+					<top>-14</top>
+					<left>16</left>
+					<right>20</right>
+					<label>$INFO[Window.Property(label)]</label>
+					<font>font52_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<height>65</height>
+					<align>left</align>
+					<scroll>true</scroll>
+				</control>
+				<control type="group" id="140">
+					<top>70</top>
+					<control type="button" id="138">
+						<left>-8</left>
+						<right>-5</right>
+						<height>377</height>
+						<aligny>bottom</aligny>
+						<label/>
+						<onclick condition="!String.IsEmpty(Window.Property(Biography))">SetProperty(TextViewer_Header,$LOCALIZE[21887],home)</onclick>
+						<onclick condition="!String.IsEmpty(Window.Property(Biography))">SetProperty(TextViewer_Text,$ESCINFO[Window.Property(Biography)],home)</onclick>
+						<onclick condition="!String.IsEmpty(Window.Property(Biography))">ActivateWindow(1102)</onclick>
+						<onleft>138</onleft>
+						<onright>138</onright>
+						<ondown>5000</ondown>
+						<texturenofocus border="21"></texturenofocus>
+					</control>
+					<control type="textbox">
+						<left>16</left>
+						<top>23</top>
+						<right>20</right>
+						<height>326</height>
+						<align>left</align>
+						<font>fontplot2</font>
+						<label fallback="19055">$INFO[Window.Property(Biography)]</label>
+						<autoscroll delay="12000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</control>
+				<control type="grouplist" id="5000">
+					<left>-354</left>
+					<top>435</top>
+					<right>-30</right>
+					<height>400</height>
+					<onleft>5000</onleft>
+					<onright>5000</onright>
+					<onup>140</onup>
+					<ondown condition="Control.IsVisible(450)">SetFocus(450)</ondown>
+					<ondown condition="Control.IsVisible(350)">SetFocus(350)</ondown>
+					<ondown condition="Control.IsVisible(650)">SetFocus(650)</ondown>
+					<ondown condition="Control.IsVisible(250)">SetFocus(250)</ondown>
+					<ondown condition="Control.IsVisible(550)">SetFocus(550)</ondown>
+					<ondown condition="Control.IsVisible(150)">SetFocus(150)</ondown>
+					<ondown condition="!Control.IsVisible(150) + !Control.IsVisible(550) + !Control.IsVisible(250) + !Control.IsVisible(650) + !Control.IsVisible(350) + !Control.IsVisible(450)">SetFocus(5002)</ondown>
+					<align>left</align>
+					<itemgap>-16</itemgap>
+					<orientation>horizontal</orientation>
+					<scrolltime tween="quadratic">200</scrolltime>
+					<include content="InfoDialogSmallButton">
+						<param name="id" value="443" />
+						<param name="icon" value="icons/infodialogs/disable.png" />
+						<param name="onclick_1" value="Action(close)" />
+						<param name="label" value="$LOCALIZE[15067]" />
+						<param name="oninfo" value="Action(close)" />
+					</include>
+				</control>
+			</control>
+			<control type="label">
+				<right>50</right>
+				<top>604</top>
+				<align>right</align>
+				<width>1400</width>
+				<height>44</height>
+				<font>font20_title</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<shadowcolor>text_shadow</shadowcolor>
+				<haspath>true</haspath>
+				<label>$LOCALIZE[40309]</label>
+				<visible>Control.HasFocus(138)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			</control>
+		</control>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
+		<control type="group">
+			<left>30</left>
+			<top>600</top>
+			<height>90</height>
+			<right>55</right>
+			<include>OpenClose_Right</include>
+			<control type="image">
+				<left>-2</left>
+				<top>13</top>
+				<width>11</width>
+				<height>11</height>
+				<texture colordiffuse="$VAR[SkinColorVar]">frame/puce.png</texture>
+				<visible>Control.HasFocus(5002) | Control.HasFocus(150) | Control.HasFocus(550) | Control.HasFocus(250) | Control.HasFocus(650) | Control.HasFocus(350) | Control.HasFocus(450)</visible>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>0</top>
+				<right>-7</right>
+				<height>90</height>
+				<label>$VAR[DialogInfoButtonsVar]</label>
+				<font>font25_title</font>
+				<shadowcolor>text_shadow</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		<control type="grouplist" id="5001">
+			<left>-30</left>
+			<top>650</top>
+			<include>OpenClose_Right</include>
+			<orientation>vertical</orientation>
+			<bottom>0</bottom>
+			<scrolltime tween="cubic" easing="out">500</scrolltime>
+			<itemgap>50</itemgap>
+			<onup>5000</onup>
+			<ondown>5002</ondown>
+			<usecontrolcoords>true</usecontrolcoords>
+			<pagecontrol>5010</pagecontrol>
+			<visible>!Control.HasFocus(5002)</visible>
+			<animation effect="fade" time="100">VisibleChange</animation>
+			<include content="ExtendedInfoCastList">
+				<param name="list_id" value="150"/>
+				<param name="visible_texture" value="false"/>
+				<param name="visible_texture_small" value="!String.IsEmpty(ListItem.Property(character))"/>
+				<param name="label2" value="$INFO[ListItem.Property(character)]"/>
+				<param name="visible" value="Integer.IsGreater(Container(150).NumItems,0)"/>
+			</include>
+			<include content="ExtendedInfoCastList">
+				<param name="list_id" value="550"/>
+				<param name="visible_texture" value="false"/>
+				<param name="visible_texture_small" value="!String.IsEmpty(ListItem.Property(job))"/>
+				<param name="label2" value="$INFO[ListItem.Property(Job)]"/>
+				<param name="visible" value="Integer.IsGreater(Container(550).NumItems,0)"/>
+			</include>
+			<include content="ExtendedInfoCastList">
+				<param name="list_id" value="250"/>
+				<param name="visible_texture" value="false"/>
+				<param name="visible_texture_small" value="!String.IsEmpty(ListItem.Property(character))"/>
+				<param name="label2" value="$INFO[ListItem.Property(character)]"/>
+				<param name="visible" value="Integer.IsGreater(Container(250).NumItems,0)"/>
+			</include>
+			<include content="ExtendedInfoCastList">
+				<param name="list_id" value="650"/>
+				<param name="visible_texture" value="false"/>
+				<param name="visible_texture_small" value="!String.IsEmpty(ListItem.Property(job))"/>
+				<param name="label2" value="$INFO[ListItem.Property(job)]"/>
+				<param name="visible" value="Integer.IsGreater(Container(650).NumItems,0)"/>
+			</include>
+			<include content="ExtendedInfoThumbList">
+				<param name="list_id" value="350"/>
+				<param name="visible_play" value="true"/>
+				<param name="visible" value="Integer.IsGreater(Container(350).NumItems,0)"/>
+			</include>
+			<include content="ExtendedInfoPosterList">
+				<param name="list_id" value="450"/>
+				<param name="visible" value="Integer.IsGreater(Container(450).NumItems,0)"/>
+			</include>
+		</control>
+		<control type="group">
+			<bottom>0</bottom>
+			<height>430</height>
+			<control type="image" id="3335">
+				<top>0</top>
+				<right>50</right>
+				<width>360</width>
+				<height>360</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true" align="right" fallback="fallback.png">$VAR[ExtendedInfoVideoArtVar]</texture>
+				<include>OpenClose_Right</include>
+				<animation effect="fade" time="100">VisibleChange</animation>
+			</control>
+			<control type="grouplist" id="6100">
+				<top>0</top>
+				<left>50</left>
+				<height>430</height>
+				<orientation>vertical</orientation>
+				<itemgap>-5</itemgap>
+				<visible>Control.HasFocus(5002) | [!Control.IsVisible(150) + !Control.IsVisible(550) + !Control.IsVisible(250) + !Control.IsVisible(650) + !Control.IsVisible(350) + !Control.IsVisible(450)]</visible>
+				<include>OpenClose_Right</include>
+				<animation effect="fade" time="100">VisibleChange</animation>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="146" />
+					<param name="label" value="$INFO[Window.Property(AlsoKnownAs),$ADDON[script.extendedinfo 32016] : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(Window.Property(AlsoKnownAs))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="148" />
+					<param name="label" value="$INFO[Window.Property(Birthday),$ADDON[script.extendedinfo 32012] : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(Window.Property(Birthday))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="151" />
+					<param name="label" value="$INFO[Window.Property(Age),$ADDON[script.extendedinfo 32020] : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(Window.Property(Age))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="152" />
+					<param name="label" value="$INFO[Window.Property(PlaceOfBirth),$ADDON[script.extendedinfo 32014] : [COLOR=white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(Window.Property(PlaceOfBirth))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="156" />
+					<param name="label" value="$INFO[Window.Property(Deathday),$ADDON[script.extendedinfo 32013] : [COLOR=white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(Window.Property(Deathday))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="153" />
+					<param name="label" value="$INFO[Window.Property(TotalMovies),$ADDON[script.extendedinfo 32011] : [COLOR=white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(Window.Property(TotalMovies))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="154" />
+					<param name="label" value="$INFO[Window.Property(DBMovies),$ADDON[script.extendedinfo 32021] : [COLOR=white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(Window.Property(DBMovies))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="155" />
+					<param name="label" value="$INFO[Window.Property(Homepage),$LOCALIZE[40310] : [COLOR=white],[/COLOR]]" />
+					<param name="visible" value="String.IsEqual(Window.Property(Homepage)" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+			</control>
+		</control>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<bottom>10</bottom>
+			<width>24</width>
+			<height>12</height>
+			<texture colordiffuse="$VAR[SkinColorVar]">overlays/arrowdown.png</texture>
+			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+			<visible>ControlGroup(5001).HasFocus</visible>
+		</control>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<bottom>10</bottom>
+			<width>24</width>
+			<height>12</height>
+			<texture colordiffuse="$VAR[SkinColorVar]" flipy="true">overlays/arrowdown.png</texture>
+			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+			<visible>Control.HasFocus(5002)</visible>
+		</control>
+		<control type="button" id="5002">
+			<onup condition="!Control.IsVisible(150) + !Control.IsVisible(550) + !Control.IsVisible(250) + !Control.IsVisible(650) + !Control.IsVisible(350) + !Control.IsVisible(450)">SetFocus(5000)</onup>
+			<onup condition="Control.IsVisible(450)">SetFocus(450)</onup>
+			<onup condition="Control.IsVisible(350)">SetFocus(350)</onup>
+			<onup condition="Control.IsVisible(650)">SetFocus(650)</onup>
+			<onup condition="Control.IsVisible(250)">SetFocus(250)</onup>
+			<onup condition="Control.IsVisible(550)">SetFocus(550)</onup>
+			<onup condition="Control.IsVisible(150)">SetFocus(150)</onup>
+			<visible allowhiddenfocus="true">false</visible>
+			<width>1</width>
+			<height>1</height>
+			<texturefocus />
+			<texturenofocus />
+		</control>
+	</controls>
+</window>

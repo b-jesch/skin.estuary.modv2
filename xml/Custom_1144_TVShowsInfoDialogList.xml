@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1144">
+	<defaultcontrol always="true">11000</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<!--<height>360</height>-->
+			<height>290</height>
+			<centertop>50%</centertop>
+			<width>700</width>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="700" />
+				<param name="height" value="80" />
+				<param name="header_label" value="40292" />
+				<param name="header_id" value="1" />
+			</include>
+			<control type="group" id="11000">
+				<left>0</left>
+				<top>80</top>
+				<control type="grouplist" id="11100">
+					<width>700</width>
+					<height>280</height>
+					<itemgap>0</itemgap>
+					<onup>11100</onup>
+					<ondown>11100</ondown>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="11101">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<label>$LOCALIZE[40293]</label>
+						<onclick>Skin.ToggleSetting(VideoInfo_TVShowsCastList)</onclick>
+                    	<selected>!Skin.HasSetting(VideoInfo_TVShowsCastList)</selected>
+					</control>
+					<control type="radiobutton" id="11102">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<label>$LOCALIZE[40298]</label>
+						<onclick>Skin.ToggleSetting(VideoInfo_NextUpEpisodes)</onclick>
+                    	<selected>!Skin.HasSetting(VideoInfo_NextUpEpisodes)</selected>
+					</control>
+					<!--<control type="radiobutton" id="11103">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<label>$LOCALIZE[40299]</label>
+						<onclick>Skin.ToggleSetting(VideoInfo_SimilarTVShows)</onclick>
+                    	<selected>!Skin.HasSetting(VideoInfo_SimilarTVShows)</selected>
+					</control>-->
+					<control type="radiobutton" id="11104">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<label>$LOCALIZE[40300]</label>
+						<onclick>Skin.ToggleSetting(VideoInfo_TVShowsExtrafanarts)</onclick>
+                    	<selected>!Skin.HasSetting(VideoInfo_TVShowsExtrafanarts)</selected>
+					</control>
+				</control>
+			</control>
+		</control>	
+	</controls>
+</window>

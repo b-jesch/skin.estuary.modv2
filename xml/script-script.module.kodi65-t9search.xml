@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">9090</defaultcontrol>
+    <controls>
+        <control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="slide" start="0" end="520" time="400" tween="cubic" easing="out" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="slide" start="-520" end="0" time="400" tween="cubic" easing="out" />
+            </animation>
+            <left>-520</left>
+            <top>0</top>
+              <control type="image">
+			    <width>4000</width>
+			    <height>100%</height>
+			    <aspectratio>scale</aspectratio>
+			    <texture colordiffuse="80FFFFFF">colors/black.png</texture>
+			    <visible>$EXP[sidebar_visible] + !System.HasActiveModalDialog</visible>
+			    <animation effect="fade" time="200">VisibleChange</animation>
+		    </control>
+		    <control type="image">
+		    	<left>0</left>
+			    <top>0</top>
+			    <width>520</width>
+			    <height>100%</height>
+		    	<texture border="0,0,52,0">lists/panel-mediamenu.png</texture>
+		    </control>
+		    <control type="group">
+				<top>20</top>
+				<left>20</left>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">icons/logo.png</texture>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>icons/logo-text.png</texture>
+				</control>
+		</control>
+            <control type="panel" id="9090">
+                <left>45</left>
+                <top>100</top>
+                <width>447</width>
+                <height>708</height>
+                <onleft>9090</onleft>
+                <onright>9090</onright>
+                <onup condition="Integer.IsGreater(Container(9091).NumItems,0)">Control.SetFocus(9091,999)</onup>
+                <ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">Control.SetFocus(9091,0)</ondown>
+                <onback>Action(Close)</onback>
+                <orientation>vertical</orientation>
+                <scrolltime tween="quadratic" easing="out">200</scrolltime>
+                <itemlayout height="110" width="120">
+                    <control type="image">
+                        <left>0</left>
+                        <top>27</top>
+                        <width>140</width>
+                        <height>133</height>
+                        <texture border="40">buttons/button-nofo.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>7</top>
+                        <width>140</width>
+                        <height>133</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>37</top>
+                        <width>140</width>
+                        <height>133</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font10</font>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="110" width="120">
+                    <control type="image">
+                        <left>0</left>
+                        <top>27</top>
+                        <width>140</width>
+                        <height>133</height>
+                        <texture colordiffuse="$VAR[SkinColorVar]" border="40">buttons/button-fo.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>7</top>
+                        <width>140</width>
+                        <height>133</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>37</top>
+                        <width>140</width>
+                        <height>133</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font10</font>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="list" id="9091">
+                <left>45</left>
+                <top>570</top>
+                <width>390</width>
+                <height>495</height>
+                <onleft>9091</onleft>
+                <onright>Action(Close)</onright>
+                <onup>9090</onup>
+                <ondown>9090</ondown>
+                <onback/>
+                <orientation>vertical</orientation>
+                <scrolltime tween="quadratic" easing="out">200</scrolltime>
+                <itemlayout height="55" width="380">
+                    <control type="image">
+                        <left>0</left>
+                        <top>-5</top>
+                        <width>380</width>
+                        <height>85</height>
+                        <texture border="40">buttons/button-nofo.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>25</left>
+                        <top>-9</top>
+                        <width>330</width>
+                        <height>85</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="55" width="380">
+                    <control type="image">
+                        <left>0</left>
+                        <top>-5</top>
+                        <width>380</width>
+                        <height>85</height>
+                        <texture border="40">buttons/button-nofo.png</texture>
+                        <visible>!Control.HasFocus(9091)</visible>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>-5</top>
+                        <width>380</width>
+                        <height>85</height>
+                        <texture colordiffuse="$VAR[SkinColorVar]" border="40">buttons/button-fo.png</texture>
+                        <visible>Control.HasFocus(9091)</visible>
+                    </control>
+                    <control type="label">
+                        <left>25</left>
+                        <top>-9</top>
+                        <width>330</width>
+                        <height>85</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="label" id="600">
+                <left>25</left>
+                <top>90</top>
+                <width>420</width>
+                <height>50</height>
+                <align>center</align>
+                <textoffsetx>15</textoffsetx>
+                <textcolor>$VAR[SkinColorVar]</textcolor>
+                <scroll>true</scroll>
+                <scrollspeed>20</scrollspeed>
+            </control>
+        </control>
+    </controls>
+</window>

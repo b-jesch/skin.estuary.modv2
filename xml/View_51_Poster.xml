@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="View_51_Poster">
+		<control type="button" id="20000">
+			<description>Dummy button to get animations right (hide focusedlayout on animations)</description>
+			<include>HiddenObject</include>
+			<animation effect="fade" delay="500" time="0" start="100" end="0">Visible</animation>
+			<animation effect="fade" delay="500" time="0" start="100" end="0">WindowOpen</animation>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+		<control type="group">
+			<description>Poster Viewtype</description>
+			<centertop>50%</centertop>
+			<height>720</height>
+			<control type="image">
+				<left>0</left>
+				<top>4</top>
+				<width>100%</width>
+				<height>410</height>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<visible>Control.IsVisible(51)</visible>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(51)</visible>
+				<include>Visible_Right</include>
+				<include>OpenClose_Right</include>
+				<control type="fixedlist" id="51">
+					<left>0</left>
+					<top>0</top>
+					<width>110%</width>
+					<height>704</height>
+					<focusposition>1</focusposition>
+					<movement>0</movement>
+					<pagecontrol>5199</pagecontrol>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<oninfo condition="String.IsEqual(ListItem.DBType,set)">ActivateWindow(1132)</oninfo>
+					<onleft>51</onleft>
+					<onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+					<ondown>5199</ondown>
+					<onright>51</onright>
+					<hitrect x="100" y="0" w="800" h="400" />
+					<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(games)</visible>
+					<preloaditems>1</preloaditems>
+					<viewtype label="20021">icon</viewtype>
+					<itemlayout width="317">
+						<control type="group">
+							<left>-220</left>
+							<top>19</top>
+							<include>InfoWallMovieLayout</include>
+						</control>
+					</itemlayout>
+					<focusedlayout width="490">
+						<control type="group">
+							<control type="group">
+								<left>-220</left>
+								<top>18</top>
+								<visible>Container.OnScrollPrevious</visible>
+								<visible>Control.IsVisible(20000)</visible>
+								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
+								<include>InfoWallMovieLayout</include>
+							</control>
+							<control type="group">
+								<left>-40</left>
+								<top>18</top>
+								<visible>Container.OnScrollNext</visible>
+								<visible>Control.IsVisible(20000)</visible>
+								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
+								<include>InfoWallMovieLayout</include>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="group">
+					<top>25</top>
+					<control type="image">
+						<left>645</left>
+						<top>417</top>
+						<width>32</width>
+						<height>32</height>
+						<texture>$VAR[ListWatchedIconVar]</texture>
+					</control>
+					<control type="label">
+						<left>695</left>
+						<top>400</top>
+						<right>50</right>
+						<height>40</height>
+						<label>$INFO[ListItem.Label]$VAR[ListSubLabelVar]</label>
+						<font>font45_title</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<scroll>true</scroll>
+					</control>
+					<control type="textbox">
+						<left>645</left>
+						<top>470</top>
+						<height>250</height>
+						<right>50</right>
+						<align>justify</align>
+						<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[PlotSpoilerVar]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!ListItem.IsCollection</visible>
+						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="textbox">
+						<left>645</left>
+						<top>470</top>
+						<height>255</height>
+						<right>50</right>
+						<align>justify</align>
+						<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[PlotSpoilerVar]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!ListItem.IsCollection</visible>
+						<visible>String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<centertop>50%</centertop>
+			<height>670</height>
+			<left>101</left>
+			<depth>DepthContentPopout</depth>
+			<visible>Control.IsVisible(51)</visible>
+			<include>OpenClose_Left</include>
+			<include>Visible_Left</include>
+			<control type="image">
+				<top>-16</top>
+				<left>-16</left>
+				<width>516</width>
+				<height>756</height>
+				<texture>colors/black.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>484</width>
+				<height>724</height>
+				<visible>Control.HasFocus(51)</visible>
+				<animation effect="fade" time="100">VisibleChange</animation>
+				<texture border="8" colordiffuse="$VAR[SkinColorVar]">buttons/thumbnail_focused.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>484</width>
+				<height>724</height>
+				<visible>Control.HasFocus(51)</visible>
+				<animation effect="fade" time="100">VisibleChange</animation>
+				<texture border="8" colordiffuse="$VAR[GradientColorVar]">buttons/thumbnail_focused-gradient.png</texture>
+				<visible>Skin.HasSetting(EnableGradientColor)</visible>
+			</control>
+			<control type="image">
+				<left>4</left>
+				<top>4</top>
+				<width>476</width>
+				<height>716</height>
+				<fadetime>200</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture fallback="DefaultVideo.png" background="true">$VAR[PosterVar]</texture>
+			</control>
+			<control type="group">
+				<top>410</top>
+				<left>-403</left>
+				<visible>Skin.HasSetting(enable_LibraryDiscArt)</visible>
+				<visible>!String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
+				<animation effect="slide" start="0,0" end="353,0" time="300" tween="cubic" easing="out">VisibleChange</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="String.IsEmpty(ListItem.Art(discart))">Conditional</animation>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>302</width>
+					<height>302</height>
+					<texture background="true" colordiffuse="$VAR[SkinColorVar]">overlays/circle-302.png</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>302</width>
+					<height>302</height>
+					<texture background="true" colordiffuse="$VAR[GradientColorVar]">overlays/circle-302-gradient.png</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
+					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+				</control>
+				<control type="image">
+					<left>1</left>
+					<top>1</top>
+					<width>300</width>
+					<height>300</height>
+					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+			<control type="group">
+				<left>217</left>
+				<top>-15</top>
+				<include content="RatingCircle">
+					<param name="animation" value="True" />
+				</include>
+			</control>
+		</control>
+	</include>
+</includes>

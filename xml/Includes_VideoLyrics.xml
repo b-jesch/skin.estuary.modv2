@@ -1,0 +1,2036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="ClassicLyrics">
+		<control type="group">
+			<animation effect="zoom" end="150" center="auto" condition="!Player.ShowInfo + !Window.IsVisible(musicosd)">Conditional</animation>
+			<animation effect="slide" end="-8,200" condition="!Player.ShowInfo + !Window.IsVisible(musicosd)">Conditional</animation>
+				<control type="image">
+					<top>-1000</top>
+					<bottom>-1000</bottom>
+					<left>-1000</left>
+					<right>-1000</right>
+					<texture colordiffuse="59FFFFFF">colors/black.png</texture>
+					<visible>!Player.ShowInfo + !Window.IsVisible(musicosd)</visible>
+				</control>
+				<control type="list" id="110">
+					<centerleft>50%</centerleft>
+					<top>48</top>
+					<width>965</width>
+					<height>500</height>
+					<onleft>111</onleft>
+					<onright>111</onright>
+					<onup>110</onup>
+					<ondown>110</ondown>
+					<pagecontrol>111</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="56">
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<width>975</width>
+							<height>56</height>
+							<font>font14</font>
+							<aligny>center</aligny>
+							<align>center</align>
+							<label fallback="--">$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56">
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<width>975</width>
+							<height>56</height>
+							<font>font14</font>
+							<aligny>center</aligny>
+							<align>center</align>
+							<label fallback="--">$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(110)</visible>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<width>975</width>
+							<height>56</height>
+							<font>font14</font>
+							<aligny>center</aligny>
+							<align>center</align>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<label fallback="--">[B]$INFO[ListItem.Label][/B]</label>
+							<scroll>true</scroll>
+							<visible>Control.HasFocus(110)</visible>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+	</include>
+	<include name="AnimatedLyrics">
+		<control type="list" id="110">
+				<centerleft>50%</centerleft>
+				<top>45</top>
+				<width>0</width>
+				<height>450</height>
+				<onleft>111</onleft>
+				<onright>111</onright>
+				<onup>110</onup>
+				<ondown>110</ondown>
+				<pagecontrol>101</pagecontrol>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<itemlayout height="50">
+					<control type="label">
+						<width>1830</width>
+						<height>50</height>
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50">
+					<control type="label">
+						<width>1830</width>
+						<height>50</height>
+						<align>center</align>
+						<label fallback="--">$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+			</control>
+	</include>
+	<variable name="Col_lyr1">
+		<value condition="[String.EndsWith(Player.Duration,1) | String.EndsWith(Player.Duration,2) | String.EndsWith(Player.Duration,3) | String.EndsWith(Player.Duration,4) | String.EndsWith(Player.Duration,5) | String.EndsWith(Player.Duration,6) | String.EndsWith(Player.Duration,7) | String.EndsWith(Player.Duration,8) | String.EndsWith(Player.Duration,9)] + Skin.HasSetting(Alt_color.lyrics)">$VAR[LyricsColor1Var]</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,1) + !Skin.HasSetting(Alt_color.lyrics)">ffffea4f</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,2) + !Skin.HasSetting(Alt_color.lyrics)">ffff4d99</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,3) + !Skin.HasSetting(Alt_color.lyrics)">ffff8554</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,4) + !Skin.HasSetting(Alt_color.lyrics)">ff4a7eb8</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,5) + !Skin.HasSetting(Alt_color.lyrics)">ffFF5354</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,6) + !Skin.HasSetting(Alt_color.lyrics)">ff46e046</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,7) + !Skin.HasSetting(Alt_color.lyrics)">ffFFEA4F</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,8) + !Skin.HasSetting(Alt_color.lyrics)">ffFF4D99</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,9) + !Skin.HasSetting(Alt_color.lyrics)">ffFF8655</value>
+		<value>ff4A7EB8</value>
+	</variable>
+	<variable name="Col_lyr2">
+		<value condition="[String.EndsWith(Player.Duration,1) | String.EndsWith(Player.Duration,2) | String.EndsWith(Player.Duration,3) | String.EndsWith(Player.Duration,4) | String.EndsWith(Player.Duration,5) | String.EndsWith(Player.Duration,6) | String.EndsWith(Player.Duration,7) | String.EndsWith(Player.Duration,8) | String.EndsWith(Player.Duration,9)] + Skin.HasSetting(Alt_color.lyrics)">$VAR[LyricsColor2Var]</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,1) + !Skin.HasSetting(Alt_color.lyrics)">ff46e046</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,2) + !Skin.HasSetting(Alt_color.lyrics)">ffffea4f</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,3) + !Skin.HasSetting(Alt_color.lyrics)">ff46e046</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,4) + !Skin.HasSetting(Alt_color.lyrics)">ffFF8655</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,5) + !Skin.HasSetting(Alt_color.lyrics)">ff46E046</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,6) + !Skin.HasSetting(Alt_color.lyrics)">ffffea4f</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,7) + !Skin.HasSetting(Alt_color.lyrics)">ffFF8655</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,8) + !Skin.HasSetting(Alt_color.lyrics)">ff46E046</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,9) + !Skin.HasSetting(Alt_color.lyrics)">ffFFEA4F</value>
+		<value>ffFF5354</value>
+	</variable>
+	<variable name="Col_lyr3">
+		<value condition="[String.EndsWith(Player.Duration,1) | String.EndsWith(Player.Duration,2) | String.EndsWith(Player.Duration,3) | String.EndsWith(Player.Duration,4) | String.EndsWith(Player.Duration,5) | String.EndsWith(Player.Duration,6) | String.EndsWith(Player.Duration,7) | String.EndsWith(Player.Duration,8) | String.EndsWith(Player.Duration,9)] + Skin.HasSetting(Alt_color.lyrics)">$VAR[LyricsColor3Var]</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,1) + !Skin.HasSetting(Alt_color.lyrics)">ff4a7eb8</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,2) + !Skin.HasSetting(Alt_color.lyrics)">ff4a80b9</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,3) + !Skin.HasSetting(Alt_color.lyrics)">ffff4d99</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,4) + !Skin.HasSetting(Alt_color.lyrics)">ffFF4D99</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,5) + !Skin.HasSetting(Alt_color.lyrics)">ffFF8655</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,6) + !Skin.HasSetting(Alt_color.lyrics)">ffff4d99</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,7) + !Skin.HasSetting(Alt_color.lyrics)">ffFF5354</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,8) + !Skin.HasSetting(Alt_color.lyrics)">ff4A7EB8</value>
+		<value condition="String.EndsWith(Container(110).Currentitem,9) + !Skin.HasSetting(Alt_color.lyrics)">ff46E046</value>
+		<value>ffFFEA4F</value>
+	</variable>
+	<variable name="Col_lyr4">
+		<value condition="[String.EndsWith(Player.Duration,1) | String.EndsWith(Player.Duration,2) | String.EndsWith(Player.Duration,3) | String.EndsWith(Player.Duration,4) | String.EndsWith(Player.Duration,5) | String.EndsWith(Player.Duration,6) | String.EndsWith(Player.Duration,7) | String.EndsWith(Player.Duration,8) | String.EndsWith(Player.Duration,9)] + Skin.HasSetting(Alt_color.lyrics)">$VAR[LyricsColor4Var]</value>
+		<value>fffffaf0</value>
+	</variable>
+	<!-- ##### MOD.SPIN #####-->
+	<include name="Lyrics1">
+		<param name="col11" default="black"/>
+		<param name="col12" default="black"/>
+		<param name="col13" default="black"/>
+		<definition>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,1) | String.EndsWith(Container(110).Currentitem,21) | String.EndsWith(Container(110).Currentitem,41) | String.EndsWith(Container(110).Currentitem,61) | String.EndsWith(Container(110).Currentitem,81) | String.EndsWith(Container(110).Currentitem,01)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="-200,0" end="0,0" tween="back" easing="out" time="300"/>
+					<effect type="zoom" start="25" end="100" tween="back" easing="out" time="500"/>
+				</animation>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr1</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col11]</textcolor>
+			</control>
+			<control type="label">
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="-200,0" end="0,0" tween="back" easing="out" time="600"/>
+					<effect type="zoom" start="25" end="100" tween="back" easing="out" time="800"/>
+				</animation>
+				<visible>String.IsEqual(Container(110).Currentitem,1) | String.EndsWith(Container(110).Currentitem,21) | String.EndsWith(Container(110).Currentitem,41) | String.EndsWith(Container(110).Currentitem,61) | String.EndsWith(Container(110).Currentitem,81) | String.EndsWith(Container(110).Currentitem,01)</visible>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr1</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col12]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,1) | String.EndsWith(Container(110).Currentitem,21) | String.EndsWith(Container(110).Currentitem,41) | String.EndsWith(Container(110).Currentitem,61) | String.EndsWith(Container(110).Currentitem,81) | String.EndsWith(Container(110).Currentitem,01)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="-200,0" end="0,0" tween="back" easing="out" time="900"/>
+					<effect type="zoom" start="25" end="100" tween="back" easing="out" time="1100"/>
+				</animation>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr1</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col13]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics1b">
+		<param name="col14" default="black"/>
+		<param name="1b_left" default="510"/>
+		<param name="1b_top" default="224"/>
+		<definition>
+			<control type="group">
+				<left>$PARAM[1b_left]</left>
+				<top>$PARAM[1b_top]</top>
+				<visible>String.IsEqual(Container(110).Currentitem,1) | String.EndsWith(Container(110).Currentitem,21) | String.EndsWith(Container(110).Currentitem,41) | String.EndsWith(Container(110).Currentitem,61) | String.EndsWith(Container(110).Currentitem,81) | String.EndsWith(Container(110).Currentitem,01)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" delay="300" start="-200,0" end="0,0" tween="back" easing="out" time="900"/>
+					<effect type="zoom" center="450,370" delay="300" start="25" end="100" tween="sine" easing="out" time="900"/>
+				</animation>
+				<control type="textbox">
+					<left>0</left>
+					<top>80</top>
+					<width>900</width>
+					<height>600</height>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr1b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col14]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics2">
+		<param name="col21" default="black"/>
+		<param name="col22" default="black"/>
+		<param name="col23" default="black"/>
+		<param name="col24" default="black"/>
+		<param name="2_left" default="0"/>
+		<param name="2_top" default="250"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[2_top]</top>
+				<left>$PARAM[2_left]</left>
+				<control type="grouplist">
+					<left>0</left>
+					<top>-95</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>25</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.IsEqual(Container(110).Currentitem,2) | String.EndsWith(Container(110).Currentitem,22) | String.EndsWith(Container(110).Currentitem,42) | String.EndsWith(Container(110).Currentitem,62) | String.EndsWith(Container(110).Currentitem,82) | String.EndsWith(Container(110).Currentitem,02)</visible>
+						<animation effect="slide" end="0,4" condition="true">Conditional</animation>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="auto" start="0" end="100" tween="sine" easing="out" time="700"/>
+						</animation>
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<font>lyr2b</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$PARAM[col21]</textcolor>
+					</control>
+					<control type="label">
+						<visible>String.IsEqual(Container(110).Currentitem,2) | String.EndsWith(Container(110).Currentitem,22) | String.EndsWith(Container(110).Currentitem,42) | String.EndsWith(Container(110).Currentitem,62) | String.EndsWith(Container(110).Currentitem,82) | String.EndsWith(Container(110).Currentitem,02)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="auto" start="200" end="100" tween="sine" easing="out" time="700"/>
+						</animation>
+						<width>auto</width>
+						<height>125</height>
+						<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+						<font>lyr2</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$PARAM[col22]</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<left>0</left>
+					<top>5</top>
+					<width>1920</width>
+					<height>600</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.IsEqual(Container(110).Currentitem,2) | String.EndsWith(Container(110).Currentitem,22) | String.EndsWith(Container(110).Currentitem,42) | String.EndsWith(Container(110).Currentitem,62) | String.EndsWith(Container(110).Currentitem,82) | String.EndsWith(Container(110).Currentitem,02)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="auto" start="200" end="100" tween="sine" easing="out" time="700"/>
+						</animation>
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<font>lyr2</font>
+						<shadowcolor>black</shadowcolor>
+						<align>right</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col23]</textcolor>
+					</control>
+					<control type="label">
+						<width max="700">auto</width>
+						<height>600</height>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>String.IsEqual(Container(110).Currentitem,2) | String.EndsWith(Container(110).Currentitem,22) | String.EndsWith(Container(110).Currentitem,42) | String.EndsWith(Container(110).Currentitem,62) | String.EndsWith(Container(110).Currentitem,82) | String.EndsWith(Container(110).Currentitem,02)</visible>
+						<animation effect="slide" end="0,28" condition="true">Conditional</animation>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="240,50" start="0" end="100" tween="sine" easing="out" time="700"/>
+						</animation>
+						<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyr2b</font>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col24]</textcolor>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics3">
+		<param name="col31" default="black"/>
+		<param name="col32" default="black"/>
+		<param name="col33" default="black"/>
+		<definition>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,3) | String.EndsWith(Container(110).Currentitem,23) | String.EndsWith(Container(110).Currentitem,43) | String.EndsWith(Container(110).Currentitem,63) | String.EndsWith(Container(110).Currentitem,83) | String.EndsWith(Container(110).Currentitem,03)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="100,-300" end="50,0" time="250" tween="back" easing="out"/>
+					<effect type="rotate" delay="900" center="auto" start="15" end="-10" time="200" tween="sine" easing="out"/>
+					<effect type="rotate" delay="1100" center="auto" end="10" time="200" tween="back" easing="out"/>
+					<effect type="slide" delay="900" end="-70,0" time="300" tween="back" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>115</height>
+				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr3</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col31]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,3) | String.EndsWith(Container(110).Currentitem,23) | String.EndsWith(Container(110).Currentitem,43) | String.EndsWith(Container(110).Currentitem,63) | String.EndsWith(Container(110).Currentitem,83) | String.EndsWith(Container(110).Currentitem,03)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="0,-300" end="0,0" time="500" tween="back" easing="out"/>
+					<effect type="rotate" delay="900" center="auto" start="-8" end="11" time="200" tween="sine" easing="out"/>
+					<effect type="rotate" delay="1100" center="auto" end="-11" time="250" tween="back" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>115</height>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr3</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col32]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,3) | String.EndsWith(Container(110).Currentitem,23) | String.EndsWith(Container(110).Currentitem,43) | String.EndsWith(Container(110).Currentitem,63) | String.EndsWith(Container(110).Currentitem,83) | String.EndsWith(Container(110).Currentitem,03)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="-100,-300" end="-50,0" time="650" tween="back" easing="out"/>
+					<effect type="rotate" delay="900" center="auto" start="22" end="-12" time="200" tween="sine" easing="out"/>
+					<effect type="rotate" delay="1100" center="auto" end="12" time="300" tween="back" easing="out"/>
+					<effect type="slide" delay="900" end="70,0" time="350" tween="back" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>115</height>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr3</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col33]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics3b">
+		<param name="col34" default="black"/>
+		<param name="3b_left" default="510"/>
+		<param name="3b_top" default="230"/>
+		<definition>
+			<control type="group">
+				<left>$PARAM[3b_left]</left>
+				<top>$PARAM[3b_top]</top>
+				<visible>String.IsEqual(Container(110).Currentitem,3) | String.EndsWith(Container(110).Currentitem,23) | String.EndsWith(Container(110).Currentitem,43) | String.EndsWith(Container(110).Currentitem,63) | String.EndsWith(Container(110).Currentitem,83) | String.EndsWith(Container(110).Currentitem,03)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" delay="700" start="0,250" end="0,0" time="350" tween="back"/>
+					<effect type="rotate" delay="700" center="auto" start="4" end="0" time="600" tween="bounce" easing="out"/>
+				</animation>
+				<control type="textbox">
+					<left>100</left>
+					<top>75</top>
+					<width>700</width>
+					<height>600</height>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr3b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col34]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics4">
+		<param name="col41" default="black"/>
+		<param name="col42" default="black"/>
+		<param name="col43" default="black"/>
+		<param name="col44" default="black"/>
+		<param name="4_left" default="110"/>
+		<param name="4_top" default="30"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[4_top]</top>
+				<left>$PARAM[4_left]</left>
+				<control type="label">
+					<visible>String.IsEqual(Container(110).Currentitem,4) | String.EndsWith(Container(110).Currentitem,24) | String.EndsWith(Container(110).Currentitem,44) | String.EndsWith(Container(110).Currentitem,64) | String.EndsWith(Container(110).Currentitem,84) | String.EndsWith(Container(110).Currentitem,04)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" end="0,-115" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="300" end="0,-160" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="650" end="-280,0" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="1150" end="0,-160" time="250" tween="back" easing="out"/>
+					</animation>
+					<left>-30</left>
+					<top>500</top>
+					<width>1135</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<font>lyr4</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col41]</textcolor>
+				</control>
+				<control type="label">
+					<left>-30</left>
+					<visible>String.IsEqual(Container(110).Currentitem,4) | String.EndsWith(Container(110).Currentitem,24) | String.EndsWith(Container(110).Currentitem,44) | String.EndsWith(Container(110).Currentitem,64) | String.EndsWith(Container(110).Currentitem,84) | String.EndsWith(Container(110).Currentitem,04)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="300" end="0,-160" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="650" end="-280,0" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="1150" end="0,-160" time="300" tween="back" easing="out"/>
+					</animation>
+					<top>500</top>
+					<width>1135</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<font>lyr4</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col42]</textcolor>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(Container(110).Currentitem,4) | String.EndsWith(Container(110).Currentitem,24) | String.EndsWith(Container(110).Currentitem,44) | String.EndsWith(Container(110).Currentitem,64) | String.EndsWith(Container(110).Currentitem,84) | String.EndsWith(Container(110).Currentitem,04)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="650" end="0,-160" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="1150" end="0,-160" time="350" tween="back" easing="out"/>
+					</animation>
+					<left>795</left>
+					<top>500</top>
+					<width>1135</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+					<font>lyr4</font>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col43]</textcolor>
+				</control>
+				<control type="textbox">
+					<left>852</left>
+					<top>454</top>
+					<width>600</width>
+					<height>600</height>
+					<visible>String.IsEqual(Container(110).Currentitem,4) | String.EndsWith(Container(110).Currentitem,24) | String.EndsWith(Container(110).Currentitem,44) | String.EndsWith(Container(110).Currentitem,64) | String.EndsWith(Container(110).Currentitem,84) | String.EndsWith(Container(110).Currentitem,04)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="1125" end="0,-160" time="350" tween="back" easing="out"/>
+					</animation>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr4b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col44]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics5">
+		<param name="col51" default="black"/>
+		<param name="col52" default="black"/>
+		<param name="col53" default="black"/>
+		<param name="col54" default="black"/>
+		<definition>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,5) | String.EndsWith(Container(110).Currentitem,25) | String.EndsWith(Container(110).Currentitem,45) | String.EndsWith(Container(110).Currentitem,65) | String.EndsWith(Container(110).Currentitem,85) | String.EndsWith(Container(110).Currentitem,05)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="-1950,0" time="300" tween="sine" easing="out"/>
+					<effect type="rotate" center="auto" start="6" end="0" time="900" tween="bounce" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr5</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col51]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,5) | String.EndsWith(Container(110).Currentitem,25) | String.EndsWith(Container(110).Currentitem,45) | String.EndsWith(Container(110).Currentitem,65) | String.EndsWith(Container(110).Currentitem,85) | String.EndsWith(Container(110).Currentitem,05)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="10,70"/>
+					<effect type="slide" delay="250" end="-1960,0" time="300" tween="sine" easing="out"/>
+					<effect type="rotate" center="auto" start="6" end="0" time="900" tween="bounce" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr5</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col52]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,5) | String.EndsWith(Container(110).Currentitem,25) | String.EndsWith(Container(110).Currentitem,45) | String.EndsWith(Container(110).Currentitem,65) | String.EndsWith(Container(110).Currentitem,85) | String.EndsWith(Container(110).Currentitem,05)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="10,140"/>
+					<effect type="slide" delay="500" end="-1960,0" time="300" tween="sine" easing="out"/>
+					<effect type="rotate" delay="200" center="auto" start="6" end="0" time="900" tween="bounce" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr5</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col53]</textcolor>
+			</control>
+			<control type="label">
+				<wrapmultiline>true</wrapmultiline>
+				<visible>String.IsEqual(Container(110).Currentitem,5) | String.EndsWith(Container(110).Currentitem,25) | String.EndsWith(Container(110).Currentitem,45) | String.EndsWith(Container(110).Currentitem,65) | String.EndsWith(Container(110).Currentitem,85) | String.EndsWith(Container(110).Currentitem,05)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="10,210"/>
+					<effect type="slide" delay="750" end="-1960,0" time="300" tween="sine" easing="out"/>
+					<effect type="rotate" delay="600" center="auto" start="6" end="0" time="900" tween="bounce" easing="out"/>
+				</animation>
+				<width min="100" max="600">auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+				<font>lyr5b</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col54]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics6">
+		<param name="col61" default="black"/>
+		<param name="col62" default="black"/>
+		<param name="col63" default="black"/>
+		<definition>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,6) | String.EndsWith(Container(110).Currentitem,26) | String.EndsWith(Container(110).Currentitem,46) | String.EndsWith(Container(110).Currentitem,66) | String.EndsWith(Container(110).Currentitem,86) | String.EndsWith(Container(110).Currentitem,06)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="0,400" time="1000" tween="bounce" easing="out" />
+					<effect type="rotate" start="440" center="auto" end="360" time="1000" tween="cubic" easing="out" />
+				</animation>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr6</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col61]</textcolor>
+			</control>
+			<control type="label">
+				<animation type="Visible" reversible="false">
+					<effect type="slide" delay="150" end="0,400" time="1000" tween="bounce" easing="out" />
+					<effect type="rotate" delay="150" start="440" center="auto" end="360" time="1000" tween="cubic" easing="out" />
+				</animation>
+				<visible>String.IsEqual(Container(110).Currentitem,6) | String.EndsWith(Container(110).Currentitem,26) | String.EndsWith(Container(110).Currentitem,46) | String.EndsWith(Container(110).Currentitem,66) | String.EndsWith(Container(110).Currentitem,86) | String.EndsWith(Container(110).Currentitem,06)</visible>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr6</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col62]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,6) | String.EndsWith(Container(110).Currentitem,26) | String.EndsWith(Container(110).Currentitem,46) | String.EndsWith(Container(110).Currentitem,66) | String.EndsWith(Container(110).Currentitem,86) | String.EndsWith(Container(110).Currentitem,06)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" delay="300" end="0,400" time="1000" tween="bounce" easing="out" />
+					<effect type="rotate" delay="300" start="440" center="auto" end="360" time="1000" tween="cubic" easing="out" />
+				</animation>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr6</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col63]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics6b">
+		<param name="col64" default="black"/>
+		<param name="6b_left" default="510"/>
+		<param name="6b_top" default="224"/>
+		<definition>
+			<control type="group">
+				<left>$PARAM[6b_left]</left>
+				<top>$PARAM[6b_top]</top>
+				<visible>String.IsEqual(Container(110).Currentitem,6) | String.EndsWith(Container(110).Currentitem,26) | String.EndsWith(Container(110).Currentitem,46) | String.EndsWith(Container(110).Currentitem,66) | String.EndsWith(Container(110).Currentitem,86) | String.EndsWith(Container(110).Currentitem,06)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" delay="225" start="0,200" end="0,0" time="350" tween="back"/>
+				</animation>
+				<control type="textbox">
+					<left>0</left>
+					<top>80</top>
+					<width>900</width>
+					<height>600</height>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr6b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col64]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics7">
+		<param name="col71" default="black"/>
+		<param name="col72" default="black"/>
+		<param name="col73" default="black"/>
+		<param name="col74" default="black"/>
+		<param name="7_left" default="10"/>
+		<param name="7_top" default="0"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[7_top]</top>
+				<left>$PARAM[7_left]</left>
+				<control type="label">
+					<visible>String.IsEqual(Container(110).Currentitem,7) | String.EndsWith(Container(110).Currentitem,27) | String.EndsWith(Container(110).Currentitem,47) | String.EndsWith(Container(110).Currentitem,67) | String.EndsWith(Container(110).Currentitem,87) | String.EndsWith(Container(110).Currentitem,07)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" end="0,-130" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="300" end="0,-160" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="600" end="0,-160" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="1150" end="-200,0" time="250" tween="back" easing="out"/>
+					</animation>
+					<left>250</left>
+					<top>520</top>
+					<width>1820</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<font>lyr7</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col71]</textcolor>
+				</control>
+				<control type="label">
+					<left>250</left>
+					<visible>String.IsEqual(Container(110).Currentitem,7) | String.EndsWith(Container(110).Currentitem,27) | String.EndsWith(Container(110).Currentitem,47) | String.EndsWith(Container(110).Currentitem,67) | String.EndsWith(Container(110).Currentitem,87) | String.EndsWith(Container(110).Currentitem,07)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="300" end="0,-160" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="600" end="0,-160" time="250" tween="sine" easing="out"/>
+						<effect type="slide" delay="1150" end="-200,0" time="300" tween="back" easing="out"/>
+					</animation>
+					<top>520</top>
+					<width>1820</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<font>lyr7a</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col72]</textcolor>
+				</control>
+				<control type="grouplist">
+					<left>-5</left>
+					<top>285</top>
+					<width>1920</width>
+					<height>600</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.IsEqual(Container(110).Currentitem,7) | String.EndsWith(Container(110).Currentitem,27) | String.EndsWith(Container(110).Currentitem,47) | String.EndsWith(Container(110).Currentitem,67) | String.EndsWith(Container(110).Currentitem,87) | String.EndsWith(Container(110).Currentitem,07)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="slide" end="200,0"/>
+							<effect type="zoom" delay="600" center="auto" start="0" end="100" time="250" tween="sine" easing="out"/>
+							<effect type="slide" delay="1150" end="-200,0" time="350" tween="back" easing="out"/>
+						</animation>
+						<width>auto</width>
+						<height>600</height>
+						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<font>lyr7b</font>
+						<shadowcolor>black</shadowcolor>
+						<align>right</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col73]</textcolor>
+					</control>
+					<control type="label">
+						<width max="625">auto</width>
+						<height>600</height>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>String.IsEqual(Container(110).Currentitem,7) | String.EndsWith(Container(110).Currentitem,27) | String.EndsWith(Container(110).Currentitem,47) | String.EndsWith(Container(110).Currentitem,67) | String.EndsWith(Container(110).Currentitem,87) | String.EndsWith(Container(110).Currentitem,07)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="slide" end="0,74"/>
+							<effect type="zoom" delay="1100" center="auto" start="0" end="100" time="350" tween="back" easing="out"/>
+							<effect type="rotate" delay="1100" center="auto" start="4" end="0" time="600" tween="bounce" easing="out"/>
+						</animation>
+						<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyr7c</font>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col74]</textcolor>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics8">
+		<param name="col81" default="black"/>
+		<param name="col82" default="black"/>
+		<param name="col83" default="black"/>
+		<definition>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,8) | String.EndsWith(Container(110).Currentitem,28) | String.EndsWith(Container(110).Currentitem,48) | String.EndsWith(Container(110).Currentitem,68) | String.EndsWith(Container(110).Currentitem,88) | String.EndsWith(Container(110).Currentitem,08)</visible>
+				<animation effect="slide" end="-15,0" condition="true">Conditional</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="rotatey" center="0,0" start="90" end="0" time="450" tween="sine" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>120</height>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr8</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col81]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,8) | String.EndsWith(Container(110).Currentitem,28) | String.EndsWith(Container(110).Currentitem,48) | String.EndsWith(Container(110).Currentitem,68) | String.EndsWith(Container(110).Currentitem,88) | String.EndsWith(Container(110).Currentitem,08)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="rotatex" center="0,0" start="90" end="0" time="600" tween="sine" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>120</height>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr8</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col82]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Container(110).Currentitem,8) | String.EndsWith(Container(110).Currentitem,28) | String.EndsWith(Container(110).Currentitem,48) | String.EndsWith(Container(110).Currentitem,68) | String.EndsWith(Container(110).Currentitem,88) | String.EndsWith(Container(110).Currentitem,08)</visible>
+				<animation effect="slide" end="15,0" condition="true">Conditional</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="rotate" center="0,0" start="170" end="0" time="750" tween="sine" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>120</height>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr8</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col83]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics8b">
+		<param name="col84" default="black"/>
+		<param name="8b_left" default="510"/>
+		<param name="8b_top" default="270"/>
+		<definition>
+			<control type="group">
+				<left>$PARAM[8b_left]</left>
+				<top>$PARAM[8b_top]</top>
+				<visible>String.IsEqual(Container(110).Currentitem,8) | String.EndsWith(Container(110).Currentitem,28) | String.EndsWith(Container(110).Currentitem,48) | String.EndsWith(Container(110).Currentitem,68) | String.EndsWith(Container(110).Currentitem,88) | String.EndsWith(Container(110).Currentitem,08)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" delay="750" start="-800,0" end="0,0" time="400" tween="back" easing="out"/>
+					<effect type="rotate" delay="750" center="auto" start="3" end="0" time="575" tween="bounce" easing="out"/>
+				</animation>
+				<control type="textbox">
+					<left>100</left>
+					<top>45</top>
+					<width>700</width>
+					<height>600</height>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr8b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col84]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics9">
+		<param name="col91" default="black"/>
+		<param name="col92" default="black"/>
+		<param name="col93" default="black"/>
+		<param name="col94" default="black"/>
+		<param name="9_left" default="20"/>
+		<param name="9_top" default="-20"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[9_top]</top>
+				<left>$PARAM[9_left]</left>
+				<control type="label">
+					<visible>String.IsEqual(Container(110).Currentitem,9) | String.EndsWith(Container(110).Currentitem,29) | String.EndsWith(Container(110).Currentitem,49) | String.EndsWith(Container(110).Currentitem,69) | String.EndsWith(Container(110).Currentitem,89) | String.EndsWith(Container(110).Currentitem,09)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="400" start="0,-400" end="0,0" time="250" tween="back" easing="out"/>
+						<effect type="rotate" center="720,270" delay="900" start="35" end="0" time="250" tween="back" easing="out"/>
+					</animation>
+					<left>0</left>
+					<top>395</top>
+					<width>940</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+					<font>lyr9</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col93]</textcolor>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<visible>String.IsEqual(Container(110).Currentitem,9) | String.EndsWith(Container(110).Currentitem,29) | String.EndsWith(Container(110).Currentitem,49) | String.EndsWith(Container(110).Currentitem,69) | String.EndsWith(Container(110).Currentitem,89) | String.EndsWith(Container(110).Currentitem,09)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="150" start="0,-400" end="0,0" time="350" tween="back" easing="out"/>
+						<effect type="rotate" center="720,270" delay="900" start="35" end="0" time="300" tween="back" easing="out"/>
+					</animation>
+					<top>270</top>
+					<width>940</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<font>lyr9</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col92]</textcolor>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(Container(110).Currentitem,9) | String.EndsWith(Container(110).Currentitem,29) | String.EndsWith(Container(110).Currentitem,49) | String.EndsWith(Container(110).Currentitem,69) | String.EndsWith(Container(110).Currentitem,89) | String.EndsWith(Container(110).Currentitem,09)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" start="0,-400" end="0,0" time="250" tween="back" easing="out"/>
+						<effect type="rotate" center="720,270" delay="900" start="35" end="0" time="350" tween="back" easing="out"/>
+					</animation>
+					<left>0</left>
+					<top>145</top>
+					<width>940</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<font>lyr9</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col91]</textcolor>
+				</control>
+				<control type="textbox">
+					<left>960</left>
+					<top>30</top>
+					<width>600</width>
+					<height>600</height>
+					<visible>String.IsEqual(Container(110).Currentitem,9) | String.EndsWith(Container(110).Currentitem,29) | String.EndsWith(Container(110).Currentitem,49) | String.EndsWith(Container(110).Currentitem,69) | String.EndsWith(Container(110).Currentitem,89) | String.EndsWith(Container(110).Currentitem,09)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="700" start="600,0" end="0,0" time="350" tween="back"/>
+						<effect type="rotate" delay="700" center="auto" start="4" end="0" time="600" tween="bounce" easing="out"/>
+					</animation>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr9b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col94]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics10">
+		<param name="col101" default="black"/>
+		<param name="col102" default="black"/>
+		<param name="col103" default="black"/>
+		<definition>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="0" end="0" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,10) | String.EndsWith(Container(110).Currentitem,30) | String.EndsWith(Container(110).Currentitem,50) | String.EndsWith(Container(110).Currentitem,70) | String.EndsWith(Container(110).Currentitem,90)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="0,-600"/>
+					<effect type="slide" end="0,600" time="1"/>
+					<!-- <effect type="fade" start="0" end="100" time="100"/> -->
+					<effect type="rotatey" delay="10" center="120,0" start="-100" end="0" time="250"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr10</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col101]</textcolor>
+			</control>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="0" end="0" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,10) | String.EndsWith(Container(110).Currentitem,30) | String.EndsWith(Container(110).Currentitem,50) | String.EndsWith(Container(110).Currentitem,70) | String.EndsWith(Container(110).Currentitem,90)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="0,-600"/>
+					<effect type="fade" start="0" end="100" time="300"/>
+					<effect type="slide" delay="350" end="0,610" time="1"/>
+					<effect type="rotatey" delay="350" center="120,0" start="-100" end="0" time="250"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr10b</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col102]</textcolor>
+			</control>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="0" end="0" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,10) | String.EndsWith(Container(110).Currentitem,30) | String.EndsWith(Container(110).Currentitem,50) | String.EndsWith(Container(110).Currentitem,70) | String.EndsWith(Container(110).Currentitem,90)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="0,-600"/>
+					<effect type="fade" start="0" end="100" time="650"/>
+					<effect type="slide" delay="700" end="0,620" time="1"/>
+					<effect type="rotatey" delay="700" center="120,0" start="-100" end="0" time="250"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr10c</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col103]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics10b">
+		<param name="col104" default="00ffffff"/>
+		<param name="10b_left" default="620"/>
+		<param name="10b_top" default="320"/>
+		<definition>
+			<control type="textbox">
+				<left>$PARAM[10b_left]</left>
+				<top>$PARAM[10b_top]</top>
+				<visible>String.EndsWith(Container(110).Currentitem,10) | String.EndsWith(Container(110).Currentitem,30) | String.EndsWith(Container(110).Currentitem,50) | String.EndsWith(Container(110).Currentitem,70) | String.EndsWith(Container(110).Currentitem,90)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="rotatex" delay="1050" center="400,0" start="-100" end="0" time="300"/>
+				</animation>
+				<width>700</width>
+				<height>600</height>
+				<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+				<font>lyr10d</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col104]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics11">
+		<param name="col111" default="black"/>
+		<param name="col112" default="black"/>
+		<param name="col113" default="black"/>
+		<param name="col114" default="black"/>
+		<param name="11_left" default="0"/>
+		<param name="11_top" default="250"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[11_top]</top>
+				<left>$PARAM[11_left]</left>
+				<control type="grouplist">
+					<animation type="Visible" reversible="false">
+						<effect type="slide" start="0,-200" end="0,0" time="200"/>
+					</animation>
+					<visible>String.EndsWith(Container(110).Currentitem,11) | String.EndsWith(Container(110).Currentitem,31) | String.EndsWith(Container(110).Currentitem,51) | String.EndsWith(Container(110).Currentitem,71) | String.EndsWith(Container(110).Currentitem,91)</visible>
+					<left>0</left>
+					<top>-95</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>25</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<animation effect="slide" end="0,12" condition="true">Conditional</animation>
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<font>lyr11b</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$PARAM[col111]</textcolor>
+					</control>
+					<control type="label">
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+						<font>lyr11</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>00fFFFFF</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>String.EndsWith(Container(110).Currentitem,11) | String.EndsWith(Container(110).Currentitem,31) | String.EndsWith(Container(110).Currentitem,51) | String.EndsWith(Container(110).Currentitem,71) | String.EndsWith(Container(110).Currentitem,91)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="250" start="400,0" end="0,0" time="200"/>
+					</animation>
+					<left>0</left>
+					<top>-95</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>25</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<font>lyr11b</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>00fFFFFF</textcolor>
+					</control>
+					<control type="label">
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+						<font>lyr11</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$PARAM[col112]</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>String.EndsWith(Container(110).Currentitem,11) | String.EndsWith(Container(110).Currentitem,31) | String.EndsWith(Container(110).Currentitem,51) | String.EndsWith(Container(110).Currentitem,71) | String.EndsWith(Container(110).Currentitem,91)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="500" start="-400,0" end="0,0" time="200"/>
+					</animation>
+					<left>0</left>
+					<top>15</top>
+					<width>1920</width>
+					<height>600</height>
+					<itemgap>40</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<font>lyr11</font>
+						<shadowcolor>black</shadowcolor>
+						<align>right</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col113]</textcolor>
+					</control>
+					<control type="label">
+						<animation effect="slide" end="0,10" condition="true">Conditional</animation>
+						<width max="700">auto</width>
+						<height>600</height>
+						<wrapmultiline>true</wrapmultiline>
+						<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyr11b</font>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textcolor>00ffffff</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>String.EndsWith(Container(110).Currentitem,11) | String.EndsWith(Container(110).Currentitem,31) | String.EndsWith(Container(110).Currentitem,51) | String.EndsWith(Container(110).Currentitem,71) | String.EndsWith(Container(110).Currentitem,91)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="750" start="0,200" end="0,0" time="200"/>
+					</animation>
+					<left>0</left>
+					<top>30</top>
+					<width>1920</width>
+					<height>600</height>
+					<itemgap>40</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<font>lyr11</font>
+						<align>right</align>
+						<aligny>top</aligny>
+						<textcolor>00ffffff</textcolor>
+					</control>
+					<control type="label">
+						<animation effect="slide" end="0,10" condition="true">Conditional</animation>
+						<width max="700">auto</width>
+						<height>600</height>
+						<wrapmultiline>true</wrapmultiline>
+						<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyr11b</font>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col114]</textcolor>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics12">
+		<param name="col121" default="black"/>
+		<param name="12_left" default="10"/>
+		<param name="12_top" default="0"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[12_top]</top>
+				<left>$PARAM[12_left]</left>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,12) | String.EndsWith(Container(110).Currentitem,32) | String.EndsWith(Container(110).Currentitem,52) | String.EndsWith(Container(110).Currentitem,72) | String.EndsWith(Container(110).Currentitem,92)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="zoom" center="auto" start="0" end="100" time="200"/>
+					</animation>
+					<left>40</left>
+					<top>5</top>
+					<width>1820</width>
+					<height>400</height>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
+					<font>lyr12</font>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<scrollspeed>100</scrollspeed>
+					<scrollsuffix></scrollsuffix>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col121]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics12b">
+		<param name="col122" default="black"/>
+		<param name="col123" default="black"/>
+		<param name="12b_left" default="10"/>
+		<param name="12b_top" default="180"/>
+		<definition>
+			<control type="grouplist">
+				<top>$PARAM[12b_top]</top>
+				<left>$PARAM[12b_left]</left>
+				<width>1900</width>
+				<height>350</height>
+				<itemgap>45</itemgap>
+				<scrolltime>0</scrolltime>
+				<orientation>horizontal</orientation>
+				<visible>true</visible>
+				<align>center</align>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,12) | String.EndsWith(Container(110).Currentitem,32) | String.EndsWith(Container(110).Currentitem,52) | String.EndsWith(Container(110).Currentitem,72) | String.EndsWith(Container(110).Currentitem,92)</visible>
+					<width>auto</width>
+					<height>350</height>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+					<font>lyr12b</font>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>00fFFFFF</textcolor>
+				</control>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,12) | String.EndsWith(Container(110).Currentitem,32) | String.EndsWith(Container(110).Currentitem,52) | String.EndsWith(Container(110).Currentitem,72) | String.EndsWith(Container(110).Currentitem,92)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="zoom" delay="500" center="auto" start="0" end="100" time="200"/>
+					</animation>
+					<width>auto</width>
+					<height>350</height>
+					<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+					<font>lyr12c</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col123]</textcolor>
+				</control>
+			</control>
+			<control type="grouplist">
+				<top>$PARAM[12b_top]</top>
+				<left>$PARAM[12b_left]</left>
+				<width>1900</width>
+				<height>350</height>
+				<itemgap>45</itemgap>
+				<scrolltime>0</scrolltime>
+				<orientation>horizontal</orientation>
+				<visible>true</visible>
+				<align>center</align>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,12) | String.EndsWith(Container(110).Currentitem,32) | String.EndsWith(Container(110).Currentitem,52) | String.EndsWith(Container(110).Currentitem,72) | String.EndsWith(Container(110).Currentitem,92)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="zoom" delay="250" center="auto" start="0" end="100" time="200"/>
+					</animation>
+					<width>auto</width>
+					<height>350</height>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+					<font>lyr12b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col122]</textcolor>
+				</control>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,12) | String.EndsWith(Container(110).Currentitem,32) | String.EndsWith(Container(110).Currentitem,52) | String.EndsWith(Container(110).Currentitem,72) | String.EndsWith(Container(110).Currentitem,92)</visible>
+					<width>auto</width>
+					<height>350</height>
+					<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+					<font>lyr12c</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>00fFFFFF</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics12c">
+		<param name="col124" default="black"/>
+		<param name="12c_left" default="10"/>
+		<param name="12c_top" default="0"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[12c_top]</top>
+				<left>$PARAM[12c_left]</left>
+				<control type="textbox">
+					<left>600</left>
+					<top>390</top>
+					<width>700</width>
+					<height>600</height>
+					<visible>String.EndsWith(Container(110).Currentitem,12) | String.EndsWith(Container(110).Currentitem,32) | String.EndsWith(Container(110).Currentitem,52) | String.EndsWith(Container(110).Currentitem,72) | String.EndsWith(Container(110).Currentitem,92)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="zoom" delay="800" center="960,400" start="0" end="100" time="200"/>
+					</animation>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr12d</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col124]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics13">
+		<param name="col131" default="black"/>
+		<param name="col132" default="black"/>
+		<param name="col133" default="black"/>
+		<definition>
+			<control type="label">
+				<visible>String.EndsWith(Container(110).Currentitem,13) | String.EndsWith(Container(110).Currentitem,33) | String.EndsWith(Container(110).Currentitem,53) | String.EndsWith(Container(110).Currentitem,73) | String.EndsWith(Container(110).Currentitem,93)</visible>
+				<animation effect="slide" end="-15,0" condition="true">Conditional</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="zoom" center="auto" start="25" end="100" time="300"/>
+					<effect type="rotate" center="auto" start="360" end="0" time="300" tween="sine" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>120</height>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr13</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col131]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.EndsWith(Container(110).Currentitem,13) | String.EndsWith(Container(110).Currentitem,33) | String.EndsWith(Container(110).Currentitem,53) | String.EndsWith(Container(110).Currentitem,73) | String.EndsWith(Container(110).Currentitem,93)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="zoom" center="auto" start="25" end="100" time="500"/>
+					<effect type="rotate" center="auto" start="450" end="0" time="500" tween="sine" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>120</height>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr13</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col132]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.EndsWith(Container(110).Currentitem,13) | String.EndsWith(Container(110).Currentitem,33) | String.EndsWith(Container(110).Currentitem,53) | String.EndsWith(Container(110).Currentitem,73) | String.EndsWith(Container(110).Currentitem,93)</visible>
+				<animation effect="slide" end="15,0" condition="true">Conditional</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="zoom" center="auto" start="25" end="100" time="600"/>
+					<effect type="rotate" center="auto" start="540" end="0" time="700" tween="sine" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>120</height>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr13</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col133]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics13b">
+		<param name="col134" default="black"/>
+		<param name="13b_left" default="510"/>
+		<param name="13b_top" default="220"/>
+		<definition>
+			<control type="group">
+				<left>$PARAM[13b_left]</left>
+				<top>$PARAM[13b_top]</top>
+				<visible>String.EndsWith(Container(110).Currentitem,13) | String.EndsWith(Container(110).Currentitem,33) | String.EndsWith(Container(110).Currentitem,53) | String.EndsWith(Container(110).Currentitem,73) | String.EndsWith(Container(110).Currentitem,93)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="zoom" center="450,370" delay="700" start="25" end="100" tween="sine" easing="out" time="300"/>
+				</animation>
+				<control type="textbox">
+					<left>100</left>
+					<top>89</top>
+					<width>700</width>
+					<height>600</height>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr13b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col134]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics14">
+		<param name="col141" default="00ffffff"/>
+		<param name="col142" default="00ffffff"/>
+		<param name="col143" default="00ffffff"/>
+		<definition>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="4" end="4" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,14) | String.EndsWith(Container(110).Currentitem,34) | String.EndsWith(Container(110).Currentitem,54) | String.EndsWith(Container(110).Currentitem,74) | String.EndsWith(Container(110).Currentitem,94)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="-10,-400"/>
+					<effect type="slide" delay="100" end="0,440" time="10"/>
+					<effect type="fade" delay="100" start="0" end="100" time="250"/>
+					<effect type="zoom" delay="100" start="0" end="100" time="250" tween="back" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr14</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col141]</textcolor>
+			</control>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="4" end="4" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,14) | String.EndsWith(Container(110).Currentitem,34) | String.EndsWith(Container(110).Currentitem,54) | String.EndsWith(Container(110).Currentitem,74) | String.EndsWith(Container(110).Currentitem,94)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="0,-400"/>
+					<effect type="slide" delay="450" end="0,420" time="10"/>
+					<effect type="fade" delay="450" start="0" end="100" time="250"/>
+					<effect type="zoom" delay="450" start="0" end="100" time="250" tween="back" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr14b</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col142]</textcolor>
+			</control>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="4" end="4" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,14) | String.EndsWith(Container(110).Currentitem,34) | String.EndsWith(Container(110).Currentitem,54) | String.EndsWith(Container(110).Currentitem,74) | String.EndsWith(Container(110).Currentitem,94)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="10,-400"/>
+					<effect type="slide" delay="800" end="0,400" time="10"/>
+					<effect type="fade" delay="800" start="0" end="100" time="250"/>
+					<effect type="zoom" delay="800" start="0" end="100" time="250" tween="back" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr14c</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col143]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics14b">
+		<param name="col144" default="00ffffff"/>
+		<param name="14b_left" default="610"/>
+		<param name="14b_top" default="355"/>
+		<definition>
+			<control type="textbox">
+				<left>$PARAM[14b_left]</left>
+				<top>$PARAM[14b_top]</top>
+				<visible>String.EndsWith(Container(110).Currentitem,14) | String.EndsWith(Container(110).Currentitem,34) | String.EndsWith(Container(110).Currentitem,54) | String.EndsWith(Container(110).Currentitem,74) | String.EndsWith(Container(110).Currentitem,94)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" delay="1200" start="0" end="100" time="250"/>
+					<effect type="zoom" center="960,500" delay="1200" start="0" end="105" time="250" tween="back" easing="out"/>
+				</animation>
+				<width>700</width>
+				<height>600</height>
+				<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+				<font>lyr14d</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col144]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics15">
+		<param name="col151" default="black"/>
+		<param name="col152" default="black"/>
+		<param name="col153" default="black"/>
+		<param name="col154" default="black"/>
+		<param name="15_left" default="170"/>
+		<param name="15_top" default="0"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[15_top]</top>
+				<left>$PARAM[15_left]</left>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,15) | String.EndsWith(Container(110).Currentitem,35) | String.EndsWith(Container(110).Currentitem,55) | String.EndsWith(Container(110).Currentitem,75) | String.EndsWith(Container(110).Currentitem,95)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" start="1000,0" end="100,0" time="350" tween="back" easing="out"/>
+						<effect type="slide" delay="800" start="0,0" end="-200,0" time="350" tween="back" easing="out"/>
+					</animation>
+					<left>50</left>
+					<top>125</top>
+					<width>925</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<font>lyr15</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col151]</textcolor>
+				</control>
+				<control type="label">
+					<left>50</left>
+					<visible>String.EndsWith(Container(110).Currentitem,15) | String.EndsWith(Container(110).Currentitem,35) | String.EndsWith(Container(110).Currentitem,55) | String.EndsWith(Container(110).Currentitem,75) | String.EndsWith(Container(110).Currentitem,95)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="150" start="1000,0" end="100,0" time="350" tween="back" easing="out"/>
+						<effect type="slide" delay="800" start="0,0" end="-200,0" time="350" tween="back" easing="out"/>
+					</animation>
+					<top>250</top>
+					<width>925</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<font>lyr15</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col152]</textcolor>
+				</control>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,15) | String.EndsWith(Container(110).Currentitem,35) | String.EndsWith(Container(110).Currentitem,55) | String.EndsWith(Container(110).Currentitem,75) | String.EndsWith(Container(110).Currentitem,95)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="300" start="1000,0" end="100,0" time="350" tween="back" easing="out"/>
+						<effect type="slide" delay="800" start="0,0" end="-200,0" time="350" tween="back" easing="out"/>
+					</animation>
+					<left>50</left>
+					<top>375</top>
+					<width>925</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+					<font>lyr15</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col153]</textcolor>
+				</control>
+				<control type="textbox">
+					<left>800</left>
+					<top>10</top>
+					<width>550</width>
+					<height>600</height>
+					<visible>String.EndsWith(Container(110).Currentitem,15) | String.EndsWith(Container(110).Currentitem,35) | String.EndsWith(Container(110).Currentitem,55) | String.EndsWith(Container(110).Currentitem,75) | String.EndsWith(Container(110).Currentitem,95)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="650" start="100,-400" end="100,0" time="1200" tween="bounce" easing="out" />
+					</animation>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr15b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col154]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics16">
+		<param name="col161" default="black"/>
+		<param name="col162" default="black"/>
+		<param name="col163" default="black"/>
+		<definition>
+			<control type="label">
+				<visible>String.EndsWith(Container(110).Currentitem,16) | String.EndsWith(Container(110).Currentitem,36) | String.EndsWith(Container(110).Currentitem,56) | String.EndsWith(Container(110).Currentitem,76) | String.EndsWith(Container(110).Currentitem,96)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="-1000,0" end="0,0" tween="sine" easing="out" time="250"/>
+					<effect type="rotate" center="auto" start="8" end="0" time="750" tween="bounce" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr16</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col161]</textcolor>
+			</control>
+			<control type="label">
+				<animation type="Visible" reversible="false">
+					<effect type="rotate" center="auto" start="-33" end="-33"/>
+					<effect type="slide" end="-300,-800"/>
+					<effect type="slide" delay="300" end="300,800" time="250" tween="sine" easing="out"/>
+					<effect type="rotate" delay="950" center="auto" end="393" time="600" tween="back" easing="out"/>
+				</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,16) | String.EndsWith(Container(110).Currentitem,36) | String.EndsWith(Container(110).Currentitem,56) | String.EndsWith(Container(110).Currentitem,76) | String.EndsWith(Container(110).Currentitem,96)</visible>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr16</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col162]</textcolor>
+			</control>
+			<control type="label">
+				<visible>String.EndsWith(Container(110).Currentitem,16) | String.EndsWith(Container(110).Currentitem,36) | String.EndsWith(Container(110).Currentitem,56) | String.EndsWith(Container(110).Currentitem,76) | String.EndsWith(Container(110).Currentitem,96)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="1000,0"/>
+					<effect type="slide" delay="600" end="-1000,0" tween="sine" easing="out" time="250"/>
+					<effect type="rotate" delay="600" center="auto" start="8" end="0" time="750" tween="bounce" easing="out"/>
+				</animation>
+				<width>auto</width>
+				<height>100</height>
+				<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr16</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[col163]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics16b">
+		<param name="col164" default="black"/>
+		<param name="16b_left" default="510"/>
+		<param name="16b_top" default="224"/>
+		<definition>
+			<control type="group">
+				<left>$PARAM[16b_left]</left>
+				<top>$PARAM[16b_top]</top>
+				<visible>String.EndsWith(Container(110).Currentitem,16) | String.EndsWith(Container(110).Currentitem,36) | String.EndsWith(Container(110).Currentitem,56) | String.EndsWith(Container(110).Currentitem,76) | String.EndsWith(Container(110).Currentitem,96)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" delay="800" start="-800,0" end="0,0" tween="sine" easing="out" time="350"/>
+					<effect type="rotate" delay="900" center="auto" start="-4" end="0" time="600" tween="bounce" easing="out"/>
+				</animation>
+				<control type="textbox">
+					<left>0</left>
+					<top>80</top>
+					<width>900</width>
+					<height>600</height>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr16b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col164]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics17">
+		<param name="col171" default="black"/>
+		<param name="col172" default="black"/>
+		<param name="col173" default="black"/>
+		<param name="col174" default="black"/>
+		<param name="17_left" default="10"/>
+		<param name="17_top" default="0"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[17_top]</top>
+				<left>$PARAM[17_left]</left>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,17) | String.EndsWith(Container(110).Currentitem,37) | String.EndsWith(Container(110).Currentitem,57) | String.EndsWith(Container(110).Currentitem,77) | String.EndsWith(Container(110).Currentitem,97)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="rotatex" center="62,0" start="260" end="360" time="900" tween="bounce" easing="out"/>
+						<effect type="rotate" center="auto" start="6" end="0" time="900" tween="bounce" easing="out"/>
+					</animation>
+					<left>50</left>
+					<top>70</top>
+					<width>1820</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<font>lyr17</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col171]</textcolor>
+				</control>
+				<control type="label">
+					<left>50</left>
+					<visible>String.EndsWith(Container(110).Currentitem,17) | String.EndsWith(Container(110).Currentitem,37) | String.EndsWith(Container(110).Currentitem,57) | String.EndsWith(Container(110).Currentitem,77) | String.EndsWith(Container(110).Currentitem,97)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="rotatex" delay="300" center="175,0" start="260" end="360" time="900" tween="bounce" easing="out"/>
+					</animation>
+					<top>193</top>
+					<width>1820</width>
+					<height>125</height>
+					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<font>lyr17a</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col172]</textcolor>
+				</control>
+				<control type="grouplist">
+					<left>-5</left>
+					<top>275</top>
+					<width>1920</width>
+					<height>600</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,17) | String.EndsWith(Container(110).Currentitem,37) | String.EndsWith(Container(110).Currentitem,57) | String.EndsWith(Container(110).Currentitem,77) | String.EndsWith(Container(110).Currentitem,97)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="fade" delay="590" start="0" end="100" time="10"/>
+							<effect type="rotatex" delay="600" center="30,0" start="270" end="360" time="900" tween="bounce" easing="out"/>
+						</animation>
+						<width>auto</width>
+						<height>600</height>
+						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<font>lyr17b</font>
+						<shadowcolor>black</shadowcolor>
+						<align>right</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col173]</textcolor>
+					</control>
+					<control type="label">
+						<width max="625">auto</width>
+						<height>600</height>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>String.EndsWith(Container(110).Currentitem,17) | String.EndsWith(Container(110).Currentitem,37) | String.EndsWith(Container(110).Currentitem,57) | String.EndsWith(Container(110).Currentitem,77) | String.EndsWith(Container(110).Currentitem,97)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="slide" end="0,80"/>
+							<effect type="fade" delay="590" start="0" end="100" time="10"/>
+							<effect type="rotatex" delay="600" center="0,0" start="270" end="360" time="900" tween="bounce" easing="out"/>
+						</animation>
+						<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyr17c</font>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col174]</textcolor>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics18">
+		<param name="col181" default="black"/>
+		<param name="col182" default="black"/>
+		<param name="col183" default="black"/>
+		<param name="col184" default="black"/>
+		<param name="18_left" default="110"/>
+		<param name="18_top" default="30"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[18_top]</top>
+				<left>$PARAM[18_left]</left>
+				<control type="grouplist">
+					<left>-110</left>
+					<top>150</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>25</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="0,0" start="0" end="100" time="250" tween="sine" easing="out"/>
+							<effect type="slide" delay="1000" end="50,0" time="150" tween="back" easing="out"/>
+							<effect type="slide" delay="1150" end="-50,0" time="100" tween="sine" easing="out"/>
+						</animation>
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<font>lyr18</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$PARAM[col181]</textcolor>
+					</control>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
+						<width>auto</width>
+						<height>125</height>
+						<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+						<font>lyr18</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>00ffffff</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<left>-110</left>
+					<top>150</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>25</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<font>lyr18</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>00ffffff</textcolor>
+					</control>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="slide" end="0,30"/>
+							<effect type="zoom" center="0,0" delay="250" start="0" end="50" time="250" tween="sine" easing="out"/>
+							<effect type="zoom" center="0,0" delay="1100" start="50" end="200" time="350" tween="back" easing="out"/>
+							<effect type="slide" delay="1100" end="0,-30"/>
+						</animation>
+						<width>auto</width>
+						<height>125</height>
+						<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+						<font>lyr18</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$PARAM[col182]</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<left>-110</left>
+					<top>248</top>
+					<width>1920</width>
+					<height>600</height>
+					<itemgap>15</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="0,0" delay="500" start="0" end="100" time="250" tween="sine" easing="out"/>
+						</animation>
+						<width>auto</width>
+						<height>600</height>
+						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<font>lyr18</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col183]</textcolor>
+					</control>
+					<control type="label">
+						<width max="625">auto</width>
+						<height>600</height>
+						<wrapmultiline>true</wrapmultiline>
+						<height>600</height>
+						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
+						<label> $INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyr18b</font>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textcolor>00ffffff</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<left>-110</left>
+					<top>248</top>
+					<width>1920</width>
+					<height>600</height>
+					<itemgap>15</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
+						<width>auto</width>
+						<height>600</height>
+						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<font>lyr18</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textcolor>00ffffff</textcolor>
+					</control>
+					<control type="label">
+						<width max="625">auto</width>
+						<height>600</height>
+						<wrapmultiline>true</wrapmultiline>
+						<height>600</height>
+						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="slide" delay="750" end="0,47" time="250" tween="sine" easing="out"/>
+							<effect type="zoom" center="0,0" delay="750" start="0" end="100" time="250" tween="sine" easing="out"/>
+						</animation>
+						<label> $INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyr18b</font>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textcolor>$PARAM[col184]</textcolor>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics19">
+		<param name="col191" default="black"/>
+		<param name="col192" default="black"/>
+		<param name="col193" default="black"/>
+		<definition>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="0" end="0" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,19) | String.EndsWith(Container(110).Currentitem,39) | String.EndsWith(Container(110).Currentitem,59) | String.EndsWith(Container(110).Currentitem,79) | String.EndsWith(Container(110).Currentitem,99)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="0,-450"/>
+					<effect type="slide" delay="10" end="0,505" time="250"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
+				<font>lyr19</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col191]</textcolor>
+			</control>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="0" end="0" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,19) | String.EndsWith(Container(110).Currentitem,39) | String.EndsWith(Container(110).Currentitem,59) | String.EndsWith(Container(110).Currentitem,79) | String.EndsWith(Container(110).Currentitem,99)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="0,-450"/>
+					<effect type="slide" delay="300" end="0,515" time="250"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
+				<font>lyr19b</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col192]</textcolor>
+			</control>
+			<control type="label">
+				<animation effect="rotate" center="auto" start="0" end="0" condition="true">Conditional</animation>
+				<visible>String.EndsWith(Container(110).Currentitem,19) | String.EndsWith(Container(110).Currentitem,39) | String.EndsWith(Container(110).Currentitem,59) | String.EndsWith(Container(110).Currentitem,79) | String.EndsWith(Container(110).Currentitem,99)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" end="0,-450"/>
+					<effect type="slide" delay="600" end="0,525" time="250"/>
+				</animation>
+				<width>auto</width>
+				<height>350</height>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+				<font>lyr19c</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col193]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics19b">
+		<param name="col194" default="00ffffff"/>
+		<param name="19b_left" default="610"/>
+		<param name="19b_top" default="225"/>
+		<definition>
+			<control type="textbox">
+				<left>$PARAM[19b_left]</left>
+				<top>$PARAM[19b_top]</top>
+				<visible>String.EndsWith(Container(110).Currentitem,19) | String.EndsWith(Container(110).Currentitem,39) | String.EndsWith(Container(110).Currentitem,59) | String.EndsWith(Container(110).Currentitem,79) | String.EndsWith(Container(110).Currentitem,99)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" delay="1050" start="1200,115" end="100,115" time="300" tween="back" easing="out"/>
+				</animation>
+				<width>700</width>
+				<height>600</height>
+				<label>$INFO[Container(110).ListItem.Property(part4)]</label>
+				<font>lyr19d</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>$PARAM[col194]</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Lyrics20">
+		<param name="col201" default="black"/>
+		<param name="col202" default="black"/>
+		<param name="col203" default="black"/>
+		<param name="col204" default="black"/>
+		<param name="20_left" default="0"/>
+		<param name="20_top" default="150"/>
+		<definition>
+			<control type="group">
+				<top>$PARAM[20_top]</top>
+				<left>$PARAM[20_left]</left>
+				<control type="label">
+					<visible>String.EndsWith(Container(110).Currentitem,20) | String.EndsWith(Container(110).Currentitem,40) | String.EndsWith(Container(110).Currentitem,60) | String.EndsWith(Container(110).Currentitem,80) | String.EndsWith(Container(110).Currentitem,00)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="zoom" center="auto" start="400" end="100" tween="back" easing="out" time="350"/>
+						<effect type="slide" delay="800" start="0,0" end="0,-200" time="350" tween="back" easing="out"/>
+					</animation>
+					<left>0</left>
+					<top>154</top>
+					<width>1920</width>
+					<height>115</height>
+					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<font>lyr20</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[col201]</textcolor>
+				</control>
+				<control type="grouplist">
+					<left>0</left>
+					<top>260</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>35</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,20) | String.EndsWith(Container(110).Currentitem,40) | String.EndsWith(Container(110).Currentitem,60) | String.EndsWith(Container(110).Currentitem,80) | String.EndsWith(Container(110).Currentitem,00)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="auto" start="400" end="100" tween="back" easing="out" time="550"/>
+							<effect type="slide" delay="800" start="0,0" end="0,-200" time="400" tween="back" easing="out"/>
+						</animation>
+						<width>auto</width>
+						<height>125</height>
+						<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+						<font>lyr20</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$PARAM[col202]</textcolor>
+					</control>
+					<control type="label">
+						<visible>String.EndsWith(Container(110).Currentitem,20) | String.EndsWith(Container(110).Currentitem,40) | String.EndsWith(Container(110).Currentitem,60) | String.EndsWith(Container(110).Currentitem,80) | String.EndsWith(Container(110).Currentitem,00)</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="auto" start="400" end="100" tween="back" easing="out" time="750"/>
+							<effect type="slide" delay="800" start="0,0" end="0,-200" time="450" tween="back" easing="out"/>
+						</animation>
+						<width>auto</width>
+						<height>125</height>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
+						<font>lyr20</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$PARAM[col203]</textcolor>
+					</control>
+				</control>
+				<control type="textbox">
+					<left>610</left>
+					<top>178</top>
+					<width>700</width>
+					<height>600</height>
+					<visible>String.EndsWith(Container(110).Currentitem,20) | String.EndsWith(Container(110).Currentitem,40) | String.EndsWith(Container(110).Currentitem,60) | String.EndsWith(Container(110).Currentitem,80) | String.EndsWith(Container(110).Currentitem,00)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="slide" delay="1150" start="400,0" end="0,0" time="200" tween="sine" easing="out"/>
+						<effect type="rotate" delay="1150" center="auto" start="4" end="0" time="600" tween="bounce" easing="out"/>
+					</animation>
+					<label> $INFO[Container(110).ListItem.Property(part4)]</label>
+					<font>lyr20b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>$PARAM[col204]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="line1">
+		<width>900</width>
+		<height>600</height>
+		<font>lyrsh16</font>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<include name="line3">
+		<width>900</width>
+		<height>600</height>
+		<font>lyrsh38</font>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<include name="line7">
+		<width>900</width>
+		<height>600</height>
+		<font>lyrsh72</font>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<include name="line9">
+		<width>900</width>
+		<height>600</height>
+		<font>lyrsh94</font>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+</includes>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1124">
+	<defaultcontrol always="true">11000</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<height>710</height>
+			<centertop>50%</centertop>
+			<width>1000</width>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="1000" />
+				<param name="height" value="710" />
+				<param name="header_label" value="$LOCALIZE[40099]" />
+				<param name="header_id" value="1" />
+			</include>
+			<control type="group" id="11000">
+				<left>0</left>
+				<top>80</top>
+				<control type="grouplist" id="11100">
+					<width>1000</width>
+					<height>720</height>
+					<itemgap>0</itemgap>
+					<onup>11100</onup>
+					<ondown>11100</ondown>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="11111">
+						<label>$LOCALIZE[40097] : $LOCALIZE[31148]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_tvshowscategory)</selected>
+						<onclick>Skin.ToggleSetting(hide_tvshowscategory)</onclick>
+					</control>
+					<control type="radiobutton" id="11113">
+						<label>$LOCALIZE[40097] : $LOCALIZE[20387]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_recentlytvshows)</selected>
+						<onclick>Skin.ToggleSetting(hide_recentlytvshows)</onclick>
+					</control>
+					<control type="radiobutton" id="11114">
+						<label> ∟$LOCALIZE[40018]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(HideWatchedEpisodesFromRecently)</selected>
+						<onclick>Skin.ToggleSetting(HideWatchedEpisodesFromRecently)</onclick>
+						<enable>!Skin.HasSetting(hide_recentlytvshows)</enable>
+					</control>
+					<control type="radiobutton" id="11120">
+						<label>$LOCALIZE[40097] : $LOCALIZE[40012]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_nextepisodes)</selected>
+						<onclick>Skin.ToggleSetting(hide_nextepisodes)</onclick>
+					</control>
+					<control type="radiobutton" id="11115">
+						<label>$LOCALIZE[40097] : $LOCALIZE[626]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_inprogresstvshows)</selected>
+						<onclick>Skin.ToggleSetting(hide_inprogresstvshows)</onclick>
+					</control>
+					<control type="radiobutton" id="11116">
+						<label>$LOCALIZE[40097] : $LOCALIZE[31122]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_unwatchedtvshows)</selected>
+						<onclick>Skin.ToggleSetting(hide_unwatchedtvshows)</onclick>
+					</control>
+					<control type="radiobutton" id="1111">
+						<label>$LOCALIZE[40097] : $LOCALIZE[40107]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_nextairingepisodes)</selected>
+						<onclick>Skin.ToggleSetting(hide_nextairingepisodes)</onclick>
+					</control>
+					<control type="radiobutton" id="11118">
+						<label>$LOCALIZE[40097] : $LOCALIZE[135]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_genretvshows)</selected>
+						<onclick>Skin.ToggleSetting(hide_genretvshows)</onclick>
+					</control>
+					<control type="radiobutton" id="11119">
+						<label>$LOCALIZE[40097] : $LOCALIZE[20388]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_studiotvshows)</selected>
+						<onclick>Skin.ToggleSetting(hide_studiotvshows)</onclick>
+					</control>			
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

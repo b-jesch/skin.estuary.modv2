@@ -1,0 +1,649 @@
+[B]3.0.6[/B]
+• Keyboard layout fixes
+• Fix for web-dl flag icon with movies have 'web' word in their names
+
+[B]3.0.5[/B]
+• Add number of bits per sample on music OSD
+• Add Russian translation by salashnik
+• Add Czech translation by Pavuucek
+• Add Spanish translation by notorius28
+• Display seekbar on showtime action
+• Improve detection of audio CDs using an infobool
+• Fix Holidays themes
+• Minor fixes
+
+[B]3.0.4[/B]
+• KODI 18 : Bump target GUI API to 5.14.0
+• KODI 18 : Add GUI for Radio Data System (RDS)
+• Add support for 'Next Up' addon by im85288
+• Add 8K flag icon
+• Add Rip audio-cd from 'Disc' on home menu
+• Add Hebrew and Armenian typefaces to the fonts
+• Video OSD and Music OSD enhancements/fixes
+• Minor fixes
+
+[B]3.0.3[/B]
+• KODI 18 : Video OSD - Hide 'Previous' button for non-seekable streams
+• KODI 18 : Game - Add controller description
+• KODI 18 : Game - Add 'Get all' button to controller dialog
+• KODI 18 : Game OSD - Show help dialog on first view
+• KODI 18 : Game OSD - Finish renaming 'View mode' to 'Stretch mode'
+• KODI 18 : Game OSD - Extend help dialog to explain lack of remote support
+• Add 'HDTV', 'VHS' and 'HDDVD' flag icons
+• Fix condition for focus on the stop button
+• Minor fixes
+
+[B]3.0.2[/B]
+• KODI 18 : Add 'sorty by' and 'sort order' for epg grid channels
+• Add 'mp3float' flag icon
+• Fix TV Shows ratings in some views
+• Minor fixes
+
+[B]3.0.1[/B]
+• Add support for CoreELEC settings addon
+• Add DefaultMusicSources icon
+• Game : Update available views
+• Game OSD : Rename 'View mode' setting label to 'Stretch mode'
+• Game OSD : Rename 'Input settings' setting label to 'Controls'
+• Fix lists on dialog video info
+• Fix some textures
+• Fix keyboard navigation
+• Minor fixes
+
+[B]3.0.0[/B]
+• KODI 18 : Add 'Advanced settings' button to settings list for Game OSD
+• KODI 18 : Add video rotation setting for Game OSD
+• Add new video info dialog (Thanks to jurialmunkey & VikkiXavier)
+• Add new music info dialog
+• Add new extended info dialog
+• Add new text viewer window
+• Add setting to disable fullscreen video info for movies and TV shows
+• Remove music themes feature which caused crashes
+• Minor fixes
+
+[B]2.9.9[/B]
+• KODI 18 : Allow user to select resolutions
+• Add video fps flag icon on OSD
+• Changes in playing trailers on video info (Thanks to jurialmunkey)
+• Fix music themes with video addons
+• Minor fixes
+
+[B]2.9.8[/B]
+• KODI 18 : Audio DSP removal
+• Add support for music themes for movies and TV shows (theme.mp3 files) (Thanks to manfeed)
+• Minor fixes
+
+[B]2.9.7[/B]
+• KODI 18 : Add PVR Timeshift Offset
+• KODI 18 : Add Epg Event Seek Time
+• KODI 18 : Introduced control 402 for epg event seek percentage
+• Enable 'Wall (thumbnails)' and 'InfoWall (thumbnails)' views for artists
+• Improvements
+• Fix forced views (thanks to hawkeyexp)
+• Minor fixes
+
+[B]2.9.6[/B]
+• KODI 18 : Use subtitle setting osd instead of custom dialog
+• Add possibility to disable default splash screen
+• Improvements
+• Minor fixes
+
+[B]2.9.5[/B]
+• KODI 18 : RetroPlayer: Disable reset hotkey
+• Add default splash screen
+• Add new Icon and Fanart
+• Add icon for font addons
+• Add original title on video info
+• Remove possibility to edit power menu to avoid some crash
+• Improvement
+
+[B]2.9.4[/B]
+• Add scope mode for constant image height (CIH) setup (OSD only)
+• Add new fullscreen info for movies and episodes
+• Add possibility to show ratings and user ratings in same time
+• Add tags on dialog info
+• Improve support for GlobalSearch 8.x.x addon
+• Improve PVR channels OSD
+• Others Improvement
+• Minor fixes
+
+[B]2.9.3[/B]
+• Add support GlobalSearch 8.x.x addon
+• Add support for music artworks with Artwork Beef addon
+• Add movies set button on video info dialog
+• Add progress bar to PVR widgets
+• Add possibility to show channels groups on PVR Guide
+• Add support for 'KN Switchtimer Service' addon on PVR info dialog
+• Improve 'Icons Wall' view for PVR channels
+• Improve dialog info windows
+• Many others improvements in PVR
+• Fix forced views with a script from hawkeyexp
+• Fix PVR NextUp popup
+• Minor fixes
+
+[B]2.9.2[/B]
+• Fix for movies sets overview
+• Minor fixes (Thanks to Angelinas)
+
+[B]2.9.1[/B]
+• Add new 'Icons Wall' view for PVR channels
+• Add Valentine's Day & Easter themes
+• Add possibility to change video lyrics colors
+• Minor fixes
+
+[B]2.9.0[/B]
+• KODI 18 : Move recording control and info functionality from player to PVR
+• KODI 18 : Add button to bring up program selection dialog
+• Add support for more aspect ratios (used by newer phones)
+• Add Christmas (1 december to 2 january) & Halloween (30 & 31 october) themes
+• Add extended info when playing music
+• Minor fixes
+
+[B]2.8.9[/B]
+• Add support for music clearart on music OSD
+• Improvements
+• Fix font issue
+• Minor fixes
+
+[B]2.8.8[/B]
+• Improve PVR info dialog
+• Add new 'Christmas' pattern
+• Fix libraries fanarts when music is played
+• Fix movies sets logos on 'Shift View'
+• Improvements
+• Minor fixes
+
+[B]2.8.7[/B]
+• Remove protection against banned addons aka Caretaker
+• Replace 'Artwork Downloader' support by 'Artwork Beef' (several advantages) 
+• Enable 'Fanart' view for music videos
+• Fix PVR Group Manager channellist scrollbar position
+• Fix video in background when opacity is set to 100%
+• Minor fixes
+
+[B]2.8.6[/B]
+• Add warning popup to just alert people and possible to disable it
+• Remove unload skin for protection against banned addons
+
+[B]2.8.5[/B]
+• Fix close warning popup
+
+[B]2.8.4[/B]
+• Add protection against banned addons (Thanks to sualfred)
+• Add (rating) star symbols to fontset (Thanks to Jeroen)
+• Improvements
+• Fix logon/logoff on power menu
+• Minor fixes
+
+[B]2.8.3[/B]
+• Remove 'doNotShareMenu' argument
+
+[B]2.8.2[/B]
+• Add games addons widget to games tab
+• Add Genres on list and wide list views
+• New Favourites window
+• Fix Favourites widget
+• Improvements
+• Minor fixes
+
+[B]2.8.1[/B]
+• KODI 18 : Add filter description to video filter dialog
+• Minor fixes
+
+[B]2.8.0[/B]
+• KODI 18 : Add Volume setting to Game OSD
+• Improvements
+• Minor fixes
+
+[B]2.7.10[/B]
+• KODI 18 : RetroPlayer: Add renderer for Windows, OpenGL and OpenGLES
+• Add possibility to use small video OSD
+• Improvements
+• Minor fixes
+
+[B]2.7.9[/B]
+• Add possibility to show visualisation effects behind background
+• Improvements
+• Fix missing 'Jump to letter' functionality for some views
+• Fix pause video during access to extended info with TV Shows
+• Fix on PVR Radio
+• Minor fixes
+
+[B]2.7.8[/B]
+• Add possibility to disable Clearlogo on OSD
+• OSD info improvements
+• Fix Video Lyrics
+• Minor fixes
+
+[B]2.7.7[/B]
+• Add 'Jump to letter' functionality to context menu
+• Video OSD improvements
+• Music OSD improvements
+• PVR OSD improvements
+• Fix for PVR info
+• Minor fixes
+
+[B]2.7.6[/B]
+• KODI 18 : Implement FullscreenGame window
+• Replace genres widget by new one based on genres content (thanks to sualfred for his idea)
+• Add new genres widgets list/panel for Personal widgets
+• Add new 'Most played music videos' default widget
+• Add possibility to show media names with widgets names
+• Add new functionality 'Jump to letter' when scrollbar is focused (thanks to jurialmunkey for his idea)
+• Improvements
+• Minor fixes
+
+[B]2.7.5[/B]
+• KODI 18 : Add support for epg tag playback
+• KODI 18 : New OSD dialog for video games settings
+• Add possibility to automatically show music video info at beginning and end of playing (Thanks to jurialmunkey)
+• Add possibility to replace background when fanarts are disabled
+• Improve PVR OSD info
+• Improve video OSD info
+• Improve 'TV Show - Next Aired' addon
+• Enable more views for video addons
+• Improvements
+• Minor fixes
+
+[B]2.7.4[/B]
+• Add possibility to choose when video info must be shown on video OSD
+• Add support for Artworks on OSD video info for addons
+• Add 'Recommended Youtube videos' button on OSD for Youtube addon (Thanks to jurialmunkey)
+• Add support for video countries icons pack
+• Add 'Get all Artworks' button to context menu
+• Improve music visualisation
+• Minor fixes
+
+[B]2.7.3[/B]
+• Video info are now displayed when video is paused with possibility to disable it
+• Improve OSD info
+• Add fallback icons for mediaflags
+• Add animated poster on video info dialog
+• Fix issue with scripts for others skins
+• Minor changes and improvements
+• Minor fixes
+
+[B]2.7.2[/B]
+• Add Top 250 from IMDb on dialog video info
+• Add button to download all Artworks on dialog video info
+• Add toggle button on PVR Guide to enable standard colors for genres
+• Add setting to pause video during access to extended info
+• Add possibility to configure media flags
+• Change appearance of 'TV Show - Next Aired' addon
+• Fix fanarts when 'Show video on background' is disable
+• Minor changes
+• Minor fixes
+
+[B]2.7.1[/B]
+• Add possibility to change media flags color
+• Add possibility to show a border for media and choose his color
+• Improve dialog video info
+• Fix movies sets info with 'Banner' view
+• Fix media flags for sets with 'Banner' view
+• Improvements
+• Minor fixes
+
+[B]2.7.0[/B]
+• Add number of oscars on video info (thanks to jurialmunkey)
+• Add possibility to hide fanart opacity in fullscreen mode on music visualisation
+• Improve navigation with better animations
+• Improve some views
+• Improvements
+• Minor fixes
+
+[B]2.6.2[/B]
+• Add support for Skin Helper Service PVR Artworks
+• Enable 'Fanart' view for episodes
+• Enable 'Banner' view for movies
+• Improve 'Banner' view 
+• Update thumbs previews for views
+• Fix duplicate ratings in list views
+• Improvements
+• Minor fixes
+
+[B]2.6.1[/B]
+• Changes for Kodi 18
+• Add possibility to hide OSD when video is paused
+• Add 4K HDR flag icon (filename must contain 'HDR')
+• Add shortcut in skin settings to configure personal API key
+• Add scrolling text on music visualisation (thanks to jurialmunkey)
+• Improvements
+• Minor fixes
+
+[B]2.6.0[/B]
+• Add possibility to choose gradient colors (thanks to jurialmunkey for idea)
+• Add classic list for power menu
+• Add Game OSD
+• Improvements
+• Minor fixes
+
+[B]2.5.10[/B]
+• Add support for movies genres icons for Personalized Widgets
+• Add missing H262 flag icon
+• Improvements
+• Fix for PVR in some conditions
+• Minor fixes
+
+[B]2.5.9[/B]
+• Add possibility to play trailers on movie information screen
+• Reorder necessary addons in Skin Settings
+• Minor fixes
+
+[B]2.5.8[/B]
+• Add possibility to show item label on top with minimize main menu setting
+• Show mute icon on libraries when mute is enable
+• Fix clearlogos disappearance when mute is enable
+• Fix for LibreELEC settings addon
+• Minor fixes
+
+[B]2.5.7[/B]
+• Add possibility to minimize main menu
+• Add media flags icons for 'Triple lists' and 'Double lists' views
+• Remove always attrib for defaultcontrol on Settings
+• Changes on login screen
+• Minor fixes
+
+[B]2.5.6[/B]
+• Add new 'Triple lists' view for TV shows
+• Add new 'Double lists' view for seasons
+• Changes for Kodi 18 : Migrate add-on settings to settings library
+• Minor fixes
+
+[B]2.5.5[/B]
+• Add possibility to show clearlogos at the top of home menu
+• Add clearlogos on dialog music info
+• Add banners on dialog video info
+• Fix episodes thumbs with Personalized Widgets
+• Fix on 'Double lists' and 'Triple lists' views to launch full album
+• Minor fixes
+
+[B]2.5.4[/B]
+• Add posters on 'Fanart' view
+• Add new 'Double lists' view for sets
+• Fix end time resume flag icon with AM/PM
+• Fix visibility for 'Double lists' and 'Triple lists' views
+• Minor fixes
+
+[B]2.5.3[/B]
+• Add new 'Double lists' view for artists and albums
+• Add new 'Triple lists' view for artists
+• Improve esthetic appearance
+• Minor fixes
+
+[B]2.5.2[/B]
+• Add miniatures panel for Personalized Widgets
+• Add support for animated weather icons
+• Fix missing watched icons and progress bars for Personalized Widgets
+• Minor fixes
+
+[B]2.5.1[/B]
+• Fix aspect ratio for widgets
+• Minor fixes
+• Update German translation
+
+[B]2.5.0[/B]
+/!\ Reboot Kodi and 'Reset main menu and power menu settings' in skin settings after installation of this version /!\
+• Add vertical panels for Personalized Widgets
+• Add 'Categories' appearance for Personalized Widgets
+• Add support for albums back thumbs (file must be placed in album folder and named 'thumbback.jpg')
+• Add possibility to change rating text color
+• Fix issue with Appearance for Personalized Widgets
+• Minor fixes
+
+[B]2.4.0[/B]
+/!\ Reboot Kodi and 'Reset main menu and power menu settings' in skin settings after installation of this version /!\
+• Add support for Skin Shortcuts template to avoid personalized widgets reloading
+• Add possibility to define sort method and sort direction for personalized widgets
+• Add rating on video osd info
+• Minor changes
+• Minor fixes
+
+[B]2.3.2[/B]
+• Add VP9 video codec icon
+• Add rewind and forward OSD buttons for PVR TimeShift
+• Fix on PVR/Radio widgets
+• Fix duration flag icon with Global Search
+• Many fixes for Arial font
+• Minor changes
+• Minor fixes
+
+[B]2.3.1[/B]
+• Add Next Up popup for Live TV
+• Add albums count on artists dialog info
+• Add possibility to disable 'Settings' shortcut widget
+• Add PVR overlay when switching channels
+• Fix artists/albums plots on music dialog info
+• Fix on PVR
+• Fix caterories labels for personalized widgets
+
+[B]2.3.0[/B]
+• Add parental control to protect home menu items and widgets with password
+• Add support for German language (Thanks to rainman74)
+• Fix CDArts position on Global Search screen
+• Fix esthetic appearance
+• Minor fixes
+• Minor changes
+
+[B]2.2.9[/B]
+• Add support for extendedinfo youtube list
+• Add shortcut for movies set info to context menu
+• Add shortcut for extended info to context menu
+• Fix lyrics on music visualisation
+• Fix aspect ratio on tv shows widgets
+• Fix channel osd recording indicator visibility
+• Fix esthetic appearance
+• Minor fixes
+• Minor changes
+
+[B]2.2.8[/B]
+• Add info dialog for movies sets
+• Fix playlists editor
+• Minor fixes
+
+[B]2.2.7[/B]
+• Changes for Kodi 18
+• Add possibility to disable colored outline for CDArts
+• Add possibility to disable animated lyrics for classic lyrics
+• Fix disc overlay for some CDArts
+• Fix extended info window for some resolutions
+• Fix playlists editor
+• Minor fixes
+
+[B]2.2.6[/B]
+• Change extension file '.png' to '.jpg' for games artworks
+• Minor fixes
+
+[B]2.2.5[/B]
+• Add games sources widget
+• Add support for games artworks (artworks must be named identical to the file name of the game with the extension '.png' and must be in the same folder as games)
+• Fix personalized widget 5
+• Fix plots and thumbs on info dialog to avoid spoilers
+• Fix widgets property
+• Changes on widgets when libraries are not populated
+
+[B]2.2.4[/B]
+• Add possibility to show CDArt on widgets and on library
+• Add possibility to install addons zip files directly from home submenu
+• Minor fixes
+
+[B]2.2.3[/B]
+• Add possibility to use alphabet for scrolling on library (experimental)
+• Add more personalized widgets to bypass problem with disappearance and animations of widgets (use one personalized widget per home menu item)
+• Changes on duration flag icon with hours and minutes
+• Changes on PVR Guide with Kodi 18 last build
+• Minor fixes
+
+[B]2.2.2[/B]
+• Add possibility to greyed out watched items in library and on widgets
+• Add support for Videolyrics v3 with possibility to fix lyrics colors by song (thanks to manfeed)
+• Add support for Kodi Log Uploader addon
+• Fix LibreELEC settings buttons
+• Minor fixes
+
+[B]2.2.1[/B]
+• Changes for Kodi 18
+• Add 'All channels' and 'All radios' widgets
+• Fix PVR channels OSD
+• Fix esthetic appearance
+
+[B]2.2.0[/B]
+• Add possibility to force views in library
+• Add possibility to customize power menu
+• Add flags for moviesets widget
+• Fix missing view for music
+• Fix esthetic appearance
+• Fix context menu position
+• Minor fixes
+
+[B]2.1.9[/B]
+• Changes for Kodi 18
+• Add preview for view mode
+• Minor fixes
+
+[B]2.1.8[/B]
+• Add new 'Mosaic (vertical)' view
+
+[B]2.1.7[/B]
+• Changes for Kodi 18
+• Fix setting to disable submenu
+• Minor fixes
+
+[B]2.1.6[/B]
+• Add new 'Gallery' view
+• Add new 'Mosaic' view
+• Add clearlogos list for 'Shift' view
+• Minor fixes
+
+[B]2.1.5[/B]
+• Add library info on settings widget
+• Add ratings/user ratings in list views
+• Changes on 'Next episode to watch' widget
+• Minor fixes
+
+[B]2.1.4[/B]
+• Add possibility to configure submenus for Personnal Widget
+• Add possibility to show banners for episodes/thumbs widgets
+• Decrease number of personal widgets to 8 because not possible to show more
+• Fix context menu for CU LRC Lyrics addon
+• Fix disable Clearlogos on library
+• Minor fixes
+
+[B]2.1.3[/B]
+• Fix centered posters on some views
+• Fix missing posters flag for moviesets with Wall (Thumbnails) view
+• Minor fixes
+
+[B]2.1.2[/B]
+• Fix adding item with Skin Shortcut
+
+[B]2.1.1[/B]
+• Add support for submenus with Skin Shortcuts addon
+• Minnor fixes
+
+[B]2.1.0[/B]
+• Add support for Skin Shortcuts addon to customize home menu and widgets
+• Add support for thumbnails with NextUp Service addon
+• Add support for Videolyrics v2 (thanks to manfeed)
+• Minnor fixes
+• Special Thanks to Gracus and ferent for reporting issue
+
+[B]2.0.6[/B]
+• Add two views for power menu
+• Add possibility to hide thumbs episodes to avoid spoilers
+• Fix banner on music visualisation when next tracks are not available
+• Fix missing clearlogos with moviesets widget
+• Fix in musicvideo views
+• Fix label with moviesets thumbnails
+• Enable landscape views for seasons
+• Drop support for using hyphen as none value
+• Minnor fixes
+
+[B]2.0.5[/B]
+• Add info button on video OSD
+• Add language and subtitles language on fullscreen info
+• Add button to switch between all/watched/unwatched recordings
+• Replace rating badge
+• Fix Youtube call
+• Minnor fixes
+
+[B]2.0.4[/B]
+• Add new 'InfoWall (thumbnails)' view
+• Add new 'Wall (thumbnails)' view
+• Add extrafanarts support for 'Fanart' view
+• Add icon when item is resumable
+• Hide OSD directly after pause
+• Fix esthetic appearance
+• Fix navigation on PVR info dialog
+• Minnor fixes
+
+[B]2.0.3[/B]
+• Add Videolyrics (credits to manfeed)
+• Add new 'Next episodes to see' widget
+• Replace music videos widgets
+• Fix color with lyrics
+• Fix banner on music fullscreen
+• Fix music visualisation
+• Fix esthetic appearance
+
+[B]2.0.2[/B]
+• Fix selecting widgets
+
+[B]2.0.1[/B]
+• Add possibility to reorder main menu items
+• Add possibility to reset main menu items back to default
+• Add possibility to show smaller icons for 'Categories' widgets
+• Add studios flag icons for movies widgets
+• Add shortcuts on power menu to update video/music library
+• Fix colordiffuse for studios and labels flag icons
+• Minnor fixes
+
+[B]2.0.0[/B]
+• Initial release
+• Add possibility to hide main menu when selecting widgets
+• Add possibility to disable each widget
+• Add possibility to hide watched items from recently added widgets
+• Add possibility to hide episodes plots to avoid spoilers
+• Add possibility to change skin color
+• Add possibility to change background color
+• Add possibility to change pattern color
+• Add possibility to change background opacity
+• Add possibility to top and bottom bars opacity
+• Add possibility to change weather icons pack
+• Add possibility to change studios icons pack
+• Add possibility to change genres icons pack
+• Add possibility to set splash screen (photo, video or music)
+• Add possibility to set number of items to display on widgets
+• Add possibility to backup/restore skin settings
+• Add possibility to disable zoom effect
+• Add possibility to enable/disable music visualisation effects on background
+• Add possibility to enable/disable video on background
+• Add possibility to hide notification popup during playback
+• Add possibility to show music visualisation screen when playing song
+• Add possibility to ExtraFanarts on music visualisation screen
+• Add possibility to animate Fanart/ExtraFanarts on music visualisation screen
+• Add possibility to add music visualisation effects on music visualisation screen
+• Add possibility to disable Kodi screensaver on music visualisation screen
+• Add possibility to start Artwork Downloader at startup
+• Add next tracks on music visualisation screen
+• Add actors list on video OSD
+• Add more buttons on OSD
+• Add more flag icons
+• Add next airing episodes widget for tv shows
+• Add horizontal view for PVR Guide
+• Add support for records labels icons pack
+• Add support for ExtraFanarts
+• Add support for animated posters
+• Add support for Clearlogos
+• Add support for CDArts
+• Add support for Artwork Downloader addon
+• Add support for NextUp Notification addon
+• Add support for CU LRC Lyrics addon
+• Add support for RSS Editor addon
+• Add support for Global Search addon
+• Add support for TV Show Next Aired addon
+• Add support for Extended Info addon
+• Add support for LibreELEC settings addon
+• Add support for Kiosk mode
+• Changes on views
+• Changes on volume bar
+• Some fixes

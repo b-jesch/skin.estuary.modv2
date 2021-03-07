@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label>342</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMovies.png</icon>
+        <action>ActivateWindow(videos,library://video/movies/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20343</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultTVShows.png</icon>
+        <action>ActivateWindow(videos,library://video/tvshows/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20389</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicVideos.png</icon>
+        <action>ActivateWindow(videos,library://video/musicvideos/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>744</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultFolder.png</icon>
+        <action>ActivateWindow(Videos,Files,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>136</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultVideoPlaylists.png</icon>
+        <action>ActivateWindow(Videos,special://videoplaylists/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>1037</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultAddonVideo.png</icon>
+        <action>ActivateWindow(Videos,addons://sources/video/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20314</label>
+        <label2>Common Shortcut</label2>
+        <icon>LibrarySettings.png</icon>
+        <action>ActivateWindow(Videos,root,return)</action>
+    </shortcut>
+</shortcuts>

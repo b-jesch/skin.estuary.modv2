@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="3033">
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group">
+			<left>470</left>
+			<top>168</top>
+			<right>0</right>
+			<bottom>142</bottom>
+			<include>OpenClose_Right</include>
+			<!-- Other Content (right)-->
+			<!-- about page -->
+			<control type="group" id="1900">
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<bottom>0</bottom>
+				<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1900)</visible>
+				<control type="image">
+					<right>60</right>
+					<top>20</top>
+					<width>150</width>
+					<height>150</height>
+					<texture border="1">icons/libreELEC/logo_big_CoreELEC.png</texture>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<top>50</top>
+					<width>300</width>
+					<height>20</height>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$ADDON[service.libreelec.settings 606]</label>
+				</control>
+				<control type="label">
+					<left>300</left>
+					<top>50</top>
+					<right>60</right>
+					<height>20</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window.Property(Distri)] ($INFO[Window.Property(build)])</label>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<top>90</top>
+					<width>300</width>
+					<height>20</height>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$ADDON[service.libreelec.settings 607]</label>
+				</control>
+				<control type="label">
+					<left>300</left>
+					<top>90</top>
+					<right>60</right>
+					<height>16</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window.Property(Version)]</label>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<top>130</top>
+					<width>300</width>
+					<height>16</height>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$ADDON[service.libreelec.settings 608]</label>
+				</control>
+				<control type="label">
+					<left>300</left>
+					<top>130</top>
+					<right>60</right>
+					<height>16</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window.Property(Arch)]</label>
+				</control>
+				<control type="textbox">
+					<left>60</left>
+					<top>220</top>
+					<right>60</right>
+					<height>300</height>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$ADDON[service.libreelec.settings 609]</label>
+				</control>
+				<control type="textbox">
+					<left>60</left>
+					<top>390</top>
+					<right>60</right>
+					<height>400</height>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$ADDON[service.libreelec.settings 610]</label>
+				</control>
+				<control type="textbox">
+					<left>60</left>
+					<top>720</top>
+					<right>60</right>
+					<height>90</height>
+					<font>font12</font>
+					<align>justify</align>
+				</control>
+			</control>
+			<!-- simple list content -->
+			<control type="list" id="1100">
+				<left>0</left>
+				<right>0</right>
+				<bottom>0</bottom>
+				<onleft>1000</onleft>
+				<onright>60</onright>
+				<onup condition="![String.IsEmpty(Control.GetLabel(1500)) + String.IsEmpty(Control.GetLabel(1501))]">1501</onup>
+				<ondown condition="![String.IsEmpty(Control.GetLabel(1500)) + String.IsEmpty(Control.GetLabel(1501))]">1500</ondown>
+				<pagecontrol>60</pagecontrol>
+				<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1100)</visible>
+				<itemlayout height="70">
+					<control type="group">
+						<visible>!String.IsEqual(ListItem.Property(Typ), separator)</visible>
+						<control type="label">
+							<aligny>center</aligny>
+							<textoffsetx>40</textoffsetx>
+							<right>0</right>
+							<height>70</height>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<align>right</align>
+							<aligny>center</aligny>
+							<textoffsetx>40</textoffsetx>
+							<right>0</right>
+							<height>70</height>
+							<info>ListItem.Property(value)</info>
+							<visible>!String.IsEqual(ListItem.Property(Typ), bool) + !String.IsEqual(ListItem.Property(Typ), button)</visible>
+						</control>
+					</control>
+					<control type="group">
+						<visible>String.IsEqual(ListItem.Property(Typ), separator)</visible>
+						<control type="label">
+							<aligny>center</aligny>
+							<align>center</align>
+							<textoffsetx>45</textoffsetx>
+							<width>1450</width>
+							<top>0</top>
+							<height>70</height>
+							<font>font28_title</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<info>ListItem.Label</info>
+							<visible>true</visible>
+						</control>
+					</control>
+					<control type="group">
+						<visible>String.IsEqual(ListItem.Property(Typ), bool)</visible>
+						<control type="image">
+							<right>16</right>
+							<top>8</top>
+							<width>100</width>
+							<height>60</height>
+							<texture>buttons/radio-button-off.png</texture>
+							<visible>String.IsEqual(ListItem.Property(value), 0) | String.IsEqual(ListItem.Property(value), false) | String.IsEmpty(ListItem.Property(value))</visible>
+						</control>
+						<control type="image">
+							<right>16</right>
+							<top>8</top>
+							<width>100</width>
+							<height>60</height>
+							<texture>buttons/radio-button-on.png</texture>
+							<visible>String.IsEqual(ListItem.Property(value), 1) | String.IsEqual(ListItem.Property(value), true)</visible>
+						</control>
+					</control>
+					<control type="group">
+						<visible>String.IsEqual(ListItem.Property(Typ), button)</visible>
+						<control type="image">
+							<right>40</right>
+							<top>22</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>icons/libreELEC/do.png</texture>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="70">
+					<control type="group">
+						<visible>!String.IsEqual(ListItem.Property(Typ), separator)</visible>
+						<control type="image">
+							<right>0</right>
+							<height>70</height>
+							<visible>Control.HasFocus(1100)</visible>
+							<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						</control>
+						<control type="label">
+							<aligny>center</aligny>
+							<textoffsetx>40</textoffsetx>
+							<right>0</right>
+							<height>70</height>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<align>right</align>
+							<textoffsetx>40</textoffsetx>
+							<aligny>center</aligny>
+							<right>0</right>
+							<height>70</height>
+							<info>ListItem.Property(value)</info>
+							<visible>!String.IsEqual(ListItem.Property(Typ), bool) + !String.IsEqual(ListItem.Property(Typ), button)</visible>
+						</control>
+					</control>
+					<control type="group">
+						<visible>String.IsEqual(ListItem.Property(Typ), separator)</visible>
+						<control type="label">
+							<aligny>center</aligny>
+							<align>center</align>
+							<textoffsetx>45</textoffsetx>
+							<width>1450</width>
+							<top>0</top>
+							<height>70</height>
+							<font>font28_title</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<info>ListItem.Label</info>
+							<visible>true</visible>
+						</control>
+					</control>
+					<control type="group">
+						<visible>String.IsEqual(ListItem.Property(Typ), bool)</visible>
+						<control type="image">
+							<right>16</right>
+							<top>8</top>
+							<width>100</width>
+							<height>60</height>
+							<texture>buttons/radio-button-off.png</texture>
+							<visible>String.IsEqual(ListItem.Property(value), 0) | String.IsEqual(ListItem.Property(value), false) | String.IsEmpty(ListItem.Property(value))</visible>
+						</control>
+						<control type="image">
+							<right>16</right>
+							<top>8</top>
+							<width>100</width>
+							<height>60</height>
+							<texture>buttons/radio-button-on.png</texture>
+							<visible>String.IsEqual(ListItem.Property(value), 1) | String.IsEqual(ListItem.Property(value), true)</visible>
+						</control>
+					</control>
+					<control type="group">
+						<visible>String.IsEqual(ListItem.Property(Typ), button)</visible>
+						<control type="image">
+							<right>40</right>
+							<top>22</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>icons/libreELEC/do.png</texture>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- Network Menu Content -->
+			<control type="list" id="1200">
+				<left>0</left>
+				<right>0</right>
+				<bottom>0</bottom>
+				<onleft>1000</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1200)</visible>
+				<itemlayout height="110">
+					<!-- Icon ethernet -->
+					<control type="image">
+						<left>40</left>
+						<top>25</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(netType), ethernet)</visible>
+						<texture>icons/libreELEC/eth.png</texture>
+					</control>
+					<!-- Icon wifi -->
+					<control type="image">
+						<left>40</left>
+						<top>25</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+						<texture>icons/libreELEC/wlan.png</texture>
+					</control>
+					<!-- Connection Name -->
+					<control type="label">
+						<left>120</left>
+						<top>20</top>
+						<width>380</width>
+						<height>30</height>
+						<font>font25_title</font>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<visible>true</visible>
+					</control>
+					<!-- Interface -->
+					<control type="label">
+						<left>120</left>
+						<top>49</top>
+						<width>380</width>
+						<height>20</height>
+						<font>font12</font>
+						<label>$ADDON[service.libreelec.settings 601] : $INFO[ListItem.Property(Interface)]</label>
+						<visible>!String.IsEmpty(ListItem.Property(Interface))</visible>
+					</control>
+					<!-- Connection Address -->
+					<control type="label">
+						<left>920</left>
+						<top>49</top>
+						<width>290</width>
+						<height>20</height>
+						<font>font12</font>
+						<visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
+						<label>$ADDON[service.libreelec.settings 602] : $INFO[ListItem.Property(Address)]</label>
+					</control>
+					<!-- Method -->
+					<control type="label">
+						<left>560</left>
+						<top>49</top>
+						<width>200</width>
+						<height>20</height>
+						<font>font12</font>
+						<label>$ADDON[service.libreelec.settings 603] : $INFO[ListItem.Property(Method)]</label>
+					</control>
+					<!-- State -->
+					<control type="label">
+						<left>560</left>
+						<top>20</top>
+						<width>200</width>
+						<height>20</height>
+						<font>font12</font>
+						<label>$ADDON[service.libreelec.settings 604] : $INFO[ListItem.Property(State)]</label>
+					</control>
+					<!-- Signal strength -->
+					<control type="progress">
+						<left>40</left>
+						<top>85</top>
+						<right>40</right>
+						<height>10</height>
+						<info>ListItem.Property(Strength)</info>
+						<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+					</control>
+					<!-- Signal strength value -->
+					<control type="label">
+						<right>70</right>
+						<top>49</top>
+						<width>40</width>
+						<height>20</height>
+						<font>font10</font>
+						<align>right</align>
+						<info>ListItem.Property(Strength)</info>
+						<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+					</control>
+					<!-- Online Symbol (top right) -->
+					<control type="image">
+						<right>40</right>
+						<top>25</top>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(State), online)</visible>
+						<texture>icons/libreELEC/connected.png</texture>
+					</control>
+					<!-- Favorite Symbol (bottom right) -->
+					<control type="image">
+						<right>40</right>
+						<top>55</top>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Favorite), 1)</visible>
+						<texture>icons/libreELEC/favorite.png</texture>
+					</control>
+					<!-- Secure Symbol (bottom right) -->
+					<control type="image">
+						<right>40</right>
+						<top>55</top>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<visible>Integer.IsEqual(ListItem.Property(Security), 1)</visible>
+						<texture>icons/libreELEC/key.png</texture>
+					</control>
+					<!-- Insecure Symbol (bottom right) -->
+					<control type="image">
+						<right>40</right>
+						<top>55</top>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<visible>Integer.IsEqual(ListItem.Property(Security), 0)</visible>
+						<texture>icons/libreELEC/unlock.png</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="110">
+					<control type="image">
+						<right>0</right>
+						<height>110</height>
+						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						<visible>Control.HasFocus(1200)</visible>
+					</control>
+					<!-- Icon ethernet -->
+					<control type="image">
+						<left>40</left>
+						<top>25</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(netType), ethernet)</visible>
+						<texture>icons/libreELEC/eth.png</texture>
+					</control>
+					<!-- Icon wifi -->
+					<control type="image">
+						<left>40</left>
+						<top>25</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+						<texture>icons/libreELEC/wlan.png</texture>
+					</control>
+					<!-- Connection Name -->
+					<control type="label">
+						<left>120</left>
+						<top>20</top>
+						<width>380</width>
+						<height>30</height>
+						<font>font25_title</font>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<visible>true</visible>
+					</control>
+					<!-- Interface -->
+					<control type="label">
+						<left>120</left>
+						<top>49</top>
+						<width>380</width>
+						<height>20</height>
+						<font>font12</font>
+						<label>$ADDON[service.libreelec.settings 601] : $INFO[ListItem.Property(Interface)]</label>
+						<visible>!String.IsEmpty(ListItem.Property(Interface))</visible>
+					</control>
+					<!-- Connection Address -->
+					<control type="label">
+						<left>920</left>
+						<top>49</top>
+						<width>290</width>
+						<height>20</height>
+						<font>font12</font>
+						<visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
+						<label>$ADDON[service.libreelec.settings 602] : $INFO[ListItem.Property(Address)]</label>
+					</control>
+					<!-- Method -->
+					<control type="label">
+						<left>560</left>
+						<top>49</top>
+						<width>200</width>
+						<height>20</height>
+						<font>font12</font>
+						<label>$ADDON[service.libreelec.settings 603] : $INFO[ListItem.Property(Method)]</label>
+					</control>
+					<!-- State -->
+					<control type="label">
+						<left>560</left>
+						<top>20</top>
+						<width>200</width>
+						<height>20</height>
+						<font>font12</font>
+						<label>$ADDON[service.libreelec.settings 604] : $INFO[ListItem.Property(State)]</label>
+					</control>
+					<!-- Signal strength -->
+					<control type="progress">
+						<left>40</left>
+						<top>85</top>
+						<right>40</right>
+						<height>10</height>
+						<info>ListItem.Property(Strength)</info>
+						<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+					</control>
+					<!-- Signal strength value -->
+					<control type="label">
+						<right>70</right>
+						<top>49</top>
+						<width>40</width>
+						<height>10</height>
+						<font>font10</font>
+						<align>right</align>
+						<info>ListItem.Property(Strength)</info>
+						<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+					</control>
+					<!-- Online Symbol (top right) -->
+					<control type="image">
+						<right>40</right>
+						<top>25</top>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(State), online)</visible>
+						<texture>icons/libreELEC/connected.png</texture>
+					</control>
+					<!-- Favorite Symbol (bottom right) -->
+					<control type="image">
+						<right>40</right>
+						<top>55</top>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Favorite), 1)</visible>
+						<texture>icons/libreELEC/favorite.png</texture>
+					</control>
+					<!-- Secure Symbol (bottom right) -->
+					<control type="image">
+						<right>40</right>
+						<top>55</top>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<visible>Integer.IsEqual(ListItem.Property(Security), 1)</visible>
+						<texture>icons/libreELEC/key.png</texture>
+					</control>
+					<!-- Insecure Symbol (bottom right) -->
+					<control type="image">
+						<right>40</right>
+						<top>55</top>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<visible>Integer.IsEqual(ListItem.Property(Security), 0)</visible>
+						<texture>icons/libreELEC/unlock.png</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- Bluetooth Menu Content -->
+			<control type="label" id="1301">
+				<align>center</align>
+				<aligny>center</aligny>
+				<left>0</left>
+				<right>0</right>
+				<bottom>0</bottom>
+				<info />
+				<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1300) + String.IsEqual(Container(1300).NumItems, 0)</visible>
+			</control>
+			<control type="list" id="1300">
+				<left>0</left>
+				<right>0</right>
+				<bottom>0</bottom>
+				<onleft>1000</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1300)</visible>
+				<itemlayout height="110">
+					<!-- default -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), default)</visible>
+						<texture>icons/libreELEC/bt.png</texture>
+					</control>
+					<!-- modem -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), modem)</visible>
+						<texture>icons/libreELEC/bt-modem.png</texture>
+					</control>
+					<!-- audio -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), audio-card)</visible>
+						<texture>icons/libreELEC/bt-audio-card.png</texture>
+					</control>
+					<!-- Camera Photo -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), camera-photo)</visible>
+						<texture>icons/libreELEC/bt-camera-photo.png</texture>
+					</control>
+					<!-- Icon phone -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), phone)</visible>
+						<texture>icons/libreELEC/bt-phone.png</texture>
+					</control>
+					<!-- camera-video -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), camera-video)</visible>
+						<texture>icons/libreELEC/bt-camera-video.png</texture>
+					</control>
+					<!-- input-mouse -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), input-mouse)</visible>
+						<texture>icons/libreELEC/bt-input-mouse.png</texture>
+					</control>
+					<!-- input-gaming -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), input-gaming)</visible>
+						<texture>icons/libreELEC/bt-input-gaming.png</texture>
+					</control>
+					<!-- input-keyboard -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), input-keyboard)</visible>
+						<texture>icons/libreELEC/bt-input-keyboard.png</texture>
+					</control>
+					<!-- input-tablet -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), input-tablet)</visible>
+						<texture>icons/libreELEC/bt-input-tablet.png</texture>
+					</control>
+					<!-- Printer -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), printer)</visible>
+						<texture>icons/libreELEC/bt-printer.png</texture>
+					</control>
+					<!-- Computer -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), computer)</visible>
+						<texture>icons/libreELEC/bt-computer.png</texture>
+					</control>
+					<!-- Connection Name -->
+					<control type="label">
+						<left>130</left>
+						<width>600</width>
+						<height>110</height>
+						<aligny>center</aligny>
+						<font>font30_title</font>
+						<info>ListItem.Label</info>
+						<visible>true</visible>
+					</control>
+					<!-- Connection Address -->
+					<control type="label">
+						<left>750</left>
+						<bottom>25</bottom>
+						<width>400</width>
+						<height>20</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<label>$ADDON[service.libreelec.settings 605] : $INFO[ListItem.Property(Address)]</label>
+					</control>
+					<!-- Connected State -->
+					<control type="label">
+						<left>750</left>
+						<top>25</top>
+						<width>400</width>
+						<height>20</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<label>$ADDON[service.libreelec.settings 32333] $INFO[ListItem.Property(ConnectedState)]</label>
+					</control>
+					<!-- Paired Symbol (bottom right) -->
+					<control type="image">
+						<left>1370</left>
+						<top>35</top>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Paired), 1)</visible>
+						<texture>icons/libreELEC/favorite.png</texture>
+					</control>
+					<!-- Trusted Symbol (bottom right) -->
+					<control type="image">
+						<left>1310</left>
+						<top>35</top>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<visible>Integer.IsGreater(ListItem.Property(Trusted), 0)</visible>
+						<texture>icons/libreELEC/key.png</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="110">
+					<control type="image">
+						<right>0</right>
+						<height>110</height>
+						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						<visible>Control.HasFocus(1300)</visible>
+					</control>
+					<!-- default -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), default)</visible>
+						<texture>icons/libreELEC/bt.png</texture>
+					</control>
+					<!-- modem -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), modem)</visible>
+						<texture>icons/libreELEC/bt-modem.png</texture>
+					</control>
+					<!-- audio -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), audio-card)</visible>
+						<texture>icons/libreELEC/bt-audio-card.png</texture>
+					</control>
+					<!-- Camera Photo -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), camera-photo)</visible>
+						<texture>icons/libreELEC/bt-camera-photo.png</texture>
+					</control>
+					<!-- Icon phone -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), phone)</visible>
+						<texture>icons/libreELEC/bt-phone.png</texture>
+					</control>
+					<!-- camera-video -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), camera-video)</visible>
+						<texture>icons/libreELEC/bt-camera-video.png</texture>
+					</control>
+					<!-- input-mouse -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), input-mouse)</visible>
+						<texture>icons/libreELEC/bt-input-mouse.png</texture>
+					</control>
+					<!-- input-gaming -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), input-gaming)</visible>
+						<texture>icons/libreELEC/bt-input-gaming.png</texture>
+					</control>
+					<!-- input-keyboard -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), input-keyboard)</visible>
+						<texture>icons/libreELEC/bt-input-keyboard.png</texture>
+					</control>
+					<!-- input-tablet -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), input-tablet)</visible>
+						<texture>icons/libreELEC/bt-input-tablet.png</texture>
+					</control>
+					<!-- Printer -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), printer)</visible>
+						<texture>icons/libreELEC/bt-printer.png</texture>
+					</control>
+					<!-- Computer -->
+					<control type="image">
+						<left>40</left>
+						<top>30</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Icon), computer)</visible>
+						<texture>icons/libreELEC/bt-computer.png</texture>
+					</control>
+					<!-- Connection Name -->
+					<control type="label">
+						<left>130</left>
+						<width>600</width>
+						<height>110</height>
+						<aligny>center</aligny>
+						<font>font30_title</font>
+						<info>ListItem.Label</info>
+						<visible>true</visible>
+					</control>
+					<!-- Connection Address -->
+					<control type="label">
+						<left>750</left>
+						<bottom>25</bottom>
+						<width>400</width>
+						<height>20</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<label>$ADDON[service.libreelec.settings 605] : $INFO[ListItem.Property(Address)]</label>
+					</control>
+					<!-- Connected State -->
+					<control type="label">
+						<left>750</left>
+						<top>25</top>
+						<width>400</width>
+						<height>20</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<label>$ADDON[service.libreelec.settings 32333] $INFO[ListItem.Property(ConnectedState)]</label>
+					</control>
+					<!-- Paired Symbol (bottom right) -->
+					<control type="image">
+						<left>1370</left>
+						<top>35</top>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<visible>String.IsEqual(ListItem.Property(Paired), 1)</visible>
+						<texture>icons/libreELEC/favorite.png</texture>
+					</control>
+					<!-- Trusted Symbol (bottom right) -->
+					<control type="image">
+						<left>1310</left>
+						<top>35</top>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<visible>Integer.IsGreater(ListItem.Property(Trusted), 0)</visible>
+						<texture>icons/libreELEC/key.png</texture>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<right>0</right>
+			<top>163</top>
+			<bottom>137</bottom>
+			<width>60</width>
+			<control type="scrollbar" id="60">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+				<onleft>1000</onleft>
+				<onright>1000</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(1100) | Control.IsVisible(1200) | Control.IsVisible(1300)</visible>
+			</control>
+		</control>
+		<!-- save and edit buttons -->
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<control type="grouplist" id="1499">
+				<orientation>vertical</orientation>
+				<left>470</left>
+				<right>0</right>
+				<bottom>150</bottom>
+				<onleft>1000</onleft>
+				<onright>60</onright>
+				<onup>1100</onup>
+				<ondown>1100</ondown>
+				<height>140</height>
+				<control type="button" id="1500">
+					<height>70</height>
+					<label />
+					<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+					<texturenofocus />
+					<textoffsetx>40</textoffsetx>
+					<align>left</align>
+					<visible>!String.IsEmpty(Control.GetLabel(1500))</visible>
+				</control>
+				<control type="button" id="1501">
+					<height>70</height>
+					<label />
+					<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+					<texturenofocus />
+					<textoffsetx>40</textoffsetx>
+					<align>left</align>
+					<visible>!String.IsEmpty(Control.GetLabel(1501))</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<depth>DepthContentPanel</depth>
+			<include>OpenClose_Left</include>
+			<include content="ContentPanel">
+				<param name="width" value="530" />
+			</include>
+			<!-- Main Menu (left) -->
+			<control type="list" id="1000">
+				<left>0</left>
+				<top>168</top>
+				<width>470</width>
+				<height>700</height>
+				<onleft>1500</onleft>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<itemlayout height="70" width="470">
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>70</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font30_title</font>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				<focusedlayout height="70" width="470">
+					<control type="image">
+						<width>470</width>
+						<height>70</height>
+						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(1000)">Conditional</animation>
+					</control>
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>70</height>
+						<font>font30_title</font>
+						<aligny>center</aligny>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<left>470</left>
+				<top>160</top>
+				<right>0</right>
+				<height>3</height>
+				<texture colordiffuse="$VAR[SkinColorVar]" border="2">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<left>470</left>
+				<bottom>134</bottom>
+				<right>0</right>
+				<height>3</height>
+				<texture colordiffuse="$VAR[SkinColorVar]" border="2">dialogs/separator-grey.png</texture>
+			</control>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$ADDON[service.libreelec.settings 600]" />
+		</include>
+		<include content="BottomBar">
+			<param name="info_visible" value="true" />
+		</include>
+		<control type="group">
+			<include>OpenClose_Left</include>
+			<control type="image">
+				<description>LOGO</description>
+				<left>15</left>
+				<bottom>40</bottom>
+				<width>440</width>
+				<height>128</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icons/libreELEC/logo_CoreELEC.png</texture>
+				<animation effect="slide" end="0,-50" time="0" condition="Skin.HasSetting(touchmode)">Conditional</animation>
+			</control>
+		</control>	
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<control type="textbox" id="1400">
+				<left>510</left>
+				<bottom>27</bottom>
+				<width>1350</width>
+				<height>100</height>
+				<label>$INFO[Window.Property(InfoText)]</label>
+				<font>font12</font>
+				<align>justify</align>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+			</control>
+		</control>
+	</controls>
+</window>

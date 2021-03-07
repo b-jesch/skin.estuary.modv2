@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label>19024</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultRadioGuide.png</icon>
+        <action>ActivateWindow(RadioChannels)</action>
+    </shortcut>
+    <shortcut>
+        <label>19069</label>
+        <label2>Common Shortcut</label2>
+        <icon>icons/pvr/epg.png</icon>
+        <action>ActivateWindow(RadioGuide)</action>
+    </shortcut>
+    <shortcut>
+        <label>19017</label>
+        <label2>Common Shortcut</label2>
+        <icon>icons/pvr/recording.png</icon>
+        <action>ActivateWindow(RadioRecordings)</action>
+    </shortcut>
+    <shortcut>
+        <label>19040</label>
+        <label2>Common Shortcut</label2>
+        <icon>icons/pvr/timer.png</icon>
+        <action>ActivateWindow(RadioTimers)</action>
+    </shortcut>
+    <shortcut>
+        <label>19138</label>
+        <label2>Common Shortcut</label2>
+        <icon>icons/pvr/timer-rule.png</icon>
+        <action>ActivateWindow(RadioTimerRules)</action>
+    </shortcut>
+    <shortcut>
+        <label>137</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultAddonsSearch.png</icon>
+        <action>ActivateWindow(RadioSearch)</action>
+    </shortcut>
+</shortcuts>

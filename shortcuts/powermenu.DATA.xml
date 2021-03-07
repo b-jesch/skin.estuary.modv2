@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>13012</label>
+        <action>Quit()</action>
+        <icon>special://skin/extras/icons/Power menu/exit.png</icon> 
+        <visible>System.ShowExitButton</visible>       
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>13016</label>
+        <action>Powerdown()</action>
+        <icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
+        <visible>System.CanPowerDown</visible>        
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>20150</label>
+        <action>AlarmClock(shutdowntimer,Shutdown())</action>
+        <icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
+        <visible>!System.HasAlarm(shutdowntimer)</visible>
+        <visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>       
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>$VAR[CancelAlarmVar]</label>
+        <action>CancelAlarm(shutdowntimer)</action>
+        <icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
+        <visible>System.HasAlarm(shutdowntimer)</visible>        
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>13011</label>
+        <action>Suspend()</action>
+        <icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
+        <visible>System.CanSuspend</visible>       
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>13010</label>
+        <action>Hibernate()</action>
+        <icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
+        <visible>System.CanHibernate</visible>        
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>13013</label>
+        <action>Reset()</action>
+        <icon>special://skin/extras/icons/Power menu/reboot.png</icon> 
+        <visible>System.CanReboot</visible>        
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>$VAR[SystemLogOffVar]</label>
+        <action>dialog.close(all,true)</action>
+        <icon>special://skin/extras/icons/Power menu/logoff.png</icon>
+        <visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
+        <visible>System.Loggedon</visible>
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>$VAR[MasterModeLabel]</label>
+        <action>mastermode</action>
+        <icon>special://skin/extras/icons/Power menu/mastermode.png</icon> 
+        <visible>System.HasLocks</visible>        
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>13017</label>
+        <action>InhibitIdleShutdown(true)</action>
+        <icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
+        <visible>System.HasShutdown + !System.IsInhibit</visible>     
+    </shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>13018</label>
+        <action>InhibitIdleShutdown(false)</action>
+        <icon>special://skin/extras/icons/Power menu/inhibitidleshutdown.png</icon> 
+        <visible>System.HasShutdown + System.IsInhibit</visible>       
+    </shortcut>
+    <shortcut>
+    	<label2>Common Shortcut</label2>
+		<label>40009</label>
+		<action>UpdateLibrary(video)</action>
+		<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
+		<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
+	</shortcut>
+	<shortcut>
+		<label2>Common Shortcut</label2>
+		<label>40013</label>
+		<action>UpdateLibrary(video)</action>
+		<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
+		<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
+	</shortcut>
+	<shortcut>
+		<label2>Common Shortcut</label2>
+		<label>40010</label>
+		<action>UpdateLibrary(music)</action>
+		<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
+		<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
+	</shortcut>
+	<shortcut>
+		<label2>Common Shortcut</label2>
+		<label>40014</label>
+		<action>UpdateLibrary(music)</action>
+		<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
+		<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
+	</shortcut>
+    <shortcut>
+        <label2>Common Shortcut</label2>
+        <label>20183</label>
+        <action>ReloadSkin()</action>
+        <icon>special://skin/extras/icons/Power menu/reload.png</icon>        
+    </shortcut>
+</shortcuts>

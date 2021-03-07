@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<controls>
+         <control type="image">
+             <centerleft>50%</centerleft>
+             <centertop>50%</centertop>
+             <width>200</width>
+             <height>200</height>
+             <texture>osd/play-button.png</texture>
+             <visible>SlideShow.IsVideo</visible>
+             <visible>![Player.Playing + Player.HasVideo] | SlideShow.IsPaused</visible>
+         </control>
+     </controls>
+</window>

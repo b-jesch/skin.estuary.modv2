@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1102">
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<animation effect="fade" time="300">VisibleChange</animation>
+	<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<control type="image">
+				<include>FullScreenDimensions</include>
+				<texture colordiffuse="E6FFFFFF">colors/black.png</texture>
+			</control>
+			<control type="label">
+				<left>50</left>
+				<top>50</top>
+				<right>50</right>
+				<height>662</height>
+				<font>font_MainMenu</font>
+				<label>$INFO[Window(home).Property(TextViewer_Header)]</label>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="textbox" id="2000">
+				<left>50</left>
+				<top>150</top>
+				<right>50</right>
+				<bottom>75</bottom>
+				<pagecontrol>3000</pagecontrol>
+				<font>font45</font>
+				<label>$INFO[Window(home).Property(TextViewer_Text)]</label>
+			</control>
+			<control type="scrollbar" id="3000">
+				<include>HiddenObject</include>
+				<ondown>3000</ondown>
+				<onup>3000</onup>
+			</control>
+		</control>
+		<control type="button" id="1000">
+			<include>HiddenObject</include>
+			<onclick>Action(Close)</onclick>
+			<onup>PageUp(3000)</onup>
+			<ondown>PageDown(3000)</ondown>
+		</control>
+		<control type="button">
+			<centerleft>50%</centerleft>
+			<top>20</top>
+			<width>48</width>
+			<height>20</height>
+			<onclick>SetFocus(3000)</onclick>
+			<onclick>Up</onclick>
+			<texturefocus colordiffuse="$VAR[SkinColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[SkinColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
+			<visible>Control.IsVisible(3000) + Integer.IsGreater(Container(2000).CurrentPage,1)</visible>
+			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+		</control>
+		<control type="button">
+			<centerleft>50%</centerleft>
+			<bottom>20</bottom>
+			<width>48</width>
+			<height>20</height>
+			<onclick>SetFocus(3000)</onclick>
+			<onclick>Down</onclick>
+			<texturefocus colordiffuse="$VAR[SkinColorVar]">overlays/arrowdown.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[SkinColorVar]">overlays/arrowdown.png</texturenofocus>
+			<visible>Control.IsVisible(3000) + !String.IsEqual(Container(2000).CurrentPage,Container(2000).NumPages)</visible>
+			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+		</control>
+	</controls>
+</window>

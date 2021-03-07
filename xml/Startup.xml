@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<onload>ClearProperty(SplashStarted,home)</onload>
+	<controls>
+		<control type="videowindow">
+			<include>FullScreenDimensions</include>
+		</control>
+		<control type="image">
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$INFO[Window(Home).Property(SkinHelper.SplashScreen)]</texture>
+		</control>
+		<control type="group">
+			<visible>String.IsEmpty(Skin.String(SplashScreen)) + !Skin.HasSetting(EnableSpashScreen)</visible>
+			<control type="image">
+				<depth>DepthBackground</depth>
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[BackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
+			</control>
+			<control type="image">
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="EDFFFFFF">lists/panel.png</texture>
+			</control>
+			<control type="image">
+				<depth>DepthBackground</depth>
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture>special://skin/extras/backgrounds/splash.png</texture>
+			</control>
+		</control>
+		<control type="button" id="8000">
+			<onfocus condition="Skin.HasSetting(EnableSpashScreen)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<onfocus condition="!Skin.String(SplashScreen) + !Skin.HasSetting(EnableSpashScreen)">AlarmClock(GoHome,ReplaceWindow($INFO[System.StartupWindow]),00:01,silent,false)</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+	</controls>
+</window>

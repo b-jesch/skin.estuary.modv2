@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views>
+<!-- movies, setmovies, tvshows, musicvideos, seasons, sets, episodes, artists, albums, songs, tvchannels, tvrecordings, programs, pictures -->
+	<view id="List" value="50" languageid="535" type="movies,setmovies,sets,tvshows,seasons"/>
+	<view id="WideList" value="55" languageid="31107" type="movies,setmovies,sets,tvshows,seasons,episodes,musicvideos,artists,albums" />
+	<view id="Posters" value="51" languageid="20021" type="movies,setmovies,sets,tvshows,seasons" />
+	<view id="Shift" value="53" languageid="31100" type="movies,setmovies,sets,tvshows,seasons,musicvideos,artists,albums,pictures" />
+	<view id="InfoWall" value="54" languageid="31101" type="movies,setmovies,sets,tvshows,seasons,episodes,musicvideos,artists,albums,pictures" />
+	<view id="ThumbsInfoWall" value="505" languageid="40016" type="movies,setmovies,sets,tvshows,seasons,artists" />
+	<view id="Wall" value="500" languageid="31102" type="movies,setmovies,sets,tvshows,seasons,episodes,musicvideos,artists,albums,pictures" />
+	<view id="ThumbsWall" value="504" languageid="40015" type="movies,setmovies,sets,tvshows,seasons,artists" />
+	<view id="Banner" value="501" languageid="20020" type="movies,tvshows" />
+	<view id="FanArt" value="502" languageid="20445" type="movies,setmovies,sets,tvshows,seasons,episodes,musicvideos" />
+	<view id="Gallery" value="503" languageid="40005" type="movies,setmovies,sets,tvshows,episodes" />
+	<view id="Mosaic" value="506" languageid="40017" type="movies,setmovies,sets,tvshows,seasons,musicvideos,artists,albums,pictures" />
+	<view id="Mosaic_Vertical" value="507" languageid="40146" type="movies,setmovies,sets,tvshows,seasons,musicvideos,artists,albums,pictures" />
+	<view id="DoubleLists" value="508" languageid="40212" type="sets,artists,albums,seasons" />
+	<view id="TripleLists" value="509" languageid="40214" type="artists,tvshows" />
+</views>

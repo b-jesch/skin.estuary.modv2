@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="View_50_List">
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<left>596</left>
+			<visible>Control.IsVisible(50)</visible>
+			<include>Visible_Right</include>
+			<include content="ListContainer">
+				<param name="list_id" value="50" />
+				<param name="right" value="594" />
+				<param name="viewtype_label" value="$LOCALIZE[535]" />
+			</include>
+			<control type="group">
+				<depth>DepthContentPanel</depth>
+				<control type="group">
+					<right>-20</right>
+					<width>634</width>
+					<include content="ContentPanel">
+						<param name="left" value="0" />
+						<param name="top" value="-20" />
+						<param name="width" value="656" />
+						<param name="flipx" value="true" />
+					</include>
+					<control type="scrollbar" id="50600">
+						<left>20</left>
+						<top>list_y_offset</top>
+						<width>12</width>
+						<bottom>list_y_offset</bottom>
+						<onleft>50</onleft>
+						<onright condition="String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)">SetFocus(8000)</onright>
+						<orientation>vertical</orientation>
+						<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(50600)">conditional</animation>
+						<hitrect x="-30" y="0" w="120" h="100%" />
+					</control>
+					<control type="image">
+						<depth>DepthContentPopout</depth>
+						<left>38</left>
+						<right>36</right>
+						<top>120</top>
+						<bottom>124</bottom>
+						<fadetime>200</fadetime>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
+					</control>
+					<control type="group">
+						<top>650</top>
+						<left>680</left>
+						<visible>Skin.HasSetting(enable_LibraryDiscArt)</visible>
+						<visible>!String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
+						<animation effect="slide" start="0,0" end="-375,0" time="300" tween="cubic" easing="out">VisibleChange</animation>
+						<animation effect="fade" start="100" end="0" time="0" condition="String.IsEmpty(ListItem.Art(discart))">Conditional</animation>
+						<animation effect="slide" end="640,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>302</width>
+							<height>302</height>
+							<texture background="true" colordiffuse="$VAR[SkinColorVar]">overlays/circle-302.png</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>302</width>
+							<height>302</height>
+							<texture background="true" colordiffuse="$VAR[GradientColorVar]">overlays/circle-302-gradient.png</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
+							<visible>Skin.HasSetting(EnableGradientColor)</visible>
+						</control>
+						<control type="image">
+							<left>1</left>
+							<top>1</top>
+							<width>300</width>
+							<height>300</height>
+							<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+					</control>
+					<control type="group">
+						<left>293</left>
+						<top>937</top>
+						<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
+						<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">
+							<param name="animation" value="True" />
+						</include>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="ListContainer">
+		<param name="left">0</param>
+		<param name="right">0</param>
+		<definition>
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<left>$PARAM[left]</left>
+				<right>$PARAM[right]</right>
+				<top>list_y_offset</top>
+				<bottom>list_y_offset</bottom>
+				<movement>5</movement>
+				<focusposition>6</focusposition>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol>$PARAM[list_id]600</pagecontrol>
+				<oninfo condition="String.IsEqual(ListItem.DBType,set)">ActivateWindow(1132)</oninfo>
+				<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
+				<onright>$PARAM[list_id]600</onright>
+				<onup>$PARAM[list_id]</onup>
+				<ondown>$PARAM[list_id]</ondown>
+				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(games) | Container.Content(musicvideos) | Window.IsActive(MyPlaylist.xml)</visible>
+				<focusedlayout height="list_item_height">
+					<control type="image">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						<visible>Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+						<visible>Control.HasFocus($PARAM[list_id])</visible>
+						<visible>Skin.HasSetting(EnableGradientColor)</visible>
+					</control>
+					<control type="label">
+						<left>70</left>
+						<right>70</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<aligny>center</aligny>
+						<scroll>true</scroll>
+						<font>font27</font>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<bottom>0</bottom>
+						<left>100</left>
+						<right>20</right>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<label>$VAR[ListLabel2Var]</label>
+						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="image">
+						<left>21</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture>$VAR[ListWatchedIconVar]</texture>
+						<animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
+					</control>
+					<control type="image">
+						<left>21</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture colordiffuse="$VAR[SkinColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+						<animation effect="fade" time="150">VisibleChange</animation>
+						<visible>!Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+				</focusedlayout>
+				<itemlayout height="list_item_height">
+					<control type="label">
+						<left>70</left>
+						<right>70</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="label">
+						<left>70</left>
+						<right>70</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>grey</textcolor>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<right>20</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<label>$VAR[ListLabel2Var]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<right>20</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<label>$VAR[ListLabel2Var]</label>
+						<textcolor>grey</textcolor>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+					</control>
+					<control type="image">
+						<left>21</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture>$VAR[ListWatchedIconVar]</texture>
+					</control>
+					<control type="image">
+						<left>21</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
+						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+					</control>
+				</itemlayout>
+			</control>
+		</definition>
+	</include>
+	<include name="ListThumbInfoPanel">
+		<param name="flip_bg">false</param>
+		<definition>
+			<control type="group">
+				<depth>DepthContentPanel</depth>
+				<include content="ContentPanel">
+					<param name="width" value="654" />
+					<param name="flipx" value="$PARAM[flip_bg]" />
+				</include>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultVideo.png">$VAR[IconWallPosterVar]</texture>
+					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DbType,artist) + !String.IsEqual(ListItem.DbType,album) + !String.IsEqual(ListItem.DbType,song) + !Container.Content(games) + !Container.Content(addons) + !Container.Content(years) + !Container.Content(genres) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(tags) + !Container.Content(roles) + !Container.Content(playlists) + !Container.Content(files)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultAudio.png">$VAR[IconWallThumbVar]</texture>
+					<visible>String.IsEqual(ListItem.DbType,artist) | String.IsEqual(ListItem.DbType,album) | String.IsEqual(ListItem.DbType,song)</visible>
+				</control>
+				<control type="group">
+					<top>405</top>
+					<left>-403</left>
+					<visible>Skin.HasSetting(enable_LibraryDiscArt)</visible>
+					<visible>!String.IsEmpty(ListItem.Art(discart)) + !String.IsEqual(ListItem.DbType,album) + !String.IsEqual(ListItem.DbType,song) + !ListItem.IsCollection</visible>
+					<animation effect="slide" start="0,0" end="460,0" time="300" tween="cubic" easing="out">VisibleChange</animation>
+					<animation effect="fade" start="100" end="0" time="0" condition="String.IsEmpty(ListItem.Art(discart))">Conditional</animation>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>202</width>
+						<height>202</height>
+						<texture background="true" colordiffuse="$VAR[SkinColorVar]">overlays/circle-202.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>202</width>
+						<height>202</height>
+						<texture background="true" colordiffuse="$VAR[GradientColorVar]">overlays/circle-202-gradient.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
+						<visible>Skin.HasSetting(EnableGradientColor)</visible>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<top>1</top>
+						<width>200</width>
+						<height>200</height>
+						<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<bottom>140</bottom>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultAddonGame.png">$INFO[ListItem.FileNameAndPath,,.jpg]</texture>
+					<visible>Container.Content(games)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+					<visible>Container.Content(addons)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true">DefaultMusicYears.png</texture>
+					<visible>Container.Content(years)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultGenre.png">$VAR[IconWallThumbVar]</texture>
+					<visible>Container.Content(genres) + Window.IsVisible(MyVideoNav.xml)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultMusicGenres.png">$VAR[IconWallThumbVar]</texture>
+					<visible>Container.Content(genres) + Window.IsVisible(MyMusicNav.xml)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultActor.png">$INFO[Container.ListItem.Art(thumb)]</texture>
+					<visible>Container.Content(actors)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultDirector.png">http://localhost:52307/getthumb&amp;title=$ESCINFO[Container.ListItem.Label,, imdb]</texture>
+					<visible>Container.Content(directors)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultStudios.png">$VAR[IconWallThumbVar]</texture>
+					<visible>Container.Content(studios)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultCountry.png">$VAR[IconWallThumbVar]</texture>
+					<visible>Container.Content(countries)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true">$VAR[IconWallThumbVar]</texture>
+					<visible>Container.Content(tags)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true">DefaultMusicRoles.png</texture>
+					<visible>Container.Content(roles)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultFile.png">$VAR[IconWallThumbVar]</texture>
+					<visible>Container.Content(files)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>470</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultPlaylist.png">$INFO[ListItem.Icon]</texture>
+					<visible>Container.Content(playlists)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>140</top>
+					<width>535</width>
+					<height>330</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true" fallback="DefaultVideo.png">$VAR[InfoWallEpisodeVar]</texture>
+					<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+				</control>
+				<control type="group">
+					<left>272</left>
+					<top>591</top>
+					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircle</include>
+					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
+					<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(55) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[20359]) | String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
+				</control>
+				<control type="group">
+					<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>
+					<visible>!ListItem.IsCollection</visible>
+					<left>30</left>
+					<control type="textbox" id="15500">
+						<top>640</top>
+						<width>535</width>
+						<bottom>112</bottom>
+						<align>justify</align>
+						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist)</visible>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!String.IsEqual(Skin.Font, Arial) + !Container.Content(genres)</visible>
+					</control>
+					<control type="textbox" id="15500">
+						<top>640</top>
+						<width>535</width>
+						<bottom>90</bottom>
+						<align>justify</align>
+						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist)</visible>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>String.IsEqual(Skin.Font, Arial) + !Container.Content(genres)</visible>
+					</control>
+					<control type="textbox" id="15501">
+						<top>495</top>
+						<width>535</width>
+						<bottom>130</bottom>
+						<align>justify</align>
+						<autoscroll time="3000" delay="7000" repeat="6000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[PlotSpoilerVar]</label>
+						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="textbox" id="15501">
+						<top>495</top>
+						<width>535</width>
+						<bottom>80</bottom>
+						<align>justify</align>
+						<autoscroll time="3000" delay="7000" repeat="6000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[PlotSpoilerVar]</label>
+						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<bottom>80</bottom>
+						<width>537</width>
+						<height>25</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Genre]</label>
+						<font>font12</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<scroll>true</scroll>
+						<visible>String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)</visible>
+						<visible>!ListItem.IsCollection</visible>
+					</control>
+				</control>
+				<control type="group">
+					<left>20</left>
+					<top>780</top>
+					<visible>String.IsEqual(listitem.dbtype,artist)</visible>
+					<control type="textbox">
+						<left>10</left>
+						<top>-140</top>
+						<width>535</width>
+						<bottom>272</bottom>
+						<align>justify</align>
+						<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="textbox">
+						<left>10</left>
+						<top>-140</top>
+						<width>535</width>
+						<bottom>274</bottom>
+						<align>justify</align>
+						<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="list" id="500551">
+						<left>7</left>
+						<bottom>85</bottom>
+						<width>540</width>
+						<height>170</height>
+						<orientation>horizontal</orientation>
+						<autoscroll time="1500">true</autoscroll>
+						<itemgap>5</itemgap>
+						<animation effect="slide" end="180,0" time="0" condition="Integer.IsEqual(Container(500551).NumItems,1)">conditional</animation>
+						<animation effect="slide" end="90,0" time="0" condition="Integer.IsEqual(Container(500551).NumItems,2)">conditional</animation>
+						<focusedlayout height="170" width="180">
+							<control type="image">
+								<left>5</left>
+								<top>0</top>
+								<right>5</right>
+								<bottom>0</bottom>
+								<aspectratio>stretch</aspectratio>
+								<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Thumb]</texture>
+								<bordertexture>colors/white.png</bordertexture>
+								<bordersize>1</bordersize>
+							</control>
+						</focusedlayout>
+						<itemlayout height="170" width="180">
+							<control type="image">
+								<left>5</left>
+								<top>0</top>
+								<right>5</right>
+								<bottom>0</bottom>
+								<aspectratio>stretch</aspectratio>
+								<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Thumb]</texture>
+								<bordertexture>colors/white.png</bordertexture>
+								<bordersize>1</bordersize>
+							</control>
+						</itemlayout>
+						<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
+					</control>
+				</control>
+				<control type="group">
+					<left>20</left>
+					<top>640</top>
+					<visible>ListItem.IsCollection</visible>
+					<control type="textbox">
+						<top>0</top>
+						<width>535</width>
+						<bottom>235</bottom>
+						<left>10</left>
+						<align>justify</align>
+						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="textbox">
+						<top>0</top>
+						<width>535</width>
+						<bottom>235</bottom>
+						<left>10</left>
+						<align>justify</align>
+						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="textbox">
+						<top>0</top>
+						<width>535</width>
+						<bottom>244</bottom>
+						<left>10</left>
+						<align>justify</align>
+						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="textbox">
+						<top>0</top>
+						<width>535</width>
+						<bottom>244</bottom>
+						<left>10</left>
+						<align>justify</align>
+						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="textbox">
+						<top>41</top>
+						<width>535</width>
+						<bottom>276</bottom>
+						<left>10</left>
+						<label>$LOCALIZE[19055]</label>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="list" id="50055">
+						<left>20</left>
+						<bottom>60</bottom>
+						<width>516</width>
+						<height>170</height>
+						<orientation>horizontal</orientation>
+						<autoscroll time="1500">true</autoscroll>
+						<itemgap>5</itemgap>
+						<animation effect="slide" end="193.5,0" time="0" condition="Integer.IsEqual(Container(50055).NumItems,1)">conditional</animation>
+						<animation effect="slide" end="129,0" time="0" condition="Integer.IsEqual(Container(50055).NumItems,2)">conditional</animation>
+						<animation effect="slide" end="64.5,0" time="0" condition="Integer.IsEqual(Container(50055).NumItems,3)">conditional</animation>
+						<focusedlayout height="170" width="129">
+							<control type="image">
+								<left>5</left>
+								<top>0</top>
+								<right>5</right>
+								<bottom>0</bottom>
+								<aspectratio>stretch</aspectratio>
+								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(poster)]</texture>
+								<bordertexture>colors/white.png</bordertexture>
+								<bordersize>1</bordersize>
+							</control>
+						</focusedlayout>
+						<itemlayout height="170" width="129">
+							<control type="image">
+								<left>5</left>
+								<top>0</top>
+								<right>5</right>
+								<bottom>0</bottom>
+								<aspectratio>stretch</aspectratio>
+								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(poster)]</texture>
+								<bordertexture>colors/white.png</bordertexture>
+								<bordersize>1</bordersize>
+							</control>
+						</itemlayout>
+						<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!ListItem.IsCollection + !String.IsEqual(listitem.dbtype,artist) + String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)</visible>
+					<control type="textbox">
+						<left>30</left>
+						<top>460</top>
+						<width>530</width>
+						<height>413</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<label>$LOCALIZE[19055]</label>
+						<visible>!ListItem.IsParentFolder</visible>
+						<visible>!Integer.IsGreater(Container(42000).NumItems,0) + !Integer.IsGreater(Container(43000).NumItems,0)</visible>
+						<visible>!Container.Content() | !String.isEmpty(ListItem.Plot)</visible>
+						<visible>!Container.Content(games) + !Container.Content(years) + !Container.Content(genres) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(tags) + !Container.Content(roles) + !Container.Content(playlists) + !Container.Content(files)</visible>
+					</control>
+					<control type="group">
+						<left>20</left>
+						<top>640</top>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						<include content="InfoList">
+							<param name="list_id" value="42000" />
+							<param name="bottom" value="100" />
+							<param name="width" value="540" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="descending" />
+							<param name="item_label" value="$INFO[ListItem.Year,,[COLOR white]  -  ]$INFO[ListItem.Label][/COLOR]" />
+							<param name="textcolor" value="$VAR[SkinColorVar]" />
+							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
+						</include>
+						<include content="InfoList">
+							<param name="list_id" value="43000" />
+							<param name="bottom" value="100" />
+							<param name="width" value="540" />
+							<param name="sortby" value="track" />
+							<param name="sortorder" value="ascending" />
+							<param name="item_label" value="$INFO[ListItem.Duration,,[COLOR white]  -  ]$INFO[ListItem.Label][/COLOR]" />
+							<param name="textcolor" value="$VAR[SkinColorVar]" />
+							<param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
+						</include>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+</includes>

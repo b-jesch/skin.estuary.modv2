@@ -1,0 +1,2579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!--<onload condition="!Skin.HasSetting(FirstTimeRun2)">ActivateWindow(1136)</onload>-->
+	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
+	<onload condition="Skin.HasSetting(Skin_EnableAnimatedPosters)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
+	<onload condition="!Skin.HasSetting(Skin_EnableAnimatedPosters)">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+	<onload condition="Window.Previous(startup)">Skin.Reset(mypassword)</onload>
+	<onload condition="!Window.Previous(startup)">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onload>
+	<onload>AlarmClock(SkinSplashStarted,SetProperty(SplashStarted,1,home),00:01,silent,false)</onload>
+	<onunload>ClearProperty(SkinHelper.WidgetContainer,home)</onunload>
+	<defaultcontrol>9000</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<control type="button" id="20000">
+			<include>HiddenObject</include>
+			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
+			<onfocus>SetFocus(2000)</onfocus>
+			<visible allowhiddenfocus="true">Control.HasFocus(20000)</visible>
+		</control>
+		<control type="button" id="20001">
+			<include>HiddenObject</include>
+			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
+			<onfocus>SetFocus(2000)</onfocus>
+			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
+		</control>
+		<include>DefaultBackground</include>
+		<control type="multiimage">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
+			<timeperimage>3000</timeperimage>
+			<randomize>true</randomize>
+			<visible>!Skin.HasSetting(no_fanart)</visible>
+			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+		</control>
+		<control type="multiimage">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</imagepath>
+			<timeperimage>3000</timeperimage>
+			<randomize>true</randomize>
+			<visible>[Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]</visible>
+			<visible>![Control.HasFocus(9000) + !String.IsEmpty(Container(9000).ListItem.Property(background))] + ![[[Control.HasFocus(9000) + !String.IsEmpty(Container(9000).ListItem.Property(background))] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + !String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + !String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + !String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]]]</visible>
+			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+		</control>
+		<control type="multiimage">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
+			<timeperimage>3000</timeperimage>
+			<randomize>true</randomize>
+			<visible>[[Control.HasFocus(9000) + !String.IsEmpty(Container(9000).ListItem.Property(background))] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + !String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + !String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + !String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))]]</visible>
+			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+		</control>
+		<control type="image">
+			<top>0</top>
+			<right>0</right>
+			<height>235</height>
+			<width>320</width>
+			<texture>themes/christmas/corner.png</texture>
+			<include>OpenClose_Right</include>
+			<visible>$EXP[ChristmasTheme] + !$EXP[infodialog_active]</visible>
+		</control>
+		<control type="image">
+			<top>0</top>
+			<right>0</right>
+			<height>271</height>
+			<width>300</width>
+			<texture>themes/halloween/corner.png</texture>
+			<include>OpenClose_Right</include>
+			<visible>$EXP[HalloweenTheme] + !$EXP[infodialog_active]</visible>
+		</control>
+		<control type="image">
+			<top>0</top>
+			<right>20</right>
+			<height>271</height>
+			<width>224</width>
+			<texture>themes/easter/corner.png</texture>
+			<include>OpenClose_Right</include>
+			<visible>$EXP[EasterTheme] + !$EXP[infodialog_active]</visible>
+		</control>
+		<control type="image">
+			<top>0</top>
+			<right>20</right>
+			<height>271</height>
+			<width>186</width>
+			<texture>themes/valentine/corner.png</texture>
+			<include>OpenClose_Right</include>
+			<visible>$EXP[ValentineTheme] + !$EXP[infodialog_active]</visible>
+		</control>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<control type="group" id="2000">
+				<include condition="!Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">NotHideMainMenuWithWidgets</include>
+				<include condition="Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">HideMainMenuWithWidgets</include>
+				<include condition="Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(HideMainMenuWithWidgets)">HideMainMenuWithWidgets</include>
+				<include condition="Skin.HasSetting(MinimizeMainMenu) + !Skin.HasSetting(HideMainMenuWithWidgets)">MinimizeMainMenu</include>
+				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
+					<effect type="slide" end="0,20" time="60" tween="sine" />
+					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
+				</animation>
+				<animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
+					<effect type="slide" end="0,-20" time="60" tween="sine" />
+					<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
+				</animation>
+				<include>OpenClose_Right</include>
+				<include>skinshortcuts-template-PersonalWidgetList</include>
+				<include>skinshortcuts-template-PersonalWidgetPanel</include>
+				<control type="group" id="5000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),MoviesWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="MoviesWidget"/>
+					</include>
+					<control type="grouplist" id="5001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>5010</pagecontrol>
+						<include content="WidgetListCategoriesBig" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_moviescategory)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="widget_header_focus" value="$INFO[Container(5900).ListItem.Label, | ]"/>
+							<param name="list_id" value="5900"/>
+							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListCategoriesSmall" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_moviescategory)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="list_id" value="59001"/>
+							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_recentlymovies)">
+							<param name="content_path" value="$VAR[HideWatchedMoviesFromRecentlyVar]"/>
+							<param name="widget_header" value="$LOCALIZE[20386]"/>
+							<param name="widget_header_focus" value="$INFO[Container(5100).ListItem.Title, | ]$INFO[Container(5100).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5100"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_inprogressmovies)">
+							<param name="content_path" value="special://skin/playlists/inprogress_movies.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31010]"/>
+							<param name="widget_header_focus" value="$INFO[Container(5200).ListItem.Title, | ]$INFO[Container(5200).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5200"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_unwatchedmovies)">
+							<param name="content_path" value="special://skin/playlists/unwatched_movies.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31007]"/>
+							<param name="widget_header_focus" value="$INFO[Container(5300).ListItem.Title, | ]$INFO[Container(5300).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5300"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_randommovies)">
+							<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31006]"/>
+							<param name="widget_header_focus" value="$INFO[Container(5400).ListItem.Title, | ]$INFO[Container(5400).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5400"/>
+						</include>
+						<include content="WidgetListGenres" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_genremovies)">
+							<param name="widget_header" value="$LOCALIZE[135]"/>
+							<param name="widget_header_focus" value="$INFO[Container(5500).ListItem.Label, | ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="sortby" value="sorttitle"/>
+							<param name="list_id" value="5500"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_sets)">
+							<param name="content_path" value="videodb://movies/sets/"/>
+							<param name="widget_header" value="$LOCALIZE[31075]"/>
+							<param name="widget_header_focus" value="$INFO[Container(5600).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="sortby" value="random"/>
+							<param name="list_id" value="5600"/>
+						</include>
+					</control>
+					<include content="ImageWidget" condition="!Library.HasContent(movies)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="5500"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget" condition="!Library.HasContent(movies)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="5500"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="5010"/>
+					</include>
+				</control>
+				<control type="group" id="6000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),TVShowsWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="TVShowsWidget"/>
+					</include>
+					<control type="grouplist" id="6001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>6010</pagecontrol>
+						<include content="WidgetListCategoriesBig" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_tvshowscategory)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6900).ListItem.Label, | ]"/>
+							<param name="list_id" value="6900"/>
+							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListCategoriesSmall" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_tvshowscategory)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="list_id" value="69001"/>
+							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_recentlytvshows) + Skin.HasSetting(HomeBanner)">
+							<param name="content_path" value="$VAR[HideWatchedEpisodesFromRecentlyVar]"/>
+							<param name="widget_header" value="$LOCALIZE[20387]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6100).ListItem.TVShowTitle, | , - ]$INFO[Container(6100).ListItem.Season,,x]$INFO[Container(6100).ListItem.Episode,,. ]$INFO[Container(6100).ListItem.Title]$INFO[Container(6100).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6100"/>
+						</include>
+						<include content="WidgetListEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_recentlytvshows) + !Skin.HasSetting(HomeBanner)">
+							<param name="content_path" value="$VAR[HideWatchedEpisodesFromRecentlyVar]"/>
+							<param name="widget_header" value="$LOCALIZE[20387]"/>
+							<param name="widget_header_focus" value="$INFO[Container(61001).ListItem.TVShowTitle, | , - ]$INFO[Container(61001).ListItem.Season,,x]$INFO[Container(61001).ListItem.Episode,,. ]$INFO[Container(61001).ListItem.Title]$INFO[Container(61001).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="61001"/>
+						</include>
+						<include content="WidgetNextWatchEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + Skin.HasSetting(HomeBanner)">
+							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
+							<param name="sortby" value=""/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[40012]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6700).ListItem.TVShowTitle, | , - ]$INFO[Container(6700).ListItem.Season,,x]$INFO[Container(6700).ListItem.Episode,,. ]$INFO[Container(6700).ListItem.Title]$INFO[Container(6700).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6700"/>
+						</include>
+						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + !Skin.HasSetting(HomeBanner)">
+							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
+							<param name="sortby" value=""/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[40012]"/>
+							<param name="widget_header_focus" value="$INFO[Container(67001).ListItem.TVShowTitle, | , - ]$INFO[Container(67001).ListItem.Season,,x]$INFO[Container(67001).ListItem.Episode,,. ]$INFO[Container(67001).ListItem.Title]$INFO[Container(67001).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="67001"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_inprogresstvshows)">
+							<param name="content_path" value="videodb://inprogresstvshows"/>
+							<param name="sortby" value="lastplayed"/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[626]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6200).ListItem.Title, | ]$INFO[Container(6200).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6200"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_unwatchedtvshows)">
+							<param name="content_path" value="special://skin/playlists/unwatched_tvshows.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31122]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6300).ListItem.Title, | ]$INFO[Container(6300).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6300"/>
+						</include>
+						<include content="WidgetListGenres" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_genretvshows)">
+							<param name="content_path" value="videodb://tvshows/genres/"/>
+							<param name="widget_header" value="$LOCALIZE[135]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6400).ListItem.Label, | ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="sortby" value="sorttitle"/>
+							<param name="list_id" value="6400"/>
+						</include>
+						<include content="WidgetListCategories" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_studiotvshows)">
+							<param name="content_path" value="videodb://tvshows/studios/"/>
+							<param name="widget_header" value="$LOCALIZE[20388]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6500"/>
+							<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
+							<param name="icon_height" value="70"/>
+							<param name="fallback_image" value="DefaultStudios.png"/>
+						</include>
+					</control>
+					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="6400"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="6400"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="6010"/>
+					</include>
+				</control>
+				<control type="group" id="7000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),MusicWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="MusicWidget"/>
+					</include>
+					<control type="grouplist" id="7001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>7010</pagecontrol>
+						<include content="WidgetListCategoriesBig" condition="Library.HasContent(music) + !Skin.HasSetting(hide_musiccategory)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="widget_header_focus" value="$INFO[Container(7900).ListItem.Label, | ]"/>
+							<param name="list_id" value="7900"/>
+							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListCategoriesSmall" condition="Library.HasContent(music) + !Skin.HasSetting(hide_musiccategory)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="list_id" value="79001"/>
+							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(music)  + !Skin.HasSetting(hide_recentlyaddedalbums)">
+							<param name="content_path" value="musicdb://recentlyaddedalbums/"/>
+							<param name="widget_header" value="$LOCALIZE[359]"/>
+							<param name="widget_header_focus" value="$INFO[Container(7100).ListItem.Artist, | , - ]$INFO[Container(7100).ListItem.Title]$INFO[Container(7100).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="music"/>
+							<param name="list_id" value="7100"/>
+							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(music) + !Skin.HasSetting(hide_recentlyplayedalbums)">
+							<param name="content_path" value="musicdb://recentlyplayedalbums"/>
+							<param name="widget_header" value="$LOCALIZE[517]"/>
+							<param name="widget_header_focus" value="$INFO[Container(7200).ListItem.Artist, | , - ]$INFO[Container(7200).ListItem.Title]$INFO[Container(7200).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="music"/>
+							<param name="list_id" value="7200"/>
+							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(music) + !Skin.HasSetting(hide_randomalbums)">
+							<param name="content_path" value="special://skin/playlists/random_albums.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31012]"/>
+							<param name="widget_header_focus" value="$INFO[Container(7300).ListItem.Artist, | , - ]$INFO[Container(7300).ListItem.Title]$INFO[Container(7300).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="music"/>
+							<param name="list_id" value="7300"/>
+							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(music) + !Skin.HasSetting(hide_randomartists)">
+							<param name="content_path" value="special://skin/playlists/random_artists.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31013]"/>
+							<param name="widget_header_focus" value="$INFO[Container(7400).ListItem.Artist, | , ]($VAR[AlbumsCount])"/>
+							<param name="widget_target" value="music"/>
+							<param name="list_id" value="7400"/>
+							<param name="fallback_icon" value="DefaultMusicArtists.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(music) + !Skin.HasSetting(hide_unplayedalbums)">
+							<param name="content_path" value="special://skin/playlists/unplayed_albums.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31014]"/>
+							<param name="widget_header_focus" value="$INFO[Container(7500).ListItem.Artist, | , - ]$INFO[Container(7500).ListItem.Title]$INFO[Container(7500).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="music"/>
+							<param name="list_id" value="7500"/>
+							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(music) + !Skin.HasSetting(hide_mostplayedalbums)">
+							<param name="content_path" value="special://skin/playlists/mostplayed_albums.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31011]"/>
+							<param name="widget_header_focus" value="$INFO[Container(7600).ListItem.Artist, | , - ]$INFO[Container(7600).ListItem.Title]$INFO[Container(7600).ListItem.Year, (,)]$INFO[Container(7600).ListItem.PlayCount, | $LOCALIZE[576] : ]"/>
+							<param name="widget_target" value="music"/>
+							<param name="list_id" value="7600"/>
+							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+							<param name="sortby" value="playcount"/>
+							<param name="sortorder" value="descending"/>
+						</include>
+					</control>
+					<include content="ImageWidget" condition="!Library.HasContent(music)">
+						<param name="text_label" value="$LOCALIZE[31110]" />
+						<param name="button_label" value="$LOCALIZE[10049]" />
+						<param name="button_onclick" value="ActivateWindow(Music,Files,return)"/>
+						<param name="button_id" value="7600"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget" condition="!Library.HasContent(music)">
+						<param name="text_label" value="$LOCALIZE[31110]" />
+						<param name="button_label" value="$LOCALIZE[10049]" />
+						<param name="button_onclick" value="ActivateWindow(Music,Files,return)"/>
+						<param name="button_id" value="7600"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="7010"/>
+					</include>
+				</control>
+				<control type="group" id="8000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),AddonsWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="AddonsWidget"/>
+					</include>
+					<control type="grouplist" id="8001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>8010</pagecontrol>
+						<include content="WidgetListCategoriesBig" condition="!Skin.HasSetting(hide_addonscategories)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="widget_header_focus" value="$INFO[Container(8900).ListItem.Label, | ]"/>
+							<param name="list_id" value="8900"/>
+							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)"/>
+						</include>
+						<include content="WidgetListCategoriesSmall" condition="!Skin.HasSetting(hide_addonscategories)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="list_id" value="89001"/>
+							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)"/>
+						</include>
+						<include content="WidgetListSquare" condition="!Skin.HasSetting(hide_videoaddons)">
+							<param name="content_path" value="addons://sources/video/"/>
+							<param name="widget_header" value="$LOCALIZE[1037]"/>
+							<param name="widget_header_focus" value="$INFO[Container(8100).ListItem.Label, | ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="sortby" value="lastused"/>
+							<param name="sortorder" value="descending"/>
+							<param name="list_id" value="8100"/>
+							<param name="fallback_icon" value="DefaultAddon.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="!Skin.HasSetting(hide_audioaddons)">
+							<param name="content_path" value="addons://sources/audio/"/>
+							<param name="widget_header" value="$LOCALIZE[1038]"/>
+							<param name="widget_header_focus" value="$INFO[Container(8200).ListItem.Label, | ]"/>
+							<param name="widget_target" value="music"/>
+							<param name="sortby" value="lastused"/>
+							<param name="sortorder" value="descending"/>
+							<param name="list_id" value="8200"/>
+							<param name="fallback_icon" value="DefaultAddon.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="!Skin.HasSetting(hide_gameaddons)">
+							<param name="content_path" value="addons://sources/game/"/>
+							<param name="widget_header" value="$LOCALIZE[35049]"/>
+							<param name="widget_header_focus" value="$INFO[Container(8700).ListItem.Label, | ]"/>
+							<param name="widget_target" value="games"/>
+							<param name="sortby" value="lastused"/>
+							<param name="sortorder" value="descending"/>
+							<param name="list_id" value="8700"/>
+							<param name="fallback_icon" value="DefaultAddonGame.png"/>
+							<param name="visible" value="System.GetBool(gamesgeneral.enable)"/>
+						</include>
+						<include content="WidgetListSquare" condition="!Skin.HasSetting(hide_executableaddons)">
+							<param name="content_path" value="addons://sources/executable/"/>
+							<param name="widget_header" value="$LOCALIZE[1043]"/>
+							<param name="widget_header_focus" value="$INFO[Container(8300).ListItem.Label, | ]"/>
+							<param name="widget_target" value="programs"/>
+							<param name="sortby" value="lastused"/>
+							<param name="sortorder" value="descending"/>
+							<param name="list_id" value="8300"/>
+							<param name="fallback_icon" value="DefaultAddon.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="System.Platform.Android + !Skin.HasSetting(hide_androidapps)">
+							<param name="content_path" value="androidapp://sources/apps/"/>
+							<param name="widget_header" value="$LOCALIZE[20244]"/>
+							<param name="widget_header_focus" value="$INFO[Container(8400).ListItem.Label, | ]"/>
+							<param name="widget_target" value="programs"/>
+							<param name="sortby" value="lastused"/>
+							<param name="sortorder" value="descending"/>
+							<param name="list_id" value="8400"/>
+							<param name="fallback_icon" value="DefaultAddon.png"/>
+						</include>
+						<include content="WidgetListSquare" condition="!Skin.HasSetting(hide_imageaddons)">
+							<param name="content_path" value="addons://sources/image/"/>
+							<param name="widget_header" value="$LOCALIZE[1039]"/>
+							<param name="widget_header_focus" value="$INFO[Container(8500).ListItem.Label, | ]"/>
+							<param name="widget_target" value="pictures"/>
+							<param name="sortby" value="lastused"/>
+							<param name="sortorder" value="descending"/>
+							<param name="list_id" value="8500"/>
+						</include>
+					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31119]" />
+						<param name="button_label" value="$LOCALIZE[31118]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
+						<param name="button_id" value="8600"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Integer.IsGreater(Container(8001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31119]" />
+						<param name="button_label" value="$LOCALIZE[31118]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
+						<param name="button_id" value="8600"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="!Integer.IsGreater(Container(8001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="8010"/>
+					</include>
+				</control>
+				<control type="group" id="11000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),VideoWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="VideoWidget"/>
+					</include>
+					<control type="grouplist" id="11001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>11010</pagecontrol>
+						<include content="WidgetListCategoriesBig" condition="!Skin.HasSetting(hide_videocategories)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="widget_header_focus" value="$INFO[Container(11900).ListItem.Label, | ]"/>
+							<param name="list_id" value="11900"/>
+							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListCategoriesSmall" condition="!Skin.HasSetting(hide_videocategories)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="list_id" value="119001"/>
+							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListCategories" condition="!Skin.HasSetting(hide_videosources)">
+							<param name="content_path" value="sources://video/"/>
+							<param name="widget_header" value="$LOCALIZE[20094]"/>
+							<param name="widget_header_focus" value="$INFO[Container(11100).ListItem.Label, | ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="11100"/>
+						</include>
+						<include content="WidgetListCategories" condition="!Skin.HasSetting(hide_videoplaylists)">
+							<param name="content_path" value="special://videoplaylists/"/>
+							<param name="widget_header" value="$LOCALIZE[136]"/>
+							<param name="widget_header_focus" value="$INFO[Container(11200).ListItem.Label, | ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="11200"/>
+							<param name="icon" value="DefaultPlaylist.png"/>
+						</include>
+					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31105]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,root)"/>
+						<param name="button_id" value="11300"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Integer.IsGreater(Container(11001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31105]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,root)"/>
+						<param name="button_id" value="11300"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="!Integer.IsGreater(Container(11001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="11010"/>
+					</include>
+				</control>
+				<control type="group" id="12000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),LiveTVWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="LiveTVWidget"/>
+					</include>
+					<control type="grouplist" id="12001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>12010</pagecontrol>
+						<control type="grouplist" id="12855">
+							<height>390</height>
+							<left>50</left>
+							<right>0</right>
+							<top>36</top>
+							<orientation>horizontal</orientation>
+							<visible>PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer</visible>
+							<align>left</align>
+							<control type="group">
+								<width>674</width>
+								<visible>PVR.IsRecordingTV</visible>
+								<include content="PVRWidget" condition="!Skin.HasSetting(hide_nowrecordingchannel)">
+									<param name="icon" value="$INFO[PVR.TVNowRecordingChannelIcon]" />
+									<param name="header" value="$LOCALIZE[19158]" />
+									<param name="label1" value="$INFO[PVR.TVNowRecordingDateTime]" />
+									<param name="label2" value="$INFO[PVR.TVNowRecordingTitle][CR][COLOR=grey]$INFO[PVR.TVNowRecordingChannel][/COLOR]" />
+								</include>
+							</control>
+							<control type="group">
+								<width>674</width>
+								<visible>PVR.HasNonRecordingTVTimer</visible>
+								<include content="PVRWidget" condition="!Skin.HasSetting(hide_nextrecordingchannel)">
+									<param name="icon" value="$INFO[PVR.TVNextRecordingChannelIcon]" />
+									<param name="header" value="$LOCALIZE[19157]" />
+									<param name="label1" value="$INFO[PVR.TVNextRecordingDateTime]" />
+									<param name="label2" value="$INFO[PVR.TVNextRecordingTitle][CR][COLOR=grey]$INFO[PVR.TVNextRecordingChannel][/COLOR]" />
+								</include>
+							</control>
+						</control>
+						<include content="WidgetListCategoriesBig" condition="System.HasPVRAddon + !Skin.HasSetting(hide_tvcategories)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12900).ListItem.Label, | ]"/>
+							<param name="list_id" value="12900"/>
+							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListCategoriesSmall" condition="System.HasPVRAddon + !Skin.HasSetting(hide_tvcategories)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="list_id" value="129001"/>
+							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_lastplayedchannels)">
+							<param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
+							<param name="sortby" value="lastplayed"/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[31016]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12200).ListItem.Label, | ]$INFO[Container(12200).ListItem.Label2, - ,]"/>
+							<param name="widget_target" value="pvr"/>
+							<param name="list_id" value="12200"/>
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_recordingchannels)">
+							<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
+							<param name="sortby" value="date"/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[31015]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12300).ListItem.ChannelName, | ]$INFO[Container(12300).ListItem.Label, - ,]$INFO[Container(12300).ListItem.Label2, - ,]"/>
+							<param name="widget_target" value="pvr"/>
+							<param name="list_id" value="12300"/>
+							<param name="label" value="$INFO[ListItem.ChannelName]"/>
+							<param name="label2" value="$INFO[ListItem.Title]$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2, - ,]"/>
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_allchannels)">
+							<param name="content_path" value="pvr://channels/tv/*"/>
+							<param name="widget_header" value="$LOCALIZE[40161]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12400).ListItem.Label, | ]$INFO[Container(12400).ListItem.Label2, - ,]"/>
+							<param name="widget_target" value="pvr"/>
+							<param name="list_id" value="12400"/>
+							<param name="item_limit" value="2000"/>
+							<param name="label" value="$INFO[ListItem.ChannelName]"/>
+							<param name="label2" value="$INFO[ListItem.Title]$VAR[SeasonEpisodeLabel]"/>
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_channelgroups)">
+							<param name="content_path" value="pvr://channels/tv"/>
+							<param name="widget_header" value="$LOCALIZE[40350]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12600).ListItem.Label, | ]$INFO[Container(12600).ListItem.Label2, - ,]"/>
+							<param name="widget_target" value="tvguide"/>
+							<param name="list_id" value="12600"/>
+							<param name="item_limit" value="2000"/>
+						</include>
+						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
+							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
+							<param name="widget_header" value="$ADDON[script.service.gto 30104]: $INFO[Window(Home).Property(GTO.Provider)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Label, | ]$INFO[Container(12400).ListItem.Label2, - ,]"/>
+							<param name="list_id" value="12500"/>
+							<param name="item_limit" value="2000"/>
+    						<param name="label" value="$INFO[ListItem.label]"/>
+							<param name="label2" value="$INFO[ListItem.label2]$INFO[ListItem.Property(StartTime), (,)]"/>
+							<param name="onclick" value="RunPlugin(plugin://script.service.gto/?action=info&amp;item=$INFO[ListItem.Property(item)])"/>
+						</include>
+					</control>
+					<include content="ImageWidget" condition="!System.HasPVRAddon">
+						<param name="text_label" value="$LOCALIZE[31143]" />
+						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/xbmc.pvrclient,return)"/>
+						<param name="button_id" value="12400"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget" condition="!System.HasPVRAddon">
+						<param name="text_label" value="$LOCALIZE[31143]" />
+						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/xbmc.pvrclient,return)"/>
+						<param name="button_id" value="12400"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="12010"/>
+					</include>
+				</control>
+				<control type="group" id="13000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),RadioWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="RadioWidget"/>
+					</include>
+					<control type="grouplist" id="13001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>13010</pagecontrol>
+						<control type="grouplist" id="13855">
+							<height>390</height>
+							<left>50</left>
+							<top>36</top>
+							<orientation>horizontal</orientation>
+							<align>left</align>
+							<visible>PVR.IsRecordingRadio | PVR.HasNonRecordingRadioTimer</visible>
+							<control type="group">
+								<width>674</width>
+								<visible>PVR.IsRecordingRadio</visible>
+								<include content="PVRWidget"  condition="!Skin.HasSetting(hide_nowrecordingradio)">
+									<param name="icon" value="$INFO[PVR.RadioNowRecordingChannelIcon]" />
+									<param name="header" value="$LOCALIZE[19158]" />
+									<param name="label1" value="$INFO[PVR.RadioNowRecordingDateTime]" />
+									<param name="label2" value="$INFO[PVR.RadioNowRecordingTitle][CR][COLOR=grey]$INFO[PVR.RadioNowRecordingChannel][/COLOR]" />
+								</include>
+							</control>
+							<control type="group">
+								<visible>PVR.HasNonRecordingRadioTimer</visible>
+								<width>674</width>
+								<include content="PVRWidget" condition="!Skin.HasSetting(hide_nextrecordingradio)">
+									<param name="icon" value="$INFO[PVR.RadioNextRecordingChannelIcon]" />
+									<param name="header" value="$LOCALIZE[19157]" />
+									<param name="label1" value="$INFO[PVR.RadioNextRecordingDateTime]" />
+									<param name="label2" value="$INFO[PVR.RadioNextRecordingTitle][CR][COLOR=grey]$INFO[PVR.RadioNextRecordingChannel][/COLOR]" />
+								</include>
+							</control>
+						</control>
+						<include content="WidgetListCategoriesBig" condition="System.HasPVRAddon + !Skin.HasSetting(hide_radiocategories)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="widget_header_focus" value="$INFO[Container(13900).ListItem.Label, | ]"/>
+							<param name="list_id" value="13900"/>
+							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListCategoriesSmall" condition="System.HasPVRAddon + !Skin.HasSetting(hide_radiocategories)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="list_id" value="139001"/>
+							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_lastplayedradio)">
+							<param name="content_path" value="pvr://channels/radio/*?view=lastplayed"/>
+							<param name="sortby" value="lastplayed"/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[31018]"/>
+							<param name="widget_header_focus" value="$INFO[Container(13200).ListItem.Label, | ]"/>
+							<param name="widget_target" value="files"/>
+							<param name="list_id" value="13200"/>
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_recordingradio)">
+							<param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
+							<param name="sortby" value="sorttitle"/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[31015]"/>
+							<param name="widget_header_focus" value="$INFO[Container(13300).ListItem.Label, | ]$INFO[Container(13300).ListItem.Label2, - ,]"/>
+							<param name="widget_target" value="pvr"/>
+							<param name="list_id" value="13300"/>
+							<param name="label" value="$INFO[ListItem.ChannelName]"/>
+							<param name="label2" value="$INFO[ListItem.Label2]"/>
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_allradios)">
+							<param name="content_path" value="pvr://channels/radio/*"/>
+							<param name="widget_header" value="$LOCALIZE[40162]"/>
+							<param name="widget_header_focus" value="$INFO[Container(13400).ListItem.Label, | ]"/>
+							<param name="widget_target" value="pvr"/>
+							<param name="list_id" value="13400"/>
+							<param name="item_limit" value="2000"/>
+							<param name="label" value="$INFO[ListItem.ChannelName]"/>
+							<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.Season, - ,x]$INFO[ListItem.Episode,,.]$INFO[ListItem.EpisodeName, ]"/>
+						</include>
+					</control>
+					<include content="ImageWidget" condition="!System.HasPVRAddon">
+						<param name="text_label" value="$LOCALIZE[31143]" />
+						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
+						<param name="button_id" value="13400"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget" condition="!System.HasPVRAddon">
+						<param name="text_label" value="$LOCALIZE[31143]" />
+						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
+						<param name="button_id" value="13400"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="13010"/>
+					</include>
+				</control>
+				<control type="group" id="14000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),FavoritesWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="FavoritesWidget"/>
+					</include>
+					<include content="CategoryLabel">
+						<param name="label">$LOCALIZE[10134]</param>
+						<param name="label_focus">$INFO[Container(14100).ListItem.Label, | ]</param>
+						<param name="list_id" value="14100"/>
+						<param name="visible" value="![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<control type="panel" id="14100">
+						<left>-10</left>
+						<top>120</top>
+						<right>0</right>
+						<bottom>0</bottom>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onup>14100</onup>
+						<ondown>14100</ondown>
+						<onback>9000</onback>
+						<preloaditems>2</preloaditems>
+						<scrolltime tween="cubic" easing="out">500</scrolltime>
+						<orientation>vertical</orientation>
+						<pagecontrol>14010</pagecontrol>
+						<visible>Integer.IsGreater(Container(14100).NumItems,0) | Container(14100).IsUpdating</visible>
+						<visible>![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]</visible>
+						<itemlayout width="340" height="410" condition="Skin.HasSetting(HideWidgetLabels)">
+							<control type="group">
+								<left>70</left>
+								<include content="InfoWallMusicLayout">
+									<param name="fallback_image" value="DefaultFavourites.png" />
+									<param name="focused" value="false" />
+								</include>
+							</control>
+						</itemlayout>
+						<focusedlayout width="340" height="410" condition="Skin.HasSetting(HideWidgetLabels)">
+							<control type="group">
+								<depth>DepthContentPopout</depth>
+								<left>70</left>       					 
+								<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+            						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+            						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+       					 		</animation>
+								<include content="InfoWallMusicLayout">
+									<param name="fallback_image" value="DefaultFavourites.png" />
+									<param name="focused" value="true" />
+								</include>
+							</control>
+						</focusedlayout>
+						<itemlayout width="340" height="340" condition="!Skin.HasSetting(HideWidgetLabels)">
+							<control type="group">
+								<left>70</left>
+								<include content="InfoWallMusicLayout">
+									<param name="fallback_image" value="DefaultFavourites.png" />
+									<param name="focused" value="false" />
+								</include>
+							</control>
+						</itemlayout>
+						<focusedlayout width="340" height="340" condition="!Skin.HasSetting(HideWidgetLabels)">
+							<control type="group">
+								<depth>DepthContentPopout</depth>
+								<left>70</left>       					 
+								<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+            						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+            						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+       					 		</animation>
+								<include content="InfoWallMusicLayout">
+									<param name="fallback_image" value="DefaultFavourites.png" />
+									<param name="focused" value="true" />
+								</include>
+							</control>
+						</focusedlayout>
+						<content>favourites://</content>
+					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31025]" />
+						<param name="button_label" value="$LOCALIZE[31116]" />
+						<param name="button_onclick" value=""/>
+						<param name="button_id" value="5500"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="[!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating] + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31025]" />
+						<param name="button_label" value="$LOCALIZE[31116]" />
+						<param name="button_onclick" value=""/>
+						<param name="button_id" value="5500"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="[!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating] + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="14010"/>
+					</include>
+				</control>
+				<control type="group" id="15000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="WeatherWidget"/>
+					</include>
+					<top>6</top>
+					<control type="grouplist" id="15001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>15010</pagecontrol>
+						<control type="group" id="16678">
+							<description>Weather info</description>
+							<left>60</left>
+							<right>-30</right>
+							<top>102</top>
+							<height>300</height>
+							<visible>!String.IsEmpty(Weather.plugin)</visible>
+							<control type="image">
+								<bottom>90</bottom>
+								<width>100%</width>
+								<texture border="21">dialogs/dialog-bg.png</texture>
+							</control>
+							<control type="label">
+								<width>500</width>
+								<top>60</top>
+								<aligny>center</aligny>
+								<height>24</height>
+								<right>100</right>
+								<align>right</align>
+								<font>font30_title</font>
+								<label>$INFO[Weather.Location]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-460,0" time="0" condition="Skin.HasSetting(HideMainMenuWithWidgets)">conditional</animation>
+							</control>
+							<control type="label">
+								<width>500</width>
+								<top>120</top>
+								<aligny>center</aligny>
+								<height>24</height>
+								<right>100</right>
+								<align>right</align>
+								<font>font13</font>
+								<scroll>true</scroll>
+								<label>$INFO[Weather.Temperature]$INFO[Weather.Conditions, ∙ ,]</label>
+								<animation effect="slide" end="-460,0" time="0" condition="Skin.HasSetting(HideMainMenuWithWidgets)">conditional</animation>
+							</control>
+							<control type="grouplist">
+								<top>50</top>
+								<left>50</left>
+								<right>20</right>
+								<orientation>horizontal</orientation>
+								<align>left</align>
+								<itemgap>-110</itemgap>
+								<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+									<param name="label" value="Window(weather).Property(Current.Wind)" />
+									<param name="texture" value="icons/weather/wind.png" />
+									<param name="header" value="404" />
+								</include>
+								<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+									<param name="label" value="Window(weather).Property(Current.Humidity)" />
+									<param name="texture" value="icons/weather/humidity.png" />
+									<param name="header" value="406" />
+								</include>
+								<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+									<param name="label" value="Window(weather).Property(Current.Precipitation)" />
+									<param name="texture" value="icons/weather/rain.png" />
+									<param name="header" value="33021" />
+								</include>
+								<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+									<param name="label" value="Window(weather).Property(Today.Sunrise)" />
+									<param name="texture" value="icons/weather/sunrise.png" />
+									<param name="header" value="405" />
+								</include>
+								<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+									<param name="label" value="Window(weather).Property(Today.Sunset)" />
+									<param name="texture" value="icons/weather/sunset.png" />
+									<param name="header" value="403" />
+								</include>
+							</control>
+						</control>
+						<include content="WeatherWidget" condition="!String.IsEmpty(Weather.Plugin)">
+							<param name="content_include" value="HourlyItems" />
+							<param name="list_id" value="15100" />
+							<param name="widget_header" value="$LOCALIZE[33036]"/>
+							<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+						</include>
+						<include content="WeatherWidget" condition="!String.IsEmpty(Weather.Plugin)">
+							<param name="content_include" value="DailyItems" />
+							<param name="list_id" value="15200" />
+							<param name="widget_header" value="$LOCALIZE[31019]"/>
+							<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+						</include>
+					</control>
+					<include content="ImageWidget" condition="String.IsEmpty(Weather.plugin)">
+						<param name="text_label" value="$LOCALIZE[31120]" />
+						<param name="button_label" value="$LOCALIZE[31121]" />
+						<param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
+						<param name="button_id" value="15300"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget" condition="String.IsEmpty(Weather.plugin)">
+						<param name="text_label" value="$LOCALIZE[31120]" />
+						<param name="button_label" value="$LOCALIZE[31121]" />
+						<param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
+						<param name="button_id" value="15300"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="15010"/>
+					</include>
+				</control>
+				<control type="group" id="16000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),MusicVideosWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="MusicVideosWidget"/>
+					</include>
+					<control type="grouplist" id="16001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>16010</pagecontrol>
+						<include content="WidgetListCategoriesBig" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_musicvideocategory)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16900).ListItem.Label, | ]"/>
+							<param name="list_id" value="16900"/>
+							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListCategoriesSmall" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_musicvideocategory)">
+							<param name="widget_header" value="$LOCALIZE[31148]"/>
+							<param name="list_id" value="169001"/>
+							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_recentlyaddedmusicvideos)">
+							<param name="content_path" value="videodb://recentlyaddedmusicvideos/"/>
+							<param name="widget_header" value="$LOCALIZE[20390]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16300).ListItem.Artist, | , - ]$INFO[Container(16300).ListItem.Title]$INFO[Container(16300).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="main_label" value="$INFO[ListItem.Label]" />
+							<param name="sub_label" value="$INFO[ListItem.Artist]" />
+							<param name="thumb_label" value="$INFO[ListItem.Year]" />
+							<param name="fallback_image" value="DefaultMusicSongs.png" />
+							<param name="list_id" value="16300"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_unwatchedmusicvideos)">
+							<param name="content_path" value="special://skin/playlists/unwatched_musicvideos.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31151]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16400).ListItem.Artist, | , - ]$INFO[Container(16400).ListItem.Title]$INFO[Container(16400).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="main_label" value="$INFO[ListItem.Label]" />
+							<param name="sub_label" value="$INFO[ListItem.Artist]" />
+							<param name="thumb_label" value="$INFO[ListItem.Year]" />
+							<param name="fallback_image" value="DefaultMusicSongs.png" />
+							<param name="list_id" value="16400"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_mostplayemusicvideos)">
+							<param name="content_path" value="special://skin/playlists/mostplayed_musicvideos.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[40267]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16900).ListItem.Artist, | , - ]$INFO[Container(16900).ListItem.Title]$INFO[Container(16900).ListItem.Year, (,)]$INFO[Container(16900).ListItem.PlayCount, | $LOCALIZE[576] : ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="16900"/>
+							<param name="fallback_icon" value="DefaultMusicSongs.png"/>
+							<param name="sortby" value="playcount"/>
+							<param name="sortorder" value="descending"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_randommusicvideoartists)">
+							<param name="content_path" value="special://skin/playlists/random_musicvideo_artists.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31013]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16200).ListItem.Artist, | , ]"/>
+							<param name="widget_target" value="music"/>
+							<param name="list_id" value="16200"/>
+							<param name="widget_limit" value="10"/>
+						</include>
+						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_randommusicvideo)">
+							<param name="content_path" value="special://skin/playlists/random_musicvideos.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[31152]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16500).ListItem.Artist, | , - ]$INFO[Container(16500).ListItem.Title]$INFO[Container(16500).ListItem.Year, (,)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="main_label" value="$INFO[ListItem.Label]" />
+							<param name="sub_label" value="$INFO[ListItem.Artist]" />
+							<param name="thumb_label" value="$INFO[ListItem.Year]" />
+							<param name="fallback_image" value="DefaultMusicSongs.png" />
+							<param name="list_id" value="16500"/>
+						</include>
+						<include content="WidgetListCategories" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_musicvideostudios)">
+							<param name="content_path" value="videodb://musicvideos/studios/"/>
+							<param name="widget_header" value="$LOCALIZE[20388]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16600).ListItem.Label, | ]"/>
+							<param name="widget_target" value="music"/>
+							<param name="list_id" value="16600"/>
+							<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
+							<param name="icon_height" value="70"/>
+							<param name="fallback_image" value="DefaultStudios.png"/>
+						</include>
+					</control>
+					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="16800"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="16800"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="16010"/>
+					</include>
+				</control>
+				<control type="group" id="4000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),PicturesWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="PicturesWidget"/>
+					</include>
+					<control type="grouplist" id="4001">
+						<include>WidgetGroupListCommon</include>
+						<include content="WidgetListCategories">
+							<param name="content_path" value="sources://pictures/"/>
+							<param name="widget_header" value="$LOCALIZE[40175]"/>
+							<param name="widget_header_focus" value="$INFO[Container(4100).ListItem.Label, | ]"/>
+							<param name="widget_target" value="pictures"/>
+							<param name="list_id" value="4100"/>
+						</include>
+					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40174]" />
+						<param name="button_label" value="$LOCALIZE[10050]" />
+						<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
+						<param name="button_id" value="4200"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Integer.IsGreater(Container(4001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40174]" />
+						<param name="button_label" value="$LOCALIZE[10050]" />
+						<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
+						<param name="button_id" value="4200"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="!Integer.IsGreater(Container(4001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="4010"/>
+					</include>
+				</control>
+				<control type="group" id="17000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),GamesWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="GamesWidget"/>
+					</include>
+					<control type="grouplist" id="17001">
+						<include>WidgetGroupListCommon</include>
+						<include content="WidgetListCategories">
+							<param name="content_path" value="sources://games/"/>
+							<param name="widget_header" value="$LOCALIZE[40172]"/>
+							<param name="widget_header_focus" value="$INFO[Container(17100).ListItem.Label, | ]"/>
+							<param name="widget_target" value="games"/>
+							<param name="list_id" value="17100"/>
+						</include>
+						<include content="WidgetListSquare">
+ 							<param name="content_path" value="addons://sources/game/"/>
+ 							<param name="widget_header" value="$LOCALIZE[35049]"/>
+ 							<param name="widget_header_focus" value="$INFO[Container(17200).ListItem.Label, | ]"/>
+ 							<param name="widget_target" value="games"/>
+ 							<param name="sortby" value="lastused"/>
+ 							<param name="sortorder" value="descending"/>
+ 							<param name="list_id" value="17200"/>
+ 							<param name="fallback_icon" value="DefaultAddonGame.png"/>
+ 						</include>
+					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40173]" />
+						<param name="button_label" value="$LOCALIZE[31116]" />
+						<param name="button2_label" value="$LOCALIZE[31118]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/category.gameaddons,return)"/>
+						<param name="button_id" value="17300"/>
+						<param name="button2_onclick" value="ActivateWindow(addonbrowser)"/>
+						<param name="visible" value="!Integer.IsGreater(Container(17001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40173]" />
+						<param name="button_label" value="$LOCALIZE[31116]" />
+						<param name="button2_label" value="$LOCALIZE[31118]" />
+						<param name="button_onclick" value="ActivateWindow(games)"/>
+						<param name="button_id" value="17300"/>
+						<param name="button2_onclick" value="ActivateWindow(addonbrowser)"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="!Integer.IsGreater(Container(17001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="17010"/>
+					</include>
+				</control>
+				<control type="group" id="21000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),DiscWidget)</visible>
+					<include content="Visible_Right_Delayed_Home">
+						<param name="id" value="DiscWidget"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$INFO[System.DVDLabel]" />
+						<param name="button_label" value="$LOCALIZE[341]" />
+						<param name="button_onclick" value="PlayDisc"/>
+						<param name="button_id" value="21100"/>
+						<param name="button2_label" value="$LOCALIZE[13391]"/>
+						<param name="button2_onclick" value="EjectTray()"/>
+						<param name="button3_label" value="$LOCALIZE[600]"/>
+						<param name="button3_onclick" value="RipCD"/>
+						<param name="visible_3" value="System.HasMediaAudioCD"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$INFO[System.DVDLabel]" />
+						<param name="button_label" value="$LOCALIZE[341]" />
+						<param name="button_onclick" value="PlayDisc"/>
+						<param name="button_id" value="21100"/>
+						<param name="button2_label" value="$LOCALIZE[13391]"/>
+						<param name="button2_onclick" value="EjectTray()"/>
+						<param name="button3_label" value="$LOCALIZE[600]"/>
+						<param name="button3_onclick" value="RipCD"/>
+						<param name="visible_3" value="System.HasMediaAudioCD"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40194]" />
+						<param name="button_id" value="45000"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="right" value="555"/>
+						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
+					</include>
+				</control>
+				<control type="group" id="18000">
+					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+					<visible>Control.HasFocus(802) + !Skin.HasSetting(enable_settingswidget)</visible>
+					<include>OpenClose_Right</include>
+					<include>Visible_Right</include>
+					<include content="Visible_Right_Delayed">
+						<param name="id" value="802"/>
+					</include>
+					<control type="group">
+						<left>-20</left>
+						<right>-20</right>
+						<control type="image">
+							<texture colordiffuse="EDFFFFFF">lists/panel.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+							<left>0</left>
+							<right>0</right>
+							<top>-10%</top>
+							<height>120%</height>
+						</control>
+						<control type="group">
+							<top>-60</top>
+							<control type="label">
+								<top>150</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font36_title</font>
+								<left>20</left>
+								<right>20</right>
+								<textcolor>$VAR[SkinColorVar]</textcolor>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[UPPERCASE]• $LOCALIZE[31031] •[/UPPERCASE]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>200</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>KODI $INFO[System.BuildVersion] - $INFO[System.BuildDate]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>240</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[166] Estuary MOD V2 • $INFO[System.AddonVersion(skin.estuary.modv2),$LOCALIZE[24051] ]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>280</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$INFO[System.KernelVersion]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>350</top>
+								<align>center</align>
+								<height>30</height>
+								<textoffsety>10</textoffsety>
+								<font>font36_title</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<textcolor>$VAR[SkinColorVar]</textcolor>
+								<label>[UPPERCASE]• $LOCALIZE[130] •[/UPPERCASE]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>410</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[13287] $INFO[System.ScreenResolution]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>450</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[12390]: [LOWERCASE]$INFO[System.Uptime][/LOWERCASE]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>490</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[12394]: [LOWERCASE]$INFO[System.TotalUptime][/LOWERCASE]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>530</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[150]: $INFO[Network.IPAddress] [B]-[/B] $LOCALIZE[149]: $INFO[Network.MACAddress] [B]-[/B] $INFO[Network.LinkState]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>610</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font36_title</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<textcolor>$VAR[SkinColorVar]</textcolor>
+								<label>[UPPERCASE]• $LOCALIZE[40122] •[/UPPERCASE]</label>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>660</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[13271] $INFO[System.CPUUsage] [B]-[/B] $INFO[System.CPUTemperature]</label>
+								<scroll>true</scroll>
+								<visible>Integer.IsGreaterOrEqual()(System.CPUTemperature,1)</visible>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>660</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+								<scroll>true</scroll>
+								<visible>Integer.IsEqual(System.CPUTemperature,0)</visible>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="progress">
+								<top>710</top>
+								<centerleft>50%</centerleft>
+								<width>1200</width>
+								<height>16</height>
+								<info>System.CPUUsage</info>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>736</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[31030] : $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
+								<scroll>true</scroll>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="progress">
+								<top>786</top>
+								<centerleft>50%</centerleft>
+								<width>1200</width>
+								<height>16</height>
+								<info>system.memory(used)</info>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="label">
+								<top>846</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font36_title</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<textcolor>$VAR[SkinColorVar]</textcolor>
+								<label>[UPPERCASE]• $LOCALIZE[31157] •[/UPPERCASE]</label>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+							</control>
+							<control type="textbox">
+								<top>940</top>
+								<align>center</align>
+								<height>100</height>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$LOCALIZE[40260]</label>
+								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+								<visible>[!Library.HasContent(movies) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos)]</visible>
+							</control>
+						</control>
+						<control type="grouplist">
+							<orientation>horizontal</orientation>
+							<itemgap>0</itemgap>
+							<left>50</left>
+							<right>50</right>
+							<align>justify</align>
+							<top>825</top>
+							<visible>![[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets)]</visible>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(movies)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMovies.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Movies.Count),, $LOCALIZE[36901]][CR]$INFO[Window(Home).Property(Movies.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Movies.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(tvshows)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultTVShows.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Episodes.Count),, $LOCALIZE[20453]][CR]$INFO[Window(Home).Property(Episodes.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Episodes.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(music)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMusicSongs.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Music.SongsCount),, $LOCALIZE[36921]][CR]$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36919]][CR]$INFO[Window(Home).Property(Music.ArtistsCount),, $LOCALIZE[36917]][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(musicvideos)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMusicVideos.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[36909]][CR]$INFO[Window(Home).Property(MusicVideos.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(MusicVideos.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+						</control>
+						<control type="grouplist">
+							<orientation>horizontal</orientation>
+							<itemgap>0</itemgap>
+							<left>0</left>
+							<right>510</right>
+							<align>justify</align>
+							<top>825</top>
+							<visible>[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)</visible>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(movies)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMovies.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Movies.Count),, $LOCALIZE[36901]][CR]$INFO[Window(Home).Property(Movies.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Movies.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(tvshows)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultTVShows.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Episodes.Count),, $LOCALIZE[20453]][CR]$INFO[Window(Home).Property(Episodes.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Episodes.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(music)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMusicSongs.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Music.SongsCount),, $LOCALIZE[36921]][CR]$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36919]][CR]$INFO[Window(Home).Property(Music.ArtistsCount),, $LOCALIZE[36917]][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(musicvideos)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMusicVideos.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[36909]][CR]$INFO[Window(Home).Property(MusicVideos.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(MusicVideos.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+						</control>
+						<control type="grouplist">
+							<orientation>horizontal</orientation>
+							<itemgap>0</itemgap>
+							<left>0</left>
+							<right>135</right>
+							<align>justify</align>
+							<top>825</top>
+							<visible>[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)</visible>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(movies)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMovies.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Movies.Count),, $LOCALIZE[36901]][CR]$INFO[Window(Home).Property(Movies.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Movies.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(tvshows)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultTVShows.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Episodes.Count),, $LOCALIZE[20453]][CR]$INFO[Window(Home).Property(Episodes.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Episodes.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(music)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMusicSongs.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Music.SongsCount),, $LOCALIZE[36921]][CR]$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36919]][CR]$INFO[Window(Home).Property(Music.ArtistsCount),, $LOCALIZE[36917]][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(musicvideos)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultMusicVideos.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[36909]][CR]$INFO[Window(Home).Property(MusicVideos.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(MusicVideos.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+						</control>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="-522,0" time="300" tween="sine" easing="inout" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<animation effect="slide" end="-95,0" time="300" tween="sine" easing="inout" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<depth>DepthContentPanel</depth>
+				<include>OpenClose_Left</include>
+				<include content="ContentPanel">
+					<param name="width" value="522" />
+					<param name="visible" value="!Skin.HasSetting(MinimizeMainMenu)" />
+				</include>
+				<include content="ContentPanel">
+					<param name="width" value="155" />
+					<param name="visible" value="Skin.HasSetting(MinimizeMainMenu)" />
+				</include>
+				<control type="fixedlist" id="9000">
+					<left>0</left>
+					<top>240</top>
+					<width>462</width>
+					<bottom>-10</bottom>
+					<movement>7</movement>
+					<focusposition>0</focusposition>
+					<onfocus>ClearProperty(listposition,home)</onfocus>
+					<onfocus>ClearProperty(SkinHelper.WidgetContainer,home)</onfocus>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),DiscWidget)">21000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),MoviesWidget)">5000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),TVShowsWidget)">6000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),MusicWidget)">7000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),MusicVideosWidget)">16000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),LiveTVWidget)">12000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),RadioWidget)">13000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),GamesWidget)">17000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),AddonsWidget)">8000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),PicturesWidget)">4000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),VideoWidget)">11000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),FavoritesWidget)">14000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget)">15000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList)">22000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)">23000</onright>
+					<onup>700</onup>
+					<ondown>700</ondown>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<focusedlayout height="95">
+						<control type="group">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>462</width>
+								<height>95</height>
+								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
+								<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
+								<visible>!ControlGroup(700).HasFocus</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>462</width>
+								<height>95</height>
+								<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
+								<visible>!Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor)</visible>
+								<visible>!ControlGroup(700).HasFocus</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>95</width>
+								<height>95</height>
+								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
+								<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
+								<visible>!ControlGroup(700).HasFocus</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>95</width>
+								<height>95</height>
+								<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
+								<visible>Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor)</visible>
+								<visible>!ControlGroup(700).HasFocus</visible>
+							</control>
+							<control type="image">
+								<left>71</left>
+								<top>69</top>
+								<width>22</width>
+								<height>22</height>
+								<texture colordiffuse="$VAR[SkinColorVar]">icons/parental-control/lock.png</texture>
+								<visible>[String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>95</width>
+								<height>95</height>
+								<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
+								<visible>!Skin.HasSetting(MinimizeMainMenu) + !Skin.HasSetting(EnableGradientColor)</visible>
+								<visible>!ControlGroup(700).HasFocus</visible>
+							</control>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>95</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<include>Animation_FocusBounce_Home</include>
+							<visible>!ControlGroup(700).HasFocus</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>95</height>
+							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
+							<include>Animation_FocusBounce_Home</include>
+							<visible>ControlGroup(700).HasFocus</visible>
+						</control>
+						<control type="image">
+							<left>71</left>
+							<top>69</top>
+							<width>22</width>
+							<height>22</height>
+							<texture>icons/parental-control/lock.png</texture>
+							<visible>[String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]</visible>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<top>0</top>
+							<height>95</height>
+							<width>348</width>
+							<aligny>center</aligny>
+							<font>font37</font>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<scroll>true</scroll>
+							<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
+						</control>
+					</focusedlayout>
+					<itemlayout height="95">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>95</height>
+							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<top>0</top>
+							<height>95</height>
+							<width>358</width>
+							<aligny>center</aligny>
+							<font>font37</font>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
+						</control>
+					</itemlayout>
+					<content>
+						<include>skinshortcuts-mainmenu</include>
+					</content>
+				</control>
+				<control type="grouplist" id="700">
+					<orientation>horizontal</orientation>
+					<itemgap>0</itemgap>
+					<left>-8</left>
+					<width>480</width>
+					<height>110</height>
+					<top>100</top>
+					<onup>SetFocus(9000,99,absolute)</onup>
+					<ondown>SetFocus(9000,0,absolute)</ondown>
+					<align>justify</align>
+					<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
+					<include content="IconButton">
+						<param name="control_id" value="804" />
+						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
+						<param name="icon" value="icons/power.png" />
+						<param name="label" value="$LOCALIZE[33060]" />
+					</include>
+					<include content="IconButton">
+						<param name="control_id" value="802" />
+						<param name="onclick" value="ActivateWindow(settings)" />
+						<param name="icon" value="icons/settings.png" />
+						<param name="label" value="$LOCALIZE[21417]" />
+					</include>
+					<include content="IconButton">
+						<param name="control_id" value="801" />
+						<param name="onclick" value="ActivateWindow(1107)" />
+						<param name="icon" value="icons/search.png" />
+						<param name="label" value="$LOCALIZE[137]" />
+					</include>
+					<include content="IconButton">
+						<param name="control_id" value="803" />
+						<param name="onclick" value="Fullscreen" />
+						<param name="icon" value="icons/now-playing/fullscreen.png" />
+						<param name="label" value="$LOCALIZE[31000]" />
+						<param name="visible" value="Player.HasMedia" />
+					</include>
+				</control>
+				<control type="group">
+					<visible>!Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor)</visible>
+					<control type="image">
+						<top>120</top>
+						<left>32</left>
+						<width>80</width>
+						<height>80</height>
+						<texture colordiffuse="$VAR[GradientColorVar]">buttons/roundbutton-fo-gradient.png</texture>
+						<visible>Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)</visible>
+						<animation effect="slide" end="-20,0" time="0" condition="Control.HasFocus(804) + Player.HasMedia">Conditional</animation>
+						<animation effect="slide" end="160,0" time="0" condition="Control.HasFocus(802) + !Player.HasMedia">Conditional</animation>
+						<animation effect="slide" end="100,0" time="0" condition="Control.HasFocus(802) + Player.HasMedia">Conditional</animation>
+						<animation effect="slide" end="320,0" time="0" condition="Control.HasFocus(801) + !Player.HasMedia">Conditional</animation>
+						<animation effect="slide" end="220,0" time="0" condition="Control.HasFocus(801) + Player.HasMedia">Conditional</animation>
+						<animation effect="slide" end="340,0" time="0" condition="Control.HasFocus(803) + Player.HasMedia">Conditional</animation>
+					</control>
+					<control type="image">
+						<top>140</top>
+						<left>52</left>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icons/power.png</texture>
+						<visible>Control.HasFocus(804)</visible>
+						<animation effect="slide" end="-20,0" time="0" condition="Control.HasFocus(804) + Player.HasMedia">Conditional</animation>
+					</control>
+					<control type="image">
+						<top>140</top>
+						<left>212</left>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icons/settings.png</texture>
+						<visible>Control.HasFocus(802)</visible>
+						<animation effect="slide" end="-60,0" time="0" condition="Control.HasFocus(802) + Player.HasMedia">Conditional</animation>
+					</control>
+					<control type="image">
+						<top>140</top>
+						<left>372</left>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icons/search.png</texture>
+						<visible>Control.HasFocus(801)</visible>
+						<animation effect="slide" end="-100,0" time="0" condition="Control.HasFocus(801) + Player.HasMedia">Conditional</animation>
+					</control>
+					<control type="image">
+						<top>140</top>
+						<left>392</left>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icons/now-playing/fullscreen.png</texture>
+						<visible>Control.HasFocus(803) + Player.HasMedia</visible>
+					</control>
+				</control>
+				<control type="image">
+					<top>108</top>
+					<left>0</left>
+					<width>95</width>
+					<height>80</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+					<visible>Skin.HasSetting(MinimizeMainMenu) + !Skin.HasSetting(EnableGradientColor) + [Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
+				</control>
+				<control type="grouplist" id="700">
+					<orientation>horizontal</orientation>
+					<left>0</left>
+					<width>95</width>
+					<height>110</height>
+					<top>100</top>
+					<onup>SetFocus(9000,99,absolute)</onup>
+					<ondown>SetFocus(9000,0,absolute)</ondown>
+					<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
+					<include content="IconButton">
+						<param name="control_id" value="804" />
+						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
+						<param name="icon" value="icons/power.png" />
+						<param name="label" value="$LOCALIZE[33060]" />
+						<param name="height" value="95" />
+						<param name="width" value="95" />
+						<param name="texturefocus" value="" />
+						<param name="radioposx" value="28" />
+					</include>
+					<include content="IconButton">
+						<param name="control_id" value="802" />
+						<param name="onclick" value="ActivateWindow(settings)" />
+						<param name="icon" value="icons/settings.png" />
+						<param name="label" value="$LOCALIZE[21417]" />
+						<param name="height" value="95" />
+						<param name="width" value="95" />
+						<param name="texturefocus" value="" />
+						<param name="radioposx" value="28" />
+					</include>
+					<include content="IconButton">
+						<param name="control_id" value="801" />
+						<param name="onclick" value="ActivateWindow(1107)" />
+						<param name="icon" value="icons/search.png" />
+						<param name="label" value="$LOCALIZE[137]" />
+						<param name="height" value="95" />
+						<param name="width" value="95" />
+						<param name="texturefocus" value="" />
+						<param name="radioposx" value="28" />
+					</include>
+					<include content="IconButton">
+						<param name="control_id" value="803" />
+						<param name="onclick" value="Fullscreen" />
+						<param name="icon" value="icons/now-playing/fullscreen.png" />
+						<param name="label" value="$LOCALIZE[31000]" />
+						<param name="visible" value="Player.HasMedia" />
+						<param name="height" value="95" />
+						<param name="width" value="95" />
+						<param name="texturefocus" value="" />
+						<param name="radioposx" value="28" />
+					</include>
+				</control>
+				<control type="image">
+					<top>108</top>
+					<left>0</left>
+					<width>95</width>
+					<height>80</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+					<visible>Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor) + [Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
+				</control>
+				<control type="group">
+					<visible>Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor)</visible>
+					<control type="image">
+						<top>108</top>
+						<left>0</left>
+						<width>95</width>
+						<height>80</height>
+						<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+						<visible>Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)</visible>
+					</control>
+					<control type="image">
+						<top>128</top>
+						<left>28</left>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icons/power.png</texture>
+						<visible>Control.HasFocus(804)</visible>
+					</control>
+					<control type="image">
+						<top>128</top>
+						<left>28</left>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icons/settings.png</texture>
+						<visible>Control.HasFocus(802)</visible>
+					</control>
+					<control type="image">
+						<top>128</top>
+						<left>28</left>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icons/search.png</texture>
+						<visible>Control.HasFocus(801)</visible>
+					</control>
+					<control type="image">
+						<top>128</top>
+						<left>28</left>
+						<width>40</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icons/now-playing/fullscreen.png</texture>
+						<visible>Control.HasFocus(803) + Player.HasMedia</visible>
+					</control>
+				</control>
+				<control type="group">
+					<control type="image">
+						<left>15</left>
+						<top>195</top>
+						<width>14</width>
+						<height>14</height>
+						<texture flipx="true">overlays/arrowright.png</texture>
+						<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
+						<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+						<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+						<visible>ControlGroup(700).HasFocus</visible>
+						<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
+					</control>
+					<control type="image">
+						<top>201</top>
+						<height>2</height>
+						<left>30</left>
+						<width>35</width>
+						<texture>colors/white.png</texture>
+						<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
+						<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+						<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+						<visible>ControlGroup(700).HasFocus</visible>
+						<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
+					</control>
+					<control type="image">
+						<left>66</left>
+						<top>195</top>
+						<width>14</width>
+						<height>14</height>
+						<texture>overlays/arrowright.png</texture>
+						<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
+						<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+						<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+						<visible>ControlGroup(700).HasFocus</visible>
+						<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
+					</control>
+				</control>
+			</control>
+			<include>BottomBar</include>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<bottom>0</bottom>
+				<height>70</height>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
+					<param name="infolabel_prefix" value="Container." />
+					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
+				</include>
+				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
+					<param name="infolabel_prefix" value="Container." />
+					<param name="audiocodec_var" value="$VAR[ContainerAudioCodecFlagVar]" />
+				</include>
+				<control type="rss">
+					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+					<left>0</left>
+					<bottom>0</bottom>
+					<height>39</height>
+					<width>100%</width>
+					<font>font12</font>
+					<urlset>1</urlset>
+					<hitrect x="-100" y="0" w="1" h="1" />
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<titlecolor>$VAR[SkinColorVar]</titlecolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<headlinecolor>FFC0C0C0</headlinecolor>
+					<visible>Skin.HasSetting(hide_mediaflags) | !ControlGroup(2000).HasFocus</visible>
+					<animation effect="fade" time="300">VisibleChange</animation>
+				</control>
+			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="" />
+			</include>
+			<control type="image">
+				<top>0</top>
+				<width>284</width>
+				<height>115</height>
+				<centerleft>50%</centerleft>
+				<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-back.png</texture>
+				<visible>!String.IsEmpty(Control.GetLabel(55001))</visible>
+				<visible>!Skin.HasSetting(HomeClearLogo)</visible>
+				<visible>!Control.HasFocus(9000) + !ControlGroup(700).HasFocus</visible>
+				<visible>![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
+				<visible>!Skin.HasSetting(HomeClearLogoMenu) | [Skin.HasSetting(HomeClearLogoMenu) + [Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)]]</visible>
+				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			</control>
+			<control type="image" id="55001">
+				<top>5</top>
+				<width>274</width>
+				<height>106</height>
+				<centerleft>50%</centerleft>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$VAR[HomeClearLogoVar]</texture>
+				<visible>!Skin.HasSetting(HomeClearLogo)</visible>
+				<visible>!Control.HasFocus(9000) + !ControlGroup(700).HasFocus</visible>
+				<visible>![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
+				<visible>!Skin.HasSetting(HomeClearLogoMenu) | [Skin.HasSetting(HomeClearLogoMenu) + [Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)]]</visible>
+				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			</control>
+			<control type="image" id="55000">
+				<top>10</top>
+				<width>452</width>
+				<height>108</height>
+				<left>5</left>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="fallback.png">$VAR[HomeClearLogoVar]</texture>
+				<visible>!Skin.HasSetting(HomeClearLogo)</visible>
+				<visible>Skin.HasSetting(HomeClearLogoMenu)</visible>
+				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
+				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="slide" end="-522,0" time="300" tween="sine" easing="out" condition="Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+			</control>
+			<control type="group">
+				<visible>[!Skin.HasSetting(HomeClearLogo) + String.IsEqual(Control.GetLabel(55000),fallback.png)] | Skin.HasSetting(HomeClearLogo)</visible>
+				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
+				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="slide" end="-522,0" time="280" tween="sine" easing="out" condition="Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<top>20</top>
+				<left>20</left>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture>themes/christmas/logo.png</texture>
+					<visible>$EXP[ChristmasTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture>themes/halloween/logo.png</texture>
+					<visible>$EXP[HalloweenTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture>themes/easter/logo.png</texture>
+					<visible>$EXP[EasterTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture>themes/valentine/logo.png</texture>
+					<visible>$EXP[ValentineTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">icons/logo.png</texture>
+					<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture colordiffuse="$VAR[GradientColorVar]">icons/logo-gradient.png</texture>
+					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+					<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>icons/logo-text.png</texture>
+					<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
+				<animation effect="slide" end="-522,0" time="300" tween="sine" easing="out" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<animation effect="slide" end="-95,0" time="230" tween="sine" easing="out" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
+				<visible>[![Skin.HasSetting(HomeClearLogoMenu) + !Skin.HasSetting(HideMainMenuWithWidgets)]] | [![Skin.HasSetting(HomeClearLogoMenu) + !Skin.HasSetting(MinimizeMainMenu)]]</visible>
+				<top>20</top>
+				<left>20</left>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture>themes/christmas/logo.png</texture>
+					<visible>$EXP[ChristmasTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture>themes/halloween/logo.png</texture>
+					<visible>$EXP[HalloweenTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture>themes/easter/logo.png</texture>
+					<visible>$EXP[EasterTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture>themes/valentine/logo.png</texture>
+					<visible>$EXP[ValentineTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">icons/logo.png</texture>
+					<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
+				</control>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture colordiffuse="$VAR[GradientColorVar]">icons/logo-gradient.png</texture>
+					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+					<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>icons/logo-text.png</texture>
+					<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
+				</control>
+			</control>
+			<control type="label">
+				<left>115</left>
+				<top>20</top>
+				<height>56</height>
+				<aligny>center</aligny>
+				<font>font30_title</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>$INFO[Container(9000).ListItem.Label]</label>
+				<visible>Control.HasFocus(9000) + Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(TopNameItem)</visible>
+				<include>OpenClose_Right</include>
+			</control>
+			<control type="label">
+				<left>115</left>
+				<top>20</top>
+				<height>56</height>
+				<aligny>center</aligny>
+				<font>font30_title</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>$LOCALIZE[33060]</label>
+				<visible>Control.HasFocus(804)+ Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(TopNameItem)</visible>
+				<include>OpenClose_Right</include>
+			</control>
+			<control type="label">
+				<left>115</left>
+				<top>20</top>
+				<height>56</height>
+				<aligny>center</aligny>
+				<font>font30_title</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>$LOCALIZE[21417]</label>
+				<visible>Control.HasFocus(802) + Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(TopNameItem)</visible>
+				<include>OpenClose_Right</include>
+			</control>
+			<control type="label">
+				<left>115</left>
+				<top>20</top>
+				<height>56</height>
+				<aligny>center</aligny>
+				<font>font30_title</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>$LOCALIZE[137]</label>
+				<visible>Control.HasFocus(801) + Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(TopNameItem)</visible>
+				<include>OpenClose_Right</include>
+			</control>
+			<control type="label">
+				<left>115</left>
+				<top>20</top>
+				<height>56</height>
+				<aligny>center</aligny>
+				<font>font30_title</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>$LOCALIZE[244]</label>
+				<visible>Control.HasFocus(803) + Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(TopNameItem)</visible>
+				<include>OpenClose_Right</include>
+			</control>
+		</control>
+		<include condition="!Skin.HasSetting(EnableSpashScreen)">SplashScreen</include>
+	</controls>
+</window>

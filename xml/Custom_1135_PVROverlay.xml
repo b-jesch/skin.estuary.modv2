@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1135">
+	<visible>Player.ShowInfo + !System.HasActiveModalDialog + VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo)</visible>
+	<depth>DepthOSD</depth>
+	<controls>
+		<control type="group">
+			<include>Animation_BottomSlide</include>
+			<bottom>-140</bottom>
+			<height>380</height>
+			<control type="image">
+				<left>0</left>
+				<width>100%</width>
+				<height>240</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>20</top>
+				<width>200</width>
+				<height>200</height>
+				<aspectratio aligny="center" align="center">keep</aspectratio>
+				<texture fallback="DefaultTVGuide.png">$INFO[Player.Art(thumb)]</texture>
+			</control>
+			<control type="textbox">
+				<left>240</left>
+				<top>140</top>
+				<width>280</width>
+				<height>100</height>
+				<label>$INFO[VideoPlayer.ChannelName]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<left>240</left>
+				<top>30</top>
+				<width>280</width>
+				<height>100</height>
+				<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>WeatherTemp</font>
+			</control>
+			<control type="label">
+				<left>530</left>
+				<top>10</top>
+				<right>30</right>
+				<height>30</height>
+				<label>[B]$INFO[VideoPlayer.Title]$VAR[SeasonEpisodePlayerLabel][/B]</label>
+				<scroll>true</scroll>
+				<font>font37</font>
+			</control>
+			<control type="label">
+				<left>530</left>
+				<top>60</top>
+				<right>30</right>
+				<height>30</height>
+				<label>$VAR[SeekTimeLabelVar]</label>
+				<font>font12</font>
+				<visible>!Player.ChannelPreviewActive</visible>
+			</control>
+			<control type="label">
+				<left>530</left>
+				<top>60</top>
+				<right>30</right>
+				<height>30</height>
+				<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
+				<font>font12</font>
+				<align>right</align>
+				<visible>VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
+			</control>
+			<control type="progress">
+				<animation effect="fade" end="0" time="200">WindowClose</animation>
+				<left>530</left>
+				<top>97</top>
+				<right>30</right>
+				<height>10</height>
+				<info>Player.ProgressCache</info>
+				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+				<visible>!VideoPlayer.Content(livetv)</visible>
+			</control>
+			<control type="progress" id="23">
+				<left>530</left>
+				<top>97</top>
+				<right>30</right>
+				<height>10</height>
+				<info>PVR.EpgEventProgress</info>
+				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+				<visible>VideoPlayer.HasEpg</visible>
+			</control>
+			<control type="progress">
+				<left>530</left>
+				<top>97</top>
+				<right>30</right>
+				<height>10</height>
+				<info>Player.Progress</info>
+				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+				<visible>!VideoPlayer.HasEpg</visible>
+			</control>
+			<control type="label">
+				<left>530</left>
+				<top>125</top>
+				<right>30</right>
+				<height>25</height>
+				<label>$LOCALIZE[19031] : [COLOR white]$INFO[VideoPlayer.NextTitle]$INFO[VideoPlayer.NextStartTime, (]$INFO[VideoPlayer.NextEndTime, - ,)][/COLOR]</label>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<aligny>center</aligny>
+				<visible>VideoPlayer.HasEpg</visible>
+			</control>
+			<control type="grouplist">
+				<top>170</top>
+				<right>30</right>
+				<left>530</left>
+				<height>50</height>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<itemgap>5</itemgap>
+				<visible>!Player.ChannelPreviewActive</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[VideoPlayerResolutionFlagVar]" />
+					<param name="fallback" value="flags/videoresolution/fallback.png" />
+					<param name="width" value="58" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
+					<param name="fallback" value="flags/videocodec/fallback.png" />
+					<param name="width" value="104" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
+					<param name="fallback" value="flags/aspectratio/fallback.png" />
+					<param name="width" value="86" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
+					<param name="fallback" value="flags/audiocodec/fallback.png" />
+					<param name="width" value="104" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
+					<param name="fallback" value="flags/audiochannel/fallback.png" />
+					<param name="width" value="104" />
+				</include>
+				<include content="MediaFlagOSD">
+					<param name="width" value="10" />
+				</include>
+				<control type="image">
+					<width>40</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icons/infodialogs/audio.png</texture>
+					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+				</control>
+				<control type="image">
+					<width>5</width>
+					<height>10</height>
+					<aspectratio>keep</aspectratio>
+					<texture/>
+					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.AudioLanguage,icons/infodialogs/flags/,.png]</texture>
+					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+				</control>
+				<control type="image">
+					<width>20</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture/>
+					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage) + !String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icons/infodialogs/subtitles.png</texture>
+					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+				</control>
+				<control type="image">
+					<width>5</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture/>
+					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.SubtitlesLanguage,icons/infodialogs/flags/,.png]</texture>
+					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

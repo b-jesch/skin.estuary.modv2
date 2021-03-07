@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">6</defaultcontrol>
+	<menucontrol>9000</menucontrol>
+	<views>50</views>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group">
+			<width>296</width>
+			<centerleft>50%</centerleft>
+			<control type="group">
+				<visible>Control.HasFocus(100)</visible>
+				<left>23</left>
+				<top>200</top>
+				<control type="image">
+					<top>-20</top>
+					<left>-20</left>
+					<width>290</width>
+					<height>290</height>
+					<texture>colors/black.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>250</width>
+					<height>250</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(100).ListItem.Icon]</texture>
+				</control>		
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(50)</visible>
+				<left>23</left>
+				<top>190</top>
+				<control type="image">
+					<top>-20</top>
+					<left>-20</left>
+					<width>290</width>
+					<height>290</height>
+					<texture>colors/black.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>250</width>
+					<height>250</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(50).ListItem.Icon]</texture>
+				</control>		
+			</control>
+			<control type="grouplist" id="9000">
+				<left>0</left>
+				<bottom>150</bottom>
+				<onright>100</onright>
+				<height>300</height>
+				<onleft>50</onleft>
+				<itemgap>-20</itemgap>
+					<include content="DefaultDialogButton">
+						<param name="id" value="6" />
+						<param name="height" value="100" />
+						<param name="width" value="296" />
+						<param name="label" value="$LOCALIZE[502]" />
+					</include>
+					<include content="DefaultDialogButton">
+						<param name="id" value="7" />
+						<param name="height" value="100" />
+						<param name="width" value="296" />
+						<param name="label" value="$LOCALIZE[190]" />
+					</include>
+					<include content="DefaultDialogButton">
+						<param name="id" value="8" />
+						<param name="height" value="100" />
+						<param name="width" value="296" />
+						<param name="label" value="$LOCALIZE[192]" />
+					</include>
+			</control>
+		</control>
+		<control type="group">
+			<include>OpenClose_Left</include>
+			<left>0</left>
+			<include content="ContentPanel">
+				<param name="width" value="872" />
+			</include>
+			<include content="FileManagerPanel">
+				<param name="list_id" value="50" />
+				<param name="scrollbar_id" value="60" />
+				<param name="onleft_id" value="60" />
+				<param name="onright_id" value="9000" />
+				<param name="width" value="812" />
+			</include>
+			<control type="scrollbar" id="60">
+				<left>0</left>
+				<top>80</top>
+				<width>12</width>
+				<bottom>80</bottom>
+				<onleft>100</onleft>
+				<onright>50</onright>
+				<texturesliderbackground />
+				<animation effect="zoom" end="50,100" time="300" tween="sine" center="0,0" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+				<orientation>vertical</orientation>
+			</control>
+		</control>
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<width>818</width>
+			<right>-6</right>
+			<include content="ContentPanel">
+				<param name="width" value="872" />
+				<param name="flipx" value="true" />
+				<param name="left" value="-20" />
+			</include>
+			<include content="FileManagerPanel">
+				<param name="list_id" value="100" />
+				<param name="scrollbar_id" value="61" />
+				<param name="onleft_id" value="9000" />
+				<param name="onright_id" value="61" />
+				<param name="width" value="812" />
+			</include>		
+			<control type="scrollbar" id="61">
+				<left>800</left>
+				<top>80</top>
+				<width>12</width>
+				<bottom>80</bottom>
+				<onleft>100</onleft>
+				<onright>50</onright>
+				<texturesliderbackground />
+				<animation effect="zoom" end="50,100" time="300" tween="sine" center="812,0" easing="inout" condition="!Control.HasFocus(61)">conditional</animation>
+				<orientation>vertical</orientation>
+			</control>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[10503]" />
+		</include>
+		<include>BottomBar</include>
+		<control type="group">
+			<bottom>0</bottom>
+			<height>65</height>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<control type="label">
+				<right>0</right>
+				<width>795</width>
+				<height>48</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<shadowcolor>text_shadow</shadowcolor>
+				<label>$INFO[Container(100).CurrentItem,, / ]$INFO[Container(100).NumItems]</label>
+			</control>
+			<control type="label">
+				<right>40</right>
+				<width>600</width>
+				<height>48</height>
+				<font>font30_title</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[40178]</label>
+				<haspath>true</haspath>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>795</width>
+				<height>48</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<shadowcolor>text_shadow</shadowcolor>
+				<label>$INFO[Container(50).CurrentItem,, / ]$INFO[Container(50).NumItems]</label>
+			</control>
+			<control type="label">
+				<left>40</left>
+				<width>600</width>
+				<height>48</height>
+				<font>font30_title</font>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[40177]</label>
+				<haspath>true</haspath>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+	</controls>
+</window>

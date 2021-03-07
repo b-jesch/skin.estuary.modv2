@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="View_505_ThumbsInfoWall">
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<left>100</left>
+			<top>0</top>
+			<visible>Control.IsVisible(505)</visible>
+			<include>Visible_Right</include>
+			<control type="panel" id="505">
+				<left>548</left>
+				<top>0</top>
+				<right>15</right>
+				<height>100%</height>
+				<oninfo condition="String.IsEqual(ListItem.DBType,set)">ActivateWindow(1132)</oninfo>
+				<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
+				<onright>531</onright>
+				<onup condition="Integer.IsGreater(Container.NumPages,1)">505</onup>
+				<onup condition="!Integer.IsGreater(Container.NumPages,1) + !Skin.HasSetting(KioskMode)">9000</onup>
+				<ondown>505</ondown>
+				<viewtype label="40016">icon</viewtype>
+				<preloaditems>2</preloaditems>
+				<pagecontrol>531</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<visible>Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | String.StartsWith(Container.FolderPath,plugin://)</visible>
+				<animation effect="slide" end="20,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+				<itemlayout height="365" width="600">
+					<control type="group">
+						<top>120</top>
+						<include>InfoWallThumbsLayout</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="365" width="600">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+       					 </animation>
+						<top>120</top>
+						<include content="InfoWallThumbsLayout">
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<menucontrol>9000</menucontrol>
+	<views>50,52,53,54,55,500,504,505,506,507,508,509</views>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<include>View_50_List</include>
+			<include>View_52_IconWall</include>
+			<include>View_53_Shift</include>
+			<include>View_54_InfoWall</include>
+			<include>View_55_WideList</include>
+			<include>View_500_Wall</include>
+			<include>View_504_ThumbsWall</include>
+			<include>View_505_ThumbsInfoWall</include>
+			<include>View_506_Mosaic</include>
+			<include>View_507_Mosaic_Vertical</include>
+			<include>View_508_DoubleLists</include>
+			<include>View_509_TripleLists</include>
+			<control type="group">
+				<include>OpenClose_Left</include>
+				<visible>Control.Isvisible(54) | Control.IsVisible(55) | Control.IsVisible(505)</visible>
+				<include>Visible_Left</include>
+				<include>ListThumbInfoPanel</include>
+			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[2]" />
+			</include>
+			<include content="BottomBar">
+				<param name="info_visible" value="true" />
+			</include>
+			<include>CommonScrollbars</include>
+			<include>CommonAlphabet</include>
+			<control type="group">
+				<visible>[Control.IsVisible(500) | Control.IsVisible(504) | Control.IsVisible(506) | Control.IsVisible(507)] + String.IsEqual(listitem.dbtype,artist)</visible>
+				<visible>!Skin.HasSetting(show_albumsartistlag)</visible>
+				<animation effect="slide" end="0,100" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<control type="list" id="5005001">
+					<right>6</right>
+					<bottom>11</bottom>
+					<width>990</width>
+					<height>100</height>
+					<orientation>horizontal</orientation>
+					<autoscroll time="1500">true</autoscroll>
+					<itemgap>5</itemgap>
+					<animation effect="slide" end="880,0" time="0" condition="Integer.IsEqual(Container(5005001).NumItems,1)">conditional</animation>
+					<animation effect="slide" end="770,0" time="0" condition="Integer.IsEqual(Container(5005001).NumItems,2)">conditional</animation>
+					<animation effect="slide" end="660,0" time="0" condition="Integer.IsEqual(Container(5005001).NumItems,3)">conditional</animation>
+					<animation effect="slide" end="550,0" time="0" condition="Integer.IsEqual(Container(5005001).NumItems,4)">conditional</animation>
+					<animation effect="slide" end="440,0" time="0" condition="Integer.IsEqual(Container(5005001).NumItems,5)">conditional</animation>
+					<animation effect="slide" end="330,0" time="0" condition="Integer.IsEqual(Container(5005001).NumItems,6)">conditional</animation>
+					<animation effect="slide" end="220,0" time="0" condition="Integer.IsEqual(Container(5005001).NumItems,7)">conditional</animation>
+					<animation effect="slide" end="110,0" time="0" condition="Integer.IsEqual(Container(5005001).NumItems,8)">conditional</animation>
+					<focusedlayout height="100" width="110">
+						<control type="image">
+							<left>5</left>
+							<top>0</top>
+							<right>5</right>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Thumb]</texture>
+							<bordertexture>colors/white.png</bordertexture>
+							<bordersize>1</bordersize>
+						</control>
+					</focusedlayout>
+					<itemlayout height="100" width="110">
+						<control type="image">
+							<left>5</left>
+							<top>0</top>
+							<right>5</right>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Thumb]</texture>
+							<bordertexture>colors/white.png</bordertexture>
+							<bordersize>1</bordersize>
+						</control>
+					</itemlayout>
+					<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
+				</control>
+			</control>
+			<control type="image">
+				<top>10</top>
+				<width>326</width>
+				<height>125</height>
+				<centerleft>50%</centerleft>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$VAR[ViewClearArtVar]</texture>
+				<visible>Control.IsVisible(53)</visible>
+		  		<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+		  		<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
+		  		<animation effect="slide" end="0,-120" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			</control>
+			<control type="image">
+				<top>5</top>
+				<width>248</width>
+				<height>95</height>
+				<centerleft>50%</centerleft>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$VAR[LibraryClearLogoVar]</texture>
+				<visible>Control.IsVisible(506) + !Control.HasFocus(5199)</visible>
+		  		<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+		  		<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
+		  		<animation effect="slide" end="0,-100" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			</control>
+			<control type="group">
+				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
+				<visible>[Control.IsVisible(507) + !Control.HasFocus(531)] | Control.IsVisible(508) | Control.IsVisible(509)</visible>
+				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<control type="image">
+					<top>0</top>
+					<width>232</width>
+					<height>95</height>
+					<centerleft>50%</centerleft>
+					<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-back.png</texture>
+					<visible>!String.IsEmpty(Control.GetLabel(25000))</visible>
+				</control>
+				<control type="image" id="25000">
+					<top>5</top>
+					<width>222</width>
+					<height>85</height>
+					<centerleft>50%</centerleft>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[LibraryClearLogoVar]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>OpenClose_Left</include>
+				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
+			<control type="image">
+				<top>15</top>
+				<width>284</width>
+				<height>110</height>
+				<left>155</left>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$VAR[LibraryClearLogoVar]</texture>
+				<visible>Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505)</visible>
+			</control>
+			</control>
+			<control type="group">
+				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
+				<visible>[Control.IsVisible(500) | Control.IsVisible(504)] + !Control.HasFocus(531)</visible>
+				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			<control type="image">
+				<top>0</top>
+				<width>284</width>
+				<height>115</height>
+				<centerleft>50%</centerleft>
+				<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-back.png</texture>
+				<visible>!String.IsEmpty(Control.GetLabel(25001))</visible>
+			</control>
+			<control type="image" id="25001">
+				<top>5</top>
+				<width>274</width>
+				<height>105</height>
+				<centerleft>50%</centerleft>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$VAR[LibraryClearLogoVar]</texture>				
+			</control>
+			</control>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<bottom>0</bottom>
+				<height>70</height>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<include condition="!Skin.HasSetting(hide_mediaflags)">MediaFlags</include>
+			</control>
+			<include>MediaMenuMouseOverlay</include>
+			<control type="group">
+				<include>MediaMenuCommon</include>
+				<control type="grouplist" id="9000">
+					<top>80</top>
+					<include>MediaMenuListCommon</include>
+					<control type="radiobutton" id="626">
+                        <include>MediaMenuItemsCommonRadio</include>
+                        <label>ExtraFanarts</label>
+                        <selected>Skin.HasSetting(EnableExtraFanart)</selected>
+                        <onclick condition="!System.HasAddon(script.artwork.helper)">InstallAddon(script.artwork.helper)</onclick>
+						<onclick condition="System.HasAddon(script.artwork.helper)">Skin.ToggleSetting(EnableExtraFanart)</onclick>
+                        <visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
+                        <visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </control>
+					<control type="label" id="203">
+						<description>Actions</description>
+						<include>MediaMenuLabelCommon</include>
+						<label>$LOCALIZE[31020]</label>
+					</control>
+					<control type="togglebutton" id="619">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[653]</label>
+						<onclick>UpdateLibrary(music)</onclick>
+						<visible>!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</visible>
+						<altlabel>$LOCALIZE[13353]</altlabel>
+						<usealttexture>library.isscanningmusic</usealttexture>
+					</control>
+					<control type="radiobutton" id="16">
+						<label>$LOCALIZE[589]</label>
+						<include>MediaMenuItemsCommonRadio</include>
+					</control>
+					<control type="button" id="612">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[31056]</label>
+						<onclick>ActivateWindow(musicplaylist)</onclick>
+						<visible>Integer.IsGreater(Playlist.Length(music),0)</visible>
+					</control>
+					<control type="button" id="621">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[21452]</label>
+						<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
+						<visible>Container.Content(addons)</visible>
+					</control>
+					<control type="button" id="624">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[10140]</label>
+						<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
+						<visible>!String.IsEmpty(Container.PluginName)</visible>
+					</control>
+					<control type="button" id="622">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[31117]</label>
+						<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=music,return)</onclick>
+						<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+						<visible>String.IsEmpty(Container.FolderPath) + String.IsEmpty(Container.PluginName)</visible>
+					</control>
+					<include>MediaMenuNowPlaying</include>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<control type="image">
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Window.Property(background)]</texture>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+			</control>
+			<control type="group">
+				<top>189</top>
+				<left>106</left>
+				<control type="image">
+					<top>-14</top>
+					<left>-16</left>
+					<width>506</width>
+					<height>730</height>
+					<texture>colors/black.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<left>4</left>
+					<top>6</top>
+					<width>466</width>
+					<height>690</height>
+					<fadetime>200</fadetime>
+					<aspectratio aligny="center">scale</aspectratio>
+					<texture fallback="DefaultVideoCover.png" background="true">$INFO[Window.Property(next.poster)]</texture>
+					<visible>!String.IsEmpty(Window.Property(has.next)) + !Control.HasFocus(101)</visible>
+				</control>
+				<control type="image">
+					<left>4</left>
+					<top>6</top>
+					<width>466</width>
+					<height>690</height>
+					<fadetime>200</fadetime>
+					<aspectratio aligny="center">scale</aspectratio>
+					<texture fallback="DefaultVideoCover.png" background="true">$INFO[Window.Property(previous.poster)]</texture>
+					<visible>String.IsEmpty(Window.Property(has.next)) | Control.HasFocus(101)</visible>
+				</control>
+			</control>
+			<control type="group" id="50">
+				<left>0</left>
+				<top>135</top>
+				<defaultcontrol>102</defaultcontrol>
+				<control type="group" id="100">
+					<defaultcontrol>102</defaultcontrol>
+					<control type="group">
+						<left>92</left>
+						<top>0</top>
+						<width>1920</width>
+						<height>580</height>
+						<control type="group">
+							<width>714</width>
+							<centerleft>50%</centerleft>
+							<top>400</top>
+							<control type="group">
+								<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="266.5,150" reversible="true" condition="Control.HasFocus(101)">Conditional</animation>
+								<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="266.5,150" condition="!Skin.HasSetting(no_animations) + !Control.HasFocus(101)">Conditional</animation>
+								<left>0</left>
+								<top>0</top>
+								<control type="group">
+									<left>0</left>
+									<top>0</top>
+									<control type="image">
+										<left>15</left>
+										<top>15</top>
+										<width>503</width>
+										<height>270</height>
+										<aspectratio>stretch</aspectratio>
+										<texture border="8" colordiffuse="$VAR[SkinColorVar]">buttons/thumbnail_focused.png</texture>
+										<animation effect="fade" start="0" end="100" time="200" tween="sine" condition="Control.HasFocus(101)">Conditional</animation>
+										<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="!Control.HasFocus(101)">Conditional</animation>
+									</control>
+									<control type="image">
+										<left>15</left>
+										<top>15</top>
+										<width>503</width>
+										<height>270</height>
+										<aspectratio>stretch</aspectratio>
+										<texture border="8" colordiffuse="$VAR[GradientColorVar]">buttons/thumbnail_focused-gradient.png</texture>
+										<animation effect="fade" start="0" end="100" time="200" tween="sine" condition="Control.HasFocus(101)">Conditional</animation>
+										<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="!Control.HasFocus(101)">Conditional</animation>
+										<visible>Skin.HasSetting(EnableGradientColor)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>533</width>
+										<height>300</height>
+										<texture background="true">$INFO[Window.Property(previous.thumb)]</texture>
+										<aspectratio>stretch</aspectratio>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+										<visible>!String.IsEmpty(Window.Property(showplot)) + !Control.HasFocus(101)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>533</width>
+										<height>300</height>
+										<texture background="true">$INFO[Window.Property(previous.thumb)]</texture>
+										<aspectratio>stretch</aspectratio>
+										<bordersize>20</bordersize>
+										<visible>!String.IsEmpty(Window.Property(showplot)) + Control.HasFocus(101)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>533</width>
+										<height>300</height>
+										<texture background="true">$INFO[Window.Property(previous.landscape)]</texture>
+										<aspectratio>stretch</aspectratio>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+										<visible>String.IsEmpty(Window.Property(showplot)) + !String.IsEmpty(Window.Property(previous.landscape)) + !Control.HasFocus(101)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>533</width>
+										<height>300</height>
+										<texture background="true">$INFO[Window.Property(previous.landscape)]</texture>
+										<aspectratio>stretch</aspectratio>
+										<bordersize>20</bordersize>
+										<visible>String.IsEmpty(Window.Property(showplot)) + !String.IsEmpty(Window.Property(previous.landscape)) + Control.HasFocus(101)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>533</width>
+										<height>300</height>
+										<texture background="true">$INFO[Window.Property(background)]</texture>
+										<aspectratio>stretch</aspectratio>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+										<visible>String.IsEmpty(Window.Property(showplot)) + String.IsEmpty(Window.Property(previous.landscape)) + !Control.HasFocus(101)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>533</width>
+										<height>300</height>
+										<texture background="true">$INFO[Window.Property(background)]</texture>
+										<aspectratio>stretch</aspectratio>
+										<bordersize>20</bordersize>
+										<visible>String.IsEmpty(Window.Property(showplot)) + String.IsEmpty(Window.Property(previous.landscape)) + Control.HasFocus(101)</visible>
+									</control>
+									<control type="group">
+										<control type="image">
+											<left>20</left>
+											<top>240</top>
+											<width>493</width>
+											<height>40</height>
+											<texture>dialogs/back.png</texture>
+										</control>
+										<control type="label">
+											<left>30</left>
+											<top>240</top>
+											<width>473</width>
+											<height>40</height>
+											<font>font12</font>
+											<align>center</align>
+											<aligny>center</aligny>
+											<label>[UPPERCASE]$ADDON[service.nextup.notification 30020][/UPPERCASE]</label>
+										</control>
+									</control>
+									<control type="group">
+										<left>228.5</left>
+										<top>112</top>
+										<control type="image">
+											<left>0</left>
+											<top>0</top>
+											<width>76</width>
+											<height>76</height>
+											<texture colordiffuse="99000000">dialogs/nextup/circle-152.png</texture>
+										</control>
+										<control type="image">
+											<left>15</left>
+											<top>15</top>
+											<width>46</width>
+											<height>46</height>
+											<texture>dialogs/nextup/replay.png</texture>
+											<visible>!Control.HasFocus(101)</visible>
+										</control>
+										<control type="image">
+											<left>15</left>
+											<top>15</top>
+											<width>46</width>
+											<height>46</height>
+											<texture colordiffuse="$VAR[SkinColorVar]">dialogs/nextup/replay.png</texture>
+											<visible>Control.HasFocus(101)</visible>
+										</control>
+									</control>
+								</control>
+								<control type="button" id="101">
+									<left>0</left>
+									<top></top>
+									<width>533</width>
+									<height>300</height>
+									<onup>102</onup>
+									<ondown>210</ondown>
+									<texturefocus/>
+									<texturenofocus/>
+								</control>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.IsEmpty(Window.Property(has.next))</visible>
+							<control type="group">
+								<width>714</width>
+								<centerleft>50%</centerleft>
+								<top>80</top>
+								<control type="group">
+									<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="266.5,150" reversible="true" condition="Control.HasFocus(102)">Conditional</animation>
+									<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="266.5,150" condition="!Skin.HasSetting(no_animations) + !Control.HasFocus(102)">Conditional</animation>
+									<left>0</left>
+									<top>0</top>
+									<control type="group">
+										<left>0</left>
+										<top>0</top>
+										<control type="image">
+											<left>15</left>
+											<top>15</top>
+											<width>503</width>
+											<height>270</height>
+											<aspectratio>stretch</aspectratio>
+											<texture border="8" colordiffuse="$VAR[SkinColorVar]">buttons/thumbnail_focused.png</texture>
+											<animation effect="fade" start="0" end="100" time="200" tween="sine" condition="Control.HasFocus(102)">Conditional</animation>
+											<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="!Control.HasFocus(102)">Conditional</animation>
+										</control>
+										<control type="image">
+											<left>15</left>
+											<top>15</top>
+											<width>503</width>
+											<height>270</height>
+											<aspectratio>stretch</aspectratio>
+											<texture border="8" colordiffuse="$VAR[GradientColorVar]">buttons/thumbnail_focused-gradient.png</texture>
+											<animation effect="fade" start="0" end="100" time="200" tween="sine" condition="Control.HasFocus(102)">Conditional</animation>
+											<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="!Control.HasFocus(102)">Conditional</animation>
+											<visible>Skin.HasSetting(EnableGradientColor)</visible>
+										</control>
+										<control type="image">
+											<left>0</left>
+											<top>0</top>
+											<width>533</width>
+											<height>300</height>
+											<texture background="true">$INFO[Window.Property(next.thumb)]</texture>
+											<aspectratio>stretch</aspectratio>
+											<bordertexture border="21">overlays/shadow.png</bordertexture>
+											<bordersize>20</bordersize>
+											<visible>!String.IsEmpty(Window.Property(showplot)) + !Control.HasFocus(102)</visible>
+										</control>
+										<control type="image">
+											<left>0</left>
+											<top>0</top>
+											<width>533</width>
+											<height>300</height>
+											<texture background="true">$INFO[Window.Property(next.thumb)]</texture>
+											<aspectratio>stretch</aspectratio>
+											<bordersize>20</bordersize>
+											<visible>!String.IsEmpty(Window.Property(showplot)) + Control.HasFocus(102)</visible>
+										</control>
+										<control type="image">
+											<left>0</left>
+											<top>0</top>
+											<width>533</width>
+											<height>300</height>
+											<texture background="true">$INFO[Window.Property(next.landscape)]</texture>
+											<aspectratio>stretch</aspectratio>
+											<bordertexture border="21">overlays/shadow.png</bordertexture>
+											<bordersize>20</bordersize>
+											<visible>String.IsEmpty(Window.Property(showplot)) + !String.IsEmpty(Window.Property(next.landscape)) + !Control.HasFocus(102)</visible>
+										</control>
+										<control type="image">
+											<left>0</left>
+											<top>0</top>
+											<width>533</width>
+											<height>300</height>
+											<texture background="true">$INFO[Window.Property(next.landscape)]</texture>
+											<aspectratio>stretch</aspectratio>
+											<bordersize>20</bordersize>
+											<visible>String.IsEmpty(Window.Property(showplot)) + !String.IsEmpty(Window.Property(next.landscape)) + Control.HasFocus(102)</visible>
+										</control>
+										<control type="image">
+											<left>0</left>
+											<top>0</top>
+											<width>533</width>
+											<height>300</height>
+											<texture background="true">$INFO[Window.Property(background)]</texture>
+											<aspectratio>stretch</aspectratio>
+											<bordertexture border="21">overlays/shadow.png</bordertexture>
+											<bordersize>20</bordersize>
+											<visible>String.IsEmpty(Window.Property(showplot)) + String.IsEmpty(Window.Property(next.landscape)) + !Control.HasFocus(102)</visible>
+										</control>
+										<control type="image">
+											<left>0</left>
+											<top>0</top>
+											<width>533</width>
+											<height>300</height>
+											<texture background="true">$INFO[Window.Property(background)]</texture>
+											<aspectratio>stretch</aspectratio>
+											<bordersize>20</bordersize>
+											<visible>String.IsEmpty(Window.Property(showplot)) + String.IsEmpty(Window.Property(next.landscape)) + Control.HasFocus(102)</visible>
+										</control>
+										<control type="group">
+											<control type="image">
+												<left>20</left>
+												<top>240</top>
+												<width>493</width>
+												<height>40</height>
+												<texture>dialogs/back.png</texture>
+											</control>
+											<control type="label">
+												<left>30</left>
+												<top>240</top>
+												<width>473</width>
+												<height>40</height>
+												<font>font12</font>
+												<align>center</align>
+												<aligny>center</aligny>
+												<label>[UPPERCASE]$ADDON[service.nextup.notification 30021][/UPPERCASE]</label>
+											</control>
+										</control>
+										<control type="group">
+											<visible>!String.IsEmpty(Window.Property(countdown)) + Integer.IsGreater(Window.Property(countdown),-1)</visible>
+											<left>228.5</left>
+											<top>112</top>
+											<control type="image">
+												<left>0</left>
+												<top>0</top>
+												<width>76</width>
+												<height>76</height>
+												<texture colordiffuse="99000000">dialogs/nextup/circle-152.png</texture>
+											</control>
+											<control type="image">
+												<left>15</left>
+												<top>15</top>
+												<width>46</width>
+												<height>46</height>
+												<texture colordiffuse="$VAR[SkinColorVar]">$INFO[Window.Property(countdown),dialogs/nextup/postplayicons/,.png]</texture>
+											</control>
+										</control>
+										<control type="group">
+											<visible>String.IsEmpty(Window.Property(countdown))</visible>
+											<left>228.5</left>
+											<top>112</top>
+											<control type="image">
+												<left>0</left>
+												<top>0</top>
+												<width>76</width>
+												<height>76</height>
+												<texture colordiffuse="99000000">dialogs/nextup/circle-152.png</texture>
+											</control>
+											<control type="image">
+												<left>15</left>
+												<top>15</top>
+												<width>46</width>
+												<height>46</height>
+												<texture>dialogs/nextup/postplayicons/0.png</texture>
+												<visible>!Control.HasFocus(102)</visible>
+											</control>
+											<control type="image">
+												<left>15</left>
+												<top>15</top>
+												<width>46</width>
+												<height>46</height>
+												<texture colordiffuse="$VAR[SkinColorVar]">dialogs/nextup/postplayicons/0.png</texture>
+												<visible>Control.HasFocus(102)</visible>
+											</control>
+										</control>
+									</control>
+									<control type="button" id="102">
+										<left>0</left>
+										<top>0</top>
+										<width>533</width>
+										<height>300</height>
+										<ondown>101</ondown>
+										<onup>210</onup>
+										<texturefocus/>
+										<texturenofocus/>
+									</control>
+								</control>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<visible>!String.IsEmpty(Window.Property(has.next)) + !Control.HasFocus(101)</visible>
+						<control type="image">
+							<left>1324</left>
+							<top>37</top>
+							<width>512</width>
+							<height>736</height>
+							<texture border="22">dialogs/dialog-bg.png</texture>
+						</control>
+						<control type="label">
+							<left>1361</left>
+							<top>56</top>
+							<width>439</width>
+							<height>52</height>
+							<font>font13_title</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<label>$INFO[Window.Property(next.season),$LOCALIZE[20373] , ]$INFO[Window.Property(next.episode),$LOCALIZE[20359] ,]</label>
+						</control>
+						<control type="label">
+							<left>1361</left>
+							<top>95</top>
+							<width>439</width>
+							<height>43</height>
+							<font>font13</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<label>[B]$INFO[Window.Property(next.title)][/B]</label>
+						</control>
+						<control type="textbox">
+							<left>1361</left>
+							<top>140</top>
+							<width>439</width>
+							<height>332</height>
+							<font>font12</font>
+							<align>justify</align>
+							<label>$INFO[Window.Property(next.plot)]</label>
+							<visible>!String.IsEmpty(Window.Property(showplot))</visible>
+							<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						</control>
+						<control type="textbox">
+							<left>1361</left>
+							<top>140</top>
+							<width>439</width>
+							<height>332</height>
+							<font>font12</font>
+							<align>justify</align>
+							<label>$LOCALIZE[40030]</label>
+							<visible>String.IsEmpty(Window.Property(showplot))</visible>
+							<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						</control>
+						<control type="image">
+							<left>1346</left>
+							<top>479</top>
+							<width>468</width>
+							<height>272</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>300</fadetime>
+							<texture background="true">$INFO[Window.Property(next.landscape)]</texture>
+							<visible>!String.IsEmpty(Window.Property(next.landscape))</visible>
+						</control>
+						<control type="image">
+							<left>1346</left>
+							<top>479</top>
+							<width>468</width>
+							<height>272</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>300</fadetime>
+							<texture background="true" fallback="DefaultVideoFanart.png">$INFO[Window.Property(background)]</texture>
+							<visible>String.IsEmpty(Window.Property(next.landscape))</visible>
+						</control>
+						<control type="group">
+							<control type="image">
+								<left>1346</left>
+								<top>705</top>
+								<width>468</width>
+								<height>46</height>
+								<texture>dialogs/back.png</texture>
+							</control>
+							<control type="group">
+								<top>712</top>
+								<left>1520</left>
+								<width>182</width>
+								<align>center</align>
+								<control type="image">
+                					<left>0</left>
+                					<width>32</width>
+                					<height>32</height>
+                					<texture colordiffuse="$VAR[SkinColorVar]">dialogs/nextup/duration.png</texture>
+            					</control>
+            					<control type="label">
+                					<left>40</left>
+                					<width>150</width>
+                					<height>32</height>
+                					<font>font12</font>
+                					<label>$INFO[Window.Property(next.duration),, min]</label>
+            					</control>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<visible>String.IsEmpty(Window.Property(has.next)) | Control.HasFocus(101)</visible>
+						<control type="image">
+							<left>1324</left>
+							<top>37</top>
+							<width>512</width>
+							<height>736</height>
+							<texture border="22">dialogs/dialog-bg.png</texture>
+						</control>
+						<control type="label">
+							<left>1361</left>
+							<top>56</top>
+							<width>439</width>
+							<height>52</height>
+							<font>font13_title</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<label>$INFO[Window.Property(previous.season),$LOCALIZE[20373] , ]$INFO[Window.Property(previous.episode),$LOCALIZE[20359] ,]</label>
+						</control>
+						<control type="label">
+							<left>1361</left>
+							<top>95</top>
+							<width>439</width>
+							<height>43</height>
+							<font>font13</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<label>[B]$INFO[Window.Property(previous.title)][/B]</label>
+						</control>
+						<control type="textbox">
+							<left>1361</left>
+							<top>140</top>
+							<width>439</width>
+							<height>332</height>
+							<font>font12</font>
+							<align>justify</align>
+							<label>$INFO[Window.Property(previous.plot)]</label>
+							<visible>!String.IsEmpty(Window.Property(showplot))</visible>
+							<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						</control>
+						<control type="textbox">
+							<left>1361</left>
+							<top>140</top>
+							<width>439</width>
+							<height>332</height>
+							<font>font12</font>
+							<align>justify</align>
+							<label>$LOCALIZE[40030]</label>
+							<visible>String.IsEmpty(Window.Property(showplot))</visible>
+							<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						</control>
+						<control type="image">
+							<left>1346</left>
+							<top>479</top>
+							<width>468</width>
+							<height>272</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>300</fadetime>
+							<texture background="true">$INFO[Window.Property(previous.landscape)]</texture>
+							<visible>!String.IsEmpty(Window.Property(previous.landscape))</visible>
+						</control>
+						<control type="image">
+							<left>1346</left>
+							<top>479</top>
+							<width>468</width>
+							<height>272</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>300</fadetime>
+							<texture background="true" fallback="DefaultVideoFanart.png">$INFO[Window.Property(background)]</texture>
+							<visible>String.IsEmpty(Window.Property(previous.landscape))</visible>
+						</control>
+						<control type="group">
+							<control type="image">
+								<left>1346</left>
+								<top>705</top>
+								<width>468</width>
+								<height>46</height>
+								<texture>dialogs/back.png</texture>
+							</control>
+							<control type="group">
+								<top>712</top>
+								<left>1520</left>
+								<width>182</width>
+								<align>center</align>
+								<control type="image">
+                					<left>0</left>
+                					<width>32</width>
+                					<height>32</height>
+                					<texture colordiffuse="$VAR[SkinColorVar]">dialogs/nextup/duration.png</texture>
+            					</control>
+            					<control type="label">
+                					<left>40</left>
+                					<width>150</width>
+                					<height>32</height>
+                					<font>font12</font>
+                					<label>$INFO[Window.Property(previous.duration),, min]</label>
+            					</control>
+							</control>
+						</control>
+					</control>
+				</control>
+				<control type="list" id="400">
+					<visible>false</visible>
+				</control>
+			</control>
+			<control type="group" id="200">
+				<defaultcontrol always="true">201</defaultcontrol>
+				<left>669.5</left>
+				<top>0</top>
+				<width>584</width>
+				<height>142</height>
+				<control type="grouplist" id="210">
+					<left>0</left>
+					<top>867</top>
+					<width>584</width>
+					<height>142</height>
+					<itemgap>60</itemgap>
+					<orientation>horizontal</orientation>
+					<ondown>102</ondown>
+					<onup>101</onup>
+					<control type="radiobutton" id="202">
+						<width>262</width>
+						<height>142</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/button-fo.png</texturefocus>
+						<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>82</textoffsety>
+						<radioposx>108</radioposx>
+						<radioposy>18</radioposy>
+						<radiowidth>48</radiowidth>
+						<font>font10</font>
+						<textureradioonfocus colordiffuse="D0FFFFFF">dialogs/nextup/uncheck.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">dialogs/nextup/uncheck.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">dialogs/nextup/check.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">dialogs/nextup/check.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">dialogs/nextup/check.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">dialogs/nextup/uncheck.png</textureradioondisabled>
+						<label>$LOCALIZE[40074]</label>
+					</control>
+					<control type="radiobutton" id="201">
+						<width>262</width>
+						<height>142</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/button-fo.png</texturefocus>
+						<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>82</textoffsety>
+						<radioposx>108</radioposx>
+						<radioposy>18</radioposy>
+						<radiowidth>48</radiowidth>
+						<font>font10</font>
+						<textureradioonfocus colordiffuse="D0FFFFFF">dialogs/nextup/exit.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">dialogs/nextup/exit.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">dialogs/nextup/exit.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">dialogs/nextup/exit.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">dialogs/nextup/exit.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">dialogs/nextup/exit.png</textureradioondisabled>
+						<label>$LOCALIZE[15067]</label>
+						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+					</control>
+				</control>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>85</top>
+				<width>1920</width>
+				<height>120</height>
+				<texture>$INFO[Window.Property(clearlogo)]</texture>
+				<aspectratio aligny="top" align="center">keep</aspectratio>
+			</control>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="NextUp Notification" />
+		</include>
+		<include>BottomBar</include>
+	</controls>
+</window>

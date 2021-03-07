@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label>359</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicRecentlyAdded.png</icon>
+        <action>ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>133</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicArtists.png</icon>
+        <action>ActivateWindow(Music,musicdb://artists/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>132</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicAlbums.png</icon>
+        <action>ActivateWindow(Music,musicdb://albums/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>134</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicSongs.png</icon>
+        <action>ActivateWindow(Music,musicdb://songs/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>521</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicCompilations.png</icon>
+        <action>ActivateWindow(Music,musicdb://compilations/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>271</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicTop100.png</icon>
+        <action>ActivateWindow(Music,musicdb://top100/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>135</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicGenres.png</icon>
+        <action>ActivateWindow(Music,musicdb://genres/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>29994</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicRoles.png</icon>
+        <action>ActivateWindow(Music,musicdb://roles/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>744</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultFolder.png</icon>
+        <action>ActivateWindow(Music,sources://music/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>136</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicPlaylists.png</icon>
+        <action>ActivateWindow(Music,special://musicplaylists/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>10516</label>
+        <label2>Common Shortcut</label2>
+        <icon>LibrarySettings.png</icon>
+        <action>ActivateWindow(Music,musicdb://,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>$VAR[MusicLibraryScanLabel]</label>
+        <label2>Common Shortcut</label2>
+        <icon>$VAR[MusicLibraryScanIcon]</icon>
+        <action>UpdateLibrary(music)</action>
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<views>50</views>
+	<animation effect="fade" time="400">WindowOpen</animation>
+	<animation effect="fade" time="400">WindowClose</animation>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group">
+			<visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)]</visible>
+			<control type="group">
+				<depth>DepthContentPanel</depth>
+				<include>OpenClose_Left</include>
+				<include content="ContentPanel">
+					<param name="width" value="522" />
+				</include>
+				<control type="group">
+					<top>100</top>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>462</width>
+						<height>95</height>
+						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						<visible>Control.HasFocus(990)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>462</width>
+						<height>95</height>
+						<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+						<visible>Control.HasFocus(990) + Skin.HasSetting(EnableGradientColor)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>95</width>
+						<height>95</height>
+						<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
+						<visible>Control.HasFocus(990) + !Skin.HasSetting(EnableGradientColor)</visible>
+					</control>
+					<control type="image">
+						<left>-3</left>
+						<top>1</top>
+						<width>95</width>
+						<height>95</height>
+						<texture colordiffuse="44FFFFFF">globalsearch-icon-search.png</texture>
+						<visible>!Control.HasFocus(990)</visible>
+					</control>
+					<control type="image">
+						<left>-3</left>
+						<top>1</top>
+						<width>95</width>
+						<height>95</height>
+						<texture>globalsearch-icon-search.png</texture>
+						<visible>Control.HasFocus(990)</visible>
+					</control>
+					<control type="label">
+						<left>104</left>
+						<top>0</top>
+						<width>380</width>
+						<height>95</height>
+						<aligny>center</aligny>
+						<font>font37</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<label>$LOCALIZE[31001]</label>
+						<visible>!Control.IsVisible(991)</visible>
+					</control>
+					<control type="label">
+						<left>104</left>
+						<top>5</top>
+						<width>560</width>
+						<height>42.5</height>
+						<aligny>center</aligny>
+						<font>font37</font>
+						<label>$LOCALIZE[194]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>Control.IsVisible(991)</visible>
+					</control>
+					<control type="label" id="991">
+						<left>104</left>
+						<top>42.5</top>
+						<width>560</width>
+						<height>42.5</height>
+						<aligny>center</aligny>
+						<font>font37</font>
+						<label></label>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="button" id="990">
+						<left>50</left>
+						<top>0</top>
+						<width>380</width>
+						<height>95</height>
+						<aligny>center</aligny>
+						<font>font37</font>
+						<label>32299</label>
+						<align>left</align>
+						<shadowcolor>text_shadow</shadowcolor>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
+						<onleft>Addon.OpenSettings(script.globalsearch)</onleft>
+						<onright>50</onright>
+						<onup>9000</onup>
+						<ondown>9000</ondown>
+					</control>
+				</control>
+				<control type="list" id="9000">
+					<left>0</left>
+					<top>240</top>
+					<width>462</width>
+					<bottom>-10</bottom>
+					<movement>6</movement>
+					<focusposition>1</focusposition>
+					<onup>990</onup>
+					<ondown>9000</ondown>
+					<onleft>Addon.OpenSettings(script.globalsearch)</onleft>
+					<onright>50</onright>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout height="95">
+						<control type="image">
+							<left>-3</left>
+							<top>1</top>
+							<width>95</width>
+							<height>95</height>
+							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<height>95</height>
+							<width>560</width>
+							<aligny>center</aligny>
+							<font>font37</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="95">
+						<control type="group">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>462</width>
+								<height>95</height>
+								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
+								<visible>!Control.HasFocus(990)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>462</width>
+								<height>95</height>
+								<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
+								<visible>Skin.HasSetting(EnableGradientColor)</visible>
+								<visible>!Control.HasFocus(990)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>95</width>
+								<height>95</height>
+								<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
+								<visible>!Skin.HasSetting(EnableGradientColor)</visible>
+								<visible>!Control.HasFocus(990)</visible>
+							</control>
+						</control>
+						<control type="image">
+							<left>-3</left>
+							<top>1</top>
+							<width>95</width>
+							<height>95</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<include>Animation_FocusBounce_Home</include>
+							<visible>!Control.HasFocus(990)</visible>
+						</control>
+						<control type="image">
+							<left>-3</left>
+							<top>1</top>
+							<width>95</width>
+							<height>95</height>
+							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
+							<include>Animation_FocusBounce_Home</include>
+							<visible>Control.HasFocus(990)</visible>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<height>95</height>
+							<width>560</width>
+							<aligny>center</aligny>
+							<font>font37</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="panel" id="50">
+				<left>490</left>
+				<top>0</top>
+				<right>15</right>
+				<height>100%</height>
+				<onleft>9000</onleft>
+				<onright>531</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="31102">icon</viewtype>
+				<preloaditems>4</preloaditems>
+				<pagecontrol>531</pagecontrol>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<include>OpenClose_Right</include>
+				<include>Visible_Right</include>
+				<itemlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
+					<control type="group">
+						<left>30</left>
+						<top>140</top>
+						<include>InfoWallMovieLayout</include>
+					</control>
+				</itemlayout>
+				<itemlayout height="290" width="320" condition="Container.Content(episodes)">
+					<control type="group">
+						<left>64</left>
+						<top>120</top>
+						<include content="InfoWallEpisodeLayout">
+							<param name="focused" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<itemlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(actors) | Container.Content(directors)">
+					<control type="group">
+						<top>130</top>
+						<left>40</left>
+						<include>InfoWallMusicLayout</include>
+					</control>
+				</itemlayout>
+				<itemlayout height="280" width="430" condition="Container.Content(livetv)">
+					<control type="group">
+						<top>130</top>
+						<left>40</left>
+						<control type="image">
+							<width>396</width>
+							<height>245</height>
+							<texture>dialogs/dialog-bg-nobo.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<top>30</top>
+							<left>30</left>
+							<width>336</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+						</control>
+						<control type="label">
+							<top>127</top>
+							<left>30</left>
+							<width>336</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(ChannelName),[B],[/B]]</label>
+						</control>
+						<control type="label">
+							<top>163</top>
+							<left>30</left>
+							<width>336</width>
+							<height>30</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Label,[B],[/B]]</label>
+							<font>font10</font>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+						</control>
+						<control type="label">
+							<top>193</top>
+							<left>30</left>
+							<width>336</width>
+							<height>30</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Property(ListItem.StartTime),, - ]$INFO[ListItem.Property(Endtime)]</label>
+							<font>font09</font>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>30</left>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+						</animation>
+						<top>140</top>
+						<include content="InfoWallMovieLayout">
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+				<focusedlayout height="290" width="320" condition="Container.Content(episodes)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+						</animation>
+						<left>64</left>
+						<top>120</top>
+						<include content="InfoWallEpisodeLayout">
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(actors) | Container.Content(directors)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+						</animation>
+						<top>130</top>
+						<left>40</left>
+						<include content="InfoWallMusicLayout">
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+				<focusedlayout height="280" width="430" condition="Container.Content(livetv)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" end="105" time="75" tween="sine" easing="out" center="auto" />
+							<effect type="zoom" end="95" time="225" tween="sine" delay="100" easing="out" center="auto" />
+						</animation>
+						<top>130</top>
+						<left>40</left>
+						<control type="image">
+							<width>396</width>
+							<height>245</height>
+							<texture>dialogs/dialog-bg-nobo.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<top>-6</top>
+							<left>-6</left>
+							<width>408</width>
+							<height>257</height>
+							<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<top>-6</top>
+							<left>-6</left>
+							<width>408</width>
+							<height>257</height>
+							<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient2.png</texture>
+							<bordersize>20</bordersize>
+							<visible>Skin.HasSetting(EnableGradientColor)</visible>
+						</control>
+						<control type="image">
+							<top>30</top>
+							<left>30</left>
+							<width>336</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+						</control>
+						<control type="label">
+							<top>127</top>
+							<left>30</left>
+							<width>336</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(ChannelName),[B],[/B]]</label>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<top>163</top>
+							<left>30</left>
+							<width>336</width>
+							<height>30</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Label,[B],[/B]]</label>
+							<font>font10</font>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<top>193</top>
+							<left>30</left>
+							<width>336</width>
+							<height>30</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Property(ListItem.StartTime),, - ]$INFO[ListItem.Property(Endtime)]</label>
+							<font>font09</font>
+							<scroll>true</scroll>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label" id="999">
+				<left>490</left>
+				<top>0</top>
+				<right>15</right>
+				<height>100%</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font32_title</font>
+				<label>$LOCALIZE[284]</label>
+				<include>OpenClose_Right</include>
+				<include>Visible_Right</include>
+			</control>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="" />
+			<param name="sublabel" value="" />
+		</include>
+		<include content="BottomBar">
+			<param name="info_visible" value="true" />
+		</include>
+		<control type="image">
+			<top>0</top>
+			<width>284</width>
+			<height>115</height>
+			<centerleft>50%</centerleft>
+			<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-back.png</texture>
+			<visible>!String.IsEmpty(Control.GetLabel(55002))</visible>
+			<visible>!Skin.HasSetting(HomeClearLogo)</visible>
+			<visible>!Control.HasFocus(9000) + !Control.HasFocus(990)</visible>
+			<visible>![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
+			<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+			<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+		</control>
+		<control type="image" id="55002">
+			<top>5</top>
+			<width>274</width>
+			<height>106</height>
+			<centerleft>50%</centerleft>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<texture>$VAR[HomeClearLogoVar]</texture>
+			<visible>!Skin.HasSetting(HomeClearLogo)</visible>
+			<visible>!Control.HasFocus(9000) + !Control.HasFocus(990)</visible>
+			<visible>![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
+			<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+			<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+		</control>
+		<control type="group">
+			<depth>DepthBars</depth>
+			<bottom>0</bottom>
+			<height>70</height>
+			<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			<include condition="!Skin.HasSetting(hide_mediaflags)">MediaFlags</include>
+			<visible>!Control.HasFocus(9000) + !Control.HasFocus(990)</visible>
+		</control>
+		<control type="group">
+			<right>0</right>
+			<top>0</top>
+			<bottom>0</bottom>
+			<width>60</width>
+			<control type="scrollbar" id="531">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>13</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(531)">conditional</animation>
+				<hitrect x="-20" y="0" w="80" bottom="0r" />
+			</control>
+		</control>
+		<control type="group">
+			<depth>DepthBars</depth>
+			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+				<aspectratio>keep</aspectratio>
+				<width>56</width>
+				<height>56</height>
+				<texture colordiffuse="$VAR[SkinColorVar]">icons/logo.png</texture>
+			</control>
+			<control type="image">
+				<aspectratio>keep</aspectratio>
+				<width>56</width>
+				<height>56</height>
+				<texture colordiffuse="$VAR[GradientColorVar]">icons/logo-gradient.png</texture>
+				<visible>Skin.HasSetting(EnableGradientColor)</visible>
+			</control>
+			<control type="image">
+				<left>80</left>
+				<top>17</top>
+				<aspectratio>keep</aspectratio>
+				<width>260</width>
+				<height>23</height>
+				<texture>icons/logo-text-globalsearch.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>

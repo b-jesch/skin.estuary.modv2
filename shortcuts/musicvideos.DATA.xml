@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label>20390</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultRecentlyAddedMusicVideos.png</icon>
+        <action>ActivateWindow(Videos,videodb://recentlyaddedmusicvideos/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>10024</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicVideoTitle.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>133</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicArtists.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>132</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultMusicAlbums.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/albums/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>652</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultYear.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/years/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>135</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultGenre.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20348</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultDirector.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/directors/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20388</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultStudios.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/studios/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20459</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultTags.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/tags/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>744</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultFolder.png</icon>
+        <action>ActivateWindow(Videos,sources://video/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>136</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultVideoPlaylists.png</icon>
+        <action>ActivateWindow(Videos,special://videoplaylists/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>40145</label>
+        <label2>Common Shortcut</label2>
+        <icon>LibrarySettings.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>$VAR[VideoLibraryScanLabel]</label>
+        <label2>Common Shortcut</label2>
+        <icon>$VAR[VideoLibraryScanIcon]</icon>
+        <action>UpdateLibrary(video)</action>
+    </shortcut>
+</shortcuts>

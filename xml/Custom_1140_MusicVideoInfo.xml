@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1140">
+	<visible>Window.IsVisible(VideoFullScreen.xml) + VideoPlayer.Content(musicvideos) + !Skin.HasSetting(show_musicvideoinfo) + [[Integer.IsEqual(Player.Time(hh),0) + Integer.IsEqual(Player.Time(mm),0) + Integer.IsGreater(Player.Time(ss),4) + Integer.IsLess(Player.Time(ss),11)] | [Integer.IsEqual(Player.TimeRemaining(hh),0) + Integer.IsEqual(Player.TimeRemaining(mm),0) + Integer.IsGreater(Player.TimeRemaining(ss),4) + Integer.IsLess(Player.TimeRemaining(ss),11)]]</visible>
+ 	<visible>!Window.IsActive(fullscreeninfo) + !Window.IsActive(videoosd)+ !Window.IsActive(playerprocessinfo) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(DialogSubtitles.xml) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml) + !Window.IsVisible(1139) + !Window.IsActive(seekbar)</visible>
+	<depth>DepthOSD</depth>
+	<controls>
+		<control type="group">
+			<animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+			<include>Animation_BottomSlide</include>
+			<bottom>-140</bottom>
+			<height>380</height>
+			<control type="image">
+				<top>-8</top>
+				<right>30</right>
+				<width>280</width>
+				<height>108</height>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<texture background="true">$INFO[Player.Art(clearlogo)]</texture>
+			</control>
+			<control type="image">
+				<top>100</top>
+				<left>0</left>
+				<width>100%</width>
+				<height>200</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<top>-10</top>
+				<width>250</width>
+				<height>250</height>
+				<aspectratio aligny="center" align="center">keep</aspectratio>
+				<texture background="true" fallback="DefaultAudio.png">$VAR[MusicPlayerCover]</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="label">
+				<left>270</left>
+				<top>105</top>
+				<right>505</right>
+				<height>25</height>
+				<label>$INFO[VideoPlayer.Title,[B][I],[/I][/B]]</label>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<left>270</left>
+				<top>145</top>
+				<right>505</right>
+				<height>25</height>
+				<label>$INFO[VideoPlayer.Artist,[B],[/B]]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<left>270</left>
+				<top>185</top>
+				<right>505</right>
+				<height>25</height>
+				<label>$INFO[VideoPlayer.Album]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<left>270</left>
+				<top>130</top>
+				<right>30</right>
+				<height>25</height>
+				<align>right</align>
+				<label>$INFO[VideoPlayer.Genre,[B]$LOCALIZE[515] : [COLOR white],[/B][/COLOR]]</label>
+				<font>font12</font>
+				<aligny>bottom</aligny>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="grouplist">
+				<top>174</top>
+				<right>30</right>
+				<width>1000</width>
+				<height>100</height>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<itemgap>5</itemgap>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[VideoPlayerResolutionFlagVar]" />
+					<param name="fallback" value="flags/videoresolution/fallback.png" />
+					<param name="width" value="58" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
+					<param name="fallback" value="flags/videocodec/fallback.png" />
+					<param name="width" value="104" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
+					<param name="fallback" value="flags/aspectratio/fallback.png" />
+					<param name="width" value="86" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
+					<param name="fallback" value="flags/audiocodec/fallback.png" />
+					<param name="width" value="104" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
+					<param name="fallback" value="flags/audiochannel/fallback.png" />
+					<param name="width" value="104" />
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>

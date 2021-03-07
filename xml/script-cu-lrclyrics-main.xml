@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">101</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>70</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<include>Animation_TopSlide</include>
+			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
+			<include condition="Skin.HasSetting(enable_animatedlyrics)">ClassicLyrics</include>
+			<include condition="!Skin.HasSetting(enable_animatedlyrics)">AnimatedLyrics</include>
+			<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
+			<control type="label" id="200">
+				<description>Scraper label</description>
+				<visible>false</visible>
+			</control>
+		</control>
+		<control type="label">
+			<description>Scraper label</description>
+			<right>30</right>
+			<bottom>94</bottom>
+			<width>900</width>
+			<height>30</height>
+			<label>$LOCALIZE[40092] : $INFO[Control.GetLabel(200)]</label>
+			<font>font20_title</font>
+			<align>right</align>
+			<aligny>bottom</aligny>
+			<scroll>true</scroll>
+			<include>Animation_BottomSlide</include>
+			<visible>Player.ShowInfo | Window.IsActive(musicosd)</visible>
+			<visible>!Window.IsActive(musicosd)</visible>
+		</control>
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<control type="group">
+			<visible>!String.IsEmpty(Container(110).ListItem.Label) + !Skin.HasSetting(enable_animatedlyrics)</visible>
+			<animation effect="slide" end="320,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-110,120" condition="!Player.ShowInfo + !Window.IsVisible(musicosd)">Conditional</animation>
+			<animation effect="zoom" end="110" condition="!Player.ShowInfo + !Window.IsVisible(musicosd)">Conditional</animation>
+			<control type="group">
+				<visible>[!String.IsEmpty(Window(Home).Property(culrc.islrc)) + Integer.IsGreater(Container(110).ListItem.Property(duration),299) + !Integer.IsGreater(Container(110).ListItem.Property(duration),1449)] | String.IsEmpty(Container(110).ListItem.Property(part4))</visible>
+				<!--Short LINEA 1 & 6-->
+				<control type="group">
+					<left>510</left>
+					<top>-20</top>
+					<animation effect="rotate" center="auto" start="4" end="4" time="0" condition="true">Conditional</animation>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,1)</visible>
+						<animation effect="slide" start="0,-600" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>-1</left>
+						<top>-1</top>
+						<include>line1</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,1)</visible>
+						<animation effect="slide" start="0,-600" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>2</left>
+						<top>2</top>
+						<include>line1</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,1)</visible>
+						<animation effect="slide" start="0,-600" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>0</left>
+						<top>0</top>
+						<include>line1</include>
+						<shadowcolor>black</shadowcolor>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,6)</visible>
+						<animation effect="slide" start="0,-600" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>-1</left>
+						<top>-1</top>
+						<include>line1</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,6)</visible>
+						<animation effect="slide" start="0,-600" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>2</left>
+						<top>2</top>
+						<include>line1</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,6)</visible>
+						<animation effect="slide" start="0,-600" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>0</left>
+						<top>0</top>
+						<include>line1</include>
+						<shadowcolor>black</shadowcolor>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+					</control>
+				</control>
+				<!--Short LINEA 3 & 8-->
+				<control type="group">
+					<left>510</left>
+					<top>-20</top>
+					<animation effect="rotate" center="auto" start="4" end="4" time="0" condition="true">Conditional</animation>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,3)</visible>
+						<animation effect="slide" start="-900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<include>line3</include>
+						<left>-1</left>
+						<top>-1</top>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,3)</visible>
+						<animation effect="slide" start="-900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<include>line3</include>
+						<left>3</left>
+						<top>3</top>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,3)</visible>
+						<animation effect="slide" start="-900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+						<include>line3</include>
+						<left>0</left>
+						<top>0</top>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,8)</visible>
+						<animation effect="slide" start="-900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<include>line3</include>
+						<left>-1</left>
+						<top>-1</top>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,8)</visible>
+						<animation effect="slide" start="-900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<include>line3</include>
+						<left>3</left>
+						<top>3</top>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,8)</visible>
+						<animation effect="slide" start="-900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+						<include>line3</include>
+						<left>0</left>
+						<top>0</top>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<!--Short LINEA 5 & 0-->
+				<control type="group">
+					<left>510</left>
+					<top>-20</top>
+					<animation effect="rotate" center="auto" start="4" end="4" time="0" condition="true">Conditional</animation>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,5)</visible>
+						<animation effect="zoom" center="auto" start="0" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>-1</left>
+						<top>-1</top>
+						<width>900</width>
+						<height>600</height>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyrsh50</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,5)</visible>
+						<animation effect="zoom" center="auto" start="0" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>2</left>
+						<top>2</top>
+						<width>900</width>
+						<height>600</height>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyrsh50</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,5)</visible>
+						<animation effect="zoom" center="auto" start="0" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>0</left>
+						<top>0</top>
+						<width>900</width>
+						<height>600</height>
+						<font>lyrsh50</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,0)</visible>
+						<animation effect="zoom" center="auto" start="0" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>-1</left>
+						<top>-1</top>
+						<width>900</width>
+						<height>600</height>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyrsh50</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,0)</visible>
+						<animation effect="zoom" center="auto" start="0" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>2</left>
+						<top>2</top>
+						<width>900</width>
+						<height>600</height>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<font>lyrsh50</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,0)</visible>
+						<animation effect="zoom" center="auto" start="0" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>0</left>
+						<top>0</top>
+						<width>900</width>
+						<height>600</height>
+						<font>lyrsh50</font>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+					</control>
+				</control>
+				<!--Short LINEA 7 & 2-->
+				<control type="group">
+					<left>510</left>
+					<top>-20</top>
+					<animation effect="rotate" center="auto" start="4" end="4" time="0" condition="true">Conditional</animation>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,7)</visible>
+						<animation effect="slide" start="900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>-1</left>
+						<top>-1</top>
+						<include>line7</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,7)</visible>
+						<animation effect="slide" start="900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>2</left>
+						<top>2</top>
+						<include>line7</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,7)</visible>
+						<animation effect="slide" start="900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>0</left>
+						<top>0</top>
+						<include>line7</include>
+						<shadowcolor>black</shadowcolor>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,2)</visible>
+						<animation effect="slide" start="900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>-1</left>
+						<top>-1</top>
+						<include>line7</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,2)</visible>
+						<animation effect="slide" start="900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>2</left>
+						<top>2</top>
+						<include>line7</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,2)</visible>
+						<animation effect="slide" start="900,0" end="0,0" time="250" tween="sine" easing="out" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>0</left>
+						<top>0</top>
+						<include>line7</include>
+						<shadowcolor>black</shadowcolor>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+					</control>
+				</control>
+				<!--Short LINEA 9 & 4-->
+				<control type="group">
+					<left>510</left>
+					<top>-20</top>
+					<animation effect="rotate" center="auto" start="4" end="4" time="0" condition="true">Conditional</animation>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,9)</visible>
+						<animation effect="zoom" center="auto" start="400" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>-1</left>
+						<top>-1</top>
+						<include>line9</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,9)</visible>
+						<animation effect="zoom" center="auto" start="400" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>2</left>
+						<top>2</top>
+						<include>line9</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,9)</visible>
+						<animation effect="zoom" center="auto" start="400" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>0</left>
+						<top>0</top>
+						<include>line9</include>
+						<shadowcolor>black</shadowcolor>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,4)</visible>
+						<animation effect="zoom" center="auto" start="400" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>-1</left>
+						<top>-1</top>
+						<include>line9</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,4)</visible>
+						<animation effect="zoom" center="auto" start="400" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>2</left>
+						<top>2</top>
+						<include>line9</include>
+						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="textbox">
+						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,4)</visible>
+						<animation effect="zoom" center="auto" start="400" end="100" time="250" reversible="false">Visible</animation>
+						<animation effect="fade" start="0" end="0" time="10">Hidden</animation>
+						<left>0</left>
+						<top>0</top>
+						<include>line9</include>
+						<shadowcolor>black</shadowcolor>
+						<label>[COLOR=$VAR[Col_lyr1]]$INFO[Container(110).ListItem.Property(part1)] [/COLOR][COLOR=$VAR[Col_lyr2]]$INFO[Container(110).ListItem.Property(part2)] [/COLOR][COLOR=$VAR[Col_lyr3]]$INFO[Container(110).ListItem.Property(part3)][CR][/COLOR][COLOR=$VAR[Col_lyr4]]$INFO[Container(110).ListItem.Property(part4)][/COLOR]</label>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(Container(110).ListItem.Property(part4)) + [Integer.IsGreater(Container(110).ListItem.Property(duration),1449) | String.IsEmpty(Window(Home).Property(culrc.islrc))]</visible>
+				<!--Line 1-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>199</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics1"></include>
+				</control>
+				<control type="grouplist">
+					<left>4</left>
+					<top>203</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics1"></include>
+				</control>
+				<control type="grouplist">
+					<left>1</left>
+					<top>200</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics1">
+						<param name="col11">$VAR[Col_lyr1]</param>
+						<param name="col12">$VAR[Col_lyr2]</param>
+						<param name="col13">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics1b">
+					<param name="1b_left">509</param>
+					<param name="1b_top">223</param>
+				</include>
+				<include content="Lyrics1b">
+					<param name="1b_left">513</param>
+					<param name="1b_top">227</param>
+				</include>
+				<include content="Lyrics1b">
+					<param name="col14">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 2-->
+				<include content="Lyrics2"></include>
+				<include content="Lyrics2">
+					<param name="2_left">4</param>
+					<param name="2_top">254</param>
+				</include>
+				<include content="Lyrics2">
+					<param name="col21">$VAR[Col_lyr1]</param>
+					<param name="col22">$VAR[Col_lyr2]</param>
+					<param name="col23">$VAR[Col_lyr3]</param>
+					<param name="col24">$VAR[Col_lyr4]</param>
+					<param name="2_left">1</param>
+					<param name="2_top">251</param>
+				</include>
+				<!--Line 3-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>199</top>
+					<width>1920</width>
+					<height>120</height>
+					<itemgap>3</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics3"></include>
+				</control>
+				<control type="grouplist">
+					<left>4</left>
+					<top>203</top>
+					<width>1920</width>
+					<height>120</height>
+					<itemgap>3</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics3"></include>
+				</control>
+				<control type="grouplist">
+					<left>1</left>
+					<top>200</top>
+					<width>1920</width>
+					<height>120</height>
+					<itemgap>3</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics3">
+						<param name="col31">$VAR[Col_lyr1]</param>
+						<param name="col32">$VAR[Col_lyr2]</param>
+						<param name="col33">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics3b">
+					<param name="3b_left">509</param>
+					<param name="3b_top">229</param>
+				</include>
+				<include content="Lyrics3b">
+					<param name="3b_left">513</param>
+					<param name="3b_top">233</param>
+				</include>
+				<include content="Lyrics3b">
+					<param name="col34">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 4-->
+				<include content="Lyrics4"></include>
+				<include content="Lyrics4">
+					<param name="4_left">114</param>
+					<param name="4_top">34</param>
+				</include>
+				<include content="Lyrics4">
+					<param name="col41">$VAR[Col_lyr1]</param>
+					<param name="col42">$VAR[Col_lyr2]</param>
+					<param name="col43">$VAR[Col_lyr3]</param>
+					<param name="col44">$VAR[Col_lyr4]</param>
+					<param name="4_left">111</param>
+					<param name="4_top">31</param>
+				</include>
+				<!--Line 5-->
+				<control type="grouplist">
+					<left>1950</left>
+					<top>99</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics5"></include>
+				</control>
+				<control type="grouplist">
+					<left>1954</left>
+					<top>103</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics5"></include>
+				</control>
+				<control type="grouplist">
+					<left>1951</left>
+					<top>100</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics5">
+						<param name="col51">$VAR[Col_lyr1]</param>
+						<param name="col52">$VAR[Col_lyr2]</param>
+						<param name="col53">$VAR[Col_lyr3]</param>
+						<param name="col54">$VAR[Col_lyr4]</param>
+					</include>
+				</control>
+				<!--Line 6-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>-201</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics6"></include>
+				</control>
+				<control type="grouplist">
+					<left>4</left>
+					<top>-197</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics6"></include>
+				</control>
+				<control type="grouplist">
+					<left>1</left>
+					<top>-200</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics6">
+						<param name="col61">$VAR[Col_lyr1]</param>
+						<param name="col62">$VAR[Col_lyr2]</param>
+						<param name="col63">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics6b">
+					<param name="6b_left">509</param>
+					<param name="6b_top">223</param>
+				</include>
+				<include content="Lyrics6b">
+					<param name="6b_left">513</param>
+					<param name="6b_top">227</param>
+				</include>
+				<include content="Lyrics6b">
+					<param name="col64">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 7-->
+				<include content="Lyrics7"></include>
+				<include content="Lyrics7">
+					<param name="7_left">14</param>
+					<param name="7_top">4</param>
+				</include>
+				<include content="Lyrics7">
+					<param name="col71">$VAR[Col_lyr1]</param>
+					<param name="col72">$VAR[Col_lyr2]</param>
+					<param name="col73">$VAR[Col_lyr3]</param>
+					<param name="col74">$VAR[Col_lyr4]</param>
+					<param name="7_left">11</param>
+					<param name="7_top">1</param>
+				</include>
+				<!--Line 8-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>199</top>
+					<width>1920</width>
+					<height>140</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics8"></include>
+				</control>
+				<control type="grouplist">
+					<left>4</left>
+					<top>203</top>
+					<width>1920</width>
+					<height>140</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics8"></include>
+				</control>
+				<control type="grouplist">
+					<left>1</left>
+					<top>200</top>
+					<width>1920</width>
+					<height>140</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics8">
+						<param name="col81">$VAR[Col_lyr1]</param>
+						<param name="col82">$VAR[Col_lyr2]</param>
+						<param name="col83">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics8b">
+					<param name="8b_left">509</param>
+					<param name="8b_top">269</param>
+				</include>
+				<include content="Lyrics8b">
+					<param name="8b_left">513</param>
+					<param name="8b_top">273</param>
+				</include>
+				<include content="Lyrics8b">
+					<param name="col84">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 9-->
+				<include content="Lyrics9"></include>
+				<include content="Lyrics9">
+					<param name="9_left">24</param>
+					<param name="9_top">-16</param>
+				</include>
+				<include content="Lyrics9">
+					<param name="col91">$VAR[Col_lyr1]</param>
+					<param name="col92">$VAR[Col_lyr2]</param>
+					<param name="col93">$VAR[Col_lyr3]</param>
+					<param name="col94">$VAR[Col_lyr4]</param>
+					<param name="9_left">21</param>
+					<param name="9_top">-19</param>
+				</include>
+				<!--Line 10-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>149</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics10"></include>
+				</control>
+				<control type="grouplist">
+					<left>4</left>
+					<top>153</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics10"></include>
+				</control>
+				<control type="grouplist">
+					<left>1</left>
+					<top>150</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics10">
+						<param name="col101">$VAR[Col_lyr1]</param>
+						<param name="col102">$VAR[Col_lyr2]</param>
+						<param name="col103">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics10b">
+					<param name="col104">black</param>
+				</include>
+				<include content="Lyrics10b">
+					<param name="10b_left">623</param>
+					<param name="10b_top">323</param>
+					<param name="col104">black</param>
+				</include>
+				<include content="Lyrics10b">
+					<param name="10b_left">621</param>
+					<param name="10b_top">321</param>
+					<param name="col104">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 11-->
+				<include content="Lyrics11"></include>
+				<include content="Lyrics11">
+					<param name="11_left">4</param>
+					<param name="11_top">254</param>
+				</include>
+				<include content="Lyrics11">
+					<param name="col111">$VAR[Col_lyr1]</param>
+					<param name="col112">$VAR[Col_lyr2]</param>
+					<param name="col113">$VAR[Col_lyr3]</param>
+					<param name="col114">$VAR[Col_lyr4]</param>
+					<param name="11_left">1</param>
+					<param name="11_top">251</param>
+				</include>
+				<!--Line 12-->
+				<include content="Lyrics12"></include>
+				<include content="Lyrics12">
+					<param name="12_left">14</param>
+					<param name="12_top">4</param>
+				</include>
+				<include content="Lyrics12">
+					<param name="col121">$VAR[Col_lyr1]</param>
+					<param name="12_left">11</param>
+					<param name="12_top">1</param>
+				</include>
+				<include content="Lyrics12b"></include>
+				<include content="Lyrics12b">
+					<param name="12b_left">14</param>
+					<param name="12b_top">184</param>
+				</include>
+				<include content="Lyrics12b">
+					<param name="col122">$VAR[Col_lyr2]</param>
+					<param name="col123">$VAR[Col_lyr3]</param>
+					<param name="12b_left">11</param>
+					<param name="12b_top">181</param>
+				</include>
+				<include content="Lyrics12c"></include>
+				<include content="Lyrics12c">
+					<param name="12c_left">14</param>
+					<param name="12c_top">4</param>
+				</include>
+				<include content="Lyrics12c">
+					<param name="col124">$VAR[Col_lyr4]</param>
+					<param name="12c_left">11</param>
+					<param name="12c_top">1</param>
+				</include>
+				<!--Line 13-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>199</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics13"></include>
+				</control>
+				<control type="grouplist">
+					<left>4</left>
+					<top>203</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics13"></include>
+				</control>
+				<control type="grouplist">
+					<left>1</left>
+					<top>200</top>
+					<width>1920</width>
+					<height>125</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics13">
+						<param name="col131">$VAR[Col_lyr1]</param>
+						<param name="col132">$VAR[Col_lyr2]</param>
+						<param name="col133">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics13b">
+					<param name="13b_left">509</param>
+					<param name="13b_top">219</param>
+				</include>
+				<include content="Lyrics13b">
+					<param name="13b_left">513</param>
+					<param name="13b_top">223</param>
+				</include>
+				<include content="Lyrics13b">
+					<param name="col134">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 14-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>169</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col141">black</param>
+					</include>
+				</control>
+				<control type="grouplist">
+					<left>0</left>
+					<top>169</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col142">black</param>
+					</include>
+				</control>
+				<control type="grouplist">
+					<left>0</left>
+					<top>169</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col143">black</param>
+					</include>
+				</control>
+				<control type="grouplist">
+					<top>173</top>
+					<left>4</left>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col141">black</param>
+					</include>
+				</control>
+				<control type="grouplist">
+					<top>173</top>
+					<left>4</left>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col142">black</param>
+					</include>
+				</control>
+				<control type="grouplist">
+					<top>173</top>
+					<left>4</left>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col143">black</param>
+					</include>
+				</control>
+				<control type="grouplist">
+					<top>170</top>
+					<left>1</left>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col141">$VAR[Col_lyr1]</param>
+					</include>
+				</control>
+				<control type="grouplist">
+					<top>170</top>
+					<left>1</left>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col142">$VAR[Col_lyr2]</param>
+					</include>
+				</control>
+				<control type="grouplist">
+					<top>170</top>
+					<left>1</left>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>20</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics14">
+						<param name="col143">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics14b">
+					<param name="col144">black</param>
+				</include>
+				<include content="Lyrics14b">
+					<param name="14b_left">613</param>
+					<param name="14b_top">358</param>
+					<param name="col144">black</param>
+				</include>
+				<include content="Lyrics14b">
+					<param name="14b_left">611</param>
+					<param name="14b_top">356</param>
+					<param name="col144">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 15-->
+				<include content="Lyrics15"></include>
+				<include content="Lyrics15">
+					<param name="15_left">174</param>
+					<param name="15_top">4</param>
+				</include>
+				<include content="Lyrics15">
+					<param name="col151">$VAR[Col_lyr1]</param>
+					<param name="col152">$VAR[Col_lyr2]</param>
+					<param name="col153">$VAR[Col_lyr3]</param>
+					<param name="col154">$VAR[Col_lyr4]</param>
+					<param name="15_left">171</param>
+					<param name="15_top">1</param>
+				</include>
+				<!--Line 16-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>199</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics16"></include>
+				</control>
+				<control type="grouplist">
+					<left>4</left>
+					<top>203</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics16"></include>
+				</control>
+				<control type="grouplist">
+					<left>1</left>
+					<top>200</top>
+					<width>1920</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics16">
+						<param name="col161">$VAR[Col_lyr1]</param>
+						<param name="col162">$VAR[Col_lyr2]</param>
+						<param name="col163">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics16b">
+					<param name="16b_left">509</param>
+					<param name="16b_top">223</param>
+				</include>
+				<include content="Lyrics16b">
+					<param name="16b_left">513</param>
+					<param name="16b_top">227</param>
+				</include>
+				<include content="Lyrics16b">
+					<param name="col164">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 17-->
+				<include content="Lyrics17"></include>
+				<include content="Lyrics17">
+					<param name="17_left">14</param>
+					<param name="17_top">4</param>
+				</include>
+				<include content="Lyrics17">
+					<param name="col171">$VAR[Col_lyr1]</param>
+					<param name="col172">$VAR[Col_lyr2]</param>
+					<param name="col173">$VAR[Col_lyr3]</param>
+					<param name="col174">$VAR[Col_lyr4]</param>
+					<param name="17_left">11</param>
+					<param name="17_top">1</param>
+				</include>
+				<!--Line 18-->
+				<include content="Lyrics18"></include>
+				<include content="Lyrics18">
+					<param name="18_left">114</param>
+					<param name="18_top">34</param>
+				</include>
+				<include content="Lyrics18">
+					<param name="col181">$VAR[Col_lyr1]</param>
+					<param name="col182">$VAR[Col_lyr2]</param>
+					<param name="col183">$VAR[Col_lyr3]</param>
+					<param name="col184">$VAR[Col_lyr4]</param>
+					<param name="18_left">111</param>
+					<param name="18_top">31</param>
+				</include>
+				<!--Line 19-->
+				<control type="grouplist">
+					<left>0</left>
+					<top>69</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics19"></include>
+				</control>
+				<control type="grouplist">
+					<left>4</left>
+					<top>73</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics19"></include>
+				</control>
+				<control type="grouplist">
+					<left>1</left>
+					<top>70</top>
+					<width>1920</width>
+					<height>350</height>
+					<itemgap>30</itemgap>
+					<scrolltime>0</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>true</visible>
+					<align>center</align>
+					<include content="Lyrics19">
+						<param name="col191">$VAR[Col_lyr1]</param>
+						<param name="col192">$VAR[Col_lyr2]</param>
+						<param name="col193">$VAR[Col_lyr3]</param>
+					</include>
+				</control>
+				<include content="Lyrics19b">
+					<param name="col194">black</param>
+				</include>
+				<include content="Lyrics19b">
+					<param name="19b_left">613</param>
+					<param name="19b_top">228</param>
+					<param name="col194">black</param>
+				</include>
+				<include content="Lyrics19b">
+					<param name="19b_left">611</param>
+					<param name="19b_top">226</param>
+					<param name="col194">$VAR[Col_lyr4]</param>
+				</include>
+				<!--Line 20-->
+				<include content="Lyrics20"></include>
+				<include content="Lyrics20">
+					<param name="20_left">4</param>
+					<param name="20_top">154</param>
+				</include>
+				<include content="Lyrics20">
+					<param name="col201">$VAR[Col_lyr1]</param>
+					<param name="col202">$VAR[Col_lyr2]</param>
+					<param name="col203">$VAR[Col_lyr3]</param>
+					<param name="col204">$VAR[Col_lyr4]</param>
+					<param name="20_left">1</param>
+					<param name="20_top">151</param>
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>

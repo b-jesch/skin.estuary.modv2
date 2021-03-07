@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<zorder>4</zorder>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsActive(startup) + !Window.IsActive(GameVolume)</visible>
+			<animation effect="slide" end="0,140" time="0" condition="Window.IsActive(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
+			<animation effect="slide" end="0,135" time="0" condition="Window.IsActive(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
+			<animation effect="slide" end="0,131.5" time="0" condition="Window.IsActive(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
+			<animation effect="slide" end="0,21" time="0" condition="Window.IsActive(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+			<centerleft>50%</centerleft>
+			<width>112</width>
+			<top>0</top>
+			<animation effect="fade" start="100" end="0" time="200" delay="1000" condition="Player.Muted">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+			<control type="progress" id="29999">
+				<include>HiddenObject</include>
+				<info>Player.Volume</info>
+			</control>
+			<control type="image">
+				<left>6</left>
+				<top>15</top>
+				<width>100</width>
+				<height>100</height>
+				<texture>dialogs/volume/progress2/back.png</texture>
+			</control>
+			<control type="image">
+				<left>6</left>
+				<top>15</top>
+				<width>100</width>
+				<height>100</height>
+				<texture colordiffuse="$VAR[SkinColorVar]">$INFO[Control.GetLabel(29999),dialogs/volume/progress2/p,.png]</texture>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="View_503_Gallery">
+        <control type="group">
+            <visible>Control.IsVisible(503)</visible>
+            <include>Visible_Right</include>
+            <include>OpenClose_Right</include>
+            <top>180</top>
+            <left>20</left>
+            <right>20</right>
+            <height>700</height>
+            <include content="View_Gallery">
+                <param name="id" value="503" />
+                <param name="visible" value="Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies) | String.StartsWith(Container.FolderPath,plugin://)" />
+            </include>
+        </control>
+    </include>
+    <include name="View_Gallery">
+        <control type="group">
+         <control type="wraplist" id="$PARAM[id]">
+                <top>0</top>
+                <left>-88</left>
+                <width>2736</width>
+                <height>700</height>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+                <ondown>5199</ondown>
+                <oninfo condition="String.IsEqual(ListItem.DBType,set)">ActivateWindow(1132)</oninfo>
+                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <pagecontrol>5199</pagecontrol>
+                <focusposition>5</focusposition>
+                <movement>4</movement>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="$LOCALIZE[40005]">bigwide</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <visible>$PARAM[visible]</visible>
+                <itemlayout height="700" width="88">
+                    <control type="group">
+                        <left>0</left>
+                        <right>10</right>
+                        <control type="image">
+                            <left>0</left>
+                            <right>0</right>
+                            <top>0</top>
+                            <bottom>0</bottom>
+                            <texture>dialogs/back.png</texture>
+                        </control>
+                        <control type="label">
+                            <aligny>center</aligny>
+                            <top>630</top>
+                            <height>75</height>
+                            <width>590</width>
+                            <animation effect="rotate" end="90" start="0" condition="true" center="20,650">Conditional</animation>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>left</align>
+                        </control>
+                        <control type="label">
+                            <aligny>center</aligny>
+                            <top>630</top>
+                            <height>75</height>
+                            <width>590</width>
+                            <animation effect="rotate" end="90" start="0" condition="true" center="20,650">Conditional</animation>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>left</align>
+                            <textcolor>grey</textcolor>
+                            <visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>50%</centerleft>
+                            <top>20</top>
+                            <height>36</height>
+                            <width>36</width>
+                            <texture>$VAR[ListWatchedIconVar]</texture>
+                            <visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>50%</centerleft>
+                            <top>20</top>
+                            <height>36</height>
+                            <width>36</width>
+                            <texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
+                            <visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="700" width="1186">
+                    <include>View_Gallery_Fanart</include>
+                    <include>View_Gallery_Info</include>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+    <include name="View_Gallery_Fanart">
+        <control type="group">
+            <top>0</top>
+            <left>0</left>
+            <right>10</right>
+            <height>100%</height>
+            <control type="image">
+                <width>100%</width>
+                <height>100%</height>
+                <texture>dialogs/back.png</texture>
+            </control>
+            <control type="multiimage">
+                <left>10</left>
+                <right>10</right>
+                <top>10</top>
+                <bottom>10</bottom>
+                <fadetime>200</fadetime>
+                <aspectratio>stretch</aspectratio>
+                <imagepath background="true" fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar]</imagepath>
+                <fadetime>300</fadetime>
+                <timeperimage>3000</timeperimage>
+                <randomize>true</randomize>
+                <visible>!Container.Content(episodes)</visible>
+            </control>
+            <control type="image">
+                <left>10</left>
+                <right>10</right>
+                <top>10</top>
+                <bottom>10</bottom>
+                <fadetime>200</fadetime>
+                <aspectratio>stretch</aspectratio>
+                <texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Art(thumb)]</texture>
+                <visible>Container.Content(episodes) + ![Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + Container.Content(episodes)]</visible>
+            </control>
+            <control type="image">
+                <left>10</left>
+                <right>10</right>
+                <top>10</top>
+                <bottom>10</bottom>
+                <fadetime>200</fadetime>
+                <aspectratio>stretch</aspectratio>
+                <texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Art(fanart)]</texture>
+                <visible>Container.Content(episodes) + [Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + Container.Content(episodes)]</visible>
+            </control>
+        </control>
+    </include>
+    <include name="View_Gallery_Info">
+        <control type="group">
+            <left>10</left>
+            <right>20</right>
+            <bottom>15</bottom>
+            <height>122</height>
+            <control type="image">
+				<left>0</left>
+				<bottom>565</bottom>
+				<width>110</width>
+				<height>110</height>
+				<texture flipy="true">overlays/overlay-bg.png</texture>
+				<visible>ListItem.IsResumable | Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<bottom>629</bottom>
+				<width>36</width>
+				<height>36</height>
+				<texture>$VAR[WallWatchedIconVar]</texture>
+				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
+			</control>
+            <control type="image">
+                <width>100%</width>
+                <height>45</height>
+                <bottom>-5</bottom>
+                <texture>dialogs/back.png</texture>
+            </control>
+            <control type="label">
+                <left>20</left>
+                <right>20</right>
+                <height>45</height>
+                <bottom>-5</bottom>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font30_title</font>
+                <label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+                <scroll>true</scroll>
+            </control>
+        </control>
+    </include>
+</includes>

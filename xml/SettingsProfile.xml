@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group" id="9100">
+			<include>OpenClose_Right</include>
+			<left>470</left>
+			<control type="image">
+				<top>160</top>
+				<right>0</right>
+				<height>2</height>
+				<texture colordiffuse="$VAR[SkinColorVar]" border="2">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="image">
+				<bottom>134</bottom>
+				<right>0</right>
+				<height>2</height>
+				<texture colordiffuse="$VAR[SkinColorVar]" border="2">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="panel" id="2">
+				<top>163</top>
+				<left>30</left>
+				<visible>Container(9000).Hasfocus(2)</visible>
+				<right>0</right>
+				<bottom>137</bottom>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="390" width="354">
+					<control type="image">
+						<top>5</top>
+						<width>320</width>
+						<height>380</height>
+						<texture>dialogs/dialog-bg-nobo.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+					</control>
+					<control type="image">
+						<left>51</left>
+						<top>38</top>
+						<width>215</width>
+						<height>215</height>
+						<aspectratio>scale</aspectratio>
+						<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>255</top>
+						<width>305</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>290</top>
+						<width>305</width>
+						<height>100</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[31029] :</label>
+						<visible>!String.IsEqual(Listitem.Label,$LOCALIZE[20058])</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>321</top>
+						<width>305</width>
+						<height>100</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>top</aligny>
+						<label fallback="13170">$INFO[ListItem.Label2]</label>
+						<visible>!String.Contains(Listitem.Label,$LOCALIZE[20058])</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="390" width="354">
+					<control type="group">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+       					 </animation>
+						<control type="image">
+							<top>5</top>
+							<width>320</width>
+							<height>380</height>
+							<texture>dialogs/dialog-bg-nobo.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<top>-1</top>
+							<left>-6</left>
+							<width>332</width>
+							<height>392</height>
+							<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<left>51</left>
+							<top>38</top>
+							<width>215</width>
+							<height>215</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>255</top>
+							<width>305</width>
+							<height>100</height>
+							<align>center</align>
+							<aligny>top</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>290</top>
+							<width>305</width>
+							<height>100</height>
+							<font>font10</font>
+							<align>center</align>
+							<aligny>top</aligny>
+							<label>$LOCALIZE[31029] :</label>
+							<visible>!String.Contains(Listitem.Label,$LOCALIZE[20058])</visible>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>321</top>
+							<width>305</width>
+							<height>100</height>
+							<font>font10</font>
+							<align>center</align>
+							<aligny>top</aligny>
+							<label fallback="13170">$INFO[ListItem.Label2]</label>
+							<visible>!String.Contains(Listitem.Label,$LOCALIZE[20058])</visible>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist" id="9001">
+				<visible>Container(9000).Hasfocus(1)</visible>
+				<right>0</right>
+				<top>168</top>
+				<bottom>142</bottom>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<control type="radiobutton" id="4">
+					<label>$LOCALIZE[31057]</label>
+					<include>DefaultSettingButton</include>
+				</control>
+				<control type="button" id="5">
+					<label>$LOCALIZE[31058]</label>
+					<label2>[B]$INFO[System.ProfileAutoLogin][/B]</label2>
+					<include>DefaultSettingButton</include>
+					<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<depth>DepthContentPanel</depth>
+			<include>OpenClose_Left</include>
+			<include content="ContentPanel">
+				<param name="width" value="530" />
+			</include>
+			<control type="list" id="9000">
+				<left>0</left>
+				<top>168</top>
+				<width>470</width>
+				<height>700</height>
+				<onleft>9100</onleft>
+				<onright>9100</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="70" width="470">
+					<control type="label">
+						<left>30</left>
+						<right>30</right>
+						<bottom>0</bottom>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font30_title</font>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				<focusedlayout height="70" width="470">
+					<control type="image">
+						<right>0</right>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
+					<control type="label">
+						<left>30</left>
+						<right>30</right>
+						<bottom>0</bottom>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font30_title</font>
+						<aligny>center</aligny>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$LOCALIZE[128]</label>
+						<icon></icon>
+					</item>
+					<item id="2">
+						<label>$LOCALIZE[13200]</label>
+						<icon></icon>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="group">
+			<right>0</right>
+			<top>163</top>
+			<bottom>137</bottom>
+			<width>60</width>
+			<control type="scrollbar" id="60">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">Conditional</animation>
+				<onleft condition="Container(9000).HasFocus(2)">2</onleft>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Container(9000).Hasfocus(2)</visible>
+			</control>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[10034]" />
+		</include>
+		<include>BottomBar</include>
+	</controls>
+</window>

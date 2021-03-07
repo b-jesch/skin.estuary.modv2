@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="group">
+			<width>915</width>
+			<height>400</height>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="915" />
+				<param name="height" value="400" />
+				<param name="header_label" value="$INFO[System.AddonTitle(script.kodi.loguploader)]" />
+			</include>
+			<control type="image" id="501">
+				<left>30</left>
+				<top>85</top>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio aligny="center" align="center">keep</aspectratio>
+			</control>
+			<control type="textbox" id="502">
+				<left>360</left>
+				<top>85</top>
+				<width>545</width>
+				<height>300</height>
+				<font>font12_title</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<shadowcolor>FF000000</shadowcolor>
+			</control>
+			<control type="button" id="503">
+            	<visible>false</visible>
+        	</control>
+		</control>
+	</controls>
+</window>

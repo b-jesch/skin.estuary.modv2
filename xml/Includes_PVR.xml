@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="ChannelManagerList">
+		<control type="grouplist">
+			<orientation>horizontal</orientation>
+			<left>0</left>
+			<align>center</align>
+			<width>510</width>
+			<control type="label" id="$PARAM[header_id]">
+				<width>auto</width>
+				<height>70</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<width>auto</width>
+				<height>70</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>: [COLOR white]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
+			</control>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>55</top>
+			<width>510</width>
+			<height>740</height>
+			<texture border="40">buttons/dialogbutton-nofo.png</texture>
+		</control>
+		<control type="list" id="$PARAM[list_id]">
+			<left>20</left>
+			<top>75</top>
+			<width>470</width>
+			<height>700</height>
+			<onup>$PARAM[list_id]</onup>
+			<ondown>$PARAM[list_id]</ondown>
+			<onleft>$PARAM[onleft]</onleft>
+			<onright>$PARAM[scrollbar_id]</onright>
+			<pagecontrol>$PARAM[scrollbar_id]</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="70" width="470">
+				<control type="image">
+					<width>60</width>
+					<height>60</height>
+					<right>5</right>
+					<top>5</top>
+					<texture>$INFO[ListItem.ActualIcon]</texture>
+					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+					<bordersize>2</bordersize>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<right>70</right>
+					<height>70</height>
+					<aligny>center</aligny>
+					<font>font27</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="70" width="470">
+				<control type="image">
+					<left>0</left>
+					<right>0</right>
+					<bottom>0</bottom>
+					<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+					<visible>Control.HasFocus($PARAM[list_id])</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<right>0</right>
+					<bottom>0</bottom>
+					<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+					<visible>Control.HasFocus($PARAM[list_id])</visible>
+					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+				</control>
+				<control type="image">
+					<width>60</width>
+					<height>60</height>
+					<right>5</right>
+					<top>5</top>
+					<texture>$INFO[ListItem.ActualIcon]</texture>
+					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+					<bordersize>2</bordersize>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<right>70</right>
+					<height>70</height>
+					<font>font27</font>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="$PARAM[scrollbar_id]">
+			<left>495</left>
+			<top>75</top>
+			<width>12</width>
+			<height>700</height>
+			<onleft>$PARAM[list_id]</onleft>
+			<onright>$PARAM[onright]</onright>
+			<ondown>$PARAM[scrollbar_id]</ondown>
+			<onup>$PARAM[scrollbar_id]</onup>
+			<orientation>vertical</orientation>
+		</control>
+	</include>
+	<include name="PVRInfoPanel">
+		<control type="group">
+			<visible>!ListItem.IsFolder</visible>
+			<control type="image">
+				<left>630</left>
+				<top>137</top>
+				<width>200</width>
+				<height>195</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$VAR[PVRArtworksVar]</texture>
+			</control>
+			<control type="group">
+				<top>120</top>
+				<left>0</left>
+				<width>590</width>
+				<control type="label">
+					<height>262</height>
+					<font>font45</font>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<top>60</top>
+					<height>200</height>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$INFO[ListItem.Date,$LOCALIZE[552] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180] : [COLOR white],[/COLOR][CR]]$VAR[ExpirationDateTimeLabel]</label>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+				</control>
+				<control type="group">
+					<visible>Integer.IsGreater(ListItem.Progress,0)</visible>
+					<top>150</top>
+					<height>262</height>
+					<control type="label">
+						<label>$INFO[ListItem.StartTime]</label>
+					</control>
+					<control type="label">
+						<align>right</align>
+						<label>$INFO[ListItem.EndTime]</label>
+					</control>
+					<control type="progress">
+						<top>50</top>
+						<height>12</height>
+						<colordiffuse>88FFFFFF</colordiffuse>
+						<info>ListItem.Progress</info>
+					</control>
+				</control>
+				<control type="progress">
+ 					<top>200</top>
+     				<height>12</height>
+ 					<colordiffuse>88FFFFFF</colordiffuse>
+ 					<info>ListItem.PercentPlayed</info>
+ 					<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
+ 				</control>
+			</control>
+			<control type="label">
+				<top>390</top>
+				<width>830</width>
+				<height>262</height>
+				<font>font36_title</font>
+				<label>$INFO[ListItem.Title]</label>
+				<scroll>true</scroll>
+				<visible>!PVR.HasEpg</visible>
+			</control>
+			<control type="label">
+				<top>390</top>
+				<width>830</width>
+				<height>262</height>
+				<font>font36_title</font>
+				<label>$INFO[ListItem.EpgEventTitle]</label>
+				<scroll>true</scroll>
+				<visible>PVR.HasEpg</visible>
+			</control>
+			<control type="label">
+				<top>435</top>
+				<width>830</width>
+				<height>70</height>
+				<label>[I]$VAR[SeasonEpisodeLabel2][/I]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="textbox">
+				<top>490</top>
+				<width>830</width>
+				<bottom>90</bottom>
+				<label>$INFO[ListItem.Plot]</label>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+			</control>
+			<control type="textbox">
+				<top>530</top>
+				<width>830</width>
+				<height>340</height>
+				<align>center</align>
+				<font>font27</font>
+				<textcolor>80FFFFFF</textcolor>
+				<label>$LOCALIZE[19055]</label>
+				<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Genre)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>ListItem.IsFolder</visible>
+			<top>180</top>
+			<control type="label">
+				<top>10</top>
+				<width>830</width>
+				<height>262</height>
+				<label>$LOCALIZE[19076] ($INFO[Container(5000).NumItems,[B],[/B] $LOCALIZE[31036]])</label>
+				<font>font37</font>
+				<visible>!ListItem.IsParentFolder</visible>
+			</control>
+			<control type="group">
+				<left>-10</left>
+				<top>60</top>
+				<visible>!ListItem.IsParentFolder</visible>
+				<control type="panel" id="5000">
+					<top>20</top>
+					<width>830</width>
+					<bottom>100</bottom>
+					<orientation>vertical</orientation>
+					<focusedlayout height="100" width="780">
+						<control type="label">
+							<left>10</left>
+							<height>90</height>
+							<width>830</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Date,[COLOR grey],[/COLOR][CR]]$INFO[ListItem.Label]$VAR[SeasonEpisodeLabel]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</focusedlayout>
+					<itemlayout height="100" width="780">
+						<control type="label">
+							<left>10</left>
+							<height>90</height>
+							<width>830</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Date,[COLOR grey],[/COLOR][CR]]$INFO[ListItem.Label]$VAR[SeasonEpisodeLabel]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</itemlayout>
+					<content sortby="date" sortorder="$PARAM[folder_sortorder]">$INFO[ListItem.FilenameAndPath]</content>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="RDSInfoLine">
+		<control type="grouplist">
+			<visible>!String.IsEmpty($PARAM[value])</visible>
+			<height>45</height>
+			<orientation>horizontal</orientation>
+			<itemgap>10</itemgap>
+			<control type="label">
+				<width>auto</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<label>$PARAM[label]:</label>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<width>auto</width>
+				<height>40</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[$PARAM[value]]</label>
+				<scroll>true</scroll>
+			</control>
+		</control>
+	</include>	
+	<include name="PVRChannelNumberInput">
+		<control type="label">
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<label>$INFO[PVR.ChannelNumberInput]</label>
+			<shadowcolor>black</shadowcolor>
+			<align>center</align>
+			<font>WeatherTemp</font>
+			<aligny>center</aligny>
+			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
+		</control>
+	</include>
+</includes>
