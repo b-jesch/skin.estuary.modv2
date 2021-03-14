@@ -313,17 +313,6 @@
 					<selected>System.HasAddon(repository.kodinerds)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
-				<control type="radiobutton" id="302">
-					<label>Marcelveldt's BETA repository $INFO[System.AddonVersion(repository.marcelveldt),(,)]</label>
-					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(repository.marcelveldt)">InstallAddon(repository.marcelveldt)</onclick>
-					<onclick condition="System.HasAddon(repository.marcelveldt)">Addon.OpenSettings(repository.marcelveldt)</onclick>
-					<selected>System.HasAddon(repository.marcelveldt)</selected>
-					<include>DefaultSettingButton</include>
-				</control>
 				<control type="radiobutton" id="303">
 					<label>Rector Stuff Repository $INFO[System.AddonVersion(repository.rector.stuff),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
@@ -379,15 +368,15 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="radiobutton" id="307">
-					<label>Artwork Helper $INFO[System.AddonVersion(script.artwork.helper),(,)]</label>
+				<control type="radiobutton" id="306">
+					<label>Artwork Dump $INFO[System.AddonVersion(script.artwork.dump),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
 					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
 					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(script.artwork.helper)">InstallAddon(script.artwork.helper)</onclick>
-					<onclick condition="System.HasAddon(script.artwork.helper)">Addon.OpenSettings(script.artwork.helper)</onclick>
-					<selected>System.HasAddon(script.artwork.helper)</selected>
+					<onclick condition="!System.HasAddon(script.artwork.dump)">InstallAddon(script.artwork.dump)</onclick>
+					<onclick condition="System.HasAddon(script.artwork.dump)">Addon.OpenSettings(script.artwork.dump)</onclick>
+					<selected>System.HasAddon(script.artwork.dump)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="radiobutton" id="308">
@@ -901,8 +890,8 @@
 				<control type="radiobutton" id="602">
 					<label>$LOCALIZE[40059]</label>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!System.HasAddon(script.artwork.helper)">InstallAddon(script.artwork.helper)</onclick>
-					<onclick condition="System.HasAddon(script.artwork.helper)">Skin.ToggleSetting(EnableExtraFanart)</onclick>
+					<onclick condition="!System.HasAddon(script.artwork.dump)">InstallAddon(script.artwork.dump)</onclick>
+					<onclick condition="System.HasAddon(script.artwork.dump)">Skin.ToggleSetting(EnableExtraFanart)</onclick>
 					<selected>Skin.HasSetting(EnableExtraFanart)</selected>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>

@@ -87,9 +87,10 @@
                         <control type="image">
                             <left>260</left>
                             <top>30</top>
-                            <width>32</width>
-                            <height>32</height>
-                            <texture>$VAR[WallWatchedIconVar]</texture>
+                            <width>36</width>
+                            <height>36</height>
+                            <texture>icons/pvr/timer.png</texture>
+                            <visible>String.IsEqual(ListItem.Property(HasTimer),True)</visible>
                         </control>
                         <control type="image">
                             <left>20</left>
@@ -201,9 +202,10 @@
                         <control type="image">
                             <left>260</left>
                             <top>30</top>
-                            <width>32</width>
-                            <height>32</height>
-                            <texture>$VAR[WallWatchedIconVar]</texture>
+                            <width>36</width>
+                            <height>36</height>
+                            <texture>icons/pvr/timer.png</texture>
+                            <visible>String.IsEqual(ListItem.Property(HasTimer),True)</visible>
                         </control>
                         <control type="image">
                             <left>20</left>

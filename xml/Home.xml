@@ -2355,6 +2355,7 @@
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="" />
 			</include>
+			<!--
 			<control type="image">
 				<top>0</top>
 				<width>284</width>
@@ -2394,6 +2395,7 @@
 				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="slide" end="-522,0" time="300" tween="sine" easing="out" condition="Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 			</control>
+			-->
 			<control type="group">
 				<visible>[!Skin.HasSetting(HomeClearLogo) + String.IsEqual(Control.GetLabel(55000),fallback.png)] | Skin.HasSetting(HomeClearLogo)</visible>
 				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>

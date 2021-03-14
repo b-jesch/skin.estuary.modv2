@@ -506,6 +506,7 @@
 				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 			</control>
+			<!--
 			<control type="group">
 				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
@@ -528,6 +529,7 @@
 					<texture>$VAR[LibraryClearLogoVar]</texture>
 				</control>
 			</control>
+			-->
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
@@ -551,6 +553,7 @@
 					<visible>Control.IsVisible(55)</visible>
 				</control>
 			</control>
+			<!--
 			<control type="group">
 				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
@@ -581,10 +584,11 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture>$VAR[LibraryClearLogoVar]</texture>
 				<visible>Control.IsVisible(502)</visible>
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+				<visible>!Skin.HasSetting(enable_Library)</visible>
 				<visible>!ListItem.IsParentFolder</visible>
 				<include>OpenClose_Right</include>
 			</control>
+			-->
 			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>

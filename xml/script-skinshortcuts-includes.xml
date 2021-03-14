@@ -400,10 +400,19 @@
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">addons</property>
-			<property name="widget">AddonsWidget</property>
-			<property name="widgetName">24001</property>
+			<property name="widget">PersonalWidgetPanel</property>
+			<property name="widgetName">40205</property>
 			<property name="background">special://skin/extras/home-images/addons.jpg</property>
 			<property name="ParentalControl">No</property>
+			<property name="widgetType" />
+			<property name="widgetTarget" />
+			<property name="widgetPath">PersonalWidgetPanel</property>
+			<property name="widgetPath.9">plugin://script.program.fritzact</property>
+			<property name="widget.9">addon</property>
+			<property name="widgetName.9">10001</property>
+			<property name="widgetType.9">program</property>
+			<property name="widgetTarget.9">programs</property>
+			<property name="widgetAspect.9">40208</property>
 			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">Skin.SetString(dialog_action,ActivateWindow(1100))</onclick>
 			<property name="path">Skin.SetString(dialog_action,ActivateWindow(1100))</property>
 			<property name="list">Skin.SetString(dialog_action,ActivateWindow(1100))</property>
@@ -584,6 +593,46 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">2</property>
+			<label>Scraper neu einlesen</label>
+			<label2>Benutzerdefinierte Einträge</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://skin/extras/icons/update.png</thumb>
+			<property name="labelID">scraperneueinlesen</property>
+			<property name="defaultID" />
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</onclick>
+			<property name="path">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</property>
+			<property name="list">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</property>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1133)</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">RunPlugin(plugin://script.service.gto?action=scrape)</onclick>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<property name="group">19020</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">2</property>
+			<label>Scraper wechseln</label>
+			<label2>Benutzerdefinierte Einträge</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://skin/extras/icons/newspaper.png</thumb>
+			<property name="labelID">scraperwechseln</property>
+			<property name="defaultID" />
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</onclick>
+			<property name="path">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</property>
+			<property name="list">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</property>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1133)</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">RunPlugin(plugin://script.service.gto?action=change_scraper)</onclick>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<property name="group">19020</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19019]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultAddonPeripheral.png</icon>
@@ -602,8 +651,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="2">
-			<property name="id">$NUMBER[2]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19069]</label>
 			<label2>Common Shortcut</label2>
@@ -623,8 +672,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19017]</label>
 			<label2>Common Shortcut</label2>
@@ -644,8 +693,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19040]</label>
 			<label2>Common Shortcut</label2>
@@ -665,8 +714,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19138]</label>
 			<label2>Common Shortcut</label2>
@@ -686,8 +735,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[137]</label>
 			<label2>Common Shortcut</label2>
@@ -3986,6 +4035,46 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">2</property>
+			<label>Scraper neu einlesen</label>
+			<label2>Benutzerdefinierte Einträge</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://skin/extras/icons/update.png</thumb>
+			<property name="labelID">scraperneueinlesen</property>
+			<property name="defaultID" />
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</onclick>
+			<property name="path">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</property>
+			<property name="list">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</property>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1133)</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">RunPlugin(plugin://script.service.gto?action=scrape)</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">19020</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">2</property>
+			<label>Scraper wechseln</label>
+			<label2>Benutzerdefinierte Einträge</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://skin/extras/icons/newspaper.png</thumb>
+			<property name="labelID">scraperwechseln</property>
+			<property name="defaultID" />
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</onclick>
+			<property name="path">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</property>
+			<property name="list">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</property>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1133)</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">RunPlugin(plugin://script.service.gto?action=change_scraper)</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">19020</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19019]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultAddonPeripheral.png</icon>
@@ -4004,8 +4093,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="2">
-			<property name="id">$NUMBER[2]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19069]</label>
 			<label2>Common Shortcut</label2>
@@ -4025,8 +4114,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19017]</label>
 			<label2>Common Shortcut</label2>
@@ -4046,8 +4135,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19040]</label>
 			<label2>Common Shortcut</label2>
@@ -4067,8 +4156,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19138]</label>
 			<label2>Common Shortcut</label2>
@@ -4088,8 +4177,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[137]</label>
 			<label2>Common Shortcut</label2>
@@ -4114,6 +4203,46 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">2</property>
+			<label>Scraper neu einlesen</label>
+			<label2>Benutzerdefinierte Einträge</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://skin/extras/icons/update.png</thumb>
+			<property name="labelID">scraperneueinlesen</property>
+			<property name="defaultID" />
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</onclick>
+			<property name="path">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</property>
+			<property name="list">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=scrape))</property>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1133)</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">RunPlugin(plugin://script.service.gto?action=scrape)</onclick>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-19020)</visible>
+			<property name="group">19020</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">2</property>
+			<label>Scraper wechseln</label>
+			<label2>Benutzerdefinierte Einträge</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://skin/extras/icons/newspaper.png</thumb>
+			<property name="labelID">scraperwechseln</property>
+			<property name="defaultID" />
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</onclick>
+			<property name="path">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</property>
+			<property name="list">Skin.SetString(dialog_action,RunPlugin(plugin://script.service.gto?action=change_scraper))</property>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1133)</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onclick>
+			<onclick condition="[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">RunPlugin(plugin://script.service.gto?action=change_scraper)</onclick>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-19020)</visible>
+			<property name="group">19020</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19019]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultAddonPeripheral.png</icon>
@@ -4132,8 +4261,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="2">
-			<property name="id">$NUMBER[2]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19069]</label>
 			<label2>Common Shortcut</label2>
@@ -4153,8 +4282,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19017]</label>
 			<label2>Common Shortcut</label2>
@@ -4174,8 +4303,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19040]</label>
 			<label2>Common Shortcut</label2>
@@ -4195,8 +4324,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[19138]</label>
 			<label2>Common Shortcut</label2>
@@ -4216,8 +4345,8 @@
 			<property name="group">19020</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">2</property>
 			<label>$LOCALIZE[137]</label>
 			<label2>Common Shortcut</label2>
@@ -14088,11 +14217,11 @@
 				<pagecontrol>23010</pagecontrol>
 				<include condition="!Skin.HasSetting(UseSmallerCategories)">PersonalWidgetPanelCategoriesBig</include>
 				<include condition="Skin.HasSetting(UseSmallerCategories)">PersonalWidgetPanelCategoriesSmall</include>
-				<include content="Widget">
-					<param name="content_path" value="" />
-					<param name="widget_header" value="" />
+				<include content="WidgetPanelSquare">
+					<param name="content_path" value="plugin://script.program.fritzact" />
+					<param name="widget_header" value="10001" />
 					<param name="widget_header_focus" value="$VAR[WidgetLabelFocus2310017]" />
-					<param name="widget_target" value="" />
+					<param name="widget_target" value="programs" />
 					<param name="sortby" value="" />
 					<param name="sortorder" value="" />
 					<param name="list_id" value="2310017" />
