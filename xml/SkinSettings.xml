@@ -14,7 +14,7 @@
 			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</imagepath>
 			<timeperimage>3000</timeperimage>
 			<randomize>true</randomize>
-			<visible>Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
+			<visible>!Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
 		</control>
 		<control type="group" id="10000">
 			<left>470</left>
@@ -162,14 +162,6 @@
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(hide_background_fanart)</selected>
 					<onclick>Skin.ToggleSetting(hide_background_fanart)</onclick>
-				</control>
-				<control type="radiobutton" id="203">
-					<label>$LOCALIZE[40081]</label>
-					<include>DefaultSettingButton</include>
-					<selected>Skin.HasSetting(enable_artistslideshow)</selected>
-					<onclick condition="!System.HasAddon(script.artwork.helper)">InstallAddon(script.artwork.helper)</onclick>
-					<onclick condition="System.HasAddon(script.artwork.helper)">Skin.ToggleSetting(enable_artistslideshow)</onclick>
-					<enable>!Skin.HasSetting(hide_background_fanart)</enable>
 				</control>
 				<control type="radiobutton" id="204">
 					<label>$LOCALIZE[40082]</label>
@@ -876,8 +868,8 @@
 				<control type="radiobutton" id="601">
 					<label>$LOCALIZE[31002]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(no_fanart)</onclick>
-					<selected>!Skin.HasSetting(no_fanart)</selected>
+					<onclick>Skin.ToggleSetting(show_fanart)</onclick>
+					<selected>Skin.HasSetting(show_fanart)</selected>
 				</control>
 				<control type="button" id="614">
                     <label>  ∟$LOCALIZE[40265]</label>
@@ -885,7 +877,7 @@
                     <include>DefaultSettingButton</include>
                     <onclick condition="String.IsEmpty(Skin.String(global-background))">Skin.SetImage(global-background)</onclick>
                     <onclick condition="!String.IsEmpty(Skin.String(global-background))">Skin.Reset(global-background)</onclick>
-                    <visible>Skin.HasSetting(no_fanart)</visible>
+                    <visible>!Skin.HasSetting(show_fanart)</visible>
                 </control>
 				<control type="radiobutton" id="602">
 					<label>$LOCALIZE[40059]</label>
@@ -893,7 +885,7 @@
 					<onclick condition="!System.HasAddon(script.artwork.dump)">InstallAddon(script.artwork.dump)</onclick>
 					<onclick condition="System.HasAddon(script.artwork.dump)">Skin.ToggleSetting(EnableExtraFanart)</onclick>
 					<selected>Skin.HasSetting(EnableExtraFanart)</selected>
-					<enable>!Skin.HasSetting(no_fanart)</enable>
+					<enable>Skin.HasSetting(show_fanart)</enable>
 				</control>
 				<control type="radiobutton" id="603">
 					<label>$LOCALIZE[40119]</label>
@@ -929,7 +921,7 @@
 					<onclick condition="System.HasAddon(script.image.resource.select) + System.HasAddon(resource.images.weatherfanart.multi)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					<onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
-					<enable>!Skin.HasSetting(no_fanart)</enable>
+					<enable>!Skin.HasSetting(show_fanart)</enable>
 				</control>
 				<control type="button" id="609">
 					<label>$LOCALIZE[40062]</label>

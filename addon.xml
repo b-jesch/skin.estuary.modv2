@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.0.7+matrix.9" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.0.7+matrix.10" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.1.3"/>
         <import addon="script.image.resource.select" version="3.0.2"/>
 	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
+	<extension point="xbmc.gui.skin" debugging="true">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
 		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
 		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
@@ -42,12 +42,14 @@
 			</assets>
 <news>
 [B]3.0.7+matrix[/B]
-- .9 Clearlogo from home screen and several main views removed (overlapping other items)
-     Settings window updated (required and optional addons)
-	 Artwork Dump instead of Artwork Helper (n.a. for Matrix) implemented
-- .8 Triple list fixed
-- .7 Mosaic view fixed, next unseen episodes reimplemented, start implementation of embuary helper
-- .5 Dependencies of script.skinhelper completely removed
+- .10 Dependencies of script.artworker.helper removed
+	  Rework of animated background (Fanart)
+- .9  Clearlogo from home screen and several main views removed (overlapping other items)
+      Settings window updated (required and optional addons)
+	  Artwork Dump instead of Artwork Helper (n.a. for Matrix) implemented
+- .8  Triple list fixed
+- .7  Mosaic view fixed, next unseen episodes reimplemented, start implementation of embuary helper
+- .5  Dependencies of script.skinhelper completely removed
 </news>
 	</extension>
 </addon>

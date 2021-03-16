@@ -222,6 +222,73 @@
 			</control>
 		</control>
 	</include>
+	<!-- animated fanarts -->
+	<include name="GlobalAnimatedBackground">
+		<control type="fadelabel" id="4399">
+        	<top>-900</top>
+            <width>2560</width>
+            <height>0</height>
+            <scroll>false</scroll>
+            <scrollout>false</scrollout>
+            <randomize>true</randomize>
+            <resetonlabelchange>true</resetonlabelchange>
+            <visible>Skin.HasSetting(EnableExtraFanart)</visible>
+            <label>$INFO[ListItem.Art(fanart)]</label>
+            <label>$INFO[ListItem.Art(fanart1)]</label>
+            <label>$INFO[ListItem.Art(fanart2)]</label>
+            <label>$INFO[ListItem.Art(fanart3)]</label>
+            <label>$INFO[ListItem.Art(fanart4)]</label>
+            <label>$INFO[ListItem.Art(fanart5)]</label>
+            <label>$INFO[ListItem.Art(fanart6)]</label>
+            <label>$INFO[ListItem.Art(fanart7)]</label>
+            <label>$INFO[ListItem.Art(fanart8)]</label>
+            <label>$INFO[ListItem.Art(fanart9)]</label>
+            <label>$INFO[ListItem.Art(fanart10)]</label>
+            <label>$INFO[ListItem.Art(fanart11)]</label>
+            <label>$INFO[ListItem.Art(fanart12)]</label>
+            <label>$INFO[ListItem.Art(fanart13)]</label>
+            <label>$INFO[ListItem.Art(fanart14)]</label>
+            <label>$INFO[ListItem.Art(fanart15)]</label>
+            <label>$INFO[ListItem.Art(fanart16)]</label>
+            <label>$INFO[ListItem.Art(fanart17)]</label>
+            <label>$INFO[ListItem.Art(fanart18)]</label>
+            <label>$INFO[ListItem.Art(fanart19)]</label>
+            <label>$INFO[ListItem.Art(fanart20)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart1)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart2)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart3)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart4)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart5)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart6)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart7)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart8)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart9)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart10)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart11)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart12)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart13)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart14)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart15)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart16)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart17)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart18)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart19)]</label>
+            <label>$INFO[ListItem.Art(tvshow.fanart20)]</label>
+            <pauseatend>12000</pauseatend>
+        </control>
+		<control type="image" id="4398">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[FanartAnimated]</texture>
+			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+		</control>
+	</include>
 	<include name="HiddenObject">
 		<left>-3000</left>
 		<top>-3000</top>
@@ -2388,7 +2455,7 @@
 						<randomize>true</randomize>
 						<animation effect="slide" end="-10000,-10000" time="0" condition="Control.IsVisible(502) + !$EXP[infodialog_active]">Conditional</animation>
 						<visible>!Window.IsVisible(Home.xml)</visible>
-						<visible>Skin.HasSetting(no_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
+						<visible>Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
 					</control>
 					<control type="image">
 						<left>-3</left>

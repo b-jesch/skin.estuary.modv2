@@ -85,11 +85,11 @@
                             <visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
                         </control>
                         <control type="image">
-                            <left>260</left>
-                            <top>30</top>
+                            <left>255</left>
+                            <top>27</top>
                             <width>36</width>
                             <height>36</height>
-                            <texture>icons/pvr/timer.png</texture>
+                            <texture>icons/infodialogs/timer.png</texture>
                             <visible>String.IsEqual(ListItem.Property(HasTimer),True)</visible>
                         </control>
                         <control type="image">
@@ -200,11 +200,11 @@
                             <visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
                         </control>
                         <control type="image">
-                            <left>260</left>
-                            <top>30</top>
+                            <left>255</left>
+                            <top>27</top>
                             <width>36</width>
                             <height>36</height>
-                            <texture>icons/pvr/timer.png</texture>
+                            <texture>icons/infodialogs/timer.png</texture>
                             <visible>String.IsEqual(ListItem.Property(HasTimer),True)</visible>
                         </control>
                         <control type="image">

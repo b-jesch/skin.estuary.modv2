@@ -6,6 +6,7 @@
 	<views>50,52,53,54,55,500,504,505,506,507,508,509</views>
 	<controls>
 		<include>DefaultBackground</include>
+		<include>GlobalAnimatedBackground</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>View_50_List</include>
@@ -177,15 +178,6 @@
 				<control type="grouplist" id="9000">
 					<top>80</top>
 					<include>MediaMenuListCommon</include>
-					<control type="radiobutton" id="626">
-                        <include>MediaMenuItemsCommonRadio</include>
-                        <label>ExtraFanarts</label>
-                        <selected>Skin.HasSetting(EnableExtraFanart)</selected>
-                        <onclick condition="!System.HasAddon(script.artwork.helper)">InstallAddon(script.artwork.helper)</onclick>
-						<onclick condition="System.HasAddon(script.artwork.helper)">Skin.ToggleSetting(EnableExtraFanart)</onclick>
-                        <visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
-                        <visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
-                    </control>
 					<control type="label" id="203">
 						<description>Actions</description>
 						<include>MediaMenuLabelCommon</include>
