@@ -129,7 +129,7 @@
 				<control type="radiobutton" id="103">
 					<label>$LOCALIZE[40195]</label>
 					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(disable_PVRNextUp)</selected>
+					<selected>!Skin.HasSetting(disable_PVR)</selected>
 					<onclick>Skin.ToggleSetting(disable_PVRNextUp)</onclick>
 				</control>
 				<control type="radiobutton" id="107">
@@ -404,17 +404,6 @@
 					<selected>System.HasAddon(script.skin.helper.colorpicker)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
-				<control type="radiobutton" id="311">
-					<label>Skin Helper Service Backup $INFO[System.AddonVersion(script.skin.helper.skinbackup),(,)]</label>
-					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
-					<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
-					<selected>System.HasAddon(script.skin.helper.skinbackup)</selected>
-					<include>DefaultSettingButton</include>
-				</control>
 				<control type="radiobutton" id="312">
 					<label>Play Album Script $INFO[System.AddonVersion(script.playalbum),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
@@ -438,14 +427,14 @@
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="radiobutton" id="314">
-					<label>Nextup Service Notification $INFO[System.AddonVersion(service.nextup.notification),(,)]</label>
+					<label>Up Next $INFO[System.AddonVersion(service.upnext),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
 					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
 					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(service.nextup.notification)">InstallAddon(service.nextup.notification)</onclick>
-					<onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
-					<selected>System.HasAddon(service.nextup.notification)</selected>
+					<onclick condition="!System.HasAddon(service.upnext)">InstallAddon(service.upnext)</onclick>
+					<onclick condition="System.HasAddon(service.upnext)">Addon.OpenSettings(service.upnext)</onclick>
+					<selected>System.HasAddon(service.upnext)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="radiobutton" id="315">
@@ -482,14 +471,14 @@
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="radiobutton" id="318">
-					<label>Library Editor Script $INFO[System.AddonVersion(script.libraryeditor),(,)]</label>
+					<label>Metadata Editor $INFO[System.AddonVersion(script.metadata.editor),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
 					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
 					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(script.libraryeditor)">InstallAddon(script.libraryeditor)</onclick>
-					<onclick condition="System.HasAddon(script.libraryeditor)">Addon.OpenSettings(script.libraryeditor)</onclick>
-					<selected>System.HasAddon(script.libraryeditor)</selected>
+					<onclick condition="!System.HasAddon(script.metadata.editor)">InstallAddon(script.metadata.editor)</onclick>
+					<onclick condition="System.HasAddon(script.metadata.editor)">Addon.OpenSettings(script.metadata.editor)</onclick>
+					<selected>System.HasAddon(script.metadata.editor)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="radiobutton" id="319">
@@ -513,23 +502,6 @@
 					<onclick condition="System.HasAddon(resource.images.moviegenreicons.estuarymod)">Addon.OpenSettings(resource.images.moviegenreicons.estuarymod)</onclick>
 					<selected>System.HasAddon(resource.images.moviegenreicons.estuarymod)</selected>
 					<include>DefaultSettingButton</include>
-				</control>
-			</control>
-			<control type="grouplist" id="400">
-				<top>168</top>
-				<left>0</left>
-				<right>0</right>
-				<bottom>142</bottom>
-				<onleft>9000</onleft>
-				<onright>60</onright>
-				<onup>400</onup>
-				<ondown>400</ondown>
-				<pagecontrol>60</pagecontrol>
-				<visible>Container(9000).HasFocus(7)</visible>
-				<control type="button" id="401">
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[40070]</label>
-					<onclick>RunScript(script.skin.helper.skinbackup,action=backup)</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="500">
@@ -1079,20 +1051,6 @@
 					<onclick>Skin.ToggleSetting(UseSmallerCategories)</onclick>
 					<selected>Skin.HasSetting(UseSmallerCategories)</selected>
 				</control>
-				<control type="radiobutton" id="10005">
-					<label>$LOCALIZE[40068]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(HomeClearLogo)</onclick>
-					<selected>!Skin.HasSetting(HomeClearLogo)</selected>
-				</control>
-				<control type="radiobutton" id="10023">
-					<include>DefaultSettingButton</include>
-					<label>  ∟$LOCALIZE[40215]</label>
-					<onclick>Skin.ToggleSetting(HomeClearLogoMenu)</onclick>
-					<selected>Skin.HasSetting(HomeClearLogoMenu)</selected>
-					<visible>!Skin.HasSetting(HomeClearLogo)</visible>
-					<enable>!Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)</enable>
-				</control>
 				<control type="radiobutton" id="10018">
 					<label>$LOCALIZE[40170]</label>
 					<include>DefaultSettingButton</include>
@@ -1204,9 +1162,6 @@
 					</item>
 					<item id="6">
 						<label>$LOCALIZE[40066]</label>
-					</item>
-					<item id="7">
-						<label>$LOCALIZE[40069]</label>
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[40073]</label>

@@ -433,7 +433,6 @@
 			<centerleft>50%</centerleft>
 			<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-back.png</texture>
 			<visible>!String.IsEmpty(Control.GetLabel(55002))</visible>
-			<visible>!Skin.HasSetting(HomeClearLogo)</visible>
 			<visible>!Control.HasFocus(9000) + !Control.HasFocus(990)</visible>
 			<visible>![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
 			<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
@@ -446,7 +445,6 @@
 			<centerleft>50%</centerleft>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
 			<texture>$VAR[HomeClearLogoVar]</texture>
-			<visible>!Skin.HasSetting(HomeClearLogo)</visible>
 			<visible>!Control.HasFocus(9000) + !Control.HasFocus(990)</visible>
 			<visible>![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
 			<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>

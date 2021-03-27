@@ -3591,7 +3591,7 @@
 	</variable>
 	<variable name="EpisodeThumbInfoVar">
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
-		<value>$INFO[ListItem.Thumb]</value>
+		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="InfoWatchThumbVar">
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>

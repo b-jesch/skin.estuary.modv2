@@ -261,10 +261,10 @@
 						<param name="label" value="$LOCALIZE[31033]" />
 						<param name="visible" value="Control.IsEnabled(7)" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="System.HasAddon(script.libraryeditor)">
+					<include content="InfoDialogSmallButton" condition="System.HasAddon(script.metadata.editor)">
 						<param name="id" value="442" />
 						<param name="icon" value="icons/infodialogs/edit.png" />
-						<param name="onclick_1" value="RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])" />
+						<param name="onclick_1" value="RunScript(script.metadata.editor,DBID=$INFO[ListItem.DBID])" />
 						<param name="label" value="$LOCALIZE[21435]" />
 					</include>
 					<include content="InfoDialogSmallButton">

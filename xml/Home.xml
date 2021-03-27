@@ -2354,49 +2354,8 @@
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="" />
 			</include>
-			<!--
-			<control type="image">
-				<top>0</top>
-				<width>284</width>
-				<height>115</height>
-				<centerleft>50%</centerleft>
-				<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-back.png</texture>
-				<visible>!String.IsEmpty(Control.GetLabel(55001))</visible>
-				<visible>!Skin.HasSetting(HomeClearLogo)</visible>
-				<visible>!Control.HasFocus(9000) + !ControlGroup(700).HasFocus</visible>
-				<visible>![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
-				<visible>!Skin.HasSetting(HomeClearLogoMenu) | [Skin.HasSetting(HomeClearLogoMenu) + [Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)]]</visible>
-				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-			</control>
-			<control type="image" id="55001">
-				<top>5</top>
-				<width>274</width>
-				<height>106</height>
-				<centerleft>50%</centerleft>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[HomeClearLogoVar]</texture>
-				<visible>!Skin.HasSetting(HomeClearLogo)</visible>
-				<visible>!Control.HasFocus(9000) + !ControlGroup(700).HasFocus</visible>
-				<visible>![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
-				<visible>!Skin.HasSetting(HomeClearLogoMenu) | [Skin.HasSetting(HomeClearLogoMenu) + [Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)]]</visible>
-				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-			</control>
-			<control type="image" id="55000">
-				<top>10</top>
-				<width>452</width>
-				<height>108</height>
-				<left>5</left>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="fallback.png">$VAR[HomeClearLogoVar]</texture>
-				<visible>!Skin.HasSetting(HomeClearLogo)</visible>
-				<visible>Skin.HasSetting(HomeClearLogoMenu)</visible>
-				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-				<animation effect="slide" end="-522,0" time="300" tween="sine" easing="out" condition="Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-			</control>
-			-->
 			<control type="group">
-				<visible>[!Skin.HasSetting(HomeClearLogo) + String.IsEqual(Control.GetLabel(55000),fallback.png)] | Skin.HasSetting(HomeClearLogo)</visible>
+				<visible>[!Skin.HasSetting(HomeClearLogo) + String.IsEqual(Control.GetLabel(55000),fallback.png)]</visible>
 				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
 				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="slide" end="-522,0" time="280" tween="sine" easing="out" condition="Skin.HasSetting(HideMainMenuWithWidgets) | Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>

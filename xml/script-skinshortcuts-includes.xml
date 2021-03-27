@@ -400,19 +400,22 @@
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">addons</property>
-			<property name="widget">PersonalWidgetPanel</property>
-			<property name="widgetName">40205</property>
+			<property name="widget">PersonalWidgetList</property>
+			<property name="widgetName">Smart Home</property>
 			<property name="background">special://skin/extras/home-images/addons.jpg</property>
 			<property name="ParentalControl">No</property>
 			<property name="widgetType" />
 			<property name="widgetTarget" />
-			<property name="widgetPath">PersonalWidgetPanel</property>
+			<property name="widgetPath">PersonalWidgetList</property>
 			<property name="widgetPath.9">plugin://script.program.fritzact</property>
 			<property name="widget.9">addon</property>
 			<property name="widgetName.9">10001</property>
 			<property name="widgetType.9">program</property>
 			<property name="widgetTarget.9">programs</property>
 			<property name="widgetAspect.9">40208</property>
+			<property name="widgetAspect.1">40140</property>
+			<property name="widgetAspect.2">40140</property>
+			<property name="widgetPath.1">plugin://script.program.fritzact?ts=$INFO[Window(Home).Property(fritzact.timestamp)]</property>
 			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">Skin.SetString(dialog_action,ActivateWindow(1100))</onclick>
 			<property name="path">Skin.SetString(dialog_action,ActivateWindow(1100))</property>
 			<property name="list">Skin.SetString(dialog_action,ActivateWindow(1100))</property>
@@ -12700,8 +12703,8 @@
 				<pagecontrol>22010</pagecontrol>
 				<include condition="!Skin.HasSetting(UseSmallerCategories)">PersonalWidgetListCategoriesBig</include>
 				<include condition="Skin.HasSetting(UseSmallerCategories)">PersonalWidgetListCategoriesSmall</include>
-				<include content="Widget">
-					<param name="content_path" value="" />
+				<include content="WidgetListSquare">
+					<param name="content_path" value="plugin://script.program.fritzact?ts=$INFO[Window(Home).Property(fritzact.timestamp)]" />
 					<param name="widget_header" value="" />
 					<param name="widget_header_focus" value="$VAR[WidgetLabelFocus2210017]" />
 					<param name="widget_target" value="" />
@@ -12709,7 +12712,7 @@
 					<param name="sortorder" value="" />
 					<param name="list_id" value="2210017" />
 				</include>
-				<include content="Widget">
+				<include content="WidgetListSquare">
 					<param name="content_path" value="" />
 					<param name="widget_header" value="" />
 					<param name="widget_header_focus" value="$VAR[WidgetLabelFocus2220017]" />

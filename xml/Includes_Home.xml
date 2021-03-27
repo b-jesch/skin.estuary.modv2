@@ -421,7 +421,7 @@
 				<onright/>
 				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HomeClearLogo)">Conditional</animation>
+				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="415" height="270">
 					<control type="group">
 						<left>80</left>
@@ -1074,7 +1074,7 @@
 				<right>55</right>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel) + !Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HomeClearLogo)">Conditional</animation>
+				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<control type="image">
 					<left>2</left>
 					<top>13</top>
@@ -1192,7 +1192,7 @@
 				<onright/>
 				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HomeClearLogo)">Conditional</animation>
+				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="310" height="430">
 					<control type="group">
 						<left>68</left>
@@ -1254,7 +1254,7 @@
 				<onright/>
 				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HomeClearLogo)">Conditional</animation>
+				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="340" height="290" condition="![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
 					<control type="group">
 						<left>70</left>
@@ -1351,7 +1351,7 @@
 				<onright/>
 				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HomeClearLogo)">Conditional</animation>
+				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="340" height="340" condition="![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
 					<control type="group">
 						<left>70</left>
@@ -1447,7 +1447,7 @@
 				<onright/>
 				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HomeClearLogo)">Conditional</animation>
+				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="340" height="410" condition="Skin.HasSetting(HideWidgetLabels)">
 					<control type="group">
 						<left>70</left>
@@ -1534,7 +1534,7 @@
 				<onright/>
 				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HomeClearLogo)">Conditional</animation>
+				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout height="210" width="680">
 					<control type="group">
 						<control type="image">
@@ -1897,7 +1897,7 @@
 				<onright/>
 				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HomeClearLogo)">Conditional</animation>
+				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="320" height="215">
 					<control type="group">
 						<left>70</left>

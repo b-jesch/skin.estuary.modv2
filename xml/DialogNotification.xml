@@ -26,7 +26,7 @@
 				<top>25</top>
 				<width>110</width>
 				<height>110</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<texture>DefaultIconInfo.png</texture>
 				<visible>String.IsEmpty(Control.GetLabel(400))</visible>
 			</control>
@@ -36,7 +36,7 @@
 				<top>25</top>
 				<width>110</width>
 				<height>110</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="fadelabel" id="401">
 				<description>Line 1 Label</description>
