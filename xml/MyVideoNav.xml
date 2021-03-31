@@ -592,7 +592,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font_flag</font>
-							<label>$VAR[Duration5083Var]</label>
+							<label>$VAR[DurationVar]</label>
 							<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 						</control>
 						<include content="MediaFlag">
@@ -666,7 +666,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font_flag</font>
-							<label>$VAR[Duration5094Var]</label>
+							<label>$VAR[DurationVar]</label>
 							<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 						</control>
 						<include content="MediaFlag">
@@ -740,7 +740,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font_flag</font>
-							<label>$VAR[Duration5084Var]</label>
+							<label>$VAR[DurationVar]</label>
 							<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 						</control>
 						<include content="MediaFlag">

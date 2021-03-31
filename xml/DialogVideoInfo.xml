@@ -92,7 +92,7 @@
 				<aspectratio align="right" aligny="top">keep</aspectratio>
 				<texture background="true" fallback="fallback.png">$VAR[ClearLogoVar]</texture>
 				<include>OpenClose_Right</include>
-				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)] + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
@@ -139,7 +139,7 @@
 						<ondown>5000</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
-						<visible>!String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 					</control>
 					<control type="button" id="138">
 						<left>-8</left>
@@ -155,7 +155,7 @@
 						<ondown>5000</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
-						<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>Skin.HasSetting(enable_LibraryClearLogo)</visible>
 					</control>
 					<control type="textbox">
 						<left>16</left>
@@ -166,7 +166,7 @@
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[PlotSpoilerInfoVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>!String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 					</control>
 					<control type="textbox">
 						<left>16</left>
@@ -177,7 +177,7 @@
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[PlotSpoilerInfoVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>Skin.HasSetting(enable_LibraryClearLogo)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="5000">
