@@ -2,6 +2,12 @@
 
 <B>3.0.7+matrix</B>
 
+- .13
+  * Rewrite of function "Jump to letter"
+  * Option for API key management in settings removed
+  * Behavior of widelist animation fixed if online content was requested
+  
+
 - .12
   * last added episodes widget fixed if no thumbnail is available
   * Expression for easter theme updated (2.04 - 5.04), missing runtime values in info views added
