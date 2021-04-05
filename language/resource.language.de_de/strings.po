@@ -867,12 +867,12 @@ msgstr "Software-Decoding"
 #: /xml/Variables.xml
 msgctxt "#40030"
 msgid "Plot masked to avoid spoilers."
-msgstr "Handlung ausblenden"
+msgstr "Handlung ausgeblendet, um Spoiler zu vermeiden."
 
 #: /xml/SkinSettings.xml
 msgctxt "#40031"
 msgid "Hide episodes plots to avoid spoilers"
-msgstr "Handlung von Episoden ausblenden"
+msgstr "Handlung von ungesehenen Episoden ausblenden"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40032"
@@ -1022,7 +1022,7 @@ msgstr "Pause"
 #: /xml/DialogMusicInfo.xml
 msgctxt "#40061"
 msgid "Press [B]OK[/B] to read description"
-msgstr "Drücken Sie [B]OK[/B], um die Beschreibung zu lesen"
+msgstr "Drücke [B]OK[/B], um die Beschreibung zu lesen"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40062"
@@ -1347,7 +1347,7 @@ msgstr "Aussehen des Power-Menüs"
 #: /xml/Custom_1124_SettingsTVShowsWidgets.xml
 msgctxt "#40126"
 msgid "Hide thumbs episodes to avoid spoilers"
-msgstr "Miniaturansichten von Episoden ausblenden"
+msgstr "Miniaturansichten von ungesehenen Episoden ausblenden"
 
 #: /shortcuts/overrides.xml
 msgctxt "#40127"
@@ -2091,6 +2091,10 @@ msgstr "Meine Bewertungen und Bewertungen des Scrapers"
 msgctxt "#40288"
 msgid "Show extended info"
 msgstr "Zeige weitere Informationen"
+
+msgctxt "#40291"
+msgid "Press [B]DOWN[/B] to show info from selected movie"
+msgstr "Nach [B]UNTEN[/B] drücken, um Infos zum ausgewählten Film anzuzeigen"
 
 msgctxt "#40350"
 msgid "Channel groups"

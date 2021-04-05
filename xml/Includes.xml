@@ -200,6 +200,7 @@
 							</control>
 						</control>
 					</focusedlayout>
+					<content>plugin://script.embuary.helper/?info=jumptoletter&amp;showall=false&amp;reload=$INFO[Container.NumItems]</content>
 				</control>
 				<control type="group">
 					<left>295</left>

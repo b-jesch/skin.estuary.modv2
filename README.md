@@ -2,6 +2,16 @@
 
 <B>3.0.7+matrix</B>
 
+- .13 
+  * Rewrite of function "Jump to letter"
+  * Option for API key management removed
+  
+
+- .12 
+  * last added episodes widget fixed if no thumbnail is available
+  * Expression for easter theme updated (2.04 - 5.04), missing runtime values in info views added
+  
+
 - .11
   * Library editor changed against Metadata editor (settings window)
   * Backup/Restore items from settings removed (use Backup Tools instead)

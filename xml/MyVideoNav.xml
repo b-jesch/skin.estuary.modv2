@@ -33,7 +33,6 @@
 				<visible>Control.IsVisible(55)</visible>
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
-				<visible>!Window.IsVisible(DialogBusy.xml)</visible>
 			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>

@@ -553,11 +553,6 @@
 					<onclick>Skin.ToggleSetting(KioskMode)</onclick>
 					<selected>Skin.HasSetting(KioskMode)</selected>
 				</control>
-				<control type="button" id="508">
-					<label>$LOCALIZE[40229]</label>
-					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(script.module.metadatautils)">Addon.OpenSettings(script.module.metadatautils)</onclick>
-				</control>
 				<control type="radiobutton" id="505">
 					<label>$LOCALIZE[40032]</label>
 					<include>DefaultSettingButton</include>
@@ -712,12 +707,6 @@
 					<label>$LOCALIZE[40222]</label>
 					<onclick>Skin.ToggleSetting(TrailerFullscreen)</onclick>
 					<selected>Skin.HasSetting(TrailerFullscreen)</selected>
-				</control>
-				<control type="radiobutton" id="905">
-					<label>$LOCALIZE[40149]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(ForcedViews.Enabled)</onclick>
-					<selected>Skin.HasSetting(ForcedViews.Enabled)</selected>
 				</control>
 			</control>
 			<control type="grouplist" id="700">

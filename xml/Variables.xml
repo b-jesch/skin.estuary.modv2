@@ -334,6 +334,7 @@
 	</variable>
 
 	<variable name="DurationVar">
+		<value condition="Control.HasFocus(60)">$INFO[Container(60).ListItem.Duration(h)]h$INFO[Container(60).ListItem.Duration(mm)]</value>
 		<value>$INFO[ListItem.Duration(h)]h$INFO[ListItem.Duration(mm)]</value>
 	</variable>
 	<variable name="PlayerDurationVar">
@@ -644,7 +645,8 @@
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.landscape))">$INFO[Listitem.Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(landscape))">$INFO[Listitem.Art(landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(fanart)) + !String.StartsWith(ListItem.FolderPath,plugin://)">$INFO[ListItem.Art(fanart)]</value>
-		<value>$INFO[ListItem.Thumb]</value>
+		<value condition="!String.IsEmpty(Listitem.Thumb)">$INFO[ListItem.Thumb]</value>
+		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="WidgetThumbViewVar">
 		<value condition="!String.IsEmpty(Listitem.Art(season.landscape))">$INFO[Listitem.Art(season.landscape)]</value>
@@ -1004,18 +1006,18 @@
 		<value>ffffffff</value>
 	</variable>
 	<variable name="SkinColorVar">
-		<value condition="System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes)">ffe30022</value>
-		<value condition="System.Date(10-30,11-01) + !Skin.HasSetting(DisableThemes)">fff38844</value>
-		<value condition="System.Date(03-31,04-02) + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
-		<value condition="System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
+		<value condition="$EXP[ChristmasTheme] + !Skin.HasSetting(DisableThemes)">ffe30022</value>
+		<value condition="$EXP[HalloweenTheme] + !Skin.HasSetting(DisableThemes)">fff38844</value>
+		<value condition="$EXP[EasterTheme] + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
+		<value condition="$EXP[ValentineTheme] + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
 		<value>button_focus</value>
 	</variable>
 	<variable name="GradientColorVar">
-		<value condition="System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes)">ffe30022</value>
-		<value condition="System.Date(10-30,11-01) + !Skin.HasSetting(DisableThemes)">fff38844</value>
-		<value condition="System.Date(03-31,04-02) + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
-		<value condition="System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
+		<value condition="$EXP[ChristmasTheme] + !Skin.HasSetting(DisableThemes)">ffe30022</value>
+		<value condition="$EXP[HalloweenTheme] + !Skin.HasSetting(DisableThemes)">fff38844</value>
+		<value condition="$EXP[EasterTheme] + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
+		<value condition="$EXP[ValentineTheme] + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
 		<value>gradient_focus</value>
 	</variable>

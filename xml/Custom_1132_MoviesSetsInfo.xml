@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1132" type="dialog">
-	<defaultcontrol always="true">100</defaultcontrol>
+	<defaultcontrol always="true">5003</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
@@ -78,8 +78,8 @@
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">SetProperty(TextViewer_Header,$LOCALIZE[207],home)</onclick>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">SetProperty(TextViewer_Text,$ESCINFO[ListItem.Plot],home)</onclick>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">ActivateWindow(1102)</onclick>
-						<onleft>138</onleft>
-						<onright>138</onright>
+						<onleft>5003</onleft>
+						<onright>5003</onright>
 						<ondown>5000</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
@@ -131,7 +131,7 @@
 					<height>400</height>
 					<onleft>5000</onleft>
 					<onright>5000</onright>
-					<onup>140</onup>
+					<onup>5003</onup>
 					<ondown>60</ondown>
 					<align>left</align>
 					<itemgap>-16</itemgap>
@@ -494,8 +494,19 @@
 			<visible>Control.HasFocus(5002)</visible>
 		</control>
 		<control type="button" id="5002">
-			<onup condition="!Control.IsVisible(60)">SetFocus(5000)</onup>
+			<onup condition="!Control.IsVisible(60)">SetFocus(5003)</onup>
 			<onup condition="Control.IsVisible(60)">SetFocus(60)</onup>
+			<visible allowhiddenfocus="true">false</visible>
+			<width>1</width>
+			<height>1</height>
+			<texturefocus />
+			<texturenofocus />
+		</control>
+		<control type="button" id="5003">
+			<ondown condition="!Control.IsVisible(60)">SetFocus(5001)</ondown>
+			<ondown condition="Control.IsVisible(60)">SetFocus(60)</ondown>
+			<onleft>140</onleft>
+			<onright>140</onright>
 			<visible allowhiddenfocus="true">false</visible>
 			<width>1</width>
 			<height>1</height>
