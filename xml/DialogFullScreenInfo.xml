@@ -50,7 +50,7 @@
 					<top>0</top>
 					<width>300</width>
 					<height>427</height>
-					<aspectratio>stretch</aspectratio>
+					<aspectratio>keep</aspectratio>
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPlayerPosterVar]</texture>
 				</control>
 			</control>

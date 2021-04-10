@@ -115,14 +115,22 @@
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20150]</label>
+						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
+						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
+						<onClick>dialog.close(all,true)</onClick>
+						<visible>!System.HasAlarm(shutdowntimer) | System.HasAddon(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
@@ -312,14 +320,22 @@
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20150]</label>
+						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
+						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
+						<onClick>dialog.close(all,true)</onClick>
+						<visible>!System.HasAlarm(shutdowntimer) + System.HasAddon(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !SystemHasAddon(service.sleepy.watchdog)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
@@ -428,14 +444,22 @@
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20150]</label>
+						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
+						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
+						<onClick>dialog.close(all,true)</onClick>
+						<visible>!System.HasAlarm(shutdowntimer) + System.HasAddon(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>

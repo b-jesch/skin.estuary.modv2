@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.0.7+matrix.13" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.0.7+matrix.14" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -42,19 +42,23 @@
 			</assets>
 <news>
 [B]3.0.7+matrix[/B]
+- .14 Media selection for splash screen removed (causes crashes on startup sometimes)
+      Introducing addon "Sleepy Watchdog" as sleeptimer in shutdown menu
+      Fix of banner and artist clearart positions in music views if they both enabled at same time
+      Clearlogo on main music views removed (when overlapping other items)
 - .13 Rewrite of function "Jump to letter"
-	  Option for API key management in settings removed
-	  Behavior of widelist animation fixed if online content was requested
+      Option for API key management in settings removed
+      Behavior of widelist animation fixed if online content was requested
 - .12 last added episodes widget fixed if no thumbnail is available
-	  Expression for easter theme updated (2.04 - 5.04), missing runtime values in info views added
+      Expression for easter theme updated (2.04 - 5.04), missing runtime values in info views added
 - .11 Library editor changed against Metadata editor (settings window)
-	  Backup/Restore items from settings removed (use Backup Tools instead)
-	  Some graphics changed
+      Backup/Restore items from settings removed (use Backup Tools instead)
+      Some graphics changed
 - .10 Dependencies of script.artworker.helper removed
-	  Rework of animated background (Fanart)
+      Rework of animated background (Fanart)
 - .9  Clearlogo from home screen and several main views removed (when overlapping other items)
       Settings window updated (required and optional addons)
-	  Artwork Dump instead of Artwork Helper (n.a. for Matrix) implemented
+      Artwork Dump instead of Artwork Helper (n.a. for Matrix) implemented
 - .8  Triple list fixed
 - .7  Mosaic view fixed, next unseen episodes reimplemented, start implementation of embuary helper
 - .5  Dependencies of script.skinhelper completely removed

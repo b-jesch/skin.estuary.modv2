@@ -132,37 +132,15 @@
 				<include>OpenClose_Left</include>
 				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 				<visible>!ListItem.IsParentFolder</visible>
-			<control type="image">
-				<top>15</top>
-				<width>284</width>
-				<height>110</height>
-				<left>155</left>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[LibraryClearLogoVar]</texture>
-				<visible>Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505)</visible>
-			</control>
-			</control>
-			<control type="group">
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
-				<visible>[Control.IsVisible(500) | Control.IsVisible(504)] + !Control.HasFocus(531)</visible>
-				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-			<control type="image">
-				<top>0</top>
-				<width>284</width>
-				<height>115</height>
-				<centerleft>50%</centerleft>
-				<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-back.png</texture>
-				<visible>!String.IsEmpty(Control.GetLabel(25001))</visible>
-			</control>
-			<control type="image" id="25001">
-				<top>5</top>
-				<width>274</width>
-				<height>105</height>
-				<centerleft>50%</centerleft>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[LibraryClearLogoVar]</texture>				
-			</control>
+				<control type="image">
+					<top>15</top>
+					<width>284</width>
+					<height>110</height>
+					<left>155</left>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[LibraryClearLogoVar]</texture>
+					<visible>Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505)</visible>
+				</control>
 			</control>
 			<control type="group">
 				<depth>DepthBars</depth>

@@ -3306,7 +3306,7 @@
 					<bottom>5</bottom>
 					<width>440</width>
 					<height>610</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
+					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true" fallback="DefaultVideoCover.png">$VAR[NowPlayingPosterVar]</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -3433,7 +3433,7 @@
 						<texture background="true">$VAR[BannerPlayerArtVar]</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio] + [[String.IsEmpty(Player.Art(clearart)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Clearart))] | Skin.HasSetting(enable_artistclearart)]</visible>
+						<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio] + [String.IsEmpty(Player.Art(clearart)) + Skin.HasSetting(enable_artistclearart)]</visible>
 					</control>
 					<control type="image">
 						<bottom>294</bottom>
@@ -3444,7 +3444,7 @@
 						<texture background="true">$VAR[BannerPlayerArtVar]</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio] + ![[String.IsEmpty(Player.Art(clearart)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Clearart))] | Skin.HasSetting(enable_artistclearart)]</visible>
+						<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio] + [!String.IsEmpty(Player.Art(clearart)) | !Skin.HasSetting(enable_artistclearart)]</visible>
 					</control>
 					<control type="group">
 						<height>151</height>

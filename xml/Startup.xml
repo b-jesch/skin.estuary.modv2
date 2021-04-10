@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">8000</defaultcontrol>
 	<onload>ClearProperty(SplashStarted,home)</onload>
 	<controls>
+		<!--
 		<control type="videowindow">
 			<include>FullScreenDimensions</include>
 		</control>
@@ -11,6 +12,7 @@
 			<aspectratio>scale</aspectratio>
 			<texture background="true">$INFO[Window(Home).Property(SkinHelper.SplashScreen)]</texture>
 		</control>
+		-->
 		<control type="group">
 			<visible>String.IsEmpty(Skin.String(SplashScreen)) + !Skin.HasSetting(EnableSpashScreen)</visible>
 			<control type="image">

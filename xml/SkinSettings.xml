@@ -393,7 +393,18 @@
 					<selected>System.HasAddon(script.service.gto)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
-				<control type="radiobutton" id="310">
+				<control type="radiobutton" id="309">
+					<label>Sleepy Watchdog $INFO[System.AddonVersion(service.sleepy.watchdog),(,)]</label>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(service.sleepy.watchdog)">InstallAddon(service.sleepy.watchdog)</onclick>
+					<onclick condition="System.HasAddon(service.sleepy.watchdog)">Addon.OpenSettings(service.sleepy.watchdog)</onclick>
+					<selected>System.HasAddon(service.sleepy.watchdog)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
+				<control type="radiobutton" id="311">
 					<label>Skin Helper Service ColorPicker $INFO[System.AddonVersion(script.skin.helper.colorpicker),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
@@ -526,14 +537,6 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(EnableSpashScreen)</onclick>
 					<selected>!Skin.HasSetting(EnableSpashScreen)</selected>
-				</control>
-				<control type="button" id="502">
-					<label>  ∟$LOCALIZE[40065]</label>
-					<label2>$VAR[Label_SkinSetting_Startup]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(SplashScreen)">Skin.SetFile(SplashScreen)</onclick>
-					<onclick condition="Skin.String(SplashScreen)">Skin.Reset(SplashScreen)</onclick>
-					<visible>!Skin.HasSetting(EnableSpashScreen)</visible>
 				</control>
 				<control type="radiobutton" id="501">
 					<label>$LOCALIZE[40259]</label>

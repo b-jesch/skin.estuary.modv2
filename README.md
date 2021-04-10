@@ -1,6 +1,12 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition
 
 <B>3.0.7+matrix</B>
+- .14
+  * Media selection for splash screen removed (causes crashes on startup sometimes)
+  * Introducing addon "Sleepy Watchdog" as sleeptimer in shutdown menu
+  * Fix of banner and artist clearart positions in music views if they both enabled at same time
+  * Clearlogo on main music views removed (when overlapping other items)
+  
 
 - .13
   * Rewrite of function "Jump to letter"
