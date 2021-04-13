@@ -1,6 +1,10 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition
 
 <B>3.0.7+matrix</B>
+- .15 
+  * Portuguese (Brazil) translation added, many thanks to Fábio Vieitas Marques
+  * Visibility of border and border color of radio and stream covers now dependend to border settings in skin setup, this allows shaped station logos
+
 - .14
   * Media selection for splash screen removed (causes crashes on startup sometimes)
   * Introducing addon "Sleepy Watchdog" as sleeptimer in shutdown menu

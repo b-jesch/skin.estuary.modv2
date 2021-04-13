@@ -3261,7 +3261,7 @@
 					<bottom>245</bottom>
 					<width>360</width>
 					<height>360</height>
-					<visible>Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_disc)</visible>
+					<visible>Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_disc) + ![VideoPlayer.Content(LiveTV) | Pvr.IsPlayingRadio | Player.IsInternetStream]</visible>
 					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
 					<control type="image" id="88888">
 						<left>0</left>
@@ -3359,16 +3359,17 @@
 					<visible>VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="image">
+					<description>Cover Live TV, RDS Radio, Stream (Addon)</description>
 					<depth>DepthOSD+</depth>
 					<left>10</left>
 					<bottom>5</bottom>
 					<width>440</width>
 					<height>440</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" colordiffuse="FF1E1E1E">colors/white.png</texture>
+					<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+					<visible>Skin.HasSetting(show_borders) + [[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]]</visible>
 				</control>
 				<control type="image">
 					<depth>DepthOSD+</depth>
@@ -3383,10 +3384,10 @@
 				</control>
 				<control type="image">
 					<depth>DepthOSD+</depth>
-					<left>20</left>
-					<bottom>15</bottom>
-					<width>420</width>
-					<height>420</height>
+					<left>14</left>
+					<bottom>9</bottom>
+					<width>432</width>
+					<height>432</height>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<texture background="true" fallback="DefaultAudio.png">$INFO[Player.Art(thumb)]</texture>
 					<bordersize>20</bordersize>
