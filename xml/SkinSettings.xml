@@ -393,7 +393,7 @@
 					<selected>System.HasAddon(script.service.gto)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
-				<control type="radiobutton" id="309">
+				<control type="radiobutton" id="310">
 					<label>Sleepy Watchdog $INFO[System.AddonVersion(service.sleepy.watchdog),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
@@ -754,13 +754,13 @@
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
 				</control>
-				<control type="button" id="714">
+				<control type="button" id="706">
 					<label>  ∟$LOCALIZE[40244]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1137)</onclick>
 					<visible>!Skin.HasSetting(hide_mediaflags)</visible>
 				</control>
-				<control type="button" id="706">
+				<control type="button" id="707">
 					<label>  ∟$LOCALIZE[40093]</label>
 					<label2>$VAR[Label_SkinSetting_MediaFlagsColor]</label2>
 					<include>DefaultSettingButton</include>
@@ -768,13 +768,19 @@
 					<onclick condition="Skin.String(MediaFlagsColor)">Skin.Reset(MediaFlagsColor)</onclick>
 					<visible>!Skin.HasSetting(hide_mediaflags)</visible>
 				</control>
-				<control type="radiobutton" id="713">
+				<control type="radiobutton" id="708">
 					<label>$LOCALIZE[40238]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(show_borders)</onclick>
 					<selected>Skin.HasSetting(show_borders)</selected>
 				</control>
-				<control type="button" id="712">
+				<control type="radiobutton" id="709">
+					<label>  ∟$LOCALIZE[40352]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(stationlogo_border)</onclick>
+					<visible>Skin.HasSetting(show_borders)</visible>
+				</control>
+				<control type="button" id="710">
 					<label>  ∟$LOCALIZE[40021]</label>
 					<label2>$VAR[Label_SkinSetting_BorderColor]</label2>
 					<include>DefaultSettingButton</include>
@@ -782,13 +788,13 @@
 					<onclick condition="Skin.String(BorderColor)">Skin.Reset(BorderColor)</onclick>
 					<visible>Skin.HasSetting(show_borders)</visible>
 				</control>
-				<control type="button" id="707">
+				<control type="button" id="711">
 					<label>$LOCALIZE[31024]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SelectBool(31024, 40148|, 40232|circle_rating, 40233|circle_userrating, 40281|circle_bothrating)</onclick>
 					<label2>$VAR[RatingSettingLabel2Var]</label2>
 				</control>
-				<control type="button" id="711">
+				<control type="button" id="712">
 					<label>  ∟$VAR[Label_SkinSetting_RatingColor]</label>
 					<label2>$VAR[Label_SkinSetting_RatingStringColor]</label2>
 					<include>DefaultSettingButton</include>
@@ -797,7 +803,7 @@
 					<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)</visible>
 					<enable>!$EXP[EasterTheme]</enable>
 				</control>
-				<control type="button" id="715">
+				<control type="button" id="713">
 					<label>  ∟$LOCALIZE[40283]</label>
 					<label2>$VAR[Label_SkinSetting_UserRatingStringColor]</label2>
 					<include>DefaultSettingButton</include>
@@ -805,13 +811,13 @@
 					<onclick condition="Skin.String(UserRatingStringColor)">Skin.Reset(UserRatingStringColor)</onclick>
 					<visible>Skin.HasSetting(circle_bothrating)</visible>
 				</control>
-				<control type="radiobutton" id="708">
+				<control type="radiobutton" id="714">
 					<label>$LOCALIZE[40085]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(background_showvideo)</onclick>
 					<selected>!Skin.HasSetting(background_showvideo)</selected>
 				</control>
-				<control type="radiobutton" id="709">
+				<control type="radiobutton" id="715">
 					<label>$LOCALIZE[40084]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(background_showvisualisation)</onclick>

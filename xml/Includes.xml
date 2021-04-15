@@ -3369,7 +3369,7 @@
 					<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders) + [[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]]</visible>
+					<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border) + [[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]]</visible>
 				</control>
 				<control type="image">
 					<depth>DepthOSD+</depth>
