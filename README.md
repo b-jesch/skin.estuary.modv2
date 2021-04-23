@@ -1,4 +1,9 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition
+<B>3.0.8+matrix</B>
+- .0
+  * "Add" Button in Default Dialog Select Window reimplemented
+  
+Note: In my opinion, the adaptation to Kodi 19 is complete. Future changes will only be bug fixes, as far as I am able to do  it.
 
 <B>3.0.7+matrix</B>
 - .16 

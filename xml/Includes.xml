@@ -3261,7 +3261,7 @@
 					<bottom>245</bottom>
 					<width>360</width>
 					<height>360</height>
-					<visible>Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_disc) + ![VideoPlayer.Content(LiveTV) | Pvr.IsPlayingRadio | Player.IsInternetStream]</visible>
+					<visible>Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_disc)</visible>
 					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
 					<control type="image" id="88888">
 						<left>0</left>
@@ -3282,7 +3282,7 @@
 						<aligny>center</aligny>
 						<font>Font-Disc</font>
 						<label>$VAR[MusicPlayerDiscTitleVar]</label>
-						<textcolor>black</textcolor>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 						<visible>String.IsEqual(Control.GetLabel(88888),osd/cd.png)</visible>
 					</control>
@@ -3293,7 +3293,7 @@
 						<height>73</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>Font-Disc</font>
+						<font>Font-Disc2</font>
 						<label>$VAR[MusicPlayerDiscAlbumVar]</label>
 						<textcolor>black</textcolor>
 						<wrapmultiline>true</wrapmultiline>
@@ -3306,7 +3306,7 @@
 					<bottom>5</bottom>
 					<width>440</width>
 					<height>610</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
+					<aspectratio aligny="bottom">scale</aspectratio>
 					<texture background="true" fallback="DefaultVideoCover.png">$VAR[NowPlayingPosterVar]</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>

@@ -23,6 +23,10 @@
         <value condition="!String.IsEmpty(Skin.String(global-background))">$INFO[Skin.String(global-background)]</value>
         <value>$LOCALIZE[40064]</value>
     </variable>
+	<variable name="WidgetViewPoster">
+        <value condition="!Skin.HasSetting(use_posterview)">WidgetListSquare</value>
+        <value>WidgetListPoster</value>
+    </variable>
 	<variable name="NextAiredStatutVar">
 		<value condition="Control.HasFocus(200) + String.Contains(Container(200).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
 		<value condition="Control.HasFocus(200) + String.Contains(Container(200).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
@@ -664,7 +668,8 @@
 		<value>$INFO[MusicPlayer.Title]</value>
 	</variable>
 	<variable name="MusicPlayerDiscAlbumVar">
-		<value condition="Pvr.IsPlayingRadio">$INFO[MusicPlayer.Title]</value>
+		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]</value>
+		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
 		<value>$INFO[MusicPlayer.Album]</value>
 	</variable>
 	<variable name="PlayerFanartVar">
