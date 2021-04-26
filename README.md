@@ -1,13 +1,19 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition
 <B>3.0.8+matrix</B>
+- .1
+  * Display of publication year of movies/videos/tv shows in titles is now switchable
+  *  Dutch translation added, thanks to "theghostnl" from Kodi forum
+  
+
 - .0
   * "Add" Button in Default Dialog Select Window reimplemented
+
   
 Note: In my opinion, the adaptation to Kodi 19 is complete. Future changes will only be bug fixes, as far as I am able to do  it.
 
 <B>3.0.7+matrix</B>
 - .16 
-  * Bugfix: Settings window of skin shortcuts addon reimplemented
+  * Bugfix: missing settings window of skin shortcuts addon reimplemented
   * Addon dependencies updated
 
   
@@ -41,7 +47,7 @@ Note: In my opinion, the adaptation to Kodi 19 is complete. Future changes will 
     
 
 - .10
-  * Dependencies of script.artworker.helper removed
+  * Dependencies of script.artwork.helper removed
   * Rework of animated background (Fanart)
 
     

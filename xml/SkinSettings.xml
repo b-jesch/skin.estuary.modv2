@@ -680,6 +680,12 @@
 					<onclick>Skin.ToggleSetting(hide_thumbforspoiler)</onclick>
 					<selected>Skin.HasSetting(hide_thumbforspoiler)</selected>
 				</control>
+				<control type="radiobutton" id="905">
+					<label>$LOCALIZE[40354]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(hide_pubyear)</onclick>
+					<selected>Skin.HasSetting(hide_pubyear)</selected>
+				</control>
 				<control type="radiobutton" id="917">
 					<label>$LOCALIZE[40164]</label>
 					<include>DefaultSettingButton</include>

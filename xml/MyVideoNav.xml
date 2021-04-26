@@ -54,8 +54,19 @@
 						<align>center</align>
 						<height>110</height>
 						<font>font36_title</font>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!ListItem.IsCollection + !Skin.HasSetting(hide_pubyear)</visible>
+					</control>
+					<control type="textbox">
+						<top>120</top>
+						<left>30</left>
+						<width>537</width>
+						<aligny>center</aligny>
+						<align>center</align>
+						<height>110</height>
+						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
-						<visible>!ListItem.IsCollection</visible>
+						<visible>!ListItem.IsCollection + Skin.HasSetting(hide_pubyear)</visible>
 					</control>
 					<control type="textbox">
 						<top>120</top>
