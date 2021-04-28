@@ -27,7 +27,7 @@
 					<top>0</top>
 					<width>300</width>
 					<height>427</height>
-					<aspectratio>keep</aspectratio>
+					<aspectratio>scale</aspectratio>
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
 					<visible>!String.IsEqual(ListItem.DBType,musicvideo)</visible>
 				</control>

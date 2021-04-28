@@ -680,6 +680,12 @@
 					<onclick>Skin.ToggleSetting(hide_thumbforspoiler)</onclick>
 					<selected>Skin.HasSetting(hide_thumbforspoiler)</selected>
 				</control>
+				<control type="radiobutton" id="905">
+					<label>$LOCALIZE[40354]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(hide_pubyear)</onclick>
+					<selected>Skin.HasSetting(hide_pubyear)</selected>
+				</control>
 				<control type="radiobutton" id="917">
 					<label>$LOCALIZE[40164]</label>
 					<include>DefaultSettingButton</include>
@@ -778,6 +784,7 @@
 					<label>  ∟$LOCALIZE[40352]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(stationlogo_border)</onclick>
+					<selected>Skin.HasSetting(stationlogo_border)</selected>
 					<visible>Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="button" id="710">
@@ -1048,6 +1055,12 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(UseSmallerCategories)</onclick>
 					<selected>Skin.HasSetting(UseSmallerCategories)</selected>
+				</control>
+				<control type="radiobutton" id="10015">
+					<label>$LOCALIZE[40353]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(use_posterview)</onclick>
+					<selected>Skin.HasSetting(use_posterview)</selected>
 				</control>
 				<control type="radiobutton" id="10018">
 					<label>$LOCALIZE[40170]</label>
