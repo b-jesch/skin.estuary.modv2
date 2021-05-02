@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.0.8+matrix.1" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.0.8+matrix.2" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -8,7 +8,7 @@
 		<import addon="script.embuary.helper" version="2.0.7"/>
 		<import addon="script.embuary.info" version="2.0.7"/>
 	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
+	<extension point="xbmc.gui.skin" debugging="true">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
 		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
 		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
@@ -44,6 +44,12 @@
 			</assets>
 <news>
 [B]3.0.8+matrix[/B]
+- .2  Relaunch weather fanart on main screen and selected weather widget
+      Fanart view fixed
+      Several music and concert views fixed
+      Reboot to NAND option in shutdown menu added
+      Some conditions of selecting artworks on music visualization changed (experimental)
+      Minor fixes
 - .1  Display of publication year of movies/videos/tv shows in titles is now switchable
       Dutch translation added, thanks to "theghostnl" from Kodi forum
 - .0  "Add" Button in Default Dialog Select Window reimplemented

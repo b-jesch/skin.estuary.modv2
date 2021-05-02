@@ -90,13 +90,13 @@
 					</control>
 				</control>	
 				</focusedlayout>
-				<itemlayout height="300" width="300" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://plugin.audio)">
+				<itemlayout height="300" width="300" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)] | String.StartsWith(Container.FolderPath,plugin://plugin.audio)">
 					<control type="image">
 						<left>8</left>
 						<top>8</top>
 						<width>334</width>
 						<height>334</height>
-						<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
+						<texture colordiffuse="$VAR[BorderColorVar]">colors/black.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
@@ -107,7 +107,7 @@
 						<top>10</top>
 						<width>330</width>
 						<height>330</height>
-						<texture fallback="DefaultAudio.png" background="true">$VAR[ShiftThumbVar]</texture>
+						<texture fallback="DefaultAudio.png" background="true">$VAR[InfoWallThumbVar]</texture>
 						<bordersize>20</bordersize>
 						<aspectratio>scale</aspectratio>
 						<visible>Skin.HasSetting(show_borders)</visible>
@@ -117,7 +117,7 @@
 						<top>10</top>
 						<width>330</width>
 						<height>330</height>
-						<texture fallback="DefaultAudio.png" background="true">$VAR[ShiftThumbVar]</texture>
+						<texture fallback="DefaultAudio.png" background="true">$VAR[InfoWallThumbVar]</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 						<aspectratio>scale</aspectratio>
@@ -142,7 +142,7 @@
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Container.Content(musicvideos) + Skin.HasSetting(show_borders)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="300" width="300" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://plugin.audio)">
+				<focusedlayout height="300" width="300" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)] | String.StartsWith(Container.FolderPath,plugin://plugin.audio)">
 				<control type="group">
 					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
             			<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
@@ -170,7 +170,7 @@
 							<top>10</top>
 							<width>330</width>
 							<height>330</height>
-							<texture fallback="DefaultAudio.png" background="true">$VAR[ShiftThumbVar]</texture>
+							<texture fallback="DefaultAudio.png" background="true">$VAR[InfoWallThumbVar]</texture>
 							<bordersize>20</bordersize>
 							<aspectratio>scale</aspectratio>
 						</control>
@@ -208,13 +208,13 @@
 					</control>
 				</control>	
 				</focusedlayout>
-				<itemlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
+				<itemlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
 					<control type="image">
 						<left>8</left>
 						<top>8</top>
 						<width>244</width>
 						<height>334</height>
-						<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
+						<texture colordiffuse="$VAR[BorderColorVar]">colors/black.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
@@ -275,7 +275,7 @@
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
+				<focusedlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
 				<control type="group">
 					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
             			<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />

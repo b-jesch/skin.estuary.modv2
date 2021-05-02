@@ -540,6 +540,18 @@
 					<visible>Control.IsVisible(55)</visible>
 				</control>
 			</control>
+			<control type="image">
+				<top>15</top>
+				<width>220</width>
+				<height>85</height>
+				<right>484</right>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$VAR[LibraryClearLogoVar]</texture>
+				<visible>Control.IsVisible(502)</visible>
+				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
+				<include>OpenClose_Right</include>
+			</control>
 			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>

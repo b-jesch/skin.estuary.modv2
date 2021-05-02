@@ -163,6 +163,14 @@
 					<selected>!Skin.HasSetting(hide_background_fanart)</selected>
 					<onclick>Skin.ToggleSetting(hide_background_fanart)</onclick>
 				</control>
+				<control type="radiobutton" id="203">
+					<label>$LOCALIZE[40081]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(enable_artistslideshow)</selected>
+					<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
+					<onclick condition="System.HasAddon(script.artistslideshow)">Skin.ToggleSetting(enable_artistslideshow)</onclick>
+					<enable>!Skin.HasSetting(hide_background_fanart)</enable>
+				</control>
 				<control type="radiobutton" id="204">
 					<label>$LOCALIZE[40082]</label>
 					<include>DefaultSettingButton</include>
@@ -503,7 +511,18 @@
 					<selected>System.HasAddon(script.tv.show.next.aired)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
-				<control type="radiobutton" id="320">
+				<control type="label" id="30016">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>70</height>
+					<label>$LOCALIZE[40355]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="radiobutton" id="321">
 					<label>Movie Genres Icons for Estuary MOD V2 $INFO[System.AddonVersion(resource.images.moviegenreicons.estuarymod),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
@@ -895,10 +914,9 @@
 					<label>$LOCALIZE[31062]</label>
 					<label2>$VAR[Label_SkinSetting_WeatherFanart]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(script.image.resource.select) + System.HasAddon(resource.images.weatherfanart.multi)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
+					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-					<onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
-					<enable>!Skin.HasSetting(show_fanart)</enable>
+					<enable>Skin.HasSetting(show_fanart)</enable>
 				</control>
 				<control type="button" id="609">
 					<label>$LOCALIZE[40062]</label>
