@@ -1,5 +1,9 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition
 <B>3.0.8+matrix</B>
+- .3
+  * Some language strings updated
+
+
 - .2
   * Relaunch weather fanart on main screen and selected weather widget
   * Fanart view fixed
