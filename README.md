@@ -1,8 +1,21 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition
 <B>3.0.8+matrix</B>
+- .3
+  * Some language strings updated
+
+
+- .2
+  * Relaunch weather fanart on main screen and selected weather widget
+  * Fanart view fixed
+  * Several music and concert views fixed
+  * Reboot to NAND option in shutdown menu added
+  * Some conditions of selecting artworks on music visualization changed (experimental)
+  * Minor fixes
+  
+  
 - .1
   * Display of publication year of movies/videos/tv shows in titles is now switchable
-  *  Dutch translation added, thanks to "theghostnl" from Kodi forum
+  * Dutch translation added, thanks to "theghostnl" from Kodi forum
   
 
 - .0

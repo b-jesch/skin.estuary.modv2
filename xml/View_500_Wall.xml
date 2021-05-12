@@ -26,13 +26,13 @@
 				<animation effect="slide" end="22,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9) + [Container.Content(episodes) | Container.Content(videos) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | Container.Content(addons)]">Conditional</animation>
 				<animation effect="slide" end="118,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9) + Container.Content(images)">Conditional</animation>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | Container.Content(addons) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
-				<itemlayout height="445" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
+				<itemlayout height="445" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
 					<control type="group">
 						<top>145</top>
 						<include>InfoWallMovieLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="445" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
+				<focusedlayout height="445" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
@@ -89,7 +89,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="400" width="300" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)">
+				<itemlayout height="400" width="300" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)]">
 					<control type="group">
 						<top>150</top>
 						<include content="InfoWallMusicLayout">
@@ -97,7 +97,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="400" width="300" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)">
+				<focusedlayout height="400" width="300" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<top>150</top>

@@ -287,7 +287,7 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[FanartAnimated]</texture>
-			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Control.IsVisible(502) | [Window.IsVisible(DialogVideoInfo.xml) + !Player.HasVideo]</visible>
 		</control>
 	</include>
 	<include name="HiddenObject">
@@ -3547,7 +3547,19 @@
 						<font>font37</font>
 						<scroll>true</scroll>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>Window.IsVisible(MusicVisualisation.xml)</visible>
+						<visible>Window.IsVisible(MusicVisualisation.xml) + String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+					</control>
+					<control type="label">
+						<left>460</left>
+						<bottom>270</bottom>
+						<right>755</right>
+						<height>30</height>
+						<label>[B]$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title][/B]</label>
+						<scroll>true</scroll>
+						<font>font37</font>
+						<scroll>true</scroll>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>Window.IsVisible(MusicVisualisation.xml) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 					</control>
 					<control type="label">
 						<left>460</left>
@@ -3567,7 +3579,7 @@
 					<control type="label">
 						<left>460</left>
 						<bottom>210</bottom>
-						<right>30</right>
+						<right>755</right>
 						<height>30</height>
 						<label>$INFO[Window(Home).Property(SkinHelper.Player.Album),$LOCALIZE[558] : ]</label>
 						<font>font12</font>
@@ -3640,7 +3652,7 @@
 					<control type="label">
 						<left>460</left>
 						<bottom>210</bottom>
-						<right>30</right>
+						<right>755</right>
 						<height>30</height>
 						<width>36.5%</width>
 						<label>$INFO[MusicPlayer.Artist,[COLOR white][B],[/B][/COLOR]]$INFO[MusicPlayer.Album,[B] - [/B][COLOR white],[/COLOR]]$INFO[MusicPlayer.Year, [COLOR white](,)[/COLOR]]</label>

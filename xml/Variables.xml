@@ -672,14 +672,15 @@
 		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
 		<value>$INFO[MusicPlayer.Album]</value>
 	</variable>
+	<!-- Music Visualization -->
 	<variable name="PlayerFanartVar">
 		<value condition="Skin.HasSetting(enable_artistslideshow) + [Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
 		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
+		<value condition="Skin.HasSetting(enable_artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
 		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">special://skin/extras/home-images/radio.jpg</value>
-		<value condition="Skin.HasSetting(enable_artistslideshow) + String.IsEmpty(Player.Art(artist.fanart)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
-		<value condition="Skin.HasSetting(enable_artistslideshow) + String.IsEmpty(Player.Art(artist.fanart)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
 		<value condition="!Skin.HasSetting(enable_artistslideshow) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 		<value condition="!Skin.HasSetting(enable_artistslideshow) + String.IsEmpty(Player.Art(fanart)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
+		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 	</variable>
 	<variable name="VideoInfoPlayerFanartVar">
 		<value condition="!Skin.HasSetting(EnableExtraFanart) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-		<defaultcontrol always="true">8</defaultcontrol>
+	<defaultcontrol always="true">8</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
@@ -19,7 +19,6 @@
 					<texture>colors/black.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>!String.IsEqual(ListItem.DBType,musicvideo)</visible>
 				</control>
 				<control type="image">
 					<depth>DepthContentPopout</depth>
@@ -29,7 +28,6 @@
 					<height>427</height>
 					<aspectratio>scale</aspectratio>
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
-					<visible>!String.IsEqual(ListItem.DBType,musicvideo)</visible>
 				</control>
 				<control type="group">
 					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
@@ -51,36 +49,6 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[EpisodeThumbInfoVar]</texture>
 						<bordertexture>colors/white.png</bordertexture>
 						<bordersize>1</bordersize>
-					</control>
-				</control>
-				<control type="group">
-					<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
-					<control type="image">
-						<top>-20</top>
-						<left>-20</left>
-						<width>340</width>
-						<height>340</height>
-						<texture>colors/black.png</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>300</width>
-						<height>300</height>
-						<aspectratio aligny="top">keep</aspectratio>
-						<texture fallback="DefaultAudio.png">$VAR[MusicInfoThumbVar]</texture>
-					</control>
-					<control type="image">
-						<left>-20</left>
-						<top>351</top>
-						<width>340</width>
-						<height>96</height>
-						<aspectratio aligny="bottom">keep</aspectratio>
-						<texture>$VAR[BannerArtVar]</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
 					</control>
 				</control>
 			</control>

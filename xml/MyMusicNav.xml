@@ -109,7 +109,7 @@
 			<control type="group">
 				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
-				<visible>[Control.IsVisible(507) + !Control.HasFocus(531)] | Control.IsVisible(508) | Control.IsVisible(509)</visible>
+				<visible>Control.IsVisible(508) | Control.IsVisible(509)</visible>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<control type="image">
 					<top>0</top>

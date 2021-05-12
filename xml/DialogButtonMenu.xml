@@ -112,6 +112,19 @@
 						<visible>System.CanPowerDown</visible>
 					</item>
 					<item>
+						<label>$LOCALIZE[13013]</label>
+						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
+						<onclick>Reset()</onclick>
+						<visible>System.CanReboot</visible>
+					</item>
+					<item>
++						<label>$LOCALIZE[40356]</label>
+						<icon>special://skin/extras/icons/Power menu/reboot_emmc.png</icon>
++						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
++						<onclick>Reset()</onclick>
++						<visible>System.CanReboot</visible>
++					</item>
+					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
@@ -143,12 +156,6 @@
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
 						<onclick>Hibernate()</onclick>
 						<visible>System.CanHibernate</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13013]</label>
-						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset()</onclick>
-						<visible>System.CanReboot</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
@@ -317,6 +324,19 @@
 						<visible>System.CanPowerDown</visible>
 					</item>
 					<item>
+						<label>$LOCALIZE[13013]</label>
+						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
+						<onclick>Reset()</onclick>
+						<visible>System.CanReboot</visible>
+					</item>
+					<item>
++						<label>$LOCALIZE[40356]</label>
+						<icon>special://skin/extras/icons/Power menu/reboot_emmc.png</icon>
++						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
++						<onclick>Reset()</onclick>
++						<visible>System.CanReboot</visible>
++					</item>
+					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
@@ -348,12 +368,6 @@
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
 						<onclick>Hibernate()</onclick>
 						<visible>System.CanHibernate</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13013]</label>
-						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset()</onclick>
-						<visible>System.CanReboot</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
@@ -441,6 +455,18 @@
 						<visible>System.CanPowerDown</visible>
 					</item>
 					<item>
+						<label>$LOCALIZE[13013]</label>
+						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
+						<onclick>Reset()</onclick>
+						<visible>System.CanReboot</visible>
+					</item>
+					<item>
++						<label>$LOCALIZE[40356]</label>
++						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
++						<onclick>Reset()</onclick>
++						<visible>System.CanReboot</visible>
++					</item>
+					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
@@ -472,12 +498,6 @@
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
 						<onclick>Hibernate()</onclick>
 						<visible>System.CanHibernate</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13013]</label>
-						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset()</onclick>
-						<visible>System.CanReboot</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
