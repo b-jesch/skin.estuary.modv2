@@ -94,7 +94,7 @@
                         <font>font25_title</font>
                         <textcolor>$VAR[SkinColorVar]</textcolor>
                         <shadowcolor>00000000</shadowcolor>
-                        <label>[COLOR white]$ADDON[service.upnext 30024] $ADDON[service.upnext 30008] $ADDON[service.upnext 30036][/COLOR] $INFO[Player.TimeRemaining(ss),,] [COLOR white]$ADDON[service.upnext 30035][/COLOR]</label>
+                        <label>$ADDON[service.upnext 30024]</label>
                     </control>
                     <!-- Details -->
                     <control type="group">
@@ -109,7 +109,7 @@
                             <font>font13</font>
                             <textcolor>$VAR[SkinColorVar]</textcolor>
                             <shadowcolor>00000000</shadowcolor>
-                            <label>$INFO[Window.Property(tvshowtitle),[COLOR white],[/COLOR] - ]$INFO[Window.Property(season),[COLOR white],x[/COLOR]]$INFO[Window.Property(episode),[COLOR white],.[/COLOR] ]$INFO[Window.Property(title),[COLOR white],[/COLOR]]$INFO[Window.Property(year), - [COLOR white],[/COLOR]]</label>
+                            <label>$ADDON[service.upnext 30035]</label>
                         </control>
                     </control>
                     <!-- Buttons -->
