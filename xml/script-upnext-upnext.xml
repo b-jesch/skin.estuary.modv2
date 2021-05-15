@@ -87,7 +87,7 @@
 						<font>font25_title</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<shadowcolor>00000000</shadowcolor>
-						<label>[COLOR white]$ADDON[service.upnext 30008] $ADDON[service.upnext 30036][/COLOR] $INFO[Player.TimeRemaining(ss)] [COLOR white]$ADDON[service.upnext 30035][/COLOR]</label>
+						<label>$ADDON[service.upnext 30036]</label>
 						<visible>!Integer.IsGreater(Player.TimeRemaining,59)</visible>
 					</control>
 					<control type="label">
@@ -97,7 +97,7 @@
 						<font>font25_title</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<shadowcolor>00000000</shadowcolor>
-						<label>[COLOR white]$ADDON[service.upnext 30008] $ADDON[service.upnext 30036][/COLOR] $INFO[Player.TimeRemaining]</label>
+						<label>$ADDON[service.upnext 30006]</label>
 						<visible>Integer.IsGreater(Player.TimeRemaining,59)</visible>
 					</control>
 					<!-- Details -->
