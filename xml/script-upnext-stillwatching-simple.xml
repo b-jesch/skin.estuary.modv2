@@ -33,9 +33,9 @@
                         <align>left</align>
                         <include content="DefaultDialogButton">
 							<param name="id" value="3012" />
-							<param name="label" value="$ADDON[service.upnext 30010]" />
+							<param name="label" value="$ADDON[service.upnext 30037]" />
 							<param name="height" value="90" />
-							<param name="width" value="340" />
+							<param name="width" value="auto" />
 						</include>
 						<include content="DefaultDialogButton">
 							<param name="id" value="3013" />
@@ -43,15 +43,6 @@
 							<param name="height" value="90" />
 							<param name="width" value="340" />
 						</include>
-						<control type="label">
-                            <width>auto</width>
-                            <height>90</height>
-                            <aligny>center</aligny>
-                            <font>font25_title</font>
-                            <textcolor>$VAR[SkinColorVar]</textcolor>
-                            <shadowcolor>00000000</shadowcolor>
-                            <label>$ADDON[service.upnext 30024] - $ADDON[service.upnext 30035]</label>
-                        </control>
                     </control>
                     <control type="image">
                         <top>-5</top>

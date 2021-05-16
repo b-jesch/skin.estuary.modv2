@@ -109,7 +109,7 @@
                             <font>font13</font>
                             <textcolor>$VAR[SkinColorVar]</textcolor>
                             <shadowcolor>00000000</shadowcolor>
-                            <label>$ADDON[service.upnext 30035]</label>
+                            <label>$INFO[Window.Property(tvshowtitle),[COLOR white],[/COLOR] - ]$INFO[Window.Property(season),[COLOR white],x[/COLOR]]$INFO[Window.Property(episode),[COLOR white],.[/COLOR] ]$INFO[Window.Property(title),[COLOR white],[/COLOR]]$INFO[Window.Property(year), - [COLOR white],[/COLOR]]</label>
                         </control>
                     </control>
                     <!-- Buttons -->
@@ -121,9 +121,9 @@
                         <itemgap>10</itemgap>
                         <include content="DefaultDialogButton">
 							<param name="id" value="3012" />
-							<param name="label" value="$ADDON[service.upnext 30010]" />
+							<param name="label" value="$ADDON[service.upnext 30035]" />
 							<param name="height" value="90" />
-							<param name="width" value="340" />
+							<param name="width" value="auto" />
 						</include>
 						<include content="DefaultDialogButton">
 							<param name="id" value="3013" />

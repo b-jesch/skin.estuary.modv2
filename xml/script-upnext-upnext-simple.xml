@@ -7,9 +7,9 @@
     <controls>
         <control type="group">
             <animation effect="slide" end="0,140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
-			<animation effect="slide" end="0,135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
-			<animation effect="slide" end="0,131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
-			<animation effect="slide" end="0,21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+            <animation effect="slide" end="0,135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
+            <animation effect="slide" end="0,131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
+            <animation effect="slide" end="0,21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
             <control type="group">
                 <height>80</height>
                 <!-- Background -->
@@ -32,27 +32,17 @@
                         <top>-20</top>
                         <align>left</align>
                         <include content="DefaultDialogButton">
-							<param name="id" value="3012" />
-							<param name="label" value="$ADDON[service.upnext 30006]" />
-							<param name="height" value="90" />
-							<param name="width" value="340" />
-						</include>
-						<include content="DefaultDialogButton">
-							<param name="id" value="3013" />
-							<param name="label" value="$ADDON[service.upnext 30034]" />
-							<param name="height" value="90" />
-							<param name="width" value="340" />
-						</include>
-						<control type="label">
-                            <width>auto</width>
-                            <height>90</height>
-                            <aligny>center</aligny>
-                            <font>font25_title</font>
-                            <textcolor>$VAR[SkinColorVar]</textcolor>
-                            <shadowcolor>00000000</shadowcolor>
-                            <label>$ADDON[service.upnext 30036]</label>
-                            <visible>!Integer.IsGreater(Player.TimeRemaining,59)</visible>
-                        </control>
+                            <param name="id" value="3012" />
+                            <param name="label" value="$ADDON[service.upnext 30037]" />
+                            <param name="height" value="90" />
+                            <param name="width" value="auto" />
+                        </include>
+                            <include content="DefaultDialogButton">
+                            <param name="id" value="3013" />
+                            <param name="label" value="$ADDON[service.upnext 30034]" />
+                            <param name="height" value="90" />
+                            <param name="width" value="340" />
+                        </include>
                         <control type="label">
                             <width>auto</width>
                             <height>90</height>
