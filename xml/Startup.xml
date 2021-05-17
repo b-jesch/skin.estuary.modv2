@@ -5,14 +5,6 @@
 	<controls>
 		<control type="group">
 			<visible>String.IsEmpty(Skin.String(SplashScreen)) + !Skin.HasSetting(EnableSpashScreen)</visible>
-			<!--
-			<control type="image">
-				<depth>DepthBackground</depth>
-				<include>FullScreenDimensions</include>
-				<aspectratio>scale</aspectratio>
-				<texture colordiffuse="$VAR[BackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
-			</control>
-			-->
 			<control type="image">
 				<include>FullScreenDimensions</include>
 				<aspectratio>scale</aspectratio>
