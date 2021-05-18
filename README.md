@@ -1,5 +1,9 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition
 <B>3.0.8+matrix</B>
+- .4 
+  * "Up Next" double strings notifications fixed, many thanks to hawkeyexp
+  
+
 - .3
   * Some language strings updated
 

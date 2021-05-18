@@ -94,7 +94,7 @@
                         <font>font25_title</font>
                         <textcolor>$VAR[SkinColorVar]</textcolor>
                         <shadowcolor>00000000</shadowcolor>
-                        <label>[COLOR white]$ADDON[service.upnext 30024] $ADDON[service.upnext 30008] $ADDON[service.upnext 30036][/COLOR] $INFO[Player.TimeRemaining(ss),,] [COLOR white]$ADDON[service.upnext 30035][/COLOR]</label>
+                        <label>$ADDON[service.upnext 30024]</label>
                     </control>
                     <!-- Details -->
                     <control type="group">
@@ -121,9 +121,9 @@
                         <itemgap>10</itemgap>
                         <include content="DefaultDialogButton">
 							<param name="id" value="3012" />
-							<param name="label" value="$ADDON[service.upnext 30010]" />
+							<param name="label" value="$ADDON[service.upnext 30035]" />
 							<param name="height" value="90" />
-							<param name="width" value="340" />
+							<param name="width" value="auto" />
 						</include>
 						<include content="DefaultDialogButton">
 							<param name="id" value="3013" />
