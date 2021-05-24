@@ -19,10 +19,6 @@
 		<value condition="String.IsEqual(listitem.dbtype,tvshow)">$LOCALIZE[1024]</value>
 		<value>$LOCALIZE[208]</value>
 	</variable>
-	<variable name="Label_SkinSetting_GlobalBackground">
-        <value condition="!String.IsEmpty(Skin.String(global-background))">$INFO[Skin.String(global-background)]</value>
-        <value>$LOCALIZE[40064]</value>
-    </variable>
 	<variable name="WidgetViewPoster">
         <value condition="!Skin.HasSetting(use_posterview)">WidgetListSquare</value>
         <value>WidgetListPoster</value>
@@ -1617,7 +1613,7 @@
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Tagline,[I],[/I]]</value>
 	</variable>
 	<variable name="AddonsFanartVar">
-		<value condition="Skin.HasSetting(show_fanart)"/>
+		<value condition="Skin.HasSetting(show_fanart)">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 	</variable>
@@ -1629,6 +1625,7 @@
 		<value condition="Control.HasFocus(802) + String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)">special://skin/extras/home-images/settings.jpg</value>
 		<value condition="Control.HasFocus(801) + !String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)">$INFO[Skin.String(search_background)]</value>
 		<value condition="Control.HasFocus(801) + String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)">special://skin/extras/home-images/search.jpg</value>
+		<value condition="Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)">$INFO[Skin.String(global-background)]</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
 	</variable>
 	<variable name="MediaFanartVar">

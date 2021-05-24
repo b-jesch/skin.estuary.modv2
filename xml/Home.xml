@@ -36,23 +36,7 @@
 			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
 			<timeperimage>3000</timeperimage>
 			<randomize>true</randomize>
-			<visible>Skin.HasSetting(show_fanart) + Control.HasFocus(9000) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
-		</control>
-		<control type="multiimage">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<fadetime>400</fadetime>
-			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</imagepath>
-			<timeperimage>3000</timeperimage>
-			<randomize>true</randomize>
-			<visible>[Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]</visible>
-			<visible>![Control.HasFocus(9000) + !String.IsEmpty(Container(9000).ListItem.Property(background))] + ![[[Control.HasFocus(9000) + !String.IsEmpty(Container(9000).ListItem.Property(background))] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + !String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + !String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + !String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]]]</visible>
-			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+			<visible>Skin.HasSetting(show_fanart) + [Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)] + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
 		</control>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
@@ -752,7 +736,7 @@
 							<param name="widget_header" value="$ADDON[script.service.gto 30104]: $INFO[Window(Home).Property(GTO.Provider)]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Label, | ]$INFO[Container(12400).ListItem.Label2, - ,]"/>
 							<param name="list_id" value="12500"/>
-							<param name="item_limit" value="2000"/>
+							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
     						<param name="label" value="$INFO[ListItem.label]"/>
 							<param name="label2" value="$INFO[ListItem.label2]$INFO[ListItem.Property(StartTime), (,)]"/>
 							<param name="onclick" value="RunPlugin(plugin://script.service.gto/?action=info&amp;item=$INFO[ListItem.Property(item)])"/>

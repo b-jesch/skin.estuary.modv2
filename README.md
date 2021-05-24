@@ -1,8 +1,14 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition
 <B>3.0.8+matrix</B>
+- .5  
+  * Background images for power menu, settings menu and search menu reimplemented
+  * Rules of background images redefined
+  
+
 - .4 
   * "Up Next" double strings notifications fixed, many thanks to hawkeyexp
-  
+  * viewsitcher script temporarily deactivated as this cause some issues  
+
 
 - .3
   * Some language strings updated

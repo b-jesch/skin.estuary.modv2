@@ -14,7 +14,7 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<imagepath background="true" colordiffuse="bg_overlay">$VAR[AddonsFanartVar]</imagepath>
-			<visible>!Player.HasMedia</visible>
+			<visible>!Player.HasMedia + Skin.HasSetting(show_fanart)</visible>
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -313,7 +313,6 @@
 					<aligny>center</aligny>
 					<align>center</align>
 					<font>font32_title</font>
-					<!-- <label>$VAR[AddonCountLabel]</label> -->
 					<label>$INFO[System.AddonUpdateCount]</label>
 					<shadowcolor>text_shadow</shadowcolor>
 				</control>
