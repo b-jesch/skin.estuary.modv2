@@ -46,7 +46,7 @@
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | ControlGroup(8000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131) | Window.IsActive(MyPlaylist.xml)</expression>
 	<expression name="ChristmasTheme">System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
 	<expression name="HalloweenTheme">System.Date(10-30,11-01) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
-	<expression name="EasterTheme">System.Date(04-02,04-05) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
+	<expression name="EasterTheme">System.Date(04-14,04-18) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
 	<expression name="ValentineTheme">System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
@@ -275,7 +275,7 @@
             <label>$INFO[ListItem.Art(tvshow.fanart18)]</label>
             <label>$INFO[ListItem.Art(tvshow.fanart19)]</label>
             <label>$INFO[ListItem.Art(tvshow.fanart20)]</label>
-            <pauseatend>12000</pauseatend>
+            <pauseatend>8000</pauseatend>
         </control>
 		<control type="image" id="4398">
 			<depth>DepthBackground</depth>
@@ -287,7 +287,7 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[FanartAnimated]</texture>
-			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Control.IsVisible(502) | [Window.IsVisible(DialogVideoInfo.xml) + !Player.HasVideo]</visible>
+			<visible>Skin.HasSetting(show_fanart) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Control.IsVisible(502) | [Window.IsVisible(DialogVideoInfo.xml) + !Player.HasVideo]</visible>
 		</control>
 	</include>
 	<include name="HiddenObject">
