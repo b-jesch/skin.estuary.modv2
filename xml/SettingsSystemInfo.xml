@@ -92,6 +92,13 @@
 				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 			</control>
+			<control type="label">
+				<left>400</left>
+				<top>40</top>
+				<right>20</right>
+				<label>$LOCALIZE[40359]: $VAR[OSVar]</label>
+				<font>font13</font>
+			</control>
 			<control type="image">
 				<left>360</left>
 				<top>90</top>

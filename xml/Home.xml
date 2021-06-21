@@ -659,11 +659,11 @@
 							<right>0</right>
 							<top>36</top>
 							<orientation>horizontal</orientation>
-							<visible>PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer</visible>
+							<visible>[PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer] + [!Skin.HasSetting(hide_nowrecordingchannel) | !Skin.HasSetting(hide_nextrecordingchannel)]</visible>
 							<align>left</align>
 							<control type="group">
 								<width>674</width>
-								<visible>PVR.IsRecordingTV</visible>
+								<visible>PVR.IsRecordingTV + !Skin.HasSetting(hide_nowrecordingchannel)</visible>
 								<include content="PVRWidget" condition="!Skin.HasSetting(hide_nowrecordingchannel)">
 									<param name="icon" value="$INFO[PVR.TVNowRecordingChannelIcon]" />
 									<param name="header" value="$LOCALIZE[19158]" />
@@ -673,7 +673,7 @@
 							</control>
 							<control type="group">
 								<width>674</width>
-								<visible>PVR.HasNonRecordingTVTimer</visible>
+								<visible>PVR.HasNonRecordingTVTimer + !Skin.HasSetting(hide_nextrecordingchannel)</visible>
 								<include content="PVRWidget" condition="!Skin.HasSetting(hide_nextrecordingchannel)">
 									<param name="icon" value="$INFO[PVR.TVNextRecordingChannelIcon]" />
 									<param name="header" value="$LOCALIZE[19157]" />
