@@ -129,7 +129,7 @@
 				<control type="radiobutton" id="103">
 					<label>$LOCALIZE[40195]</label>
 					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(disable_PVR)</selected>
+					<selected>!Skin.HasSetting(disable_PVRNextUp)</selected>
 					<onclick>Skin.ToggleSetting(disable_PVRNextUp)</onclick>
 				</control>
 				<control type="radiobutton" id="107">

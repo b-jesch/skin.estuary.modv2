@@ -33,7 +33,7 @@
  	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Estuary MOD V2 skin by Guilouz, adapted for Matrix by PvD</summary>
-		<description lang="en_GB">Estuary MOD V2 is a mod from Estuary by Guilouz for Kodi 18 and later adapted for Kodi Matrix by PvD. It attempts to be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_GB">Estuary MOD V2 is a mod from Estuary by Guilouz for Kodi 18 and adapted for Kodi 19 (Matrix) by PvD from Kodinerds Community. It attempts to be easy for first time Kodi users to understand and use.</description>
 		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the theme.</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
@@ -48,6 +48,7 @@
       but current and/or next schedules are present
       Bool condition of visibility for option "Reboot from NAND" in shutdown menu removed
       Addon-Id info added (Addon Information window)
+      PVR NextUp notification fixed
 - .6  Kodi Restart button implemented (Power Menu)
       Shift View for pictures fixed
 - .5  Background images for power menu, settings menu and search menu reimplemented
