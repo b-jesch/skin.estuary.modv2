@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.0.8+matrix.7" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.0.9+matrix" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -18,7 +18,7 @@
  		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
 		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
 	</extension>
-	<!-- <extension point="xbmc.service" library="scripts/viewswitcher.py" visible="!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(ForcedViews.Enabled)" /> -->
+	<extension point="xbmc.service" library="scripts/viewswitcher.py" visible="!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(ForcedViews.Enabled)" />
 	<extension point="kodi.context.item">
       	<menu id="kodi.core.main">
       		<item library="scripts/context_menu_jumptoletter.py">
@@ -43,6 +43,10 @@
 				<fanart>resources/fanart.jpg</fanart>
 			</assets>
 <news>
+[B]3.0.9+matrix[/B]
+-     PVR NextUp notification window improved
+      NL language strings updated
+      Rework and reimplementation of forced views
 [B]3.0.8+matrix[/B]
 - .7  Empty space on TV Widget removed if current/next recordings are deselected from widget menu
       but current and/or next schedules are present
@@ -64,7 +68,7 @@
       Minor fixes
 - .1  Display of publication year of movies/videos/tv shows in titles is now switchable
       Dutch translation added, thanks to "theghostnl" from Kodi forum
-- .0  "Add" Button in Default Dialog Select Window reimplemented
+-     "Add" Button in Default Dialog Select Window reimplemented
 [B]3.0.7+matrix[/B]
 - .16 Bugfix: missing settings window of skin shortcuts addon reimplemented
       Addon dependencies updated
