@@ -102,28 +102,34 @@
 					<item>
 						<label>$LOCALIZE[13012]</label>
 						<icon>special://skin/extras/icons/Power menu/exit.png</icon> 
-						<onclick>Quit()</onclick>
+						<onclick>Quit</onclick>
 						<visible>System.ShowExitButton</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
-						<onclick>Powerdown()</onclick>
+						<onclick>Powerdown</onclick>
 						<visible>System.CanPowerDown</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13013]</label>
 						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset()</onclick>
+						<onclick>Reset</onclick>
 						<visible>System.CanReboot</visible>
 					</item>
 					<item>
-+						<label>$LOCALIZE[40356]</label>
+						<label>$LOCALIZE[40357]</label>
+						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
+						<onclick>RestartApp</onclick>
+						<visible>System.Platform.Linux | System.Platform.Windows</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[40356]</label>
 						<icon>special://skin/extras/icons/Power menu/reboot_emmc.png</icon>
-+						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
-+						<onclick>Reset()</onclick>
-+						<visible>System.CanReboot</visible>
-+					</item>
+						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
+						<onclick>Reboot</onclick>
+						<visible>System.CanReboot</visible>
+					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
@@ -135,7 +141,7 @@
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
 						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
-						<onClick>dialog.close(all,true)</onClick>
+						<onclick>dialog.close(all,true)</onclick>
 						<visible>!System.HasAlarm(shutdowntimer) | System.HasAddon(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</item>
@@ -148,13 +154,13 @@
 					<item>
 						<label>$LOCALIZE[13011]</label>
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
-						<onclick>Suspend()</onclick>
+						<onclick>Suspend</onclick>
 						<visible>System.CanSuspend</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13010]</label>
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
-						<onclick>Hibernate()</onclick>
+						<onclick>Hibernate</onclick>
 						<visible>System.CanHibernate</visible>
 					</item>
 					<item>
@@ -210,7 +216,7 @@
     				<item>
         				<label>$LOCALIZE[20183]</label>
         				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
-        				<onclick>ReloadSkin()</onclick>       
+        				<onclick>ReloadSkin</onclick>
     				</item>
 				</content>
 			</control>
@@ -314,28 +320,34 @@
 					<item>
 						<label>$LOCALIZE[13012]</label>
 						<icon>special://skin/extras/icons/Power menu/exit.png</icon> 
-						<onclick>Quit()</onclick>
+						<onclick>Quit</onclick>
 						<visible>System.ShowExitButton</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
-						<onclick>Powerdown()</onclick>
+						<onclick>Powerdown</onclick>
 						<visible>System.CanPowerDown</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13013]</label>
 						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset()</onclick>
+						<onclick>Reset</onclick>
 						<visible>System.CanReboot</visible>
 					</item>
 					<item>
-+						<label>$LOCALIZE[40356]</label>
+						<label>$LOCALIZE[40357]</label>
+						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
+						<onclick>RestartApp</onclick>
+						<visible>System.Platform.Linux | System.Platform.Windows</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[40356]</label>
 						<icon>special://skin/extras/icons/Power menu/reboot_emmc.png</icon>
-+						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
-+						<onclick>Reset()</onclick>
-+						<visible>System.CanReboot</visible>
-+					</item>
+						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
+						<onclick>Reboot</onclick>
+						<visible>System.CanReboot</visible>
+					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
@@ -347,7 +359,7 @@
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
 						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
-						<onClick>dialog.close(all,true)</onClick>
+						<onclick>dialog.close(all,true)</onclick>
 						<visible>!System.HasAlarm(shutdowntimer) + System.HasAddon(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</item>
@@ -360,13 +372,13 @@
 					<item>
 						<label>$LOCALIZE[13011]</label>
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
-						<onclick>Suspend()</onclick>
+						<onclick>Suspend</onclick>
 						<visible>System.CanSuspend</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13010]</label>
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
-						<onclick>Hibernate()</onclick>
+						<onclick>Hibernate</onclick>
 						<visible>System.CanHibernate</visible>
 					</item>
 					<item>
@@ -422,7 +434,7 @@
     				<item>
         				<label>$LOCALIZE[20183]</label>
         				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
-        				<onclick>ReloadSkin()</onclick>       
+        				<onclick>ReloadSkin</onclick>
     				</item>
 				</content>
 			</control>
@@ -445,27 +457,33 @@
 					<item>
 						<label>$LOCALIZE[13012]</label>
 						<icon>special://skin/extras/icons/Power menu/exit.png</icon> 
-						<onclick>Quit()</onclick>
+						<onclick>Quit</onclick>
 						<visible>System.ShowExitButton</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
-						<onclick>Powerdown()</onclick>
+						<onclick>Powerdown</onclick>
 						<visible>System.CanPowerDown</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13013]</label>
 						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset()</onclick>
+						<onclick>Reset</onclick>
 						<visible>System.CanReboot</visible>
 					</item>
 					<item>
-+						<label>$LOCALIZE[40356]</label>
-+						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
-+						<onclick>Reset()</onclick>
-+						<visible>System.CanReboot</visible>
-+					</item>
+						<label>$LOCALIZE[40357]</label>
+						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
+						<onclick>RestartApp</onclick>
+						<visible>System.Platform.Linux | System.Platform.Windows</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[40356]</label>
+						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
+						<onclick>Reboot</onclick>
+						<visible>System.CanReboot</visible>
+					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
@@ -477,7 +495,7 @@
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
 						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
-						<onClick>dialog.close(all,true)</onClick>
+						<onclick>dialog.close(all,true)</onclick>
 						<visible>!System.HasAlarm(shutdowntimer) + System.HasAddon(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</item>
@@ -490,13 +508,13 @@
 					<item>
 						<label>$LOCALIZE[13011]</label>
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
-						<onclick>Suspend()</onclick>
+						<onclick>Suspend</onclick>
 						<visible>System.CanSuspend</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13010]</label>
 						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
-						<onclick>Hibernate()</onclick>
+						<onclick>Hibernate</onclick>
 						<visible>System.CanHibernate</visible>
 					</item>
 					<item>
@@ -552,7 +570,7 @@
     				<item>
         				<label>$LOCALIZE[20183]</label>
         				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
-        				<onclick>ReloadSkin()</onclick>       
+        				<onclick>ReloadSkin</onclick>
     				</item>
 				</content>
 			</control>

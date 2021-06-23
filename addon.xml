@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.0.8+matrix.5" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.0.8+matrix.7" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -33,7 +33,7 @@
  	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Estuary MOD V2 skin by Guilouz, adapted for Matrix by PvD</summary>
-		<description lang="en_GB">Estuary MOD V2 is a mod from Estuary by Guilouz for Kodi 18 and later adapted for Kodi Matrix by PvD. It attempts to be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_GB">Estuary MOD V2 is a mod from Estuary by Guilouz for Kodi 18 and adapted for Kodi 19 (Matrix) by PvD from Kodinerds Community. It attempts to be easy for first time Kodi users to understand and use.</description>
 		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the theme.</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
@@ -44,6 +44,13 @@
 			</assets>
 <news>
 [B]3.0.8+matrix[/B]
+- .7  Empty space on TV Widget removed if current/next recordings are deselected from widget menu
+      but current and/or next schedules are present
+      Bool condition of visibility for option "Reboot from NAND" in shutdown menu removed
+      Addon-Id info added (Addon Information window)
+      PVR NextUp notification fixed
+- .6  Kodi Restart button implemented (Power Menu)
+      Shift View for pictures fixed
 - .5  Background images for power menu, settings menu and search menu reimplemented
       Rules of background images redefined
 - .4  "Up Next" notifications fixed, many thanks to hawkeyexp,

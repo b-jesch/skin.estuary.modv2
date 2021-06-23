@@ -218,7 +218,6 @@
 					<texture fallback="DefaultAddon.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 				</control>
 				<control type="group">
-					<!-- <visible>!String.IsEmpty(ListItem.AddonBroken)</visible> -->
 					<visible>!String.IsEmpty(ListItem.AddonLifecycleDesc</visible>
 					<control type="image">
 						<left>14</left>
@@ -234,7 +233,6 @@
 						<height>500</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<!-- <label>$LOCALIZE[24096]</label> -->
 						<label>$INFO[ListItem.AddonLifecycleType][CR]$INFO[ListItem.LifecycleDesc]</label>
 						<font>font36_title</font>
 					</control>
@@ -254,7 +252,7 @@
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
-						<label>$INFO[ListItem.AddonSize,$LOCALIZE[22031] : [COLOR white],[/COLOR][CR]]</label>
+						<label>$INFO[ListItem.Property(Addon.ID),$LOCALIZE[40358] : [COLOR white],[/COLOR][CR]]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
 					<control type="label">

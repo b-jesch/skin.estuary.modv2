@@ -5,7 +5,7 @@
 	<visible>!Window.IsVisible(VideoOSD.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRChannelGuide.xml) + !Window.IsVisible(DialogFullScreenInfo.xml) + !Window.IsVisible(Custom_1135_PVROverlay.xml)</visible>
 	<controls>
 		<control type="group">
-			<visible>!Window.IsVisible(videoosd) + Window.IsVisible(fullscreenvideo) + [String.IsEqual(PVR.EpgEventRemainingTime,00:30) | String.IsEqual(PVR.EpgEventRemainingTime,00:29) | String.IsEqual(PVR.EpgEventRemainingTime,00:28) | String.IsEqual(PVR.EpgEventRemainingTime,00:27) | String.IsEqual(PVR.EpgEventRemainingTime,00:26) | String.IsEqual(PVR.EpgEventRemainingTime,00:25) | String.IsEqual(PVR.EpgEventRemainingTime,00:24) | String.IsEqual(PVR.EpgEventRemainingTime,00:23) | String.IsEqual(PVR.EpgEventRemainingTime,00:22) | String.IsEqual(PVR.EpgEventRemainingTime,00:21) | String.IsEqual(PVR.EpgEventRemainingTime,00:20) | String.IsEqual(PVR.EpgEventRemainingTime,00:19) | String.IsEqual(PVR.EpgEventRemainingTime,00:18) | String.IsEqual(PVR.EpgEventRemainingTime,00:17) | String.IsEqual(PVR.EpgEventRemainingTime,00:16) | String.IsEqual(PVR.EpgEventRemainingTime,00:15) | String.IsEqual(PVR.EpgEventRemainingTime,00:14) | String.IsEqual(PVR.EpgEventRemainingTime,00:13) | String.IsEqual(PVR.EpgEventRemainingTime,00:12) | String.IsEqual(PVR.EpgEventRemainingTime,00:11) | String.IsEqual(PVR.EpgEventRemainingTime,00:10) | String.IsEqual(PVR.EpgEventRemainingTime,00:09) | String.IsEqual(PVR.EpgEventRemainingTime,00:08) | String.IsEqual(PVR.EpgEventRemainingTime,00:07) | String.IsEqual(PVR.EpgEventRemainingTime,00:06) | String.IsEqual(PVR.EpgEventRemainingTime,00:05)]</visible>
+			<visible>!Window.IsVisible(videoosd) + Window.IsVisible(fullscreenvideo) + [Integer.IsEqual(PVR.EpgEventRemainingTime(hh),0) + Integer.IsEqual(PVR.EpgEventRemainingTime(mm),0) +  Integer.IsLess(PVR.EpgEventRemainingTime(ss),31) + Integer.IsGreater(PVR.EpgEventRemainingTime(ss),4)]</visible>
 			<right>64</right>
 			<bottom>90</bottom>
 			<width>378</width>
@@ -33,7 +33,7 @@
 				<textoffsetx>5</textoffsetx>
 				<font>font12</font>
 				<shadowcolor>black</shadowcolor>
-				<label>[UPPERCASE]$LOCALIZE[40196][/UPPERCASE]</label>
+				<label>$LOCALIZE[40196]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="image" id="123123">
