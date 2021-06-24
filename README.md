@@ -1,13 +1,13 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
-###3.0.9+matrix###
+### 3.0.9+matrix ###
 - .0
   * PVR NextUp notification window improved
   * NL language strings updated
   * Rewrite and reimplementation of forced views
 
 
-###3.0.8+matrix###
+### 3.0.8+matrix ###
 - .7  
   * Empty space on TV Widget removed if current/next recordings are deselected from widget menu but current and/or next schedules are present
   * Bool condition of visibility for option "Reboot from NAND" in shutdown menu removed
@@ -54,7 +54,7 @@
   
 Note: In my opinion, the adaptation to Kodi 19 is complete. Future changes will only be bug fixes, as far as I am able to do  it.
 
-###3.0.7+matrix###
+### 3.0.7+matrix ###
 - .16 
   * Bugfix: missing settings window of skin shortcuts addon reimplemented
   * Addon dependencies updated
