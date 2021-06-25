@@ -32,6 +32,128 @@
 		<value condition="System.Platform.Linux">Linux</value>
 		<value>unknown</value>
 	</variable>
+	<variable name="SettingsForcedViewsMoviesVar">
+			<value condition="Skin.HasSetting(movies.50)">$LOCALIZE[535]</value>
+			<value condition="Skin.HasSetting(movies.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(movies.51)">$LOCALIZE[20021]</value>
+			<value condition="Skin.HasSetting(movies.53)">$LOCALIZE[31100]</value>
+			<value condition="Skin.HasSetting(movies.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(movies.505)">$LOCALIZE[40016]</value>
+			<value condition="Skin.HasSetting(movies.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(movies.504)">$LOCALIZE[40015]</value>
+			<value condition="Skin.HasSetting(movies.501)">$LOCALIZE[20020]</value>
+			<value condition="Skin.HasSetting(movies.502)">$LOCALIZE[20445]</value>
+			<value condition="Skin.HasSetting(movies.503)">$LOCALIZE[40005]</value>
+			<value condition="Skin.HasSetting(movies.506)">$LOCALIZE[40017]</value>
+			<value condition="Skin.HasSetting(movies.507)">$LOCALIZE[40146]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
+	<variable name="SettingsForcedViewsSetsVar">
+			<value condition="Skin.HasSetting(sets.50)">$LOCALIZE[535]</value>
+			<value condition="Skin.HasSetting(sets.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(sets.51)">$LOCALIZE[20021]</value>
+			<value condition="Skin.HasSetting(sets.53)">$LOCALIZE[31100]</value>
+			<value condition="Skin.HasSetting(sets.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(sets.505)">$LOCALIZE[40016]</value>
+			<value condition="Skin.HasSetting(sets.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(sets.504)">$LOCALIZE[40015]</value>
+			<value condition="Skin.HasSetting(sets.502)">$LOCALIZE[20445]</value>
+			<value condition="Skin.HasSetting(sets.503)">$LOCALIZE[40005]</value>
+			<value condition="Skin.HasSetting(sets.506)">$LOCALIZE[40017]</value>
+			<value condition="Skin.HasSetting(sets.507)">$LOCALIZE[40146]</value>
+			<value condition="Skin.HasSetting(sets.508)">$LOCALIZE[40212]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
+	<variable name="SettingsForcedViewsSetMoviesVar">
+			<value condition="Skin.HasSetting(setmovies.50)">$LOCALIZE[535]</value>
+			<value condition="Skin.HasSetting(setmovies.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(setmovies.51)">$LOCALIZE[20021]</value>
+			<value condition="Skin.HasSetting(setmovies.53)">$LOCALIZE[31100]</value>
+			<value condition="Skin.HasSetting(setmovies.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(setmovies.505)">$LOCALIZE[40016]</value>
+			<value condition="Skin.HasSetting(setmovies.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(setmovies.504)">$LOCALIZE[40015]</value>
+			<value condition="Skin.HasSetting(setmovies.501)">$LOCALIZE[20020]</value>
+			<value condition="Skin.HasSetting(setmovies.502)">$LOCALIZE[20445]</value>
+			<value condition="Skin.HasSetting(setmovies.503)">$LOCALIZE[40005]</value>
+			<value condition="Skin.HasSetting(setmovies.506)">$LOCALIZE[40017]</value>
+			<value condition="Skin.HasSetting(setmovies.507)">$LOCALIZE[40146]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
+	<variable name="SettingsForcedViewsTVShowsVar">
+			<value condition="Skin.HasSetting(tvshows.50)">$LOCALIZE[535]</value>
+			<value condition="Skin.HasSetting(tvshows.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(tvshows.51)">$LOCALIZE[20021]</value>
+			<value condition="Skin.HasSetting(tvshows.53)">$LOCALIZE[31100]</value>
+			<value condition="Skin.HasSetting(tvshows.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(tvshows.505)">$LOCALIZE[40016]</value>
+			<value condition="Skin.HasSetting(tvshows.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(tvshows.504)">$LOCALIZE[40015]</value>
+			<value condition="Skin.HasSetting(tvshows.501)">$LOCALIZE[20020]</value>
+			<value condition="Skin.HasSetting(tvshows.502)">$LOCALIZE[20445]</value>
+			<value condition="Skin.HasSetting(tvshows.503)">$LOCALIZE[40005]</value>
+			<value condition="Skin.HasSetting(tvshows.506)">$LOCALIZE[40017]</value>
+			<value condition="Skin.HasSetting(tvshows.507)">$LOCALIZE[40146]</value>
+			<value condition="Skin.HasSetting(tvshows.509)">$LOCALIZE[40214]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
+	<variable name="SettingsForcedViewsSeasonsVar">
+			<value condition="Skin.HasSetting(seasons.50)">$LOCALIZE[535]</value>
+			<value condition="Skin.HasSetting(seasons.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(seasons.51)">$LOCALIZE[20021]</value>
+			<value condition="Skin.HasSetting(seasons.53)">$LOCALIZE[31100]</value>
+			<value condition="Skin.HasSetting(seasons.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(seasons.505)">$LOCALIZE[40016]</value>
+			<value condition="Skin.HasSetting(seasons.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(seasons.504)">$LOCALIZE[40015]</value>
+			<value condition="Skin.HasSetting(seasons.502)">$LOCALIZE[20445]</value>
+			<value condition="Skin.HasSetting(seasons.506)">$LOCALIZE[40017]</value>
+			<value condition="Skin.HasSetting(seasons.507)">$LOCALIZE[40146]</value>
+			<value condition="Skin.HasSetting(seasons.508)">$LOCALIZE[40212]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
+	<variable name="SettingsForcedViewsEpisodesVar">
+			<value condition="Skin.HasSetting(episodes.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(episodes.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(episodes.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(episodes.502)">$LOCALIZE[20445]</value>
+			<value condition="Skin.HasSetting(episodes.503)">$LOCALIZE[40005]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
+	<variable name="SettingsForcedViewsArtistsVar">
+			<value condition="Skin.HasSetting(artists.50)">$LOCALIZE[535]</value>
+			<value condition="Skin.HasSetting(artists.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(artists.53)">$LOCALIZE[31100]</value>
+			<value condition="Skin.HasSetting(artists.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(artists.505)">$LOCALIZE[40016]</value>
+			<value condition="Skin.HasSetting(artists.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(artists.504)">$LOCALIZE[40015]</value>
+			<value condition="Skin.HasSetting(artists.506)">$LOCALIZE[40017]</value>
+			<value condition="Skin.HasSetting(artists.507)">$LOCALIZE[40146]</value>
+			<value condition="Skin.HasSetting(artists.508)">$LOCALIZE[40212]</value>
+			<value condition="Skin.HasSetting(artists.509)">$LOCALIZE[40214]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
+	<variable name="SettingsForcedViewsAlbumsVar">
+			<value condition="Skin.HasSetting(albums.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(albums.53)">$LOCALIZE[31100]</value>
+			<value condition="Skin.HasSetting(albums.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(albums.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(albums.506)">$LOCALIZE[40017]</value>
+			<value condition="Skin.HasSetting(albums.507)">$LOCALIZE[40146]</value>
+			<value condition="Skin.HasSetting(albums.508)">$LOCALIZE[40212]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
+	<variable name="SettingsForcedViewsMusicVideosVar">
+			<value condition="Skin.HasSetting(musicvideos.55)">$LOCALIZE[31107]</value>
+			<value condition="Skin.HasSetting(musicvideos.53)">$LOCALIZE[31100]</value>
+			<value condition="Skin.HasSetting(musicvideos.54)">$LOCALIZE[31101]</value>
+			<value condition="Skin.HasSetting(musicvideos.500)">$LOCALIZE[31102]</value>
+			<value condition="Skin.HasSetting(musicvideos.502)">$LOCALIZE[20445]</value>
+			<value condition="Skin.HasSetting(musicvideos.506)">$LOCALIZE[40017]</value>
+			<value condition="Skin.HasSetting(musicvideos.507)">$LOCALIZE[40146]</value>
+			<value>$LOCALIZE[40148]</value>
+	</variable>
 	<variable name="NextAiredStatutVar">
 		<value condition="Control.HasFocus(200) + String.Contains(Container(200).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
 		<value condition="Control.HasFocus(200) + String.Contains(Container(200).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>

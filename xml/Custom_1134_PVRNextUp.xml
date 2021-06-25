@@ -5,27 +5,42 @@
 	<visible>!Window.IsVisible(VideoOSD.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRChannelGuide.xml) + !Window.IsVisible(DialogFullScreenInfo.xml) + !Window.IsVisible(Custom_1135_PVROverlay.xml)</visible>
 	<controls>
 		<control type="group">
-			<visible>!Window.IsVisible(videoosd) + Window.IsVisible(fullscreenvideo) + [Integer.IsEqual(PVR.EpgEventRemainingTime(hh),0) + Integer.IsEqual(PVR.EpgEventRemainingTime(mm),0) +  Integer.IsLess(PVR.EpgEventRemainingTime(ss),31) + Integer.IsGreater(PVR.EpgEventRemainingTime(ss),4)]</visible>
+			<visible>!Window.IsVisible(videoosd) + Window.IsVisible(fullscreenvideo) + [Integer.IsEqual(PVR.EpgEventRemainingTime(hh),0) + Integer.IsEqual(PVR.EpgEventRemainingTime(mm),0) +  Integer.IsLess(PVR.EpgEventRemainingTime(ss),36) + Integer.IsGreater(PVR.EpgEventRemainingTime(ss),4)]</visible>
 			<right>64</right>
 			<bottom>90</bottom>
-			<width>378</width>
-			<height>324</height>
+			<width>382</width>
+			<height>358</height>
 			<control type="image">
-				<top>30</top>
-				<width>378</width>
-				<height>256</height>
-				<texture>dialogs/nextup/nextup.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
+				<width>382</width>
+				<height>358</height>
+				<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-picturelayout.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>Skin.HasSetting(show_borders)</visible>
 			</control>
-			<control type="image" description="blackline">
-				<top>30</top>
+			<control type="image">
+				<left>2</left>
+				<top>2</top>
 				<width>378</width>
-				<height>36</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture>dialogs/nextup/nextup.png</texture>
+				<height>354</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<bordersize>20</bordersize>
+				<visible>Skin.HasSetting(show_borders)</visible>
+			</control>
+			<control type="image">
+				<left>2</left>
+				<top>2</top>
+				<width>378</width>
+				<height>354</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="label">
-				<top>30</top>
+				<left>2</left>
+				<top>32</top>
 				<width>378</width>
 				<height>36</height>
 				<aligny>center</aligny>
@@ -36,33 +51,26 @@
 				<label>$LOCALIZE[40196]</label>
 				<scroll>true</scroll>
 			</control>
-			<control type="image" id="123123">
-				<top>76</top>
-				<left>10</left>
-				<width>358</width>
-				<height>200</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.NextTitle]&amp;channel=$INFO[VideoPlayer.ChannelName]&amp;type=landscape,fanart,thumb,poster</texture>
-			</control>
 			<control type="image">
-				<top>76</top>
-				<left>10</left>
-				<width>358</width>
+				<left>7</left>
+				<top>78</top>
+				<width>368</width>
 				<height>200</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="DefaultVideoFanart.png">$INFO[Player.Art(thumb)]</texture>
-				<visible>String.IsEmpty(Control.GetLabel(123123))</visible>
 			</control>
 			<control type="image">
-				<top>286</top>
-				<width>378</width>
-				<height>68</height>
+				<left>22</left>
+				<top>288</top>
+				<width>338</width>
+				<height>48</height>
 				<texture colordiffuse="$VAR[SkinColorVar]">colors/white.png</texture>
 			</control>
 			<control type="label">
-				<top>286</top>
-				<width>378</width>
-				<height>68</height>
+				<left>27</left>
+				<top>288</top>
+				<width>328</width>
+				<height>48</height>
 				<font>font12</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
