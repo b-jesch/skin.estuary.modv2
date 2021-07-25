@@ -21,6 +21,37 @@
 		<radioposx>1</radioposx>
 		<radioposy>0</radioposy>
 	</include>
+		<include name="InfoDialogPvrMetadata">
+		<param name="textcolor">white</param>
+		<param name="labelwidth">200</param>
+		<param name="labelalign">right</param>
+		<param name="width">611</param>
+		<param name="height">75</param>
+		<param name="font">font12</param>
+		<definition>
+			<control type="group">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<visible>$PARAM[visible]</visible>
+				<control type="label" id="$PARAM[control_id]">
+					<width>$PARAM[labelwidth]</width>
+					<aligny>$PARAM[labelalign]</aligny>
+					<font>$PARAM[font]</font>
+					<label>$PARAM[label]</label>
+					<textcolor>$PARAM[textcolor]</textcolor>
+					<align>right</align>
+					<scroll>true</scroll>
+				</control>
+				<control type="textbox">
+					<left>$PARAM[labelwidth]</left>
+					<font>$PARAM[font]</font>
+					<height>auto</height>
+					<label>$PARAM[content]</label>
+					<autoscroll delay="3000" time="1000" repeat="10000" />
+				</control>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoDialogMetadata">
 		<param name="textcolor">white</param>
 		<param name="width">567</param>

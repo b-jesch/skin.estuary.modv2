@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>SetProperty(infobackground,$ESCINFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)],home)</onload>
-	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
@@ -10,6 +8,7 @@
 			<centerleft>50%</centerleft>
 			<width>1920</width>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
+			<include>GlobalAnimatedBackground</include>
 			<control type="group">
 				<top>154</top>
 				<left>89</left>
@@ -141,89 +140,100 @@
 				<control type="grouplist" id="4000">
 					<orientation>vertical</orientation>
 					<left>647</left>
-					<top>338</top>
+					<top>348</top>
 					<height>518</height>
-					<itemgap>-8</itemgap>
+					<itemgap>5</itemgap>
 					<ondown>5000</ondown>
 					<onup>501</onup>
 					<onright>140</onright>
 					<onleft>140</onleft>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="147" />
-						<param name="label" value="$VAR[PVRInfoDirector]" />
-						<param name="visible" value="![String.IsEmpty(ListItem.Director) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Director))]" />
+						<param name="width" value="571" />
+						<param name="height" value="75" />
+						<param name="label" value="$LOCALIZE[20339]: "/>
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.director)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.director))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="148" />
-						<param name="label" value="$VAR[PVRInfoWriter]" />
-						<param name="visible" value="![String.IsEmpty(ListItem.Writer) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Writer))]" />
+						<param name="width" value="571" />
+						<param name="label" value="$LOCALIZE[20417]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.writer)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.writer))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="149" />
-						<param name="label" value="$VAR[PVRInfoGenre]" />
-						<param name="visible" value="![String.IsEmpty(ListItem.Genre) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Genre))]" />
+						<param name="width" value="571" />
+						<param name="height" value="75" />
+						<param name="label" value="$LOCALIZE[515]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.genre)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.genre))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="150" />
-						<param name="label" value="$VAR[PVRInfoCountry]" />
-						<param name="visible" value="![String.IsEmpty(ListItem.Country) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Country))]" />
+						<param name="width" value="571" />
+						<param name="height" value="40" />
+						<param name="label" value="$LOCALIZE[574]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.country)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.country))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="151" />
-						<param name="label" value="$VAR[PVRInfoStudio]" />
-						<param name="visible" value="![String.IsEmpty(ListItem.Studio) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Studio))]" />
+						<param name="width" value="571" />
+						<param name="height" value="40" />
+						<param name="label" value="$LOCALIZE[572]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.studio)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.studio))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="152" />
-						<param name="label" value="$LOCALIZE[20416] : [COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Premiered)][/COLOR]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Premiered))" />
+						<param name="width" value="571" />
+						<param name="height" value="40" />
+						<param name="label" value="$LOCALIZE[20473]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.premiered)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.premiered))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="153" />
-						<param name="label" value="$LOCALIZE[31017] : [COLOR white]$VAR[MPAALabelPVRVar][/COLOR]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MPAA))" />
+						<param name="width" value="571" />
+						<param name="height" value="40" />
+						<param name="label" value="$LOCALIZE[20074]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.mpaa)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="154" />
-						<param name="label" value="$LOCALIZE[563] IMdB : [COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.IMDB)]$INFO[Window(Home).Property(SkinHelper.ListItem.Votes.IMDB), (, $LOCALIZE[40027])][/COLOR]" />
-						<param name="visible" value="![String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.IMDB)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Votes.IMDB))]" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="155" />
-						<param name="label" value="$LOCALIZE[563] TheMovieDB : [COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB)]$INFO[Window(Home).Property(SkinHelper.ListItem.Votes.TMDB), (, $LOCALIZE[40027])][/COLOR]" />
-						<param name="visible" value="![String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Votes.TMDB))]" />
+						<param name="width" value="571" />
+						<param name="height" value="175" />
+						<param name="label" value="$LOCALIZE[206]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.castandrole)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="156" />
-						<param name="label" value="$LOCALIZE[563] TVDB : [COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TVDB)]$INFO[Window(Home).Property(SkinHelper.ListItem.Votes.TVDB), (, $LOCALIZE[40027])][/COLOR]" />
-						<param name="visible" value="![String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TVDB)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Votes.TVDB))]" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="157" />
-						<param name="label" value="$LOCALIZE[126] : [COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Status)][/COLOR]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Status))" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="158" />
-						<param name="label" value="$LOCALIZE[40236] : [COLOR white]$VAR[OscarsVar][/COLOR]" />
-						<param name="visible" value="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),Oscar)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogMetadata">
+					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="159" />
-						<param name="label" value="$LOCALIZE[206] : [COLOR white]$INFO[ListItem.Cast][/COLOR]" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Cast)" />
+						<param name="width" value="571" />
+						<param name="height" value="40" />
+						<param name="label" value="$LOCALIZE[563]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.rating)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.rating))" />
+						<param name="textcolor" value="$VAR[SkinColorVar]" />
+					</include>
+					<include content="InfoDialogPvrMetadata">
+						<param name="control_id" value="157" />
+						<param name="width" value="571" />
+						<param name="height" value="40" />
+						<param name="label" value="$LOCALIZE[126]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.status)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.status))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
 				</control>

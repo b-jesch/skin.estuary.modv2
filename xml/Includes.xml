@@ -244,17 +244,7 @@
             <label>$INFO[ListItem.Art(fanart7)]</label>
             <label>$INFO[ListItem.Art(fanart8)]</label>
             <label>$INFO[ListItem.Art(fanart9)]</label>
-            <label>$INFO[ListItem.Art(fanart10)]</label>
-            <label>$INFO[ListItem.Art(fanart11)]</label>
-            <label>$INFO[ListItem.Art(fanart12)]</label>
-            <label>$INFO[ListItem.Art(fanart13)]</label>
-            <label>$INFO[ListItem.Art(fanart14)]</label>
-            <label>$INFO[ListItem.Art(fanart15)]</label>
-            <label>$INFO[ListItem.Art(fanart16)]</label>
-            <label>$INFO[ListItem.Art(fanart17)]</label>
-            <label>$INFO[ListItem.Art(fanart18)]</label>
-            <label>$INFO[ListItem.Art(fanart19)]</label>
-            <label>$INFO[ListItem.Art(fanart20)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart)]</label>
             <label>$INFO[ListItem.Art(tvshow.fanart1)]</label>
             <label>$INFO[ListItem.Art(tvshow.fanart2)]</label>
             <label>$INFO[ListItem.Art(tvshow.fanart3)]</label>
@@ -264,24 +254,18 @@
             <label>$INFO[ListItem.Art(tvshow.fanart7)]</label>
             <label>$INFO[ListItem.Art(tvshow.fanart8)]</label>
             <label>$INFO[ListItem.Art(tvshow.fanart9)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart10)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart11)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart12)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart13)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart14)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart15)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart16)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart17)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart18)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart19)]</label>
-            <label>$INFO[ListItem.Art(tvshow.fanart20)]</label>
+			<label>$INFO[Window(Home).Property(PVR.Artwork.fanart)]</label>
+            <label>$INFO[Window(Home).Property(PVR.Artwork.fanart1)]</label>
+            <label>$INFO[Window(Home).Property(PVR.Artwork.fanart2)]</label>
+            <label>$INFO[Window(Home).Property(PVR.Artwork.fanart3)]</label>
+            <label>$INFO[Window(Home).Property(PVR.Artwork.fanart4)]</label>
             <pauseatend>8000</pauseatend>
         </control>
 		<control type="image" id="4398">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<fadetime>1500</fadetime>
+			<fadetime>1100</fadetime>
 			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -2193,7 +2177,7 @@
 					<right>20</right>
 					<height>200</height>
 					<orientation>horizontal</orientation>
-					<width>950</width>
+					<width>1270</width>
 					<itemgap>10</itemgap>
 					<visible>!Window.IsVisible(extendedprogressdialog) + !Window.IsActive(fullscreenvideo)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
@@ -2249,7 +2233,7 @@
 						<control type="label" id="7700">
 							<label>$VAR[NowPlayingSublabelVar]</label>
 							<left>5</left>
-							<top>44</top>
+							<top>48</top>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -2259,15 +2243,30 @@
 							<scroll>true</scroll>
 						</control>
 					</control>
-					<control type="label">
-						<font>font_clock</font>
-						<shadowcolor>text_shadow</shadowcolor>
-						<height>200</height>
-						<width>auto</width>
+					<control type="group">
+						<width>460</width>
+						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<animation effect="slide" end="0,-10" time="0" condition="String.IsEqual(Skin.Font,Arial)">Conditional</animation>
-						<label>[B]$INFO[System.Time][/B]</label>
-						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
+						<control type="label">
+							<font>font_date</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<height>50</height>
+							<top>42</top>
+							<right>190</right>
+							<width>320</width>
+							<align>right</align>
+							<label>[B]$INFO[System.Date(dd. MMM yyyy)][/B]</label>
+							<visible>Skin.HasSetting(show_date)</visible>
+						</control>
+						<control type="label">
+							<font>font_clock</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<height>200</height>
+							<right>-20</right>
+							<width>200</width>
+							<label>[B]$INFO[System.Time][/B]</label>
+						</control>
 					</control>
 				</control>
 				<control type="grouplist">

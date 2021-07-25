@@ -107,7 +107,7 @@
 						<ondown>5000</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
-						<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+						<visible>!Skin.HasSetting(enable_LibraryClearLogo) + !String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
 					</control>
 					<control type="button" id="138">
 						<left>-8</left>
@@ -123,7 +123,7 @@
 						<ondown>5000</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
-						<visible>Skin.HasSetting(enable_LibraryClearLogo)</visible>
+						<visible>Skin.HasSetting(enable_LibraryClearLogo) | String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
 					</control>
 					<control type="textbox">
 						<left>16</left>
@@ -134,7 +134,7 @@
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[PlotSpoilerInfoVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+						<visible>!Skin.HasSetting(enable_LibraryClearLogo) + !String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
 					</control>
 					<control type="textbox">
 						<left>16</left>
@@ -145,7 +145,7 @@
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[PlotSpoilerInfoVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>Skin.HasSetting(enable_LibraryClearLogo)</visible>
+						<visible>Skin.HasSetting(enable_LibraryClearLogo) | String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="5000">
