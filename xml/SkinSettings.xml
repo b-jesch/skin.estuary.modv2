@@ -1097,6 +1097,13 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
+				<control type="button" id="10023">
+					<include>DefaultSettingButton</include>
+					<description>menu logo</description>
+					<onclick>Skin.SelectBool(40367, 15109|MenuLogoDefault, 40368|MenuLogoLE, 40369|MenuLogoCE)</onclick>
+					<label>$LOCALIZE[40367]</label>
+					<label2>$VAR[Label_SkinSetting_Logo]</label2>
+				</control>
 				<control type="radiobutton" id="10024">
 					<label>$LOCALIZE[40216]</label>
 					<include>DefaultSettingButton</include>

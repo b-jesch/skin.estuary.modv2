@@ -2500,9 +2500,10 @@
 					<aspectratio>keep</aspectratio>
 					<width>56</width>
 					<height>56</height>
-					<texture colordiffuse="$VAR[SkinColorVar]">icons/logo.png</texture>
+					<texture colordiffuse="$VAR[LogoColorVar]">$VAR[LogoVar]</texture>
 					<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
 				</control>
+				<!--
 				<control type="image">
 					<aspectratio>keep</aspectratio>
 					<width>56</width>
@@ -2511,13 +2512,14 @@
 					<visible>Skin.HasSetting(EnableGradientColor)</visible>
 					<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
 				</control>
+				-->
 				<control type="image">
-					<left>40</left>
-					<top>10</top>
+					<left>55</left>
+					<top>4</top>
 					<aspectratio>keep</aspectratio>
-					<width>192</width>
-					<height>36</height>
-					<texture>icons/logo-text.png</texture>
+					<width>202</width>
+					<height>50</height>
+					<texture>$VAR[LogoTextVar]</texture>
 					<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 				</control>
 			</control>

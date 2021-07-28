@@ -2243,30 +2243,16 @@
 							<scroll>true</scroll>
 						</control>
 					</control>
-					<control type="group">
-						<width>460</width>
+					<control type="label">
 						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<animation effect="slide" end="0,-10" time="0" condition="String.IsEqual(Skin.Font,Arial)">Conditional</animation>
-						<control type="label">
-							<font>font_date</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<height>50</height>
-							<top>42</top>
-							<right>190</right>
-							<width>320</width>
-							<align>right</align>
-							<label>[B]$INFO[System.Date(dd. MMM yyyy)][/B]</label>
-							<visible>Skin.HasSetting(show_date)</visible>
-						</control>
-						<control type="label">
-							<font>font_clock</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<height>200</height>
-							<right>-20</right>
-							<width>200</width>
-							<label>[B]$INFO[System.Time][/B]</label>
-						</control>
+						<font>font_clock</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<height>200</height>
+						<width>auto</width>
+						<align>right</align>
+						<label>[B]$INFO[System.Time][/B]</label>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -2278,6 +2264,7 @@
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
+					<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
@@ -2285,7 +2272,6 @@
 						<textoffsetx>-8</textoffsetx>
 						<label>$INFO[System.AlarmPos]</label>
 						<visible>System.HasAlarm(shutdowntimer)</visible>
-						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 					</control>
 					<control type="image">
 						<top>16</top>
@@ -2295,7 +2281,22 @@
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture>icons/power.png</texture>
 						<visible>System.HasAlarm(shutdowntimer)</visible>
-						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
+					</control>
+					<control type="label">
+						<height>50</height>
+						<width>auto</width>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[System.Date(dd. MMM yyyy)] - </label>
+						<visible>Skin.HasSetting(show_date) + Skin.HasSetting(show_weatherinfo)</visible>
+					</control>
+					<control type="label">
+						<height>50</height>
+						<width>auto</width>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[System.Date(dd. MMM yyyy)]</label>
+						<visible>Skin.HasSetting(show_date) + !Skin.HasSetting(show_weatherinfo)</visible>
 					</control>
 					<control type="label">
 						<height>50</height>
@@ -2303,7 +2304,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
-						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 					</control>
 					<control type="image">
 						<top>1</top>
@@ -2313,7 +2313,6 @@
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture>$INFO[Weather.FanartCode,special://skin/extras/weather/,.png]</texture>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
-						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 					</control>
 					<control type="image">
 						<top>8</top>

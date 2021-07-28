@@ -72,7 +72,6 @@ def set_labels(prefix, data):
             lvalue = str(data[label])
             if isinstance(data[label], list): lvalue = ', '.join(data[label])
             win.setProperty('%s.ListItem.%s' % (prefix, label), lvalue)
-            xbmc.log('%s.ListItem.%s: %s' % (prefix, label, lvalue))
 
 
 def viewswitcher(view_label, trans_title):
