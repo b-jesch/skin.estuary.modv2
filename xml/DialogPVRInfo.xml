@@ -114,8 +114,8 @@
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">SetProperty(TextViewer_Header,$LOCALIZE[207],home)</onclick>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">SetProperty(TextViewer_Text,$ESCINFO[ListItem.Plot],home)</onclick>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">ActivateWindow(1102)</onclick>
-						<onleft>138</onleft>
-						<onright>138</onright>
+						<onleft>60</onleft>
+						<onright>60</onright>
 						<ondown>9000</ondown>
 						<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
 					</control>
@@ -140,17 +140,17 @@
 				<control type="grouplist" id="4000">
 					<orientation>vertical</orientation>
 					<left>647</left>
-					<top>348</top>
-					<height>518</height>
+					<top>345</top>
+					<height>510</height>
 					<itemgap>5</itemgap>
+					<usecontrolcoords>true</usecontrolcoords>
 					<ondown>5000</ondown>
 					<onup>501</onup>
 					<onright>140</onright>
 					<onleft>140</onleft>
+					<pagecontrol>60</pagecontrol>
 					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="147" />
-						<param name="width" value="571" />
-						<param name="height" value="75" />
 						<param name="label" value="$LOCALIZE[20339]: "/>
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.director)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.director))" />
@@ -158,7 +158,6 @@
 					</include>
 					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="148" />
-						<param name="width" value="571" />
 						<param name="label" value="$LOCALIZE[20417]: " />
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.writer)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.writer))" />
@@ -166,8 +165,6 @@
 					</include>
 					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="149" />
-						<param name="width" value="571" />
-						<param name="height" value="75" />
 						<param name="label" value="$LOCALIZE[515]: " />
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.genre)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.genre))" />
@@ -175,8 +172,6 @@
 					</include>
 					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="150" />
-						<param name="width" value="571" />
-						<param name="height" value="40" />
 						<param name="label" value="$LOCALIZE[574]: " />
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.country)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.country))" />
@@ -184,8 +179,6 @@
 					</include>
 					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="151" />
-						<param name="width" value="571" />
-						<param name="height" value="40" />
 						<param name="label" value="$LOCALIZE[572]: " />
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.studio)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.studio))" />
@@ -193,8 +186,6 @@
 					</include>
 					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="152" />
-						<param name="width" value="571" />
-						<param name="height" value="40" />
 						<param name="label" value="$LOCALIZE[20473]: " />
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.premiered)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.premiered))" />
@@ -202,26 +193,13 @@
 					</include>
 					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="153" />
-						<param name="width" value="571" />
-						<param name="height" value="40" />
 						<param name="label" value="$LOCALIZE[20074]: " />
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.mpaa)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
 					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="155" />
-						<param name="width" value="571" />
-						<param name="height" value="175" />
-						<param name="label" value="$LOCALIZE[206]: " />
-						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.castandrole)]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole))" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="159" />
-						<param name="width" value="571" />
-						<param name="height" value="40" />
 						<param name="label" value="$LOCALIZE[563]: " />
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.rating)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.rating))" />
@@ -229,13 +207,27 @@
 					</include>
 					<include content="InfoDialogPvrMetadata">
 						<param name="control_id" value="157" />
-						<param name="width" value="571" />
-						<param name="height" value="40" />
 						<param name="label" value="$LOCALIZE[126]: " />
 						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.status)]" />
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.status))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 					</include>
+					<include content="InfoDialogPvrMetadata">
+						<param name="control_id" value="155" />
+						<param name="label" value="$LOCALIZE[206]: " />
+						<param name="content" value="$INFO[Window(Home).Property(PVR.Artwork.ListItem.castandrole)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole))" />
+						<param name="textcolor" value="$VAR[SkinColorVar]" />
+					</include>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>1213</left>
+					<top>339</top>
+					<width>12</width>
+					<height>526</height>
+					<onleft>4000</onleft>
+					<onright>4000</onright>
+					<orientation>vertical</orientation>
 				</control>
 				<control type="group">
 					<control type="image">

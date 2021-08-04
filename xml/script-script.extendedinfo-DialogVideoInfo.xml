@@ -488,84 +488,84 @@
 				<visible>Control.HasFocus(5002) | [!Control.IsVisible(1000) + !Control.IsVisible(750) + !Control.IsVisible(250) + !Control.IsVisible(2000) + !Control.IsVisible(150) + !Control.IsVisible(1150) + !Control.IsVisible(350) + !Control.IsVisible(1250) + !Control.IsVisible(1350)]</visible>
 				<include>OpenClose_Right</include>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="146" />
 					<param name="label" value="$INFO[Window.Property(OriginalTitle),$LOCALIZE[20376] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(OriginalTitle))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="148" />
 					<param name="label" value="$INFO[Window.Property(Writer),$LOCALIZE[20417] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Writer))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="151" />
 					<param name="label" value="$LOCALIZE[29909] : [COLOR white]$INFO[Window.Property(Studio)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Studio))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="152" />
 					<param name="label" value="$LOCALIZE[20416] : [COLOR white]$INFO[Window.Property(Premiered)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Premiered))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="153" />
 					<param name="label" value="$ADDON[script.extendedinfo 32109] : [COLOR white]$INFO[Window.Property(Budget),$][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Budget))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="154" />
 					<param name="label" value="$ADDON[script.extendedinfo 32108] : [COLOR white]$INFO[Window.Property(Revenue),$][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Revenue))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="155" />
 					<param name="label" value="$LOCALIZE[40294] : [COLOR white]$INFO[Container(2000).NumItems][/COLOR]" />
 					<param name="visible" value="String.IsEqual(Window.Property(type),Season)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="156" />
 					<param name="label" value="$LOCALIZE[31017] : [COLOR white]$VAR[ExtendedInfoMPAALabelVar][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(mpaa))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="167" />
 					<param name="label" value="$LOCALIZE[563] : [COLOR white]$INFO[Window.Property(Rating)]$INFO[Window.Property(Votes), (, $ADDON[script.extendedinfo 32082])][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Rating))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="162" />
 					<param name="label" value="$LOCALIZE[40236] : [COLOR white]$INFO[Window.Property(omdb.Awards)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(omdb.Awards))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="163" />
 					<param name="label" value="$LOCALIZE[20457] : [COLOR white]$INFO[Window.Property(Set)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Set))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="165" />
 					<param name="label" value="$LOCALIZE[126] : [COLOR white]$INFO[Window.Property(Status)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Status))" />

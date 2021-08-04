@@ -9,7 +9,7 @@ try:
 except ImportError:
     xbmc.log('PVR artwork module not available', xbmc.LOGWARNING)
 
-content_labels = list(['50', '55', '53', '54', '505', '500', '502', '503', '504', '506', '507', '508', '509'])
+content_ids = list(['50', '55', '53', '54', '505', '500', '502', '503', '504', '506', '507', '508', '509'])
 forced_views = list(['movies', 'sets', 'setmovies', 'tvshows', 'seasons', 'episodes', 'albums', 'artists', 'musicvideos'])
 
 content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'channels',
@@ -23,10 +23,10 @@ labels = list(['director', 'writer', 'genre', 'country', 'studio', 'premiered', 
 win = xbmcgui.Window(10000)
 
 
-def get_view_id(content_type):
+def get_view_id(content):
 
-    for label in content_labels:
-        if xbmc.getCondVisibility('Skin.HasSetting(%s.%s)' % (content_type, label)): return label
+    for id in content_ids:
+        if xbmc.getCondVisibility('Skin.HasSetting(%s.%s)' % (content, id)): return id
     return False
 
 
@@ -74,42 +74,38 @@ def set_labels(prefix, data):
             win.setProperty('%s.ListItem.%s' % (prefix, label), lvalue)
 
 
-def viewswitcher(view_label, trans_title):
-
-    # Check if forced view is enabled and do it's magic
-    if not xbmc.getCondVisibility('Skin.HasSetting(ForcedViews.Enabled)'): return view_label
+def viewswitcher(content, view_mode):
 
     current_content = xbmc.getInfoLabel('Container.Content')
-    if not current_content: return view_label
+    if not current_content: return content, view_mode
 
     path = xbmc.getInfoLabel('Container.FolderName')
 
     # Check if movie is part of a set
     if current_content == 'movies':
-        if str(trans_title) != str(path) and (str(trans_title) + 's' != str(path)):
+        if TRANS_TITLE != str(path) and TRANS_TITLE + 's' != str(path):
             current_content = "setmovies"
 
-    # Check if content is part of addon - if yes disable forced view and let addon select view
-    if xbmc.getInfoLabel('Container.PluginName') != '': return view_label
+    # Check if content type is part of forced content
+    if current_content not in forced_views: return current_content, view_mode
 
-    # Check if content type is part if defined views
-    if current_content not in forced_views: return view_label
+    # Check if content is part of addon - if yes let addon select view
+    if xbmc.getInfoLabel('Container.PluginName') != '': return current_content, view_mode
 
-    # Check if content type is forced
+    # Check if content id is forced
     forced_id = get_view_id(current_content)
-    if not forced_id: return view_label
+    if not forced_id: return current_content, view_mode
 
-    current_label = xbmc.getInfoLabel('Container.Viewmode')
-    if current_label != view_label:
-        xbmc.log('Forced view for %s defined: %s (but is %s), changing.' % (current_content, view_label,
-                                                                            current_label), level=xbmc.LOGDEBUG)
-
+    current_mode = xbmc.getInfoLabel('Container.Viewmode')
+    if current_content != content or view_mode != current_mode:
         xbmc.executebuiltin('Container.SetViewMode(%s)' % forced_id)
 
         # give kodi time to relax :-)
         xbmc.sleep(1000)
+        view_mode = xbmc.getInfoLabel('Container.Viewmode')
+        xbmc.log('changed viewmode for %s from %s to %s' % (current_content, current_mode, view_mode))
 
-    return xbmc.getInfoLabel('Container.Viewmode')
+    return current_content, view_mode
 
 
 def pvrartwork(current_item):
@@ -146,7 +142,7 @@ def pvrartwork(current_item):
 
         details = pmd.get_pvr_artwork(title, channel, genre, year, manual_select=False, ignore_cache=False)
         if details is not None:
-            if details['art']: set_properties('PVR.Artwork', details['art'])
+            if details.get('art', False): set_properties('PVR.Artwork', details['art'])
             set_labels('PVR.Artwork', details)
 
     win.clearProperty("PVR.Artwork.ManualLookup")
@@ -156,8 +152,9 @@ def pvrartwork(current_item):
 if __name__ == '__main__':
 
     # properties for viewswitcher
-    trans_title = xbmc.getLocalizedString(369)
-    view_label = ''
+    TRANS_TITLE = str(xbmc.getLocalizedString(369))
+    content = ''
+    mode = ''
 
     # properties for pvrartwork
     current_item = ''
@@ -172,7 +169,7 @@ if __name__ == '__main__':
 
         # view switcher
         if xbmc.getCondVisibility('Skin.HasSetting(ForcedViews.Enabled)'):
-            view_label = viewswitcher(view_label, trans_title)
+            content, mode = viewswitcher(content, mode)
 
         # PVR artwork
         if pam and xbmc.getCondVisibility('Skin.HasSetting(Skin_enablePvrArtwork)'):

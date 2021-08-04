@@ -367,91 +367,91 @@
 				<visible>Control.HasFocus(5002)</visible>
 				<include>OpenClose_Right</include>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 						<param name="control_id" value="147" />
 						<param name="label" value="$INFO[Container(60).ListItem.Director,$LOCALIZE[20339] : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Director)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="148" />
 						<param name="label" value="$INFO[Container(60).ListItem.Writer,$LOCALIZE[20417] : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Writer)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="149" />
 						<param name="label" value="$INFO[Container(60).ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Genre)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="150" />
 						<param name="label" value="$INFO[Container(60).ListItem.Country,$LOCALIZE[21875] : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Country)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="151" />
 						<param name="label" value="$INFO[Container(60).ListItem.Studio,$LOCALIZE[29909] : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Studio)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="152" />
 						<param name="label" value="$INFO[Container(60).ListItem.Premiered,$LOCALIZE[20416] : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Premiered)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="153" />
 						<param name="label" value="$LOCALIZE[31017] : [COLOR white]$VAR[MPAALabelMoviesSetsVar][/COLOR]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Mpaa)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="154" />
 						<param name="label" value="$INFO[Container(60).ListItem.RatingAndVotes(imdb),$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.RatingAndVotes(imdb))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="155" />
 						<param name="label" value="$INFO[Container(60).ListItem.RatingAndVotes(themoviedb),$LOCALIZE[563] TheMovieDb : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.RatingAndVotes(themoviedb))" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
 						<param name="control_id" value="156" />
 						<param name="label" value="$INFO[Container(60).ListItem.LastPlayed,$LOCALIZE[568] : [COLOR white],[/COLOR]]" />
 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.LastPlayed)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
-					<include content="InfoDialogMetadata2">
+					<include content="InfoDialogMetadata">
   						<param name="control_id" value="157" />
  						<param name="label" value="$INFO[Container(60).ListItem.Tag,$LOCALIZE[20459] : [COLOR white],[/COLOR]]" />
  						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Tag)" />
   						<param name="textcolor" value="$VAR[SkinColorVar]" />
  						<param name="font" value="fontplot" />
   					</include>
-  					<include content="InfoDialogMetadata2">
+  					<include content="InfoDialogMetadata">
 					<param name="control_id" value="168" />
 					<param name="label" value="$LOCALIZE[40287] : [COLOR white]$INFO[Container(60).ListItem.DateAdded][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Container(60).ListItem.DateAdded)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="169" />
 					<param name="label" value="$LOCALIZE[573] : [COLOR white]$INFO[Container(60).ListItem.FileNameAndPath][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Container(60).ListItem.FileNameAndPath)" />
