@@ -340,112 +340,112 @@
 				<visible>Control.HasFocus(5002)</visible>
 				<include>OpenClose_Right</include>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="146" />
 					<param name="label" value="$INFO[ListItem.OriginalTitle,$LOCALIZE[20376] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(ListItem.OriginalTitle)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="148" />
 					<param name="label" value="$INFO[VideoPlayer.Writer,$LOCALIZE[20417] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.Writer)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="150" />
 					<param name="label" value="$LOCALIZE[21875] : [COLOR white]$INFO[VideoPlayer.Country][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.Country)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="151" />
 					<param name="label" value="$LOCALIZE[29909] : [COLOR white]$INFO[VideoPlayer.Studio][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.Studio)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="152" />
 					<param name="label" value="$LOCALIZE[20416] : [COLOR white]$INFO[VideoPlayer.Premiered][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.Premiered)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="153" />
 					<param name="label" value="$LOCALIZE[31017] : [COLOR white]$VAR[PlayerInfoMPAALabelVar][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.Mpaa)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="154" />
 					<param name="label" value="$INFO[SkinHelper.Player.Rating.IMDB,$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[SkinHelper.ListItem.Votes.IMDB,[COLOR white] (,$LOCALIZE[40027])[/COLOR]]$INFO[Window(Home).Property(SkinHelper.Player.IMDB.Top250), [COLOR white]-[/COLOR] Top 250 : [COLOR white]#,[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250)) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="155" />
 					<param name="label" value="$INFO[SkinHelper.Player.Rating.IMDB,$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[SkinHelper.ListItem.Votes.IMDB,[COLOR white] (,$LOCALIZE[40027])[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="156" />
 					<param name="label" value="$INFO[Window(Home).Property(SkinHelper.Player.IMDB.Top250),[COLOR white][/COLOR]Top 250 : [COLOR white]#,[/COLOR]]" />
 					<param name="visible" value="String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250)) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="157" />
 					<param name="label" value="$INFO[VideoPlayer.RatingAndVotes(themoviedb),$LOCALIZE[563] TheMovieDb : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.RatingAndVotes(themoviedb)) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="158" />
 					<param name="label" value="$INFO[VideoPlayer.RatingAndVotes,$LOCALIZE[563] TVDB : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.RatingAndVotes) + [VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons) | VideoPlayer.Content(episodes)]" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="159" />
 					<param name="label" value="$INFO[VideoPlayer.RatingAndVotes,$LOCALIZE[563] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="[String.IsEmpty(VideoPlayer.RatingAndVotes(imdb)) + String.IsEmpty(VideoPlayer.RatingAndVotes(themoviedb)) + !String.IsEmpty(VideoPlayer.RatingAndVotes)] + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="160" />
 					<param name="label" value="$LOCALIZE[40236] : [COLOR white]$INFO[Window(Home).Property(SkinHelper.Player.Awards)][/COLOR]" />
 					<param name="visible" value="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),Oscar)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="161" />
 					<param name="label" value="$LOCALIZE[20459] : [COLOR white]$INFO[VideoPlayer.Tag][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.Tag)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="162" />
 					<param name="label" value="$LOCALIZE[126] : [COLOR white]$INFO[VideoPlayer.Status][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.Status)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="169" />
 					<param name="label" value="$LOCALIZE[573] : [COLOR white]$INFO[Player.FileNameAndPath][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Player.FileNameAndPath)" />

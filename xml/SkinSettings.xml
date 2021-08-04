@@ -855,12 +855,40 @@
 					<onclick>Skin.ToggleSetting(hide_popup)</onclick>
 					<selected>Skin.HasSetting(hide_popup)</selected>
 				</control>
+				<control type="label" id="30017">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>70</height>
+					<label>$LOCALIZE[40364]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="radiobutton" id="716">
+					<label>$LOCALIZE[40363]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_date)</onclick>
+					<selected>Skin.HasSetting(show_date)</selected>
+				</control>
 				<control type="radiobutton" id="704">
 					<label>$LOCALIZE[31093]</label>
 					<include>DefaultSettingButton</include>
 					<onclick condition="!String.IsEmpty(Weather.Plugin)">Skin.ToggleSetting(show_weatherinfo)</onclick>
 					<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
 					<selected>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</selected>
+				</control>
+				<control type="label" id="30018">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>70</height>
+					<label>$LOCALIZE[40365]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="radiobutton" id="705">
 					<label>$LOCALIZE[31160]</label>
@@ -881,6 +909,17 @@
 					<onclick condition="!Skin.String(MediaFlagsColor)">RunScript(script.skin.helper.colorpicker,skinstring=MediaFlagsColor)</onclick>
 					<onclick condition="Skin.String(MediaFlagsColor)">Skin.Reset(MediaFlagsColor)</onclick>
 					<visible>!Skin.HasSetting(hide_mediaflags)</visible>
+				</control>
+				<control type="label" id="30019">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>70</height>
+					<label>$LOCALIZE[40366]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="radiobutton" id="708">
 					<label>$LOCALIZE[40238]</label>
@@ -978,6 +1017,13 @@
 					<onclick>Skin.ToggleSetting(Skin_EnableAnimatedPosters)</onclick>
 					<selected>Skin.HasSetting(Skin_EnableAnimatedPosters)</selected>
 				</control>
+				<control type="radiobutton" id="604">
+					<label>$LOCALIZE[40361]</label>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!System.HasAddon(script.module.pvr.artwork)">InstallAddon(script.module.pvr.artwork)</onclick>
+					<onclick condition="System.HasAddon(script.module.pvr.artwork)">Skin.ToggleSetting(Skin_enablePvrArtwork)</onclick>
+					<selected>Skin.HasSetting(Skin_enablePvrArtwork)</selected>
+				</control>
 				<control type="button" id="606">
 					<label>$LOCALIZE[31149]</label>
 					<label2>$VAR[Label_SkinSetting_MovieGenreFanart]</label2>
@@ -1050,6 +1096,13 @@
 					<font>font28_title</font>
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="button" id="10023">
+					<include>DefaultSettingButton</include>
+					<description>menu logo</description>
+					<onclick>Skin.SelectBool(40367, 15109|MenuLogoDefault, 40368|MenuLogoLE, 40369|MenuLogoCE)</onclick>
+					<label>$LOCALIZE[40367]</label>
+					<label2>$VAR[Label_SkinSetting_Logo]</label2>
 				</control>
 				<control type="radiobutton" id="10024">
 					<label>$LOCALIZE[40216]</label>

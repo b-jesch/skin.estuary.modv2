@@ -52,9 +52,9 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
-				<left>7</left>
+				<left>20</left>
 				<top>78</top>
-				<width>368</width>
+				<width>342</width>
 				<height>200</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="DefaultVideoFanart.png">$INFO[Player.Art(thumb)]</texture>

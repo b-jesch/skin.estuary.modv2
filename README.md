@@ -1,5 +1,19 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
+### 3.1.0+matrix ###
+
+- .2
+  * Improvements/Bugfixes of PVR artwork functions and info window
+
+
+- .1
+  * show distribution/standard logo in top left corner
+  * modification/rearranging of date/time info
+  
+
+- .0
+  * Implementation and introduction of PVR artwork using the "PVR Artwork Module"
+  * show date in top bar (optional)
 ### 3.0.9+matrix ###
 - .0
   * PVR NextUp notification window improved

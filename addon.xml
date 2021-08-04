@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.0.9+matrix" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.1.0+matrix.2" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -7,6 +7,7 @@
         <import addon="script.image.resource.select" version="3.0.2"/>
 		<import addon="script.embuary.helper" version="2.0.7"/>
 		<import addon="script.embuary.info" version="2.0.7"/>
+		<import addon="script.module.pvr.artwork" version="1.0.3"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
@@ -18,7 +19,7 @@
  		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
 		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
 	</extension>
-	<extension point="xbmc.service" library="scripts/viewswitcher.py" visible="!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(ForcedViews.Enabled)" />
+	<extension point="xbmc.service" library="scripts/services.py" visible="!String.IsEmpty(Window(home).Property(CurrentSkin))" />
 	<extension point="kodi.context.item">
       	<menu id="kodi.core.main">
       		<item library="scripts/context_menu_jumptoletter.py">
@@ -29,6 +30,11 @@
  				<label>$LOCALIZE[40181]</label>
  				<visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + String.IsEqual(ListItem.DBType,set) + !Window.IsVisible(Home)</visible>
  			</item>
+            <item library="scripts/context_menu_pvr.py">
+                <label>$LOCALIZE[40362]</label>
+                <description>PVR artwork Configuration</description>
+                <visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + System.HasAddon(script.module.pvr.artwork) + Skin.HasSetting(Skin_enablePvrArtwork) + [Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
+            </item>
     	</menu>
  	</extension>
 	<extension point="xbmc.addon.metadata">
@@ -43,7 +49,14 @@
 				<fanart>resources/fanart.jpg</fanart>
 			</assets>
 <news>
+[B]3.1.0+matrix[/B]
+- .2  Improvements/Bugfixes of PVR Artwork window/functions/module
+- .1  Rearranging date info
+      Distribution-/Standardlogo in top left corner
+-     Introduction and implementation of PVR artwork/metadata collected from local
+      database, files and TMDB (key required) using "The PVR artwork module"
 [B]3.0.9+matrix[/B]
+- .1  Show Date (optional) in Main views
 -     PVR NextUp notification window improved
       NL language strings updated
       Rework and reimplementation of forced views

@@ -231,56 +231,56 @@
 				<visible>Control.HasFocus(5002) | [!Control.IsVisible(150) + !Control.IsVisible(550) + !Control.IsVisible(250) + !Control.IsVisible(650) + !Control.IsVisible(350) + !Control.IsVisible(450)]</visible>
 				<include>OpenClose_Right</include>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="146" />
 					<param name="label" value="$INFO[Window.Property(AlsoKnownAs),$ADDON[script.extendedinfo 32016] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(AlsoKnownAs))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="148" />
 					<param name="label" value="$INFO[Window.Property(Birthday),$ADDON[script.extendedinfo 32012] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Birthday))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="151" />
 					<param name="label" value="$INFO[Window.Property(Age),$ADDON[script.extendedinfo 32020] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Age))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="152" />
 					<param name="label" value="$INFO[Window.Property(PlaceOfBirth),$ADDON[script.extendedinfo 32014] : [COLOR=white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(PlaceOfBirth))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="156" />
 					<param name="label" value="$INFO[Window.Property(Deathday),$ADDON[script.extendedinfo 32013] : [COLOR=white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(Deathday))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="153" />
 					<param name="label" value="$INFO[Window.Property(TotalMovies),$ADDON[script.extendedinfo 32011] : [COLOR=white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(TotalMovies))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="154" />
 					<param name="label" value="$INFO[Window.Property(DBMovies),$ADDON[script.extendedinfo 32021] : [COLOR=white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(Window.Property(DBMovies))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="155" />
 					<param name="label" value="$INFO[Window.Property(Homepage),$LOCALIZE[40310] : [COLOR=white],[/COLOR]]" />
 					<param name="visible" value="String.IsEqual(Window.Property(Homepage)" />

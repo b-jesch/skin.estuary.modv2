@@ -262,77 +262,77 @@
 				<itemgap>-5</itemgap>
 				<include>OpenClose_Right</include>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="172" />
 					<param name="label" value="$LOCALIZE[21893] : [COLOR white]$INFO[MusicPlayer.Property(Artist_Born)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_Born))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="173" />
 					<param name="label" value="$LOCALIZE[21897] : [COLOR white]$INFO[MusicPlayer.Property(Artist_Died)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_Died))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="174" />
 					<param name="label" value="$LOCALIZE[21894] : [COLOR white]$INFO[MusicPlayer.Property(Artist_Formed)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_Formed))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="175" />
 					<param name="label" value="$LOCALIZE[21896] : [COLOR white]$INFO[MusicPlayer.Property(Artist_Disbanded)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_Disbanded))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="176" />
 					<param name="label" value="$LOCALIZE[21898] : [COLOR white]$INFO[MusicPlayer.Property(Artist_YearsActive)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_YearsActive))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="177" />
 					<param name="label" value="$LOCALIZE[175] : [COLOR white]$INFO[MusicPlayer.Property(Album_Mood)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Album_Mood))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="178" />
 					<param name="label" value="$LOCALIZE[176] : [COLOR white]$INFO[MusicPlayer.Property(Album_Style)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Album_Style))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="179" />
 					<param name="label" value="$LOCALIZE[21899] : [COLOR white]$INFO[MusicPlayer.Property(Album_Label)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Album_Label))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="161" />
 					<param name="label" value="$INFO[MusicPlayer.Rating,$LOCALIZE[563] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Rating)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="168" />
 					<param name="label" value="$LOCALIZE[40287] : [COLOR white]$INFO[MusicPlayer.DateAdded][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.DateAdded)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
-				<include content="InfoDialogMetadata2">
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="169" />
 					<param name="label" value="$LOCALIZE[573] : [COLOR white]$INFO[Player.FileNameAndPath][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Player.FileNameAndPath)" />
