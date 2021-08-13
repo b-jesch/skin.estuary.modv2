@@ -2,6 +2,11 @@
 
 ### 3.1.0+matrix ###
 
+- .3
+  * Introduction and Bugfix of normal/extended Power Menu
+  * further improvements of PVR artwork functions
+
+
 - .2
   * Improvements/Bugfixes of PVR artwork functions and info window
 

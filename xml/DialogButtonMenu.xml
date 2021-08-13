@@ -122,6 +122,7 @@
 						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
 						<onclick>RestartApp</onclick>
 						<visible>System.Platform.Linux | System.Platform.Windows</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40356]</label>
@@ -129,27 +130,31 @@
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
 						<visible>System.CanReboot</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
 						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
 						<onclick>dialog.close(all,true)</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) | System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) | System.AddonIsEnabled(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
@@ -170,54 +175,57 @@
 						<onclick>System.LogOff</onclick>
 						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 						<visible>System.Loggedon</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$VAR[MasterModeLabel]</label>
 						<icon>special://skin/extras/icons/Power menu/mastermode.png</icon> 
 						<onclick>mastermode</onclick>
 						<visible>System.HasLocks</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13017]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>InhibitIdleShutdown(true)</onclick>
 						<visible>System.HasShutdown +!System.IsInhibit</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13018]</label>
 						<icon>special://skin/extras/icons/Power menu/inhibitidleshutdown.png</icon> 
 						<onclick>InhibitIdleShutdown(false)</onclick>
 						<visible>System.HasShutdown + System.IsInhibit</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					 <item>
 						<label>$LOCALIZE[40009]</label>
 						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
+						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40013]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40010]</label>
 						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40014]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
-    				<item>
-        				<label>$LOCALIZE[20183]</label>
-        				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
-        				<onclick>ReloadSkin</onclick>
-    				</item>
 				</content>
 			</control>
 		</control>
@@ -340,6 +348,7 @@
 						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
 						<onclick>RestartApp</onclick>
 						<visible>System.Platform.Linux | System.Platform.Windows</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40356]</label>
@@ -347,27 +356,31 @@
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
 						<visible>System.CanReboot</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
 						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
 						<onclick>dialog.close(all,true)</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + System.AddonIsEnabled(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer) + !SystemHasAddon(service.sleepy.watchdog)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !SystemAddonIsEnabled(service.sleepy.watchdog)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
@@ -388,54 +401,57 @@
 						<onclick>System.LogOff</onclick>
 						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 						<visible>System.Loggedon</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$VAR[MasterModeLabel]</label>
 						<icon>special://skin/extras/icons/Power menu/mastermode.png</icon> 
 						<onclick>mastermode</onclick>
 						<visible>System.HasLocks</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13017]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>InhibitIdleShutdown(true)</onclick>
 						<visible>System.HasShutdown +!System.IsInhibit</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13018]</label>
 						<icon>special://skin/extras/icons/Power menu/inhibitidleshutdown.png</icon> 
 						<onclick>InhibitIdleShutdown(false)</onclick>
 						<visible>System.HasShutdown + System.IsInhibit</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					 <item>
 						<label>$LOCALIZE[40009]</label>
 						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
+						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40013]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40010]</label>
 						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40014]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
-    				<item>
-        				<label>$LOCALIZE[20183]</label>
-        				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
-        				<onclick>ReloadSkin</onclick>
-    				</item>
 				</content>
 			</control>
 		</control>
@@ -477,33 +493,38 @@
 						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
 						<onclick>RestartApp</onclick>
 						<visible>System.Platform.Linux | System.Platform.Windows</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40356]</label>
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
 						<visible>System.CanReboot</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
 						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
 						<onclick>dialog.close(all,true)</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + System.AddonIsEnabled(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer) + !System.HasAddon(service.sleepy.watchdog)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
@@ -524,54 +545,57 @@
 						<onclick>System.LogOff</onclick>
 						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 						<visible>System.Loggedon</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$VAR[MasterModeLabel]</label>
 						<icon>special://skin/extras/icons/Power menu/mastermode.png</icon> 
 						<onclick>mastermode</onclick>
 						<visible>System.HasLocks</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13017]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>InhibitIdleShutdown(true)</onclick>
 						<visible>System.HasShutdown +!System.IsInhibit</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13018]</label>
 						<icon>special://skin/extras/icons/Power menu/inhibitidleshutdown.png</icon> 
 						<onclick>InhibitIdleShutdown(false)</onclick>
 						<visible>System.HasShutdown + System.IsInhibit</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					 <item>
 						<label>$LOCALIZE[40009]</label>
 						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
+						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40013]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40010]</label>
 						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[40014]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
+						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
-    				<item>
-        				<label>$LOCALIZE[20183]</label>
-        				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
-        				<onclick>ReloadSkin</onclick>
-    				</item>
 				</content>
 			</control>
 		</control>

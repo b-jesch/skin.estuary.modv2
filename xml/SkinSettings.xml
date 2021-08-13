@@ -551,6 +551,12 @@
 					<onclick>Skin.SelectBool(40125, 31099|powermenu_panel, 40228|powermenu_iconlist, 40227|powermenu_list)</onclick>
 					<label2>$VAR[PowerMenuAspectLabel2Var]</label2>
 				</control>
+				<control type="radiobutton" id="507">
+					<label>$LOCALIZE[40370]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(ExtendedPowerMenu)</onclick>
+					<selected>!Skin.HasSetting(ExtendedPowerMenu)</selected>
+				</control>
 				<control type="radiobutton" id="509">
 					<label>$LOCALIZE[31051]</label>
 					<include>DefaultSettingButton</include>

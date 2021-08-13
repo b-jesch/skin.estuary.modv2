@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.1.0+matrix.2" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.1.0+matrix.3" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -50,9 +50,9 @@
 			</assets>
 <news>
 [B]3.1.0+matrix[/B]
+- .3  normal/extended Power Menu, further improvements of PVR artwork functions
 - .2  Improvements/Bugfixes of PVR Artwork window/functions/module
-- .1  Rearranging date info
-      Distribution-/Standardlogo in top left corner
+- .1  Rearranging date info, Distribution-/Standardlogo in top left corner
 -     Introduction and implementation of PVR artwork/metadata collected from local
       database, files and TMDB (key required) using "The PVR artwork module"
 [B]3.0.9+matrix[/B]
