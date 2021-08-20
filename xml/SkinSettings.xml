@@ -1030,6 +1030,13 @@
 					<onclick condition="System.HasAddon(script.module.pvr.artwork)">Skin.ToggleSetting(Skin_enablePvrArtwork)</onclick>
 					<selected>Skin.HasSetting(Skin_enablePvrArtwork)</selected>
 				</control>
+				<control type="radiobutton" id="605">
+					<include>DefaultSettingButton</include>
+					<label>  ∟$LOCALIZE[40371]</label>
+					<onclick>Skin.ToggleSetting(prefer_PvrFanart)</onclick>
+					<selected>Skin.HasSetting(prefer_PvrFanart)</selected>
+					<visible>Skin.HasSetting(Skin_enablePvrArtwork)</visible>
+				</control>
 				<control type="button" id="606">
 					<label>$LOCALIZE[31149]</label>
 					<label2>$VAR[Label_SkinSetting_MovieGenreFanart]</label2>
