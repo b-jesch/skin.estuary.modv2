@@ -20,7 +20,7 @@
 						<left>0</left>
 						<top>-10</top>
 						<width>100%</width>
-						<bottom>332</bottom>
+						<bottom>402</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 						<visible>Skin.HasSetting(ShowPVRGroups)</visible>
 					</control>
@@ -28,7 +28,7 @@
 						<left>0</left>
 						<top>44</top>
 						<width>100%</width>
-						<bottom>278</bottom>
+						<bottom>348</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 						<visible>!Skin.HasSetting(ShowPVRGroups) + Control.IsVisible(50)</visible>
 					</control>
@@ -36,7 +36,7 @@
 						<left>0</left>
 						<top>44</top>
 						<width>100%</width>
-						<bottom>288</bottom>
+						<bottom>358</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 						<visible>!Skin.HasSetting(ShowPVRGroups) + Control.IsVisible(51)</visible>
 					</control>
@@ -126,7 +126,7 @@
 						<left>0</left>
 						<top>0</top>
 						<right>20</right>
-						<bottom>335</bottom>
+						<bottom>405</bottom>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<timeblocks>30</timeblocks>
@@ -269,7 +269,7 @@
 						<left>0</left>
 						<top>0</top>
 						<right>15</right>
-						<bottom>333</bottom>
+						<bottom>405</bottom>
 						<orientation>horizontal</orientation>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -440,7 +440,7 @@
 						<right>0</right>
 						<top>103</top>
 						<width>12</width>
-						<bottom>336</bottom>
+						<bottom>408</bottom>
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<orientation>vertical</orientation>
@@ -453,7 +453,7 @@
 						<right>0</right>
 						<top>47</top>
 						<width>12</width>
-						<bottom>340</bottom>
+						<bottom>408</bottom>
 						<onleft>10</onleft>
 						<onright>10</onright>
 						<orientation>vertical</orientation>
@@ -468,35 +468,26 @@
 				</include>
 				<control type="group">
 					<bottom>0</bottom>
-					<height>300</height>
+					<height>365</height>
 					<animation effect="slide" end="0,44" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
 					<control type="videowindow">
-						<left>30</left>
-						<width>242</width>
-						<height>202</height>
+						<left>25</left>
+						<width>340</width>
+						<height>262</height>
 						<visible>Player.HasVideo</visible>
 						<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
 					</control>
 					<control type="image">
-						<left>30</left>
-						<width>242</width>
-						<height>202</height>
+						<left>25</left>
+						<width>340</width>
+						<height>262</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture fallback="DefaultTVGuide.png">$INFO[ListItem.Icon]</texture>				
-						<visible>!Player.HasVideo</visible>
-						<visible>String.IsEmpty(Control.GetLabel(25000))</visible>
-					</control>
-					<control type="image" id="25000">
-						<left>30</left>
-						<width>242</width>
-						<height>202</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[PVRArtworksVar]</texture>				
+						<texture fallback="DefaultTVGuide.png">$VAR[PVRArtworksVar]</texture>
 						<visible>!Player.HasVideo</visible>
 					</control>
 					<control type="label">
 						<top>-9</top>
-						<left>300</left>
+						<left>395</left>
 						<right>845</right>
 						<height>30</height>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -516,7 +507,7 @@
 						<scroll>true</scroll>
 					</control>
 					<control type="textbox">
-						<left>300</left>
+						<left>395</left>
 						<top>38</top>
 						<right>30</right>
 						<height>173</height>
@@ -526,7 +517,7 @@
 						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 					</control>
 					<control type="textbox">
-						<left>300</left>
+						<left>395</left>
 						<top>38</top>
 						<right>30</right>
 						<height>165</height>

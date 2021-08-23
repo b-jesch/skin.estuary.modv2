@@ -551,6 +551,12 @@
 					<onclick>Skin.SelectBool(40125, 31099|powermenu_panel, 40228|powermenu_iconlist, 40227|powermenu_list)</onclick>
 					<label2>$VAR[PowerMenuAspectLabel2Var]</label2>
 				</control>
+				<control type="radiobutton" id="507">
+					<label>$LOCALIZE[40370]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(ExtendedPowerMenu)</onclick>
+					<selected>!Skin.HasSetting(ExtendedPowerMenu)</selected>
+				</control>
 				<control type="radiobutton" id="509">
 					<label>$LOCALIZE[31051]</label>
 					<include>DefaultSettingButton</include>
@@ -1023,6 +1029,13 @@
 					<onclick condition="!System.HasAddon(script.module.pvr.artwork)">InstallAddon(script.module.pvr.artwork)</onclick>
 					<onclick condition="System.HasAddon(script.module.pvr.artwork)">Skin.ToggleSetting(Skin_enablePvrArtwork)</onclick>
 					<selected>Skin.HasSetting(Skin_enablePvrArtwork)</selected>
+				</control>
+				<control type="radiobutton" id="605">
+					<include>DefaultSettingButton</include>
+					<label>  ∟$LOCALIZE[40371]</label>
+					<onclick>Skin.ToggleSetting(prefer_PvrFanart)</onclick>
+					<selected>Skin.HasSetting(prefer_PvrFanart)</selected>
+					<visible>Skin.HasSetting(Skin_enablePvrArtwork)</visible>
 				</control>
 				<control type="button" id="606">
 					<label>$LOCALIZE[31149]</label>

@@ -1,6 +1,15 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.1.0+matrix ###
+- .4
+  * Selection between fanart/poster view in EPG preview window
+  * bigger preview picture in EPG timeline, timeline items reduced from 8 to 7 lines
+
+
+- .3
+  * Introduction and Bugfix of normal/extended Power Menu
+  * further improvements of PVR artwork functions
+
 
 - .2
   * Improvements/Bugfixes of PVR artwork functions and info window

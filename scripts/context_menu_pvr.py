@@ -15,7 +15,7 @@ except ImportError:
 if __name__ == '__main__':
 
     win = xbmcgui.Window(10000)
-    win.setProperty("PVR.Artwork.ManualLookup", "busy")
+    win.setProperty("PVR.Artwork.Lookup", "busy")
     title = xbmc.getInfoLabel("ListItem.Title")
     if not title:
         title = xbmc.getInfoLabel("ListItem.Label")
@@ -27,5 +27,5 @@ if __name__ == '__main__':
     pmd = PVRMetaData()
     pmd.pvr_artwork_options(title, channel, genre, year)
 
-    win.setProperty("PVR.Artwork.ManualLookup", "changed")
+    win.setProperty("PVR.Artwork.Lookup", "changed")
     del win

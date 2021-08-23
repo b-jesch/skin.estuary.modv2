@@ -382,6 +382,10 @@
 		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Fanart)]</value>
 		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(Fanart)]</value>
 	</variable>
+		<variable name="AlbumsCount">
+		<value condition="Integer.IsLessOrEqual(Window(Home).Property(Music.AlbumsCount),1)">$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36918]]</value>
+		<value>$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36919]]</value>
+	</variable>
 	<variable name="PVRGenresVar">
 		<value condition="Skin.HasSetting(standard_PVRGenres)">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</value>
 		<value>$INFO[ListItem.Genre,special://skin/extras/epg-genres/,.png]</value>
@@ -390,6 +394,13 @@
 		<value/>
 	</variable>
 	<variable name="PVRArtworksVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster)) + !Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart)) + Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
+		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="PVRArtworksVarInfo">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart))">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
 		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>

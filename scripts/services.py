@@ -12,7 +12,7 @@ except ImportError:
 content_ids = list(['50', '55', '53', '54', '505', '500', '502', '503', '504', '506', '507', '508', '509'])
 forced_views = list(['movies', 'sets', 'setmovies', 'tvshows', 'seasons', 'episodes', 'albums', 'artists', 'musicvideos'])
 
-content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'channels',
+content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'channels', 'DialogPVRInfo.xml': 'info',
                       'MyPVRRecordings.xml': 'recordings', 'MyPVRTimers.xml': 'timers', 'MyPVRSearch.xml': 'search'})
 
 labels = list(['director', 'writer', 'genre', 'country', 'studio', 'premiered', 'mpaa', 'status',
@@ -111,7 +111,7 @@ def viewswitcher(content, view_mode):
 def pvrartwork(current_item):
 
     if xbmc.getCondVisibility('Container(%s).Scrolling') % xbmcgui.getCurrentWindowId() or \
-            win.getProperty('PVR.Artwork.ManualLookup') == 'busy':
+            win.getProperty('PVR.Artwork.Lookup') == 'busy':
         xbmc.sleep(500)
         return current_item
 
@@ -136,16 +136,16 @@ def pvrartwork(current_item):
     genre = xbmc.getInfoLabel('ListItem.Genre')
     year = xbmc.getInfoLabel('ListItem.Year')
 
-    if current_item != '%s-%s' % (title, channel) or win.getProperty('PVR.Artwork.ManualLookup') == 'changed':
-        win.setProperty("PVR.Artwork.ManualLookup", "busy")
-        clear_properties('PVR.Artwork')
+    if current_item != '%s-%s' % (title, channel) or win.getProperty('PVR.Artwork.Lookup') == 'changed':
+        win.setProperty("PVR.Artwork.Lookup", "busy")
 
         details = pmd.get_pvr_artwork(title, channel, genre, year, manual_select=False, ignore_cache=False)
         if details is not None:
+            clear_properties('PVR.Artwork')
             if details.get('art', False): set_properties('PVR.Artwork', details['art'])
             set_labels('PVR.Artwork', details)
 
-    win.clearProperty("PVR.Artwork.ManualLookup")
+    win.clearProperty("PVR.Artwork.Lookup")
     return '%s-%s' % (title, channel)
 
 
