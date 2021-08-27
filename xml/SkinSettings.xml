@@ -500,17 +500,6 @@
 					<selected>System.HasAddon(script.metadata.editor)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
-				<control type="radiobutton" id="319">
-					<label>TV Show - Next Aired $INFO[System.AddonVersion(script.tv.show.next.aired),(,)]</label>
-					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(script.tv.show.next.aired)">InstallAddon(script.tv.show.next.aired)</onclick>
-					<onclick condition="System.HasAddon(script.tv.show.next.aired)">Addon.OpenSettings(script.tv.show.next.aired)</onclick>
-					<selected>System.HasAddon(script.tv.show.next.aired)</selected>
-					<include>DefaultSettingButton</include>
-				</control>
 				<control type="label" id="30016">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
@@ -580,13 +569,6 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(KioskMode)</onclick>
 					<selected>Skin.HasSetting(KioskMode)</selected>
-				</control>
-				<control type="radiobutton" id="505">
-					<label>$LOCALIZE[40032]</label>
-					<include>DefaultSettingButton</include>
-					<selected>Skin.HasSetting(Skin.ToggleDebug)</selected>
-					<onclick>Skin.ToggleSetting(Skin.ToggleDebug)</onclick>
-					<onclick>Skin.ToggleDebug</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="800">

@@ -274,6 +274,30 @@
 			<visible>Skin.HasSetting(show_fanart) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Control.IsVisible(502) | [Window.IsVisible(DialogVideoInfo.xml) + !Player.HasVideo]</visible>
 		</control>
 	</include>
+	<include name="BusyPvrArtworkSpinner">
+		<param name="left">155</param>
+		<param name="top">91</param>
+		<definition>
+			<control type="group">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<visible>!Player.HasVideo + String.IsEqual(Window(Home).Property(PVR.Artwork.Lookup),busy)</visible>
+				<control type="image">
+					<width>80</width>
+					<height>80</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+				</control>
+				<control type="image">
+					<width>80</width>
+					<height>80</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture>dialogs/extendedprogress/loading.png</texture>
+					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+				</control>
+			</control>
+		</definition>
+	</include>
 	<include name="HiddenObject">
 		<left>-3000</left>
 		<top>-3000</top>

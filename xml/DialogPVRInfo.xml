@@ -97,6 +97,10 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>$VAR[PVRArtworksVarInfo]</texture>
 				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="301" />
+					<param name="left" value="200" />
+				</include>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>

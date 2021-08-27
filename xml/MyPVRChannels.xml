@@ -519,6 +519,10 @@
 						<texture>$VAR[PVRArtworksVar]</texture>
 						<visible>!Player.HasVideo</visible>
 					</control>
+					<include content="BusyPvrArtworkSpinner">
+						<param name="top" value="61" />
+						<param name="left" value="111" />
+					</include>
 					<control type="label">
 						<top>1</top>
 						<left>300</left>
