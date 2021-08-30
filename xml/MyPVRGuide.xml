@@ -56,7 +56,6 @@
  						<texture>icons/keyboard/arrowleft.png</texture>
  						<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
  						<visible>!Skin.HasSetting(ShowPVRGroups) + Control.HasFocus(11)</visible>
- 						<visible></visible>
  					</control>
  					<control type="image">
  						<right>10</right>
@@ -485,6 +484,10 @@
 						<texture fallback="DefaultTVGuide.png">$VAR[PVRArtworksVar]</texture>
 						<visible>!Player.HasVideo</visible>
 					</control>
+					<include content="BusyPvrArtworkSpinner">
+						<param name="top" value="91" />
+						<param name="left" value="155" />
+					</include>
 					<control type="label">
 						<top>-9</top>
 						<left>395</left>
@@ -541,11 +544,9 @@
 			</control>
 		</control>
 		<control type="label" id="29">
-			<font></font>
 			<include>HiddenObject</include>
 		</control>
 		<control type="label" id="30">
-			<font></font>
 			<include>HiddenObject</include>
 		</control>
 	</controls>

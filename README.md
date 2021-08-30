@@ -1,9 +1,17 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.1.0+matrix ###
+- .5
+  * Busy spinner for PVR artwork in several PVR views added
+  * NL language file updated
+  * Dependency of TV show next aired addon removed from addon list and code
+
+
 - .4
-  * Selection between fanart/poster view in EPG preview window
+  * Selection between fanart/poster view in EPG preview window, busy spinner added
   * bigger preview picture in EPG timeline, timeline items reduced from 8 to 7 lines
+  * NL language strings updated
+  * Dependency of TV show next aired addon removed from addon list and code
 
 
 - .3

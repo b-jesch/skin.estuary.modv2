@@ -145,7 +145,8 @@ def pvrartwork(current_item):
             if details.get('art', False): set_properties('PVR.Artwork', details['art'])
             set_labels('PVR.Artwork', details)
 
-    win.clearProperty("PVR.Artwork.Lookup")
+        win.clearProperty("PVR.Artwork.Lookup")
+
     return '%s-%s' % (title, channel)
 
 
