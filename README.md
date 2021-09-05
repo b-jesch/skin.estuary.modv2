@@ -1,6 +1,11 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.1.0+matrix ###
+- .6
+  * Fix missing semitransparent backgrounds on some PVR related windows
+  * Fix missing action of info button in OSD menu
+
+
 - .5
   * Busy spinner for PVR artwork in several PVR views added
   * NL language file updated

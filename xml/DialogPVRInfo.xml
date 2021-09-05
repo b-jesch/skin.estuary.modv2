@@ -2,12 +2,12 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
+		<include>DefaultBackground</include>
 		<control type="group">
 			<centertop>50%</centertop>
 			<height>1080</height>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
 			<include>GlobalAnimatedBackground</include>
 			<control type="group">
 				<top>154</top>

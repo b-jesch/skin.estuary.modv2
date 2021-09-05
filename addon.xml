@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.1.0+matrix.5" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.1.0+matrix.6" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -50,6 +50,8 @@
 			</assets>
 <news>
 [B]3.1.0+matrix[/B]
+- .6  Fix missing semitransparent backgrounds on some PVR related views
+      Fix mising action of info button in OSD menu
 - .5  Busy spinner for PVR artwork in several views added, NL language file updated
       Dependency of TV show next aired addon removed from addon list and code
 - .4  Selection between fanart/poster view in EPG preview window, bigger preview
