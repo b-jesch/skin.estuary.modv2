@@ -3369,52 +3369,58 @@
 					<bordersize>20</bordersize>
 					<visible>![VideoPlayer.HasMenu + System.HasMediaDVD] + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)] + !VideoPlayer.Content(LiveTV) + !Window.IsVisible(MusicVisualisation.xml)</visible>
 				</control>
-				<control type="image">
-					<depth>DepthOSD+</depth>
-					<left>10</left>
-					<bottom>5</bottom>
-					<width>440</width>
-					<height>610</height>
-					<aspectratio aligny="bottom" align="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultTVSquare.png">$VAR[NowPlayingPosterVar]</texture>
-					<bordersize>20</bordersize>
-					<visible>VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio</visible>
-				</control>
-				<control type="image">
-					<description>Cover Live TV, RDS Radio, Stream (Addon)</description>
-					<depth>DepthOSD+</depth>
-					<left>10</left>
-					<bottom>5</bottom>
-					<width>440</width>
-					<height>440</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border) + [[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]]</visible>
-				</control>
-				<control type="image">
-					<depth>DepthOSD+</depth>
-					<left>10</left>
-					<bottom>5</bottom>
-					<width>440</width>
-					<height>440</height>
-					<aspectratio aligny="center" align="center">keep</aspectratio>
-					<texture background="true">$VAR[RadioPlayerCover]</texture>
-					<bordersize>20</bordersize>
-					<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-				</control>
-				<control type="image">
-					<depth>DepthOSD+</depth>
-					<left>14</left>
-					<bottom>9</bottom>
-					<width>432</width>
-					<height>432</height>
-					<aspectratio aligny="center" align="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultAudio.png">$INFO[Player.Art(thumb)]</texture>
-					<bordersize>20</bordersize>
-					<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb))</visible>
-					<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+				<control type="group">
+					<control type="image">
+						<depth>DepthOSD+</depth>
+						<left>10</left>
+						<bottom>5</bottom>
+						<width>440</width>
+						<height>610</height>
+						<aspectratio aligny="bottom" align="center">keep</aspectratio>
+						<texture background="true" fallback="DefaultTVSquare.png">$VAR[NowPlayingPosterVar]</texture>
+						<bordersize>20</bordersize>
+						<visible>VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio</visible>
+					</control>
+					<control type="image">
+						<description>Cover Live TV, RDS Radio, Stream (Addon)</description>
+						<depth>DepthOSD+</depth>
+						<left>10</left>
+						<bottom>5</bottom>
+						<width>440</width>
+						<height>440</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border) + [[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]]</visible>
+					</control>
+					<control type="image">
+						<depth>DepthOSD+</depth>
+						<left>10</left>
+						<bottom>5</bottom>
+						<width>440</width>
+						<height>440</height>
+						<aspectratio aligny="center" align="center">keep</aspectratio>
+						<texture background="true">$VAR[RadioPlayerCover]</texture>
+						<bordersize>20</bordersize>
+						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+					</control>
+					<control type="image">
+						<depth>DepthOSD+</depth>
+						<left>14</left>
+						<bottom>9</bottom>
+						<width>432</width>
+						<height>432</height>
+						<aspectratio aligny="center" align="center">keep</aspectratio>
+						<texture background="true" fallback="DefaultAudio.png">$INFO[Player.Art(thumb)]</texture>
+						<bordersize>20</bordersize>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb))</visible>
+						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+					</control>
+					<include content="BusyPvrArtworkSpinner">
+						<param name="top" value="80" />
+						<param name="left" value="190" />
+					</include>
 				</control>
 				<control type="group">
 					<left>205</left>

@@ -145,7 +145,7 @@
 						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
 						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
 						<onclick>dialog.close(all,true)</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) | System.AddonIsEnabled(service.sleepy.watchdog)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + System.AddonIsEnabled(service.sleepy.watchdog)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>

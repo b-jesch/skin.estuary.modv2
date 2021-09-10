@@ -1,15 +1,20 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.1.0+matrix ###
+- .7
+  * Some more labels from PVR artwork module in PVR info window added
+  * Reimplementation of studio icons in PVR info view (studio icons white required)
+  * Some smaller fixes
+
+
 - .6
   * Fix missing semitransparent backgrounds on some PVR related windows
-  * Fix missing action of info button in OSD menu
+  * Fix missing action of info button in PVR OSD menu
 
 
 - .5
   * Busy spinner for PVR artwork in several PVR views added
   * NL language file updated
-  * Dependency of TV show next aired addon removed from addon list and code
 
 
 - .4
