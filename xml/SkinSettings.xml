@@ -522,6 +522,17 @@
 					<selected>System.HasAddon(resource.images.moviegenreicons.estuarymod)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
+				<control type="radiobutton" id="322">
+					<label>Studio Icons - White $INFO[System.AddonVersion(resource.images.studios.white),(,)]</label>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(resource.images.studios.white)">InstallAddon(resource.images.studios.white)</onclick>
+					<onclick condition="System.HasAddon(resource.images.studios.white)">Addon.OpenSettings(resource.images.studios.white)</onclick>
+					<selected>System.HasAddon(resource.images.studios.white)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
 			</control>
 			<control type="grouplist" id="500">
 				<top>168</top>

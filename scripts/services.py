@@ -15,7 +15,7 @@ forced_views = list(['movies', 'sets', 'setmovies', 'tvshows', 'seasons', 'episo
 content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'channels', 'DialogPVRInfo.xml': 'info',
                       'MyPVRRecordings.xml': 'recordings', 'MyPVRTimers.xml': 'timers', 'MyPVRSearch.xml': 'search'})
 
-labels = list(['director', 'writer', 'genre', 'country', 'studio', 'premiered', 'mpaa', 'status',
+labels = list(['director', 'writer', 'genre', 'country', 'studio', 'studiologo', 'premiered', 'mpaa', 'status',
                'rating', 'castandrole'])
 
 # Todo: Rating
@@ -124,24 +124,29 @@ def pvrartwork(current_item):
             break
 
     # if no pvr related window there, clear properties and return
-    if not current_content:
+    if not (current_content or xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)')):
         if win.getProperty('PVR.Artwork.present') == 'true': clear_properties('PVR.Artwork')
         return current_item
 
-    title = xbmc.getInfoLabel("ListItem.Title")
-    if not title:
-        title = xbmc.getInfoLabel("ListItem.Label")
+    if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)'):
+        title = xbmc.getInfoLabel('VideoPlayer.Title')
+        channel = xbmc.getInfoLabel('VideoPlayer.ChannelName')
+        genre = xbmc.getInfoLabel('VideoPlayer.Genre')
+        year = xbmc.getInfoLabel('VideoPlayer.Year')
+    else:
+        title = xbmc.getInfoLabel("ListItem.Title")
+        if not title: title = xbmc.getInfoLabel("ListItem.Label")
+        channel = xbmc.getInfoLabel('ListItem.ChannelName')
+        genre = xbmc.getInfoLabel('ListItem.Genre')
+        year = xbmc.getInfoLabel('ListItem.Year')
 
-    channel = xbmc.getInfoLabel('ListItem.ChannelName')
-    genre = xbmc.getInfoLabel('ListItem.Genre')
-    year = xbmc.getInfoLabel('ListItem.Year')
+    if not (title or channel): return current_item
 
     if current_item != '%s-%s' % (title, channel) or win.getProperty('PVR.Artwork.Lookup') == 'changed':
         win.setProperty("PVR.Artwork.Lookup", "busy")
-
         details = pmd.get_pvr_artwork(title, channel, genre, year, manual_select=False, ignore_cache=False)
-        if details is not None:
-            clear_properties('PVR.Artwork')
+        clear_properties('PVR.Artwork')
+        if details:
             if details.get('art', False): set_properties('PVR.Artwork', details['art'])
             set_labels('PVR.Artwork', details)
 

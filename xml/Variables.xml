@@ -154,235 +154,7 @@
 			<value condition="Skin.HasSetting(musicvideos.507)">$LOCALIZE[40146]</value>
 			<value>$LOCALIZE[40148]</value>
 	</variable>
-	<variable name="NextAiredStatutVar">
-		<value condition="Control.HasFocus(200) + String.Contains(Container(200).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(200) + String.Contains(Container(200).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(201) + String.Contains(Container(201).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(201) + String.Contains(Container(201).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(202) + String.Contains(Container(202).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(202) + String.Contains(Container(202).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(203) + String.Contains(Container(203).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(203) + String.Contains(Container(203).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(204) + String.Contains(Container(204).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(204) + String.Contains(Container(204).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(205) + String.Contains(Container(205).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(205) + String.Contains(Container(205).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(206) + String.Contains(Container(206).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(206) + String.Contains(Container(206).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(207) + String.Contains(Container(207).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(207) + String.Contains(Container(207).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(208) + String.Contains(Container(208).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(208) + String.Contains(Container(208).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(209) + String.Contains(Container(209).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(209) + String.Contains(Container(209).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(210) + String.Contains(Container(210).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(210) + String.Contains(Container(210).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(211) + String.Contains(Container(211).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(211) + String.Contains(Container(211).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(212) + String.Contains(Container(212).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(212) + String.Contains(Container(212).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(213) + String.Contains(Container(213).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(213) + String.Contains(Container(213).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(214) + String.Contains(Container(214).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(214) + String.Contains(Container(214).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Status)]</value>
-		<value condition="Control.HasFocus(215) + String.Contains(Container(215).ListItem.Property(Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
-		<value condition="Control.HasFocus(215) + String.Contains(Container(215).ListItem.Property(Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(Status)]</value>
-	</variable>
-	<variable name="NextAiredNetworkVar">
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Network)]</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(Network)]</value>
-	</variable>
-	<variable name="NextAiredAirTimeVar">
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(AirTime)]</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(AirTime)]</value>
-	</variable>
-	<variable name="NextAiredGenreVar">
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Genre)]</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(Genre)]</value>
-	</variable>
-	<variable name="NextAiredNextTitleVar">
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(NextNumber),,. ]$INFO[Container(200).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(NextNumber),,. ]$INFO[Container(201).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(NextNumber),,. ]$INFO[Container(202).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(NextNumber),,. ]$INFO[Container(203).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(NextNumber),,. ]$INFO[Container(204).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(NextNumber),,. ]$INFO[Container(205).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(NextNumber),,. ]$INFO[Container(206).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(NextNumber),,. ]$INFO[Container(207).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(NextNumber),,. ]$INFO[Container(208).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(NextNumber),,. ]$INFO[Container(209).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(NextNumber),,. ]$INFO[Container(210).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(NextNumber),,. ]$INFO[Container(211).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(NextNumber),,. ]$INFO[Container(212).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(NextNumber),,. ]$INFO[Container(213).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(NextNumber),,. ]$INFO[Container(214).ListItem.Property(NextTitle)]</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(NextNumber),,. ]$INFO[Container(215).ListItem.Property(NextTitle)]</value>
-	</variable>
-	<variable name="NextAiredLabelVar">
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Label]</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Label]</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Label]</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Label]</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Label]</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Label]</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Label]</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Label]</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Label]</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Label]</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Label]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Label]</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Label]</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Label]</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Label]</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Label]</value>
-	</variable>
-	<variable name="NextAiredLandscapeVar">
-		<value condition="Control.HasFocus(200) + !String.IsEmpty(Container(200).ListItem.Property(landscape))">$INFO[Container(200).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(200) + String.IsEmpty(Container(200).ListItem.Property(landscape))">$INFO[Container(200).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(201) + !String.IsEmpty(Container(201).ListItem.Property(landscape))">$INFO[Container(201).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(201) + String.IsEmpty(Container(201).ListItem.Property(landscape))">$INFO[Container(201).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(202) + !String.IsEmpty(Container(202).ListItem.Property(landscape))">$INFO[Container(202).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(202) + String.IsEmpty(Container(202).ListItem.Property(landscape))">$INFO[Container(202).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(203) + !String.IsEmpty(Container(203).ListItem.Property(landscape))">$INFO[Container(203).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(203) + String.IsEmpty(Container(203).ListItem.Property(landscape))">$INFO[Container(203).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(204) + !String.IsEmpty(Container(204).ListItem.Property(landscape))">$INFO[Container(204).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(204) + String.IsEmpty(Container(204).ListItem.Property(landscape))">$INFO[Container(204).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(205) + !String.IsEmpty(Container(205).ListItem.Property(landscape))">$INFO[Container(205).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(205) + String.IsEmpty(Container(205).ListItem.Property(landscape))">$INFO[Container(205).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(206) + !String.IsEmpty(Container(206).ListItem.Property(landscape))">$INFO[Container(206).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(206) + String.IsEmpty(Container(206).ListItem.Property(landscape))">$INFO[Container(206).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(207) + !String.IsEmpty(Container(207).ListItem.Property(landscape))">$INFO[Container(207).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(207) + String.IsEmpty(Container(207).ListItem.Property(landscape))">$INFO[Container(207).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(208) + !String.IsEmpty(Container(208).ListItem.Property(landscape))">$INFO[Container(208).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(208) + String.IsEmpty(Container(208).ListItem.Property(landscape))">$INFO[Container(208).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(209) + !String.IsEmpty(Container(209).ListItem.Property(landscape))">$INFO[Container(209).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(209) + String.IsEmpty(Container(209).ListItem.Property(landscape))">$INFO[Container(209).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(210) + !String.IsEmpty(Container(210).ListItem.Property(landscape))">$INFO[Container(210).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(210) + String.IsEmpty(Container(210).ListItem.Property(landscape))">$INFO[Container(210).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(211) + !String.IsEmpty(Container(211).ListItem.Property(landscape))">$INFO[Container(211).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(211) + String.IsEmpty(Container(211).ListItem.Property(landscape))">$INFO[Container(211).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(212) + !String.IsEmpty(Container(212).ListItem.Property(landscape))">$INFO[Container(212).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(212) + String.IsEmpty(Container(212).ListItem.Property(landscape))">$INFO[Container(212).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(213) + !String.IsEmpty(Container(213).ListItem.Property(landscape))">$INFO[Container(213).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(213) + String.IsEmpty(Container(213).ListItem.Property(landscape))">$INFO[Container(213).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(214) + !String.IsEmpty(Container(214).ListItem.Property(landscape))">$INFO[Container(214).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(214) + String.IsEmpty(Container(214).ListItem.Property(landscape))">$INFO[Container(214).ListItem.Property(fanart)]</value>
-		<value condition="Control.HasFocus(215) + !String.IsEmpty(Container(215).ListItem.Property(landscape))">$INFO[Container(215).ListItem.Property(landscape)]</value>
-		<value condition="Control.HasFocus(215) + String.IsEmpty(Container(215).ListItem.Property(landscape))">$INFO[Container(215).ListItem.Property(fanart)]</value>
-	</variable>
-	<variable name="NextAiredBannerVar">
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(banner)]</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(banner)]</value>
-	</variable>
-	<variable name="NextAiredClearlogoVar">
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(clearlogo)]</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(clearlogo)]</value>
-	</variable>
-	<variable name="NextAiredFanartVar">
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(Fanart)]</value>
-	</variable>
-		<variable name="AlbumsCount">
+	<variable name="AlbumsCount">
 		<value condition="Integer.IsLessOrEqual(Window(Home).Property(Music.AlbumsCount),1)">$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36918]]</value>
 		<value>$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36919]]</value>
 	</variable>
@@ -405,6 +177,48 @@
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart))">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
 		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="PVRMetadataDirectorVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.director))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.director)]</value>
+		<value>$INFO[ListItem.Director]</value>
+	</variable>
+	<variable name="PVRMetadataWriterVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.writer))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.writer)]</value>
+		<value>$INFO[ListItem.Writer]</value>
+	</variable>
+	<variable name="PVRMetadataGenreVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.genre))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.genre)]</value>
+		<value>$INFO[ListItem.Genre]</value>
+	</variable>
+	<variable name="PVRMetadataCountryVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.country))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.country)]</value>
+		<value>$INFO[ListItem.Country]</value>
+	</variable>
+	<variable name="PVRMetadataStudioVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.studio))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.studio)]</value>
+		<value>$INFO[ListItem.Studio]</value>
+	</variable>
+	<variable name="PVRMetadataPremieredVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.premiered))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.premiered)]</value>
+		<value>$INFO[ListItem.Premiered]</value>
+	</variable>
+	<variable name="PVRMetadataMpaaVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.mpaa)]</value>
+		<value>$INFO[ListItem.Mpaa]</value>
+	</variable>
+	<variable name="PVRMetadataRatingVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.rating))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.rating)]</value>
+		<value>$INFO[ListItem.Rating]</value>
+	</variable>
+	<variable name="PVRMetadataStatusVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.status))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.status)]</value>
+		<value>$INFO[ListItem.Status]</value>
+	</variable>
+	<variable name="PVRMetadataCastandroleVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.castandrole)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.cast))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.cast)]</value>
+		<value condition="!String.IsEmpty(ListItem.CastAndRole)">$INFO[ListItem.CastAndRole]</value>
+		<value>$INFO[ListItem.Cast]</value>
 	</variable>
 	<variable name="MusicPlayerCover">
 		<value condition="[Control.HasFocus(1300) | Control.HasFocus(9003)] + !String.IsEmpty(Player.Art(album.back))">$INFO[Player.Art(album.back)]</value>
@@ -477,15 +291,13 @@
 		<value condition="Control.HasFocus(60)">$INFO[Container(60).Listitem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 	</variable>
-
 	<variable name="DurationVar">
-		<value condition="Control.HasFocus(60)">$INFO[Container(60).ListItem.Duration(h)]h$INFO[Container(60).ListItem.Duration(mm)]</value>
+		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Duration)">$INFO[Container(60).ListItem.Duration(h)]h$INFO[Container(60).ListItem.Duration(mm)]</value>
 		<value>$INFO[ListItem.Duration(h)]h$INFO[ListItem.Duration(mm)]</value>
 	</variable>
 	<variable name="PlayerDurationVar">
 		<value>$INFO[Player.Duration(h)]h$INFO[Player.Duration(mm)]</value>
 	</variable>
-
 	<variable name="SettingsForcedViewsMoviesVar">
 		<value>$LOCALIZE[40148]</value>
 	</variable>
@@ -856,11 +668,13 @@
 		<value>88FFFFFF</value>
 	</variable>
 	<variable name="PlayerInfoClearLogoVar">
+		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.clearlogo))">$INFO[Window(Home).Property(PVR.Artwork.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(artist.clearlogo))">$INFO[Player.Art(artist.clearlogo)]</value>
 	</variable>
 	<variable name="PlayerInfoClearArtVar">
+		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.clearart))">$INFO[Window(Home).Property(PVR.Artwork.clearart)]</value>
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
         <value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
         <value condition="!String.IsEmpty(Player.Art(artist.clearart))">$INFO[Player.Art(artist.clearart)]</value>
@@ -1299,6 +1113,7 @@
 	<variable name="NowPlayingPosterVar">
 		<value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster)) + VideoPlayer.Content(livetv)">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
 		<value condition="!String.IsEmpty(PVR.EpgEventIcon) + VideoPlayer.Content(livetv)">$INFO[PVR.EpgEventIcon]</value>
 		<value condition="String.IsEmpty(Player.Art(thumb)) + VideoPlayer.Content(livetv)">DefaultTVSquare.png</value>
 		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
@@ -1429,6 +1244,7 @@
 	<variable name="BannerArtVar">
 		<value condition="ListItem.IsParentFolder">DefaultBackBanner.png</value>
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value condition="!String.IsEmpty(Container.Art(banner))">$INFO[Container.Art(banner)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(artist.banner))">$INFO[ListItem.Art(artist.banner)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.banner))">$INFO[Container.Art(artist.banner)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
