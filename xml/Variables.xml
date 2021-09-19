@@ -178,33 +178,35 @@
 		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="PVRMetadataDirectorVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.director))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.director)]</value>
-		<value>$INFO[ListItem.Director]</value>
-	</variable>
-	<variable name="PVRMetadataWriterVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.writer))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.writer)]</value>
-		<value>$INFO[ListItem.Writer]</value>
-	</variable>
-	<variable name="PVRMetadataGenreVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.genre))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.genre)]</value>
-		<value>$INFO[ListItem.Genre]</value>
+	<variable name="PVRMetadataCastandroleVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.castandrole)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.cast))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.cast)]</value>
+		<value condition="!String.IsEmpty(ListItem.CastAndRole)">$INFO[ListItem.CastAndRole]</value>
+		<value>$INFO[ListItem.Cast]</value>
 	</variable>
 	<variable name="PVRMetadataCountryVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.country))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.country)]</value>
 		<value>$INFO[ListItem.Country]</value>
 	</variable>
-	<variable name="PVRMetadataStudioVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.studio))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.studio)]</value>
-		<value>$INFO[ListItem.Studio]</value>
+	<variable name="PVRMetadataDirectorVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.director))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.director)]</value>
+		<value>$INFO[ListItem.Director]</value>
 	</variable>
-	<variable name="PVRMetadataPremieredVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.premiered))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.premiered)]</value>
-		<value>$INFO[ListItem.Premiered]</value>
+	<variable name="PVRMetadataGenreVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.genre))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.genre)]</value>
+		<value>$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="PVRMetadataMpaaVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.mpaa)]</value>
 		<value>$INFO[ListItem.Mpaa]</value>
+	</variable>
+	<variable name="PVRMetadataPlotVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.description))">$INFO[ListItem.Plot]$INFO[Window(Home).Property(PVR.Artwork.ListItem.description),[CR][CR][B]$LOCALIZE[20351]:[/B] ]</value>
+		<value>$INFO[ListItem.Plot]</value>
+	</variable>
+	<variable name="PVRMetadataPremieredVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.premiered))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.premiered)]</value>
+		<value>$INFO[ListItem.Premiered]</value>
 	</variable>
 	<variable name="PVRMetadataRatingVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.rating))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.rating)]</value>
@@ -214,11 +216,13 @@
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.status))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.status)]</value>
 		<value>$INFO[ListItem.Status]</value>
 	</variable>
-	<variable name="PVRMetadataCastandroleVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.castandrole)]</value>
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.cast))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.cast)]</value>
-		<value condition="!String.IsEmpty(ListItem.CastAndRole)">$INFO[ListItem.CastAndRole]</value>
-		<value>$INFO[ListItem.Cast]</value>
+	<variable name="PVRMetadataStudioVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.studio))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.studio)]</value>
+		<value>$INFO[ListItem.Studio]</value>
+	</variable>
+	<variable name="PVRMetadataWriterVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.writer))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.writer)]</value>
+		<value>$INFO[ListItem.Writer]</value>
 	</variable>
 	<variable name="MusicPlayerCover">
 		<value condition="[Control.HasFocus(1300) | Control.HasFocus(9003)] + !String.IsEmpty(Player.Art(album.back))">$INFO[Player.Art(album.back)]</value>
@@ -622,7 +626,7 @@
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.landscape))">$INFO[ListItem.Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(fanart)) + !String.StartsWith(ListItem.FolderPath,plugin://)">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Listitem.Thumb)">$INFO[ListItem.Thumb]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(thumb))">$INFO[ListItem.Art(Thumb)]</value>
 		<value>$INFO[ListItem.Art(icon)]</value>
 	</variable>
 	<variable name="WidgetThumbViewVar">
@@ -632,7 +636,8 @@
 	</variable>
 	<variable name="InfoWidgetThumbVar2">
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
-		<value>$INFO[ListItem.Thumb]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="MusicPlayerDiscTitleVar">
 		<value condition="Pvr.IsPlayingRadio">$INFO[VideoPlayer.ChannelName]</value>

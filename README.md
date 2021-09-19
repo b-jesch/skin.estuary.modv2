@@ -1,5 +1,13 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
+### 3.2.0+matrix ###
+- .0
+  * Extended Info (embuary helper) in tvshow and movie info window added
+  * Implementation of PVR category widget improved (addon German Telecast Offers)
+  * TV show widget next aired episodes implemented
+  * conditional visibility of media flags in info windows fixed
+
+
 ### 3.1.0+matrix ###
 - .7
   * Some more labels from PVR artwork module in PVR info window added
@@ -41,6 +49,8 @@
 - .0
   * Implementation and introduction of PVR artwork using the "PVR Artwork Module"
   * show date in top bar (optional)
+
+
 ### 3.0.9+matrix ###
 - .0
   * PVR NextUp notification window improved

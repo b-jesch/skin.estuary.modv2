@@ -128,7 +128,7 @@
 						<height>552</height>
 						<align>justify</align>
 						<font>fontplot</font>
-						<label fallback="19055">$INFO[ListItem.Plot]</label>
+						<label fallback="19055">$VAR[PVRMetadataPlotVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>

@@ -16,7 +16,7 @@ content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'channe
                       'MyPVRRecordings.xml': 'recordings', 'MyPVRTimers.xml': 'timers', 'MyPVRSearch.xml': 'search'})
 
 labels = list(['director', 'writer', 'genre', 'country', 'studio', 'studiologo', 'premiered', 'mpaa', 'status',
-               'rating', 'castandrole'])
+               'rating', 'castandrole', 'description'])
 
 # Todo: Rating
 

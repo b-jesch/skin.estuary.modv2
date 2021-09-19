@@ -61,11 +61,11 @@
 						<selected>Skin.HasSetting(hide_unwatchedtvshows)</selected>
 						<onclick>Skin.ToggleSetting(hide_unwatchedtvshows)</onclick>
 					</control>
-					<control type="radiobutton" id="1111">
-						<label>$LOCALIZE[40097] : $LOCALIZE[40107]</label>
+					<control type="radiobutton" id="11117">
+						<label>$LOCALIZE[40097] : $LOCALIZE[40372]</label>
 						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(hide_nextairingepisodes)</selected>
-						<onclick>Skin.ToggleSetting(hide_nextairingepisodes)</onclick>
+						<selected>Skin.HasSetting(hide_nextaired)</selected>
+						<onclick>Skin.ToggleSetting(hide_nextaired)</onclick>
 					</control>
 					<control type="radiobutton" id="11118">
 						<label>$LOCALIZE[40097] : $LOCALIZE[135]</label>
