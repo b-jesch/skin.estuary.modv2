@@ -128,7 +128,7 @@ def pvrartwork(current_item):
         if win.getProperty('PVR.Artwork.present') == 'true': clear_properties('PVR.Artwork')
         return current_item
 
-    if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)'):
+    if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)') and not current_content:
         title = xbmc.getInfoLabel('VideoPlayer.Title')
         channel = xbmc.getInfoLabel('VideoPlayer.ChannelName')
         genre = xbmc.getInfoLabel('VideoPlayer.Genre')
