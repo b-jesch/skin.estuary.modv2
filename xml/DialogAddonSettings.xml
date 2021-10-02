@@ -20,13 +20,13 @@
 				<left>29</left>
 				<top>80</top>
 				<width>400</width>
-				<height>790</height>
+				<height>700</height>
 				<itemgap>-25</itemgap>
 				<orientation>vertical</orientation>
 				<onleft>9000</onleft>
 				<onright>5</onright>
 				<onup>3</onup>
-				<ondown>3</ondown>
+				<ondown>20</ondown>
 			</control>
 			<control type="button" id="10">
 				<description>Default Category Button</description>
@@ -42,7 +42,7 @@
 				<left>410</left>
 				<top>80</top>
 				<width>1100</width>
-				<height>830</height>
+				<height>740</height>
 				<texture border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
 			<control type="grouplist" id="5">
@@ -50,11 +50,34 @@
 				<left>429</left>
 				<top>100</top>
 				<width>1060</width>
-				<height>790</height>
+				<height>700</height>
 				<onleft>3</onleft>
-				<onright>9000</onright>
+				<onright>60</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
+				<pagecontrol>60</pagecontrol>
+			</control>
+			<control type="textbox" id="6">
+				<description>item help text area</description>
+				<left>434</left>
+				<top>810</top>
+				<width>1050</width>
+				<height>105</height>
+				<font>font12</font>
+				<align>justify</align>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1489</left>
+				<top>100</top>
+				<width>12</width>
+				<height>700</height>
+				<orientation>vertical</orientation>
+				<onleft>5</onleft>
+				<onright>9000</onright>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
@@ -97,7 +120,7 @@
 				<width>300</width>
 				<height>300</height>
 				<itemgap>-10</itemgap>
-				<onleft>5</onleft>
+				<onleft>60</onleft>
 				<onright>3</onright>
 				<include content="DefaultDialogButton">
 					<param name="id" value="28" />
@@ -113,5 +136,30 @@
 				</include>
 			</control>
 		</control>
-	</controls>
+		<control type="radiobutton" id="20">
+			<width>350</width>
+			<left>100</left>
+			<bottom>110</bottom>
+			<height>70</height>
+			<aligny>center</aligny>
+			<onclick>SettingsLevelChange</onclick>
+			<textoffsetx>100</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<textwidth>220</textwidth>
+			<texturefocus colordiffuse="$VAR[SkinColorVar]">colors/white.png</texturefocus>
+			<texturenofocus />
+			<radioposx>40</radioposx>
+			<radioposy>0</radioposy>
+			<radiowidth>40</radiowidth>
+			<radioheight>40</radioheight>
+			<onleft>9000</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<textureradioonfocus>icons/settings.png</textureradioonfocus>
+			<textureradioonnofocus>icons/settings.png</textureradioonnofocus>
+			<textureradioofffocus>icons/settings.png</textureradioofffocus>
+			<textureradiooffnofocus>icons/settings.png</textureradiooffnofocus>
+		</control>
+</controls>
 </window>
