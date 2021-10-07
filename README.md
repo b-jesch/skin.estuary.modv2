@@ -1,6 +1,21 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.2.0+matrix ###
+- .3
+  * Introducing MPAA/TV media flags
+  * Bug fixed in music visualization (PVR radio)
+
+
+- .2
+  * Improved Addon settings window (thanks @realvito from kodinerds)
+
+
+- .1
+  * Revert some cleanups of includes
+  * Texture updates, PVR category improvements part #2
+  * Improvements/Bugfix in PVR artwork section
+
+
 - .0
   * Extended Info (embuary helper) in tvshow and movie info window added
   * Implementation of PVR category widget improved (addon German Telecast Offers)
