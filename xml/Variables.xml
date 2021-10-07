@@ -803,6 +803,26 @@
 		<value condition="!String.IsEmpty(Container.Art(artist.clearlogo))">$INFO[Container.Art(artist.clearlogo)]</value>
 		<value/>
 	</variable>
+	<variable name="MPAAImageVar">
+		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,U) | String.Contains(ListItem.mpaa,0) | String.Contains(ListItem.mpaa,6)">flags/mpaa.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Y7) | String.Contains(ListItem.mpaa,Y) | String.Contains(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,14) | String.Contains(ListItem.mpaa,MA)">flags/mpaa-tv.png</value>
+		<value/>
+	</variable>
+	<variable name="MPAAFlagVar">
+		<value condition="String.Contains(ListItem.mpaa,12)">12</value>
+		<value condition="String.Contains(ListItem.mpaa,16)">16</value>
+		<value condition="String.Contains(ListItem.mpaa,18)">18</value>
+		<value condition="String.Contains(ListItem.mpaa,U)">U</value>
+		<value condition="String.Contains(ListItem.mpaa,0)">0</value>
+		<value condition="String.Contains(ListItem.mpaa,6)">6</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-Y7)">Y7</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-Y)">Y</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-PG)">PG</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-G)">G</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-14)">14</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-MA)">MA</value>
+		<value>-</value>
+	</variable>
 	<variable name="MPAALabelVar">
 		<value condition="String.Contains(ListItem.mpaa,10) + String.Contains(System.Language,French)">Interdit au moins de 10 ans</value>
 		<value condition="String.Contains(ListItem.mpaa,12) + String.Contains(System.Language,French)">Interdit au moins de 12 ans</value>
