@@ -1,6 +1,10 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.2.0+matrix ###
+- .4
+  * Reimplementation of extended info button in video OSD and native call to embuary info script
+
+
 - .3
   * Introducing MPAA/TV media flags
   * Bug fixed in music visualization (PVR radio)

@@ -194,12 +194,12 @@
 					<onclick>ActivateWindow(fullscreeninfo)</onclick>
 					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
 				</control>
-				<!--
 				<control type="radiobutton" id="70012">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/extendedinfo.png"/>
 					</include>
-					<onclick>RunPlugin(plugin://script.embuary.helper?info=getbydbid&amp;dbid=$INFO[VideoPlayer.DBID]&amp;type=movie)</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>RunScript(script.embuary.info,call=movie,dbid=$INFO[VideoPlayer.DBID])</onclick>
 					<visible>!VideoPlayer.Content(livetv) + ![VideoPlayer.HasMenu + System.HasMediaDVD] + !VideoPlayer.Content(musicvideos)</visible>
 					<visible>VideoPlayer.Content(movies) + System.HasAddon(script.embuary.helper)</visible>
 				</control>
@@ -207,11 +207,11 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/extendedinfo.png"/>
 					</include>
-					<onclick>RunPlugin(plugin://script.embuary.helper?info=getbydbid&amp;dbid=$INFO[VideoPlayer.TvShowDBID]&amp;type=tvshow)</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>RunScript(script.embuary.info,call=tv,dbid=$INFO[VideoPlayer.DBID])</onclick>
 					<visible>!VideoPlayer.Content(livetv) + ![VideoPlayer.HasMenu + System.HasMediaDVD]  + !VideoPlayer.Content(musicvideos)</visible>
 					<visible>VideoPlayer.Content(episodes) + System.HasAddon(script.embuary.helper)</visible>
 				</control>
-				-->
 				<control type="radiobutton" id="70015">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/recommended.png"/>

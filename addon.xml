@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.2.0+matrix.3" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.2.0+matrix.4" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -50,6 +50,8 @@
 			</assets>
 <news>
 [B]3.2.0+matrix[/B]
+- .4  Reimplementation of extended info button in video OSD and native call to
+      embuary info script
 - .3  Introducing MPAA/TV media flags
       Bug fixed in music visualization (PVR radio)
 - .2  Improved Addon settings window (thanks @realvito from kodinerds)
