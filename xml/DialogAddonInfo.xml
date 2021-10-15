@@ -218,7 +218,7 @@
 					<texture fallback="DefaultAddon.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 				</control>
 				<control type="group">
-					<visible>!String.IsEmpty(ListItem.AddonLifecycleDesc</visible>
+					<visible>!String.IsEmpty(ListItem.AddonLifecycleDesc)</visible>
 					<control type="image">
 						<left>14</left>
 						<top>24</top>

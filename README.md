@@ -1,6 +1,11 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.2.0+matrix ###
+- .5
+  * Bugfix: MPAA rating not showing in movie collections
+  * Minor bugfixes
+
+
 - .4
   * Reimplementation of extended info button in video OSD and native call to embuary info script
 

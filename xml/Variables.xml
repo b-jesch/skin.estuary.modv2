@@ -636,6 +636,7 @@
 	</variable>
 	<variable name="InfoWidgetThumbVar2">
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
@@ -805,16 +806,17 @@
 	</variable>
 	<variable name="MPAAImageVar">
 		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,U) | String.Contains(ListItem.mpaa,0) | String.Contains(ListItem.mpaa,6)">flags/mpaa.png</value>
+		<value condition="String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,6">flags/mpaa.png</value>
 		<value condition="String.Contains(ListItem.mpaa,Y7) | String.Contains(ListItem.mpaa,Y) | String.Contains(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,14) | String.Contains(ListItem.mpaa,MA)">flags/mpaa-tv.png</value>
 		<value/>
 	</variable>
 	<variable name="MPAAFlagVar">
-		<value condition="String.Contains(ListItem.mpaa,12)">12</value>
-		<value condition="String.Contains(ListItem.mpaa,16)">16</value>
-		<value condition="String.Contains(ListItem.mpaa,18)">18</value>
-		<value condition="String.Contains(ListItem.mpaa,U)">U</value>
-		<value condition="String.Contains(ListItem.mpaa,0)">0</value>
-		<value condition="String.Contains(ListItem.mpaa,6)">6</value>
+		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12)">12</value>
+		<value condition="String.Contains(ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,16)">16</value>
+		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,18)">18</value>
+		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U)">U</value>
+		<value condition="String.Contains(ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,0)">0</value>
+		<value condition="String.Contains(ListItem.mpaa,6) | String.Contains(Container(60).ListItem.mpaa,6)">6</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y7)">Y7</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y)">Y</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-PG)">PG</value>
@@ -1173,7 +1175,6 @@
 	</variable>
 	<variable name="InfoWallThumbVar">
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
-		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="String.IsEmpty(ListItem.Art(thumb)) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
