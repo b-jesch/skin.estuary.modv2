@@ -138,6 +138,7 @@
  					<visible>PVR.CanRecordPlayingChannel</visible>
  					<visible>VideoPlayer.Content(livetv)</visible>
  				</control>
+				<!--
 				<control type="radiobutton" id="705">
                     <include content="OSDButton">
                         <param name="texture" value="osd/fullscreen/buttons/extendedinfo.png"/>
@@ -145,11 +146,12 @@
                     <onclick>ActivateWindow(1141)</onclick>
                     <visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
                 </control>
+                -->
                 <control type="radiobutton" id="62040">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
 					</include>
-					<onclick>Info</onclick>
+					<onclick>ActivateWindow(fullscreeninfo)</onclick>
 					<visible>MusicPlayer.Content(LiveTV)</visible>
 				</control>
                 <control type="radiobutton" id="62041">

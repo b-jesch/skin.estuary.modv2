@@ -2387,7 +2387,7 @@
 				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
 					<param name="infolabel_prefix" value="Container." />
-					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
+					<param name="resolution_var" value="$VAR[Container3DFlagVar]" />
 				</include>
 				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
 					<param name="infolabel_prefix" value="Container." />

@@ -83,7 +83,7 @@
 				<orientation>horizontal</orientation>
 				<itemgap>5</itemgap>
 				<include content="MediaFlag">
-					<param name="texture" value="$VAR[VideoPlayerResolutionFlagVar]" />
+					<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
 					<param name="fallback" value="flags/videoresolution/fallback.png" />
 					<param name="width" value="58" />
 				</include>

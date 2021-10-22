@@ -48,6 +48,12 @@
 						<selected>!Skin.HasSetting(show_mediaaspectratioflag)</selected>
 						<onclick>Skin.ToggleSetting(show_mediaaspectratioflag)</onclick>
 					</control>
+					<control type="radiobutton" id="11124">
+						<label>$LOCALIZE[40375]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_mediacolordepthflag)</selected>
+						<onclick>Skin.ToggleSetting(show_mediacolordepthflag)</onclick>
+					</control>
 					<control type="radiobutton" id="11115">
 						<label>$LOCALIZE[40249]</label>
 						<include>DefaultSettingButton</include>
