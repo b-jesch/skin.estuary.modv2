@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.2.0+matrix.6" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.2.0+matrix.7" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -50,6 +50,7 @@
 			</assets>
 <news>
 [B]3.2.0+matrix[/B]
+- .7  Minor fix in Listview
 - .6  Introducing media flags for video color depths like HDR (10bit), HDR+ (12bit) and Dolby Vision
       by identifying special parts within filenames (.hdr., .10bit., .hdrplus., .12bit., .dv.)
       Better implementation of embuary info script in Video Info Window and OSD Info
