@@ -119,7 +119,7 @@
 				<itemgap>5</itemgap>
 				<visible>!Player.ChannelPreviewActive</visible>
 				<include content="MediaFlag">
-					<param name="texture" value="$VAR[VideoPlayerResolutionFlagVar]" />
+					<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
 					<param name="fallback" value="flags/videoresolution/fallback.png" />
 					<param name="width" value="58" />
 				</include>

@@ -128,7 +128,7 @@
 						<height>552</height>
 						<align>justify</align>
 						<font>fontplot</font>
-						<label fallback="19055">$INFO[ListItem.Plot]</label>
+						<label fallback="19055">$VAR[PVRMetadataPlotVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>
@@ -298,7 +298,7 @@
     					<param name="label" value="$ADDON[service.kn.switchtimer 30040]" />
     					<param name="onclick_1" value="Action(close)" />
  						<param name="onclick_2" value="RunScript(service.kn.switchtimer,action=add,channel=$INFO[ListItem.ChannelName],icon=$INFO[ListItem.Icon],date=$INFO[ListItem.Date],title=$INFO[ListItem.Title])" />
-						<param name="visible" value="System.hasAddon(service.kn.switchtimer) + Window.IsActive(PVRGuideInfo)" />
+						<param name="visible" value="System.AddonIsEnabled(service.kn.switchtimer) + Window.IsActive(PVRGuideInfo)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="442" />
@@ -306,7 +306,7 @@
     					<param name="label" value="$ADDON[service.kn.switchtimer 30041]" />
     					<param name="onclick_1" value="Action(close)" />
  						<param name="onclick_2" value="RunScript(service.kn.switchtimer)" />
-						<param name="visible" value="System.hasAddon(service.kn.switchtimer) + Window.IsActive(PVRGuideInfo)" />
+						<param name="visible" value="System.AddonIsEnabled(service.kn.switchtimer) + Window.IsActive(PVRGuideInfo)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="4" />

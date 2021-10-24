@@ -62,7 +62,7 @@
 						<top>7.5</top>
 						<width>110</width>
 						<height>110</height>
-						<texture fallback="DefaultAddonMore.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultAddonMore.png">$VAR[InfoWallThumbVar2]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -110,7 +110,7 @@
 						<top>7.5</top>
 						<width>110</width>
 						<height>110</height>
-						<texture fallback="DefaultAddonMore.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultAddonMore.png">$VAR[InfoWallThumbVar2]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">

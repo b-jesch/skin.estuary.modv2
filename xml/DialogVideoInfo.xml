@@ -205,11 +205,29 @@
 						<param name="onclick_2" value="RunScript(script.cinemavision,experience)" />
 						<param name="label" value="$LOCALIZE[31003]" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
+					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + !StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
 						<param name="id" value="101" />
-						<param name="icon" value="icons/infodialogs/info.png" />
+						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
-						<param name="onclick_1" value="RunScript(script.extendedinfo,info=openinfodialog)" />
+						<param name="onclick_1" value="RunScript(script.embuary.info,call=movie,dbid=$INFO[ListItem.DBID])" />
+					</include>
+					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
+						<param name="id" value="101" />
+						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
+						<param name="label" value="$LOCALIZE[31034]" />
+						<param name="onclick_1" value="RunScript(script.embuary.info,call=movie,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
+					</include>
+					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + !String.IsEmpty(ListItem.TvShowDBID) + [String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
+						<param name="id" value="101" />
+						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
+						<param name="label" value="$LOCALIZE[31034]" />
+						<param name="onclick_1" value="RunScript(script.embuary.info,call=tv,dbid=$INFO[ListItem.TvShowDBID])" />
+					</include>
+					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + String.IsEmpty(ListItem.TvShowDBID) + !String.IsEmpty(ListItem.TVShowTitle) + [String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
+						<param name="id" value="101" />
+						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
+						<param name="label" value="$LOCALIZE[31034]" />
+						<param name="onclick_1" value="RunScript(script.embuary.info,call=tv,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="!String.IsEmpty(ListItem.Set)">
 						<param name="id" value="444" />
@@ -282,6 +300,7 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
 			</control>
 			<control type="label">
 				<right>50</right>
@@ -299,6 +318,7 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
 			</control>
 			<control type="label">
 				<right>50</right>
@@ -316,6 +336,7 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
 			</control>
 		</control>
 		<control type="group">
@@ -494,6 +515,7 @@
 			<include content="WidgetListThumbInfo" condition="!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,musicvideo)">
 				<param name="content_path" value="videodb://inprogresstvshows/$INFO[ListItem.DBID]/-2/?tvshowid=$INFO[ListItem.DBID]"/>
 				<param name="widget_target" value="videos"/>
+				<param name="widget_thumb" value="$VAR[InfoWidgetThumbVar2]"/>
 				<param name="sortby" value="playcount"/>
 				<param name="sortorder" value="ascending"/>
 				<param name="limit" value="30"/>
@@ -603,29 +625,15 @@
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="156" />
-					<param name="label" value="$LOCALIZE[31017] : [COLOR white]$VAR[MPAALabelVar][/COLOR]" />
+					<param name="label" value="$LOCALIZE[20074] : [COLOR white]$VAR[MPAALabelVar][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(ListItem.Mpaa)" />
-					<param name="textcolor" value="$VAR[SkinColorVar]" />
-					<param name="font" value="fontplot" />
-				</include>
-				<include content="InfoDialogMetadata">
-					<param name="control_id" value="157" />
-					<param name="label" value="$INFO[ListItem.RatingAndVotes(imdb),$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250), [COLOR white]-[/COLOR] Top 250 : [COLOR white]#,[/COLOR]]" />
-					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes(imdb)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.IMDB.Top250)) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="158" />
 					<param name="label" value="$INFO[ListItem.RatingAndVotes(imdb),$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]" />
-					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.IMDB.Top250))" />
-					<param name="textcolor" value="$VAR[SkinColorVar]" />
-					<param name="font" value="fontplot" />
-				</include>
-				<include content="InfoDialogMetadata">
-					<param name="control_id" value="159" />
-					<param name="label" value="$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250),[COLOR white][/COLOR]Top 250 : [COLOR white]#,[/COLOR]]" />
-					<param name="visible" value="String.IsEmpty(ListItem.RatingAndVotes(imdb)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.IMDB.Top250)) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)" />
+					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes(imdb))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
@@ -637,23 +645,23 @@
 					<param name="font" value="fontplot" />
 				</include>
 				<include content="InfoDialogMetadata">
+					<param name="control_id" value="160" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(tmdb),$LOCALIZE[563] TMDB : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes(tmdb)) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata">
 					<param name="control_id" value="161" />
-					<param name="label" value="$INFO[ListItem.RatingAndVotes,$LOCALIZE[563] TVDB : [COLOR white],[/COLOR]]" />
-					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(tvdb),$LOCALIZE[563] TVDB : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes(tvdb))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="167" />
 					<param name="label" value="$INFO[ListItem.RatingAndVotes,$LOCALIZE[563] : [COLOR white],[/COLOR]]" />
-					<param name="visible" value="[String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + !String.IsEmpty(ListItem.RatingAndVotes)] + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)" />
-					<param name="textcolor" value="$VAR[SkinColorVar]" />
-					<param name="font" value="fontplot" />
-				</include>
-				<include content="InfoDialogMetadata">
-					<param name="control_id" value="162" />
-					<param name="label" value="$LOCALIZE[40236] : [COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Awards)][/COLOR]" />
-					<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Awards))" />
+					<param name="visible" value="[String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(tmdb)) + String.IsEmpty(ListItem.RatingAndVotes(tvdb)) + !String.IsEmpty(ListItem.RatingAndVotes)]" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>

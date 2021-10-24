@@ -38,26 +38,27 @@
 				<bordersize>20</bordersize>
 				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
+			<control type="image">
+				<left>20</left>
+				<top>22</top>
+				<width>342</width>
+				<height>200</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="DefaultVideoFanart.png">$INFO[Player.Art(thumb)]</texture>
+			</control>
 			<control type="label">
 				<left>2</left>
-				<top>32</top>
+				<top>236</top>
 				<width>378</width>
 				<height>36</height>
 				<aligny>center</aligny>
 				<align>center</align>
 				<textoffsetx>5</textoffsetx>
 				<font>font12</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>$LOCALIZE[40196]</label>
+				<label>$LOCALIZE[40196] $INFO[VideoPlayer.NextEndTime,$LOCALIZE[40374],)]</label>
 				<scroll>true</scroll>
-			</control>
-			<control type="image">
-				<left>20</left>
-				<top>78</top>
-				<width>342</width>
-				<height>200</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="DefaultVideoFanart.png">$INFO[Player.Art(thumb)]</texture>
 			</control>
 			<control type="image">
 				<left>22</left>
@@ -77,7 +78,7 @@
 				<aligny>center</aligny>
 				<textoffsetx>5</textoffsetx>
 				<scroll>true</scroll>
-				<label>$INFO[VideoPlayer.NextTitle]</label>
+				<label>$INFO[VideoPlayer.NextTitle]$INFO[VideoPlayer.NextGenre, (,)]</label>
 			</control>
 		</control>
 	</controls>

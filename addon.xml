@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.1.0+matrix.7" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.2.0+matrix.7" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -49,6 +49,25 @@
 				<fanart>resources/fanart.jpg</fanart>
 			</assets>
 <news>
+[B]3.2.0+matrix[/B]
+- .7  Minor fix in Listview
+- .6  Introducing media flags for video color depths like HDR (10bit), HDR+ (12bit) and Dolby Vision
+      by identifying special parts within filenames (.hdr., .10bit., .hdrplus., .12bit., .dv.)
+      Better implementation of embuary info script in Video Info Window and OSD Info
+- .5  Bugfix: MPAA rating not showing in movie collections
+      Minor fixes
+- .4  Reimplementation of extended info button in video OSD and native call to
+      embuary info script
+- .3  Introducing MPAA/TV media flags
+      Bug fixed in music visualization (PVR radio)
+- .2  Improved Addon settings window (thanks @realvito from kodinerds)
+- .1  Revert some cleanups of includes
+      Texture updates, PVR category improvements part #2
+      Improvements/Bugfix in PVR artwork section
+-     Extended Info (embuary helper) in tvshows and movie info window added
+      Implementation of PVR category widget improved (addon German Telecast Offers)
+      next aired episodes based on DB added (TV-Shows)
+      conditional visibility of media flags in info windows fixed
 [B]3.1.0+matrix[/B]
 - .7  Some more labels from PVR artwork module in PVR info window added
       Reimplementation of studio icons in PVR info view (needs studio icons white)

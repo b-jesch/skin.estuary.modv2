@@ -6405,6 +6405,18 @@
 	<include name="PVRSubMenuContent">
 		<content>
 			<item>
+				 <label>$ADDON[script.service.gto 30116]</label>
+				 <onclick>RunPlugin(plugin://script.service.gto?action=scrape)</onclick>
+				 <thumb>update.png</thumb>
+				 <visible>System.AddonIsEnabled(script.service.gto)</visible>
+			</item>
+			<item>
+				 <label>$ADDON[script.service.gto 30115]</label>
+				 <onclick>RunPlugin(plugin://script.service.gto?action=change_scraper)</onclick>
+				 <thumb>newspaper.png</thumb>
+				 <visible>System.AddonIsEnabled(script.service.gto)</visible>
+			</item>
+			<item>
 				<label>$LOCALIZE[19019]</label>
 				<onclick>ActivateWindow($PARAM[pvr_type]Channels)</onclick>
 				<thumb>DefaultAddonPeripheral.png</thumb>
@@ -7377,6 +7389,7 @@
 		<param name="visible">true</param>
 		<param name="limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
 		<param name="visible_play">false</param>
+		<param name="widget_thumb">$INFO[ListItem.Thumb]</param>
 		<definition>
 			<control type="list" id="$PARAM[list_id]">
 				<left>-23</left>
@@ -7410,7 +7423,7 @@
 							<top>-10</top>
 							<width>604</width>
 							<height>400</height>
-							<texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="DefaultVideoFanart.png">$PARAM[widget_thumb]</texture>
 							<aspectratio aligny="center" align="center">scale</aspectratio>
 							<bordersize>20</bordersize>
 							<visible>Skin.HasSetting(show_borders)</visible>
@@ -7420,7 +7433,7 @@
 							<top>-10</top>
 							<width>604</width>
 							<height>400</height>
-							<texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="DefaultVideoFanart.png">$PARAM[widget_thumb]</texture>
 							<aspectratio aligny="center" align="center">scale</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -7475,7 +7488,7 @@
 							<top>-10</top>
 							<width>604</width>
 							<height>400</height>
-							<texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="DefaultVideoFanart.png">$PARAM[widget_thumb]</texture>
 							<aspectratio aligny="center" align="center">scale</aspectratio>
 							<bordersize>20</bordersize>
 						</control>

@@ -273,6 +273,22 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="67001"/>
 						</include>
+						<include content="WidgetNextWatchEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + Skin.HasSetting(HomeBanner)">
+							<param name="content_path" value="plugin://script.embuary.info/nextaired/week"/>
+							<param name="widget_header" value="$LOCALIZE[40372]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="sortby" value="sorttitle"/>
+							<param name="list_id" value="6500"/>
+						</include>
+						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + !Skin.HasSetting(HomeBanner)">
+							<param name="content_path" value="plugin://script.embuary.info/nextaired/week"/>
+							<param name="widget_header" value="$LOCALIZE[40372]"/>
+							<param name="widget_header_focus" value="$INFO[Container(65001).ListItem.Label, | ]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="sortby" value="sorttitle"/>
+							<param name="list_id" value="65001"/>
+						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_inprogresstvshows)">
 							<param name="content_path" value="videodb://inprogresstvshows"/>
 							<param name="sortby" value="lastplayed"/>
@@ -300,9 +316,9 @@
 						<include content="WidgetListCategories" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_studiotvshows)">
 							<param name="content_path" value="videodb://tvshows/studios/"/>
 							<param name="widget_header" value="$LOCALIZE[20388]"/>
-							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
+							<param name="widget_header_focus" value="$INFO[Container(6600).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
-							<param name="list_id" value="6500"/>
+							<param name="list_id" value="6600"/>
 							<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
 							<param name="icon_height" value="70"/>
 							<param name="fallback_image" value="DefaultStudios.png"/>
@@ -2371,7 +2387,7 @@
 				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
 					<param name="infolabel_prefix" value="Container." />
-					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
+					<param name="resolution_var" value="$VAR[Container3DFlagVar]" />
 				</include>
 				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
 					<param name="infolabel_prefix" value="Container." />

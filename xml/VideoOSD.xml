@@ -194,24 +194,17 @@
 					<onclick>ActivateWindow(fullscreeninfo)</onclick>
 					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
 				</control>
-				<!--
 				<control type="radiobutton" id="70012">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/extendedinfo.png"/>
 					</include>
-					<onclick>RunPlugin(plugin://script.embuary.helper?info=getbydbid&amp;dbid=$INFO[VideoPlayer.DBID]&amp;type=movie)</onclick>
-					<visible>!VideoPlayer.Content(livetv) + ![VideoPlayer.HasMenu + System.HasMediaDVD] + !VideoPlayer.Content(musicvideos)</visible>
-					<visible>VideoPlayer.Content(movies) + System.HasAddon(script.embuary.helper)</visible>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.DBID)">RunScript(script.embuary.info,call=movie,dbid=$INFO[VideoPlayer.DBID])</onclick>
+					<onclick condition="VideoPlayer.Content(movies) + String.IsEmpty(VideoPlayer.DBID)">RunScript(script.embuary.info,call=movie,query=$INFO[VideoPlayer.Title],year=$INFO[VideoPlayer.Year]</onclick>
+					<onclick condition="VideoPlayer.Content(episodes) + !StringIsEmpty(VideoPlayer.TvShowDBID)">RunScript(script.embuary.info,call=tv,dbid=$INFO[VideoPlayer.TvShowDBID])</onclick>
+					<onclick condition="VideoPlayer.Content(episodes) + String.IsEmpty(VideoPlayer.TvShowDBID)">RunScript(script.embuary.info,call=tv,query=$INFO[VideoPlayer.TvShowTitle],year=$INFO[VideoPlayer.Year]</onclick>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + System.AddonIsEnabled(script.embuary.helper)</visible>
 				</control>
-				<control type="radiobutton" id="70013">
-					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/extendedinfo.png"/>
-					</include>
-					<onclick>RunPlugin(plugin://script.embuary.helper?info=getbydbid&amp;dbid=$INFO[VideoPlayer.TvShowDBID]&amp;type=tvshow)</onclick>
-					<visible>!VideoPlayer.Content(livetv) + ![VideoPlayer.HasMenu + System.HasMediaDVD]  + !VideoPlayer.Content(musicvideos)</visible>
-					<visible>VideoPlayer.Content(episodes) + System.HasAddon(script.embuary.helper)</visible>
-				</control>
-				-->
 				<control type="radiobutton" id="70015">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/recommended.png"/>

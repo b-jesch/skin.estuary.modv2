@@ -578,7 +578,7 @@
 						</include>
 					</control>
 					<include content="MediaFlag">
-						<param name="texture" value="$VAR[Container5083ResolutionFlagVar]" />
+						<param name="texture" value="$VAR[Container5083_3DFlagVar]" />
 						<param name="visible" value="!String.IsEmpty(Container(5083).ListItem.VideoResolution)" />
 						<param name="width" value="73" />
 					</include>
@@ -592,7 +592,7 @@
 						<param name="width" value="108" />
 					</include>
 					<include content="MediaFlag">
-						<param name="texture" value="$VAR[Container5083AudioCodecFlagVar]" />
+						<param name="texture" value="$VAR[Container5083_AudioCodecFlagVar]" />
 						<param name="visible" value="!String.IsEmpty(Container(5083).ListItem.AudioCodec)" />
 					</include>
 					<include content="MediaFlag">
@@ -652,7 +652,7 @@
 					<width>1900</width>
 					<visible>Control.HasFocus(5094) + !Skin.HasSetting(hide_mediaflags)</visible>
 					<include content="MediaFlag">
-						<param name="texture" value="$VAR[Container5094ResolutionFlagVar]" />
+						<param name="texture" value="$VAR[Container5094_3DFlagVar]" />
 						<param name="visible" value="!String.IsEmpty(Container(5094).ListItem.VideoResolution)" />
 						<param name="width" value="73" />
 					</include>
@@ -666,7 +666,7 @@
 						<param name="width" value="108" />
 					</include>
 					<include content="MediaFlag">
-						<param name="texture" value="$VAR[Container5094AudioCodecFlagVar]" />
+						<param name="texture" value="$VAR[Container5094_AudioCodecFlagVar]" />
 						<param name="visible" value="!String.IsEmpty(Container(5094).ListItem.AudioCodec)" />
 					</include>
 					<include content="MediaFlag">
@@ -726,7 +726,7 @@
 					<width>1900</width>
 					<visible>Control.HasFocus(5084) + !Skin.HasSetting(hide_mediaflags)</visible>
 					<include content="MediaFlag">
-						<param name="texture" value="$VAR[Container5084ResolutionFlagVar]" />
+						<param name="texture" value="$VAR[Container5084_3DFlagVar]" />
 						<param name="visible" value="!String.IsEmpty(Container(5084).ListItem.VideoResolution)" />
 						<param name="width" value="73" />
 					</include>
@@ -740,7 +740,7 @@
 						<param name="width" value="108" />
 					</include>
 					<include content="MediaFlag">
-						<param name="texture" value="$VAR[Container5084AudioCodecFlagVar]" />
+						<param name="texture" value="$VAR[Container5084_AudioCodecFlagVar]" />
 						<param name="visible" value="!String.IsEmpty(Container(5084).ListItem.AudioCodec)" />
 					</include>
 					<include content="MediaFlag">
