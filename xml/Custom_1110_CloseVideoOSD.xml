@@ -1,0 +1,5 @@
+<window id="1110" type="dialog">
+<visible>Window.IsVisible(videoosd) + System.IdleTime(5) + !WindowIsVisible(pvrosdteletext()) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml)</visible>
+<onload>Dialog.Close(videoosd)</onload>
+<controls/>
+</window>

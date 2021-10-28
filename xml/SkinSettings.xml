@@ -1216,6 +1216,13 @@
 					<onclick>Skin.ToggleSetting(HideWidgetLabels)</onclick>
 					<selected>!Skin.HasSetting(HideWidgetLabels)</selected>
 				</control>
+				<control type="radiobutton" id="10022">
+					<include>DefaultSettingButton</include>
+					<label>  ∟$LOCALIZE[40376]</label>
+					<onclick>Skin.ToggleSetting(HidePvrWidgetInfo)</onclick>
+					<selected>Skin.HasSetting(HidePvrWidgetInfo)</selected>
+					<visible>!Skin.HasSetting(HideWidgetLabels)</visible>
+				</control>
 				<control type="radiobutton" id="10014">
 					<label>$LOCALIZE[40011]</label>
 					<include>DefaultSettingButton</include>

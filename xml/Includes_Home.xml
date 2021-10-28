@@ -1066,6 +1066,7 @@
 	</include>
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
+		<param name="extend_label">false</param>
 		<definition>
 			<control type="group" id="$PARAM[list_id]666">
 				<left>55</left>
@@ -1110,7 +1111,7 @@
 					<label>$PARAM[label]$PARAM[label_focus]</label>
 					<font>font25_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
-					<visible>Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)</visible>
+					<visible>Control.HasFocus($PARAM[list_id]) + [!Skin.HasSetting(HideWidgetLabels) | $PARAM[extend_label]]</visible>
 				</control>
 			</control>
 		</definition>
@@ -7653,7 +7654,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus($PARAM[list_id]) + !Control.HasFocus($PARAM[alt_focus])</visible>
+							<visible>!Control.HasFocus($PARAM[list_id]) + Skin.HasSetting(HideWidgetLabels)</visible>
 							<control type="image">
 								<left>35</left>
 								<bottom>50</bottom>
@@ -7860,7 +7861,10 @@
 				<preloaditems>2</preloaditems>
 				<orientation>horizontal</orientation>
 				<onfocus>$PARAM[onfocus]</onfocus>
-				<visible>$PARAM[visible]</visible>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
 				<itemlayout width="314" height="430">
 					<control type="group">
 						<left>68</left>
@@ -7983,7 +7987,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus($PARAM[list_id]) + !Control.HasFocus($PARAM[alt_focus])</visible>
+							<visible>Control.HasFocus($PARAM[list_id]) + Skin.HasSetting(HideWidgetLabels)</visible>
 							<control type="image">
 								<left>35</left>
 								<bottom>50</bottom>
@@ -8040,6 +8044,11 @@
 				<onclick>$PARAM[onclick]</onclick>
 				<onclick>$PARAM[onclick2]</onclick>
 				<visible>$PARAM[visible]</visible>
+				<onfocus>$PARAM[onfocus]</onfocus>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
 				<itemlayout width="314" height="430">
 					<control type="group">
 						<left>68</left>
@@ -8189,8 +8198,13 @@
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 				<onclick>$PARAM[onclick]</onclick>
-				<onclick>$PARAM[onclick2]</onclick>
+				<onclick>$PARAM[onclick_2]</onclick>
+				<onclick>$PARAM[onclick_3]</onclick>
 				<visible>$PARAM[visible]</visible>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
 				<itemlayout width="628" height="430">
 					<control type="group">
 						<left>68</left>

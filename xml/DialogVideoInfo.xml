@@ -209,7 +209,8 @@
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
-						<param name="onclick_1" value="RunScript(script.embuary.info,call=movie,dbid=$INFO[ListItem.DBID])" />
+						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
+						<param name="onclick_2" value="RunScript(script.embuary.info,call=movie,dbid=$INFO[ListItem.DBID])" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
 						<param name="id" value="101" />

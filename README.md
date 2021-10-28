@@ -1,6 +1,21 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
+### 3.3.0+matrix ###
+- .0  
+  * Fix in Shutdown Menu: correct distribution logo was not shown
+  * Full integration and customization of Embuary Info windows into the skin
+  * Improvements on widget info visibility (PVR)
+
+
 ### 3.2.0+matrix ###
+- .8
+  * Fix in Shutdown Menu: correct distribution logo was not shown
+
+
+- .7
+  * Fix in List View (Posters was not shown)
+
+
 - .6
   * Introducing media flags for video color depths like HDR (10bit), HDR+ (12bit) and Dolby Vision        by identifying special parts within filenames (.hdr., .10bit., .hdrplus., .12bit., .dv.)
   * Better implementation of embuary info script in Video Info Window and OSD Info
