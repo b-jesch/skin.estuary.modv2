@@ -1,5 +1,11 @@
 <window id="1110" type="dialog">
-<visible>Window.IsVisible(videoosd) + System.IdleTime(5) + !WindowIsVisible(pvrosdteletext()) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml)</visible>
-<onload>Dialog.Close(videoosd)</onload>
-<controls/>
+    <visible>System.IdleTime(5) + String.IsEqual($VAR[SettingsAutocloseOsdVar],5)</visible>
+    <visible>System.IdleTime(7) + String.IsEqual($VAR[SettingsAutocloseOsdVar],7)</visible>
+    <visible>System.IdleTime(10) + String.IsEqual($VAR[SettingsAutocloseOsdVar],10)</visible>
+    <visible>System.IdleTime(15) + String.IsEqual($VAR[SettingsAutocloseOsdVar],15)</visible>
+    <visible>Window.IsVisible(videoosd) + !WindowIsVisible(pvrosdteletext()) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml)</visible>
+    <!--<onload condition="!String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40378])">AlarmClock(VideoOSD,Dialog.Close(videoosd),$INFO[Skin.String(autoclose_osd)],silent)</onload>-->
+    <onload>Dialog.Close(videoosd)</onload>
+    <!--<onunload>CancelAlarm(VideoOSD,silent)</onunload>-->
+    <controls/>
 </window>

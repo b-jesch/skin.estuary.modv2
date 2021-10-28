@@ -32,6 +32,14 @@
 		<value condition="System.Platform.Linux">Linux</value>
 		<value>unknown</value>
 	</variable>
+	<variable name="SettingsAutocloseOsdVar">
+		<value condition="String.IsEmpty(Skin.String(autoclose_osd))">0</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40378])">0</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40380])">5</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40381])">7</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40382])">10</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40383])">15</value>
+	</variable>
 	<variable name="SettingsForcedViewsMoviesVar">
 			<value condition="Skin.HasSetting(movies.50)">$LOCALIZE[535]</value>
 			<value condition="Skin.HasSetting(movies.55)">$LOCALIZE[31107]</value>
