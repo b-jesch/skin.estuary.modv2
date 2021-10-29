@@ -83,7 +83,7 @@
 						<aspectratio>scale</aspectratio>
 					</control>
 					<control type="group">
-						<visible>Integer.IsGreater(Container(10051).ListItem.Playcount,0)</visible>
+						<visible>Integer.IsGreater(Container(10051).ListItem.Playcount,0) | Container(10051).ListItem.IsResumable</visible>
 						<control type="image">
 							<left>0</left>
 							<bottom>0</bottom>
@@ -97,6 +97,15 @@
 							<width>32</width>
 							<height>32</height>
 							<texture>icons/extendedinfo/OverlayWatched.png</texture>
+							<visible>Integer.IsGreater(Container(10051).ListItem.Playcount,0)</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<bottom>5</bottom>
+							<width>32</width>
+							<height>32</height>
+							<texture>overlays/watched/resume.png</texture>
+							<visible>Container(10051).ListItem.IsResumable</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -370,7 +379,7 @@
 						</control>
 					</control>
 					<!-- buttons -->
-					<control type="panel" id="100">
+					<control type="grouplist" id="100">
 						<left>-21</left>
 						<top>619</top>
 						<height>130</height>
@@ -380,105 +389,36 @@
 						<onright>noop</onright>
 						<onleft>noop</onleft>
 						<ondown>10052</ondown>			-->
-						<itemlayout height="142" width="247">
-							<control type="group">
-								<width>262</width>
-								<height>142</height>
-								<control type="group">
-									<control type="image">
-										<width>262</width>
-										<height>142</height>
-										<texture border="21" colordiffuse="$VAR[SkinColorVar]">buttons/button-nofo.png</texture>
-									</control>
-									<control type="image">
-										<centerleft>50%</centerleft>
-										<top>-35</top>
-										<width>48</width>
-										<texture>icons/$INFO[ListItem.Property(icon)].png</texture>
-										<aspectratio>keep</aspectratio>
-									</control>
-									<control type="label">
-										<left>10</left>
-										<top>25</top>
-										<width>242</width>
-										<height>142</height>
-										<align>center</align>
-										<aligny>center</aligny>
-										<font>font12</font>
-										<textcolor>ffffffff</textcolor>
-										<shadowcolor>50000000</shadowcolor>
-										<label>$INFO[ListItem.Label]</label>
-									</control>
-								</control>
-							</control>
-						</itemlayout>
-						<focusedlayout height="142" width="247">
-							<control type="group">
-								<width>262</width>
-								<height>142</height>
-								<control type="group">
-									<control type="image">
-										<width>262</width>
-										<height>142</height>
-										<texture border="21" colordiffuse="$VAR[SkinColorVar]">buttons/button-fo.png</texture>
-										<visible>Control.HasFocus(100)</visible>
-									</control>
-									<control type="image">
-										<width>262</width>
-										<height>142</height>
-										<texture border="21" colordiffuse="D0FFFFFF">buttons/button-nofo.png</texture>
-										<visible>!Control.HasFocus(100)</visible>
-									</control>
-									<control type="image">
-										<centerleft>50%</centerleft>
-										<top>-35</top>
-										<width>48</width>
-										<texture>icons/$INFO[ListItem.Property(icon)].png</texture>
-										<aspectratio>keep</aspectratio>
-									</control>
-									<control type="label">
-										<left>10</left>
-										<top>25</top>
-										<width>242</width>
-										<height>142</height>
-										<align>center</align>
-										<aligny>center</aligny>
-										<font>font12</font>
-										<textcolor>ffffffff</textcolor>
-										<shadowcolor>50000000</shadowcolor>
-										<label>$INFO[ListItem.Label]</label>
-									</control>
-								</control>
-							</control>
-						</focusedlayout>
-						<content>
-							<item>
-								<property name="icon">infodialogs/disable</property>
-								<label>$LOCALIZE[15067]</label>
-								<onclick>Dialog.Close(all)</onclick>
-							</item>
-							<item>
-								<visible>!String.IsEmpty(Container(10051).ListItem.DBID) + !String.IsEmpty(Container(10051).ListItem.Property(file)) + !String.IsEqual(Container(10051).ListItem.Property(call),tv)</visible>
-								<property name="icon">infodialogs/play</property>
-								<label>$LOCALIZE[208]</label>
-								<onclick>PlayMedia($INFO[Container(10051).ListItem.Property(file)])</onclick>
-								<onclick>Dialog.Close(all)</onclick>
-							</item>
-							<item>
-								<visible>!String.IsEmpty(Container(10051).ListItem.DBID) + String.IsEqual(Container(10051).ListItem.Property(call),tv)</visible>
-								<property name="icon">infodialogs/filemanager</property>
-								<label>$LOCALIZE[1024]</label>
-								<onclick>Dialog.Close(all)</onclick>
-								<onclick condition="!Window.IsVisible(MyVideoNav.xml)">ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/,return)</onclick>
-								<onclick condition="Window.IsVisible(MyVideoNav.xml)">Container.Update(videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/)</onclick>
-							</item>
-							<item>
-								<visible>!String.IsEmpty(Container(10051).ListItem.Plot)</visible>
-								<property name="icon">infodialogs/plot</property>
-								<label>$LOCALIZE[207]</label>
-								<onclick>RunScript(script.embuary.info,call=textviewer,header='$ESCINFO[Container(10051).ListItem.Label]',message='$ESCINFO[Container(10051).ListItem.Plot]')</onclick>
-							</item>
-						</content>
+						<include content="InfoDialogButton">
+							<param name="id" value="10001"/>
+							<param name="icon" value="icons/infodialogs/disable.png"/>
+							<param name="label" value="$LOCALIZE[15067]"/>
+							<param name="onclick_1" value="Dialog.Close(all)"/>
+						</include>
+						<include content="InfoDialogButton">
+							<param name="id" value="10002"/>
+							<param name="icon" value="icons/infodialogs/play.png"/>
+							<param name="label" value="$LOCALIZE[208]"/>
+							<param name="onclick_1" value="PlayMedia($INFO[Container(10051).ListItem.Property(file)])"/>
+							<param name="onclick_2" value="Dialog.Close(all)"/>
+						</include>
+						<include content="InfoDialogButton">
+							<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.DBID) + String.IsEqual(Container(10051).ListItem.Property(call),tv)"/>
+							<param name="id" value="10003"/>
+							<param name="icon" value="icons/search.png"/>
+							<param name="label" value="$LOCALIZE[1024]"/>
+							<param name="onclick_1" value="Dialog.Close(all)"/>
+							<param name="condition_2" value="!Window.IsVisible(MyVideoNav.xml)"/>
+							<param name="onclick_2" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/,return)"/>
+							<param name="condition_3" value="Window.IsVisible(MyVideoNav.xml)"/>
+							<param name="onclick_3" value="Container.Update(videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/)"/>
+						</include>
+						<include content="InfoDialogButton">
+							<param name="id" value="10004"/>
+							<param name="icon" value="icons/infodialogs/plot.png"/>
+							<param name="label" value="$LOCALIZE[207]"/>
+							<param name="onclick_1" value="RunScript(script.embuary.info,call=textviewer,header='$ESCINFO[Container(10051).ListItem.Label]',message='$ESCINFO[Container(10051).ListItem.Plot]')"/>
+						</include>
 					</control>
 				</control>
 			</control>
@@ -486,7 +426,8 @@
 			<!-- cast -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10052).NumItems,0) | Container(10052).IsUpdating</visible>
-				<height>715</height>
+				<top>35</top>
+				<height>685</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10052"/>
@@ -509,7 +450,7 @@
 			<!-- crew -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10056).NumItems,0) | Container(10056).IsUpdating</visible>
-				<height>715</height>
+				<height>685</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10056"/>
@@ -539,7 +480,7 @@
 			<!-- collection -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10057).NumItems,0) | Container(10057).IsUpdating</visible>
-				<height>715</height>
+				<height>685</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10057"/>
@@ -559,7 +500,7 @@
 			<!-- seasons -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10058).NumItems,0) | Container(10058).IsUpdating</visible>
-				<height>715</height>
+				<height>685</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10058"/>
@@ -580,12 +521,11 @@
 			<!-- similar -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10053).NumItems,0) | Container(10053).IsUpdating</visible>
-				<height>715</height>
+				<height>685</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10053"/>
 						<param name="label" value="$ADDON[script.embuary.info 32009]"/>
-						<param name="extend_label" value="true"/>
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Year, (,)]"/>
 					</include>
 					<control type="group">
@@ -602,12 +542,11 @@
 			<!-- videos -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10054).NumItems,0) | Container(10054).IsUpdating</visible>
-				<height>715</height>
+				<height>685</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10054"/>
 						<param name="label" value="$LOCALIZE[3]"/>
-						<param name="extend_label" value="true"/>
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 					</include>
 					<control type="group">
@@ -617,7 +556,6 @@
 							<param name="visible_play" value="true"/>
 							<param name="onclick" value="SetProperty(TrailerPlaying,10054,Home)" />
 							<param name="onclick_2" value="SetFocus(9013)" />
-							<!-- <param name="onclick_3" value="PlayMedia($ESCINFO[ListItem.Trailer],false,1)" /> -->
 							<param name="ondown" value="10055"/>
 							<param name="onup" value="10053"/>
 						</include>
@@ -628,7 +566,7 @@
 			<!-- images -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10055).NumItems,0) | Container(10055).IsUpdating</visible>
-				<height>715</height>
+				<height>685</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10055"/>
@@ -650,7 +588,7 @@
 			<!-- posters -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10059).NumItems,0) | Container(10059).IsUpdating</visible>
-				<height>715</height>
+				<height>685</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10059"/>
@@ -697,9 +635,9 @@
 				<control type="image">
 					<top>10</top>
 					<right>0</right>
-					<texture>tmdb.png</texture>
-					<height>65</height>
-					<width>200</width>
+					<texture>icons/extendedinfo/moviedb2.png</texture>
+					<height>80</height>
+					<width>204</width>
 					<aspectratio align="right">keep</aspectratio>
 				</control>
 			</control>

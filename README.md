@@ -5,6 +5,7 @@
   * Fix in Shutdown Menu: correct distribution logo was not shown
   * Full integration and customization of Embuary Info windows into the skin
   * Improvements on widget info visibility (PVR)
+  * Video OSD with adjustable timing on auto close
 
 
 ### 3.2.0+matrix ###
