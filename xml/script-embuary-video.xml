@@ -11,7 +11,8 @@
 	<onload>SetProperty(onback_10058,SetFocus(100))</onload>
 	<onload>SetProperty(onback_10059,SetFocus(100))</onload>
 	<onload condition="!Skin.HasSetting(disable_PauseOnExtraInfos)">PlayerControl(Play)</onload>
-	<onunload condition="!Skin.HasSetting(disable_PauseOnExtraInfos)">PlayerControl(Play)</onunload>
+	<onunload condition="!Skin.HasSetting(disable_PauseOnExtraInfos) + Control.HasFocus(10054)">PlayerControl(Stop)</onunload>
+	<onunload condition="!Skin.HasSetting(disable_PauseOnExtraInfos) + !Control.HasFocus(10054)">PlayerControl(Play)</onunload>
 	<controls>
 		<!-- Storage container for the item details -->
 		<control type="list" id="10051">
@@ -396,6 +397,7 @@
 							<param name="onclick_1" value="Dialog.Close(all)"/>
 						</include>
 						<include content="InfoDialogButton">
+							<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.DBID) + !String.IsEmpty(Container(10051).ListItem.Property(file)) + !String.IsEqual(Container(10051).ListItem.Property(call),tv)"/>
 							<param name="id" value="10002"/>
 							<param name="icon" value="icons/infodialogs/play.png"/>
 							<param name="label" value="$LOCALIZE[208]"/>
@@ -405,8 +407,8 @@
 						<include content="InfoDialogButton">
 							<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.DBID) + String.IsEqual(Container(10051).ListItem.Property(call),tv)"/>
 							<param name="id" value="10003"/>
-							<param name="icon" value="icons/search.png"/>
-							<param name="label" value="$LOCALIZE[1024]"/>
+							<param name="icon" value="icons/playlist.png"/>
+							<param name="label" value="$LOCALIZE[20153]"/>
 							<param name="onclick_1" value="Dialog.Close(all)"/>
 							<param name="condition_2" value="!Window.IsVisible(MyVideoNav.xml)"/>
 							<param name="onclick_2" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/,return)"/>
@@ -554,8 +556,8 @@
 						<include content="ExtendedInfoThumbList">
 							<param name="list_id" value="10054"/>
 							<param name="visible_play" value="true"/>
-							<param name="onclick" value="SetProperty(TrailerPlaying,10054,Home)" />
-							<param name="onclick_2" value="SetFocus(9013)" />
+							<param name="onclick_1" value="PlayerControl(Stop)" />
+							<param name="onclick_2" value="Action(close)" />
 							<param name="ondown" value="10055"/>
 							<param name="onup" value="10053"/>
 						</include>

@@ -1,6 +1,10 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.3.0+matrix ###
+- .1
+  * Fix some issues when starting movie trailers from Embuary Info
+
+
 - .0  
   * Fix in Shutdown Menu: correct distribution logo was not shown
   * Full integration and customization of Embuary Info windows into the skin
