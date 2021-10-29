@@ -73,7 +73,7 @@
 						<width>540</width>
 						<height>790</height>
 						<texture>dialogs/dialog-bg-nobo.png</texture>
-						<bordertexture border="21">icons/overlays/shadow.png</bordertexture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 					<control type="image">
@@ -96,7 +96,7 @@
 							<bottom>5</bottom>
 							<width>32</width>
 							<height>32</height>
-							<texture>OverlayWatched.png</texture>
+							<texture>icons/extendedinfo/OverlayWatched.png</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -113,7 +113,7 @@
 							<bottom>5</bottom>
 							<width>32</width>
 							<height>32</height>
-							<texture>OverlayLocal.png</texture>
+							<texture>icons/extendedinfo/OverlayLocal.png</texture>
 						</control>
 					</control>
 				</control>

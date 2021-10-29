@@ -91,7 +91,6 @@
 				</control>
 				<control type="button" id="104">
 					<label>$LOCALIZE[40377]</label>
-					<!--<label2>$VAR[SettingsAutocloseOsdVar]</label2>-->
 					<label2>$INFO[Skin.String(autoclose_osd)]</label2>
 					<include>DefaultSettingButton</include>
 					<description>autoclose OSD menu</description>
