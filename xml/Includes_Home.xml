@@ -1066,6 +1066,7 @@
 	</include>
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
+		<param name="extend_label">false</param>
 		<definition>
 			<control type="group" id="$PARAM[list_id]666">
 				<left>55</left>
@@ -1110,7 +1111,7 @@
 					<label>$PARAM[label]$PARAM[label_focus]</label>
 					<font>font25_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
-					<visible>Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)</visible>
+					<visible>Control.HasFocus($PARAM[list_id]) + [!Skin.HasSetting(HideWidgetLabels) | $PARAM[extend_label]]</visible>
 				</control>
 			</control>
 		</definition>
@@ -7653,7 +7654,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus($PARAM[list_id]) + !Control.HasFocus($PARAM[alt_focus])</visible>
+							<visible>!Control.HasFocus($PARAM[list_id]) + Skin.HasSetting(HideWidgetLabels)</visible>
 							<control type="image">
 								<left>35</left>
 								<bottom>50</bottom>
@@ -7860,7 +7861,10 @@
 				<preloaditems>2</preloaditems>
 				<orientation>horizontal</orientation>
 				<onfocus>$PARAM[onfocus]</onfocus>
-				<visible>$PARAM[visible]</visible>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
 				<itemlayout width="314" height="430">
 					<control type="group">
 						<left>68</left>
@@ -7983,7 +7987,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus($PARAM[list_id]) + !Control.HasFocus($PARAM[alt_focus])</visible>
+							<visible>Control.HasFocus($PARAM[list_id]) + Skin.HasSetting(HideWidgetLabels)</visible>
 							<control type="image">
 								<left>35</left>
 								<bottom>50</bottom>
@@ -8040,6 +8044,11 @@
 				<onclick>$PARAM[onclick]</onclick>
 				<onclick>$PARAM[onclick2]</onclick>
 				<visible>$PARAM[visible]</visible>
+				<onfocus>$PARAM[onfocus]</onfocus>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
 				<itemlayout width="314" height="430">
 					<control type="group">
 						<left>68</left>
@@ -8076,13 +8085,44 @@
 							<bordersize>20</bordersize>
 							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
-						<control type="image">
+						<control type="group">
+							<top>10</top>
 							<left>35</left>
-							<top>290</top>
-							<width>80</width>
-							<height>80</height>
-							<texture>overlays/overlay-bg.png</texture>
+							<width>250</width>
+							<visible>!String.IsEmpty(ListItem.DBID)</visible>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>80</width>
+								<height>80</height>
+								<texture flipy="true">overlays/overlay-bg.png</texture>
+							</control>
+							<control type="image">
+								<left>5</left>
+								<top>5</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>icons/extendedinfo/OverlayLocal.png</texture>
+							</control>
+						</control>
+						<control type="group">
+							<top>10</top>
+							<right>-40</right>
 							<visible>ListItem.IsResumable | Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+							<control type="image">
+								<right>0</right>
+								<top>0</top>
+								<width>80</width>
+								<height>80</height>
+								<texture flipx="true" flipy="true">overlays/overlay-bg.png</texture>
+							</control>
+							<control type="image">
+								<right>5</right>
+								<top>5</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[WallWatchedIconVar]</texture>
+							</control>
 						</control>
 						<control type="group">
 							<left>135</left>
@@ -8137,13 +8177,45 @@
 							<aspectratio>stretch</aspectratio>
 							<bordersize>20</bordersize>
 						</control>
-						<control type="image">
+						<control type="group">
+							<top>10</top>
 							<left>35</left>
-							<top>290</top>
-							<width>80</width>
-							<height>80</height>
-							<texture>overlays/overlay-bg.png</texture>
-							<visible>ListItem.IsResumable | Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+							<width>250</width>
+							<visible>!String.IsEmpty(ListItem.DBID)</visible>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>80</width>
+								<height>80</height>
+								<texture flipy="true">overlays/overlay-bg.png</texture>
+							</control>
+							<control type="image">
+								<left>5</left>
+								<top>5</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>icons/extendedinfo/OverlayLocal.png</texture>
+							</control>
+						</control>
+						<control type="group">
+							<top>10</top>
+							<right>-40</right>
+							<visible>Integer.IsGreater(ListItem.Playcount,0)</visible>
+							<control type="image">
+								<right>0</right>
+								<top>0</top>
+								<width>80</width>
+								<height>80</height>
+								<texture flipx="true" flipy="true">overlays/overlay-bg.png</texture>
+								<!-- <visible>ListItem.IsResumable | Listitem.IsCollection | ListItem.IsPlaying</visible> -->
+							</control>
+							<control type="image">
+								<right>5</right>
+								<top>5</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>icons/extendedinfo/OverlayWatched.png</texture>
+							</control>
 						</control>
 						<control type="group">
 							<visible>$PARAM[visible_play] + Control.HasFocus($PARAM[list_id])</visible>
@@ -8188,9 +8260,14 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<onclick>$PARAM[onclick]</onclick>
-				<onclick>$PARAM[onclick2]</onclick>
+				<onclick>$PARAM[onclick_1]</onclick>
+				<onclick>$PARAM[onclick_2]</onclick>
+				<onclick>$PARAM[onclick_3]</onclick>
 				<visible>$PARAM[visible]</visible>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
 				<itemlayout width="628" height="430">
 					<control type="group">
 						<left>68</left>

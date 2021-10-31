@@ -89,6 +89,18 @@
 					<selected>Skin.HasSetting(SmallOSDVideo)</selected>
                     <onclick>Skin.ToggleSetting(SmallOSDVideo)</onclick>
 				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[40377]</label>
+					<label2>$INFO[Skin.String(autoclose_osd)]</label2>
+					<include>DefaultSettingButton</include>
+					<description>autoclose OSD menu</description>
+					<onclick condition="String.IsEmpty(Skin.String(autoclose_osd))">Skin.SetString(autoclose_osd,$LOCALIZE[40378])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40383])">Skin.SetString(autoclose_osd,$LOCALIZE[40378])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40382])">Skin.SetString(autoclose_osd,$LOCALIZE[40383])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40381])">Skin.SetString(autoclose_osd,$LOCALIZE[40382])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40380])">Skin.SetString(autoclose_osd,$LOCALIZE[40381])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40378])">Skin.SetString(autoclose_osd,$LOCALIZE[40380])</onclick>
+				</control>
 				<control type="radiobutton" id="114">
 					<label>$LOCALIZE[40159]</label>
 					<include>DefaultSettingButton</include>
@@ -1216,6 +1228,13 @@
 					<onclick>Skin.ToggleSetting(HideWidgetLabels)</onclick>
 					<selected>!Skin.HasSetting(HideWidgetLabels)</selected>
 				</control>
+				<control type="radiobutton" id="10022">
+					<include>DefaultSettingButton</include>
+					<label>  ∟$LOCALIZE[40376]</label>
+					<onclick>Skin.ToggleSetting(HidePvrWidgetInfo)</onclick>
+					<selected>Skin.HasSetting(HidePvrWidgetInfo)</selected>
+					<visible>!Skin.HasSetting(HideWidgetLabels)</visible>
+				</control>
 				<control type="radiobutton" id="10014">
 					<label>$LOCALIZE[40011]</label>
 					<include>DefaultSettingButton</include>
@@ -1375,7 +1394,7 @@
 				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 				<hitrect x="0" y="0" w="60" h="100%" />
-				<visible>Control.IsVisible(1000) | Control.IsVisible(700) | Control.IsVisible(300) | Control.IsVisible(200)</visible>
+				<visible>Control.IsVisible(200) | Control.IsVisible(300) | Control.IsVisible(600) | Control.IsVisible(700) | Control.IsVisible(900) | Control.IsVisible(1000)</visible>
 			</control>
 		</control>
 		<include content="TopBar">

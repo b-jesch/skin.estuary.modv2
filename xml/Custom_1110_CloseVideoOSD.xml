@@ -1,0 +1,5 @@
+<window id="1110" type="dialog">
+    <visible>[System.IdleTime(3) + String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40380])] | [System.IdleTime(5) + String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40381])] | [System.IdleTime(7) + String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40382])] | [System.IdleTime(10) + String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40383])] + Window.IsVisible(videoosd) + !WindowIsVisible(pvrosdteletext()) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml)</visible>
+    <onload>Dialog.Close(videoosd)</onload>
+    <controls/>
+</window>

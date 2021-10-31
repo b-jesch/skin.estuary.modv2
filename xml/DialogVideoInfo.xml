@@ -209,25 +209,29 @@
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
-						<param name="onclick_1" value="RunScript(script.embuary.info,call=movie,dbid=$INFO[ListItem.DBID])" />
+						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
+						<param name="onclick_2" value="RunScript(script.embuary.info,call=movie,dbid=$INFO[ListItem.DBID])" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
-						<param name="onclick_1" value="RunScript(script.embuary.info,call=movie,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
+						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
+						<param name="onclick_2" value="RunScript(script.embuary.info,call=movie,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + !String.IsEmpty(ListItem.TvShowDBID) + [String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
-						<param name="onclick_1" value="RunScript(script.embuary.info,call=tv,dbid=$INFO[ListItem.TvShowDBID])" />
+						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
+						<param name="onclick_2" value="RunScript(script.embuary.info,call=tv,dbid=$INFO[ListItem.TvShowDBID])" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + String.IsEmpty(ListItem.TvShowDBID) + !String.IsEmpty(ListItem.TVShowTitle) + [String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
-						<param name="onclick_1" value="RunScript(script.embuary.info,call=tv,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
+						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
+						<param name="onclick_2" value="RunScript(script.embuary.info,call=tv,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="!String.IsEmpty(ListItem.Set)">
 						<param name="id" value="444" />
