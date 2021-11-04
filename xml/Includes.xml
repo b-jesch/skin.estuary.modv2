@@ -954,27 +954,6 @@
 						<param name="height" value="60" />
 					</include>
 				</control>
-				<control type="group">
-					<width>404</width>
-					<top>5</top>
-					<visible>Control.HasFocus(6600) | Control.HasFocus(66001)</visible>
-					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.Property(airdatetime),AM) | String.Contains($PARAM[infolabel_prefix]ListItem.Property(airdatetime),PM)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/airdate_long.png" />
-						<param name="width" value="410" />
-					</include>
-					<control type="label">
-						<width>353</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(airdatetime)]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/hdtv.png" />
 					<param name="width" value="71" />
@@ -1150,6 +1129,30 @@
 					<param name="top" value="5" />
 					<param name="visible" value="!Skin.HasSetting(show_mpaaflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa)" />
 				</include>
+				<control type="group">
+					<width>222</width>
+					<top>5</top>
+					<!--
+					<visible>Control.HasFocus(6600) | Control.HasFocus(66001)</visible>
+					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.Property(airdatetime),AM) | String.Contains($PARAM[infolabel_prefix]ListItem.Property(airdatetime),PM)</visible>
+					-->
+					<include content="MediaFlag">
+						<param name="texture" value="flags/airdate_long.png" />
+						<param name="width" value="222" />
+					</include>
+					<control type="label">
+						<width>165</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>54</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<scroll>true</scroll>
+						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
 				<control type="group">
 					<width>120</width>
 					<top>5</top>
