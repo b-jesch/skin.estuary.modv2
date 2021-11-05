@@ -1,6 +1,10 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.3.0+matrix ###
+- .3
+  * Autoclose OSD Fix
+
+
 - .2
   * Code cleanups and small fixes
   * Date Aired Flag added (Movies/TV Shows)
