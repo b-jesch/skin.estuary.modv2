@@ -90,7 +90,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<left>-2</left>
@@ -102,7 +102,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>0</top>
@@ -111,7 +111,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>0</top>
@@ -120,7 +120,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>0</top>
@@ -130,7 +130,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders) + String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>0</top>
@@ -140,7 +140,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders) + String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>0</top>
@@ -150,7 +150,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>0</top>
@@ -160,7 +160,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>-6</top>
@@ -171,7 +171,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>-6</top>
@@ -182,7 +182,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>-6</top>
@@ -193,7 +193,7 @@
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>-6</top>
@@ -204,7 +204,7 @@
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -245,7 +245,7 @@
 				<texture fallback="DefaultGenre.png">$VAR[WidgetGenreIconVar]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(listitem.dbtype,genre)</visible>
-				<animation effect="slide" end="0,-10" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]">Conditional</animation>
+				<animation effect="slide" end="0,-10" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]">Conditional</animation>
 			</control>
 			<control type="textbox">
 				<left>25</left>
@@ -258,11 +258,11 @@
 				<label>$PARAM[single_label]</label>
 				<autoscroll delay="1000" time="1000" repeat="1000">$PARAM[focused]</autoscroll>
 				<visible>!String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,song) + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="group">
-				<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 				<control type="label">
 					<left>25</left>
 					<top>300</top>
@@ -302,7 +302,7 @@
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>right</align>
 				<visible>String.IsEqual(listitem.dbtype,episode)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>20</top>
@@ -330,7 +330,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>20</top>
@@ -340,7 +340,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>18</top>
@@ -350,7 +350,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>18</top>
@@ -360,7 +360,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>20</top>
@@ -370,7 +370,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList)] + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>20</top>
@@ -380,7 +380,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList)] + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>18</top>
@@ -390,7 +390,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList)] + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<top>18</top>
@@ -400,7 +400,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList)] + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -409,7 +409,7 @@
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -418,7 +418,7 @@
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="progress">
 				<left>20</left>
@@ -429,7 +429,7 @@
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="progress">
 				<left>20</left>
@@ -440,7 +440,7 @@
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -449,7 +449,7 @@
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.Progress,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -458,7 +458,7 @@
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.Progress,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="progress">
 				<left>20</left>
@@ -469,7 +469,7 @@
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.Progress</info>
 				<visible>!Integer.IsEqual(ListItem.Progress,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="progress">
 				<left>20</left>
@@ -480,7 +480,7 @@
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.Progress</info>
 				<visible>!Integer.IsEqual(ListItem.Progress,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(Favourites)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="group">
 				<left>133</left>
@@ -528,7 +528,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>-2</left>
@@ -540,7 +540,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>10</top>
@@ -549,7 +549,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>10</top>
@@ -558,7 +558,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>10</top>
@@ -568,7 +568,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>10</top>
@@ -578,7 +578,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>4</top>
@@ -589,7 +589,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>4</top>
@@ -600,7 +600,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>4</top>
@@ -611,7 +611,7 @@
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>4</top>
@@ -622,7 +622,7 @@
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -632,7 +632,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
 				<visible>!Container.Content(videos)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -642,7 +642,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
 				<visible>!Container.Content(videos)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -652,7 +652,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<visible>Container.Content(videos)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -662,7 +662,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<visible>Container.Content(videos)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -673,7 +673,7 @@
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>!Container.Content(videos)</visible>
 				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
 			</control>
 			<control type="image">
@@ -685,7 +685,7 @@
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>!Container.Content(videos)</visible>
 				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>136</left>
@@ -694,8 +694,8 @@
 				<height>70</height>
 				<texture flipx="true">overlays/overlay-bg.png</texture>
 				<visible>![String.IsEqual(listitem.dbtype,episode) + [Control.IsVisible(500) | Control.IsVisible(54)]] + ![String.IsEqual(listitem.dbtype,episode) + Window.IsVisible(MyVideoNav.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31101])]]</visible>
-				<visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + ![Container.Content(videos) + String.IsEmpty(ListItem.Label2)]</visible>
-				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]">Conditional</animation>
+				<visible>!Window.IsVisible(script-embuary-video.xml) + !Window.IsVisible(script-embuary-person.xml) + ![Container.Content(videos) + String.IsEmpty(ListItem.Label2)]</visible>
+				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]">Conditional</animation>
 			</control>
 			<control type="label">
 				<left>31</left>
@@ -706,7 +706,7 @@
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>right</align>
 				<visible>![String.IsEqual(listitem.dbtype,episode) + [Control.IsVisible(500) | Control.IsVisible(54)]] + ![String.IsEqual(listitem.dbtype,episode) + Window.IsVisible(MyVideoNav.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31101])]]</visible>
-				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]">Conditional</animation>
+				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -715,7 +715,7 @@
 				<height>70</height>
 				<texture>overlays/overlay-bg.png</texture>
 				<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-				<animation effect="slide" end="0,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]">Conditional</animation>
+				<animation effect="slide" end="0,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -723,7 +723,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
-				<animation effect="slide" end="0,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]">Conditional</animation>
+				<animation effect="slide" end="0,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]">Conditional</animation>
 			</control>
 			<control type="textbox">
 				<left>25</left>
@@ -736,7 +736,7 @@
 				<label>$PARAM[label]</label>
 				<autoscroll delay="1000" time="1000" repeat="1000">$PARAM[focused]</autoscroll>
 				<visible>Window.IsActive(videos)</visible>
-				<visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
+				<visible>!Window.IsVisible(script-embuary-video.xml) + !Window.IsVisible(script-embuary-person.xml)</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="textbox">
@@ -749,8 +749,8 @@
 				<aligny>center</aligny>
 				<label>$PARAM[label]</label>
 				<autoscroll delay="1000" time="1000" repeat="1000">$PARAM[focused]</autoscroll>
-				<visible>Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(videos)</visible>
@@ -802,7 +802,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + !Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>30</top>
@@ -812,7 +812,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + !Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>28</top>
@@ -822,7 +822,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<top>28</top>
@@ -832,7 +832,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home) + Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -841,7 +841,7 @@
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -850,7 +850,7 @@
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="progress">
 				<left>20</left>
@@ -861,7 +861,7 @@
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="progress">
 				<left>20</left>
@@ -872,12 +872,12 @@
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="group">
 				<left>133</left>
 				<top>11</top>
-				<animation effect="slide" end="37,0" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]]">Conditional</animation>
+				<animation effect="slide" end="37,0" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]">Conditional</animation>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircle</include>
 			</control>
 			<control type="group">
@@ -1530,7 +1530,7 @@
 				<visible>[Skin.HasSetting(enable_LibraryDiscArt) + !Window.IsVisible(Home)] | [Skin.HasSetting(enable_HomeDiscArt) + Window.IsVisible(Home)]</visible>
 				<visible>$PARAM[focused]</visible>
 				<visible>!String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
-				<visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
+				<visible>!Window.IsVisible(script-embuary-video.xml) + !Window.IsVisible(script-embuary-person.xml)</visible>
 				<animation effect="slide" start="0,50" end="0,0" time="300" tween="cubic" easing="out" reversible="false">Focus</animation>
 				<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 				<animation effect="slide" end="56,0" time="0" condition="Window.IsVisible(Home)">Conditional</animation>

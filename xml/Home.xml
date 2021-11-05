@@ -714,9 +714,12 @@
 							<param name="sortby" value="lastplayed"/>
 							<param name="sortorder" value="descending"/>
 							<param name="widget_header" value="$LOCALIZE[31016]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12200).ListItem.Label, | ]$INFO[Container(12200).ListItem.Label2, - ,]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12200).ListItem.Label, | ]$INFO[Container(12200).ListItem.Title, - ,]"/>
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12200"/>
+							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
+							<param name="label" value="$INFO[ListItem.ChannelName]"/>
+							<param name="label2" value="$INFO[ListItem.Title]"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_recordingchannels)">
 							<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
@@ -750,11 +753,10 @@
 						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
 							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
 							<param name="widget_header" value="$ADDON[script.service.gto 30104]: $INFO[Window(Home).Property(GTO.Provider)]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Label, | ]$INFO[Container(12400).ListItem.Label2, - ,]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Label, | ]$INFO[Container(12500).ListItem.Label2, - ,]"/>
 							<param name="list_id" value="12500"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
-    						<param name="label" value="$INFO[ListItem.label]"/>
-							<param name="label2" value="$INFO[ListItem.label2]$INFO[ListItem.Property(StartTime), (,)]"/>
+    						<param name="label" value="$INFO[ListItem.Label]"/>
 							<param name="onclick" value="RunPlugin(plugin://script.service.gto/?action=info&amp;item=$INFO[ListItem.Property(item)])"/>
 						</include>
 					</control>

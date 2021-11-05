@@ -294,15 +294,6 @@
 						<param name="onclick_5" value="InstallAddon(script.playalbum)" />
 						<param name="condition_5" value="!System.HasAddon(script.playalbum) + !String.IsEmpty(ListItem.DBID)" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="System.hasAddon(script.extendedinfo)">
-						<param name="id" value="100" />
-						<param name="icon" value="icons/infodialogs/youtube.png" />
-						<param name="label" value="$LOCALIZE[3114]" />
-						<param name="onclick_1" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])" />
-						<param name="condition_1" value="!String.IsEqual(ListItem.DBType,song)" />
-						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])" />
-						<param name="condition_2" value="String.IsEqual(ListItem.DBType,song)" />
-					</include>
 					<include content="InfoDialogSmallButton" condition="[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]">
 						<param name="id" value="77" />
 						<param name="icon" value="icons/infodialogs/rating.png" />
@@ -469,16 +460,6 @@
 				<param name="onclick2" value="PlayMedia($ESCINFO[ListItem.FileNameAndPath])" />
 				<param name="visible_play" value="true" />
 				<param name="visible" value="!Skin.HasSetting(MusicInfo_SongList)"/>
-			</include>
-			<include content="WidgetListSquareInfo" condition="String.IsEqual(ListItem.DBTYPE,artist) + System.HasAddon(script.extendedinfo)">
-				<param name="content_path" value="plugin://script.extendedinfo?info=discography&amp;&amp;artistname=$INFO[ListItem.Artist]"/>
-				<param name="widget_target" value="music"/>
-				<param name="sortby" value="year"/>
-				<param name="sortorder" value="ascending"/>
-				<param name="limit" value="100"/>
-				<param name="onclick" value="noop" />
-				<param name="list_id" value="5100"/>
-				<param name="visible" value="!Skin.HasSetting(MusicInfo_DiscographyList)"/>
 			</include>
 			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,artist)">
 				<param name="content_path" value="$VAR[VideoInfoImagesVar]"/>

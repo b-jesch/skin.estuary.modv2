@@ -1620,7 +1620,7 @@
 	</variable>
 	<variable name="AddonsFanartVar">
 		<value condition="Skin.HasSetting(show_fanart)">$INFO[Container.ListItem.Art(fanart)]</value>
-		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
+		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)">$INFO[Window(home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="HomeFanartVar">
@@ -1645,7 +1645,7 @@
 		<value condition="System.HasAddon(script.globalsearch) + Window.IsVisible(script-globalsearch.xml) + String.IsEqual(Container(9000).ListItem.Label,$LOCALIZE[19069])">special://skin/extras/home-images/livetv.jpg</value>
 		<value condition="Skin.HasSetting(EnableExtraFanart)">$VAR[FanartAnimated]</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + Control.HasFocus(50) + !String.IsEmpty(Container(60).ListItem.Art(fanart))">$INFO[Container(60).ListItem.Art(fanart)]</value>
-		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
+		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)">$INFO[Window(home).Property(infobackground)]</value>
 		<value condition="Container.Content(genres) + Window.IsActive(videos)">$INFO[Skin.String(MovieGenreFanart.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
 		<value condition="Window.IsActive(pictures) + String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.FolderPath]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
@@ -1829,10 +1829,6 @@
  		<value condition="Control.HasFocus(120)">$LOCALIZE[1024]</value>
  		<value condition="Control.HasFocus(9)">$LOCALIZE[40308]$INFO[Window.Property(PercentPlayed), ,%]</value>
  		<value condition="Control.HasFocus(6001)">$LOCALIZE[31033]$INFO[Window.Property(rated), : ]</value>
- 		<value condition="Control.HasFocus(6005)">$ADDON[script.extendedinfo 32107]</value>
- 		<value condition="Control.HasFocus(6002)">$ADDON[script.extendedinfo 32130]</value>
- 		<value condition="Control.HasFocus(6006)">$ADDON[script.extendedinfo 32131]</value>
- 		<value condition="Control.HasFocus(445)">$ADDON[script.extendedinfo 32133]</value>
  		<value condition="Control.HasFocus(438)">$LOCALIZE[15067]</value>
  		<value condition="Control.HasFocus(439)">$LOCALIZE[20410]</value>
  		<value condition="Control.HasFocus(440)">$LOCALIZE[31090]</value>
@@ -1849,7 +1845,6 @@
  		<value condition="Control.HasFocus(104)">$LOCALIZE[40239]</value>
  		<value condition="Control.HasFocus(105)">$LOCALIZE[40292]</value>
  		<value condition="Control.HasFocus(6) | Control.HasFocus(66)">$LOCALIZE[184]</value>
- 		<value condition="Control.HasFocus(100) + Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)">$ADDON[script.extendedinfo 32132]</value>
  		<value condition="Control.HasFocus(100)">$LOCALIZE[31114]</value>
  		<value condition="Control.HasFocus(5002) + Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">$LOCALIZE[19033]$INFO[Container(60).ListItem.Title, | ]$INFO[Container(60).ListItem.Year, (,)]</value>
  		<value condition="Control.HasFocus(5002)">$LOCALIZE[19033]</value>
@@ -1871,18 +1866,10 @@
  		<value condition="Control.HasFocus(6000)">$INFO[ListItem.TVShowTitle,$LOCALIZE[40221] ]$INFO[Container(6000).ListItem.Title, | ]$INFO[Container(6000).ListItem.Year, (,)]</value>
  		<value condition="Control.HasFocus(63000)">$LOCALIZE[40307]</value>
  		<value condition="Control.HasFocus(1000)">$LOCALIZE[206]$INFO[Container(1000).ListItem.Label, | ]$INFO[ListItem.Property(character), $LOCALIZE[31125] ,]</value>
- 		<value condition="Control.HasFocus(750)">$ADDON[script.extendedinfo 32115]$INFO[Container(750).ListItem.Label, | ]$INFO[ListItem.Property(job), : ,]</value>
- 		<value condition="Control.HasFocus(250) + Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$LOCALIZE[40313]$INFO[Container(250).ListItem.Label, ',']$INFO[ListItem.Property(character), | ,]</value>
  		<value condition="Control.HasFocus(250) + !String.IsEmpty(Window.Property(set.label))">$LOCALIZE[40290]$INFO[Window.Property(set.label), ]$INFO[Container(250).ListItem.Title, | ]$INFO[Container(250).ListItem.Year, (,)]</value>
  		<value condition="Control.HasFocus(250) + String.IsEmpty(Window.Property(set.label)) + !Integer.IsGreater(Container(250).NumItems,1)">$INFO[Container(250).NumItems,, ]$LOCALIZE[36904]</value>
  		<value condition="Control.HasFocus(250) + String.IsEmpty(Window.Property(set.label)) + Integer.IsGreater(Container(250).NumItems,1)">$INFO[Container(250).NumItems,, ]$LOCALIZE[36905]</value>
  		<value condition="Control.HasFocus(2000)">$LOCALIZE[40305]$INFO[Container(2000).ListItem.Episode, | ,. ]$INFO[Container(2000).ListItem.Label]</value>
- 		<value condition="Control.HasFocus(150) + Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$LOCALIZE[40311]$INFO[Container(150).ListItem.Label, ',']$INFO[ListItem.Property(character), | ,]</value>
- 		<value condition="Control.HasFocus(150)">$ADDON[script.extendedinfo 32116]$INFO[Container(150).ListItem.Label, | ]$INFO[Container(150).ListItem.Year, (,)]</value>
- 		<value condition="Control.HasFocus(650) + Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$LOCALIZE[40314]$INFO[Container(650).ListItem.Label, ',']$INFO[ListItem.Property(job), | ,]</value>
- 		<value condition="Control.HasFocus(1150)">$ADDON[script.extendedinfo 32117]$INFO[Container(1150).ListItem.Label, | ]$INFO[ListItem.Property(Type), (,)]</value>
- 		<value condition="Control.HasFocus(350)">$ADDON[script.extendedinfo 32118]$INFO[Container(350).ListItem.Label, | ]</value>
- 		<value condition="Control.HasFocus(550) + Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$LOCALIZE[40312]$INFO[Container(550).ListItem.Label, ',']$INFO[ListItem.Property(job), | ,]</value>
  		<value condition="Control.HasFocus(1250)">$LOCALIZE[40306]</value>
  		<value condition="Control.HasFocus(450)">$LOCALIZE[1]</value>
  		<value condition="Control.HasFocus(1350)">$LOCALIZE[40307]</value>

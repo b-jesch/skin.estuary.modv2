@@ -7,7 +7,7 @@
 		<control type="group">
 			<visible>[VideoPlayer.content(movies) | VideoPlayer.Content(episodes)] + !Skin.HasSetting(ExtendedOSDInfo)</visible>
 			<include>FullScreenDimensions</include>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
 			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
 			<control type="group">
 				<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo)">WindowOpen</animation>

@@ -233,7 +233,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Year, (,)]"/>
 					</include>
 					<control type="group">
-						<top>115</top>
+						<top>125</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10052"/>
 							<param name="ondown" value="10053"/>
@@ -255,7 +255,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Year, (,)]"/>
 					</include>
 					<control type="group">
-						<top>115</top>
+						<top>125</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10053"/>
 							<param name="ondown" value="10054"/>
@@ -278,7 +278,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 					</include>
 					<control type="group">
-						<top>115</top>
+						<top>125</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10054"/>
 							<param name="ondown" value="100"/>

@@ -7945,6 +7945,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+						</animation>
 						<control type="image">
 							<left>9</left>
 							<top>-16</top>
@@ -8136,6 +8140,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+						</animation>
 						<control type="image">
 							<left>9</left>
 							<top>-16</top>
@@ -8316,6 +8324,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
+						</animation>
 						<control type="image">
 							<left>13</left>
 							<top>-12</top>

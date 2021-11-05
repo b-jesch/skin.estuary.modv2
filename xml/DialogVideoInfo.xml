@@ -192,12 +192,6 @@
 						<param name="onclick_3" value="PlayMedia($ESCINFO[ListItem.Trailer],false,1)" />
 						<param name="label" value="$LOCALIZE[20410]" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DBType,movie) | Container.Content(tvshows)] + String.IsEmpty(ListItem.Trailer) + !Control.IsVisible(439)">
-						<param name="id" value="440" />
-						<param name="icon" value="icons/infodialogs/trailer_search.png" />
-						<param name="label" value="$LOCALIZE[31090]" />
-						<param name="onclick_1" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
-					</include>
 					<include content="InfoDialogSmallButton" condition="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">
 						<param name="id" value="441" />
 						<param name="icon" value="icons/infodialogs/cinema.png" />
@@ -505,16 +499,6 @@
 				<param name="alt_focus" value="9004"/>
 				<param name="onfocus" value="SetFocus(9004)"/>
 				<param name="visible" value="!Skin.HasSetting(VideoInfo_TVShowsCastList)"/>
-			</include>
-			<include content="WidgetListPosterInfo" condition="!String.IsEmpty(ListItem.Set)">
-				<param name="content_path" value="videodb://movies/sets/$INFO[ListItem.SetId]/"/>
-				<param name="onclick" value="RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[ListItem.Label],imdb_id=$INFO[ListItem.IMDBNumber])"/>
-				<param name="sortby" value="year"/>
-				<param name="sortorder" value="ascending"/>
-				<param name="widget_target" value="videos"/>
-				<param name="limit" value="100"/>
-				<param name="list_id" value="5500"/>
-				<param name="visible" value="!Skin.HasSetting(VideoInfo_MoviesFromMovieSet)"/>
 			</include>
 			<include content="WidgetListThumbInfo" condition="!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,musicvideo)">
 				<param name="content_path" value="videodb://inprogresstvshows/$INFO[ListItem.DBID]/-2/?tvshowid=$INFO[ListItem.DBID]"/>

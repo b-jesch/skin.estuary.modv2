@@ -1381,13 +1381,17 @@
 				<orientation>vertical</orientation>
 				<texturesliderbackground />
 				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">Conditional</animation>
-				<onleft condition="Container(9000).HasFocus(2)">1000</onleft>
-				<onleft condition="Container(9000).HasFocus(8)">300</onleft>
 				<onleft condition="Container(9000).HasFocus(1)">700</onleft>
+				<onleft condition="Container(9000).HasFocus(2)">1000</onleft>
+				<onleft condition="Container(9000).HasFocus(3)">600</onleft>
+				<onleft condition="Container(9000).HasFocus(5)">900</onleft>
+				<onleft condition="Container(9000).HasFocus(8)">300</onleft>
 				<onleft condition="Container(9000).HasFocus(9)">200</onleft>
-				<onright condition="Container(9000).HasFocus(2)">1000</onright>
-				<onright condition="Container(9000).HasFocus(8)">300</onright>
 				<onright condition="Container(9000).HasFocus(1)">700</onright>
+				<onright condition="Container(9000).HasFocus(2)">1000</onright>
+				<onright condition="Container(9000).HasFocus(3)">600</onright>
+				<onright condition="Container(9000).HasFocus(5)">900</onright>
+				<onright condition="Container(9000).HasFocus(8)">300</onright>
 				<onright condition="Container(9000).HasFocus(9)">200</onright>
 				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>

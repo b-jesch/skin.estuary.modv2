@@ -314,14 +314,6 @@
 						<param name="label" value="$LOCALIZE[19003]" />
 						<param name="visible" value="Window.IsActive(PVRGuideInfo)" />
 					</include>
-					<include content="InfoDialogButton">
-						<param name="id" value="440" />
-						<param name="icon" value="icons/infodialogs/youtube.png" />
-						<param name="label" value="$LOCALIZE[31114]" />
-						<param name="onclick_1" value="Action(close)" />
-						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title])" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo)" />
-					</include>
 				</control>
 				<include content="LeftRightArrows">
 					<param name="list_id" value="9000" />
@@ -372,7 +364,7 @@
 			<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)">Conditional</animation>
 			<bottom>0</bottom>
 			<height>70</height>
 			<control type="group">
