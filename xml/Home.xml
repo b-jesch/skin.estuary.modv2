@@ -753,7 +753,7 @@
 						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
 							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
 							<param name="widget_header" value="$ADDON[script.service.gto 30104]: $INFO[Window(Home).Property(GTO.Provider)]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Label, | ]$INFO[Container(12500).ListItem.Label2, - ,]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Property(StartDate), | ]$INFO[Container(12500).ListItem.Label, - ]$INFO[Container(12500).ListItem.Label2, - ,]"/>
 							<param name="list_id" value="12500"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
     						<param name="label" value="$INFO[ListItem.Label]"/>
@@ -1347,7 +1347,7 @@
 					</control>
 					<include content="ImageWidget">
 						<param name="text_label" value="$LOCALIZE[40174]" />
-						<param name="button_label" value="$LOCALIZE[10050]" />
+						<param name="button_label" value="$LOCALIZE[13006]" />
 						<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
 						<param name="button_id" value="4200"/>
 						<param name="visible_2" value="false"/>
@@ -1355,7 +1355,7 @@
 					</include>
 					<include content="ImageWidget">
 						<param name="text_label" value="$LOCALIZE[40174]" />
-						<param name="button_label" value="$LOCALIZE[10050]" />
+						<param name="button_label" value="$LOCALIZE[13006]" />
 						<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
 						<param name="button_id" value="4200"/>
 						<param name="visible_2" value="false"/>

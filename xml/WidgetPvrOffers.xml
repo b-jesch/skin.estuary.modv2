@@ -65,7 +65,7 @@
                             <top>247</top>
                             <width>245</width>
                             <height>70</height>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$INFO[ListItem.Label] $INFO[ListItem.Property(StartTime),(,)]</label>
                             <font>font12</font>
                             <shadowcolor>text_shadow</shadowcolor>
                             <align>center</align>
@@ -178,7 +178,7 @@
                             <top>247</top>
                             <width>245</width>
                             <height>70</height>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$INFO[ListItem.Label] $INFO[ListItem.Property(StartTime),(,)]</label>
                             <font>font12</font>
                             <shadowcolor>text_shadow</shadowcolor>
                             <align>center</align>
