@@ -1223,6 +1223,15 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetNumeric(widgetnumber)</onclick>
 				</control>
+				<control type="button" id="10016">
+					<label>$LOCALIZE[40387]</label>
+					<label2>$INFO[Skin.String(widget_action)]</label2>
+					<include>DefaultSettingButton</include>
+					<description>default action on movie/tv show widgets</description>
+					<onclick condition="String.IsEmpty(Skin.String(widget_action))">Skin.SetString(widget_action,$LOCALIZE[40388])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389])">Skin.SetString(widget_action,$LOCALIZE[40388])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40388])">Skin.SetString(widget_action,$LOCALIZE[40389])</onclick>
+				</control>
 				<control type="radiobutton" id="10021">
 					<label>$LOCALIZE[40268]</label>
 					<include>DefaultSettingButton</include>

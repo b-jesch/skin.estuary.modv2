@@ -2459,6 +2459,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389]) + [Container(5100).HasFocus | Container(5200).HasFocus | Container(5300).HasFocus | Container(5400).HasFocus]">Info</onclick>
 			</control>
 		</definition>
 	</include>
@@ -5188,6 +5189,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389]) + [Container(6100).HasFocus | Container(61001).HasFocus | Container(6700).HasFocus | Container(67001).HasFocus]">Info</onclick>
 			</control>
 		</definition>
 	</include>
@@ -5285,6 +5287,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389]) + [Container(6100).HasFocus | Container(61001).HasFocus | Container(6700).HasFocus | Container(67001).HasFocus]">Info</onclick>
 			</control>
 		</definition>
 	</include>
@@ -5382,6 +5385,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389]) + [Container(6100).HasFocus | Container(61001).HasFocus | Container(6700).HasFocus | Container(67001).HasFocus]">Info</onclick>
 			</control>
 		</definition>
 	</include>
@@ -5479,6 +5483,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389]) + [Container(6100).HasFocus | Container(61001).HasFocus | Container(6700).HasFocus | Container(67001).HasFocus]">Info</onclick>
 			</control>
 		</definition>
 	</include>
