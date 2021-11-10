@@ -114,13 +114,6 @@
 						<ondown>9000</ondown>
 						<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
 					</control>
-					<control type="image">
-						<left>615</left>
-						<width>631</width>
-						<height>598</height>
-						<aligny>bottom</aligny>
-						<texture border="21">dialogs/dialog-bg.png</texture>
-					</control>
 					<control type="textbox">
 						<left>35</left>
 						<top>23</top>
@@ -132,97 +125,98 @@
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>
-				<control type="grouplist" id="4000">
-					<orientation>vertical</orientation>
-					<left>647</left>
-					<top>315</top>
-					<height>540</height>
-					<itemgap>5</itemgap>
-					<usecontrolcoords>true</usecontrolcoords>
-					<ondown>5000</ondown>
-					<onup>501</onup>
-					<onright>140</onright>
-					<onleft>140</onleft>
-					<pagecontrol>60</pagecontrol>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="147" />
-						<param name="label" value="$LOCALIZE[20339]: "/>
-						<param name="content" value="$VAR[PVRMetadataDirectorVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.director)) | !String.IsEmpty(ListItem.Director)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="148" />
-						<param name="label" value="$LOCALIZE[20417]: " />
-						<param name="content" value="$VAR[PVRMetadataWriterVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.writer)) | !String.IsEmpty(ListItem.Writer)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="149" />
-						<param name="label" value="$LOCALIZE[515]: " />
-						<param name="content" value="$VAR[PVRMetadataGenreVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.genre)) | !String.IsEmpty(ListItem.Genre)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="150" />
-						<param name="label" value="$LOCALIZE[574]: " />
-						<param name="content" value="$VAR[PVRMetadataCountryVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.country)) | !String.IsEmpty(ListItem.Country)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="151" />
-						<param name="label" value="$LOCALIZE[572]: " />
-						<param name="content" value="$VAR[PVRMetadataStudioVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.studio)) | !String.IsEmpty(ListItem.Studio)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="152" />
-						<param name="label" value="$LOCALIZE[20473]: " />
-						<param name="content" value="$VAR[PVRMetadataPremieredVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.premiered)) | !String.IsEmpty(ListItem.Premiered)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="153" />
-						<param name="label" value="$LOCALIZE[20074]: " />
-						<param name="content" value="$VAR[PVRMetadataMpaaVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa)) | !String.IsEmpty(ListItem.Mpaa)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="159" />
-						<param name="label" value="$LOCALIZE[563]: " />
-						<param name="content" value="$VAR[PVRMetadataRatingVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.rating)) | !String.IsEmpty(ListItem.Rating)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="157" />
-						<param name="label" value="$LOCALIZE[126]: " />
-						<param name="content" value="$VAR[PVRMetadataStatusVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.status)) | !String.IsEmpty(ListItem.Status)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-					<include content="InfoDialogPvrMetadata">
-						<param name="control_id" value="155" />
-						<param name="label" value="$LOCALIZE[206]: " />
-						<param name="content" value="$VAR[PVRMetadataCastandroleVar]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole)) | !String.IsEmpty(ListItem.CastAndRole) | !String.IsEmpty(ListItem.Cast)" />
-						<param name="textcolor" value="$VAR[SkinColorVar]" />
-					</include>
-				</control>
-				<control type="scrollbar" id="60">
-					<left>1213</left>
-					<top>309</top>
-					<width>12</width>
-					<height>556</height>
-					<onleft>4000</onleft>
-					<onright>4000</onright>
-					<orientation>vertical</orientation>
+				<control type="group">
+					<left>615</left>
+					<top>288</top>
+					<width>631</width>
+					<height>598</height>
+					<control type="image">
+						<aligny>bottom</aligny>
+						<texture border="21">dialogs/dialog-bg.png</texture>
+					</control>
+					<control type="grouplist" id="4000">
+						<orientation>vertical</orientation>
+						<left>25</left>
+						<top>21</top>
+						<height>556</height>
+						<width>569</width>
+						<itemgap>5</itemgap>
+						<usecontrolcoords>true</usecontrolcoords>
+						<ondown>5000</ondown>
+						<onup>501</onup>
+						<onright>140</onright>
+						<onleft>140</onleft>
+						<pagecontrol>60</pagecontrol>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="147" />
+							<param name="label" value="$LOCALIZE[20339]: "/>
+							<param name="content" value="$VAR[PVRMetadataDirectorVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.director)) | !String.IsEmpty(ListItem.Director)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="148" />
+							<param name="label" value="$LOCALIZE[20417]: " />
+							<param name="content" value="$VAR[PVRMetadataWriterVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.writer)) | !String.IsEmpty(ListItem.Writer)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="149" />
+							<param name="label" value="$LOCALIZE[515]: " />
+							<param name="content" value="$VAR[PVRMetadataGenreVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.genre)) | !String.IsEmpty(ListItem.Genre)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="150" />
+							<param name="label" value="$LOCALIZE[574]: " />
+							<param name="content" value="$VAR[PVRMetadataCountryVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.country)) | !String.IsEmpty(ListItem.Country)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="151" />
+							<param name="label" value="$LOCALIZE[572]: " />
+							<param name="content" value="$VAR[PVRMetadataStudioVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.studio)) | !String.IsEmpty(ListItem.Studio)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="152" />
+							<param name="label" value="$LOCALIZE[838]: " />
+							<param name="content" value="$VAR[PVRMetadataPremieredVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.premiered)) | !String.IsEmpty(ListItem.Premiered)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="153" />
+							<param name="label" value="$LOCALIZE[20074]: " />
+							<param name="content" value="$VAR[PVRMetadataMpaaVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa)) | !String.IsEmpty(ListItem.Mpaa)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="159" />
+							<param name="label" value="$LOCALIZE[563]: " />
+							<param name="content" value="$VAR[PVRMetadataRatingVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.rating)) | !String.IsEmpty(ListItem.Rating)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="157" />
+							<param name="label" value="$LOCALIZE[126]: " />
+							<param name="content" value="$VAR[PVRMetadataStatusVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.status)) | !String.IsEmpty(ListItem.Status)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="155" />
+							<param name="label" value="$LOCALIZE[206]: " />
+							<param name="content" value="$VAR[PVRMetadataCastandroleVar]" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole)) | !String.IsEmpty(ListItem.CastAndRole) | !String.IsEmpty(ListItem.Cast)" />
+						</include>
+					</control>
+					<control type="scrollbar" id="60">
+						<right>21</right>
+						<top>21</top>
+						<width>12</width>
+						<height>556</height>
+						<onleft>4000</onleft>
+						<onright>4000</onright>
+						<orientation>vertical</orientation>
+					</control>
 				</control>
 				<control type="group">
 					<control type="image">

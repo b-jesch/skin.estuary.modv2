@@ -46,6 +46,15 @@
 							<top>10</top>
 							<width>406</width>
 							<height>255</height>
+							<texture fallback="DefaultNoPreview.png" background="true">colors/black.png</texture>
+							<bordersize>20</bordersize>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>406</width>
+							<height>255</height>
 							<texture fallback="DefaultNoPreview.png" background="true">$VAR[ShiftThumbVar]</texture>
 							<bordersize>20</bordersize>
 							<aspectratio>scale</aspectratio>

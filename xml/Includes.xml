@@ -550,6 +550,27 @@
 			<texture colordiffuse="BFFFFFFF">overlays/badge_black.png</texture>
 		</control>
 	</include>
+	<include name="SettingsScrollbar">
+		<param name="height">400</param>
+		<param name="leftright">11100</param>
+		<param name="right">0</param>
+		<definition>
+			<control type="scrollbar" id="60">
+				<right>$PARAM[right]</right>
+				<top>0</top>
+				<height>$PARAM[height]</height>
+				<width>12</width>
+				<onleft>$PARAM[leftright]</onleft>
+				<onright>$PARAM[leftright]</onright>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoList">
 		<param name="item_label">$INFO[ListItem.Year,,[COLOR white]  -  ]$INFO[ListItem.Label,,[/COLOR]]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
@@ -1132,13 +1153,34 @@
 				<control type="group">
 					<width>250</width>
 					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000)</visible>
+					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + !String.IsEqual(ListItem.Premiered,ListItem.Year)</visible>
 					<include content="MediaFlag">
-						<param name="texture" value="flags/airdate_short.png" />
+						<param name="texture" value="flags/premiered.png" />
 						<param name="width" value="250" />
 					</include>
 					<control type="label">
 						<width>192</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>54</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<scroll>true</scroll>
+						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<width>150</width>
+					<top>5</top>
+					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + String.IsEqual(ListItem.Premiered,ListItem.Year)</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/premiered_short.png" />
+						<param name="width" value="150" />
+					</include>
+					<control type="label">
+						<width>92</width>
 						<top>-1</top>
 						<height>50</height>
 						<posx>54</posx>
@@ -2214,7 +2256,7 @@
 					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
-					<visible>![[Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)]</visible>
+					<visible>![[Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)]] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)]</visible>
 					<control type="label">
 						<label>$PARAM[breadcrumbs_label]</label>
 						<include>BreadcrumbsLabel</include>

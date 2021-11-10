@@ -5,12 +5,12 @@
 	<controls>
 		<control type="group">
 			<centerleft>50%</centerleft>
-			<height>1070</height>
+			<height>570</height>
 			<centertop>50%</centertop>
-			<width>1494</width>
+			<width>1344</width>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1494" />
-				<param name="height" value="1070" />
+				<param name="width" value="1344" />
+				<param name="height" value="570" />
 				<param name="header_label" value="$LOCALIZE[31023]" />
 				<param name="header_id" value="1" />
 			</include>
@@ -18,34 +18,31 @@
 				<left>0</left>
 				<top>80</top>
 				<control type="image">
-					<left>600</left>
+					<left>450</left>
 					<top>-10</top>
-					<height>1000</height>
+					<height>490</height>
 					<width>894</width>
 					<texture colordiffuse="border_alpha">colors/black.png</texture>
 				</control>
 				<control type="image">
-					<left>643</left>
-					<height>980</height>
-					<width>808</width>
+					<top>20</top>
+					<left>493</left>
+					<height>450</height>
+					<width>800</width>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>$VAR[SettingsViewsImagesVar]</texture>
 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>4</bordersize>
 				</control>
-				<control type="image">
-            		<left>812</left>
-            		<bottom>20</bottom>
-            		<width>470</width>
-            		<height>140</height>
-            		<texture>dialogs/logo-big.png</texture>
-       		    </control>
 				<control type="grouplist" id="11100">
-					<width>600</width>
-					<height>980</height>
+					<width>450</width>
+					<height>490</height>
 					<itemgap>0</itemgap>
 					<onup>11100</onup>
 					<ondown>11100</ondown>
+					<onright>60</onright>
+					<onleft>60</onleft>
+					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<align>center</align>
 					<control type="button" id="11111">
@@ -154,6 +151,11 @@
 						<visible>Container.Content(artists) | Container.Content(tvshows)</visible>
 					</control>
 				</control>
+				<include content="SettingsScrollbar">
+					<param name="height">485</param>
+					<param name="right">894</param>
+					<param name="leftright">11100</param>
+				</include>
 			</control>
 		</control>
 	</controls>

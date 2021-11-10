@@ -1,6 +1,12 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.3.0+matrix ###
+- .4
+  * Costum settings widgets views revised
+  * Selection for default action on movie and TV show widgets implemented
+  * smaller fixes and enhancements
+
+
 - .3
   * Autoclose OSD Fix
 

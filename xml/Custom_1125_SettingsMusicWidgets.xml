@@ -19,10 +19,13 @@
 				<top>80</top>
 				<control type="grouplist" id="11100">
 					<width>1000</width>
-					<height>560</height>
+					<height>490</height>
 					<itemgap>0</itemgap>
 					<onup>11100</onup>
 					<ondown>11100</ondown>
+					<onright>60</onright>
+					<onleft>60</onleft>
+					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<control type="radiobutton" id="11111">
 						<label>$LOCALIZE[40097] : $LOCALIZE[31148]</label>
@@ -67,6 +70,10 @@
 						<onclick>Skin.ToggleSetting(hide_mostplayedalbums)</onclick>
 					</control>			
 				</control>
+				<include content="SettingsScrollbar">
+					<param name="height">485</param>
+					<param name="leftright">11100</param>
+				</include>
 			</control>
 		</control>
 	</controls>

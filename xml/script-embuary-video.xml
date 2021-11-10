@@ -66,20 +66,20 @@
 				<!-- poster -->
 				<control type="group">
 					<left>103</left>
-					<width>500</width>
-					<height>750</height>
+					<width>480</width>
+					<height>720</height>
 					<control type="image">
 						<left>-20</left>
 						<top>-20</top>
-						<width>540</width>
-						<height>790</height>
+						<width>520</width>
+						<height>760</height>
 						<texture>dialogs/dialog-bg-nobo.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 					<control type="image">
-						<width>500</width>
-						<height>750</height>
+						<width>480</width>
+						<height>720</height>
 						<texture fallback="DefaultVideo.png" background="true">$INFO[Container(10051).ListItem.Art(thumb)]</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
@@ -129,301 +129,232 @@
 				</control>
 				<!-- meta -->
 				<control type="group">
-					<left>650</left>
-					<right>103</right>
-					<!-- plot -->
+					<include>OpenClose_Right</include>
+					<left>620</left>
+					<top>-30</top>
+					<control type="group" id="140">
+					<top>10</top>
 					<control type="image">
-						<top>-11</top>
-						<left>-21</left>
-						<right>339</right>
-						<height>640</height>
+						<height>628</height>
+						<width>631</width>
 						<texture border="21">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="textbox">
-						<top>20</top>
-						<left>15</left>
-						<right>375</right>
-						<height max="580">auto</height>
+						<left>35</left>
+						<top>23</top>
+						<width>562</width>
+						<height>582</height>
 						<align>justify</align>
-						<aligny>top</aligny>
+						<font>fontplot</font>
 						<label fallback="19055">$INFO[Container(10051).ListItem.Tagline,[B],[/B][CR][CR]]$INFO[Container(10051).ListItem.Plot]</label>
-						<font>font13</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>50000000</shadowcolor>
-						<autoscroll delay="6000" time="3000" repeat="10000">true</autoscroll>
+						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!String.IsEqual(Container(10051).ListItem.DBType,season)</visible>
 					</control>
 					<control type="textbox">
-						<top>20</top>
-						<left>15</left>
-						<right>375</right>
-						<height max="580">auto</height>
+						<left>35</left>
+						<top>23</top>
+						<width>562</width>
+						<height>582</height>
 						<align>justify</align>
-						<aligny>top</aligny>
-						<label>$INFO[Container(10051).ListItem.Season,[B]$LOCALIZE[20373] ,[/B][CR][CR]]$INFO[Container(10051).ListItem.Plot]</label>
-						<font>font13</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>50000000</shadowcolor>
-						<autoscroll delay="6000" time="3000" repeat="10000">true</autoscroll>
+						<font>fontplot</font>
+						<label fallback="19055">$INFO[Container(10051).ListItem.Season,[B]$LOCALIZE[20373] ,[/B][CR][CR]]$INFO[Container(10051).ListItem.Plot]</label>
+						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>String.IsEqual(Container(10051).ListItem.DBType,season) + !String.IsEmpty(Container(10051).ListItem.Plot)</visible>
 					</control>
 					<control type="textbox">
-						<top>20</top>
-						<left>15</left>
-						<right>375</right>
-						<height max="580">auto</height>
+						<left>35</left>
+						<top>23</top>
+						<width>562</width>
+						<height>582</height>
 						<align>justify</align>
-						<aligny>top</aligny>
-						<label>$INFO[Container(10051).ListItem.Season,[B]$LOCALIZE[20373] ,[/B][CR][CR]]$LOCALIZE[19055]</label>
-						<font>font13</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>50000000</shadowcolor>
-						<autoscroll delay="6000" time="3000" repeat="10000">true</autoscroll>
+						<font>fontplot</font>
+						<label fallback="19055">$INFO[Container(10051).ListItem.Season,[B]$LOCALIZE[20373] ,[/B][CR][CR]]$LOCALIZE[19055]</label>
+						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>String.IsEqual(Container(10051).ListItem.DBType,season) + String.IsEmpty(Container(10051).ListItem.Plot)</visible>
 					</control>
-					<!-- facts -->
-					<control type="image">
-						<top>-11</top>
-						<left>812</left>
-						<right>-20</right>
-						<height>640</height>
-						<texture border="21">dialogs/dialog-bg.png</texture>
-					</control>
-					<control type="grouplist">
-						<animation type="Conditional" reversible="false" condition="!String.IsEmpty(Container(10051).ListItem.Property(studio.0)) | !String.IsEmpty(Container(10051).ListItem.Property(network.0)) | !String.IsEmpty(Container(10051).ListItem.Property(Budget)) | !String.IsEmpty(Container(10051).ListItem.Property(revenue)) | !String.IsEmpty(Container(10051).ListItem.Property(awards))" loop="true">
-							<effect type="fade" start="0" end="100" time="250" delay="0" />
-							<effect type="fade" start="100" end="0" time="250" delay="7000" />
-							<effect type="fade" start="100" end="0" time="250" delay="12000" />
-						</animation>
-						<top>20</top>
-						<width>310</width>
-						<right>10</right>
-						<height>640</height>
-						<itemgap>5</itemgap>
-						<orientation>vertical</orientation>
-						<aligny>top</aligny>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$LOCALIZE[126]:[/COLOR][CR]$INFO[Container(10051).ListItem.Status]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>[String.IsEmpty(Container(10051).ListItem.Premiered) | String.IsEqual(Container(10051).ListItem.DBType,tvshow)] + !String.IsEmpty(Container(10051).ListItem.Status)</visible>
+					<control type="group">
+						<left>615</left>
+						<width>631</width>
+						<height>628</height>
+						<control type="image">
+							<aligny>bottom</aligny>
+							<texture border="21">dialogs/dialog-bg.png</texture>
 						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$ADDON[script.embuary.info 32011]:[/COLOR][CR]$INFO[Container(10051).ListItem.Premiered]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Premiered)</visible>
+						<control type="grouplist" id="150">
+							<orientation>vertical</orientation>
+							<left>25</left>
+							<top>21</top>
+							<height>569</height>
+							<width>605</width>
+							<itemgap>5</itemgap>
+							<usecontrolcoords>true</usecontrolcoords>
+							<ondown>5000</ondown>
+							<onup>501</onup>
+							<onright>60</onright>
+							<onleft>60</onleft>
+							<pagecontrol>60</pagecontrol>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="151" />
+								<param name="label" value="$LOCALIZE[126]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Status]" />
+								<param name="visible" value="[String.IsEmpty(Container(10051).ListItem.Premiered) | String.IsEqual(Container(10051).ListItem.DBType,tvshow)] + !String.IsEmpty(Container(10051).ListItem.Status)" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="152" />
+								<param name="label" value="$ADDON[script.embuary.info 32011]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Premiered]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Premiered)" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="153" />
+								<param name="label" value="$ADDON[script.embuary.info 32012]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(release)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(release))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="154" />
+								<param name="label" value="$LOCALIZE[20074]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.MPAA]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.MPAA)" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="155" />
+								<param name="label" value="TMDb: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Rating] / 10$INFO[Container(10051).ListItem.Votes, (,)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Rating)" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="156" />
+								<param name="label" value="IMDb: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(rating.imdb)] / 10$INFO[Container(10051).ListItem.Property(votes.imdb), (,)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(rating.imdb))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="157" />
+								<param name="label" value="Rotten Tomatoes: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(rating.rotten)] / 100$INFO[Container(10051).ListItem.Property(votes.rotten), (,)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(rating.rotten))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="158" />
+								<param name="label" value="Metacritic: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(rating.metacritic)] / 100" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(rating.metacritic))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="159" />
+								<param name="label" value="$ADDON[script.embuary.info 32046]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(WatchedEpisodes)] / $INFO[Container(10051).ListItem.Property(TotalEpisodes)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.DBID) + !String.IsEmpty(Container(10051).ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(Container(10051).ListItem.Property(TotalEpisodes))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="160" />
+								<param name="label" value="$ADDON[script.embuary.info 32048]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(NextEpisode_date)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(NextEpisode_date))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="161" />
+								<param name="label" value="$LOCALIZE[572]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(studio.0)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(studio.0))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="162" />
+								<param name="label" value="$LOCALIZE[705]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(network.0)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(network.0))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="163" />
+								<param name="label" value="$ADDON[script.embuary.info 32013]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(Budget),$]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(Budget))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="164" />
+								<param name="label" value="$ADDON[script.embuary.info 32014]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(Revenue),$]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(revenue))" />
+							</include>
+							<include content="InfoDialogPvrMetadata">
+								<param name="control_id" value="165" />
+								<param name="label" value="$ADDON[script.embuary.info 32015]: " />
+								<param name="labelwidth" value="250" />
+								<param name="content" value="$INFO[Container(10051).ListItem.Property(awards)]" />
+								<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.Property(awards))" />
+							</include>
 						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$ADDON[script.embuary.info 32012]:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(release)]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(release))</visible>
+						<control type="scrollbar" id="60">
+							<right>21</right>
+							<top>21</top>
+							<width>12</width>
+							<height>578</height>
+							<onleft>100</onleft>
+							<onright>100</onright>
+							<orientation>vertical</orientation>
 						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$LOCALIZE[20074]:[/COLOR][CR]$INFO[Container(10051).ListItem.MPAA]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.MPAA)</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]TMDb:[/COLOR][CR]$INFO[Container(10051).ListItem.Rating] / 10$INFO[Container(10051).ListItem.Votes, (,)]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Rating)</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]IMDb:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(rating.imdb)] / 10$INFO[Container(10051).ListItem.Property(votes.imdb), (,)]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(rating.imdb))</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]Rotten Tomatoes:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(rating.rotten)] / 100$INFO[Container(10051).ListItem.Property(votes.rotten), (,)]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(rating.rotten))</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]Metacritic:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(rating.metacritic)] / 100</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(rating.metacritic))</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$ADDON[script.embuary.info 32046]:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(WatchedEpisodes)] / $INFO[Container(10051).ListItem.Property(TotalEpisodes)]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.DBID) + !String.IsEmpty(Container(10051).ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(Container(10051).ListItem.Property(TotalEpisodes))</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$ADDON[script.embuary.info 32048]:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(NextEpisode_date)]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(NextEpisode_date))</visible>
-						</control>
-					</control>
-					<control type="grouplist">
-						<visible>!String.IsEmpty(Container(10051).ListItem.Property(studio.0)) | !String.IsEmpty(Container(10051).ListItem.Property(network.0)) | !String.IsEmpty(Container(10051).ListItem.Property(Budget)) | !String.IsEmpty(Container(10051).ListItem.Property(revenue)) | !String.IsEmpty(Container(10051).ListItem.Property(awards))</visible>
-						<animation type="Conditional" reversible="false" condition="true" loop="true">
-							<effect type="fade" start="0" end="100" time="250" delay="7250" />
-							<effect type="fade" start="100" end="0" time="250" delay="12000" />
-						</animation>
-						<top>20</top>
-						<width>310</width>
-						<right>10</right>
-						<height>640</height>
-						<itemgap>5</itemgap>
-						<orientation>vertical</orientation>
-						<aligny>top</aligny>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$LOCALIZE[572]:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(studio.0)]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(studio.0))</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$LOCALIZE[705]:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(network.0)]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(network.0))</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$ADDON[script.embuary.info 32013]:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(Budget),$]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(Budget))</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$ADDON[script.embuary.info 32014]:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(Revenue),$]</label>
-							<height>80</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<scroll>false</scroll>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(revenue))</visible>
-						</control>
-						<control type="label">
-							<label>[COLOR $VAR[SkinColorVar]]$ADDON[script.embuary.info 32015]:[/COLOR][CR]$INFO[Container(10051).ListItem.Property(awards)]</label>
-							<height>auto</height>
-							<font>font12</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>50000000</shadowcolor>
-							<wrapmultiline>true</wrapmultiline>
-							<scroll>false</scroll>
-							<align>left</align>
-							<aligny>top</aligny>
-							<visible>!String.IsEmpty(Container(10051).ListItem.Property(awards))</visible>
-						</control>
-					</control>
-					<!-- buttons -->
-					<control type="grouplist" id="100">
-						<left>-21</left>
-						<top>619</top>
-						<height>130</height>
-						<width>100%</width>
-						<orientation>horizontal</orientation>
-						<defaultcontrol always="true">0</defaultcontrol>
-						<onright>noop</onright>
-						<onleft>noop</onleft>
-						<ondown>10052</ondown>			-->
-						<include content="InfoDialogButton">
-							<param name="id" value="10001"/>
-							<param name="icon" value="icons/infodialogs/disable.png"/>
-							<param name="label" value="$LOCALIZE[15067]"/>
-							<param name="onclick_1" value="Dialog.Close(all)"/>
-						</include>
-						<include content="InfoDialogButton">
-							<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.DBID) + !String.IsEmpty(Container(10051).ListItem.Property(file)) + !String.IsEqual(Container(10051).ListItem.Property(call),tv)"/>
-							<param name="id" value="10002"/>
-							<param name="icon" value="icons/infodialogs/play.png"/>
-							<param name="label" value="$LOCALIZE[208]"/>
-							<param name="onclick_1" value="PlayMedia($INFO[Container(10051).ListItem.Property(file)])"/>
-							<param name="onclick_2" value="Dialog.Close(all)"/>
-						</include>
-						<include content="InfoDialogButton">
-							<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.DBID) + String.IsEqual(Container(10051).ListItem.Property(call),tv)"/>
-							<param name="id" value="10003"/>
-							<param name="icon" value="icons/playlist.png"/>
-							<param name="label" value="$LOCALIZE[20153]"/>
-							<param name="onclick_1" value="Dialog.Close(all)"/>
-							<param name="condition_2" value="!Window.IsVisible(MyVideoNav.xml)"/>
-							<param name="onclick_2" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/,return)"/>
-							<param name="condition_3" value="Window.IsVisible(MyVideoNav.xml)"/>
-							<param name="onclick_3" value="Container.Update(videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/)"/>
-						</include>
-						<include content="InfoDialogButton">
-							<param name="id" value="10004"/>
-							<param name="icon" value="icons/infodialogs/plot.png"/>
-							<param name="label" value="$LOCALIZE[207]"/>
-							<param name="onclick_1" value="RunScript(script.embuary.info,call=textviewer,header='$ESCINFO[Container(10051).ListItem.Label]',message='$ESCINFO[Container(10051).ListItem.Plot]')"/>
-						</include>
 					</control>
 				</control>
+				<!-- buttons -->
+				<control type="grouplist" id="100">
+					<top>627</top>
+					<height>130</height>
+					<width>100%</width>
+					<orientation>horizontal</orientation>
+					<defaultcontrol always="true">0</defaultcontrol>
+					<onright>noop</onright>
+					<onleft>noop</onleft>
+					<ondown>10052</ondown>
+					<onup>60</onup>
+					<include content="InfoDialogButton">
+						<param name="id" value="10001"/>
+						<param name="icon" value="icons/infodialogs/disable.png"/>
+						<param name="label" value="$LOCALIZE[15067]"/>
+						<param name="onclick_1" value="Dialog.Close(all)"/>
+					</include>
+					<include content="InfoDialogButton">
+						<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.DBID) + !String.IsEmpty(Container(10051).ListItem.Property(file)) + !String.IsEqual(Container(10051).ListItem.Property(call),tv)"/>
+						<param name="id" value="10002"/>
+						<param name="icon" value="icons/infodialogs/play.png"/>
+						<param name="label" value="$LOCALIZE[208]"/>
+						<param name="onclick_1" value="PlayMedia($INFO[Container(10051).ListItem.Property(file)])"/>
+						<param name="onclick_2" value="Dialog.Close(all)"/>
+					</include>
+					<include content="InfoDialogButton">
+						<param name="visible" value="!String.IsEmpty(Container(10051).ListItem.DBID) + String.IsEqual(Container(10051).ListItem.Property(call),tv)"/>
+						<param name="id" value="10003"/>
+						<param name="icon" value="icons/playlist.png"/>
+						<param name="label" value="$LOCALIZE[20153]"/>
+						<param name="onclick_1" value="Dialog.Close(all)"/>
+						<param name="condition_2" value="!Window.IsVisible(MyVideoNav.xml)"/>
+						<param name="onclick_2" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/,return)"/>
+						<param name="condition_3" value="Window.IsVisible(MyVideoNav.xml)"/>
+						<param name="onclick_3" value="Container.Update(videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/)"/>
+					</include>
+					<include content="InfoDialogButton">
+						<param name="id" value="10004"/>
+						<param name="icon" value="icons/infodialogs/plot.png"/>
+						<param name="label" value="$LOCALIZE[207]"/>
+						<param name="onclick_1" value="RunScript(script.embuary.info,call=textviewer,header='$ESCINFO[Container(10051).ListItem.Label]',message='$ESCINFO[Container(10051).ListItem.Plot]')"/>
+					</include>
+				</control>
 			</control>
+		</control>
 
 			<!-- cast -->
 			<control type="group">
