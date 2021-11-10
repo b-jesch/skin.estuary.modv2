@@ -551,13 +551,14 @@
 		</control>
 	</include>
 	<include name="SettingsScrollbar">
+		<param name="top">0</param>
 		<param name="height">400</param>
 		<param name="leftright">11100</param>
 		<param name="right">0</param>
 		<definition>
 			<control type="scrollbar" id="60">
 				<right>$PARAM[right]</right>
-				<top>0</top>
+				<top>$PARAM[top]</top>
 				<height>$PARAM[height]</height>
 				<width>12</width>
 				<onleft>$PARAM[leftright]</onleft>
