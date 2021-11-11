@@ -99,6 +99,7 @@
 						<onclick>RunAddon(service.coreelec.settings)</onclick>
 						<icon>icons/settings/coreelec.png</icon>
 						<visible>System.HasAddon(service.coreelec.settings)</visible>
+					</item>
 				</content>
 			</control>
 		</control>
