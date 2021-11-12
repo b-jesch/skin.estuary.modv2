@@ -1,6 +1,11 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.3.0+matrix ###
+- .5
+  * optional display of channel logo/number in epg grid implemented
+  * Changes in picture widget reversed
+
+
 - .4
   * Costum settings widgets views revised
   * Selection for default action on movie and TV show widgets implemented

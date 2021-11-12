@@ -155,15 +155,28 @@
 							<control type="image">
 								<left>7</left>
 								<top>3</top>
-								<width>64</width>
+								<width>74</width>
 								<height>64</height>
 								<texture fallback="DefaultTVGuide.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
+							</control>
+							<control type="label">
+								<left>7</left>
+								<top>3</top>
+								<width>74</width>
+								<height>64</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font32_title</font>
+								<label>$INFO[ListItem.ChannelNumberLabel]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label" id="1">
-								<left>68</left>
+								<left>78</left>
 								<top>0</top>
-								<width>326</width>
+								<width>316</width>
 								<height>70</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.ChannelName]</label>
@@ -182,15 +195,28 @@
 							<control type="image">
 								<left>7</left>
 								<top>3</top>
-								<width>64</width>
+								<width>74</width>
 								<height>64</height>
 								<texture fallback="DefaultTVGuide.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
+							</control>
+							<control type="label">
+								<left>7</left>
+								<top>3</top>
+								<width>74</width>
+								<height>64</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font32_title</font>
+								<label>$INFO[ListItem.ChannelNumberLabel]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label" id="1">
-								<left>68</left>
+								<left>78</left>
 								<top>0</top>
-								<width>326</width>
+								<width>316</width>
 								<height>70</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.ChannelName]</label>

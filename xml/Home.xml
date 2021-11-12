@@ -1337,7 +1337,7 @@
 					</include>
 					<control type="grouplist" id="4001">
 						<include>WidgetGroupListCommon</include>
-						<include content="WidgetListCategoriesBig">
+						<include content="WidgetListCategories">
 							<param name="content_path" value="sources://pictures/"/>
 							<param name="widget_header" value="$LOCALIZE[40175]"/>
 							<param name="widget_header_focus" value="$INFO[Container(4100).ListItem.Label, | ]"/>
@@ -1345,7 +1345,7 @@
 							<param name="list_id" value="4100"/>
 							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
 						</include>
-						<include content="WidgetListCategoriesSmall">
+						<include content="WidgetListCategories">
 							<param name="content_path" value="sources://pictures/"/>
 							<param name="widget_header" value="$LOCALIZE[40175]"/>
 							<param name="widget_header_focus" value="$INFO[Container(41001).ListItem.Label, | ]"/>
