@@ -5,12 +5,12 @@
 	<controls>
 		<control type="group">
 			<centerleft>50%</centerleft>
-			<height>500</height>
+			<height>570</height>
 			<centertop>50%</centertop>
 			<width>1000</width>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1000" />
-				<param name="height" value="500" />
+				<param name="height" value="570" />
 				<param name="header_label" value="$LOCALIZE[40103]" />
 				<param name="header_id" value="1" />
 			</include>
@@ -23,6 +23,9 @@
 					<itemgap>0</itemgap>
 					<onup>11100</onup>
 					<ondown>11100</ondown>
+					<onright>60</onright>
+					<onleft>60</onleft>
+					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<control type="radiobutton" id="11111">
 						<label>$LOCALIZE[40097] : $LOCALIZE[19158]</label>
@@ -61,6 +64,10 @@
 						<onclick>Skin.ToggleSetting(hide_allradios)</onclick>
 					</control>			
 				</control>
+				<include content="SettingsScrollbar">
+					<param name="height">485</param>
+					<param name="leftright">11100</param>
+				</include>
 			</control>
 		</control>
 	</controls>

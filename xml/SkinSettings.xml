@@ -95,7 +95,8 @@
 					<include>DefaultSettingButton</include>
 					<description>autoclose OSD menu</description>
 					<onclick condition="String.IsEmpty(Skin.String(autoclose_osd))">Skin.SetString(autoclose_osd,$LOCALIZE[40378])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40383])">Skin.SetString(autoclose_osd,$LOCALIZE[40378])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40384])">Skin.SetString(autoclose_osd,$LOCALIZE[40378])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40383])">Skin.SetString(autoclose_osd,$LOCALIZE[40384])</onclick>
 					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40382])">Skin.SetString(autoclose_osd,$LOCALIZE[40383])</onclick>
 					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40381])">Skin.SetString(autoclose_osd,$LOCALIZE[40382])</onclick>
 					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40380])">Skin.SetString(autoclose_osd,$LOCALIZE[40381])</onclick>
@@ -581,6 +582,15 @@
 					<onclick>Skin.ToggleSetting(DisableThemes)</onclick>
 					<selected>!Skin.HasSetting(DisableThemes)</selected>
 				</control>
+				<!-- Maybe later (WIP)
+				<control type="button" id="502">
+                    <label>$LOCALIZE[40387]</label>
+                    <label2>$VAR[Label_SkinSetting_PictureSource]</label2>
+                    <include>DefaultSettingButton</include>
+                     <onclick condition="!Skin.String(picture_source)">Skin.SetPath(picture_source)</onclick>
+                    <onclick condition="Skin.String(picture_source)">Skin.Reset(picture_source)</onclick>
+                </control>
+                -->
 				<control type="radiobutton" id="503">
 					<label>$LOCALIZE[31158]</label>
 					<include>DefaultSettingButton</include>
@@ -1222,6 +1232,15 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetNumeric(widgetnumber)</onclick>
 				</control>
+				<control type="button" id="10016">
+					<label>$LOCALIZE[40388]</label>
+					<label2>$INFO[Skin.String(widget_action)]</label2>
+					<include>DefaultSettingButton</include>
+					<description>default action on movie/tv show widgets</description>
+					<onclick condition="String.IsEmpty(Skin.String(widget_action))">Skin.SetString(widget_action,$LOCALIZE[40389])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390])">Skin.SetString(widget_action,$LOCALIZE[40389])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389])">Skin.SetString(widget_action,$LOCALIZE[40390])</onclick>
+				</control>
 				<control type="radiobutton" id="10021">
 					<label>$LOCALIZE[40268]</label>
 					<include>DefaultSettingButton</include>
@@ -1381,13 +1400,17 @@
 				<orientation>vertical</orientation>
 				<texturesliderbackground />
 				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">Conditional</animation>
-				<onleft condition="Container(9000).HasFocus(2)">1000</onleft>
-				<onleft condition="Container(9000).HasFocus(8)">300</onleft>
 				<onleft condition="Container(9000).HasFocus(1)">700</onleft>
+				<onleft condition="Container(9000).HasFocus(2)">1000</onleft>
+				<onleft condition="Container(9000).HasFocus(3)">600</onleft>
+				<onleft condition="Container(9000).HasFocus(5)">900</onleft>
+				<onleft condition="Container(9000).HasFocus(8)">300</onleft>
 				<onleft condition="Container(9000).HasFocus(9)">200</onleft>
-				<onright condition="Container(9000).HasFocus(2)">1000</onright>
-				<onright condition="Container(9000).HasFocus(8)">300</onright>
 				<onright condition="Container(9000).HasFocus(1)">700</onright>
+				<onright condition="Container(9000).HasFocus(2)">1000</onright>
+				<onright condition="Container(9000).HasFocus(3)">600</onright>
+				<onright condition="Container(9000).HasFocus(5)">900</onright>
+				<onright condition="Container(9000).HasFocus(8)">300</onright>
 				<onright condition="Container(9000).HasFocus(9)">200</onright>
 				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>

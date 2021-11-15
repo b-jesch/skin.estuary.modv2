@@ -124,28 +124,6 @@
 						<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
 					</control>
 				</control>
-				<control type="grouplist" id="5000">
-					<left>-354</left>
-					<top>435</top>
-					<right>-30</right>
-					<height>400</height>
-					<onleft>5000</onleft>
-					<onright>5000</onright>
-					<onup>5003</onup>
-					<ondown>60</ondown>
-					<align>left</align>
-					<itemgap>-16</itemgap>
-					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic">200</scrolltime>
-					<include content="InfoDialogSmallButton" condition="System.hasAddon(script.extendedinfo)">
-						<param name="id" value="100" />
-						<param name="icon" value="icons/infodialogs/youtube.png" />
-						<param name="label" value="$LOCALIZE[31114]" />
-						<param name="onclick_1" value="Action(close)" />
-						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title])" />
-						<param name="oninfo" value="Action(close)" />
-					</include>
-				</control>
 			</control>
 			<control type="label">
 				<right>50</right>

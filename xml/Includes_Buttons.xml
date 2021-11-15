@@ -22,8 +22,8 @@
 		<radioposy>0</radioposy>
 	</include>
 	<include name="InfoDialogPvrMetadata">
-		<param name="textcolor">white</param>
-		<param name="labelwidth">195</param>
+		<param name="textcolor">$VAR[SkinColorVar]</param>
+		<param name="labelwidth">190</param>
 		<param name="labelalign">right</param>
 		<param name="font">font12</param>
 		<definition>
@@ -39,7 +39,7 @@
 				</control>
 				<control type="textbox">
 					<left>$PARAM[labelwidth]</left>
-					<width>365</width>
+					<right>36</right>
 					<top>-4</top>
 					<font>$PARAM[font]</font>
 					<height>auto</height>

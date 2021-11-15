@@ -42,11 +42,11 @@
 	<constant name="dialogbuttons_itemgap">-20</constant>
 	<constant name="list_y_offset">0</constant>
 	<constant name="list_item_height">80</constant>
-	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml) | Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)</expression>
+	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-image.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | ControlGroup(8000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131) | Window.IsActive(MyPlaylist.xml)</expression>
 	<expression name="ChristmasTheme">System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
 	<expression name="HalloweenTheme">System.Date(10-30,11-01) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
-	<expression name="EasterTheme">System.Date(04-14,04-18) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
+	<expression name="EasterTheme">System.Date(04-14,04-19) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
 	<expression name="ValentineTheme">System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
@@ -550,6 +550,28 @@
 			<texture colordiffuse="BFFFFFFF">overlays/badge_black.png</texture>
 		</control>
 	</include>
+	<include name="SettingsScrollbar">
+		<param name="top">0</param>
+		<param name="height">400</param>
+		<param name="leftright">11100</param>
+		<param name="right">0</param>
+		<definition>
+			<control type="scrollbar" id="60">
+				<right>$PARAM[right]</right>
+				<top>$PARAM[top]</top>
+				<height>$PARAM[height]</height>
+				<width>12</width>
+				<onleft>$PARAM[leftright]</onleft>
+				<onright>$PARAM[leftright]</onright>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoList">
 		<param name="item_label">$INFO[ListItem.Year,,[COLOR white]  -  ]$INFO[ListItem.Label,,[/COLOR]]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
@@ -954,27 +976,6 @@
 						<param name="height" value="60" />
 					</include>
 				</control>
-				<control type="group">
-					<width>404</width>
-					<top>5</top>
-					<visible>Control.HasFocus(6600) | Control.HasFocus(66001)</visible>
-					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.Property(airdatetime),AM) | String.Contains($PARAM[infolabel_prefix]ListItem.Property(airdatetime),PM)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/airdate_long.png" />
-						<param name="width" value="410" />
-					</include>
-					<control type="label">
-						<width>353</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(airdatetime)]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/hdtv.png" />
 					<param name="width" value="71" />
@@ -1150,6 +1151,48 @@
 					<param name="top" value="5" />
 					<param name="visible" value="!Skin.HasSetting(show_mpaaflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa)" />
 				</include>
+				<control type="group">
+					<width>250</width>
+					<top>5</top>
+					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + !String.IsEqual(ListItem.Premiered,ListItem.Year)</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/premiered.png" />
+						<param name="width" value="250" />
+					</include>
+					<control type="label">
+						<width>192</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>54</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<scroll>true</scroll>
+						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<width>150</width>
+					<top>5</top>
+					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + String.IsEqual(ListItem.Premiered,ListItem.Year)</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/premiered_short.png" />
+						<param name="width" value="150" />
+					</include>
+					<control type="label">
+						<width>92</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>54</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<scroll>true</scroll>
+						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
 				<control type="group">
 					<width>120</width>
 					<top>5</top>
@@ -2214,7 +2257,7 @@
 					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
-					<visible>![[Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + !Window.IsVisible(script-script.extendedinfo-YoutubeList.xml)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)]</visible>
+					<visible>![[Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)]] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)]</visible>
 					<control type="label">
 						<label>$PARAM[breadcrumbs_label]</label>
 						<include>BreadcrumbsLabel</include>
@@ -2535,13 +2578,6 @@
 						<animation effect="slide" end="-10000,-10000" time="0" condition="Control.IsVisible(502) + !$EXP[infodialog_active]">Conditional</animation>
 						<visible>!Window.IsVisible(Home.xml)</visible>
 						<visible>![Control.IsVisible(55) + [Container.Content(years) | Container.Content(countries) | Container.Content(directors) | Container.Content(studios) | Container.Content(tags) | Container.Content(actors) | Container.Content(playlists) | Container.Content(files)]] + ![Control.IsVisible(52) + [Container.Content(years) | Container.Content(countries) | Container.Content(directors) | Container.Content(studios) | Container.Content(tags) | Container.Content(actors) | Container.Content(playlists) | Container.Content(files)]]</visible>
-					</control>
-					<control type="image">
-						<include>FullScreenDimensions</include>
-						<aspectratio>scale</aspectratio>
-						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="37FFFFFF">$INFO[Window.Property(Fanart)]</texture>
-						<visible>Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
 					</control>
 					<control type="multiimage" id="32112">
 						<include>FullScreenDimensions</include>
