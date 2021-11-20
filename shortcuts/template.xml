@@ -257,21 +257,6 @@
 						<param name="list_id" value="22800$SKINSHORTCUTS[id]"/>
 					</include>
 				</control>
-				<include content="ImageWidget">
-					<param name="text_label" value="$LOCALIZE[40194]" />
-					<param name="button_id" value="45000"/>
-					<param name="visible_1" value="false"/>
-					<param name="visible_2" value="false"/>
-					<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-				</include>
-				<include content="ImageWidget">
-					<param name="text_label" value="$LOCALIZE[40194]" />
-					<param name="button_id" value="45000"/>
-					<param name="visible_1" value="false"/>
-					<param name="visible_2" value="false"/>
-					<param name="right" value="555"/>
-					<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-				</include>
 				<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 					<param name="scrollbar_id" value="22010"/>
 				</include>
@@ -326,24 +311,6 @@
 						<param name="list_id" value="23100$SKINSHORTCUTS[id]"/>
 					</include>
 				</control>
-				<include content="ImageWidget">
-					<param name="text_label" value="$LOCALIZE[40194]" />
-					<param name="button_id" value="45000"/>
-					<param name="visible_1" value="false"/>
-					<param name="visible_2" value="false"/>
-					<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-				</include>
-				<include content="ImageWidget">
-					<param name="text_label" value="$LOCALIZE[40194]" />
-					<param name="button_id" value="45000"/>
-					<param name="visible_1" value="false"/>
-					<param name="visible_2" value="false"/>
-					<param name="right" value="555"/>
-					<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-				</include>
-				<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
-					<param name="scrollbar_id" value="23010"/>
-				</include>
 			</control>
 		</controls>	
 		<variables>

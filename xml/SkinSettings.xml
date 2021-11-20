@@ -18,42 +18,7 @@
 		</control>
 		<control type="group" id="10000">
 			<left>470</left>
-			<include>OpenClose_Right</include>		
-			<control type="grouplist" id="110">
-				<top>168</top>
-				<left>0</left>
-				<right>0</right>
-				<bottom>142</bottom>
-				<onleft>9000</onleft>
-				<onright>60</onright>
-				<onup>110</onup>
-				<ondown>110</ondown>
-				<pagecontrol>60</pagecontrol>
-				<visible>Container(9000).HasFocus(11)</visible>
-				<control type="radiobutton" id="111">
-					<label>$LOCALIZE[40188]</label>
-					<include>DefaultSettingButton</include>
-					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick>Skin.SetString(temp)</onclick>
-					<onclick>Skin.SetString(passcode,$VAR[temp_passcode])</onclick>
-					<onclick>Notification($LOCALIZE[40187],$LOCALIZE[40189],3000,)</onclick>
-					<onclick>Skin.Reset(temp)</onclick>
-					<selected>!String.IsEmpty(Skin.String(passcode))</selected>
-				</control>
-				<control type="button" id="112">
-					<label>$LOCALIZE[40190]</label>
-					<label2>$VAR[password_time] $LOCALIZE[40184]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick condition="String.IsEmpty(Skin.String(password_time)) | String.IsEqual(Skin.String(password_time),5)">Skin.SetString(password_time,10)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(password_time),10)">Skin.SetString(password_time,30)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(password_time),30)">Skin.SetString(password_time,1)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(password_time),1)">Skin.SetString(password_time,5)</onclick>
-					<onclick>AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],Silent)</onclick>
-				</control>
-			</control>
+			<include>OpenClose_Right</include>
 			<control type="grouplist" id="100">
 				<top>168</top>
 				<left>0</left>
@@ -1381,9 +1346,11 @@
 					<item id="8">
 						<label>$LOCALIZE[40073]</label>
 					</item>
+					<!--
 					<item id="11">
 						<label>$LOCALIZE[40187]</label>
 					</item>
+					-->
 				</content>
 			</control>
 		</control>
