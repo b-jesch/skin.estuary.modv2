@@ -2,10 +2,6 @@
 <window>
 	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
-	<onload condition="Skin.HasSetting(Skin_EnableAnimatedPosters)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
-	<onload condition="!Skin.HasSetting(Skin_EnableAnimatedPosters)">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
-	<onload condition="Window.Previous(startup)">Skin.Reset(mypassword)</onload>
-	<onload condition="!Window.Previous(startup)">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onload>
 	<onload>AlarmClock(SkinSplashStarted,SetProperty(SplashStarted,1,home),00:01,silent,false)</onload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>

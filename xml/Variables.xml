@@ -158,6 +158,10 @@
 		<value condition="Integer.IsLessOrEqual(Container(50).NumItems,1)">$INFO[Container(50).NumItems,, $LOCALIZE[36918]]</value>
 		<value>$INFO[Container(50).NumItems,, $LOCALIZE[36919]]</value>
 	</variable>
+	<variable name="CollectionNumberVar">
+		<value condition="String.IsEqual(Container(50054).NumItems),1)">$INFO[Container(50054).NumItems,, $LOCALIZE[36900]]</value>
+		<value>$INFO[Container(50054).NumItems,, $LOCALIZE[36901]]</value>
+	</variable>
 	<variable name="PVRGenresVar">
 		<value condition="Skin.HasSetting(standard_PVRGenres)">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</value>
 		<value>$INFO[ListItem.Genre,special://skin/extras/epg-genres/,.png]</value>
