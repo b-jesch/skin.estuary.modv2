@@ -2429,23 +2429,22 @@
 						<width>auto</width>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$INFO[System.Date(dd. MMM yyyy)] - </label>
-						<visible>Skin.HasSetting(show_date) + Skin.HasSetting(show_weatherinfo)</visible>
+						<label>$INFO[System.Date(dd. MMM yyyy)]</label>
+						<visible>Skin.HasSetting(show_date)</visible>
 					</control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
-						<align>right</align>
 						<aligny>center</aligny>
-						<label>$INFO[System.Date(dd. MMM yyyy)]</label>
-						<visible>Skin.HasSetting(show_date) + !Skin.HasSetting(show_weatherinfo)</visible>
+						<label>$INFO[Window(Weather).Property(Current.Temperature),- ,]$INFO[System.TemperatureUnits]</label>
+						<visible>Skin.HasSetting(show_weatherinfo) + Skin.HasSetting(show_date) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
+						<visible>Skin.HasSetting(show_weatherinfo) + !Skin.HasSetting(show_date) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
 						<top>1</top>

@@ -155,8 +155,12 @@
 			<value>$LOCALIZE[40148]</value>
 	</variable>
 	<variable name="AlbumsCount">
-		<value condition="Integer.IsLessOrEqual(Window(Home).Property(Music.AlbumsCount),1)">$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36918]]</value>
-		<value>$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[36919]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(50).NumItems,1)">$INFO[Container(50).NumItems,, $LOCALIZE[36918]]</value>
+		<value>$INFO[Container(50).NumItems,, $LOCALIZE[36919]]</value>
+	</variable>
+	<variable name="CollectionNumberVar">
+		<value condition="String.IsEqual(Container(50054).NumItems),1)">$INFO[Container(50054).NumItems,, $LOCALIZE[36900]]</value>
+		<value>$INFO[Container(50054).NumItems,, $LOCALIZE[36901]]</value>
 	</variable>
 	<variable name="PVRGenresVar">
 		<value condition="Skin.HasSetting(standard_PVRGenres)">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</value>
@@ -235,22 +239,6 @@
 		<value condition="!String.IsEmpty(ListItem.Art(back))">$LOCALIZE[40169]</value>
 		<value condition="!String.IsEmpty(Player.Art(album.back))">$LOCALIZE[40169]</value>
 		<value>$LOCALIZE[40061]</value>
-	</variable>
-	<variable name="passcode">
-		<value condition="[String.IsEmpty(Container(211).ListItem.Property(ParentalControl)) | String.IsEqual(Container(211).ListItem.Property(ParentalControl),no)]">$LOCALIZE[106]</value>
-		<value>$LOCALIZE[107]</value>
-	</variable>
-	<variable name="temp_passcode">
-		<value condition="!String.IsEmpty(Skin.String(temp))">$INFO[Skin.String(temp)]</value>
-		<value>$INFO[Skin.String(passcode)]</value>
-	</variable>
-	<variable name="password_time">
-		<value condition="!String.IsEmpty(Skin.String(password_time))">$INFO[Skin.String(password_time)]</value>
-		<value>5</value>
-	</variable>
-	<variable name="password_notification">
-		<value condition="String.IsEqual(Skin.String(mypassword),Skin.String(passcode))">$LOCALIZE[40183] $VAR[password_time] $LOCALIZE[40184]</value>
-		<value>$LOCALIZE[40185]</value>
 	</variable>
 	<variable name="MainLabelMoviesSetsInfoVar">
 		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Title)">$INFO[Container(60).ListItem.Title]$INFO[Container(60).ListItem.Year, (,)]</value>
@@ -658,11 +646,9 @@
 	</variable>
 	<!-- Music Visualization -->
 	<variable name="PlayerFanartVar">
-		<value condition="Skin.HasSetting(enable_artistslideshow) + [Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
-		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
 		<value condition="Skin.HasSetting(enable_artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
-		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">special://skin/extras/home-images/radio.jpg</value>
-		<value condition="!Skin.HasSetting(enable_artistslideshow) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(enable_artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+		<value condition="String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmpty(Player.Art(fanart))">special://skin/extras/home-images/radio.jpg</value>
 		<value condition="!Skin.HasSetting(enable_artistslideshow) + String.IsEmpty(Player.Art(fanart)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
 		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 	</variable>

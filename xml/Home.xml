@@ -2,10 +2,6 @@
 <window>
 	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
-	<onload condition="Skin.HasSetting(Skin_EnableAnimatedPosters)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
-	<onload condition="!Skin.HasSetting(Skin_EnableAnimatedPosters)">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
-	<onload condition="Window.Previous(startup)">Skin.Reset(mypassword)</onload>
-	<onload condition="!Window.Previous(startup)">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</onload>
 	<onload>AlarmClock(SkinSplashStarted,SetProperty(SplashStarted,1,home),00:01,silent,false)</onload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
@@ -178,44 +174,12 @@
 						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_sets)">
 							<param name="content_path" value="videodb://movies/sets/"/>
 							<param name="widget_header" value="$LOCALIZE[31075]"/>
-							<param name="widget_header_focus" value="$INFO[Container(5600).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(5600).ListItem.Title, | ,]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="sortby" value="random"/>
 							<param name="list_id" value="5600"/>
 						</include>
 					</control>
-					<include content="ImageWidget" condition="!Library.HasContent(movies)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[10048]" />
-						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="5500"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget" condition="!Library.HasContent(movies)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[10048]" />
-						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="5500"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="5010"/>
 					</include>
@@ -324,38 +288,6 @@
 							<param name="fallback_image" value="DefaultStudios.png"/>
 						</include>
 					</control>
-					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[10048]" />
-						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="6400"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[10048]" />
-						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="6400"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="6010"/>
 					</include>
@@ -408,7 +340,7 @@
 						<include content="WidgetListSquare" condition="Library.HasContent(music) + !Skin.HasSetting(hide_randomartists)">
 							<param name="content_path" value="special://skin/playlists/random_artists.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31013]"/>
-							<param name="widget_header_focus" value="$INFO[Container(7400).ListItem.Artist, | , ]($VAR[AlbumsCount])"/>
+							<param name="widget_header_focus" value="$INFO[Container(7400).ListItem.Artist, | , ]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7400"/>
 							<param name="fallback_icon" value="DefaultMusicArtists.png"/>
@@ -432,38 +364,6 @@
 							<param name="sortorder" value="descending"/>
 						</include>
 					</control>
-					<include content="ImageWidget" condition="!Library.HasContent(music)">
-						<param name="text_label" value="$LOCALIZE[31110]" />
-						<param name="button_label" value="$LOCALIZE[10049]" />
-						<param name="button_onclick" value="ActivateWindow(Music,Files,return)"/>
-						<param name="button_id" value="7600"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget" condition="!Library.HasContent(music)">
-						<param name="text_label" value="$LOCALIZE[31110]" />
-						<param name="button_label" value="$LOCALIZE[10049]" />
-						<param name="button_onclick" value="ActivateWindow(Music,Files,return)"/>
-						<param name="button_id" value="7600"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="7010"/>
 					</include>
@@ -550,38 +450,6 @@
 							<param name="list_id" value="8500"/>
 						</include>
 					</control>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[31119]" />
-						<param name="button_label" value="$LOCALIZE[31118]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
-						<param name="button_id" value="8600"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Integer.IsGreater(Container(8001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[31119]" />
-						<param name="button_label" value="$LOCALIZE[31118]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
-						<param name="button_id" value="8600"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="!Integer.IsGreater(Container(8001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="8010"/>
 					</include>
@@ -623,38 +491,6 @@
 							<param name="icon" value="DefaultPlaylist.png"/>
 						</include>
 					</control>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[31105]" />
-						<param name="button_label" value="$LOCALIZE[10048]" />
-						<param name="button_onclick" value="ActivateWindow(videos,root)"/>
-						<param name="button_id" value="11300"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Integer.IsGreater(Container(11001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[31105]" />
-						<param name="button_label" value="$LOCALIZE[10048]" />
-						<param name="button_onclick" value="ActivateWindow(videos,root)"/>
-						<param name="button_id" value="11300"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="!Integer.IsGreater(Container(11001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="11010"/>
 					</include>
@@ -760,38 +596,6 @@
 							<param name="onclick" value="RunPlugin(plugin://script.service.gto/?action=info&amp;item=$INFO[ListItem.Property(item)])"/>
 						</include>
 					</control>
-					<include content="ImageWidget" condition="!System.HasPVRAddon">
-						<param name="text_label" value="$LOCALIZE[31143]" />
-						<param name="button_label" value="$LOCALIZE[31144]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/xbmc.pvrclient,return)"/>
-						<param name="button_id" value="12400"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget" condition="!System.HasPVRAddon">
-						<param name="text_label" value="$LOCALIZE[31143]" />
-						<param name="button_label" value="$LOCALIZE[31144]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/xbmc.pvrclient,return)"/>
-						<param name="button_id" value="12400"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="12010"/>
 					</include>
@@ -876,38 +680,6 @@
 							<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.Season, - ,x]$INFO[ListItem.Episode,,.]$INFO[ListItem.EpisodeName, ]"/>
 						</include>
 					</control>
-					<include content="ImageWidget" condition="!System.HasPVRAddon">
-						<param name="text_label" value="$LOCALIZE[31143]" />
-						<param name="button_label" value="$LOCALIZE[31144]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
-						<param name="button_id" value="13400"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget" condition="!System.HasPVRAddon">
-						<param name="text_label" value="$LOCALIZE[31143]" />
-						<param name="button_label" value="$LOCALIZE[31144]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
-						<param name="button_id" value="13400"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="13010"/>
 					</include>
@@ -923,7 +695,6 @@
 						<param name="label">$LOCALIZE[10134]</param>
 						<param name="label_focus">$INFO[Container(14100).ListItem.Label, | ]</param>
 						<param name="list_id" value="14100"/>
-						<param name="visible" value="![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
 					</include>
 					<control type="panel" id="14100">
 						<left>-10</left>
@@ -940,7 +711,6 @@
 						<orientation>vertical</orientation>
 						<pagecontrol>14010</pagecontrol>
 						<visible>Integer.IsGreater(Container(14100).NumItems,0) | Container(14100).IsUpdating</visible>
-						<visible>![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]</visible>
 						<itemlayout width="340" height="410" condition="Skin.HasSetting(HideWidgetLabels)">
 							<control type="group">
 								<left>70</left>
@@ -989,40 +759,6 @@
 						</focusedlayout>
 						<content>favourites://</content>
 					</control>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[31025]" />
-						<param name="button_label" value="$LOCALIZE[31116]" />
-						<param name="button_onclick" value=""/>
-						<param name="button_id" value="5500"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="[!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating] + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[31025]" />
-						<param name="button_label" value="$LOCALIZE[31116]" />
-						<param name="button_onclick" value=""/>
-						<param name="button_id" value="5500"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="[!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating] + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="14010"/>
 					</include>
@@ -1121,38 +857,6 @@
 							<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
 						</include>
 					</control>
-					<include content="ImageWidget" condition="String.IsEmpty(Weather.plugin)">
-						<param name="text_label" value="$LOCALIZE[31120]" />
-						<param name="button_label" value="$LOCALIZE[31121]" />
-						<param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
-						<param name="button_id" value="15300"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget" condition="String.IsEmpty(Weather.plugin)">
-						<param name="text_label" value="$LOCALIZE[31120]" />
-						<param name="button_label" value="$LOCALIZE[31121]" />
-						<param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
-						<param name="button_id" value="15300"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="15010"/>
 					</include>
@@ -1292,38 +996,6 @@
 							<param name="fallback_image" value="DefaultStudios.png"/>
 						</include>
 					</control>
-					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[10048]" />
-						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="16800"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[10048]" />
-						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="16800"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="16010"/>
 					</include>
@@ -1343,92 +1015,6 @@
 							<param name="widget_header_focus" value="$INFO[Container(4100).ListItem.Label, | ]"/>
 							<param name="widget_target" value="pictures"/>
 							<param name="list_id" value="4100"/>
-							<param name="visible" value="!Skin.HasSetting(UseSmallerCategories)" />
-						</include>
-						<include content="WidgetListCategories">
-							<param name="content_path" value="sources://pictures/"/>
-							<param name="widget_header" value="$LOCALIZE[40175]"/>
-							<param name="widget_header_focus" value="$INFO[Container(41001).ListItem.Label, | ]"/>
-							<param name="widget_target" value="pictures"/>
-							<param name="list_id" value="41001"/>
-							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
-						</include>
-						<!--
-						<include content="WidgetListSquare">
-							<param name="content_path" value="$INFO[Skin.String(picture_source)]" />
-							<param name="fallback_icon" value="DefaultPicture.png" />
-							<param name="widget_header" value="letzte Bilder" />
-							<param name="widget_header_focus" value="$INFO[Container(4200).ListItem.Label, | ]" />
-							<param name="widget_target" value="pictures" />
-							<param name="sortby" value="dateadded" />
-							<param name="sortorder" value="descending" />
-							<param name="list_id" value="4200" />
-							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]" />
-						</include>
-						-->
-						<include content="ImageWidget">
-							<param name="text_label" value="$LOCALIZE[40174]" />
-							<param name="button_label" value="$LOCALIZE[10050]" />
-							<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
-							<param name="button_id" value="4200"/>
-							<param name="visible_2" value="false"/>
-							<param name="visible" value="!Integer.IsGreater(Container(4001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-						</include>
-						<include content="ImageWidget">
-							<param name="text_label" value="$LOCALIZE[40174]" />
-							<param name="button_label" value="$LOCALIZE[10050]" />
-							<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
-							<param name="button_id" value="4200"/>
-							<param name="visible_2" value="false"/>
-							<param name="right" value="555"/>
-							<param name="visible" value="!Integer.IsGreater(Container(4001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-						</include>
-						<include content="ImageWidget">
-							<param name="text_label" value="$LOCALIZE[40194]" />
-							<param name="button_id" value="45000"/>
-							<param name="visible_1" value="false"/>
-							<param name="visible_2" value="false"/>
-							<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-						</include>
-						<include content="ImageWidget">
-							<param name="text_label" value="$LOCALIZE[40194]" />
-							<param name="button_id" value="45000"/>
-							<param name="visible_1" value="false"/>
-							<param name="visible_2" value="false"/>
-							<param name="right" value="555"/>
-							<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-						</include>
-						<include content="ImageWidget">
-							<param name="text_label" value="$LOCALIZE[40174]" />
-							<param name="button_label" value="$LOCALIZE[13006]" />
-							<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
-							<param name="button_id" value="4200"/>
-							<param name="visible_2" value="false"/>
-							<param name="visible" value="!Integer.IsGreater(Container(4001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-						</include>
-						<include content="ImageWidget">
-							<param name="text_label" value="$LOCALIZE[40174]" />
-							<param name="button_label" value="$LOCALIZE[13006]" />
-							<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
-							<param name="button_id" value="4200"/>
-							<param name="visible_2" value="false"/>
-							<param name="right" value="555"/>
-							<param name="visible" value="!Integer.IsGreater(Container(4001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-						</include>
-						<include content="ImageWidget">
-							<param name="text_label" value="$LOCALIZE[40194]" />
-							<param name="button_id" value="45000"/>
-							<param name="visible_1" value="false"/>
-							<param name="visible_2" value="false"/>
-							<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-						</include>
-						<include content="ImageWidget">
-							<param name="text_label" value="$LOCALIZE[40194]" />
-							<param name="button_id" value="45000"/>
-							<param name="visible_1" value="false"/>
-							<param name="visible_2" value="false"/>
-							<param name="right" value="555"/>
-							<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
 						</include>
 						<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 							<param name="scrollbar_id" value="4010"/>
@@ -1462,40 +1048,6 @@
  							<param name="fallback_icon" value="DefaultAddonGame.png"/>
  						</include>
 					</control>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40173]" />
-						<param name="button_label" value="$LOCALIZE[31116]" />
-						<param name="button2_label" value="$LOCALIZE[31118]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/category.gameaddons,return)"/>
-						<param name="button_id" value="17300"/>
-						<param name="button2_onclick" value="ActivateWindow(addonbrowser)"/>
-						<param name="visible" value="!Integer.IsGreater(Container(17001).NumItems,0) + !Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40173]" />
-						<param name="button_label" value="$LOCALIZE[31116]" />
-						<param name="button2_label" value="$LOCALIZE[31118]" />
-						<param name="button_onclick" value="ActivateWindow(games)"/>
-						<param name="button_id" value="17300"/>
-						<param name="button2_onclick" value="ActivateWindow(addonbrowser)"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="!Integer.IsGreater(Container(17001).NumItems,0) + Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="17010"/>
 					</include>
@@ -1506,46 +1058,6 @@
 					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),DiscWidget)</visible>
 					<include content="Visible_Right_Delayed_Home">
 						<param name="id" value="DiscWidget"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$INFO[System.DVDLabel]" />
-						<param name="button_label" value="$LOCALIZE[341]" />
-						<param name="button_onclick" value="PlayDisc"/>
-						<param name="button_id" value="21100"/>
-						<param name="button2_label" value="$LOCALIZE[13391]"/>
-						<param name="button2_onclick" value="EjectTray()"/>
-						<param name="button3_label" value="$LOCALIZE[600]"/>
-						<param name="button3_onclick" value="RipCD"/>
-						<param name="visible_3" value="System.HasMediaAudioCD"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$INFO[System.DVDLabel]" />
-						<param name="button_label" value="$LOCALIZE[341]" />
-						<param name="button_onclick" value="PlayDisc"/>
-						<param name="button_id" value="21100"/>
-						<param name="button2_label" value="$LOCALIZE[13391]"/>
-						<param name="button2_onclick" value="EjectTray()"/>
-						<param name="button3_label" value="$LOCALIZE[600]"/>
-						<param name="button3_onclick" value="RipCD"/>
-						<param name="visible_3" value="System.HasMediaAudioCD"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + ![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]"/>
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="visible" value="!Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
-					</include>
-					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40194]" />
-						<param name="button_id" value="45000"/>
-						<param name="visible_1" value="false"/>
-						<param name="visible_2" value="false"/>
-						<param name="right" value="555"/>
-						<param name="visible" value="Skin.HasSetting(HideMainMenuWithWidgets) + [String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]" />
 					</include>
 				</control>
 				<control type="group" id="18000">
@@ -2106,14 +1618,6 @@
 								<visible>!ControlGroup(700).HasFocus</visible>
 							</control>
 							<control type="image">
-								<left>71</left>
-								<top>69</top>
-								<width>22</width>
-								<height>22</height>
-								<texture colordiffuse="$VAR[SkinColorVar]">icons/parental-control/lock.png</texture>
-								<visible>[String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]</visible>
-							</control>
-							<control type="image">
 								<left>0</left>
 								<top>0</top>
 								<width>95</width>
@@ -2141,14 +1645,6 @@
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
 							<include>Animation_FocusBounce_Home</include>
 							<visible>ControlGroup(700).HasFocus</visible>
-						</control>
-						<control type="image">
-							<left>71</left>
-							<top>69</top>
-							<width>22</width>
-							<height>22</height>
-							<texture>icons/parental-control/lock.png</texture>
-							<visible>[String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]</visible>
 						</control>
 						<control type="label">
 							<left>104</left>

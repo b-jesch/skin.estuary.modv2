@@ -1062,7 +1062,6 @@
 		<onup>20000</onup>
 		<ondown>20001</ondown>
 		<usecontrolcoords>true</usecontrolcoords>
-		<visible>![String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]</visible>
 	</include>
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
@@ -2459,7 +2458,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
-				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Container(5100).HasFocus | Container(5200).HasFocus | Container(5300).HasFocus | Container(5400).HasFocus]">Info</onclick>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Control.HasFocus(5100) | Control.HasFocus(5200) | Control.HasFocus(5300) | Control.HasFocus(5400)]">Info</onclick>
 			</control>
 		</definition>
 	</include>
@@ -5189,7 +5188,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Container(6100).HasFocus | Container(61001).HasFocus | Container(6700).HasFocus | Container(67001).HasFocus]">Info</onclick>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Control.HasFocus(6100) | Control.HasFocus(61001) | Control.HasFocus(6700) | Control.HasFocus(67001)]">Info</onclick>
 			</control>
 		</definition>
 	</include>
@@ -5287,7 +5286,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Container(6100).HasFocus | Container(61001).HasFocus | Container(6700).HasFocus | Container(67001).HasFocus]">Info</onclick>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Control.HasFocus(6100) | Control.HasFocus(61001) | Control.HasFocus(6700) | Control.HasFocus(67001)]">Info</onclick>
 			</control>
 		</definition>
 	</include>
@@ -5385,7 +5384,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Container(6100).HasFocus | Container(61001).HasFocus | Container(6700).HasFocus | Container(67001).HasFocus]">Info</onclick>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Control.HasFocus(6100) | Control.HasFocus(61001) | Control.HasFocus(6700) | Control.HasFocus(67001)]">Info</onclick>
 			</control>
 		</definition>
 	</include>
@@ -5483,7 +5482,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Container(6100).HasFocus | Container(61001).HasFocus | Container(6700).HasFocus | Container(67001).HasFocus]">Info</onclick>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390]) + [Control.HasFocus(6100) | Control.HasFocus(61001) | Control.HasFocus(6700) | Control.HasFocus(67001)]">Info</onclick>
 			</control>
 		</definition>
 	</include>

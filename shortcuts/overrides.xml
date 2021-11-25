@@ -285,18 +285,6 @@
 	<property property="ParentalControl" label="$LOCALIZE[107]" icon="icons/parental-control/lock_yes.png">Yes</property>
 	<alwaysReset>True</alwaysReset>
 	
-	<override action="globaloverride">
-		<condition>String.IsEqual(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))</condition>
-		<action>Skin.SetString(dialog_action,::ACTION::)</action>
-		<action>ActivateWindow(1133)</action> 
-		<action>AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</action>	
-	</override>
-	<override action="globaloverride">
-		<condition>[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.IsEqual(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))</condition>
-		<action>AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],silent)</action>
-		<action>::ACTION::</action>
-	</override>
-    
     <!-- Groupings -->
     <groupings>
         <node label="32030">

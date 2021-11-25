@@ -1,6 +1,12 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.3.0+matrix ###
+- .6
+  * Parental controls removed (use profiles and lock mechanism instead)
+  * Fix conditional behaviours on movie/tvshow widgets
+  * minor adjustments in various dialogs and views
+
+
 - .5
   * optional display of channel logo/number in epg grid implemented
   * Changes in picture widget reversed

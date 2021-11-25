@@ -201,12 +201,6 @@
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel)</visible>
                 </control>
-                <control type="button" id="993">	
-					<label>$LOCALIZE[40186]</label>
-					<label2>$VAR[passcode]</label2>
-					<include>DefaultSettingButton</include>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                </control>
 				<control type="button" id="312">
 					<include>DefaultSettingButton</include>
 					<label></label>

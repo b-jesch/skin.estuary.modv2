@@ -112,13 +112,19 @@
 	<include name="PVRInfoPanel">
 		<control type="group">
 			<visible>!ListItem.IsFolder</visible>
-			<control type="image">
+			<control type="group">
 				<left>630</left>
 				<top>137</top>
 				<width>200</width>
 				<height>195</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[PVRArtworksVar]</texture>
+				<control type="image">
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[PVRArtworksVar]</texture>
+				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="57" />
+					<param name="left" value="60" />
+				</include>
 			</control>
 			<control type="group">
 				<top>120</top>
