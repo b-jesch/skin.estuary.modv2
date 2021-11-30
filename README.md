@@ -1,6 +1,11 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.3.0+matrix ###
+- .7
+  * Introducing SACD (DSD) audio flag
+  * minor improvements
+
+
 - .6
   * Parental controls removed (use profiles and lock mechanism instead)
   * Fix conditional behaviours on movie/tvshow widgets

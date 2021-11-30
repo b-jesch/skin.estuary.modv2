@@ -2436,7 +2436,7 @@
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>$INFO[Window(Weather).Property(Current.Temperature),- ,]$INFO[System.TemperatureUnits]</label>
+						<label>$INFO[Window(Weather).Property(Current.Temperature),| ,]$INFO[System.TemperatureUnits]</label>
 						<visible>Skin.HasSetting(show_weatherinfo) + Skin.HasSetting(show_date) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="label">
@@ -4013,7 +4013,7 @@
 				<control type="group">
 					<width>155</width>
 					<height>40</height>
-					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + Window.IsVisible(MusicVisualisation.xml)</visible>
+					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + Window.IsVisible(MusicVisualisation.xml) + !Integer.IsGreater(MusicPlayer.BitRate,10000)</visible>
 					<control type="image">
 						<top>5</top>
 						<width>155</width>
@@ -4023,6 +4023,26 @@
 					</control>
 					<control type="label">
 						<width>155</width>
+						<height>40</height>
+						<align>center</align>
+						<top>2</top>
+						<label>$INFO[MusicPlayer.BitRate] kbps</label>
+						<font>Font-Flag-Small</font>
+					</control>
+				</control>
+				<control type="group">
+					<width>194</width>
+					<height>40</height>
+					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + Window.IsVisible(MusicVisualisation.xml) + Integer.IsGreater(MusicPlayer.BitRate,9999)</visible>
+					<control type="image">
+						<top>5</top>
+						<width>194</width>
+						<height>40</height>
+						<texture>flags/cadre2.png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>194</width>
 						<height>40</height>
 						<align>center</align>
 						<top>2</top>

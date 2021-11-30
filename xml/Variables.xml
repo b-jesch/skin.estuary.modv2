@@ -159,7 +159,7 @@
 		<value>$INFO[Container(50).NumItems,, $LOCALIZE[36919]]</value>
 	</variable>
 	<variable name="CollectionNumberVar">
-		<value condition="String.IsEqual(Container(50054).NumItems),1)">$INFO[Container(50054).NumItems,, $LOCALIZE[36900]]</value>
+		<value condition="String.IsEqual(Container(50054).NumItems,1)">$INFO[Container(50054).NumItems,, $LOCALIZE[36900]]</value>
 		<value>$INFO[Container(50054).NumItems,, $LOCALIZE[36901]]</value>
 	</variable>
 	<variable name="PVRGenresVar">
@@ -289,33 +289,6 @@
 	</variable>
 	<variable name="PlayerDurationVar">
 		<value>$INFO[Player.Duration(h)]h$INFO[Player.Duration(mm)]</value>
-	</variable>
-	<variable name="SettingsForcedViewsMoviesVar">
-		<value>$LOCALIZE[40148]</value>
-	</variable>
-	<variable name="SettingsForcedViewsSetsVar">
-		<value>$LOCALIZE[40148]</value>
-	</variable>
-	<variable name="SettingsForcedViewsSetMoviesVar">
-		<value>$LOCALIZE[40148]</value>
-	</variable>
-	<variable name="SettingsForcedViewsTVShowsVar">
-		<value>$LOCALIZE[40148]</value>
-	</variable>
-	<variable name="SettingsForcedViewsSeasonsVar">
-		<value>$LOCALIZE[40148]</value>
-	</variable>
-	<variable name="SettingsForcedViewsEpisodesVar">
-		<value>$LOCALIZE[40148]</value>
-	</variable>
-	<variable name="SettingsForcedViewsArtistsVar">
-		<value>$LOCALIZE[40148]</value>
-	</variable>
-	<variable>
-		<value>$LOCALIZE[40148]</value>
-	</variable>
-	<variable name="SettingsForcedViewsMusicVideosVar">
-		<value>$LOCALIZE[40148]</value>
 	</variable>
 	<variable name="SettingsViewsImagesVar">
 		<value condition="Container.Content(movies) + Control.HasFocus(11111)">special://skin/extras/views/movies/50.png</value>
@@ -619,7 +592,8 @@
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.landscape))">$INFO[ListItem.Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(fanart)) + !String.StartsWith(ListItem.FolderPath,plugin://)">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Listitem.Art(thumb))">$INFO[ListItem.Art(Thumb)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Art(icon)]</value>
 	</variable>
 	<variable name="WidgetThumbViewVar">
