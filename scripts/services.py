@@ -38,7 +38,7 @@ def clear_properties(prefix):
 
     for label in labels: win.clearProperty('%s.ListItem.%s' % (prefix, label))
 
-    win.clearProperty('PVR.Artwork.present')
+    win.clearProperty('%s.present' % prefix)
     xbmc.log('Properties of %s cleared' % prefix)
 
 
@@ -110,12 +110,13 @@ def viewswitcher(content, view_mode):
 
 def pvrartwork(current_item):
 
+    prefix = 'PVR.Artwork'
+    current_content = None
+
     if xbmc.getCondVisibility('Container(%s).Scrolling') % xbmcgui.getCurrentWindowId() or \
-            win.getProperty('PVR.Artwork.Lookup') == 'busy':
+            win.getProperty('%s.Lookup' % prefix) == 'busy':
         xbmc.sleep(500)
         return current_item
-
-    current_content = None
 
     # check if PVR related window is active
     for pvr_content in content_types:
@@ -125,7 +126,7 @@ def pvrartwork(current_item):
 
     # if no pvr related window there, clear properties and return
     if not (current_content or xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)')):
-        if win.getProperty('PVR.Artwork.present') == 'true': clear_properties('PVR.Artwork')
+        if win.getProperty('PVR.Artwork.present') == 'true': clear_properties(prefix)
         return current_item
 
     if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)') and not current_content:
@@ -142,15 +143,16 @@ def pvrartwork(current_item):
 
     if not (title or channel): return current_item
 
-    if current_item != '%s-%s' % (title, channel) or win.getProperty('PVR.Artwork.Lookup') == 'changed':
-        win.setProperty("PVR.Artwork.Lookup", "busy")
+    if (current_item != '%s-%s' % (title, channel) and win.getProperty('%s.Lookup' % prefix) != 'busy') or win.getProperty('%s.Lookup' % prefix) == 'changed':
+        win.setProperty("%s.Lookup" % prefix, "busy")
         details = pmd.get_pvr_artwork(title, channel, genre, year, manual_select=False, ignore_cache=False)
-        clear_properties('PVR.Artwork')
+        # win.setProperty("%s.Lookup" % prefix, "changed")
+        clear_properties(prefix)
         if details:
-            if details.get('art', False): set_properties('PVR.Artwork', details['art'])
-            set_labels('PVR.Artwork', details)
+            if details.get('art', False): set_properties(prefix, details['art'])
+            set_labels(prefix, details)
 
-        win.clearProperty("PVR.Artwork.Lookup")
+        win.clearProperty("%s.Lookup" % prefix)
 
     return '%s-%s' % (title, channel)
 
