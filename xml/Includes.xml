@@ -1512,12 +1512,12 @@
 					<param name="visible" value="Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)" />
 				</include>
 				<control type="group">
-					<width>194</width>
+					<width>205</width>
 					<height>50</height>
 					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
 					<control type="image">
 						<top>5</top>
-						<width>194</width>
+						<width>205</width>
 						<height>50</height>
 						<texture>flags/cadre2.png</texture>
 						<aspectratio>keep</aspectratio>
@@ -1525,7 +1525,7 @@
 					<control type="label">
 						<top>4</top>
 						<left>3</left>
-						<width>188</width>
+						<width>199</width>
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1534,12 +1534,12 @@
 					</control>
 				</control>
 				<control type="group">
-					<width>194</width>
+					<width>205</width>
 					<height>50</height>
 					<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
 					<control type="image">
 						<top>5</top>
-						<width>194</width>
+						<width>205</width>
 						<height>50</height>
 						<texture>flags/cadre2.png</texture>
 						<aspectratio>keep</aspectratio>
@@ -1547,7 +1547,7 @@
 					<control type="label">
 						<top>4</top>
 						<left>3</left>
-						<width>188</width>
+						<width>199</width>
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -4031,18 +4031,18 @@
 					</control>
 				</control>
 				<control type="group">
-					<width>194</width>
+					<width>200</width>
 					<height>40</height>
 					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + Window.IsVisible(MusicVisualisation.xml) + Integer.IsGreater(MusicPlayer.BitRate,9999)</visible>
 					<control type="image">
 						<top>5</top>
-						<width>194</width>
+						<width>200</width>
 						<height>40</height>
-						<texture>flags/cadre2.png</texture>
+						<texture>flags/cadre3.png</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<width>194</width>
+						<width>200</width>
 						<height>40</height>
 						<align>center</align>
 						<top>2</top>
