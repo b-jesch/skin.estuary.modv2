@@ -1,6 +1,10 @@
 ## Skin Estuary MOD V2 for KODI 19 Matrix KN Edition ##
 
 ### 3.3.0+matrix ###
+- .8
+  * Including PVR archive & reminder icons (thanks berkhornet)
+
+
 - .7
   * Introducing SACD (DSD) audio flag
   * minor improvements
