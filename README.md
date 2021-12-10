@@ -15,6 +15,7 @@ and install it. After that you can install the skin directly from the repository
 - .9
   * Missing mono font added (thanks dshoreman)
   * NL language updated (thanks freaktabnl)
+  * services script revised, PVR Artwork Module (script.module.pvr.artwork) version > 1.0.17 needed
 
 
 - .8
