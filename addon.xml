@@ -7,7 +7,7 @@
         <import addon="script.image.resource.select" version="3.0.2"/>
 		<import addon="script.embuary.helper" version="2.0.7"/>
 		<import addon="script.embuary.info" version="2.0.7"/>
-		<import addon="script.module.pvr.artwork" version="1.0.3"/>
+		<import addon="script.module.pvr.artwork" version="1.0.18"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
@@ -50,6 +50,9 @@
 			</assets>
 <news>
 [B]3.3.0+matrix[/B]
+- .9  Missing mono font added (thanks dshoreman)
+      NL language updated (thanks freaktabnl)
+      services script revised, PVR Artwork Module (script.module.pvr.artwork) version > 1.0.17 needed
 - .8  Including PVR archive &amp; reminder icons (thanks berkhornet)
 - .7  Introducing SACD (DSD) flag
       minor improvements

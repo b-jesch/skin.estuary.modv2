@@ -377,7 +377,7 @@
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="153" />
-					<param name="label" value="$LOCALIZE[31017] : [COLOR white]$VAR[PlayerInfoMPAALabelVar][/COLOR]" />
+					<param name="label" value="$LOCALIZE[31017] : [COLOR white]$INFO[ListItem.mpaa][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.Mpaa)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />

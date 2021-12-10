@@ -15,9 +15,6 @@ forced_views = list(['movies', 'sets', 'setmovies', 'tvshows', 'seasons', 'episo
 content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'channels', 'DialogPVRInfo.xml': 'info',
                       'MyPVRRecordings.xml': 'recordings', 'MyPVRTimers.xml': 'timers', 'MyPVRSearch.xml': 'search'})
 
-labels = list(['director', 'writer', 'genre', 'country', 'studio', 'studiologo', 'premiered', 'mpaa', 'status',
-               'rating', 'castandrole', 'description'])
-
 # Todo: Rating
 
 win = xbmcgui.Window(10000)
@@ -28,50 +25,6 @@ def get_view_id(content):
     for id in content_ids:
         if xbmc.getCondVisibility('Skin.HasSetting(%s.%s)' % (content, id)): return id
     return False
-
-
-def clear_properties(prefix):
-
-    for item in pmd.dict_arttypes:
-        win.clearProperty('%s.%s' % (prefix, item))
-        for i in range(1, 6): win.clearProperty('%s.fanart%s' % (prefix, i))
-
-    for label in labels: win.clearProperty('%s.ListItem.%s' % (prefix, label))
-
-    win.clearProperty('%s.present' % prefix)
-    xbmc.log('Properties of %s cleared' % prefix)
-
-
-def set_properties(prefix, artwork):
-
-    # set artwork properties
-    for item in artwork:
-        if item in pmd.dict_arttypes: win.setProperty('%s.%s' % (prefix, item), artwork[item])
-
-    # Lookup for fanarts/posters list
-    fanarts = artwork.get('fanarts', False)
-    posters = artwork.get('posters', False)
-    cf = 0
-    if fanarts:
-        for cf, fanart in enumerate(fanarts):
-            if cf > 5: break
-            win.setProperty('%s.fanart%s' % (prefix, str(cf + 1)), fanart)
-        cf += 1
-    if posters and cf < 2:
-        for count, fanart in enumerate(posters):
-            if count > 5: break
-            win.setProperty('%s.fanart%s' % (prefix, str(cf + count + 1)), fanart)
-
-    win.setProperty('%s.present' % prefix, 'true')
-
-
-def set_labels(prefix, data):
-    # set PVR related list items
-    for label in labels:
-        if data.get(label, False) and data[label]:
-            lvalue = str(data[label])
-            if isinstance(data[label], list): lvalue = ', '.join(data[label])
-            win.setProperty('%s.ListItem.%s' % (prefix, label), lvalue)
 
 
 def viewswitcher(content, view_mode):
@@ -125,11 +78,11 @@ def pvrartwork(current_item):
             break
 
     # if no pvr related window there, clear properties and return
-    if not (current_content or xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)')):
-        if win.getProperty('PVR.Artwork.present') == 'true': clear_properties(prefix)
+    if not (current_content is None or xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)')):
+        if win.getProperty('PVR.Artwork.present') == 'true': pmd.clear_properties(prefix)
         return current_item
 
-    if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)') and not current_content:
+    if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)') and current_content is None:
         title = xbmc.getInfoLabel('VideoPlayer.Title')
         channel = xbmc.getInfoLabel('VideoPlayer.ChannelName')
         genre = xbmc.getInfoLabel('VideoPlayer.Genre')
@@ -147,10 +100,10 @@ def pvrartwork(current_item):
         win.setProperty("%s.Lookup" % prefix, "busy")
         details = pmd.get_pvr_artwork(title, channel, genre, year, manual_select=False, ignore_cache=False)
         # win.setProperty("%s.Lookup" % prefix, "changed")
-        clear_properties(prefix)
+        pmd.clear_properties(prefix)
         if details:
-            if details.get('art', False): set_properties(prefix, details['art'])
-            set_labels(prefix, details)
+            if details.get('art', False): pmd.set_properties(prefix, details['art'])
+            pmd.set_labels(prefix, details)
 
         win.clearProperty("%s.Lookup" % prefix)
 
