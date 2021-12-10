@@ -11,6 +11,9 @@ and install it. After that you can install the skin directly from the repository
 
 
 ### 3.3.0+matrix ###
+- .10
+  * Bug in PVR artwork service fixed
+
 
 - .9
   * Missing mono font added (thanks dshoreman)

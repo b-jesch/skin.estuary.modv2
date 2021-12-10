@@ -9,13 +9,15 @@ try:
 except ImportError:
     xbmc.log('PVR artwork module not available', xbmc.LOGWARNING)
 
+# view switcher
+
 content_ids = list(['50', '55', '53', '54', '505', '500', '502', '503', '504', '506', '507', '508', '509'])
 forced_views = list(['movies', 'sets', 'setmovies', 'tvshows', 'seasons', 'episodes', 'albums', 'artists', 'musicvideos'])
 
+# PVT artwork
+
 content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'channels', 'DialogPVRInfo.xml': 'info',
                       'MyPVRRecordings.xml': 'recordings', 'MyPVRTimers.xml': 'timers', 'MyPVRSearch.xml': 'search'})
-
-# Todo: Rating
 
 win = xbmcgui.Window(10000)
 
@@ -69,37 +71,34 @@ def pvrartwork(current_item):
     if xbmc.getCondVisibility('Container(%s).Scrolling') % xbmcgui.getCurrentWindowId() or \
             win.getProperty('%s.Lookup' % prefix) == 'busy':
         xbmc.sleep(500)
+        xbmc.log('Artwork module is busy or scrolling is active, return')
         return current_item
 
-    # check if PVR related window is active
-    for pvr_content in content_types:
-        if xbmc.getCondVisibility('Window.IsActive(%s)' % pvr_content):
-            current_content = content_types.get(pvr_content, None)
-            break
+    # check if Live TV or PVR related window is active
+    if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)'): current_content = 'livetv'
+    else:
+        for pvr_content in content_types:
+            if xbmc.getCondVisibility('Window.IsActive(%s)' % pvr_content):
+                current_content = content_types.get(pvr_content, None)
+                break
 
     # if no pvr related window there, clear properties and return
-    if not (current_content is None or xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)')):
-        if win.getProperty('PVR.Artwork.present') == 'true': pmd.clear_properties(prefix)
+    if current_content is None:
+        if win.getProperty('%s.present' % prefix) == 'true': pmd.clear_properties(prefix)
         return current_item
 
-    if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)') and current_content is None:
-        title = xbmc.getInfoLabel('VideoPlayer.Title')
-        channel = xbmc.getInfoLabel('VideoPlayer.ChannelName')
-        genre = xbmc.getInfoLabel('VideoPlayer.Genre')
-        year = xbmc.getInfoLabel('VideoPlayer.Year')
-    else:
-        title = xbmc.getInfoLabel("ListItem.Title")
-        if not title: title = xbmc.getInfoLabel("ListItem.Label")
-        channel = xbmc.getInfoLabel('ListItem.ChannelName')
-        genre = xbmc.getInfoLabel('ListItem.Genre')
-        year = xbmc.getInfoLabel('ListItem.Year')
+    label = 'livetv' if current_content == 'livetv' else 'ListItem'
+    title = xbmc.getInfoLabel('%s.Title' % label)
+    if not title: title = xbmc.getInfoLabel('%s.Label' % label)
+    channel = xbmc.getInfoLabel('%s.ChannelName' % label)
+    genre = xbmc.getInfoLabel('%s.Genre' % label)
+    year = xbmc.getInfoLabel('%s.Year'% label)
 
     if not (title or channel): return current_item
 
-    if (current_item != '%s-%s' % (title, channel) and win.getProperty('%s.Lookup' % prefix) != 'busy') or win.getProperty('%s.Lookup' % prefix) == 'changed':
+    if current_item != '%s-%s' % (title, channel) and win.getProperty('%s.Lookup' % prefix) != 'busy':
         win.setProperty("%s.Lookup" % prefix, "busy")
         details = pmd.get_pvr_artwork(title, channel, genre, year, manual_select=False, ignore_cache=False)
-        # win.setProperty("%s.Lookup" % prefix, "changed")
         pmd.clear_properties(prefix)
         if details:
             if details.get('art', False): pmd.set_properties(prefix, details['art'])
