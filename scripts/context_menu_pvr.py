@@ -27,5 +27,5 @@ if __name__ == '__main__':
     pmd = PVRMetaData()
     pmd.pvr_artwork_options(title, channel, genre, year)
 
-    win.setProperty("PVR.Artwork.Lookup", "changed")
+    win.clearProperty("PVR.Artwork.Lookup")
     del win
