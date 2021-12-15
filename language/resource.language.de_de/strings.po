@@ -1556,7 +1556,7 @@ msgstr "Sortierreihenfolge des Widgets"
 #: /xml/DialogMusicInfo.xml
 msgctxt "#40169"
 msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
-msgstr "Drücken Sie [B]OK[/B], um die Beschreibung zu lesen oder [B]links[/B] zum Anzeigen der Albumrückseite"
+msgstr "Drücke [B]OK[/B], um die Beschreibung zu lesen oder Taste [B]links[/B] zum Anzeigen der Albumrückseite"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40170"
@@ -1623,65 +1623,10 @@ msgctxt "#40182"
 msgid "Extended information"
 msgstr "Erweiterte Informationen"
 
-#: /xml/Variables.xml
-msgctxt "#40183"
-msgid "Correct password ! This menu is now available for"
-msgstr "Passwort akzeptiert ! Dieses Menü ist jetzt freigeschaltet für"
-
-#: /xml/Variables.xml
-msgctxt "#40184"
-msgid "minute(s)"
-msgstr "Minute(n)"
-
-#: /xml/Variables.xml
-msgctxt "#40185"
-msgid "Incorrect password ! Please Retry."
-msgstr "Passwort falsch ! Bitte erneut eingeben."
-
-#: /xml/script-skinshortcuts.xml
-msgctxt "#40186"
-msgid "Password protection"
-msgstr "Passwortschutz"
-
-#: /xml/SkinSettings.xml
-msgctxt "#40187"
-msgid "Parental control"
-msgstr "Elternkontrolle"
-
-#: /xml/SkinSettings.xml
-msgctxt "#40188"
-msgid "Set password protection for menu items"
-msgstr "Ermöglicht Passwortschutz für Menüeinträge"
-
-#: /xml/SkinSettings.xml
-msgctxt "#40189"
-msgid "Password has been successfully set !"
-msgstr "Passwort erfolgreich gesetzt !"
-
-#: /xml/SkinSettings.xml
-msgctxt "#40190"
-msgid "Accessibility duration for menu items"
-msgstr "Zeit in der geschützte Menüs aufrufbar sind"
-
-#: /xml/Custom_1133_ParentalControl.xml
-msgctxt "#40191"
-msgid "Password-protected content.[CR]Press [B]Enter[/B] and please enter password."
-msgstr "Passwort geschützter Inhalt.[CR]Drücke [B]Enter[/B] gebe das Passwort ein."
-
 #: /xml/DialogKeyboard.xml
 msgctxt "#40192"
 msgid "Please enter password"
 msgstr "Bitte Passwort eingeben"
-
-#: /xml/Includes_Home.xml
-msgctxt "#40193"
-msgid "Enter password"
-msgstr "Passwort eingeben"
-
-#: /xml/Includes_Home.xml
-msgctxt "#40194"
-msgid "This content is password protected.[CR]Please enter the password to access it."
-msgstr "Dieser Inhalt ist Passwort geschützt.[CR]Für den Zugriff bitte Passwort eingeben.."
 
 #: /xml/SkinSettings.xml
 msgctxt "#40195"
@@ -2095,6 +2040,91 @@ msgstr "Zeige weitere Informationen"
 msgctxt "#40291"
 msgid "Press [B]DOWN[/B] to show info from selected movie"
 msgstr "Nach [B]UNTEN[/B] drücken, um Infos zum ausgewählten Film anzuzeigen"
+
+#: /xml/Variables.xml
+msgctxt "#40292"
+msgid "Lists settings"
+msgstr "Listen Einstellungen"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40293"
+msgid "Actors list"
+msgstr "Schauspielerliste"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#40294"
+msgid "Episode count"
+msgstr "Episodenanzahl"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40295"
+msgid "Movies from director"
+msgstr "Filme des Directors"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40296"
+msgid "Similar movies"
+msgstr "Ähnliche Filme"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40297"
+msgid "Movies from studio"
+msgstr "Filme des Studios"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40298"
+msgid "Next Up episodes"
+msgstr "Demnächst erscheinende Episoden"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40299"
+msgid "Similar TV shows"
+msgstr "Ähnliche Serien"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40300"
+msgid "Fanarts list"
+msgstr "Fanart Liste"
+
+#: /xml/Variables.xml
+msgctxt "#40301"
+msgid "Albums from library"
+msgstr "Alben aus der Bibliothek"
+
+#: /xml/Variables.xml
+msgctxt "#40302"
+msgid "Complete discography"
+msgstr "Komplette Diskografie"
+
+#: /xml/Variables.xml
+msgctxt "#40303"
+msgid "Songs from album"
+msgstr "Songs des Albums"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#40304"
+msgid "Press [B]OK[/B] to show back thumb"
+msgstr "Drücke [B]OK[/B] um die Rückseite anzuzeigen"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#40305"
+msgid "Episode of the season"
+msgstr "Episode der Staffel"
+
+#: /xml/Variables.xml
+msgctxt "#40306"
+msgid "Posters"
+msgstr "Poster"
+
+#: /xml/Variables.xml
+msgctxt "#40307"
+msgid "Fanarts"
+msgstr "Fanart"
+
+#: /xml/Variables.xml
+msgctxt "#40308"
+msgid "Resume playback at"
+msgstr "Starte Playback ab"
 
 msgctxt "#40350"
 msgid "Channel groups"

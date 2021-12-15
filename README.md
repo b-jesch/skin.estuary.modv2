@@ -11,6 +11,16 @@ and install it. After that you can install the skin directly from the repository
 
 
 ### 3.3.0+matrix ###
+- .11
+  * another Bug in PVR artwork service fixed
+  * revert mosaic wall views and widget view for musicvideos if poster view for widget was not choosen
+  * move addon widget "German Telecast Offers" to the top of PVR widget page
+  * addon "Artist Slideshow" to the list of recommended addons added
+  * some typos in language files corrected
+  * missing language strings in german language file added, unused strings removed
+  * make rewind/forward button of player controls visible if a stream is seekable
+
+
 - .10
   * Bug in PVR artwork service fixed
 
