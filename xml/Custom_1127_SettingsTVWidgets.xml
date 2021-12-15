@@ -46,35 +46,35 @@
 						<onclick>Skin.ToggleSetting(hide_tvcategories)</onclick>
 					</control>
 					<control type="radiobutton" id="11114">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31016]</label>
-						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(hide_lastplayedchannels)</selected>
-						<onclick>Skin.ToggleSetting(hide_lastplayedchannels)</onclick>
-					</control>
-					<control type="radiobutton" id="11115">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31015]</label>
-						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(hide_recordingchannels)</selected>
-						<onclick>Skin.ToggleSetting(hide_recordingchannels)</onclick>
-					</control>
-					<control type="radiobutton" id="11116">
-						<label>$LOCALIZE[40097] : $LOCALIZE[40161]</label>
-						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(hide_allchannels)</selected>
-						<onclick>Skin.ToggleSetting(hide_allchannels)</onclick>
-					</control>
-					<control type="radiobutton" id="11117">
-						<label>$LOCALIZE[40097] : $LOCALIZE[40350]</label>
-						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(hide_channelgroups)</selected>
-						<onclick>Skin.ToggleSetting(hide_channelgroups)</onclick>
-					</control>
-					<control type="radiobutton" id="11118">
 						<visible>System.AddonIsEnabled(script.service.gto)</visible>
 						<label>$LOCALIZE[40097] : $LOCALIZE[40351]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_gtowidget)</selected>
 						<onclick>Skin.ToggleSetting(hide_gtowidget)</onclick>
+					</control>
+					<control type="radiobutton" id="11115">
+						<label>$LOCALIZE[40097] : $LOCALIZE[31016]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_lastplayedchannels)</selected>
+						<onclick>Skin.ToggleSetting(hide_lastplayedchannels)</onclick>
+					</control>
+					<control type="radiobutton" id="11116">
+						<label>$LOCALIZE[40097] : $LOCALIZE[31015]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_recordingchannels)</selected>
+						<onclick>Skin.ToggleSetting(hide_recordingchannels)</onclick>
+					</control>
+					<control type="radiobutton" id="11117">
+						<label>$LOCALIZE[40097] : $LOCALIZE[40161]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_allchannels)</selected>
+						<onclick>Skin.ToggleSetting(hide_allchannels)</onclick>
+					</control>
+					<control type="radiobutton" id="11118">
+						<label>$LOCALIZE[40097] : $LOCALIZE[40350]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_channelgroups)</selected>
+						<onclick>Skin.ToggleSetting(hide_channelgroups)</onclick>
 					</control>
 				</control>
 				<include content="SettingsScrollbar">

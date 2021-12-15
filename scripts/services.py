@@ -16,7 +16,7 @@ forced_views = list(['movies', 'sets', 'setmovies', 'tvshows', 'seasons', 'episo
 
 # PVT artwork
 
-content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'channels', 'DialogPVRInfo.xml': 'info',
+content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'tvguide', 'DialogPVRInfo.xml': 'info',
                       'MyPVRRecordings.xml': 'recordings', 'MyPVRTimers.xml': 'timers', 'MyPVRSearch.xml': 'search'})
 
 win = xbmcgui.Window(10000)
@@ -75,33 +75,36 @@ def pvrartwork(current_item):
         return current_item
 
     # check if Live TV or PVR related window is active
-    if xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)'): current_content = 'livetv'
-    else:
-        for pvr_content in content_types:
-            if xbmc.getCondVisibility('Window.IsActive(%s)' % pvr_content):
-                current_content = content_types.get(pvr_content, None)
-                break
+
+    for pvr_content in content_types:
+        if xbmc.getCondVisibility('Window.IsActive(%s)' % pvr_content):
+            current_content = content_types.get(pvr_content, None)
+            break
+
+    if current_content is None and xbmc.getCondVisibility('VideoPlayer.Content(LiveTV)'): current_content = 'livetv'
 
     # if no pvr related window there, clear properties and return
     if current_content is None:
         if win.getProperty('%s.present' % prefix) == 'true': pmd.clear_properties(prefix)
-        return current_item
+        return ''
 
-    label = 'livetv' if current_content == 'livetv' else 'ListItem'
+    label = 'VideoPlayer' if current_content == 'livetv' else 'ListItem'
     title = xbmc.getInfoLabel('%s.Title' % label)
-    if not title: title = xbmc.getInfoLabel('%s.Label' % label)
+    if label == 'ListItem' and not title: title = xbmc.getInfoLabel('%s.Label' % label)
     channel = xbmc.getInfoLabel('%s.ChannelName' % label)
     genre = xbmc.getInfoLabel('%s.Genre' % label)
-    year = xbmc.getInfoLabel('%s.Year'% label)
+    year = xbmc.getInfoLabel('%s.Year' % label)
 
-    if not (title or channel): return current_item
+    if not (title or channel): return ''
 
     if current_item != '%s-%s' % (title, channel) and win.getProperty('%s.Lookup' % prefix) != 'busy':
         win.setProperty("%s.Lookup" % prefix, "busy")
         details = pmd.get_pvr_artwork(title, channel, genre, year, manual_select=False, ignore_cache=False)
         pmd.clear_properties(prefix)
         if details:
-            if details.get('art', False): pmd.set_properties(prefix, details['art'])
+            if details.get('art', False):
+                pmd.set_properties(prefix, details['art'])
+                win.setProperty('%s.present' % prefix, 'true')
             pmd.set_labels(prefix, details)
 
         win.clearProperty("%s.Lookup" % prefix)

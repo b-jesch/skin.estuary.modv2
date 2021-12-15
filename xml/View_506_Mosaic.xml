@@ -99,7 +99,7 @@
 					</control>
 				</control>	
 				</focusedlayout>
-				<itemlayout height="300" width="300" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)] | String.StartsWith(Container.FolderPath,plugin://plugin.audio)">
+				<itemlayout height="300" width="300" condition="Container.Content(artists) | Container.Content(albums) | String.StartsWith(Container.FolderPath,plugin://plugin.audio)">
 					<control type="image">
 						<left>8</left>
 						<top>8</top>
@@ -151,7 +151,7 @@
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Container.Content(musicvideos) + Skin.HasSetting(show_borders)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="300" width="300" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)] | String.StartsWith(Container.FolderPath,plugin://plugin.audio)">
+				<focusedlayout height="300" width="300" condition="Container.Content(artists) | Container.Content(albums) | String.StartsWith(Container.FolderPath,plugin://plugin.audio)">
 				<control type="group">
 					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
             			<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
@@ -217,7 +217,7 @@
 					</control>
 				</control>	
 				</focusedlayout>
-				<itemlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
+				<itemlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
 					<control type="image">
 						<left>8</left>
 						<top>8</top>
@@ -284,7 +284,7 @@
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
+				<focusedlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
 				<control type="group">
 					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
             			<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />

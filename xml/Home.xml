@@ -545,6 +545,15 @@
 							<param name="list_id" value="129001"/>
 							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
 						</include>
+						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
+							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
+							<param name="widget_header" value="$ADDON[script.service.gto 30104]: $INFO[Window(Home).Property(GTO.Provider)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Property(StartDate), | ]$INFO[Container(12500).ListItem.Label, - ]$INFO[Container(12500).ListItem.Label2, - ,]"/>
+							<param name="list_id" value="12500"/>
+							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
+    						<param name="label" value="$INFO[ListItem.Label]"/>
+							<param name="onclick" value="RunPlugin(plugin://script.service.gto/?action=info&amp;item=$INFO[ListItem.Property(item)])"/>
+						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_lastplayedchannels)">
 							<param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
 							<param name="sortby" value="lastplayed"/>
@@ -585,15 +594,6 @@
 							<param name="widget_target" value="tvguide"/>
 							<param name="list_id" value="12600"/>
 							<param name="item_limit" value="2000"/>
-						</include>
-						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
-							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
-							<param name="widget_header" value="$ADDON[script.service.gto 30104]: $INFO[Window(Home).Property(GTO.Provider)]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Property(StartDate), | ]$INFO[Container(12500).ListItem.Label, - ]$INFO[Container(12500).ListItem.Label2, - ,]"/>
-							<param name="list_id" value="12500"/>
-							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
-    						<param name="label" value="$INFO[ListItem.Label]"/>
-							<param name="onclick" value="RunPlugin(plugin://script.service.gto/?action=info&amp;item=$INFO[ListItem.Property(item)])"/>
 						</include>
 					</control>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
@@ -885,7 +885,7 @@
 						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_recentlyaddedmusicvideos) + !Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="videodb://recentlyaddedmusicvideos/"/>
 							<param name="widget_header" value="$LOCALIZE[20390]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16300).ListItem.Artist, | , - ]$INFO[Container(16300).ListItem.Title]$INFO[Container(16300).ListItem.Year, (,)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16300).ListItem.Title, | ,]$INFO[Container(16300).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="main_label" value="$INFO[ListItem.Label]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
@@ -896,7 +896,7 @@
 						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_unwatchedmusicvideos) + !Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="special://skin/playlists/unwatched_musicvideos.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31151]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16400).ListItem.Artist, | , - ]$INFO[Container(16400).ListItem.Title]$INFO[Container(16400).ListItem.Year, (,)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16400).ListItem.Title, | ,]$INFO[Container(16400).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="main_label" value="$INFO[ListItem.Label]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
@@ -907,7 +907,7 @@
 						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_mostplayemusicvideos) + !Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="special://skin/playlists/mostplayed_musicvideos.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[40267]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16900).ListItem.Artist, | , - ]$INFO[Container(16900).ListItem.Title]$INFO[Container(16900).ListItem.Year, (,)]$INFO[Container(16900).ListItem.PlayCount, | $LOCALIZE[576] : ]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16900).ListItem.Title, | ,]$INFO[Container(16900).ListItem.Year, (,)]$INFO[Container(16900).ListItem.PlayCount, | $LOCALIZE[576] : ]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="16900"/>
 							<param name="fallback_icon" value="DefaultMusicSongs.png"/>
@@ -925,7 +925,7 @@
 						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_randommusicvideo) + !Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="special://skin/playlists/random_musicvideos.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31152]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16500).ListItem.Artist, | , - ]$INFO[Container(16500).ListItem.Title]$INFO[Container(16500).ListItem.Year, (,)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16500).ListItem.Title, | ,]$INFO[Container(16500).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="main_label" value="$INFO[ListItem.Label]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
@@ -937,7 +937,7 @@
 						<include content="WidgetListPoster" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_recentlyaddedmusicvideos) + Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="videodb://recentlyaddedmusicvideos/"/>
 							<param name="widget_header" value="$LOCALIZE[20390]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16300).ListItem.Artist, | , - ]$INFO[Container(16300).ListItem.Title]$INFO[Container(16300).ListItem.Year, (,)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16300).ListItem.Title, | ,]$INFO[Container(16300).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="main_label" value="$INFO[ListItem.Label]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
@@ -948,7 +948,7 @@
 						<include content="WidgetListPoster" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_unwatchedmusicvideos) + Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="special://skin/playlists/unwatched_musicvideos.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31151]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16400).ListItem.Artist, | , - ]$INFO[Container(16400).ListItem.Title]$INFO[Container(16400).ListItem.Year, (,)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16400).ListItem.Title, | ,]$INFO[Container(16400).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="main_label" value="$INFO[ListItem.Label]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
@@ -959,7 +959,7 @@
 						<include content="WidgetListPoster" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_mostplayemusicvideos) + Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="special://skin/playlists/mostplayed_musicvideos.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[40267]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16900).ListItem.Artist, | , - ]$INFO[Container(16900).ListItem.Title]$INFO[Container(16900).ListItem.Year, (,)]$INFO[Container(16900).ListItem.PlayCount, | $LOCALIZE[576] : ]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16900).ListItem.Title, | ,]$INFO[Container(16900).ListItem.Year, (,)]$INFO[Container(16900).ListItem.PlayCount, | $LOCALIZE[576] : ]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="16900"/>
 							<param name="fallback_icon" value="DefaultMusicSongs.png"/>
@@ -977,7 +977,7 @@
 						<include content="WidgetListPoster" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_randommusicvideo) + Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="special://skin/playlists/random_musicvideos.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31152]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16500).ListItem.Artist, | , - ]$INFO[Container(16500).ListItem.Title]$INFO[Container(16500).ListItem.Year, (,)]"/>
+							<param name="widget_header_focus" value="$INFO[Container(16500).ListItem.Title, | ,]$INFO[Container(16500).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="main_label" value="$INFO[ListItem.Label]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
