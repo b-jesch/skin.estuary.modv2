@@ -67,7 +67,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/rewind.png"/>
 					</include>
 					<onclick>PlayerControl(Rewind)</onclick>
-					<visible>![VideoPlayer.Content(livetv) + !PVR.IsTimeShift]</visible>
+					<visible>Player.SeekEnabled</visible>
 				</control>
 				<control type="radiobutton" id="602">
 					<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/play.png</textureradioonfocus>
@@ -110,7 +110,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/forward.png"/>
 					</include>
 					<onclick>PlayerControl(Forward)</onclick>
-					<visible>![VideoPlayer.Content(livetv) + !PVR.IsTimeShift]</visible>
+					<visible>Player.SeekEnabled</visible>
 				</control>
 				<control type="radiobutton" id="605">
 					<include content="OSDButton">

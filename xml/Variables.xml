@@ -945,18 +945,18 @@
 		<value>ffffffff</value>
 	</variable>
 	<variable name="SkinColorVar">
-		<value condition="$EXP[ChristmasTheme] + !Skin.HasSetting(DisableThemes)">ffe30022</value>
-		<value condition="$EXP[HalloweenTheme] + !Skin.HasSetting(DisableThemes)">fff38844</value>
-		<value condition="$EXP[EasterTheme] + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
-		<value condition="$EXP[ValentineTheme] + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
+		<value condition="$EXP[ChristmasTime]">ffe30022</value>
+		<value condition="$EXP[HalloweenTime]">fff38844</value>
+		<value condition="$EXP[EasterTime]">ffe9d66b</value>
+		<value condition="$EXP[ValentineTime]">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
 		<value>button_focus</value>
 	</variable>
 	<variable name="GradientColorVar">
-		<value condition="$EXP[ChristmasTheme] + !Skin.HasSetting(DisableThemes)">ffe30022</value>
-		<value condition="$EXP[HalloweenTheme] + !Skin.HasSetting(DisableThemes)">fff38844</value>
-		<value condition="$EXP[EasterTheme] + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
-		<value condition="$EXP[ValentineTheme] + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
+		<value condition="$EXP[ChristmasTime]">ffe30022</value>
+		<value condition="$EXP[HalloweenTime]">fff38844</value>
+		<value condition="$EXP[EasterTime]">ffe9d66b</value>
+		<value condition="$EXP[ValentineTime]">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
 		<value>gradient_focus</value>
 	</variable>

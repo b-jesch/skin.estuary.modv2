@@ -2071,16 +2071,6 @@
 					<texture colordiffuse="$VAR[LogoColorVar]">$VAR[LogoVar]</texture>
 					<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
 				</control>
-				<!--
-				<control type="image">
-					<aspectratio>keep</aspectratio>
-					<width>56</width>
-					<height>56</height>
-					<texture colordiffuse="$VAR[GradientColorVar]">icons/logo-gradient.png</texture>
-					<visible>Skin.HasSetting(EnableGradientColor)</visible>
-					<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
-				</control>
-				-->
 				<control type="image">
 					<left>55</left>
 					<top>4</top>

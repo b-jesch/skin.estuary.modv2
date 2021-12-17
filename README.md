@@ -11,6 +11,11 @@ and install it. After that you can install the skin directly from the repository
 
 
 ### 3.3.0+matrix ###
+- .12
+  * expand label size of options label (was cutted)
+  * seasonal colored buttons for video-/audio OSD implemented
+
+
 - .11
   * another Bug in PVR artwork service fixed
   * revert mosaic wall views and widget view for musicvideos if poster view for widget was not choosen
