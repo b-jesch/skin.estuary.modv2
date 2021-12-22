@@ -487,21 +487,26 @@
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="flags/hdr.png" />
-					<param name="width" value="71" />
-					<param name="visible" value="String.Contains(Player.Filenameandpath,hdr) | String.Contains(Player.Filenameandpath,HDR)" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlag">
 					<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
 					<param name="fallback" value="flags/videoresolution/fallback.png" />
-					<param name="visible" value="!String.Contains(Player.Filenameandpath,hdr) + !String.Contains(Player.Filenameandpath,HDR)" />
 					<param name="width" value="71" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
 					<param name="fallback" value="flags/videocodec/fallback.png" />
+					<param name="top" value="5" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[ColorDepthHdrVar]" />
+					<param name="visible" value="String.Contains(Player.Filenameandpath,.hdr.) | String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.10bit.) | String.Contains(Player.Filenameandpath,.12bit.)" />
+					<param name="width" value="71" />
+					<param name="top" value="5" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[ColorDepthDvVar]" />
+					<param name="visible" value="String.Contains(Player.Filenameandpath,.dv.)" />
+					<param name="width" value="115" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">

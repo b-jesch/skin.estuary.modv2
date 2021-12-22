@@ -1024,15 +1024,8 @@
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="flags/hdr.png" />
-					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdr) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,HDR)" />
-					<param name="visible2" value="!Skin.HasSetting(show_mediaresolutionflag)" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlag">
 					<param name="texture" value="$PARAM[resolution_var]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution) + !String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdr) + !String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,HDR)" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)" />
 					<param name="visible2" value="!Skin.HasSetting(show_mediaresolutionflag)" />
 					<param name="width" value="71" />
 					<param name="top" value="5" />
@@ -1045,18 +1038,10 @@
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
-					<param name="fallback" value="flags/aspectratio/fallback.png" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
-					<param name="visible2" value="!Skin.HasSetting(show_mediaaspectratioflag)" />
-					<param name="width" value="108" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlag">
 					<param name="texture" value="$VAR[ColorDepthHdrVar]" />
 					<param name="visible" value="!String.IsEmpty(Control.GetLabel(4396))" />
 					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
-					<param name="width" value="73" />
+					<param name="width" value="71" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
@@ -1064,6 +1049,14 @@
 					<param name="visible" value="!String.IsEmpty(Control.GetLabel(4397))" />
 					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
 					<param name="width" value="115" />
+					<param name="top" value="5" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
+					<param name="fallback" value="flags/aspectratio/fallback.png" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediaaspectratioflag)" />
+					<param name="width" value="108" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
@@ -1284,14 +1277,8 @@
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="flags/hdr.png" />
-					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdr) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,HDR)" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlag">
 					<param name="texture" value="$PARAM[resolution_var]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution) + !String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdr) + !String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,HDR)" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)" />
 					<param name="width" value="71" />
 					<param name="top" value="5" />
 				</include>
@@ -1300,19 +1287,12 @@
 					<param name="fallback" value="flags/videocodec/fallback.png" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoCodec)" />
 					<param name="top" value="5" />
-				</include>	
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
-					<param name="fallback" value="flags/aspectratio/fallback.png" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
-					<param name="width" value="108" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[ColorDepthHdrVar]" />
 					<param name="visible" value="!String.IsEmpty(Control.GetLabel(4394))" />
 					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
-					<param name="width" value="73" />
+					<param name="width" value="71" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
@@ -1320,6 +1300,13 @@
 					<param name="visible" value="!String.IsEmpty(Control.GetLabel(4395))" />
 					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
 					<param name="width" value="115" />
+					<param name="top" value="5" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
+					<param name="fallback" value="flags/aspectratio/fallback.png" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
+					<param name="width" value="108" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
@@ -2697,7 +2684,7 @@
 					<control type="button">
 						<bottom>12</bottom>
 						<left>55</left>
-						<width>120</width>
+						<width>200</width>
 						<height>36</height>
 						<aligny>center</aligny>
 						<font>font25_title</font>
@@ -2709,8 +2696,8 @@
 					</control>
 					<control type="button">
 						<bottom>12</bottom>
-						<left>244</left>
-						<width>220</width>
+						<left>240</left>
+						<width>350</width>
 						<height>36</height>
 						<aligny>center</aligny>
 						<font>font25_title</font>
@@ -3922,6 +3909,14 @@
 				<visible>VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="grouplist">
+				<control type="label" id="4392">
+					<visible>false</visible>
+					<label>$VAR[ColorDepthHdrVar]</label>
+				</control>
+				<control type="label" id="4393">
+					<visible>false</visible>
+					<label>$VAR[ColorDepthDvVar]</label>
+				</control>
 				<left>460</left>
 				<bottom>145</bottom>
 				<right>30</right>
@@ -3962,21 +3957,28 @@
 					<param name="visible" value="[String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip) | String.Contains(Player.Filenameandpath,BLURAY) | String.Contains(Player.Filenameandpath,BLU-RAY) | String.Contains(Player.Filenameandpath,BDRIP)] + !Window.IsVisible(MusicVisualisation.xml)" />
 				</include>
 				<include content="MediaFlagOSD">
-					<param name="texture" value="flags/hdr.png" />
-					<param name="width" value="58" />
-					<param name="visible" value="[String.Contains(Player.Filenameandpath,hdr) | String.Contains(Player.Filenameandpath,HDR)] + !Window.IsVisible(MusicVisualisation.xml)" />
-				</include>
-				<include content="MediaFlagOSD">
 					<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
 					<param name="fallback" value="flags/videoresolution/fallback.png" />
 					<param name="width" value="58" />
-					<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml) + !String.Contains(Player.Filenameandpath,hdr) + !String.Contains(Player.Filenameandpath,HDR)" />
+					<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
 				</include>
 				<include content="MediaFlagOSD">
 					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
 					<param name="fallback" value="flags/videocodec/fallback.png" />
 					<param name="width" value="104" />
 					<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
+				</include>
+				<include content="MediaFlagOSD">
+					<param name="texture" value="$VAR[ColorDepthHdrVar]" />
+					<param name="visible" value="!String.IsEmpty(Control.GetLabel(4392)) + !Window.IsVisible(MusicVisualisation.xml)" />
+					<param name="width" value="58" />
+					<param name="top" value="5" />
+				</include>
+				<include content="MediaFlagOSD">
+					<param name="texture" value="$VAR[ColorDepthDvVar]" />
+					<param name="visible" value="!String.IsEmpty(Control.GetLabel(4393)) + !Window.IsVisible(MusicVisualisation.xml)" />
+					<param name="width" value="94" />
+					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlagOSD">
 					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
