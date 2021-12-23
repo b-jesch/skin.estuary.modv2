@@ -467,89 +467,112 @@
 					<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
 				</control>
 			</control>
-			<control type="image">
-				<top>15</top>
-				<width>310</width>
-				<height>120</height>
-				<centerleft>50%</centerleft>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[LibraryClearLogoVar]</texture>
-				<visible>Control.IsVisible(51) | Control.IsVisible(503)</visible>
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
-				<animation effect="slide" end="0,-135" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-			</control>
-			<control type="image">
-				<top>15</top>
-				<width>274</width>
-				<height>105</height>
-				<centerleft>50%</centerleft>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[LibraryClearLogoVar]</texture>
-				<visible>Control.IsVisible(53) + !Window.IsVisible(MyVideoNav.xml)</visible>
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
-				<animation effect="slide" end="0,-120" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-			</control>
-			<control type="image">
-				<top>10</top>
-				<width>326</width>
-				<height>125</height>
-				<centerleft>50%</centerleft>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[ViewClearArtVar]</texture>
-				<visible>Control.IsVisible(53) + Window.IsVisible(MyVideoNav.xml)</visible>
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
-				<animation effect="slide" end=",-5" time="0" condition="String.IsEqual(ListItem.Art(clearlogo))">Conditional</animation>
-				<animation effect="slide" end="0,-120" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-			</control>
-			<control type="image">
-				<top>5</top>
-				<width>222</width>
-				<height>85</height>
-				<centerleft>50%</centerleft>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[LibraryClearLogoVar]</texture>
-				<visible>Control.IsVisible(506) + !Control.HasFocus(5199)</visible>
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-				<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
-				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-			</control>
 			<control type="group">
-				<include>OpenClose_Left</include>
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-				<visible>!ListItem.IsParentFolder</visible>
 				<control type="image">
 					<top>15</top>
-					<width>362</width>
-					<height>140</height>
-					<left>117</left>
+					<width>310</width>
+					<height>120</height>
+					<centerleft>50%</centerleft>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>$VAR[LibraryClearLogoVar]</texture>
-					<visible>Control.IsVisible(54) | Control.IsVisible(505) | Control.IsVisible(50) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]</visible>
+					<visible>[Control.IsVisible(51) | Control.IsVisible(503)] + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
+					<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
+					<animation effect="slide" end="0,-135" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				</control>
 				<control type="image">
 					<top>15</top>
-					<width>284</width>
-					<height>110</height>
-					<left>155</left>
+					<width>274</width>
+					<height>105</height>
+					<centerleft>50%</centerleft>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>$VAR[LibraryClearLogoVar]</texture>
-					<visible>Control.IsVisible(55)</visible>
+					<visible>Control.IsVisible(53) + !Window.IsVisible(MyVideoNav.xml) + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
+					<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
+					<animation effect="slide" end="0,-120" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				</control>
-			</control>
-			<control type="image">
-				<top>15</top>
-				<width>220</width>
-				<height>85</height>
-				<right>484</right>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[LibraryClearLogoVar]</texture>
-				<visible>Control.IsVisible(502)</visible>
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-				<visible>!ListItem.IsParentFolder</visible>
-				<include>OpenClose_Right</include>
+				<control type="image">
+					<top>10</top>
+					<width>326</width>
+					<height>125</height>
+					<centerleft>50%</centerleft>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[ViewClearArtVar]</texture>
+					<visible>Control.IsVisible(53) + Window.IsVisible(MyVideoNav.xml)</visible>
+					<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+					<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
+					<animation effect="slide" end=",-5" time="0" condition="String.IsEqual(ListItem.Art(clearlogo))">Conditional</animation>
+					<animation effect="slide" end="0,-120" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				</control>
+				<control type="image">
+					<top>5</top>
+					<width>222</width>
+					<height>85</height>
+					<centerleft>50%</centerleft>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[LibraryClearLogoVar]</texture>
+					<visible>Control.IsVisible(506) + !Control.HasFocus(5199) + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
+					<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
+					<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				</control>
+				<control type="group">
+					<include>OpenClose_Left</include>
+					<visible>!ListItem.IsParentFolder</visible>
+					<control type="group">
+						<visible>[Control.IsVisible(54) | Control.IsVisible(505) | Control.IsVisible(50) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]]</visible>
+						<control type="image">
+							<top>60</top>
+							<width>362</width>
+							<height>105</height>
+							<left>117</left>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$VAR[LibraryClearLogoVar]</texture>
+							<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>10</top>
+							<height>25</height>
+							<width>537</width>
+							<align>right</align>
+							<font>font20_title</font>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<label>$INFO[Container.SortMethod,$LOCALIZE[40391]: ,,]$INFO[Container.CurrentItem, | , / ]$INFO[Container.NumItems]</label>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Control.IsVisible(55)</visible>
+						<control type="image">
+							<top>50</top>
+							<width>284</width>
+							<height>80</height>
+							<left>155</left>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$VAR[LibraryClearLogoVar]</texture>
+							<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>10</top>
+							<height>25</height>
+							<width>537</width>
+							<align>right</align>
+							<font>font20_title</font>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<label>$INFO[Container.SortMethod,$LOCALIZE[40391]: ,,]$INFO[Container.CurrentItem, | , / ]$INFO[Container.NumItems]</label>
+						</control>
+					</control>
+				</control>
+				<control type="image">
+					<top>15</top>
+					<width>220</width>
+					<height>85</height>
+					<right>484</right>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[LibraryClearLogoVar]</texture>
+					<visible>Control.IsVisible(502) + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
+					<include>OpenClose_Right</include>
+				</control>
 			</control>
 			<control type="group">
 				<depth>DepthBars</depth>
