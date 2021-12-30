@@ -154,10 +154,6 @@
 			<value condition="Skin.HasSetting(musicvideos.507)">$LOCALIZE[40146]</value>
 			<value>$LOCALIZE[40148]</value>
 	</variable>
-	<variable name="AlbumsCount">
-		<value condition="Integer.IsLessOrEqual(Container(50).NumItems,1)">$INFO[Container(50).NumItems,, $LOCALIZE[36918]]</value>
-		<value>$INFO[Container(50).NumItems,, $LOCALIZE[36919]]</value>
-	</variable>
 	<variable name="CollectionNumberVar">
 		<value condition="String.IsEqual(Container(50054).NumItems,1)">$INFO[Container(50054).NumItems,, $LOCALIZE[36900]]</value>
 		<value>$INFO[Container(50054).NumItems,, $LOCALIZE[36901]]</value>
@@ -1185,7 +1181,7 @@
 		<value condition="!String.IsEqual(listitem.dbtype,artist)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Director,$LOCALIZE[20339] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Writer,$LOCALIZE[20417] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Premiered,$LOCALIZE[20416] : [COLOR white],[/COLOR]]</value>
 	</variable>
 	<variable name="ShiftRightTextBoxVar">
-		<value condition="String.IsEqual(listitem.dbtype,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$VAR[AlbumsCount][CR]$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
+		<value condition="String.IsEqual(listitem.dbtype,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(listitem.dbtype,album) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="Window.IsActive(pictures)">$INFO[ListItem.Size,$LOCALIZE[289] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Date,$LOCALIZE[552] : [COLOR white],[/COLOR][CR]]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot) + ListItem.IsCollection">[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</value>
@@ -1225,7 +1221,7 @@
 		<value condition="Container.Content(addons)">[COLOR white]$INFO[ListItem.AddonDescription][/COLOR]</value>
 		<value condition="String.IsEqual(listitem.dbtype,album) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[COLOR=white],[/COLOR]]</value>
 		<value condition="String.IsEqual(listitem.dbtype,musicvideo) | String.IsEqual(listitem.dbtype,video)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
-		<value condition="String.IsEqual(listitem.dbtype,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$VAR[AlbumsCount][CR]$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]]</value>
+		<value condition="String.IsEqual(listitem.dbtype,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(listitem.dbtype,song)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567] : [COLOR white],[/COLOR][CR]]</value>
 		<value>$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]</value>
@@ -1292,64 +1288,67 @@
 		<value/>
 	</variable>
 	<variable name="ColorDepthDvVar">
-		<value condition="String.Contains(ListItem.Filenameandpath,.dv.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Player.Filenameandpath,.dv.) + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Container.ListItem.Filenameandpath,.dv.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,.dv.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.dv.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.dv.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.dv.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,.dv.) | String.Contains(ListItem.Filenameandpath,.dovu.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="[String.Contains(Player.Filenameandpath,.dv.) | String.Contains(Player.Filenameandpath,.dovu.) | String.Contains(Player.Filenameandpath,.dolbyvision.)] + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Container.ListItem.Filenameandpath,.dv.) | String.Contains(Container.ListItem.Filenameandpath,.dovuv.) | String.Contains(Container.ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + [String.Contains(Container(60).ListItem.Filenameandpath,.dv.) | String.Contains(Container(60).ListItem.Filenameandpath,.dovu.) | String.Contains(Container(60).ListItem.Filenameandpath,.dolbyvision.)]">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dovu.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dovu.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dovu.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value/>
 	</variable>
 	<variable name="3DFlagVar">
-		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,.3d.mvc.)">flags/videoresolution/3Dmvc.png</value>
-		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,.3d.sbs.)">flags/videoresolution/3Dsbs.png</value>
-		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,.3d.tab.)">flags/videoresolution/3Dtab.png</value>
+		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
+		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
+		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,3d) + !String.StartsWith(ListItem.FolderPath,plugin://)">flags/videoresolution/3D.png</value>
 		<value condition="ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
+		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
+		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
+		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
+		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + Container(60).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(ListItem.Filenameandpath,.3D.) + !String.StartsWith(ListItem.FolderPath,plugin://)">flags/videoresolution/3D.png</value>
-		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,.3D.)">flags/videoresolution/3D.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + !String.IsEmpty(Container(60).ListItem.VideoResolution)">$INFO[Container(60).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 		<value>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="VideoPlayer3DFlagVar">
-		<value condition="VideoPlayer.IsStereoscopic + String.Contains(Player.Filenameandpath,.3d.mvc.)">flags/videoresolution/3dmvc.png</value>
-		<value condition="VideoPlayer.IsStereoscopic + String.Contains(Player.Filenameandpath,.3d.sbs.)">flags/videoresolution/3Dsbs.png</value>
-		<value condition="VideoPlayer.IsStereoscopic + String.Contains(Player.Filenameandpath,.3d.tab.)">flags/videoresolution/3Dtab.png</value>
-		<value condition="VideoPlayer.IsStereoscopic">flags/videoresolution/3D.png</value>		
-		<value condition="String.Contains(VideoPlayer.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>
+		<value condition="VideoPlayer.IsStereoscopic + String.Contains(Player.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
+		<value condition="VideoPlayer.IsStereoscopic + String.Contains(Player.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
+		<value condition="VideoPlayer.IsStereoscopic + String.Contains(Player.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
+		<value condition="VideoPlayer.IsStereoscopic">flags/videoresolution/3D.png</value>
+		<value condition="String.Contains(VideoPlayer.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="Container5083_3DFlagVar">
-		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.3d.mvc)">flags/videoresolution/3dmvc.png</value>
-		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.3d.sbs)">flags/videoresolution/3Dsbs.png</value>
-		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.3d.tab)">flags/videoresolution/3Dtab.png</value>
+		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
+		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
+		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="Container(5083).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>
+		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container(5083).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="Container5094_3DFlagVar">
-		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.3d.mvc)">flags/videoresolution/3dmvc.png</value>
-		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.3d.sbs)">flags/videoresolution/3Dsbs.png</value>
-		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.3d.tab)">flags/videoresolution/3Dtab.png</value>
+		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
+		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
+		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="Container(5094).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>		
+		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container(5094).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="Container5084_3DFlagVar">
-		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.3d.mvc)">flags/videoresolution/3dmvc.png</value>
-		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.3d.sbs)">flags/videoresolution/3Dsbs.png</value>
-		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.3d.tab)">flags/videoresolution/3Dtab.png</value>
+		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
+		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
+		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="Container(5084).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>
+		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container(5084).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="Container3DFlagVar">
-		<value condition="String.Contains(Container.ListItem.Filenameandpath,.3d.mvc.)">flags/videoresolution/3Dmvc.png</value>
-		<value condition="String.Contains(Container.ListItem.Filenameandpath,.3d.sbs.)">flags/videoresolution/3Dsbs.png</value>
-		<value condition="String.Contains(Container.ListItem.Filenameandpath,.3d.tab.)">flags/videoresolution/3Dtab.png</value>
+		<value condition="String.Contains(Container.ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
+		<value condition="String.Contains(Container.ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
+		<value condition="String.Contains(Container.ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="Container.ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(Container.ListItem.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>
+		<value condition="String.Contains(Container.ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container.ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="AudioCodecFlagVar">
@@ -1560,7 +1559,6 @@
 		<value condition="String.IsEqual(Window.Property(type),movie)">$INFO[Window.Property(TagLine),[I],[/I]]</value>
 	</variable>
 	<variable name="MusicInfoSubLabelVar">
-		<value condition="Container.Content(artists)">$VAR[AlbumsCount]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Artist,, [COLOR white]-[/COLOR] ]$INFO[ListItem.Album]$INFO[ListItem.Year, (,)]</value>
 	</variable>

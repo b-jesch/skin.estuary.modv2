@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.3.0+matrix.13" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.3.0+matrix.14" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -50,6 +50,11 @@
 			</assets>
 <news>
 [B]3.3.0+matrix[/B]
+- .14
+      Recognition for Dolby Vision extended (.dovu., .dolbyvision.)
+      Coloured media flags added, thanks again to frodo19
+      Hungarian language added, many thanks to frodo19
+      Recognition of 3D Files partial changed
 - .13 add missing HDR/HDR+/DV labels in video OSD
       add item counter in list view / extended list view
       split 3D Labels into 3D.mvc, 3D.sbs and 3D.tab (file name tagging: .3d.mvc., .3d.sbs., .3d.tab., .3d.)
