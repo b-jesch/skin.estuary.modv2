@@ -2221,7 +2221,7 @@
 		</control>
 	</include>
 	<include name="TopBar">
-		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022] : ,  ∙  ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
+		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[40391]: , | ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
 		<param name="visible">true</param>
 		<param name="width">900</param>
 		<definition>
@@ -2249,7 +2249,7 @@
 					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
-					<visible>![[Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)]] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)]</visible>
+					<visible>!Container.Content(addons) + [Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml)]</visible>
 					<control type="label">
 						<label>$PARAM[breadcrumbs_label]</label>
 						<include>BreadcrumbsLabel</include>
@@ -2269,7 +2269,7 @@
 					<control type="label">
 						<label>$INFO[Container.PluginCategory, / ]</label>
 						<include>BreadcrumbsLabel</include>
-						<visible>!String.isempty(Container.PluginCategory)</visible>
+						<visible>!String.IsEmpty(Container.PluginCategory)</visible>
 					</control>
 					<control type="label">
 						<label>$INFO[Control.GetLabel(10), : ]</label>
@@ -2293,6 +2293,7 @@
 					<texturefocus />
 					<texturenofocus />
 				</control>
+				<!--
 				<control type="label" id="18900">
 					<top>50</top>
 					<label>$PARAM[sublabel]</label>
@@ -2305,6 +2306,7 @@
 					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
 					<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)]</visible>
 				</control>
+				-->
 				<control type="grouplist">
 					<top>0</top>
 					<align>right</align>
@@ -2480,10 +2482,10 @@
 		</definition>
 	</include>
 	<include name="BreadcrumbsLabel">
-		<font>font37</font>
+		<font>font12</font>
 		<shadowcolor>text_shadow</shadowcolor>
-		<top>0</top>
-		<height>100</height>
+		<top>4</top>
+		<height>25</height>
 		<width min="1" max="900">auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">

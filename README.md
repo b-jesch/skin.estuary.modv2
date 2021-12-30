@@ -16,13 +16,20 @@ preferably before the file extension:
 | 3D with <br> stereoscopic detection |           MVC codec            |          Side by Side          |         Top and Bottom         |          HDR Files           |            HDR+ Files            |             Dolby Vision             |
 |:-----------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:----------------------------:|:--------------------------------:|:------------------------------------:|
 |     ![](resources/flags/3d.png)     | ![](resources/flags/3dmvc.png) | ![](resources/flags/3dsbs.png) | ![](resources/flags/3dtab.png) | ![](resources/flags/hdr.png) | ![](resources/flags/hdrplus.png) | ![](resources/flags/dolbyvision.png) | 
-|         no tagging or .3d.          |            .3d.mvc.            |            .3d.sbs.            |            .3d.tab.            |        .hdr., .10bit.        |        .hdrplus., .12bit.        |                 .dv.                 |
+|          no tagging or 3d           |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovu., .dolbyvision.      |
 
 ### 3.3.0+matrix ###
+- .14
+  * Recognition for Dolby Vision extended (.dovu., .dolbyvision.) 
+  * Coloured media flags added, thanks again to frodo19 
+  * Hungarian language added, many thanks to frodo19
+  * Recognition of 3D Files partial changed
+
+
 - .13
   * add missing HDR/HDR+/DV labels in video OSD
   * add item counter in list view / extended list view
-  * split 3D Labels into 3D.mvc, 3D.sbs and 3D.tab (needs file name tagging like: .3d.mvc., .3d.sbs., .3d.tab., .3d.)
+  * split 3D Labels into 3D.mvc, 3D.sbs and 3D.tab (needs file name tagging like: 3d.mvc, 3d.sbs, 3d.tab, 3d)
   
 
 - .12

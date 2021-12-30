@@ -122,7 +122,7 @@
 					<orientation>vertical</orientation>
 					<animation effect="zoom" start="100,100" end="50,100" center="-40,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(73)">conditional</animation>
 				</control>
-			<include content="PVRInfoPanel">
+				<include content="PVRInfoPanel">
 					<param name="folder_sortorder" value="descending" />
 				</include>
 			</control>

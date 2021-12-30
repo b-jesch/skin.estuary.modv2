@@ -529,14 +529,15 @@
 							<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 						</control>
 						<control type="label">
-							<left>30</left>
+							<left>450</left>
 							<top>10</top>
 							<height>25</height>
-							<width>537</width>
+							<width>120</width>
 							<align>right</align>
-							<font>font20_title</font>
+							<font>font12</font>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<label>$INFO[Container.SortMethod,$LOCALIZE[40391]: ,,]$INFO[Container.CurrentItem, | , / ]$INFO[Container.NumItems]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
 						</control>
 					</control>
 					<control type="group">
@@ -551,14 +552,15 @@
 							<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 						</control>
 						<control type="label">
-							<left>30</left>
+							<left>450</left>
 							<top>10</top>
 							<height>25</height>
-							<width>537</width>
+							<width>120</width>
 							<align>right</align>
-							<font>font20_title</font>
+							<font>font12</font>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<label>$INFO[Container.SortMethod,$LOCALIZE[40391]: ,,]$INFO[Container.CurrentItem, | , / ]$INFO[Container.NumItems]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
 						</control>
 					</control>
 				</control>

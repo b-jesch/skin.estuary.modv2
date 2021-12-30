@@ -221,7 +221,15 @@
 				<height>262</height>
 				<label>$LOCALIZE[19076] ($INFO[Container(5000).NumItems,[B],[/B] $LOCALIZE[31036]])</label>
 				<font>font37</font>
-				<visible>!ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder + Integer.IsGreater(Container(5000).NumItems,1)</visible>
+			</control>
+			<control type="label">
+				<top>10</top>
+				<width>830</width>
+				<height>262</height>
+				<label>$LOCALIZE[19076] ($INFO[Container(5000).NumItems,[B],[/B] $LOCALIZE[31037]])</label>
+				<font>font37</font>
+				<visible>!ListItem.IsParentFolder + Integer.IsEqual(Container(5000).NumItems,1)</visible>
 			</control>
 			<control type="group">
 				<left>-10</left>
