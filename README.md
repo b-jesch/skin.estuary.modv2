@@ -16,9 +16,15 @@ preferably before the file extension:
 | 3D with <br> stereoscopic detection |           MVC codec            |          Side by Side          |         Top and Bottom         |          HDR Files           |            HDR+ Files            |             Dolby Vision             |
 |:-----------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:----------------------------:|:--------------------------------:|:------------------------------------:|
 |     ![](resources/flags/3d.png)     | ![](resources/flags/3dmvc.png) | ![](resources/flags/3dsbs.png) | ![](resources/flags/3dtab.png) | ![](resources/flags/hdr.png) | ![](resources/flags/hdrplus.png) | ![](resources/flags/dolbyvision.png) | 
-|          no tagging or 3d           |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovu., .dolbyvision.      |
+|          no tagging or 3d           |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovi., .dolbyvision.      |
 
 ### 3.3.0+matrix ###
+- .15
+  * Recognition for Dolby Vision changed from .dovu. to .dovi.
+  * optimized breadcrumbs in list views, visibility is now switchable/costumable 
+  * Seasonal themes for 2022 updated (Valentine: 14.02, Easter: 14-18.04, Halloween: 31.10, Christmas: 27.11 - 26.12)
+
+
 - .14
   * Recognition for Dolby Vision extended (.dovu., .dolbyvision.) 
   * Coloured media flags added, thanks again to frodo19 

@@ -517,51 +517,25 @@
 				<control type="group">
 					<include>OpenClose_Left</include>
 					<visible>!ListItem.IsParentFolder</visible>
-					<control type="group">
+					<control type="image">
+						<top>60</top>
+						<width>362</width>
+						<height>105</height>
+						<left>117</left>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$VAR[LibraryClearLogoVar]</texture>
+						<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 						<visible>[Control.IsVisible(54) | Control.IsVisible(505) | Control.IsVisible(50) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]]</visible>
-						<control type="image">
-							<top>60</top>
-							<width>362</width>
-							<height>105</height>
-							<left>117</left>
-							<aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture>$VAR[LibraryClearLogoVar]</texture>
-							<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-						</control>
-						<control type="label">
-							<left>450</left>
-							<top>10</top>
-							<height>25</height>
-							<width>120</width>
-							<align>right</align>
-							<font>font12</font>
-							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
-							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
-						</control>
 					</control>
-					<control type="group">
+					<control type="image">
+						<top>50</top>
+						<width>284</width>
+						<height>80</height>
+						<left>155</left>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$VAR[LibraryClearLogoVar]</texture>
+						<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 						<visible>Control.IsVisible(55)</visible>
-						<control type="image">
-							<top>50</top>
-							<width>284</width>
-							<height>80</height>
-							<left>155</left>
-							<aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture>$VAR[LibraryClearLogoVar]</texture>
-							<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
-						</control>
-						<control type="label">
-							<left>450</left>
-							<top>10</top>
-							<height>25</height>
-							<width>120</width>
-							<align>right</align>
-							<font>font12</font>
-							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
-							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
-						</control>
 					</control>
 				</control>
 				<control type="image">

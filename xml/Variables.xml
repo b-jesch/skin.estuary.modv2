@@ -1288,13 +1288,13 @@
 		<value/>
 	</variable>
 	<variable name="ColorDepthDvVar">
-		<value condition="String.Contains(ListItem.Filenameandpath,.dv.) | String.Contains(ListItem.Filenameandpath,.dovu.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="[String.Contains(Player.Filenameandpath,.dv.) | String.Contains(Player.Filenameandpath,.dovu.) | String.Contains(Player.Filenameandpath,.dolbyvision.)] + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,.dv.) | String.Contains(ListItem.Filenameandpath,.dovi.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="[String.Contains(Player.Filenameandpath,.dv.) | String.Contains(Player.Filenameandpath,.dovi.) | String.Contains(Player.Filenameandpath,.dolbyvision.)] + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.dv.) | String.Contains(Container.ListItem.Filenameandpath,.dovuv.) | String.Contains(Container.ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + [String.Contains(Container(60).ListItem.Filenameandpath,.dv.) | String.Contains(Container(60).ListItem.Filenameandpath,.dovu.) | String.Contains(Container(60).ListItem.Filenameandpath,.dolbyvision.)]">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dovu.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dovu.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dovu.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + [String.Contains(Container(60).ListItem.Filenameandpath,.dv.) | String.Contains(Container(60).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(60).ListItem.Filenameandpath,.dolbyvision.)]">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value/>
 	</variable>
 	<variable name="3DFlagVar">
