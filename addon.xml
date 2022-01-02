@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.3.0+matrix.14" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.3.0+matrix.15" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -50,8 +50,10 @@
 			</assets>
 <news>
 [B]3.3.0+matrix[/B]
-- .14
-      Recognition for Dolby Vision extended (.dovu., .dolbyvision.)
+- .15 Recognition for Dolby Vision changed from .dovu. to .dovi.
+      optimized breadcrumbs in list views, visibility is now switchable/costumable
+      Seasonal themes for 2022 updated (Valentine: 14.02, Easter: 14-18.04, Halloween: 31.10, Christmas: 27.11 - 26.12)
+- .14 Recognition for Dolby Vision extended (.dovi., .dolbyvision.)
       Coloured media flags added, thanks again to frodo19
       Hungarian language added, many thanks to frodo19
       Recognition of 3D Files partial changed

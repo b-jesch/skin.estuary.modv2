@@ -876,6 +876,19 @@
 					<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
 					<selected>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</selected>
 				</control>
+				<control type="radiobutton" id="717">
+					<label>$LOCALIZE[40392]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_breadcrumbs)</onclick>
+					<selected>Skin.HasSetting(show_breadcrumbs)</selected>
+				</control>
+				<control type="radiobutton" id="718">
+					<label>  ∟$LOCALIZE[40393]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_breadcrumbs_countonly)</onclick>
+					<selected>Skin.HasSetting(show_breadcrumbs_countonly)</selected>
+					<visible>Skin.HasSetting(show_breadcrumbs)</visible>
+				</control>
 				<control type="label" id="30018">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
