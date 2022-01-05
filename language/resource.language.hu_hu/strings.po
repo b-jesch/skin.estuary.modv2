@@ -1065,7 +1065,7 @@ msgstr "Megjelenő elemek száma Widgetekben"
 #: /xml/SkinSettings.xml
 msgctxt "#40068"
 msgid "Show media clearlogos"
-msgstr "Clearlogo muatása"
+msgstr "Clearlogo mutatása"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40069"
@@ -1320,7 +1320,7 @@ msgstr "Kiegészítő beállítások"
 #: /xml/SkinSettings.xml
 msgctxt "#40119"
 msgid "Show, add and remove animated posters"
-msgstr ""
+msgstr "Animált poszterek mutatása, hozzáadása, törlése."
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#40120"
@@ -1730,7 +1730,7 @@ msgstr "Ne mutasd többé"
 #: /xml/SkinSettings.xml
 msgctxt "#40201"
 msgid "Rating text color"
-msgstr ""
+msgstr "Pontozás szövegszín"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40202"
@@ -2462,3 +2462,43 @@ msgstr "Infó mutatása"
 msgctxt "#40391"
 msgid "Sort Order"
 msgstr "Rendezési mód"
+
+msgctxt "#40392"
+msgid "Show Path Navigation (Breadcrumbs) in List Views"
+msgstr "Elérési út navigációt mutat(Breadcrumbs) a listanézetekben"
+
+msgctxt "#40393"
+msgid "Show only 'current item / item count' Information"
+msgstr "Csak a jelenlegi elem / elemszám információja"
+
+msgctxt "#40394"
+msgid "Set Animated Poster"
+msgstr "Animált poszterek"
+
+msgctxt "#40395"
+msgid "Remove Animated Poster"
+msgstr "Animált poszerek visszavonása"
+
+msgctxt "#40396"
+msgid "Animated Poster removed"
+msgstr "Animált poszerek visszavonva"
+
+msgctxt "#40397"
+msgid "Animated Poster added"
+msgstr "Animált poszerek hozzáadva"
+
+msgctxt "#40398"
+msgid "Local Path to animated Poster Folder"
+msgstr "Helyi elérési út az Animált poszerekhez"
+
+msgctxt "#40399"
+msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
+msgstr "Az animált posztergyűjtemény mappája még nincs meghatározva. Határozzon meg egy mappát a helyi fájlrendszerben, amely animált posztereket tartalmaz, a felszín beállításokhoz. "
+
+msgctxt "#40400"
+msgid "Could not assign animated Poster"
+msgstr "Nem sikerült hozzárendelni az animált posztert"
+
+msgctxt "#40401"
+msgid "Hit Probability: "
+msgstr "Találat valószínűsége: "
