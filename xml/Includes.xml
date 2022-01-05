@@ -2298,9 +2298,11 @@
 						<visible>Skin.HasSetting(show_breadcrumbs) + Skin.HasSetting(show_breadcrumbs_countonly)</visible>
 						<control type="label">
 							<font>font12</font>
+							<width>540</width>
+							<align>right</align>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
-							<label>$INFO[Container.CurrentItem,[B], / ]$INFO[Container.NumItems][/B]</label>
+							<label>$INFO[Container.CurrentItem,[B], / ]$INFO[Container.NumItems,,[/B]]</label>
 						</control>
 					</control>
 				</control>

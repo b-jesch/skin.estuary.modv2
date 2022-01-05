@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!--<onload condition="!Skin.HasSetting(FirstTimeRun2)">ActivateWindow(1136)</onload>-->
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onunload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
@@ -1027,6 +1026,14 @@
 					<onclick>Skin.ToggleSetting(Skin_EnableAnimatedPosters)</onclick>
 					<selected>Skin.HasSetting(Skin_EnableAnimatedPosters)</selected>
 				</control>
+				<control type="button" id="612">
+                    <label>  ∟$LOCALIZE[40398]</label>
+                    <label2>$VAR[Label_SkinSetting_APSource]</label2>
+                    <include>DefaultSettingButton</include>
+                    <onclick condition="!Skin.String(ap_source)">Skin.SetPath(ap_source)</onclick>
+                    <onclick condition="Skin.String(ap_source)">Skin.Reset(ap_source)</onclick>
+					<visible>Skin.HasSetting(Skin_EnableAnimatedPosters)</visible>
+                </control>
 				<control type="radiobutton" id="604">
 					<label>$LOCALIZE[40361]</label>
 					<include>DefaultSettingButton</include>

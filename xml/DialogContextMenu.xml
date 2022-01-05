@@ -130,7 +130,7 @@
 				<left>0</left>
 				<top>80</top>
 				<width>510</width>
-				<height>780</height>
+				<height>850</height>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
 			<control type="grouplist" id="996">
@@ -138,14 +138,14 @@
 				<left>0</left>
 				<top>80</top>
 				<width>510</width>
-				<height max="780">auto</height>
+				<height max="850">auto</height>
 				<usecontrolcoords>true</usecontrolcoords>
 			</control>
 			<include content="UpDownArrows">
 				<param name="container_id" value="996" />
 				<param name="posx" value="201" />
-				<param name="up_posy" value="-120" />
-				<param name="down_posy" value="878" />
+				<param name="up_posy" value="-40" />
+				<param name="down_posy" value="950" />
 			</include>
 		</control>
 		<control type="button" id="1000">
