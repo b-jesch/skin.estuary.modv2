@@ -18,6 +18,12 @@ preferably before the file extension:
 |     ![](resources/flags/3d.png)     | ![](resources/flags/3dmvc.png) | ![](resources/flags/3dsbs.png) | ![](resources/flags/3dtab.png) | ![](resources/flags/hdr.png) | ![](resources/flags/hdrplus.png) | ![](resources/flags/dolbyvision.png) | 
 |          no tagging or 3d           |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovi., .dolbyvision.      |
 
+
+### 3.3.1+matrix ###
+- .0 
+  * Contextmenu entry and associated script for (re)assigning animated posters of movies added
+
+
 ### 3.3.0+matrix ###
 - .15
   * Recognition for Dolby Vision changed from .dovu. to .dovi.

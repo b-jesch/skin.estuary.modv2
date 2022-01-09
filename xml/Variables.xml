@@ -403,6 +403,10 @@
 		<value condition="!String.IsEmpty(Skin.String(picture_source))">$INFO[Skin.String(picture_source)]</value>
 		<value>$LOCALIZE[20078]</value>
 	</variable>
+	<variable name="Label_SkinSetting_APSource">
+		<value condition="!String.IsEmpty(Skin.String(ap_source))">$INFO[Skin.String(ap_source)]</value>
+		<value>$LOCALIZE[20078]</value>
+	</variable>
 	<variable name="Label_SkinSetting_Logo">
 		<value condition="Skin.HasSetting(MenuLogoLE)">$LOCALIZE[40368]</value>
 		<value condition="Skin.HasSetting(MenuLogoCE)">$LOCALIZE[40369]</value>
