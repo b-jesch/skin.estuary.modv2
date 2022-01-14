@@ -336,7 +336,7 @@
 								<right>12</right>
 								<top>30</top>
 								<width>80</width>
-								<height>80</height>
+								<height>60</height>
 								<texture>$INFO[ListItem.Icon]</texture>
 								<aspectratio align="right" aligny="top">keep</aspectratio>
 								<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
@@ -437,7 +437,7 @@
 								<right>12</right>
 								<top>30</top>
 								<width>80</width>
-								<height>80</height>
+								<height>60</height>
 								<texture>$INFO[ListItem.Icon]</texture>
 								<aspectratio align="right" aligny="top">keep</aspectratio>
 								<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>

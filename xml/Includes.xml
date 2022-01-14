@@ -1101,7 +1101,7 @@
 				<control type="group">
 					<width>162</width>
 					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(artists) + !Container.Content(albums) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
+					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(artists) + !Container.Content(albums) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
 					<visible>!String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
 					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
@@ -1119,12 +1119,26 @@
 						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]</label>
 						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 						<scroll>true</scroll>
+						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)</visible>
+					</control>
+					<control type="label">
+						<width>105</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>54</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+						<scroll>true</scroll>
+						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)</visible>
 					</control>
 				</control>
 				<control type="group">
 					<width>222</width>
 					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(artists) + !Container.Content(albums) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
+					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(artists) + !Container.Content(albums) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
 					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
 					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
@@ -1142,6 +1156,20 @@
 						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]</label>
 						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 						<scroll>true</scroll>
+						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)</visible>
+					</control>
+					<control type="label">
+						<width>165</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>54</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+						<scroll>true</scroll>
+						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)</visible>
 					</control>
 				</control>
 				<include content="MediaFlag">
@@ -1232,7 +1260,7 @@
 			</control>
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
-				<left>400</left>
+				<left>50</left>
 				<top>5</top>
 				<height>70</height>
 				<align>$PARAM[align]</align>
@@ -1427,8 +1455,49 @@
 				</control>
 				<control type="group">
 					<top>5</top>
+					<width>140</width>
+					<visible>!String.IsEmpty(Window(Home).Property(rotten))</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/rotten.png" />
+						<param name="width" value="140" />
+					</include>
+					<control type="label">
+						<top>-1</top>
+						<left>52</left>
+						<width>86</width>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<visible>!String.IsEmpty(Window(Home).Property(rotten))</visible>
+						<label>$INFO[Window(Home).Property(rotten)]%</label>
+						<font>font_flag</font>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<top>5</top>
 					<width>130</width>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating) + [String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(themoviedb)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tmdb)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tvdb))]</visible>
+					<visible>!String.IsEmpty(Window(Home).Property(metacritic))</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/metacritic.png" />
+						<param name="width" value="130" />
+					</include>
+					<control type="label">
+						<top>-1</top>
+						<left>51</left>
+						<width>76</width>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window(Home).Property(metacritic)]</label>
+						<font>font_flag</font>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<top>5</top>
+					<width>130</width>
+					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating) + [String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(themoviedb)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tmdb)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tvdb)) + String.IsEmpty(Window(Home).Property(rotten)) + String.IsEmpty(Window(Home).Property(metacritic))]</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/rating.png" />
 						<param name="width" value="130" />
@@ -1564,6 +1633,7 @@
 	</include>
 	<include name="MediaFlagsInfoDialogRight">
 		<param name="infolabel_prefix"></param>
+		<param name="pvr">false</param>
 		<param name="resolution_var">$VAR[3DFlagVar]</param>
 		<param name="audiocodec_var">$VAR[AudioCodecFlagVar]</param>
 		<param name="visible">true</param>
@@ -1579,6 +1649,69 @@
 				<width>1900</width>
 				<usecontrolcoords>true</usecontrolcoords>
 				<visible>$PARAM[visible]</visible>
+				<control type="group">
+					<top>5</top>
+					<width>130</width>
+					<visible>$PARAM[pvr]</visible>
+					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tmdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.tmdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.themoviedb))</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/tmdb.png" />
+						<param name="width" value="130" />
+					</include>
+					<control type="label">
+						<top>-1</top>
+						<left>51</left>
+						<width>76</width>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[PVRMetadataRatingTmdbVar]</label>
+						<font>font_flag</font>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<top>5</top>
+					<width>130</width>
+					<visible>$PARAM[pvr]</visible>
+					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.imdb))</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/imdb.png" />
+						<param name="width" value="130" />
+					</include>
+					<control type="label">
+						<top>-1</top>
+						<left>51</left>
+						<width>76</width>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[PVRMetadataRatingImdbVar]</label>
+						<font>font_flag</font>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<width>120</width>
+					<top>5</top>
+					<visible>$PARAM[pvr]</visible>
+					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="$VAR[MPAAImageVar]" />
+						<param name="width" value="120" />
+					</include>
+					<control type="label">
+						<width>54</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>62</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<label>$VAR[MPAAFlagVar]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+					</control>
+				</control>
 				<control type="group">
 					<width>176</width>
 					<top>5</top>
@@ -1602,7 +1735,7 @@
 				<control type="group">
 					<width>162</width>
 					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)</visible>
+					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)</visible>
 					<visible>!String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/finishtime.png" />
@@ -1619,6 +1752,20 @@
 						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]</label>
 						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 						<scroll>true</scroll>
+						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)</visible>
+					</control>
+					<control type="label">
+						<width>105</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>54</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+						<scroll>true</scroll>
+						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -1641,8 +1788,22 @@
 						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]</label>
 						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 						<scroll>true</scroll>
+						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)</visible>
 					</control>
-				</control>	
+					<control type="label">
+						<width>165</width>
+						<top>-1</top>
+						<height>50</height>
+						<posx>54</posx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font_flag</font>
+						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]</label>
+						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+						<scroll>true</scroll>
+						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)</visible>
+					</control>
+				</control>
 			</control>
 		</definition>
 	</include>
@@ -3386,7 +3547,7 @@
 					<aspectratio align="left">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
-					<texture background="true">$INFO[Player.Art(discart)]</texture>
+					<texture background="true" diffuse="overlays/cdart_mask.png">$INFO[Player.Art(discart)]</texture>
 					<visible>!Skin.HasSetting(show_discart) + !Window.IsVisible(MusicVisualisation.xml)</visible>
 					<visible>!VideoPlayer.Content(musicvideos)</visible>
 				</control>
@@ -3405,7 +3566,7 @@
 						<aligny>top</aligny>
 						<aspectratio align="left">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture background="true" fallback="osd/cd.png">$VAR[PlayerInfoDiscArtVar]</texture>
+						<texture background="true" diffuse="overlays/cdart_mask.png" fallback="osd/cd.png">$VAR[PlayerInfoDiscArtVar]</texture>
 					</control>
 					<control type="label">
 						<left>70</left>

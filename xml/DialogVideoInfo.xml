@@ -2,7 +2,14 @@
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
+	<onload condition="Skin.HasSetting(tomatometerallcritics) + !String.IsEmpty(ListItem.Rating(tomatometerallcritics))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallcritics)] * 10)"',prop=rotten)</onload>
+	<onload condition="Skin.HasSetting(tomatometeravgcritics) + !String.IsEmpty(ListItem.Rating(tomatometeravgcritics))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometeravgcritics)] * 10)"',prop=rotten)</onload>
+	<onload condition="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.Rating(tomatometerallaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallaudience)] * 10)"',prop=rotten)</onload>
+	<onload condition="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.Rating(tomatometeravgaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometeravgaudience)] * 10)"',prop=rotten)</onload>
+	<onload condition="!String.IsEmpty(ListItem.Rating(metacritic))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(metacritic)] * 10)"',prop=metacritic)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onunload>ClearProperty(rotten,home)</onunload>
+	<onunload>ClearProperty(metacritic,home)</onunload>
 	<controls>
 		<include condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">DefaultBackground</include>
 		<control type="group">
@@ -14,8 +21,8 @@
 				<control type="image">
 					<top>-20</top>
 					<left>-20</left>
-					<width>340</width>
-					<height>467</height>
+					<width>293</width>
+					<height>400</height>
 					<texture>colors/black.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -24,8 +31,8 @@
 					<depth>DepthContentPopout</depth>
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
-					<height>427</height>
+					<width>253</width>
+					<height>360</height>
 					<aspectratio>scale</aspectratio>
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
 				</control>
@@ -35,16 +42,16 @@
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>300</width>
-						<height>427</height>
+						<width>253</width>
+						<height>360</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="AAFFFFFF" fallback="DefaultVideo.png">colors/black.png</texture>
 					</control>
 					<control type="image">
 						<left>2</left>
 						<top>2</top>
-						<width>296</width>
-						<height>423</height>
+						<width>249</width>
+						<height>356</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture fallback="DefaultVideoFanart.png">$VAR[EpisodeThumbInfoVar]</texture>
 						<bordertexture>colors/white.png</bordertexture>
@@ -52,20 +59,29 @@
 					</control>
 				</control>
 			</control>
-			<control type="image" id="3334">
-				<top>170</top>
+			<control type="image" id="3336">
+				<top>18</top>
 				<right>50</right>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<texture background="true" fallback="fallback.png">$VAR[ClearArtVar]</texture>
+				<include>OpenClose_Right</include>
+				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)] + !Skin.HasSetting(enable_LibraryClearArt)</visible>
+			</control>
+			<control type="image" id="3334">
+				<right>50</right>
+				<top>485</top>
 				<width>284</width>
 				<height>110</height>
-				<aspectratio align="right" aligny="top">keep</aspectratio>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
 				<texture background="true" fallback="fallback.png">$VAR[ClearLogoVar]</texture>
-				<include>OpenClose_Right</include>
 				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)] + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
-				<left>384</left>
+				<left>330</left>
 				<right>30</right>
 				<top>50</top>
 				<control type="label">
@@ -107,7 +123,7 @@
 						<ondown>5000</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
-						<visible>!Skin.HasSetting(enable_LibraryClearLogo) + !String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>!Skin.HasSetting(enable_LibraryClearArt) + !String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
 					<control type="button" id="138">
 						<left>-8</left>
@@ -123,7 +139,7 @@
 						<ondown>5000</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
-						<visible>Skin.HasSetting(enable_LibraryClearLogo) | String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>Skin.HasSetting(enable_LibraryClearArt) | String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
 					<control type="textbox">
 						<left>16</left>
@@ -134,7 +150,7 @@
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[PlotSpoilerInfoVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>!Skin.HasSetting(enable_LibraryClearLogo) + !String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>!Skin.HasSetting(enable_LibraryClearArt) + !String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
 					<control type="textbox">
 						<left>16</left>
@@ -145,13 +161,13 @@
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[PlotSpoilerInfoVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>Skin.HasSetting(enable_LibraryClearLogo) | String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>Skin.HasSetting(enable_LibraryClearArt) | String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="5000">
-					<left>-354</left>
+					<left>-300</left>
 					<top>435</top>
-					<right>-30</right>
+					<right>254</right>
 					<height>400</height>
 					<onleft>5000</onleft>
 					<onright>5000</onright>
@@ -340,7 +356,7 @@
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<top>340</top>
-			<left>400</left>
+			<left>344</left>
 			<right>50</right>
 			<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 			<control type="label">
@@ -626,7 +642,7 @@
 					<param name="font" value="fontplot" />
 				</include>
 				<include content="InfoDialogMetadata">
-					<param name="control_id" value="160" />
+					<param name="control_id" value="159" />
 					<param name="label" value="$INFO[ListItem.RatingAndVotes(themoviedb),$LOCALIZE[563] TheMovieDb : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
@@ -643,6 +659,41 @@
 					<param name="control_id" value="161" />
 					<param name="label" value="$INFO[ListItem.RatingAndVotes(tvdb),$LOCALIZE[563] TVDB : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes(tvdb))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata">
+					<param name="control_id" value="162" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(metacritic),$LOCALIZE[563] MetaCritic : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(ListItem.RatingAndVotes(metacritic))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata">
+					<param name="control_id" value="163" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(tomatometerallcritics),$LOCALIZE[563] Rotten Tomatoes (Tomatometer all Critics) : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="Skin.HasSetting(tomatometerallcritics) + !String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata">
+					<param name="control_id" value="164" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(tomatometeravgcritics),$LOCALIZE[563] Rotten Tomatoes (Tomatometer average Critics) : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="Skin.HasSetting(tomatometeravgcritics) + !String.IsEmpty(ListItem.RatingAndVotes(tomatometeravgcritics))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata">
+					<param name="control_id" value="165" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(tomatometerallaudience),$LOCALIZE[563] Rotten Tomatoes (Tomatometer all Audience) : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.RatingAndVotes(tomatometerallaudience))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata">
+					<param name="control_id" value="166" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(tomatometeravgaudience),$LOCALIZE[563] Rotten Tomatoes (Tomatometer average Audience) : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.RatingAndVotes(tomatometeravgaudience))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
@@ -1027,14 +1078,6 @@
 				<imagepath background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</imagepath>
 				<timeperimage>3000</timeperimage>
 				<randomize>true</randomize>
-			</control>
-			<control type="image">
-				<top>35</top>
-				<centerleft>50%</centerleft>
-				<width>284</width>
-				<height>110</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$VAR[ClearLogoVar]</texture>
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>

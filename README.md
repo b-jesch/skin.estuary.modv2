@@ -18,8 +18,32 @@ preferably before the file extension:
 |     ![](resources/flags/3d.png)     | ![](resources/flags/3dmvc.png) | ![](resources/flags/3dsbs.png) | ![](resources/flags/3dtab.png) | ![](resources/flags/hdr.png) | ![](resources/flags/hdrplus.png) | ![](resources/flags/dolbyvision.png) | 
 |          no tagging or 3d           |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovi., .dolbyvision.      |
 
+The HDR type recognition by filename will be removed if Kodi detects the HDR type itself properly.
+
+### Animated Artwork ###
+
+As the setup of animated artwork was done by skinhelper addon (which was removed from skin) the skin itself has now taken 
+the management of those artwork. Animated artwork has some limitations (see Kodi Wiki: https://kodi.wiki/view/Artwork_types#Animated_Artwork). 
+To get this feature work properly, you have to assign a folder within the skin settings, which contains all the artwork. This 
+folder **must** be a folder of your local filesystem. Also you can use network share, which  **must** be mounted to a local mountpoint.
+Put all your artwork into this folder. Subfolders are allowed (without nesting). 
+
+If you navigate in your movie library, you'll have a new entry now to (re)assign animated Artwork in the context menu. The skin
+supports animated poster only.
+
+![](resources/setup_ap.png)
 
 ### 3.3.1+matrix ###
+- .1
+  * Hungarian language updated
+  * Dutch (Netherland) language updated
+  * Italian language added (many thanks to thedoctor66)
+  * animated artwork detection for TV Shows extended
+  * chapter marks in Video OSD added
+  * Support for Rotten Tomatoes/MetaCritc added (mediaflags)
+  * some smaller fixes/changes
+
+
 - .0 
   * Contextmenu entry and associated script for (re)assigning animated posters of movies added
 
@@ -312,4 +336,11 @@ Note: In my opinion, the adaptation to Kodi 19 is complete. Future changes will 
 
 
 - .5
-  * Dependencies of script.skinhelper completely removed
+  * Dependencies of script.skinhelper service completely removed
+
+### Screenshots ###
+
+![PVR Info](resources/screenshots/screenshot_1.png)![Embuary Info](resources/screenshots/screenshot_2.png)
+![Music Visualization](resources/screenshots/screenshot_3.png)![PVR OSD](resources/screenshots/screenshot_4.png)
+![TV Widget](resources/screenshots/screenshot_5.png)![Video OSD](resources/screenshots/screenshot_6.png)
+![Embuary localized Infos](resources/screenshots/screenshot_7.png)

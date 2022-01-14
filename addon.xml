@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.3.1+matrix" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.3.1+matrix.1" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -32,11 +32,11 @@
  			</item>
             <item library="scripts/context_menu_animated_artwork.py" args="add">
                 <label>$LOCALIZE[40394]</label>
-                <visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(Skin_EnableAnimatedPosters) + String.IsEqual(ListItem.dbtype,movie) + String.IsEmpty(ListItem.Art(animatedposter))</visible>
+                <visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(Skin_EnableAnimatedPosters) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEmpty(ListItem.Art(animatedposter))</visible>
             </item>
             <item library="scripts/context_menu_animated_artwork.py" args="remove">
                 <label>$LOCALIZE[40395]</label>
-                <visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(Skin_EnableAnimatedPosters) + String.IsEqual(ListItem.dbtype,movie) + !String.IsEmpty(ListItem.Art(animatedposter))</visible>
+                <visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(Skin_EnableAnimatedPosters) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + !String.IsEmpty(ListItem.Art(animatedposter))</visible>
             </item>
             <item library="scripts/context_menu_pvr.py">
                 <label>$LOCALIZE[40362]</label>
@@ -58,7 +58,14 @@
 			</assets>
 <news>
 [B]3.3.1+matrix[/B]
--     Contextmenu entry and associated script for (re)assigning animated posters of movies added
+-  .1 Hungarian language updated
+      Dutch (Netherland) language updated
+      Italian language added
+      animated artwork detection for TV Shows extended
+      chapter marks in Video OSD added
+      Support for Rotten Tomatoes/MetaCritc added (mediaflags)
+      some smaller fixes/changes
+-  .0 Contextmenu entry and associated script for (re)assigning animated posters of movies added
 [B]3.3.0+matrix[/B]
 - .15 Recognition for Dolby Vision changed from .dovu. to .dovi.
       optimized breadcrumbs in list views, visibility is now switchable/costumable

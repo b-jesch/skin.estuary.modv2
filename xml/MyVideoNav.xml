@@ -220,7 +220,7 @@
 							<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
 							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+							<visible>String.IsEmpty(ListItem.Plot)</visible>
 						</control>
 						<control type="textbox">
 							<left>10</left>
@@ -228,7 +228,7 @@
 							<width>537</width>
 							<bottom>341</bottom>
 							<label>$LOCALIZE[19055]</label>
-							<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
+							<visible>String.IsEmpty(ListItem.Plot)</visible>
 						</control>
 						<control type="list" id="50054">
 							<left>20</left>
@@ -429,7 +429,7 @@
 					<height>164</height>
 					<right>50</right>
 					<label>$LOCALIZE[19055]</label>
-					<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
+					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="list" id="50051">
 					<left>643</left>
