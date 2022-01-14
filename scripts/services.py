@@ -14,13 +14,6 @@ except ImportError:
 content_ids = list(['50', '55', '53', '54', '505', '500', '502', '503', '504', '506', '507', '508', '509'])
 forced_views = list(['movies', 'sets', 'setmovies', 'tvshows', 'seasons', 'episodes', 'albums', 'artists', 'musicvideos'])
 
-# PVT artwork
-
-content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'tvguide', 'DialogPVRInfo.xml': 'info',
-                      'MyPVRRecordings.xml': 'recordings', 'MyPVRTimers.xml': 'timers', 'MyPVRSearch.xml': 'search'})
-
-win = xbmcgui.Window(10000)
-
 
 def get_view_id(content):
 
@@ -63,6 +56,14 @@ def viewswitcher(content, view_mode):
     return current_content, view_mode
 
 
+# PVR artwork
+
+content_types = dict({'MyPVRChannels.xml': 'channels', 'MyPVRGuide.xml': 'tvguide', 'DialogPVRInfo.xml': 'info',
+                      'MyPVRRecordings.xml': 'recordings', 'MyPVRTimers.xml': 'timers', 'MyPVRSearch.xml': 'search'})
+
+win = xbmcgui.Window(10000)
+
+
 def pvrartwork(current_item):
 
     prefix = 'PVR.Artwork'
@@ -98,16 +99,10 @@ def pvrartwork(current_item):
     if not (title or channel): return ''
 
     if current_item != '%s-%s' % (title, channel) and win.getProperty('%s.Lookup' % prefix) != 'busy':
-        win.setProperty("%s.Lookup" % prefix, "busy")
-        details = pmd.get_pvr_artwork(title, channel, genre, year, manual_select=False, ignore_cache=False)
-        pmd.clear_properties(prefix)
-        if details:
-            if details.get('art', False):
-                pmd.set_properties(prefix, details['art'])
-                win.setProperty('%s.present' % prefix, 'true')
-            pmd.set_labels(prefix, details)
-
-        win.clearProperty("%s.Lookup" % prefix)
+        try:
+            pmd.get_pvr_artwork(prefix, title, channel, genre, year, manual_select=False, ignore_cache=False)
+        except:
+            xbmc.log('PVR Artwork module error', xbmcgui.NOTIFICATION_ERROR)
 
     return '%s-%s' % (title, channel)
 

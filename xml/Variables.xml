@@ -155,8 +155,14 @@
 			<value>$LOCALIZE[40148]</value>
 	</variable>
 	<variable name="CollectionNumberVar">
-		<value condition="String.IsEqual(Container(50054).NumItems,1)">$INFO[Container(50054).NumItems,, $LOCALIZE[36900]]</value>
-		<value>$INFO[Container(50054).NumItems,, $LOCALIZE[36901]]</value>
+		<value condition="Control.IsVisible(51) + String.IsEqual(Container(50051).NumItems,1)">$INFO[Container(50051).NumItems,, $LOCALIZE[36900]]</value>
+		<value condition="Control.IsVisible(51)">$INFO[Container(50051).NumItems,, $LOCALIZE[36901]]</value>
+		<value condition="[Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(505)] + String.IsEqual(Container(50054).NumItems,1)">$INFO[Container(50054).NumItems,, $LOCALIZE[36900]]</value>
+		<value condition="[Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(505)]">$INFO[Container(50054).NumItems,, $LOCALIZE[36901]]</value>
+		<value condition="Control.IsVisible(55) + String.IsEqual(Container(50055).NumItems,1)">$INFO[Container(50055).NumItems,, $LOCALIZE[36900]]</value>
+		<value condition="Control.IsVisible(55)">$INFO[Container(50055).NumItems,, $LOCALIZE[36901]]</value>
+		<value condition="Control.IsVisible(502) + String.IsEqual(Container(50502).NumItems,1)">$INFO[Container(50502).NumItems,, $LOCALIZE[36900]]</value>
+		<value condition="Control.IsVisible(502)">$INFO[Container(50502).NumItems,, $LOCALIZE[36901]]</value>
 	</variable>
 	<variable name="PVRGenresVar">
 		<value condition="Skin.HasSetting(standard_PVRGenres)">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</value>
@@ -211,6 +217,15 @@
 	<variable name="PVRMetadataRatingVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.rating))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.rating)]</value>
 		<value>$INFO[ListItem.Rating]</value>
+	</variable>
+	<variable name="PVRMetadataRatingTmdbVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.tmdb))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.ratings.tmdb)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.themoviedb))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.ratings.themoviedb)]</value>
+		<value>$INFO[ListItem.Rating(tmdb)]</value>
+	</variable>
+	<variable name="PVRMetadataRatingImdbVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.imdb))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.ratings.imdb)]</value>
+		<value>$INFO[ListItem.Rating(imdb)]</value>
 	</variable>
 	<variable name="PVRMetadataStatusVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.status))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.status)]</value>
@@ -688,6 +703,15 @@
 		<value condition="!String.IsEmpty(Container.ListItem.Art(clearlogo))">$INFO[Container.ListItem.Art(clearlogo)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(artist.clearlogo))">$INFO[Container.ListItem.Art(artist.clearlogo)]</value>
 	</variable>
+	<variable name="ClearArtVar">
+		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Art(clearart))">$INFO[Container(60).ListItem.Art(clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.clearart))">$INFO[Window(Home).Property(PVR.Artwork.clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(artist.clearart))">$INFO[ListItem.Art(artist.clearart)]</value>
+		<value condition="!String.IsEmpty(Container.Art(artist.clearart))">$INFO[Container.Art(artist.clearart)]</value>
+		<value/>
+	</variable>
 	<variable name="Label_SkinSetting_Backgrounds">
 		<value condition="!String.IsEmpty(Container(211).ListItem.Property(background))">$INFO[Container(211).ListItem.Property(background)]</value>
 		<value>$LOCALIZE[40064]</value>
@@ -772,16 +796,17 @@
 	<variable name="MPAAImageVar">
 		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,U) | String.Contains(ListItem.mpaa,0) | String.Contains(ListItem.mpaa,6)">flags/mpaa.png</value>
 		<value condition="String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,6)">flags/mpaa.png</value>
+		<value condition="String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6)">flags/mpaa.png</value>
 		<value condition="String.Contains(ListItem.mpaa,Y7) | String.Contains(ListItem.mpaa,Y) | String.Contains(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,14) | String.Contains(ListItem.mpaa,MA)">flags/mpaa-tv.png</value>
 		<value/>
 	</variable>
 	<variable name="MPAAFlagVar">
-		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12)">12</value>
-		<value condition="String.Contains(ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,16)">16</value>
-		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,18)">18</value>
-		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U)">U</value>
-		<value condition="String.Contains(ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,0)">0</value>
-		<value condition="String.Contains(ListItem.mpaa,6) | String.Contains(Container(60).ListItem.mpaa,6)">6</value>
+		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12)">12</value>
+		<value condition="String.Contains(ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16)">16</value>
+		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18)">18</value>
+		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U)">U</value>
+		<value condition="String.Contains(ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0)">0</value>
+		<value condition="String.Contains(ListItem.mpaa,6) | String.Contains(Container(60).ListItem.mpaa,6) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6)">6</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y7)">Y7</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y)">Y</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-PG)">PG</value>
@@ -1260,6 +1285,13 @@
 		<value condition="Skin.HasSetting(circle_bothrating)">$LOCALIZE[40281]</value>
 		<value>$LOCALIZE[40148]</value>
 	</variable>
+	<variable name="RottenSettingLabel2Var">
+		<value condition="Skin.HasSetting(tomatometerallcritics)">$LOCALIZE[40403]</value>
+		<value condition="Skin.HasSetting(tomatometeravgcritics)">$LOCALIZE[40404]</value>
+		<value condition="Skin.HasSetting(tomatometerallaudience)">$LOCALIZE[40405]</value>
+		<value condition="Skin.HasSetting(tomatometeravgaudience)">$LOCALIZE[40406]</value>
+		<value>$LOCALIZE[40403]</value>
+	</variable>
 	<variable name="ScopeSettingLabel2Var">
 		<value condition="String.IsEmpty(Skin.String(scope_mode))">$LOCALIZE[40277]</value>
 		<value>$INFO[Skin.String(scope_mode)]</value>
@@ -1275,6 +1307,11 @@
 	</variable>
 	<!-- special media flags -->
 	<variable name="ColorDepthHdrVar">
+		<value condition="!String.IsEmpty(VideoPlayer.HdrType) + !String.IsEqual(VideoPlayer.HdrType,dolbyvision)">$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType) + !String.IsEqual(Container(60).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType) + !String.IsEqual(Container(5083).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType) + !String.IsEqual(Container(5084).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType) + !String.IsEqual(Container(5094).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,.hdr.) | String.Contains(ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="[String.Contains(Player.Filenameandpath,.hdr.) | String.Contains(Player.Filenameandpath,.10bit.)] + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.hdr.) | String.Contains(Container.ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
@@ -1292,9 +1329,14 @@
 		<value/>
 	</variable>
 	<variable name="ColorDepthDvVar">
+		<value condition="!String.IsEmpty(VideoPlayer.HdrType) + String.IsEqual(VideoPlayer.HdrType,dolbyvision)">$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType) + String.IsEqual(Container(60).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType) + String.IsEqual(Container(5083).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType) + String.IsEqual(Container(5084).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType) + String.IsEqual(Container(5094).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,.dv.) | String.Contains(ListItem.Filenameandpath,.dovi.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="[String.Contains(Player.Filenameandpath,.dv.) | String.Contains(Player.Filenameandpath,.dovi.) | String.Contains(Player.Filenameandpath,.dolbyvision.)] + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/dolbyvision.png</value>
-		<value condition="String.Contains(Container.ListItem.Filenameandpath,.dv.) | String.Contains(Container.ListItem.Filenameandpath,.dovuv.) | String.Contains(Container.ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Container.ListItem.Filenameandpath,.dv.) | String.Contains(Container.ListItem.Filenameandpath,.dovi.) | String.Contains(Container.ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + [String.Contains(Container(60).ListItem.Filenameandpath,.dv.) | String.Contains(Container(60).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(60).ListItem.Filenameandpath,.dolbyvision.)]">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>

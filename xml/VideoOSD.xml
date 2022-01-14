@@ -359,6 +359,38 @@
 					<action>pvr.seek</action>
 					<visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
 				</control>
+				<control type="ranges">
+					<top>0</top>
+					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
+						<param name="left" value="460"/>
+					</include>
+					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
+						<param name="left" value="30"/>
+					</include>
+					<right>30</right>
+					<height>10</height>
+					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+					<lefttexture>colors/white.png</lefttexture>
+					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+					<righttexture>colors/white.png</righttexture>
+					<info>Player.Cutlist</info>
+				</control>
+				<control type="ranges">
+					<top>4</top>
+					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
+						<param name="left" value="460"/>
+					</include>
+					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
+						<param name="left" value="30"/>
+					</include>
+					<right>30</right>
+					<height>6</height>
+					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
+					<righttexture>colors/white.png</righttexture>
+					<info>Player.Chapters</info>
+				</control>
 			</control>
 		</control>
 	</controls>
