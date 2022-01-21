@@ -102,6 +102,7 @@ def pvrartwork(current_item):
         try:
             pmd.get_pvr_artwork(prefix, title, channel, genre, year, manual_select=False, ignore_cache=False)
         except:
+            win.clearProperty('%s.Lookup' % prefix)
             xbmc.log('PVR Artwork module error', xbmcgui.NOTIFICATION_ERROR)
 
     return '%s-%s' % (title, channel)

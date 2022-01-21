@@ -53,6 +53,12 @@
 					<selected>Skin.HasSetting(SmallOSDVideo)</selected>
                     <onclick>Skin.ToggleSetting(SmallOSDVideo)</onclick>
 				</control>
+				<control type="radiobutton" id="110">
+					<label>$LOCALIZE[40407]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(SimplyfiedOSDVideo)</selected>
+                    <onclick>Skin.ToggleSetting(SimplyfiedOSDVideo)</onclick>
+				</control>
 				<control type="radiobutton" id="114">
 					<label>$LOCALIZE[40159]</label>
 					<include>DefaultSettingButton</include>

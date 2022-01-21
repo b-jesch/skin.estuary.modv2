@@ -34,6 +34,13 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.3.1+matrix ###
+- .2 
+  * Bug fixed for deleting animated artwork of TV Shows
+  * Reimplemented Home button for DVD/BR menus in Video OSD
+  * Audio toggle button in OSD video menu implemented
+  * Introducing simplyfied OSD menu (Netflix style)
+
+
 - .1
   * Hungarian language updated
   * Dutch (Netherland) language updated

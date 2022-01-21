@@ -655,6 +655,7 @@
 	</variable>
 	<variable name="PlayerInfoClearLogoVar">
 		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.clearlogo))">$INFO[Window(Home).Property(PVR.Artwork.clearlogo)]</value>
+		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.logo))">$INFO[Window(Home).Property(PVR.Artwork.logo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(artist.clearlogo))">$INFO[Player.Art(artist.clearlogo)]</value>
@@ -789,6 +790,7 @@
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.clearlogo))">$INFO[Window(Home).Property(PVR.Artwork.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.logo))">$INFO[Window(Home).Property(PVR.Artwork.logo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(artist.clearlogo))">$INFO[ListItem.Art(artist.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.clearlogo))">$INFO[Container.Art(artist.clearlogo)]</value>
 		<value/>
@@ -797,11 +799,13 @@
 		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,U) | String.Contains(ListItem.mpaa,0) | String.Contains(ListItem.mpaa,6)">flags/mpaa.png</value>
 		<value condition="String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,6)">flags/mpaa.png</value>
 		<value condition="String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6)">flags/mpaa.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Y7) | String.Contains(ListItem.mpaa,Y) | String.Contains(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,14) | String.Contains(ListItem.mpaa,MA)">flags/mpaa-tv.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Y7) | String.Contains(ListItem.mpaa,Y) | String.Contains(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,MA)">flags/mpaa-tv.png</value>
 		<value/>
 	</variable>
 	<variable name="MPAAFlagVar">
 		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12)">12</value>
+		<value condition="String.Contains(ListItem.mpaa,13) | String.Contains(Container(60).ListItem.mpaa,13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),13)">13</value>
+		<value condition="String.Contains(ListItem.mpaa,14) | String.Contains(Container(60).ListItem.mpaa,14) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),14)">12</value>
 		<value condition="String.Contains(ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16)">16</value>
 		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18)">18</value>
 		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U)">U</value>
@@ -1307,7 +1311,7 @@
 	</variable>
 	<!-- special media flags -->
 	<variable name="ColorDepthHdrVar">
-		<value condition="!String.IsEmpty(VideoPlayer.HdrType) + !String.IsEqual(VideoPlayer.HdrType,dolbyvision)">$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Player.HdrType) + !String.IsEqual(Player.HdrType,dolbyvision)">$INFO[Player.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType) + !String.IsEqual(Container(60).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType) + !String.IsEqual(Container(5083).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType) + !String.IsEqual(Container(5084).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
@@ -1329,7 +1333,7 @@
 		<value/>
 	</variable>
 	<variable name="ColorDepthDvVar">
-		<value condition="!String.IsEmpty(VideoPlayer.HdrType) + String.IsEqual(VideoPlayer.HdrType,dolbyvision)">$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Player.HdrType) + String.IsEqual(Player.HdrType,dolbyvision)">$INFO[Player.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType) + String.IsEqual(Container(60).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType) + String.IsEqual(Container(5083).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType) + String.IsEqual(Container(5084).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
@@ -1514,6 +1518,8 @@
 		<value condition="Control.HasFocus(700)">$LOCALIZE[298]</value>
 		<value condition="Control.HasFocus(703)">$LOCALIZE[31106]</value>
 		<value condition="Control.HasFocus(704)">$LOCALIZE[24012]</value>
+		<value condition="Control.HasFocus(7041)">$LOCALIZE[24133]</value>
+		<value condition="Control.HasFocus(705)">$LOCALIZE[21447]</value>
 		<value condition="Control.HasFocus(804)">$LOCALIZE[31092]</value>
 		<value condition="Control.HasFocus(70040)">$LOCALIZE[19019]</value>
 		<value condition="Control.HasFocus(70041)">$LOCALIZE[19069]</value>
