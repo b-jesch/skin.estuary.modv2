@@ -122,10 +122,10 @@ def main():
             rpc = {'method': 'VideoLibrary.SetMovieDetails',
                    'params': {'movieid': dbid, 'art': {'animatedposter': None}}}
         elif dbtype == 'tvshow':
-            rpc = {'method': 'VideoLibrary.TVShowDetails',
+            rpc = {'method': 'VideoLibrary.SetTVShowDetails',
                    'params': {'tvshowid': dbid, 'art': {'animatedposter': None}}}
         else:
-            pass
+            xbmc.log('Database type %s not supported' % dbtype)
 
         if jsonrpc(rpc):
             xbmcgui.Dialog().notification(addon_name, xbmc.getLocalizedString(40396),

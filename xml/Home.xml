@@ -221,8 +221,8 @@
 						</include>
 						<include content="WidgetNextWatchEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
-							<param name="sortby" value=""/>
-							<param name="sortorder" value="descending"/>
+							<!--<param name="sortby" value="sorttitle"/>
+							<param name="sortorder" value="asscending"/>-->
 							<param name="widget_header" value="$LOCALIZE[40012]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6700).ListItem.TVShowTitle, | , - ]$INFO[Container(6700).ListItem.Season,,x]$INFO[Container(6700).ListItem.Episode,,. ]$INFO[Container(6700).ListItem.Title]$INFO[Container(6700).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
@@ -230,8 +230,8 @@
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + !Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
-							<param name="sortby" value="date"/>
-							<param name="sortorder" value="ascending"/>
+							<!--<param name="sortby" value="sorttitle"/>
+							<param name="sortorder" value="ascending"/>-->
 							<param name="widget_header" value="$LOCALIZE[40012]"/>
 							<param name="widget_header_focus" value="$INFO[Container(67001).ListItem.TVShowTitle, | , - ]$INFO[Container(67001).ListItem.Season,,x]$INFO[Container(67001).ListItem.Episode,,. ]$INFO[Container(67001).ListItem.Title]$INFO[Container(67001).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
@@ -242,7 +242,8 @@
 							<param name="widget_header" value="$LOCALIZE[40372]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
-							<param name="sortby" value="sorttitle"/>
+							<param name="sortby" value="date"/>
+							<param name="sortorder" value="ascending"/>
 							<param name="list_id" value="6500"/>
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + !Skin.HasSetting(HomeBanner)">
@@ -250,7 +251,8 @@
 							<param name="widget_header" value="$LOCALIZE[40372]"/>
 							<param name="widget_header_focus" value="$INFO[Container(65001).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
-							<param name="sortby" value="sorttitle"/>
+							<param name="sortby" value="date"/>
+							<param name="sortorder" value="ascending"/>
 							<param name="list_id" value="65001"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_inprogresstvshows)">
