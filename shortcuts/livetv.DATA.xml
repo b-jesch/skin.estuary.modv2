@@ -5,14 +5,14 @@
         <label2>Common Shortcut</label2>
         <icon>icons/pvr/refresh.png</icon>
         <action>RunPlugin(plugin://script.service.gto?action=scrape)</action>
-        <visible>System.AddonIsEnabled(script.service.gto)</visible>
+        <visible>System.AddonIsEnabled(script.service.gto) + !Skin.HasSetting(hide_gtowidget)</visible>
     </shortcut>
     <shortcut>
         <label>$ADDON[script.service.gto 30115]</label>
         <label2>Common Shortcut</label2>
         <icon>icons/pvr/newspaper.png</icon>
         <action>RunPlugin(plugin://script.service.gto?action=change_scraper)</action>
-        <visible>System.AddonIsEnabled(script.service.gto)</visible>
+        <visible>System.AddonIsEnabled(script.service.gto) + !Skin.HasSetting(hide_gtowidget)</visible>
     </shortcut>
     <shortcut>
         <label>19019</label>

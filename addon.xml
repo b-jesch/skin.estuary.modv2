@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.3.1+matrix.2" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.3.1+matrix.3" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -8,6 +8,8 @@
 		<import addon="script.embuary.helper" version="2.0.7"/>
 		<import addon="script.embuary.info" version="2.0.7"/>
 		<import addon="script.module.pvr.artwork" version="1.0.18"/>
+        <import optional="true" addon="script.playalbum" version="4.0.2"/>
+        <import optional="true" addon="script.skin.helper.colorpicker" version="4.0.2"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
@@ -58,6 +60,10 @@
 			</assets>
 <news>
 [B]3.3.1+matrix[/B]
+- .3  improved MPAA detection and handling
+      improved OSD menu (thanks to Solo0815)
+      minor fixes
+      several language file updates (thanks to all contributors)
 -  .2 Bug fixed for deleting animated artwork of TV Shows
       Reimplemented Home button for DVD/BR menus in Video OSD
       Audio toggle button in OSD video menu implemented

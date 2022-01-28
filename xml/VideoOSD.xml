@@ -40,7 +40,7 @@
 				<bottom>5</bottom>
 				<width>100%</width>
 				<height>60</height>
-				<itemgap>20</itemgap>
+				<itemgap>14</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
 				<onup>87</onup>
@@ -190,12 +190,20 @@
 				</control>
 				<control type="radiobutton" id="70041">
 					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/guide.png"/>
+						<param name="texture" value="osd/fullscreen/buttons/livetv.png"/>
 					</include>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(pvrchannelguide)</onclick>
 					<visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+				</control>
+				<control type="radiobutton" id="70046">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/guide.png"/>
+					</include>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(TVGuide)</onclick>
+					<visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
 				</control>
 				<control type="radiobutton" id="70042">
 					<include content="OSDButton">

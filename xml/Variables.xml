@@ -296,6 +296,9 @@
 	</variable>
 	<variable name="DurationVar">
 		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Duration)">$INFO[Container(60).ListItem.Duration(h)]h$INFO[Container(60).ListItem.Duration(mm)]</value>
+		<value condition="Control.HasFocus(5083) + !String.IsEmpty(Container(5083).ListItem.Duration)">$INFO[Container(5083).ListItem.Duration(h)]h$INFO[Container(5083).ListItem.Duration(mm)]</value>
+		<value condition="Control.HasFocus(5084) + !String.IsEmpty(Container(5084).ListItem.Duration)">$INFO[Container(5084).ListItem.Duration(h)]h$INFO[Container(5084).ListItem.Duration(mm)]</value>
+		<value condition="Control.HasFocus(5094) + !String.IsEmpty(Container(5094).ListItem.Duration)">$INFO[Container(5094).ListItem.Duration(h)]h$INFO[Container(5094).ListItem.Duration(mm)]</value>			<value condition="Control.HasFocus(5083) + !String.IsEmpty(Container(5083).ListItem.Duration)">$INFO[Container(5083).ListItem.Duration(h)]h$INFO[Container(5083).ListItem.Duration(mm)]</value>
 		<value>$INFO[ListItem.Duration(h)]h$INFO[ListItem.Duration(mm)]</value>
 	</variable>
 	<variable name="PlayerDurationVar">
@@ -708,7 +711,6 @@
 		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Art(clearart))">$INFO[Container(60).ListItem.Art(clearart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.clearart))">$INFO[Window(Home).Property(PVR.Artwork.clearart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(artist.clearart))">$INFO[ListItem.Art(artist.clearart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.clearart))">$INFO[Container.Art(artist.clearart)]</value>
 		<value/>
@@ -796,21 +798,26 @@
 		<value/>
 	</variable>
 	<variable name="MPAAImageVar">
-		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,U) | String.Contains(ListItem.mpaa,0) | String.Contains(ListItem.mpaa,6)">flags/mpaa.png</value>
-		<value condition="String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,6)">flags/mpaa.png</value>
-		<value condition="String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6)">flags/mpaa.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Y7) | String.Contains(ListItem.mpaa,Y) | String.Contains(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,MA)">flags/mpaa-tv.png</value>
+		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,14) | String.Contains(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,0) | String.Contains(ListItem.mpaa,6) | String.Contains(ListItem.mpaa,PG-13) | String.Contains(ListItem.mpaa,13) | String.Contains(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(ListItem.mpaa,U) | String.Contains(ListItem.mpaa,R)">flags/mpaa.png</value>
+		<value condition="String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,14) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,6) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,13) | String.Contains(Container(60).ListItem.mpaa,PG) | String.Contains(Container(60).ListItem.mpaa,G) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,R)">flags/mpaa.png</value>
+		<value condition="String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),14) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),G) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),R)">flags/mpaa.png</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-Y7) | String.Contains(ListItem.mpaa,TV-Y) | String.Contains(ListItem.mpaa,TV-PG) | String.Contains(ListItem.mpaa,TV-G) | String.Contains(ListItem.mpaa,TV-MA)">flags/mpaa-tv.png</value>
 		<value/>
 	</variable>
 	<variable name="MPAAFlagVar">
 		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12)">12</value>
-		<value condition="String.Contains(ListItem.mpaa,13) | String.Contains(Container(60).ListItem.mpaa,13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),13)">13</value>
 		<value condition="String.Contains(ListItem.mpaa,14) | String.Contains(Container(60).ListItem.mpaa,14) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),14)">12</value>
 		<value condition="String.Contains(ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16)">16</value>
 		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18)">18</value>
-		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U)">U</value>
 		<value condition="String.Contains(ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0)">0</value>
 		<value condition="String.Contains(ListItem.mpaa,6) | String.Contains(Container(60).ListItem.mpaa,6) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6)">6</value>
+		<value condition="String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13)">PG-13</value>
+		<value condition="String.Contains(ListItem.mpaa,13) | String.Contains(Container(60).ListItem.mpaa,13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),13)">13</value>
+		<value condition="String.Contains(ListItem.mpaa,PG) | String.Contains(Container(60).ListItem.mpaa,PG) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG)">PG</value>
+		<value condition="String.Contains(ListItem.mpaa,G) | String.Contains(Container(60).ListItem.mpaa,G) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),G)">G</value>
+		<value condition="String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)">NC-17</value>
+		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U)">U</value>
+		<value condition="String.Contains(ListItem.mpaa,R) | String.Contains(Container(60).ListItem.mpaa,R) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),R)">R</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y7)">Y7</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y)">Y</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-PG)">PG</value>
@@ -1523,10 +1530,11 @@
 		<value condition="Control.HasFocus(804)">$LOCALIZE[31092]</value>
 		<value condition="Control.HasFocus(70040)">$LOCALIZE[19019]</value>
 		<value condition="Control.HasFocus(70041)">$LOCALIZE[19069]</value>
-		<value condition="Control.HasFocus(70042)">$LOCALIZE[19033]</value>
+		<value condition="Control.HasFocus(70042)">$LOCALIZE[19032]</value>
 		<value condition="Control.HasFocus(70043)">$LOCALIZE[5]</value>
 		<value condition="Control.HasFocus(70044)">$LOCALIZE[40280] : $VAR[ScopeSettingLabel2Var]</value>
-		<value condition="Control.HasFocus(70045)">$LOCALIZE[19033]</value>
+		<value condition="Control.HasFocus(70045)">$LOCALIZE[19069]</value>
+		<value condition="Control.HasFocus(70046)">$LOCALIZE[19032]</value>
 		<value condition="Control.HasFocus(255)">$LOCALIZE[36501]</value>
 	</variable>
 	<variable name="MusicOSDHelpTextVar">
@@ -1549,7 +1557,7 @@
 		<value condition="Control.HasFocus(607)">$LOCALIZE[590] : $LOCALIZE[16039]</value>
 		<value condition="Control.HasFocus(703)">$LOCALIZE[24013]</value>
 		<value condition="Control.HasFocus(5000)">$LOCALIZE[10004]</value>
-		<value condition="Control.HasFocus(62040)">$LOCALIZE[19033]</value>
+		<value condition="Control.HasFocus(62040)">$LOCALIZE[19032]</value>
 		<value condition="Control.HasFocus(62041)">$LOCALIZE[19019]</value>
 		<value condition="Control.HasFocus(62042)">$LOCALIZE[19069]</value>
 		<value condition="Control.HasFocus(62043)">$LOCALIZE[29900]</value>
@@ -1729,7 +1737,7 @@
 	</variable>
 	<variable name="PVRAreaVar">
 		<value condition="Control.HasFocus(100)">$LOCALIZE[19019]</value>
-		<value condition="Control.HasFocus(101)">$LOCALIZE[19069]</value>
+		<value condition="Control.HasFocus(101)">$LOCALIZE[19032]</value>
 		<value condition="Control.HasFocus(102)">$LOCALIZE[19017]</value>
 		<value condition="Control.HasFocus(103)">$LOCALIZE[19040]</value>
 		<value condition="Control.HasFocus(104)">$LOCALIZE[19138]</value>
