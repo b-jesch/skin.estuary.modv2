@@ -523,7 +523,7 @@
 					<control type="label">
 						<top>-9</top>
 						<left>395</left>
-						<right>645</right>
+						<right>620</right>
 						<height>30</height>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<label>[B]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]][COLOR white]$VAR[SeasonEpisodeLabel][/COLOR][/B]</label>
@@ -531,7 +531,7 @@
 					</control>
 					<control type="label">
 						<top>-3</top>
-						<left>1400</left>
+						<left>1350</left>
 						<right>30</right>
 						<height>30</height>
 						<align>right</align>

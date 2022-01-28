@@ -137,7 +137,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$VAR[SeasonNumberVar]$VAR[EpisodeNumberVar]</label>
+							<label>$VAR[SeasonNumberVar] $VAR[EpisodeNumberVar]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 							<scroll>true</scroll>
 							<visible>Container.Content(tvshows)</visible>
@@ -261,7 +261,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$VAR[SeasonNumberVar]$VAR[EpisodeNumberVar]</label>
+							<label>$VAR[SeasonNumberVar] $VAR[EpisodeNumberVar]</label>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<visible>Container.Content(tvshows)</visible>
@@ -272,7 +272,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$VAR[SeasonNumberVar]$VAR[EpisodeNumberVar]</label>
+							<label>$VAR[SeasonNumberVar] $VAR[EpisodeNumberVar]</label>
 							<textcolor>grey</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<visible>Container.Content(tvshows)</visible>

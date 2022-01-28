@@ -13,10 +13,13 @@ and install it. After that you can install the skin directly from the repository
 If you want to use special flags like HDR or Dolby Vision or special 3D formats you have to name your files with proper tags, 
 preferably before the file extension: 
 
-| 3D with <br> stereoscopic detection |           MVC codec            |          Side by Side          |         Top and Bottom         |          HDR Files           |            HDR+ Files            |             Dolby Vision             |
+| 3D with <br> stereoscopic detection |           MVC codec            |          Side by Side          |         Top and Bottom         |    HDR Files<sup>*</sup>     |            HDR+ Files            |             Dolby Vision<sup>*</sup>             |
 |:-----------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:----------------------------:|:--------------------------------:|:------------------------------------:|
 |     ![](resources/flags/3d.png)     | ![](resources/flags/3dmvc.png) | ![](resources/flags/3dsbs.png) | ![](resources/flags/3dtab.png) | ![](resources/flags/hdr.png) | ![](resources/flags/hdrplus.png) | ![](resources/flags/dolbyvision.png) | 
 |          no tagging or 3d           |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovi., .dolbyvision.      |
+
+<sup>*</sup>Will be detected in Kodi Nexus and up and don't need filename flagging.
+
 
 The HDR type recognition by filename will be removed if Kodi detects the HDR type itself properly.
 
@@ -34,6 +37,13 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.3.1+matrix ###
+- .3
+  * improved MPAA detection and handling
+  * improved OSD menu (thanks to Solo0815)
+  * minor fixes
+  * several language file updates (thanks to all contributors)
+
+
 - .2 
   * Bug fixed for deleting animated artwork of TV Shows
   * Reimplemented Home button for DVD/BR menus in Video OSD
