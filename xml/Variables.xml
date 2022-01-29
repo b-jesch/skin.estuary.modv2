@@ -798,33 +798,34 @@
 		<value/>
 	</variable>
 	<variable name="MPAAImageVar">
-		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,14) | String.Contains(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,0) | String.Contains(ListItem.mpaa,6) | String.Contains(ListItem.mpaa,PG-13) | String.Contains(ListItem.mpaa,13) | String.Contains(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(ListItem.mpaa,U) | String.Contains(ListItem.mpaa,R)">flags/mpaa.png</value>
-		<value condition="String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,14) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,6) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,13) | String.Contains(Container(60).ListItem.mpaa,PG) | String.Contains(Container(60).ListItem.mpaa,G) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,R)">flags/mpaa.png</value>
-		<value condition="String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),14) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),G) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),R)">flags/mpaa.png</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y7) | String.Contains(ListItem.mpaa,TV-Y) | String.Contains(ListItem.mpaa,TV-PG) | String.Contains(ListItem.mpaa,TV-G) | String.Contains(ListItem.mpaa,TV-MA)">flags/mpaa-tv.png</value>
+		<value condition="String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)">flags/mpaa-long.png</value>
+		<value>flags/mpaa.png</value>
 		<value/>
 	</variable>
 	<variable name="MPAAFlagVar">
-		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12)">12</value>
-		<value condition="String.Contains(ListItem.mpaa,14) | String.Contains(Container(60).ListItem.mpaa,14) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),14)">12</value>
-		<value condition="String.Contains(ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16)">16</value>
-		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18)">18</value>
-		<value condition="String.Contains(ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0)">0</value>
-		<value condition="String.Contains(ListItem.mpaa,6) | String.Contains(Container(60).ListItem.mpaa,6) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6)">6</value>
-		<value condition="String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13)">PG-13</value>
-		<value condition="String.Contains(ListItem.mpaa,13) | String.Contains(Container(60).ListItem.mpaa,13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),13)">13</value>
-		<value condition="String.Contains(ListItem.mpaa,PG) | String.Contains(Container(60).ListItem.mpaa,PG) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG)">PG</value>
-		<value condition="String.Contains(ListItem.mpaa,G) | String.Contains(Container(60).ListItem.mpaa,G) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),G)">G</value>
-		<value condition="String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)">NC-17</value>
-		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U)">U</value>
-		<value condition="String.Contains(ListItem.mpaa,R) | String.Contains(Container(60).ListItem.mpaa,R) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),R)">R</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y7)">Y7</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-Y)">Y</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-PG)">PG</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-G)">G</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-14)">14</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-MA)">MA</value>
-		<value>-</value>
+		<value condition="String.Contains(ListItem.mpaa,Approved) | String.Contains(Container(60).ListItem.mpaa,Approved) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Approved)">AP</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated R) | String.Contains(Container(60).ListItem.mpaa,Rated R) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated R)">R</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated PG-13) | String.Contains(Container(60).ListItem.mpaa,Rated PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated PG-13)">PG-13</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated PG) | String.Contains(Container(60).ListItem.mpaa,Rated PG) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated PG)">PG</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated G) | String.Contains(Container(60).ListItem.mpaa,Rated G) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated G)">G</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated NC-17) | String.Contains(Container(60).ListItem.mpaa,Rated NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated NC-17)">NC-17</value>
+		<value condition="String.Contains(ListItem.mpaa,Not Rated) | String.Contains(Container(60).ListItem.mpaa,Not Rated) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Not Rated)">NR</value>
+		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12)">12</value>
+		<value condition="String.Contains(ListItem.mpaa,13) | String.Contains(Container(60).ListItem.mpaa,13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),13)">13</value>
+		<value condition="String.Contains(ListItem.mpaa,14) | String.Contains(Container(60).ListItem.mpaa,14) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),14)">14</value>
+		<value condition="String.Contains(ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16)">16</value>
+		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18)">18</value>
+		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U)">U</value>
+		<value condition="String.Contains(ListItem.mpaa,0) | String.Contains(Container(60).ListItem.mpaa,0) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),0)">0</value>
+		<value condition="String.Contains(ListItem.mpaa,6) | String.Contains(Container(60).ListItem.mpaa,6) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),6)">6</value>
+		<value>NR</value>
 	</variable>
 	<variable name="PowerMenuAspectLabel2Var">
 		<value condition="Skin.HasSetting(powermenu_panel)">$LOCALIZE[31099]</value>
