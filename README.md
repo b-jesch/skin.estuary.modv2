@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.3.1+matrix ###
+- .4  
+  * shortfix for MPAA detection and displaying
+
+
 - .3
   * improved MPAA detection and handling
   * improved OSD menu (thanks to Solo0815)
