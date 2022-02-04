@@ -1101,7 +1101,7 @@
 				<control type="group">
 					<width>162</width>
 					<top>5</top>
-					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(artists) + !Container.Content(albums) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
+					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(12500) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(artists) + !Container.Content(albums) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
 					<visible>!String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
 					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
@@ -1138,7 +1138,7 @@
 				<control type="group">
 					<width>222</width>
 					<top>5</top>
-					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(artists) + !Container.Content(albums) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
+					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(12500) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(artists) + !Container.Content(albums) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
 					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
 					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
@@ -4159,7 +4159,7 @@
 				</control>
 				<left>460</left>
 				<bottom>145</bottom>
-				<right>30</right>
+				<right>400</right>
 				<height>50</height>
 				<align>left</align>
 				<orientation>horizontal</orientation>
@@ -4350,56 +4350,121 @@
 					</control>
 				</control>
 				<include content="MediaFlagOSD">
-					<param name="width" value="10" />
+					<param name="width" value="5" />
 				</include>
-				<control type="image">
-					<width>40</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture>icons/infodialogs/audio.png</texture>
+				<control type="group">
+					<width>104</width>
+					<height>40</height>
 					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+					<control type="image">
+						<top>5</top>
+						<width>104</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flags/language.png</texture>
+					</control>
+					<control type="label">
+						<width>64</width>
+						<left>40</left>
+						<height>40</height>
+						<align>center</align>
+						<label>$INFO[VideoPlayer.AudioLanguage]</label>
+						<font>Font-Flag-Small2</font>
+					</control>
 				</control>
-				<control type="image">
-					<width>5</width>
-					<height>10</height>
-					<aspectratio>keep</aspectratio>
-					<texture/>
-					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+				<control type="group">
+					<width>104</width>
+					<height>40</height>
+					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled</visible>
+					<control type="image">
+						<top>5</top>
+						<width>104</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flags/st_language.png</texture>
+					</control>
+					<control type="label">
+						<width>64</width>
+						<left>40</left>
+						<height>40</height>
+						<align>center</align>
+						<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
+						<font>Font-Flag-Small2</font>
+					</control>
 				</control>
-				<control type="image">
-					<width>40</width>
+			</control>
+			<control type="grouplist">
+				<left>1530</left>
+				<bottom>140</bottom>
+				<right>30</right>
+				<height>50</height>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<itemgap>5</itemgap>
+				<visible>!Player.ChannelPreviewActive + ![VideoPlayer.HasMenu + System.HasMediaDVD]  + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1139) + Pvr.IsPlayingTv</visible>
+				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+				<orientation>horizontal</orientation>
+				<visible>!Player.ChannelPreviewActive</visible>
+				<control type="group">
+					<visible>System.GetBool(pvrplayback.signalquality)</visible>
+					<width>120</width>
 					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.AudioLanguage,icons/infodialogs/flags/,.png]</texture>
-					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+					<control type="image">
+						<width>120</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flags/pvr.png</texture>
+					</control>
+					<control type="label">
+						<width>60</width>
+						<height>40</height>
+						<align>center</align>
+						<label>SIG</label>
+						<font>Font-Flag-Small3</font>
+					</control>
+					<control type="progress">
+						<left>64</left>
+						<width>50</width>
+						<top>6</top>
+						<height>28</height>
+						<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+						<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+						<info>PVR.ActStreamSignal</info>
+					</control>
+				</control>
+				<control type="group">
+					<visible>System.GetBool(pvrplayback.signalquality)</visible>
+					<width>120</width>
+					<height>50</height>
+					<control type="image">
+						<width>120</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flags/pvr.png</texture>
+					</control>
+					<control type="label">
+						<width>60</width>
+						<height>40</height>
+						<align>center</align>
+						<label>SNR</label>
+						<font>Font-Flag-Small3</font>
+					</control>
+					<control type="progress">
+						<left>64</left>
+						<width>50</width>
+						<top>6</top>
+						<height>28</height>
+						<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+						<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+						<info>PVR.ActStreamSnr</info>
+					</control>
 				</control>
 				<control type="image">
-					<width>20</width>
-					<height>50</height>
+					<width>62</width>
+					<height>40</height>
 					<aspectratio>keep</aspectratio>
-					<texture/>
-					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage) + !String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-				</control>
-				<control type="image">
-					<width>40</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture>icons/infodialogs/subtitles.png</texture>
-					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-				</control>
-				<control type="image">
-					<width>5</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture/>
-					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-				</control>
-				<control type="image">
-					<width>40</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.SubtitlesLanguage,icons/infodialogs/flags/,.png]</texture>
-					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+					<texture>flags/encrypt.png</texture>
+					<visible>Pvr.ActStreamIsEncrypted</visible>
 				</control>
 			</control>
 		</control>

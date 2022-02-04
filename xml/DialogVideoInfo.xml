@@ -357,7 +357,7 @@
 			<include>OpenClose_Right</include>
 			<top>340</top>
 			<left>344</left>
-			<right>50</right>
+			<right>870</right>
 			<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 			<control type="label">
 				<label>$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR]][CR]$INFO[ListItem.Director,$LOCALIZE[20339] : [COLOR white],[/COLOR]]</label>
@@ -377,91 +377,183 @@
 			<visible>![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))]</visible>
 			<include>OpenClose_Right</include>
 			<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
-			<right>49</right>
+			<right>50</right>
 			<top>360</top>
 			<height>70</height>
-			<width>631</width>
+			<width>820</width>
 			<height>142</height>
 			<itemgap>5</itemgap>
 			<orientation>horizontal</orientation>
 			<align>right</align>
 			<aligny>center</aligny>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icons/infodialogs/audio.png</texture>
-				<visible>![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3))]</visible>
+			<control type="group">
+				<width>130</width>
+				<height>50</height>
+				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/language.png" />
+					<param name="width" value="130" />
+				</include>
+				<control type="label">
+					<width>63</width>
+					<left>57</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(AudioLanguage.1)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<width>205</width>
+				<height>50</height>
+				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/language.2.png" />
+					<param name="width" value="205" />
+				</include>
+				<control type="label">
+					<width>63</width>
+					<left>57</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(AudioLanguage.1)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+				<control type="label">
+					<width>63</width>
+					<left>132</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(AudioLanguage.2)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<width>280</width>
+				<height>50</height>
+				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !String.IsEmpty(ListItem.Property(AudioLanguage.2)) + !String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/language.3.png" />
+					<param name="width" value="280" />
+				</include>
+				<control type="label">
+					<width>63</width>
+					<left>57</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(AudioLanguage.1)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+				<control type="label">
+					<width>63</width>
+					<left>132</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(AudioLanguage.2)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+				<control type="label">
+					<width>63</width>
+					<left>207</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(AudioLanguage.3)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
 			</control>
 			<control type="image">
 				<width>10</width>
 				<height>10</height>
 				<aspectratio>keep</aspectratio>
 				<texture/>
-				<visible>![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3))]</visible>
-			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[ListItem.Property(AudioLanguage.1),icons/infodialogs/flags/,.png]</texture>
-				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
-			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Property(AudioLanguage.2),icons/infodialogs/flags/,.png]</texture>
-				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
-			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Property(AudioLanguage.3),icons/infodialogs/flags/,.png]</texture>
-				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
-			</control>
-			<control type="image">
-				<width>50</width>
-				<height>10</height>
-				<aspectratio>keep</aspectratio>
-				<texture/>
-				<visible>![String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))]</visible>
-			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icons/infodialogs/subtitles.png</texture>
-				<visible>![String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))]</visible>
-			</control>
-			<control type="image">
-				<width>10</width>
-				<height>10</height>
-				<aspectratio>keep</aspectratio>
-				<texture/>
-				<visible>![String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))]</visible>
-			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[ListItem.Property(SubtitleLanguage.1),icons/infodialogs/flags/,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Property(SubtitleLanguage.2),icons/infodialogs/flags/,.png]</texture>
-				<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
+			<control type="group">
+				<width>130</width>
+				<height>50</height>
+				<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/st_language.png" />
+					<param name="width" value="130" />
+				</include>
+				<control type="label">
+					<width>63</width>
+					<left>57</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(SubtitleLanguage.1)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
 			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Property(SubtitleLanguage.3),icons/infodialogs/flags/,.png]</texture>
-				<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<control type="group">
+				<width>205</width>
+				<height>50</height>
+				<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/st_language.2.png" />
+					<param name="width" value="205" />
+				</include>
+				<control type="label">
+					<width>63</width>
+					<left>57</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(SubtitleLanguage.1)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+				<control type="label">
+					<width>63</width>
+					<left>132</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(SubtitleLanguage.2)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<width>280</width>
+				<height>50</height>
+				<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + !String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/st_language.3.png" />
+					<param name="width" value="280" />
+				</include>
+				<control type="label">
+					<width>63</width>
+					<left>57</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(SubtitleLanguage.1)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+				<control type="label">
+					<width>63</width>
+					<left>132</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(SubtitleLanguage.2)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+				<control type="label">
+					<width>63</width>
+					<left>207</left>
+					<height>50</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(SubtitleLanguage.3)]</label>
+					<font>Font-Flag-Small</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
 			</control>
 		</control>
 		<control type="group">

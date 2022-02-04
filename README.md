@@ -35,6 +35,16 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+### 3.4.0+matrix ###
+- .0  
+
+  * PVR Artwork context menu removed
+  * Animated Artwork context menu removed
+  * Script service.py modified (all parts of PVR Artwork, animated Artwork removed)
+  * Dependency to PVR Artwork Module bumped to 2.0.0
+  * new audio-, subtitle and PVR flags
+  * minor modification of small OSD menu
+
 
 ### 3.3.1+matrix ###
 - .4  

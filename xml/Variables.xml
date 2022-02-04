@@ -8,8 +8,9 @@
 			<value condition="VideoPlayer.Content(livetv)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title=$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="FanartAnimated">
-		<value condition="Skin.HasSetting(EnableExtraFanart)">$INFO[Control.GetLabel(4399)]</value>
+		<value condition="Skin.HasSetting(EnableExtraFanart) + !Control.HasFocus(12300)">$INFO[Control.GetLabel(4399)]</value>
 		<value condition="Skin.HasSetting(show_fanart) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(show_fanart) + Control.HasFocus(12300) + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="Label_SkinSetting_GlobalBackground">
         <value condition="!String.IsEmpty(Skin.String(global-background))">$INFO[Skin.String(global-background)]</value>
@@ -1499,6 +1500,7 @@
 		<value condition="[Player.Playing + !Player.Caching] + !Player.Seeking">[COLOR white]$LOCALIZE[14086][/COLOR]</value>
 	</variable>
 	<variable name="SeekTimeLabelVar">
+		<value condition="Skin.HasSetting(SmallOSDVideo) + String.IsEmpty(Player.SeekNumeric)">$INFO[Player.Title,[B],[/B]]</value>
 		<value condition="!String.IsEmpty(Player.SeekNumeric)">[B]$INFO[Player.SeekNumeric(hh:mm:ss)][/B]</value>
 		<value condition="Player.Seeking + VideoPlayer.HasEPG">$INFO[PVR.EpgEventSeekTime]$INFO[PVR.EpgEventDuration, / ]</value>
 		<value condition="Player.Seeking">$INFO[Player.SeekTime]$INFO[Player.Duration, / ]</value>
