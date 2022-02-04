@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.3.1+matrix.4" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.4.0+matrix" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -7,7 +7,8 @@
         <import addon="script.image.resource.select" version="3.0.2"/>
 		<import addon="script.embuary.helper" version="2.0.7"/>
 		<import addon="script.embuary.info" version="2.0.7"/>
-		<import addon="script.module.pvr.artwork" version="1.0.18"/>
+		<import addon="script.module.pvr.artwork" version="2.0.0"/>
+        <import optional="true" addon="script.module.animated_artwork" version="1.0.0"/>
         <import optional="true" addon="script.playalbum" version="4.0.2"/>
         <import optional="true" addon="script.skin.helper.colorpicker" version="2.0.1"/>
 	</requires>
@@ -32,19 +33,6 @@
  				<label>$LOCALIZE[40181]</label>
  				<visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + String.IsEqual(ListItem.DBType,set) + !Window.IsVisible(Home)</visible>
  			</item>
-            <item library="scripts/context_menu_animated_artwork.py" args="add">
-                <label>$LOCALIZE[40394]</label>
-                <visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(Skin_EnableAnimatedPosters) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEmpty(ListItem.Art(animatedposter))</visible>
-            </item>
-            <item library="scripts/context_menu_animated_artwork.py" args="remove">
-                <label>$LOCALIZE[40395]</label>
-                <visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(Skin_EnableAnimatedPosters) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + !String.IsEmpty(ListItem.Art(animatedposter))</visible>
-            </item>
-            <item library="scripts/context_menu_pvr.py">
-                <label>$LOCALIZE[40362]</label>
-                <description>PVR artwork Configuration</description>
-                <visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + System.HasAddon(script.module.pvr.artwork) + Skin.HasSetting(Skin_enablePvrArtwork) + [Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
-            </item>
     	</menu>
  	</extension>
 	<extension point="xbmc.addon.metadata">
@@ -59,6 +47,13 @@
 				<fanart>resources/fanart.jpg</fanart>
 			</assets>
 <news>
+[B]3.4.0+matrix[/B]
+- .0  PVR Artwork context menu removed
+      Animated Artwork context menu removed
+      Script service.py modified (all parts of PVR Artwork, animated Artwork removed)
+      Dependency to PVR Artwork Module bumped to 2.0.0
+      new audio-, subtitle and PVR flags
+      minor modification of small OSD menu
 [B]3.3.1+matrix[/B]
 - .4  shortfix for MPAA detection and displaying
 - .3  improved MPAA detection and handling

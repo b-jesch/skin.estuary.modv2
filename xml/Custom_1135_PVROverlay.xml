@@ -144,56 +144,45 @@
 					<param name="width" value="104" />
 				</include>
 				<include content="MediaFlagOSD">
-					<param name="width" value="10" />
+					<param name="width" value="5" />
 				</include>
-				<control type="image">
-					<width>40</width>
+				<control type="group">
+					<width>104</width>
 					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture>icons/infodialogs/audio.png</texture>
 					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+					<control type="image">
+						<width>104</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flags/language.png</texture>
+					</control>
+					<control type="label">
+						<width>64</width>
+						<left>40</left>
+						<height>40</height>
+						<align>center</align>
+						<label>$INFO[VideoPlayer.AudioLanguage]</label>
+						<font>Font-Flag-Small</font>
+					</control>
 				</control>
-				<control type="image">
-					<width>5</width>
-					<height>10</height>
-					<aspectratio>keep</aspectratio>
-					<texture/>
-					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-				</control>
-				<control type="image">
-					<width>40</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.AudioLanguage,icons/infodialogs/flags/,.png]</texture>
-					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-				</control>
-				<control type="image">
-					<width>20</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture/>
-					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage) + !String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-				</control>
-				<control type="image">
-					<width>40</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture>icons/infodialogs/subtitles.png</texture>
-					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-				</control>
-				<control type="image">
-					<width>5</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture/>
-					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-				</control>
-				<control type="image">
-					<width>40</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.SubtitlesLanguage,icons/infodialogs/flags/,.png]</texture>
-					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+				<control type="group">
+					<width>104</width>
+					<height>40</height>
+					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled</visible>
+					<control type="image">
+						<width>104</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flags/st_language.png</texture>
+					</control>
+					<control type="label">
+						<width>64</width>
+						<left>40</left>
+						<height>40</height>
+						<align>center</align>
+						<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
+						<font>Font-Flag-Small</font>
+					</control>
 				</control>
 			</control>
 		</control>
