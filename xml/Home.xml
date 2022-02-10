@@ -180,6 +180,13 @@
 							<param name="list_id" value="5600"/>
 						</include>
 					</control>
+					<include content="ImageWidget" condition="!Library.HasContent(movies)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="5500"/>
+						<param name="visible_2" value="false"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="5010"/>
 					</include>
@@ -221,8 +228,6 @@
 						</include>
 						<include content="WidgetNextWatchEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
-							<!--<param name="sortby" value="sorttitle"/>
-							<param name="sortorder" value="asscending"/>-->
 							<param name="widget_header" value="$LOCALIZE[40012]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6700).ListItem.TVShowTitle, | , - ]$INFO[Container(6700).ListItem.Season,,x]$INFO[Container(6700).ListItem.Episode,,. ]$INFO[Container(6700).ListItem.Title]$INFO[Container(6700).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
@@ -230,8 +235,6 @@
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + !Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
-							<!--<param name="sortby" value="sorttitle"/>
-							<param name="sortorder" value="ascending"/>-->
 							<param name="widget_header" value="$LOCALIZE[40012]"/>
 							<param name="widget_header_focus" value="$INFO[Container(67001).ListItem.TVShowTitle, | , - ]$INFO[Container(67001).ListItem.Season,,x]$INFO[Container(67001).ListItem.Episode,,. ]$INFO[Container(67001).ListItem.Title]$INFO[Container(67001).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
@@ -290,6 +293,13 @@
 							<param name="fallback_image" value="DefaultStudios.png"/>
 						</include>
 					</control>
+					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="6400"/>
+						<param name="visible_2" value="false"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="6010"/>
 					</include>
@@ -366,6 +376,13 @@
 							<param name="sortorder" value="descending"/>
 						</include>
 					</control>
+					<include content="ImageWidget" condition="!Library.HasContent(music)">
+						<param name="text_label" value="$LOCALIZE[31110]" />
+						<param name="button_label" value="$LOCALIZE[10049]" />
+						<param name="button_onclick" value="ActivateWindow(Music,Files,return)"/>
+						<param name="button_id" value="7600"/>
+						<param name="visible_2" value="false"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="7010"/>
 					</include>
@@ -452,6 +469,14 @@
 							<param name="list_id" value="8500"/>
 						</include>
 					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31119]" />
+						<param name="button_label" value="$LOCALIZE[31118]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
+						<param name="button_id" value="8600"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Integer.IsGreater(Container(8001).NumItems,0)"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="8010"/>
 					</include>
@@ -493,6 +518,14 @@
 							<param name="icon" value="DefaultPlaylist.png"/>
 						</include>
 					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31105]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,root)"/>
+						<param name="button_id" value="11300"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Integer.IsGreater(Container(11001).NumItems,0)"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="11010"/>
 					</include>
@@ -598,6 +631,13 @@
 							<param name="item_limit" value="2000"/>
 						</include>
 					</control>
+					<include content="ImageWidget" condition="!System.HasPVRAddon">
+						<param name="text_label" value="$LOCALIZE[31143]" />
+						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/xbmc.pvrclient,return)"/>
+						<param name="button_id" value="12400"/>
+						<param name="visible_2" value="false"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="12010"/>
 					</include>
@@ -682,6 +722,13 @@
 							<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.Season, - ,x]$INFO[ListItem.Episode,,.]$INFO[ListItem.EpisodeName, ]"/>
 						</include>
 					</control>
+					<include content="ImageWidget" condition="!System.HasPVRAddon">
+						<param name="text_label" value="$LOCALIZE[31143]" />
+						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
+						<param name="button_id" value="13400"/>
+						<param name="visible_2" value="false"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="13010"/>
 					</include>
@@ -761,6 +808,15 @@
 						</focusedlayout>
 						<content>favourites://</content>
 					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31025]" />
+						<param name="button_label" value="$LOCALIZE[31116]" />
+						<param name="button_onclick" value=""/>
+						<param name="button_id" value="5500"/>
+						<param name="visible_1" value="false"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Integer.IsGreater(Container(14100).NumItems,0)"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="14010"/>
 					</include>
@@ -859,6 +915,13 @@
 							<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
 						</include>
 					</control>
+					<include content="ImageWidget" condition="String.IsEmpty(Weather.plugin)">
+						<param name="text_label" value="$LOCALIZE[31120]" />
+						<param name="button_label" value="$LOCALIZE[31121]" />
+						<param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
+						<param name="button_id" value="15300"/>
+						<param name="visible_2" value="false"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="15010"/>
 					</include>
@@ -998,6 +1061,13 @@
 							<param name="fallback_image" value="DefaultStudios.png"/>
 						</include>
 					</control>
+					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[10048]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="16800"/>
+						<param name="visible_2" value="false"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="16010"/>
 					</include>
@@ -1018,10 +1088,18 @@
 							<param name="widget_target" value="pictures"/>
 							<param name="list_id" value="4100"/>
 						</include>
-						<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
-							<param name="scrollbar_id" value="4010"/>
-						</include>
 					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40174]" />
+						<param name="button_label" value="$LOCALIZE[10050]" />
+						<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
+						<param name="button_id" value="4200"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="!Integer.IsGreater(Container(4001).NumItems,0)"/>
+					</include>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="4010"/>
+					</include>
 				</control>
 				<control type="group" id="17000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1050,6 +1128,15 @@
  							<param name="fallback_icon" value="DefaultAddonGame.png"/>
  						</include>
 					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[40173]" />
+						<param name="button_label" value="$LOCALIZE[31116]" />
+						<param name="button2_label" value="$LOCALIZE[31118]" />
+						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/category.gameaddons,return)"/>
+						<param name="button_id" value="17300"/>
+						<param name="button2_onclick" value="ActivateWindow(addonbrowser)"/>
+						<param name="visible" value="!Integer.IsGreater(Container(17001).NumItems,0)"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="17010"/>
 					</include>
@@ -1060,6 +1147,17 @@
 					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),DiscWidget)</visible>
 					<include content="Visible_Right_Delayed_Home">
 						<param name="id" value="DiscWidget"/>
+					</include>
+					<include content="ImageWidget">
+						<param name="text_label" value="$INFO[System.DVDLabel]" />
+						<param name="button_label" value="$LOCALIZE[341]" />
+						<param name="button_onclick" value="PlayDisc"/>
+						<param name="button_id" value="21100"/>
+						<param name="button2_label" value="$LOCALIZE[13391]"/>
+						<param name="button2_onclick" value="EjectTray()"/>
+						<param name="button3_label" value="$LOCALIZE[600]"/>
+						<param name="button3_onclick" value="RipCD"/>
+						<param name="visible_3" value="System.HasMediaAudioCD"/>
 					</include>
 				</control>
 				<control type="group" id="18000">

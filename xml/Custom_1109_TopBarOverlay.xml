@@ -27,8 +27,7 @@
 				<height>125</height>
 				<texture background="true">$VAR[PlayerInfoClearLogoVar]</texture>
 				<aspectratio aligny="top" align="center">keep</aspectratio>
-				<visible>!Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(enable_playerclearlogo)</visible>
-				<visible>Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_artistclearlogo)</visible>
+				<visible>[!Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(enable_playerclearlogo)] | [Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_artistclearlogo)]</visible>
 			</control>
 			<control type="group">
 				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
