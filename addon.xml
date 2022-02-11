@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.4.0+matrix.1" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
+<addon id="skin.estuary.modv2" version="3.4.0+matrix.2" name="Estuary MOD V2 Matrix" provider-name="Guilouz, K19 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -48,7 +48,10 @@
 			</assets>
 <news>
 [B]3.4.0+matrix[/B]
-- .1  Missing addon dependecies in skin settings added
+- .2  Adjustments/Fixes in several views (mainly music section)
+      missing help text on empty libraries and disc menu are back
+      animated artwork on movie sets are now visible
+- .1  Missing addon dependencies in skin settings added
       Infolabels for SIG/SNR changed (PVR)
 - .0  PVR Artwork context menu removed
       Animated Artwork context menu removed

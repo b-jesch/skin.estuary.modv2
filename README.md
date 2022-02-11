@@ -36,8 +36,18 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.0+matrix ###
-- .0  
+- .2
+  * Adjustments/Fixes in several views (mainly music section)
+  * missing help text on empty libraries and disc menu are back
+  * animated artwork on movie sets are now visible
 
+
+- .1
+  * Missing addon dependencies in skin settings added
+  * Infolabels for SIG/SNR changed (PVR)
+
+
+- .0  
   * PVR Artwork context menu removed
   * Animated Artwork context menu removed
   * Script service.py modified (all parts of PVR Artwork, animated Artwork removed)

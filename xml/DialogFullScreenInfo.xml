@@ -215,6 +215,41 @@
 			<orientation>horizontal</orientation>
 			<align>right</align>
 			<aligny>center</aligny>
+			<control type="group">
+				<width>130</width>
+				<height>50</height>
+				<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/language.png" />
+					<param name="width" value="130" />
+				</include>
+				<control type="label">
+					<width>63</width>
+					<left>57</left>
+					<height>40</height>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.AudioLanguage]</label>
+					<font>Font-Flag-Small</font>
+				</control>
+			</control>
+			<control type="group">
+				<width>130</width>
+				<height>50</height>
+				<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled</visible>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/st_language.png" />
+					<param name="width" value="130" />
+				</include>
+				<control type="label">
+					<width>63</width>
+					<left>57</left>
+					<height>40</height>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
+					<font>Font-Flag-Small</font>
+				</control>
+			</control>
+			<!--
 			<control type="image">
 				<width>40</width>
 				<height>40</height>
@@ -264,7 +299,9 @@
 				<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.SubtitlesLanguage,icons/infodialogs/flags/,.png]</texture>
 				<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
 			</control>
+			-->
 		</control>
+
 		<control type="group">
 			<left>30</left>
 			<top>600</top>

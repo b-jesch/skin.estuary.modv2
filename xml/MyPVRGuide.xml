@@ -513,8 +513,9 @@
 						<width>340</width>
 						<height>262</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture fallback="DefaultTVGuide.png">$VAR[PVRArtworksVar]</texture>
+						<texture>$VAR[PVRArtworksVar]</texture>
 						<visible>!Player.HasVideo</visible>
+						<fadetime>200</fadetime>
 					</control>
 					<include content="BusyPvrArtworkSpinner">
 						<param name="top" value="91" />

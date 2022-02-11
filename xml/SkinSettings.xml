@@ -489,7 +489,7 @@
 					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
 					<onclick condition="!System.HasAddon(script.module.animated_artwork)">InstallAddon(script.module.animated_artwork)</onclick>
 					<onclick condition="System.HasAddon(script.module.animated_artwork)">Addon.OpenSettings(script.module.animated_artwork)</onclick>
-					<selected>System.HasAddon(script.metadata.editor)</selected>
+					<selected>System.HasAddon(script.module.animated_artwork)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="label" id="30016">

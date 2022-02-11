@@ -130,17 +130,28 @@
 			</control>
 			<control type="group">
 				<include>OpenClose_Left</include>
-				<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
 				<visible>!ListItem.IsParentFolder</visible>
 				<control type="image">
-					<top>15</top>
+					<top>50</top>
 					<width>284</width>
-					<height>110</height>
+					<height>80</height>
 					<left>155</left>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>$VAR[LibraryClearLogoVar]</texture>
-					<visible>Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505)</visible>
+					<visible>!Skin.HasSetting(enable_LibraryClearLogo)</visible>
+					<visible>[Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505) | Control.IsVisible(50) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]]</visible>
 				</control>
+			</control>
+			<control type="image">
+				<top>15</top>
+				<width>220</width>
+				<height>85</height>
+				<right>484</right>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$VAR[LibraryClearLogoVar]</texture>
+				<visible>Control.IsVisible(502) + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
+				<include>OpenClose_Right</include>
 			</control>
 			<control type="group">
 				<depth>DepthBars</depth>
