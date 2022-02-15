@@ -173,12 +173,12 @@
 		<value/>
 	</variable>
 	<variable name="PVRArtworksVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster)) + !Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart)) + Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
-		<value condition="!String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
-		<value>DefaultTVGuide.png</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.poster)) + !Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart)) + Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart))">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PVRArtworksVarInfo">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
@@ -674,6 +674,7 @@
 	<variable name="PlayerInfoDiscArtVar">
         <value condition="!String.IsEmpty(Player.Art(discart))">$INFO[Player.Art(discart)]</value>
         <value condition="!String.IsEmpty(Player.Art(album.discart))">$INFO[Player.Art(album.discart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.discart))">$INFO[Window(Home).Property(PVR.Artwork.discart)]</value>
 	</variable>
 	<variable name="PlayerClearArtVar">
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
