@@ -108,6 +108,14 @@
 					</include>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
+				<control type="radiobutton" id="608">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/channelswitch.png"/>
+					</include>
+					<onclick>action(number0)</onclick>
+					<onclick>close</onclick>
+					<visible>VideoPlayer.Content(livetv) + !Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+				</control>
 				<control type="radiobutton" id="604">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/forward.png"/>

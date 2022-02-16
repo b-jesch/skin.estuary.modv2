@@ -2860,7 +2860,6 @@
 					<width>110%</width>
 					<height>135</height>
 					<texture flipy="true" colordiffuse="$VAR[Bars_Opacity]">frame/InfoBar.png</texture>
-					<visible>![Window.IsVisible(MyPVRChannels.xml) + Control.IsVisible(52)]</visible>
 				</control>
 				<control type="group">
 					<visible>$PARAM[info_visible]</visible>
@@ -3617,7 +3616,7 @@
 					<aspectratio align="left">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
-					<texture background="true" diffuse="overlays/cdart_mask.png">$INFO[Player.Art(discart)]</texture>
+					<texture background="true" diffuse="overlays/cdart_mask.png">$VAR[PlayerInfoDiscArtVar]</texture>
 					<visible>!Skin.HasSetting(show_discart) + !Window.IsVisible(MusicVisualisation.xml)</visible>
 					<visible>!VideoPlayer.Content(musicvideos)</visible>
 				</control>

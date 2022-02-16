@@ -497,82 +497,16 @@
 				<include content="BottomBar">
 					<param name="info_visible" value="true" />
 				</include>
+				<include>PVRPanelViewInfoPanel</include>
 				<control type="group">
 					<bottom>0</bottom>
-					<height>365</height>
-					<animation effect="slide" end="0,44" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
-					<control type="videowindow">
-						<left>25</left>
-						<width>340</width>
-						<height>262</height>
-						<visible>Player.HasVideo</visible>
-						<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
-					</control>
-					<control type="image">
-						<left>25</left>
-						<width>340</width>
-						<height>262</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[PVRArtworksVar]</texture>
-						<visible>!Player.HasVideo</visible>
-						<fadetime>200</fadetime>
-					</control>
-					<include content="BusyPvrArtworkSpinner">
-						<param name="top" value="91" />
-						<param name="left" value="155" />
+					<height>70</height>
+					<right>-15</right>
+					<include content="MediaFlagsInfoDialogRight">
+						<param name="align" value="right" />
+						<param name="pvr" value="true" />
 					</include>
-					<control type="label">
-						<top>-9</top>
-						<left>395</left>
-						<right>620</right>
-						<height>30</height>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<label>[B]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]][COLOR white]$VAR[SeasonEpisodeLabel][/COLOR][/B]</label>
-						<scroll>true</scroll>
-					</control>
-					<control type="label">
-						<top>-3</top>
-						<left>1350</left>
-						<right>30</right>
-						<height>30</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<label>[B]$INFO[ListItem.Genre, $LOCALIZE[515] : [COLOR white],[/COLOR]][/B]</label>
-						<scroll>true</scroll>
-					</control>
-					<control type="textbox">
-						<left>395</left>
-						<top>43</top>
-						<right>30</right>
-						<height>200</height>
-						<font>font12</font>
-						<align>justify</align>
-						<label>$INFO[ListItem.Plot]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-					</control>
-					<control type="textbox">
-						<left>395</left>
-						<top>43</top>
-						<right>30</right>
-						<height>200</height>
-						<align>justify</align>
-						<label>$INFO[ListItem.Plot]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>String.IsEqual(Skin.Font, Arial)</visible>
-					</control>
 				</control>
-				<control type="group">
-						<bottom>0</bottom>
-						<height>70</height>
-						<right>-15</right>
-						<include content="MediaFlagsInfoDialogRight">
-							<param name="align" value="right" />
-							<param name="pvr" value="true" />
-						</include>
-					</control>
 			</control>
 			<include>PVRChannelNumberInput</include>
 			<include content="TopBar">
