@@ -173,7 +173,7 @@
 				</control>
 				<control type="group">
 					<visible>ListItem.HasEpg</visible>
-					<top>170</top>
+					<top>100</top>
 					<width>440</width>
 					<height>30</height>
 					<control type="label">
@@ -201,11 +201,19 @@
 						<font>font12</font>
 					</control>
 					<control type="textbox">
-						<top>120</top>
-						<height>300</height>
+						<top>90</top>
+						<height>120</height>
 						<font>font10</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<label>[B]$LOCALIZE[19031] $INFO[ListItem.NextStarttime,(, - ]$INFO[ListItem.NextEndtime,,)] : [/B] $INFO[ListItem.NextTitle,[COLOR white],[/COLOR]]</label>
+						<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
+					</control>
+					<control type="image">
+						<top>180</top>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<height>120</height>
+						<width>440</width>
+						<texture>$VAR[ClearLogoVar]</texture>
 					</control>
 				</control>
 				<control type="progress">
