@@ -1074,6 +1074,8 @@
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">windows/pvr/timer.png</value>
 		<value condition="ListItem.HasArchive">windows/pvr/archive.png</value>
 		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
+		<value condition="ListItem.IsPlaying">windows/pvr/play.png</value>
+		<value condition="ListItem.IsEncrypted">windows/pvr/encrypt.png</value>
 	</variable>
 	<variable name="AutoCompletionContentVar">
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>
