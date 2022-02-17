@@ -3439,6 +3439,7 @@
 				<animation effect="slide" end="0,-240" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
 				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138)">Conditional</animation>
 			</control>
+			<!--
 			<control type="group">
 				<visible>Window.IsActive(fullscreenvideo) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
 				<width>400</width>
@@ -3460,6 +3461,7 @@
 					<label>$LOCALIZE[19158]</label>
 				</control>
 			</control>
+
 			<control type="group">
 				<visible>Window.IsActive(visualisation) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
 				<width>400</width>
@@ -3481,6 +3483,7 @@
 					<label>$LOCALIZE[19158]</label>
 				</control>
 			</control>
+			-->
 			<control type="group">
 				<bottom>0</bottom>
 				<height>550</height>
@@ -4498,6 +4501,7 @@
 				<animation effect="slide" end="0,-250" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
 				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 			</control>
+			<!--
 			<control type="group">
 				<visible>Window.IsActive(fullscreenvideo) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
 				<control type="image">
@@ -4536,6 +4540,7 @@
 					<label>$LOCALIZE[19158]</label>
 				</control>
 			</control>
+			-->
 			<control type="group" id="6000">
 				<top>-5</top>
 				<visible>PVR.IsTimeShift + !Player.ChannelPreviewActive</visible>
