@@ -36,6 +36,12 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.0+matrix ###
+- .3
+  * Video OSD: button 'switch to last channel' added
+  * new view 'Big List' in PVR channel added
+  * several views modified
+
+
 - .2
   * Adjustments/Fixes in several views (mainly music section)
   * missing help text on empty libraries and disc menu are back
