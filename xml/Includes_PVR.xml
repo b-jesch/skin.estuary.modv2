@@ -119,7 +119,7 @@
 				<height>410</height>
 				<control type="image">
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<texture>$VAR[PVRArtworksVarInfo]</texture>
+					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarInfo]</texture>
 					<fadetime>200</fadetime>
 				</control>
 				<include content="BusyPvrArtworkSpinner">
@@ -134,7 +134,7 @@
 				<control type="label">
 					<height>60</height>
 					<font>font45</font>
-					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B]] : $INFO[ListItem.ChannelName]</label>
+					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] : ]$INFO[ListItem.ChannelName]</label>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -172,10 +172,8 @@
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<control type="group">
-					<visible>ListItem.HasEpg</visible>
+					<visible>ListItem.HasEpg + Window.IsVisible(tvchannels)</visible>
 					<top>110</top>
-					<width>440</width>
-					<height>30</height>
 					<control type="label">
 						<align>center</align>
 						<label>$INFO[ListItem.StartDate]</label>
@@ -208,38 +206,55 @@
 						<label>[B]$LOCALIZE[19031] $INFO[ListItem.NextStarttime,(, - ]$INFO[ListItem.NextEndtime,,)] : [/B] $INFO[ListItem.NextTitle,[COLOR white],[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
 					</control>
-					<control type="image">
-						<top>185</top>
-						<aspectratio aligny="bottom">keep</aspectratio>
-						<height>120</height>
-						<width>440</width>
-						<texture>$VAR[ClearLogoVar]</texture>
+				</control>
+				<control type="group">
+					<visible>Window.IsVisible(tvrecordings)</visible>
+					<top>110</top>
+					<control type="label">
+						<font>font12</font>
+						<label>$INFO[ListItem.Label2,$LOCALIZE[577] : ,]</label>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<top>35</top>
+						<font>font12</font>
+						<label>$INFO[ListItem.Size,$LOCALIZE[21802] : ,]</label>
+					</control>
+					<control type="group">
+						<top>52</top>
+						<height>25</height>
+						<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
+						<control type="progress">
+							<top>52</top>
+							<height>12</height>
+							<width>350</width>
+							<colordiffuse>88FFFFFF</colordiffuse>
+							<info>ListItem.PercentPlayed</info>
+						</control>
+						<control type="label">
+							<top>40</top>
+							<right>10</right>
+							<height>20</height>
+							<align>right</align>
+							<font>font12</font>
+							<label>$INFO[ListItem.PercentPlayed,,%]</label>
+						</control>
 					</control>
 				</control>
-				<control type="progress">
-					<top>302</top>
-					<height>12</height>
-					<colordiffuse>88FFFFFF</colordiffuse>
-					<info>ListItem.PercentPlayed</info>
-					<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
+				<control type="image">
+					<top>295</top>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<height>120</height>
+					<width>440</width>
+					<texture>$VAR[ClearLogoVar]</texture>
 				</control>
 			</control>
 			<control type="textbox">
 				<top>670</top>
 				<width>830</width>
 				<bottom>90</bottom>
-				<label>$INFO[ListItem.Plot]</label>
+				<label fallback="19055">$VAR[PVRMetadataPlotVar]</label>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-			<control type="textbox">
-				<top>700</top>
-				<width>830</width>
-				<bottom>90</bottom>
-				<align>center</align>
-				<font>font27</font>
-				<textcolor>80FFFFFF</textcolor>
-				<label>$LOCALIZE[19055]</label>
-				<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Genre)</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -318,7 +333,144 @@
 			</control>
 		</control>
 	</include>
-	<include name="PVRChannelsBigList">
+	<include name="PVRChannelsList">
+		<control type="fixedlist" id="51">
+			<left>0</left>
+			<top>list_y_offset</top>
+			<right>920</right>
+			<bottom>list_y_offset</bottom>
+			<movement>5</movement>
+			<focusposition>7</focusposition>
+			<scrolltime tween="cubic" easing="out">500</scrolltime>
+			<orientation>vertical</orientation>
+			<onleft>9000</onleft>
+			<onright>73</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="$LOCALIZE[535]">list</viewtype>
+			<preloaditems>1</preloaditems>
+			<pagecontrol>73</pagecontrol>
+			<focusedlayout height="70">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+					<visible>Control.HasFocus(51)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+					<visible>Control.HasFocus(51)</visible>
+					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+				</control>
+				<control type="progress">
+					<right>10</right>
+					<top>18</top>
+					<width>50</width>
+					<height>12</height>
+					<colordiffuse>DDFFFFFF</colordiffuse>
+					<midtexture border="3">progress/texturebg_white.png</midtexture>
+					<visible>ListItem.HasEpg</visible>
+					<info>ListItem.Progress</info>
+				</control>
+				<control type="image">
+					<right>20</right>
+					<top>32</top>
+					<width>30</width>
+					<height>30</height>
+					<texture>$VAR[PVRStatusImageVar]</texture>
+				</control>
+				<control type="label">
+					<left>105</left>
+					<top>0</top>
+					<bottom>0</bottom>
+					<right>90</right>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="label">
+					<left>320</left>
+					<top>0</top>
+					<bottom>0</bottom>
+					<right>90</right>
+					<aligny>center</aligny>
+					<align>right</align>
+					<label>$INFO[ListItem.Title]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="label">
+					<left>12</left>
+					<top>0</top>
+					<bottom>0</bottom>
+					<width>75</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font36_title</font>
+					<label>$INFO[ListItem.ChannelNumberLabel]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+			</focusedlayout>
+			<itemlayout height="70">
+				<control type="progress">
+					<right>10</right>
+					<top>18</top>
+					<width>50</width>
+					<height>12</height>
+					<colordiffuse>88FFFFFF</colordiffuse>
+					<midtexture border="3">progress/texturebg_white.png</midtexture>
+					<visible>ListItem.HasEpg</visible>
+					<info>ListItem.Progress</info>
+				</control>
+				<control type="image">
+					<right>20</right>
+					<top>32</top>
+					<width>30</width>
+					<height>30</height>
+					<colordiffuse>88FFFFFF</colordiffuse>
+					<texture>$VAR[PVRStatusImageVar]</texture>
+				</control>
+				<control type="label">
+					<left>105</left>
+					<top>0</top>
+					<bottom>0</bottom>
+					<right>90</right>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="label">
+					<left>320</left>
+					<top>0</top>
+					<bottom>0</bottom>
+					<right>90</right>
+					<aligny>center</aligny>
+					<align>right</align>
+					<label>$INFO[ListItem.Title]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+					<textcolor>grey</textcolor>
+				</control>
+				<control type="label">
+					<left>12</left>
+					<top>0</top>
+					<bottom>0</bottom>
+					<width>75</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font36_title</font>
+					<label>$INFO[ListItem.ChannelNumberLabel]</label>
+					<textcolor>grey</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+			</itemlayout>
+		</control>
+	</include>
+	<include name="PVRChannelsExtendedList">
 		<control type="fixedlist" id="50">
 			<left>0</left>
 			<top>list_y_offset</top>
@@ -478,139 +630,181 @@
 			</itemlayout>
 		</control>
 	</include>
-	<include name="PVRChannelsList">
-		<control type="fixedlist" id="51">
+	<include name="PVRChannelsBigList">
+		<control type="fixedlist" id="53">
 			<left>0</left>
 			<top>list_y_offset</top>
-			<right>920</right>
+			<right>918</right>
 			<bottom>list_y_offset</bottom>
-			<movement>5</movement>
-			<focusposition>7</focusposition>
+			<movement>4</movement>
+			<focusposition>5</focusposition>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
 			<orientation>vertical</orientation>
 			<onleft>9000</onleft>
 			<onright>73</onright>
-			<onup>51</onup>
-			<ondown>51</ondown>
-			<viewtype label="$LOCALIZE[535]">list</viewtype>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<viewtype label="$LOCALIZE[31108]">list</viewtype>
 			<preloaditems>1</preloaditems>
 			<pagecontrol>73</pagecontrol>
-			<focusedlayout height="70">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<right>0</right>
-					<bottom>0</bottom>
-					<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
-					<visible>Control.HasFocus(51)</visible>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<right>0</right>
-					<bottom>0</bottom>
-					<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
-					<visible>Control.HasFocus(51)</visible>
-					<visible>Skin.HasSetting(EnableGradientColor)</visible>
-				</control>
-				<control type="progress">
-					<right>10</right>
-					<top>18</top>
-					<width>50</width>
-					<height>12</height>
-					<colordiffuse>DDFFFFFF</colordiffuse>
-					<midtexture border="3">progress/texturebg_white.png</midtexture>
-					<visible>ListItem.HasEpg</visible>
-					<info>ListItem.Progress</info>
-				</control>
-				<control type="image">
-					<right>20</right>
-					<top>32</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>$VAR[PVRStatusImageVar]</texture>
-				</control>
-				<control type="label">
-					<left>105</left>
-					<top>0</top>
-					<bottom>0</bottom>
-					<right>90</right>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-					<shadowcolor>text_shadow</shadowcolor>
-				</control>
-				<control type="label">
-					<left>320</left>
-					<top>0</top>
-					<bottom>0</bottom>
-					<right>90</right>
-					<aligny>center</aligny>
-					<align>right</align>
-					<label>$INFO[ListItem.Title]</label>
-					<shadowcolor>text_shadow</shadowcolor>
-				</control>
-				<control type="label">
-					<left>12</left>
-					<top>0</top>
-					<bottom>0</bottom>
-					<width>75</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font36_title</font>
-					<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+			<focusedlayout height="130">
+				<control type="group">
+					<top>-50</top>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<right>0</right>
+						<bottom>60</bottom>
+						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						<visible>Control.HasFocus(53)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<right>0</right>
+						<bottom>60</bottom>
+						<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+						<visible>Control.HasFocus(53)</visible>
+						<visible>!Skin.HasSetting(EnableGradientColor)</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>130</width>
+						<height>100</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
+						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<height>120</height>
+						<width>130</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font45_title</font>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
+					</control>
+					<control type="group">
+						<animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+						<control type="image">
+							<left>160</left>
+							<top>10</top>
+							<width>40</width>
+							<height>40</height>
+							<texture>$VAR[PVRStatusImageVar]</texture>
+						</control>
+						<control type="label">
+							<left>210</left>
+							<top>3</top>
+							<height>30</height>
+							<right>10</right>
+							<aligny>top</aligny>
+							<font>font14</font>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</control>
+					<control type="progress">
+						<left>160</left>
+						<top>55</top>
+						<width>150</width>
+						<height>14</height>
+						<midtexture border="3">progress/texturebg_white.png</midtexture>
+						<visible>ListItem.HasEpg</visible>
+						<info>ListItem.Progress</info>
+					</control>
+					<control type="label">
+						<left>320</left>
+						<right>10</right>
+						<top>43</top>
+						<font>font12</font>
+						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<left>160</left>
+						<right>10</right>
+						<top>80</top>
+						<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031] : ]</label>
+						<font>font25_title</font>
+					</control>
 				</control>
 			</focusedlayout>
-			<itemlayout height="70">
-				<control type="progress">
-					<right>10</right>
-					<top>18</top>
-					<width>50</width>
-					<height>12</height>
-					<colordiffuse>88FFFFFF</colordiffuse>
-					<midtexture border="3">progress/texturebg_white.png</midtexture>
-					<visible>ListItem.HasEpg</visible>
-					<info>ListItem.Progress</info>
-				</control>
-				<control type="image">
-					<right>20</right>
-					<top>32</top>
-					<width>30</width>
-					<height>30</height>
-					<colordiffuse>88FFFFFF</colordiffuse>
-					<texture>$VAR[PVRStatusImageVar]</texture>
-				</control>
-				<control type="label">
-					<left>105</left>
-					<top>0</top>
-					<bottom>0</bottom>
-					<right>90</right>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-					<shadowcolor>text_shadow</shadowcolor>
-				</control>
-				<control type="label">
-					<left>320</left>
-					<top>0</top>
-					<bottom>0</bottom>
-					<right>90</right>
-					<aligny>center</aligny>
-					<align>right</align>
-					<label>$INFO[ListItem.Title]</label>
-					<shadowcolor>text_shadow</shadowcolor>
-					<textcolor>grey</textcolor>
-				</control>
-				<control type="label">
-					<left>12</left>
-					<top>0</top>
-					<bottom>0</bottom>
-					<width>75</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font36_title</font>
-					<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					<textcolor>grey</textcolor>
-					<shadowcolor>text_shadow</shadowcolor>
+			<itemlayout height="130">
+				<control type="group">
+					<top>-50</top>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>130</width>
+						<height>100</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
+						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<height>120</height>
+						<width>130</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font45_title</font>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
+					</control>
+					<control type="group">
+						<animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+						<control type="image">
+							<left>160</left>
+							<top>10</top>
+							<width>40</width>
+							<height>40</height>
+							<texture>$VAR[PVRStatusImageVar]</texture>
+						</control>
+						<control type="label">
+							<left>210</left>
+							<top>3</top>
+							<height>30</height>
+							<right>10</right>
+							<aligny>top</aligny>
+							<font>font14</font>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</control>
+					<control type="progress">
+						<left>160</left>
+						<top>55</top>
+						<width>150</width>
+						<height>14</height>
+						<colordiffuse>88FFFFFF</colordiffuse>
+						<visible>ListItem.HasEpg</visible>
+						<info>ListItem.Progress</info>
+					</control>
+					<control type="label">
+						<left>320</left>
+						<right>10</right>
+						<top>43</top>
+						<font>font12</font>
+						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="label">
+						<left>160</left>
+						<right>10</right>
+						<top>80</top>
+						<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031] : ,[/COLOR]]</label>
+						<font>font25_title</font>
+					</control>
 				</control>
 			</itemlayout>
 		</control>
@@ -872,7 +1066,7 @@
 				<width>340</width>
 				<height>262</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$VAR[PVRArtworksVar]</texture>
+				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
 				<visible>!Player.HasVideo</visible>
 				<fadetime>200</fadetime>
 			</control>

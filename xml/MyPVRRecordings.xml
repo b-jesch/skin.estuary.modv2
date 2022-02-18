@@ -133,6 +133,16 @@
 				<param name="info_visible" value="true" />
 			</include>
 			<control type="group">
+				<bottom>0</bottom>
+				<height>70</height>
+				<right>-15</right>
+				<include content="MediaFlagsInfoDialogRight">
+					<param name="align" value="right" />
+					<param name="pvr" value="true" />
+				</include>
+			</control>
+			<!--
+			<control type="group">
 				<depth>DepthBars</depth>
 				<right>20</right>
 				<width>850</width>
@@ -158,6 +168,7 @@
 					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 			</control>
+			-->
 			<control type="group">
 				<include>MediaMenuCommon</include>
 				<include>PVRSideBar</include>
