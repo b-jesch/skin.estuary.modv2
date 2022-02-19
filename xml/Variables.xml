@@ -1324,42 +1324,31 @@
 		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
 	</variable>
 	<!-- special media flags -->
-	<variable name="ColorDepthHdrVar">
-		<value condition="!String.IsEmpty(Player.HdrType) + !String.IsEqual(Player.HdrType,dolbyvision)">$INFO[Player.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType) + !String.IsEqual(Container(60).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType) + !String.IsEqual(Container(5083).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType) + !String.IsEqual(Container(5084).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType) + !String.IsEqual(Container(5094).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
+	<variable name="HdrTypeVar">
+		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Player.HdrType)">$INFO[Player.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,.hdr.) | String.Contains(ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
-		<value condition="[String.Contains(Player.Filenameandpath,.hdr.) | String.Contains(Player.Filenameandpath,.10bit.)] + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.hdr.) | String.Contains(Container.ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="[String.Contains(Container(60).ListItem.Filenameandpath,.hdr.) | String.Contains(Container(60).ListItem.Filenameandpath,.10bit.)] + Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.hdr.) | String.Contains(Container(5083).ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.hdr.) | String.Contains(Container(5084).ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.hdr.) | String.Contains(Container(5094).ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,.hdrplus.) | String.Contains(ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
-		<value condition="[String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.12bit.)] + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container.ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="[String.Contains(Container(60).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(60).ListItem.Filenameandpath,.12bit.)] + Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5083).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5084).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5094).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
-		<value/>
-	</variable>
-	<variable name="ColorDepthDvVar">
-		<value condition="!String.IsEmpty(Player.HdrType) + String.IsEqual(Player.HdrType,dolbyvision)">$INFO[Player.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType) + String.IsEqual(Container(60).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType) + String.IsEqual(Container(5083).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType) + String.IsEqual(Container(5084).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType) + String.IsEqual(Container(5094).ListItem.HdrTypeHdrType,dolbyvision)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="String.Contains(ListItem.Filenameandpath,.dv.) | String.Contains(ListItem.Filenameandpath,.dovi.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="[String.Contains(Player.Filenameandpath,.dv.) | String.Contains(Player.Filenameandpath,.dovi.) | String.Contains(Player.Filenameandpath,.dolbyvision.)] + !String.StartsWith(Player.Filenameandpath,http) + !VideoPlayer.Content(livetv) + !Player.IsInternetStream">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,.dv.) | String.Contains(ListItem.Filenameandpath,.dovi.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.dv.) | String.Contains(Container.ListItem.Filenameandpath,.dovi.) | String.Contains(Container.ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
-		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + [String.Contains(Container(60).ListItem.Filenameandpath,.dv.) | String.Contains(Container(60).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(60).ListItem.Filenameandpath,.dolbyvision.)]">flags/videoresolution/dolbyvision.png</value>
+		<value condition="[String.Contains(Container(60).ListItem.Filenameandpath,.dv.) | String.Contains(Container(60).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(60).ListItem.Filenameandpath,.dolbyvision.)] + Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
-		<value/>
 	</variable>
 	<variable name="3DFlagVar">
 		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
@@ -1524,7 +1513,7 @@
 		<value condition="Control.HasFocus(6051)">$LOCALIZE[31054]</value>
 		<value condition="Control.HasFocus(606) + PVR.IsRecordingPlayingChannel">$LOCALIZE[19059]</value>
 		<value condition="Control.HasFocus(606)">$LOCALIZE[264]</value>
-		<value condition="Control.HasFocus(607)">$LOCALIZE[31050]</value>
+		<value condition="Control.HasFocus(607)">$LOCALIZE[19033]</value>
 		<value condition="Control.HasFocus(6021)">$LOCALIZE[208]</value>
 		<value condition="Control.HasFocus(70011)">$LOCALIZE[31138]</value>
 		<value condition="Control.HasFocus(70012) | Control.HasFocus(70013)">$LOCALIZE[31034]</value>
@@ -1533,7 +1522,7 @@
 		<value condition="Control.HasFocus(700)">$LOCALIZE[298]</value>
 		<value condition="Control.HasFocus(703)">$LOCALIZE[31106]</value>
 		<value condition="Control.HasFocus(704)">$LOCALIZE[24012]</value>
-		<value condition="Control.HasFocus(7041)">$LOCALIZE[24133]</value>
+		<value condition="Control.HasFocus(70041)">$LOCALIZE[19686]</value>
 		<value condition="Control.HasFocus(705)">$LOCALIZE[21447]</value>
 		<value condition="Control.HasFocus(804)">$LOCALIZE[31092]</value>
 		<value condition="Control.HasFocus(70040)">$LOCALIZE[19019]</value>
@@ -1541,7 +1530,7 @@
 		<value condition="Control.HasFocus(70042)">$LOCALIZE[19032]</value>
 		<value condition="Control.HasFocus(70043)">$LOCALIZE[5]</value>
 		<value condition="Control.HasFocus(70044)">$LOCALIZE[40280] : $VAR[ScopeSettingLabel2Var]</value>
-		<value condition="Control.HasFocus(70045)">$LOCALIZE[19069]</value>
+		<value condition="Control.HasFocus(70045)">$LOCALIZE[31050]</value>
 		<value condition="Control.HasFocus(70046)">$LOCALIZE[19032]</value>
 		<value condition="Control.HasFocus(255)">$LOCALIZE[36501]</value>
 	</variable>
