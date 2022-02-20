@@ -507,11 +507,11 @@
 	<include name="PVRChannelsExtendedList">
 		<control type="fixedlist" id="50">
 			<left>0</left>
-			<top>list_y_offset</top>
+			<top>90</top>
 			<right>918</right>
-			<bottom>list_y_offset</bottom>
-			<movement>4</movement>
-			<focusposition>6</focusposition>
+			<bottom>90</bottom>
+			<movement>7</movement>
+			<focusposition>5</focusposition>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
 			<orientation>vertical</orientation>
 			<onleft>9000</onleft>
@@ -523,12 +523,12 @@
 			<pagecontrol>73</pagecontrol>
 			<focusedlayout height="90">
 				<control type="group">
-					<top>-50</top>
+					<top>0</top>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<right>0</right>
-						<bottom>50</bottom>
+						<bottom>0</bottom>
 						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
@@ -536,7 +536,7 @@
 						<left>0</left>
 						<top>0</top>
 						<right>0</right>
-						<bottom>50</bottom>
+						<bottom>0</bottom>
 						<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 						<visible>Skin.HasSetting(EnableGradientColor)</visible>
@@ -601,7 +601,7 @@
 			</focusedlayout>
 			<itemlayout height="90">
 				<control type="group">
-					<top>-50</top>
+					<top>0</top>
 					<control type="image">
 						<right>20</right>
 						<top>10</top>
@@ -667,11 +667,11 @@
 	<include name="PVRChannelsBigList">
 		<control type="fixedlist" id="53">
 			<left>0</left>
-			<top>list_y_offset</top>
+			<top>90</top>
 			<right>918</right>
-			<bottom>list_y_offset</bottom>
-			<movement>4</movement>
-			<focusposition>5</focusposition>
+			<bottom>90</bottom>
+			<movement>7</movement>
+			<focusposition>3</focusposition>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
 			<orientation>vertical</orientation>
 			<onleft>9000</onleft>
@@ -683,12 +683,12 @@
 			<pagecontrol>73</pagecontrol>
 			<focusedlayout height="130">
 				<control type="group">
-					<top>-50</top>
+					<top>0</top>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<right>0</right>
-						<bottom>60</bottom>
+						<bottom>10</bottom>
 						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(53)</visible>
 					</control>
@@ -696,7 +696,7 @@
 						<left>0</left>
 						<top>0</top>
 						<right>0</right>
-						<bottom>60</bottom>
+						<bottom>10</bottom>
 						<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
 						<visible>Control.HasFocus(53)</visible>
 						<visible>!Skin.HasSetting(EnableGradientColor)</visible>
@@ -735,7 +735,7 @@
 							<left>210</left>
 							<top>3</top>
 							<height>30</height>
-							<right>10</right>
+							<right>15</right>
 							<aligny>top</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -753,7 +753,7 @@
 					</control>
 					<control type="label">
 						<left>320</left>
-						<right>10</right>
+						<right>15</right>
 						<top>43</top>
 						<font>font12</font>
 						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
@@ -771,7 +771,7 @@
 			</focusedlayout>
 			<itemlayout height="130">
 				<control type="group">
-					<top>-50</top>
+					<top>0</top>
 					<control type="image">
 						<left>10</left>
 						<top>10</top>
@@ -825,7 +825,7 @@
 					</control>
 					<control type="label">
 						<left>320</left>
-						<right>10</right>
+						<right>15</right>
 						<top>43</top>
 						<font>font12</font>
 						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
@@ -834,7 +834,7 @@
 					</control>
 					<control type="label">
 						<left>160</left>
-						<right>10</right>
+						<right>15</right>
 						<top>80</top>
 						<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031] : ,[/COLOR]]</label>
 						<font>font25_title</font>
@@ -1114,7 +1114,7 @@
 				<right>620</right>
 				<height>30</height>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
-				<label>[B]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]][COLOR white]$VAR[SeasonEpisodeLabel][/COLOR][/B]</label>
+				<label>[B]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]][/B]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
@@ -1129,26 +1129,35 @@
 				<label>[B]$INFO[ListItem.Genre, $LOCALIZE[515] : [COLOR white],[/COLOR]][/B]</label>
 				<scroll>true</scroll>
 			</control>
+			<control type="label">
+				<top>35</top>
+				<left>395</left>
+				<right>30</right>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<label>$VAR[SeasonEpisodeLabel,[B],[/B]]</label>
+			</control>
 			<control type="textbox">
 				<left>395</left>
-				<top>43</top>
+				<top>75</top>
+				<bottom>120</bottom>
 				<right>30</right>
-				<height>200</height>
 				<font>font12</font>
 				<align>justify</align>
 				<label>$INFO[ListItem.Plot]</label>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+				<visible>!String.IsEmpty(ListItem.EpisodeName) | !String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode)</visible>
 			</control>
 			<control type="textbox">
 				<left>395</left>
-				<top>43</top>
+				<top>40</top>
 				<right>30</right>
-				<height>200</height>
+				<bottom>120</bottom>
+				<font>font12</font>
 				<align>justify</align>
 				<label>$INFO[ListItem.Plot]</label>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>String.IsEqual(Skin.Font, Arial)</visible>
+				<visible>String.IsEmpty(ListItem.EpisodeName) + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)</visible>
 			</control>
 			<control type="label">
 				<left>395</left>

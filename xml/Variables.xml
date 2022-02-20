@@ -1780,14 +1780,14 @@
 		<value>$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode,,.]$INFO[VideoPlayer.EpisodeName, ]</value>
   	</variable>
 	<variable name="SeasonEpisodeLabel">
-		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season, - $LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]</value>
-		<value condition="String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)">$INFO[ListItem.EpisodeName, - ]</value>
-		<value>$INFO[ListItem.Season, - ,x]$INFO[ListItem.Episode,,.]$INFO[ListItem.EpisodeName, ]</value>
+		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, $LOCALIZE[20359] ]</value>
+		<value condition="String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)">$INFO[ListItem.EpisodeName]</value>
+		<value>$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E,: ]$INFO[ListItem.EpisodeName]</value>
   	</variable>
   	<variable name="SeasonEpisodeLabel2">
 		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]</value>
 		<value condition="String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)">$INFO[ListItem.EpisodeName]</value>
-		<value>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,.]$INFO[ListItem.EpisodeName, ]</value>
+		<value>$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E,.]$INFO[ListItem.EpisodeName, ]</value>
   	</variable>
 	<variable name="ExpirationDateTimeLabel">
  		<value condition="!String.IsEmpty(ListItem.ExpirationDate)">$LOCALIZE[19299] : [COLOR white]$INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime][/COLOR][CR]</value>
