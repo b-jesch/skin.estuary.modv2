@@ -172,18 +172,17 @@
 				</control>
 				<control type="radiobutton" id="607">
 					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/plot.png"/>
+						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
 					</include>
-					<onclick>ActivateWindow(1138)</onclick>
-					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
+					<onclick>ActivateWindow(fullscreeninfo)</onclick>
+					<visible>!String.IsEmpty(VideoPlayer.Plot) + !VideoPlayer.Content(livetv)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="70045">
 					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
+						<param name="texture" value="osd/fullscreen/buttons/plot.png"/>
 					</include>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(fullscreeninfo)</onclick>
+					<onclick>ActivateWindow(1138)</onclick>
 					<visible>VideoPlayer.Content(livetv)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
@@ -212,14 +211,6 @@
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(TVGuide)</onclick>
 					<visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
-				</control>
-				<control type="radiobutton" id="70042">
-					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
-					</include>
-					<onclick>ActivateWindow(fullscreeninfo)</onclick>
-					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="70012">
 					<include content="OSDButton">
