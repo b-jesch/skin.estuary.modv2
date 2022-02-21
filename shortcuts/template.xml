@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
 	<other include="PersonalWidgetList">
+        <condition tag="property" attribute="name|widget">PersonalWidgetList</condition>
 		<property name="id" tag="mainmenuid" />
 		<property name="WidgetStyle1" tag="property" attribute="name|widgetAspect.1" value="40138">ListPoster</property>
 		<property name="WidgetStyle1" tag="property" attribute="name|widgetAspect.1" value="40139">NextAiringEpisodes</property>
@@ -264,6 +265,7 @@
 		</controls>
 	</other>
 	<other include="PersonalWidgetPanel">
+		<condition tag="property" attribute="name|widget">PersonalWidgetPanel</condition>
 		<property name="id" tag="mainmenuid" />
 		<property name="WidgetStyle9" tag="property" attribute="name|widgetAspect.9" value="40203">PanelPoster</property>
 		<property name="WidgetStyle9" tag="property" attribute="name|widgetAspect.9" value="40206">PanelEpisodes</property>
