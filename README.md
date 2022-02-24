@@ -36,10 +36,14 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.0+matrix ###
+- .4
+  * Colored flags updated (thanks again to frodo19)
+  * smaller modifications on several PVR views
+
+ 
 - .3
   * Video OSD: button 'switch to last channel' added
   * new view 'Big List' in PVR channel added
-  * several views modified
 
 
 - .2
@@ -391,3 +395,7 @@ Note: In my opinion, the adaptation to Kodi 19 is complete. Future changes will 
 ![Music Visualization](resources/screenshots/screenshot_3.png)![PVR OSD](resources/screenshots/screenshot_4.png)
 ![TV Widget](resources/screenshots/screenshot_5.png)![Video OSD](resources/screenshots/screenshot_6.png)
 ![Embuary localized Infos](resources/screenshots/screenshot_7.png)
+![New channel View](resources/screenshots/screenshot_8.png)
+![Improved OSD](resources/screenshots/screenshot_9.png)
+![simplified OSD](resources/screenshots/screenshot_10.png)
+![colored flags](resources/screenshots/screenshot_11.png)

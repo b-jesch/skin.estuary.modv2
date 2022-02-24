@@ -681,13 +681,14 @@
 		<value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
+		<value condition="!StringIsEmpty(Window(Home).Property(PVR.Artwork.clearart))">$INFO[Window(Home).Property(PVR.Artwork.clearart)]</value>
 	</variable>
 	<variable name="LibraryClearLogoVar">
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(artist.clearlogo))">$INFO[ListItem.Art(artist.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.clearlogo))">$INFO[Container.Art(artist.clearlogo)]</value>
-		<value condition="!StringIsEmpty(Window(Home).Property(PVR.Artwork.clearart))">$INFO[Window(Home).Property(PVR.Artwork.clearart)]</value>
+		<value condition="!StringIsEmpty(Window(Home).Property(PVR.Artwork.clearlogo))">$INFO[Window(Home).Property(PVR.Artwork.clearlogo)]</value>
 	</variable>
 	<variable name="ViewClearLogoVar">
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
@@ -1327,23 +1328,27 @@
 	<variable name="HdrTypeVar">
 		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Player.HdrType)">$INFO[Player.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.HdrType)">$INFO[ListItem.Container.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,.hdr.) | String.Contains(ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
+		<value condition="String.Contains(Player.Filenameandpath,.hdr.) | String.Contains(Player.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.hdr.) | String.Contains(Container.ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="[String.Contains(Container(60).ListItem.Filenameandpath,.hdr.) | String.Contains(Container(60).ListItem.Filenameandpath,.10bit.)] + Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.hdr.) | String.Contains(Container(5083).ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.hdr.) | String.Contains(Container(5084).ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.hdr.) | String.Contains(Container(5094).ListItem.Filenameandpath,.10bit.)">flags/videoresolution/hdr.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,.hdrplus.) | String.Contains(ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
+		<value condition="String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container.ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="[String.Contains(Container(60).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(60).ListItem.Filenameandpath,.12bit.)] + Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5083).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5084).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5094).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
-		<value condition="String.Contains(ListItem.Filenameandpath,.dv.) | String.Contains(ListItem.Filenameandpath,.dovi.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/hdr.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,.dv.) | String.Contains(ListItem.Filenameandpath,.dovi.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
+		<value condition="String.Contains(Player.Filenameandpath,.dv.) | String.Contains(Player.Filenameandpath,.dovi.) | String.Contains(ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.dv.) | String.Contains(Container.ListItem.Filenameandpath,.dovi.) | String.Contains(Container.ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="[String.Contains(Container(60).ListItem.Filenameandpath,.dv.) | String.Contains(Container(60).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(60).ListItem.Filenameandpath,.dolbyvision.)] + Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5083).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
@@ -1782,13 +1787,21 @@
 	<variable name="SeasonEpisodeLabel">
 		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, $LOCALIZE[20359] ]</value>
 		<value condition="String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)">$INFO[ListItem.EpisodeName]</value>
-		<value>$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E,: ]$INFO[ListItem.EpisodeName]</value>
+		<value>$VAR[SeasonPrefixVar]$INFO[ListItem.Season]$VAR[EpisodePrefixVar]$INFO[ListItem.Episode,,: ]$INFO[ListItem.EpisodeName]</value>
   	</variable>
   	<variable name="SeasonEpisodeLabel2">
 		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]</value>
 		<value condition="String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)">$INFO[ListItem.EpisodeName]</value>
-		<value>$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E,.]$INFO[ListItem.EpisodeName, ]</value>
+		<value>$VAR[SeasonPrefixVar]$INFO[ListItem.Season]$VAR[EpisodePrefixVar]$INFO[ListItem.Episode,, -]$INFO[ListItem.EpisodeName, ]</value>
   	</variable>
+	<variable name="SeasonPrefixVar">
+		<value condition="Integer.IsGreater(ListItem.Season,9)">S</value>
+		<value>S0</value>
+	</variable>
+	<variable name="EpisodePrefixVar">
+		<value condition="Integer.IsGreater(ListItem.Episode,9)">E</value>
+		<value>E0</value>
+	</variable>
 	<variable name="ExpirationDateTimeLabel">
  		<value condition="!String.IsEmpty(ListItem.ExpirationDate)">$LOCALIZE[19299] : [COLOR white]$INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime][/COLOR][CR]</value>
  	</variable>

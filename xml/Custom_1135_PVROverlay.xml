@@ -8,6 +8,14 @@
 			<bottom>-140</bottom>
 			<height>380</height>
 			<control type="image">
+				<right>0</right>
+				<bottom>380</bottom>
+				<width>500</width>
+				<height>281</height>
+				<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="image">
 				<left>0</left>
 				<width>100%</width>
 				<height>240</height>
@@ -143,19 +151,13 @@
 					<param name="fallback" value="flags/audiochannel/fallback.png" />
 					<param name="width" value="104" />
 				</include>
-				<include content="MediaFlagOSD">
-					<param name="width" value="5" />
-				</include>
 				<control type="group">
 					<width>104</width>
-					<height>50</height>
 					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-					<control type="image">
-						<width>104</width>
-						<height>50</height>
-						<aspectratio>keep</aspectratio>
-						<texture>flags/language.png</texture>
-					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/language.png" />
+						<param name="width" value="104" />
+					</include>
 					<control type="label">
 						<width>64</width>
 						<left>40</left>
@@ -167,14 +169,11 @@
 				</control>
 				<control type="group">
 					<width>104</width>
-					<height>40</height>
 					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled</visible>
-					<control type="image">
-						<width>104</width>
-						<height>50</height>
-						<aspectratio>keep</aspectratio>
-						<texture>flags/st_language.png</texture>
-					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/st_language.png" />
+						<param name="width" value="104" />
+					</include>
 					<control type="label">
 						<width>64</width>
 						<left>40</left>
@@ -183,6 +182,67 @@
 						<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
 						<font>Font-Flag-Small</font>
 					</control>
+				</control>
+				<include content="MediaFlagOSD">
+					<param name="width" value="5" />
+				</include>
+				<control type="group">
+					<width>120</width>
+					<visible>System.GetBool(pvrplayback.signalquality)</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/pvr.png" />
+						<param name="width" value="120"/>
+					</include>
+					<control type="label">
+						<top>5</top>
+						<width>60</width>
+						<height>40</height>
+						<align>center</align>
+						<label>SIG</label>
+						<font>Font-Flag-Small3</font>
+					</control>
+					<control type="progress">
+						<left>64</left>
+						<width>50</width>
+						<top>11</top>
+						<height>28</height>
+						<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+						<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+						<info>PVR.ActStreamProgrSignal</info>
+					</control>
+				</control>
+				<control type="group">
+					<width>120</width>
+					<visible>System.GetBool(pvrplayback.signalquality)</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/pvr.png" />
+						<param name="width" value="120"/>
+					</include>
+					<control type="label">
+						<top>5</top>
+						<width>60</width>
+						<height>40</height>
+						<align>center</align>
+						<label>SNR</label>
+						<font>Font-Flag-Small3</font>
+					</control>
+					<control type="progress">
+						<left>64</left>
+						<width>50</width>
+						<top>11</top>
+						<height>28</height>
+						<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+						<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+						<info>PVR.ActStreamProgrSNR</info>
+					</control>
+				</control>
+				<control type="group">
+					<width>60</width>
+					<visible>Pvr.ActStreamIsEncrypted</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/encrypt.png" />
+						<param name="width" value="60"/>
+					</include>
 				</control>
 			</control>
 		</control>
