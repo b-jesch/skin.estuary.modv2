@@ -912,14 +912,14 @@
 					<control type="label">
 						<top>128</top>
 						<left>30</left>
-						<width>70</width>
+						<width>75</width>
 						<height>20</height>
 						<label>$INFO[ListItem.StartTime]</label>
 						<font>font10</font>
 					</control>
 					<control type="label">
 						<top>128</top>
-						<width>70</width>
+						<width>75</width>
 						<right>12</right>
 						<height>20</height>
 						<align>right</align>
@@ -928,8 +928,8 @@
 					</control>
 					<control type="progress">
 						<top>140</top>
-						<left>100</left>
-						<right>82</right>
+						<left>105</left>
+						<right>87</right>
 						<height>12</height>
 						<colordiffuse>88FFFFFF</colordiffuse>
 						<visible>ListItem.HasEpg</visible>
@@ -1023,14 +1023,14 @@
 					<control type="label">
 						<top>128</top>
 						<left>30</left>
-						<width>70</width>
+						<width>75</width>
 						<height>20</height>
 						<label>$INFO[ListItem.StartTime]</label>
 						<font>font10</font>
 					</control>
 					<control type="label">
 						<top>128</top>
-						<width>70</width>
+						<width>75</width>
 						<right>12</right>
 						<height>20</height>
 						<align>right</align>
@@ -1039,8 +1039,8 @@
 					</control>
 					<control type="progress">
 						<top>140</top>
-						<left>100</left>
-						<right>82</right>
+						<left>105</left>
+						<right>87</right>
 						<height>12</height>
 						<colordiffuse>88FFFFFF</colordiffuse>
 						<visible>ListItem.HasEpg</visible>

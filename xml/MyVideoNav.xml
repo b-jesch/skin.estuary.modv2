@@ -592,7 +592,7 @@
 						<description>Watched Toggle</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[20367]</label>
-						<label2>[B]$INFO[Container.NumItems][/B]</label2>
+						<label2>$INFO[Container.NumItems,[B],[/B]]</label2>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons) | Container.Content(episodes)</visible>
 					</control>
 					<control type="radiobutton" id="627">

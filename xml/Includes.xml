@@ -2466,7 +2466,7 @@
 					<description>Left side of top bar</description>
 					<width>$PARAM[width]</width>
 					<top>6</top>
-					<height>30</height>
+					<height>35</height>
 					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
@@ -2865,7 +2865,7 @@
 						<left>12</left>
 						<width>36</width>
 						<height>36</height>
-						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506)">Conditional</animation>
+						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="[Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506)] + !Window.IsActive(MyPVRGuide.xml) + !Window.IsActive(MyPVRChannels.xml)">Conditional</animation>
 						<texturefocus colordiffuse="$VAR[SkinColorVar]">frame/menu-nofo.png</texturefocus>
 						<texturenofocus>frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
@@ -2910,7 +2910,7 @@
 						<texturenofocus>frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
-						<visible>Window.IsActive(MyPVRGuide.xml)</visible>
+						<visible>Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRChannels.xml)</visible>
 						<visible>!Skin.HasSetting(KioskMode)</visible>
 					</control>
 					<control type="button">
