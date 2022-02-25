@@ -505,7 +505,9 @@
 					<include content="MediaFlagsInfoDialogRight">
 						<param name="align" value="right" />
 						<param name="pvr" value="true" />
+						<param name="visible" value="!Window.IsVisible(DialogPVRGuideControls.XML)"/>
 					</include>
+					<animation effect="fade" start="0" end="100" time="200" condition="!Window.IsVisible(DialogPVRGuideControls.XML)">Conditional</animation>
 				</control>
 			</control>
 			<include>PVRChannelNumberInput</include>
