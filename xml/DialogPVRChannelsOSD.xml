@@ -11,16 +11,61 @@
 				<include content="ContentPanel">
 					<param name="width" value="941" />
 				</include>
+				<control type="group">
+					<top>20</top>
+					<width>881</width>
+					<visible>!Skin.HasSetting(ShowPVRGroups)</visible>
+					<control type="image">
+						<left>20</left>
+						<right>20</right>
+						<height>50</height>
+						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+					</control>
+					<control type="image">
+ 						<left>30</left>
+ 						<top>5</top>
+ 						<width>30</width>
+ 						<height>40</height>
+ 						<texture colordiffuse="80FFFFFF">icons/keyboard/arrowleft.png</texture>
+ 						<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
+ 					</control>
+ 					<control type="image">
+ 						<right>30</right>
+ 						<top>5</top>
+ 						<width>30</width>
+ 						<height>40</height>
+ 						<texture colordiffuse="80FFFFFF">icons/keyboard/arrowright.png</texture>
+ 						<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
+ 					</control>
+					<control type="image">
+						<top>5</top>
+						<left>80</left>
+						<right>80</right>
+						<height>40</height>
+						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+					</control>
+					<control type="label" id="2">
+						<left>260</left>
+						<right>260</right>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<scroll>true</scroll>
+						<label>$INFO[VideoPlayer.ChannelGroup]</label>
+					</control>
+				</control>
 				<control type="fixedlist" id="11">
 					<left>0</left>
+					<top>80</top>
+					<bottom>10</bottom>
 					<width>881</width>
-					<height>100%</height>
 					<onleft>PreviousChannelGroup</onleft>
-					<onright>60</onright>
+					<onright>NextChannelGroup</onright>
 					<onup>11</onup>
 					<ondown>11</ondown>
 					<pagecontrol>60</pagecontrol>
-					<movement>4</movement>
+					<movement>5</movement>
 					<focusposition>5</focusposition>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<focusedlayout height="90" width="881">
@@ -45,7 +90,7 @@
 							<width>80</width>
 							<height>70</height>
 							<aspectratio align="right">keep</aspectratio>
-							<texture>$INFO[listitem.icon]</texture>
+							<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
 						</control>
 						<control type="progress">
 							<left>105</left>
@@ -67,7 +112,7 @@
 							<left>105</left>
 							<top>8</top>
 							<height>90</height>
-							<right>126</right>
+							<right>170</right>
 							<aligny>top</aligny>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
  							<label>$INFO[ListItem.Label]</label>
@@ -78,10 +123,11 @@
 							<left>165</left>
 							<top>46</top>
 							<height>90</height>
-							<right>126</right>
+							<right>170</right>
 							<aligny>top</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Title]</label>
+							<scroll>true</scroll>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
@@ -103,7 +149,7 @@
 							<width>80</width>
 							<height>70</height>
 							<aspectratio align="right">keep</aspectratio>
-							<texture>$INFO[listitem.icon]</texture>
+							<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
 						</control>
 						<control type="progress">
 							<left>105</left>
@@ -125,7 +171,7 @@
 							<left>105</left>
 							<top>8</top>
 							<height>90</height>
-							<right>126</right>
+							<right>170</right>
 							<aligny>top</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -136,7 +182,7 @@
 							<left>165</left>
 							<top>46</top>
 							<height>90</height>
-							<right>126</right>
+							<right>170</right>
 							<aligny>top</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Title]</label>
@@ -157,41 +203,15 @@
 						</control>
 					</itemlayout>
 				</control>
-				<control type="image">
-					<left>0</left>
-					<bottom>0</bottom>
-					<width>881</width>
-					<height>115</height>
-					<texture flipy="true">frame/InfoBar.png</texture>
-				</control>
-			</control>
-			<control type="group">
-				<depth>DepthOSD</depth>
-				<include>Animation_TopSlide</include>
-				<control type="image">
-					<left>0</left>
-					<width>881</width>
-					<height>110</height>
-					<texture>frame/InfoBar.png</texture>
-				</control>
-				<control type="label" id="2">
-					<description>header label</description>
-					<textoffsetx>40</textoffsetx>
-					<width>1300</width>
-					<height>70</height>
-					<font>font37</font>
-					<aligny>center</aligny>
-					<label>&lt; $INFO[VideoPlayer.ChannelGroup] &gt;</label>
-					<shadowcolor>text_shadow</shadowcolor>
-				</control>
 			</control>
 			<control type="scrollbar" id="60">
+				<top>80</top>
+				<bottom>10</bottom>
 				<left>869</left>
 				<width>12</width>
-				<height>100%</height>
 				<onleft>11</onleft>
 				<texturesliderbackground />
-				<onright>NextChannelGroup</onright>
+				<onright>11</onright>
 				<ondown>61</ondown>
 				<onup>61</onup>
 				<animation effect="zoom" start="100,100" end="50,100" center="881,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>

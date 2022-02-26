@@ -1359,12 +1359,10 @@
 		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
 		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
 		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
-		<value condition="String.Contains(ListItem.Filenameandpath,3d) + !String.StartsWith(ListItem.FolderPath,plugin://)">flags/videoresolution/3D.png</value>
 		<value condition="ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
-		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + Container(60).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + !String.IsEmpty(Container(60).ListItem.VideoResolution)">$INFO[Container(60).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 		<value>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</value>
@@ -1374,7 +1372,6 @@
 		<value condition="VideoPlayer.IsStereoscopic + String.Contains(Player.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
 		<value condition="VideoPlayer.IsStereoscopic + String.Contains(Player.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="VideoPlayer.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(VideoPlayer.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="Container5083_3DFlagVar">
@@ -1382,7 +1379,6 @@
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="Container(5083).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container(5083).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="Container5094_3DFlagVar">
@@ -1390,7 +1386,6 @@
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="Container(5094).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container(5094).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="Container5084_3DFlagVar">
@@ -1398,7 +1393,6 @@
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="Container(5084).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container(5084).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="Container3DFlagVar">
@@ -1406,7 +1400,6 @@
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
 		<value condition="Container.ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="String.Contains(Container.ListItem.Filenameandpath,3d)">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container.ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="AudioCodecFlagVar">
@@ -1506,6 +1499,20 @@
 		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ]</value>
 		<value>$INFO[Player.Time]$INFO[Player.Duration, / ]</value>
 	</variable>
+	<variable name="PVRGuideControlsHelpTextVar">
+		<value condition="Control.HasFocus(600)">$LOCALIZE[19063]</value>
+		<value condition="Control.HasFocus(601)">$LOCALIZE[19317]</value>
+		<value condition="Control.HasFocus(602)">$LOCALIZE[19070]</value>
+		<value condition="Control.HasFocus(603)">$LOCALIZE[19318]</value>
+		<value condition="Control.HasFocus(604)">$LOCALIZE[19064]</value>
+		<value condition="Control.HasFocus(605)">$LOCALIZE[19288]</value>
+		<value condition="Control.HasFocus(70040)">$LOCALIZE[19322]</value>
+		<value condition="Control.HasFocus(70041)">$LOCALIZE[19323]</value>
+		<value condition="Control.HasFocus(70042)">$LOCALIZE[19324]</value>
+		<value condition="Control.HasFocus(70043)">$LOCALIZE[19319]</value>
+		<value condition="Control.HasFocus(70044)">$LOCALIZE[19320]</value>
+		<value condition="Control.HasFocus(70045)">$LOCALIZE[19321]</value>
+	</variable>
 	<variable name="VideoOSDHelpTextVar">
 		<value condition="Control.HasFocus(600)">$LOCALIZE[40036]</value>
 		<value condition="Control.HasFocus(6001)">$LOCALIZE[31055]</value>
@@ -1519,6 +1526,7 @@
 		<value condition="Control.HasFocus(606) + PVR.IsRecordingPlayingChannel">$LOCALIZE[19059]</value>
 		<value condition="Control.HasFocus(606)">$LOCALIZE[264]</value>
 		<value condition="Control.HasFocus(607)">$LOCALIZE[19033]</value>
+		<value condition="Control.HasFocus(608)">$LOCALIZE[40408]</value>
 		<value condition="Control.HasFocus(6021)">$LOCALIZE[208]</value>
 		<value condition="Control.HasFocus(70011)">$LOCALIZE[31138]</value>
 		<value condition="Control.HasFocus(70012) | Control.HasFocus(70013)">$LOCALIZE[31034]</value>

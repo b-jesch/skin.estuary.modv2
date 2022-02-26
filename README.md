@@ -16,9 +16,9 @@ preferably before the file extension:
 | 3D with <br> stereoscopic detection |           MVC codec            |          Side by Side          |         Top and Bottom         |    HDR Files<sup>*</sup>     |            HDR+ Files            |             Dolby Vision<sup>*</sup>             |
 |:-----------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:----------------------------:|:--------------------------------:|:------------------------------------:|
 |     ![](resources/flags/3d.png)     | ![](resources/flags/3dmvc.png) | ![](resources/flags/3dsbs.png) | ![](resources/flags/3dtab.png) | ![](resources/flags/hdr.png) | ![](resources/flags/hdrplus.png) | ![](resources/flags/dolbyvision.png) | 
-|          no tagging or 3d           |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovi., .dolbyvision.      |
+|             no tagging              |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovi., .dolbyvision.      |
 
-<sup>*</sup>Will be detected in Kodi Nexus and up and don't need filename flagging.
+<sup>*</sup>Will be detected in Kodi Nexus and up and don't need filename tagging.
 
 
 The HDR type recognition by filename will be removed if Kodi detects the HDR type itself properly.
@@ -38,7 +38,9 @@ supports animated poster only.
 ### 3.4.0+matrix ###
 - .4
   * Colored flags updated (thanks again to frodo19)
-  * smaller modifications on several PVR views
+  * smaller modifications on several PVR/OSD views
+  * Guide navigation window added
+  * Movieset View fixed
 
  
 - .3
