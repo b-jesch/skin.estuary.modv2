@@ -36,6 +36,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.0+matrix ###
+- .5
+  * PVR Guide Control quick fix
+
+
 - .4
   * Colored flags updated (thanks again to frodo19)
   * smaller modifications on several PVR/OSD views

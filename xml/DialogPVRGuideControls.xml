@@ -14,20 +14,29 @@
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
-			<bottom>0</bottom>
-			<left>620</left>
-			<height>80</height>
-			<animation effect="fade" time="500">VisibleChange</animation>
+			<bottom>5</bottom>
+			<left>585</left>
+			<height>65</height>
+			<animation effect="slide" start="0,70" end="0,0" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
 			<control type="group" id="200">
-				<width>1070</width>
-				<height>80</height>
+				<width>1140</width>
+				<height>65</height>
+				<control type="image">
+					<width>100%</width>
+					<height>100%</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">dialogs/osdepgguide.png</texture>
+					<border>2</border>
+				</control>
 				<control type="group">
 					<control type="grouplist" id="201">
-						<top>12</top>
+						<top>5</top>
 						<left>20</left>
 						<itemgap>12</itemgap>
 						<scrolltime tween="sine">200</scrolltime>
 						<orientation>horizontal</orientation>
+						<onup>Action(close)</onup>
+						<ondown>Action(close)</ondown>
 						<control type="radiobutton" id="600">
 							<include content="OSDButton">
 								<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
@@ -70,7 +79,7 @@
 							<width>30</width>
 							<align>center</align>
 							<font>font_flag</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
 							<label> I </label>
 						</control>
 						<control type="radiobutton" id="70040">
@@ -97,7 +106,7 @@
 							<width>30</width>
 							<align>center</align>
 							<font>font_flag</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
 							<label> I </label>
 						</control>
 						<control type="radiobutton" id="70043">
@@ -115,14 +124,14 @@
 						</control>
 						<control type="radiobutton" id="70045">
 							<include content="OSDButton">
-								<param name="texture" value="DefaultPlaylist.png"/>
+								<param name="texture" value="dialogs/culrc-contextmenu.png"/>
 							</include>
 							<onclick>PVR.EpgGridControl(SelectGroup)</onclick>
 						</control>
 					</control>
 					<control type="label">
 						<right>20</right>
-						<top>22</top>
+						<top>18</top>
 						<align>right</align>
 						<aligny>center</aligny>
 						<width>310</width>
