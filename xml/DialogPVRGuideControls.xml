@@ -124,7 +124,7 @@
 						</control>
 						<control type="radiobutton" id="70045">
 							<include content="OSDButton">
-								<param name="texture" value="dialogs/culrc-contextmenu.png"/>
+								<param name="texture" value="defaultaddoncontextitem.png"/>
 							</include>
 							<onclick>PVR.EpgGridControl(SelectGroup)</onclick>
 						</control>

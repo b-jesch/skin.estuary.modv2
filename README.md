@@ -13,7 +13,7 @@ and install it. After that you can install the skin directly from the repository
 If you want to use special flags like HDR or Dolby Vision or special 3D formats you have to name your files with proper tags, 
 preferably before the file extension: 
 
-| 3D with <br> stereoscopic detection |           MVC codec            |          Side by Side          |         Top and Bottom         |    HDR Files<sup>*</sup>     |            HDR+ Files            |             Dolby Vision<sup>*</sup>             |
+| 3D with <br> stereoscopic detection |           MVC codec            |          Side by Side          |         Top and Bottom         |    HDR Files<sup>*</sup>     |            HDR+ Files            |       Dolby Vision<sup>*</sup>       |
 |:-----------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:----------------------------:|:--------------------------------:|:------------------------------------:|
 |     ![](resources/flags/3d.png)     | ![](resources/flags/3dmvc.png) | ![](resources/flags/3dsbs.png) | ![](resources/flags/3dtab.png) | ![](resources/flags/hdr.png) | ![](resources/flags/hdrplus.png) | ![](resources/flags/dolbyvision.png) | 
 |             no tagging              |             3d.mvc             |             3d.sbs             |             3d.tab             |        .hdr., .10bit.        |        .hdrplus., .12bit.        |     .dv., .dovi., .dolbyvision.      |
@@ -36,6 +36,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.0+matrix ###
+- .6
+  * PVR: exented channel list fixed
+
+
 - .5
   * PVR Guide Control quick fix
 

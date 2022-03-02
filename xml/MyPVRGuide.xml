@@ -163,7 +163,7 @@
 								<top>3</top>
 								<width>74</width>
 								<height>64</height>
-								<texture fallback="DefaultTVGuide.png">$INFO[ListItem.Icon]</texture>
+								<texture fallback="DefaultTVShows2.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 								<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
@@ -203,7 +203,7 @@
 								<top>3</top>
 								<width>74</width>
 								<height>64</height>
-								<texture fallback="DefaultTVGuide.png">$INFO[ListItem.Icon]</texture>
+								<texture fallback="DefaultTVShows2.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 								<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
