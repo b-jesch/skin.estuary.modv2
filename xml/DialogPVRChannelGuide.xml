@@ -44,7 +44,7 @@
 							<bottom>0</bottom>
 							<align>right</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label] $VAR[SeasonEpisodeLabel]</label>
+							<label>$INFO[ListItem.Label]$VAR[SeasonEpisodeLabel]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="90" width="1600">
@@ -78,7 +78,7 @@
 							<bottom>0</bottom>
 							<align>right</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label] $VAR[SeasonEpisodeLabel]</label>
+							<label>$INFO[ListItem.Label]$VAR[SeasonEpisodeLabel]</label>
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Plot) + Control.HasFocus(11)</visible>
