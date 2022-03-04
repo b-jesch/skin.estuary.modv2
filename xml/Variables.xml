@@ -1804,12 +1804,12 @@
 	<variable name="SeasonEpisodeLabel">
 		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, $LOCALIZE[20359] ]</value>
 		<value condition="String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)">$INFO[ListItem.EpisodeName]</value>
-		<value>$VAR[SeasonPrefixVar]$INFO[ListItem.Season]$VAR[EpisodePrefixVar]$INFO[ListItem.Episode,,: ]$INFO[ListItem.EpisodeName]</value>
+		<value> $VAR[SeasonPrefixVar]$INFO[ListItem.Season]$VAR[EpisodePrefixVar]$INFO[ListItem.Episode,,: ]$INFO[ListItem.EpisodeName]</value>
   	</variable>
   	<variable name="SeasonEpisodeLabel2">
 		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]</value>
 		<value condition="String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)">$INFO[ListItem.EpisodeName]</value>
-		<value>$VAR[SeasonPrefixVar]$INFO[ListItem.Season]$VAR[EpisodePrefixVar]$INFO[ListItem.Episode,, -]$INFO[ListItem.EpisodeName, ]</value>
+		<value> $VAR[SeasonPrefixVar]$INFO[ListItem.Season]$VAR[EpisodePrefixVar]$INFO[ListItem.Episode,, -]$INFO[ListItem.EpisodeName, ]</value>
   	</variable>
 	<variable name="SeasonPrefixVar">
 		<value condition="Integer.IsGreater(ListItem.Season,9)">S</value>
