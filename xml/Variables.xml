@@ -806,7 +806,6 @@
 		<value condition="String.Contains(ListItem.mpaa,TV-Y7) | String.Contains(ListItem.mpaa,TV-Y) | String.Contains(ListItem.mpaa,TV-PG) | String.Contains(ListItem.mpaa,TV-G) | String.Contains(ListItem.mpaa,TV-MA)">flags/mpaa-tv.png</value>
 		<value condition="String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)">flags/mpaa-long.png</value>
 		<value>flags/mpaa.png</value>
-		<value/>
 	</variable>
 	<variable name="MPAAFlagVar">
 		<value condition="String.Contains(ListItem.mpaa,TV-Y7)">Y7</value>
@@ -1076,6 +1075,8 @@
 		<value condition="ListItem.HasArchive">windows/pvr/archive.png</value>
 		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
 		<value condition="ListItem.IsPlaying">windows/pvr/play.png</value>
+		<value condition="ListItem.IsPremiere">windows/pvr/premiered.png</value>
+		<value condition="ListItem.IsFinale">windows/pvr/finished.png</value>
 		<value condition="ListItem.IsEncrypted">windows/pvr/encrypt.png</value>
 	</variable>
 	<variable name="AutoCompletionContentVar">
@@ -1325,6 +1326,14 @@
 		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
 	</variable>
 	<!-- special media flags -->
+	<variable name="MediaSourceFlagVar">
+		<value condition="String.Contains(ListItem.Filenameandpath,hdtv) | String.Contains(ListItem.Filenameandpath,pdtv) | String.Contains(ListItem.Filenameandpath,hdtvrip) | String.Contains(ListItem.Filenameandpath,tvrip)">flags/hdtv.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,vhs) | String.Contains(ListItem.Filenameandpath,vhsrip)">flags/vhs.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,hddvd)">flags/hddvd.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,web-dl) | String.Contains(ListItem.Filenameandpath,webdl)">flags/webdl.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,dvd)">flags/dvd.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,bluray) | String.Contains(ListItem.Filenameandpath,blu-ray) | String.Contains(ListItem.Filenameandpath,bdrip)">flags/bluray.png</value>
+	</variable>
 	<variable name="HdrTypeVar">
 		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Player.HdrType)">$INFO[Player.HdrType,flags/videoresolution/,.png]</value>

@@ -21,37 +21,62 @@
 						<height>50</height>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 					</control>
-					<control type="image">
- 						<left>30</left>
- 						<top>5</top>
- 						<width>30</width>
- 						<height>40</height>
- 						<texture colordiffuse="80FFFFFF">icons/keyboard/arrowleft.png</texture>
- 						<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
- 					</control>
- 					<control type="image">
- 						<right>30</right>
- 						<top>5</top>
- 						<width>30</width>
- 						<height>40</height>
- 						<texture colordiffuse="80FFFFFF">icons/keyboard/arrowright.png</texture>
- 						<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
- 					</control>
-					<control type="image">
+					<control type="button" id="20">
 						<top>5</top>
-						<left>80</left>
-						<right>80</right>
+						<left>10</left>
+						<width>240</width>
 						<height>40</height>
-						<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+						<texturenofocus colordiffuse="$VAR[SkinColorVar]">lists/nofocus.png</texturenofocus>
+						<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+						<onclick>PreviousChannelGroup</onclick>
+						<onleft>22</onleft>
+						<onright>22</onright>
+						<ondown>11</ondown>
+						<onup>11</onup>
 					</control>
-					<control type="label" id="2">
+					<control type="image">
+						<left>120</left>
+						<top>10</top>
+						<width>20</width>
+						<height>30</height>
+						<texture colordiffuse="80FFFFFF">icons/keyboard/arrowleft.png</texture>
+						<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
+					</control>
+					<control type="button" id="22">
+						<top>5</top>
+						<right>10</right>
+						<width>240</width>
+						<height>40</height>
+						<texturenofocus colordiffuse="$VAR[SkinColorVar]">lists/nofocus.png</texturenofocus>
+						<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+						<onclick>NextChannelGroup</onclick>
+						<onleft>20</onleft>
+						<onright>20</onright>
+						<ondown>11</ondown>
+						<onup>11</onup>
+					</control>
+					<control type="image">
+						<right>120</right>
+						<top>10</top>
+						<width>20</width>
+						<height>30</height>
+						<texture colordiffuse="80FFFFFF">icons/keyboard/arrowright.png</texture>
+					</control>
+					<control type="button" id="2">
+						<top>5</top>
 						<left>260</left>
 						<right>260</right>
-						<height>50</height>
+						<height>40</height>
+						<texturenofocus colordiffuse="$VAR[SkinColorVar]">lists/nofocus.png</texturenofocus>
+						<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font12</font>
 						<scroll>true</scroll>
+						<onleft>20</onleft>
+						<onright>22</onright>
+						<onup>11</onup>
+						<ondown>11</ondown>
 						<label>$INFO[VideoPlayer.ChannelGroup]</label>
 					</control>
 				</control>
@@ -62,8 +87,8 @@
 					<width>881</width>
 					<onleft>PreviousChannelGroup</onleft>
 					<onright>NextChannelGroup</onright>
-					<onup>11</onup>
-					<ondown>11</ondown>
+					<onup>2</onup>
+					<ondown>2</ondown>
 					<pagecontrol>60</pagecontrol>
 					<movement>5</movement>
 					<focusposition>5</focusposition>

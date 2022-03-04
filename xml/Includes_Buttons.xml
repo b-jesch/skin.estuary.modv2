@@ -10,7 +10,7 @@
 		<texturefocus colordiffuse="$VAR[SkinColorVar]">osd/fullscreen/buttons/button-fo-76.png</texturefocus>
 		<width>56</width>
 		<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-			<effect type="zoom" end="125" time="75" tween="sine" easing="out" center="auto" />
+			<effect type="zoom" end="105" time="75" tween="sine" easing="out" center="auto" />
 			<effect type="zoom" end="80" time="225" tween="sine" delay="100" easing="out" center="auto" />
 		</animation>
 		<height>56</height>

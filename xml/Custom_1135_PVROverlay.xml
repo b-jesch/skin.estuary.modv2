@@ -27,7 +27,7 @@
 				<width>200</width>
 				<height>200</height>
 				<aspectratio aligny="center" align="center">keep</aspectratio>
-				<texture fallback="DefaultTVGuide.png">$INFO[Player.Art(thumb)]</texture>
+				<texture fallback="DefaultTVShows2.png">$INFO[Player.Art(thumb)]</texture>
 			</control>
 			<control type="textbox">
 				<left>240</left>

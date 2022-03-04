@@ -92,6 +92,23 @@
 					<param name="top" value="301" />
 					<param name="left" value="200" />
 				</include>
+				<control type="group">
+					<left>4</left>
+					<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
+					<control type="image">
+							<width>160</width>
+							<height>160</height>
+							<texture flipy="true">overlays/overlay-bg.png</texture>
+						</control>
+					<control type="image">
+						<left>10</left>
+						<top>6</top>
+						<width>64</width>
+						<height>64</height>
+						<texture colordiffuse="DDFFFFFF" fallback="defaultnas.png">$INFO[Window(Home).Property(PVR.Artwork.ListItem.is_db)]</texture>
+					</control>
+				</control>
+
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>

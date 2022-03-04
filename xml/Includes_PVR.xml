@@ -509,7 +509,7 @@
 			<left>0</left>
 			<top>90</top>
 			<right>918</right>
-			<bottom>90</bottom>
+			<bottom>91</bottom>
 			<movement>7</movement>
 			<focusposition>5</focusposition>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -547,7 +547,7 @@
 						<width>80</width>
 						<height>70</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture>$INFO[listitem.icon]</texture>
+						<texture fallback="DefaultTVShows2.png">$INFO[listitem.icon]</texture>
 					</control>
 					<control type="progress">
 						<left>105</left>
@@ -608,7 +608,7 @@
 						<width>80</width>
 						<height>70</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture>$INFO[listitem.icon]</texture>
+						<texture fallback="DefaultTVShows2.png">$INFO[listitem.icon]</texture>
 					</control>
 					<control type="progress">
 						<left>105</left>
@@ -699,7 +699,7 @@
 						<bottom>10</bottom>
 						<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
 						<visible>Control.HasFocus(53)</visible>
-						<visible>!Skin.HasSetting(EnableGradientColor)</visible>
+						<visible>Skin.HasSetting(EnableGradientColor)</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -754,8 +754,8 @@
 					<control type="label">
 						<left>320</left>
 						<right>15</right>
-						<top>43</top>
-						<font>font12</font>
+						<top>45</top>
+						<font>font25_title</font>
 						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -765,7 +765,7 @@
 						<right>10</right>
 						<top>80</top>
 						<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031] : ]</label>
-						<font>font25_title</font>
+						<font>font12</font>
 					</control>
 				</control>
 			</focusedlayout>
@@ -826,8 +826,8 @@
 					<control type="label">
 						<left>320</left>
 						<right>15</right>
-						<top>43</top>
-						<font>font12</font>
+						<top>45</top>
+						<font>font25_title</font>
 						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
@@ -837,7 +837,7 @@
 						<right>15</right>
 						<top>80</top>
 						<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031] : ,[/COLOR]]</label>
-						<font>font25_title</font>
+						<font>font12</font>
 					</control>
 				</control>
 			</itemlayout>
