@@ -39,7 +39,8 @@ supports animated poster only.
 - .6
   * PVR: extended channel list fixed
   * Skin errors in logfile fixed
-  * missing spaces in some labels (PVR related) inserted (Issue #46) 
+  * missing spaces in some labels (PVR related) inserted (Issue #46)
+  * Option for disable/enable PVR channel status symbols (recording/playing/encrypted/etc) added
 
 
 - .5

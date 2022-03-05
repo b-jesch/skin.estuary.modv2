@@ -564,6 +564,7 @@
 						<width>40</width>
 						<height>40</height>
 						<texture>$VAR[PVRStatusImageVar]</texture>
+						<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -585,6 +586,18 @@
 						<font>font12</font>
 						<label>$INFO[ListItem.Title]</label>
 						<shadowcolor>text_shadow</shadowcolor>
+						<visible>Skin.HasSetting(ShowPVRStatus)</visible>
+					</control>
+					<control type="label">
+						<left>165</left>
+						<top>46</top>
+						<height>90</height>
+						<right>160</right>
+						<aligny>top</aligny>
+						<font>font12</font>
+						<label>$INFO[ListItem.Title]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
 					<control type="label">
 						<left>12</left>
@@ -625,6 +638,7 @@
 						<width>40</width>
 						<height>40</height>
 						<texture>$VAR[PVRStatusImageVar]</texture>
+						<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -647,6 +661,19 @@
 						<label>$INFO[ListItem.Title]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>Skin.HasSetting(ShowPVRStatus)</visible>
+					</control>
+					<control type="label">
+						<left>165</left>
+						<top>46</top>
+						<height>90</height>
+						<right>160</right>
+						<aligny>top</aligny>
+						<font>font12</font>
+						<label>$INFO[ListItem.Title]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
 					<control type="label">
 						<left>12</left>
@@ -724,6 +751,7 @@
 					</control>
 					<control type="group">
 						<animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+						<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 						<control type="image">
 							<left>160</left>
 							<top>10</top>
@@ -741,6 +769,18 @@
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
+					</control>
+					<control type="label">
+						<animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+						<left>160</left>
+						<top>3</top>
+						<height>30</height>
+						<right>15</right>
+						<aligny>top</aligny>
+						<font>font14</font>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
 					<control type="progress">
 						<left>160</left>
@@ -796,6 +836,7 @@
 					</control>
 					<control type="group">
 						<animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+						<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 						<control type="image">
 							<left>160</left>
 							<top>10</top>
@@ -813,6 +854,18 @@
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
+					</control>
+					<control type="label">
+						<animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+						<visible>Skin.HasSetting(ShowPVRStatus)</visible>
+						<left>160</left>
+						<top>3</top>
+						<height>30</height>
+						<right>10</right>
+						<aligny>top</aligny>
+						<font>font14</font>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="progress">
 						<left>160</left>
