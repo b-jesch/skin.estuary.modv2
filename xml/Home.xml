@@ -610,7 +610,7 @@
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12300"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
-							<param name="label2" value="$INFO[ListItem.Title]$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2, - ,]"/>
+							<param name="label2" value="$INFO[ListItem.Title] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2, - ,]"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_allchannels)">
 							<param name="content_path" value="pvr://channels/tv/*"/>
@@ -620,7 +620,7 @@
 							<param name="list_id" value="12400"/>
 							<param name="item_limit" value="2000"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
-							<param name="label2" value="$INFO[ListItem.Title]$VAR[SeasonEpisodeLabel]"/>
+							<param name="label2" value="$INFO[ListItem.Title] $VAR[SeasonEpisodeLabel]"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_channelgroups)">
 							<param name="content_path" value="pvr://channels/tv"/>

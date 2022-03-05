@@ -355,7 +355,7 @@
 				<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
 				<include content="InfoDialogTopBarInfo">
 					<param name="main_label" value="$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]" />
-					<param name="sub_label" value="$INFO[ListItem.Tagline]$VAR[SeasonEpisodeLabel2]" />
+					<param name="sub_label" value="$INFO[ListItem.Tagline] $VAR[SeasonEpisodeLabel2]" />
 					<param name="subtextcolor" value="$VAR[SkinColorVar]" />
 				</include>
 			</control>
@@ -363,7 +363,7 @@
 				<visible>!String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
 				<include content="InfoDialogTopBarInfo">
 					<param name="main_label" value="$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]" />
-					<param name="sub_label" value="$INFO[ListItem.Tagline]$VAR[SeasonEpisodeLabel2]" />
+					<param name="sub_label" value="$INFO[ListItem.Tagline] $VAR[SeasonEpisodeLabel2]" />
 					<param name="subtextcolor" value="$VAR[SkinColorVar]" />
 					<param name="left" value="620" />
 					<param name="right" value="94" />
