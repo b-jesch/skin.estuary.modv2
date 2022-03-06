@@ -580,7 +580,7 @@
 							<param name="list_id" value="129001"/>
 							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
 						</include>
-						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
+						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + System.AddonIsEnabled(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
 							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
 							<param name="widget_header" value="$ADDON[script.service.gto 30104]: $INFO[Window(Home).Property(GTO.Provider)]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Property(StartDate), | ]$INFO[Container(12500).ListItem.Label, - ]$INFO[Container(12500).ListItem.Label2, - ,]"/>
