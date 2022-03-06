@@ -37,7 +37,7 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 ### 3.4.0+matrix ###
 - .6
-  * PVR: extended channel list fixed
+  * PVR: extended channel list fixed (missing item)
   * Skin errors in logfile fixed
   * missing spaces in some labels (PVR related) inserted (Issue #46)
   * Option for disable/enable PVR channel status symbols (recording/playing/encrypted/etc) added
