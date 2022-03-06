@@ -169,7 +169,7 @@
 					<label>$LOCALIZE[40409]</label>
 					<selected>!Skin.HasSetting(ShowPVRStatus</selected>
 					<onclick>Skin.ToggleSetting(ShowPVRStatus)</onclick>
-					<visible>Window.IsActive(MyPVRGuide.xml) | [Window.IsActive(MyPVRChannels.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31099]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31107])]]</visible>
+					<visible>Window.IsActive(MyPVRGuide.xml) | [Window.IsActive(MyPVRChannels.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[535]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31107]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31108])]]</visible>
 				</control>
 				<control type="radiobutton" id="6061">
 					<include>MediaMenuItemsCommonRadio</include>

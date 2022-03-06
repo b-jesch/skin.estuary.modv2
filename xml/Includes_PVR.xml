@@ -409,7 +409,17 @@
 					<height>12</height>
 					<colordiffuse>DDFFFFFF</colordiffuse>
 					<midtexture border="3">progress/texturebg_white.png</midtexture>
-					<visible>ListItem.HasEpg</visible>
+					<visible>ListItem.HasEpg + !Skin.HasSetting(ShowPVRStatus)</visible>
+					<info>ListItem.Progress</info>
+				</control>
+				<control type="progress">
+					<right>10</right>
+					<top>32</top>
+					<width>50</width>
+					<height>12</height>
+					<colordiffuse>88FFFFFF</colordiffuse>
+					<midtexture border="3">progress/texturebg_white.png</midtexture>
+					<visible>ListItem.HasEpg + Skin.HasSetting(ShowPVRStatus)</visible>
 					<info>ListItem.Progress</info>
 				</control>
 				<control type="image">
@@ -418,6 +428,7 @@
 					<width>30</width>
 					<height>30</height>
 					<texture>$VAR[PVRStatusImageVar]</texture>
+					<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 				</control>
 				<control type="label">
 					<left>105</left>
@@ -458,7 +469,17 @@
 					<height>12</height>
 					<colordiffuse>88FFFFFF</colordiffuse>
 					<midtexture border="3">progress/texturebg_white.png</midtexture>
-					<visible>ListItem.HasEpg</visible>
+					<visible>ListItem.HasEpg + !Skin.HasSetting(ShowPVRStatus)</visible>
+					<info>ListItem.Progress</info>
+				</control>
+				<control type="progress">
+					<right>10</right>
+					<top>32</top>
+					<width>50</width>
+					<height>12</height>
+					<colordiffuse>88FFFFFF</colordiffuse>
+					<midtexture border="3">progress/texturebg_white.png</midtexture>
+					<visible>ListItem.HasEpg + Skin.HasSetting(ShowPVRStatus)</visible>
 					<info>ListItem.Progress</info>
 				</control>
 				<control type="image">
@@ -468,6 +489,7 @@
 					<height>30</height>
 					<colordiffuse>88FFFFFF</colordiffuse>
 					<texture>$VAR[PVRStatusImageVar]</texture>
+					<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 				</control>
 				<control type="label">
 					<left>105</left>

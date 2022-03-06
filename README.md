@@ -35,7 +35,14 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+
 ### 3.4.0+matrix ###
+- .7
+  * Remove dependencies of Embuary Helper/Script from addon.xml
+  * Add dependencies of Embuary Helper/Script to "needed Addons" in skin settings
+  * Fixes on PVR channel status visibility and media menu in several channel views
+
+
 - .6
   * PVR: extended channel list fixed (missing item)
   * Skin errors in logfile fixed
