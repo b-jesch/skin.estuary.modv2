@@ -11,6 +11,13 @@
 				<include content="ContentPanel">
 					<param name="width" value="941" />
 				</include>
+				<control type="label">
+					<top>20</top>
+					<width>881</width>
+					<font>font12</font>
+					<label>$INFO[VideoPlayer.ChannelGroup,[B]$LOCALIZE[19141]:[/B] ,]</label>
+					<visible>Skin.HasSetting(ShowPVRGroups)</visible>
+				</control>
 				<control type="group">
 					<top>20</top>
 					<width>881</width>
@@ -132,28 +139,55 @@
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
+							<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 						</control>
-						<control type="label">
+						<control type="group">
 							<left>105</left>
-							<top>8</top>
-							<height>90</height>
 							<right>170</right>
-							<aligny>top</aligny>
-							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
- 							<label>$INFO[ListItem.Label]</label>
-							<font>font14</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
+							<control type="label">
+								<top>8</top>
+								<height>90</height>
+								<aligny>top</aligny>
+								<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font14</font>
+								<shadowcolor>text_shadow</shadowcolor>
+							</control>
+							<control type="label">
+								<left>60</left>
+								<top>46</top>
+								<height>90</height>
+								<aligny>top</aligny>
+								<font>font12</font>
+								<label>$INFO[ListItem.Title]</label>
+								<scroll>true</scroll>
+								<shadowcolor>text_shadow</shadowcolor>
+							</control>
 						</control>
-						<control type="label">
-							<left>165</left>
-							<top>46</top>
-							<height>90</height>
-							<right>170</right>
-							<aligny>top</aligny>
-							<font>font12</font>
-							<label>$INFO[ListItem.Title]</label>
-							<scroll>true</scroll>
-							<shadowcolor>text_shadow</shadowcolor>
+						<control type="group">
+							<left>105</left>
+							<right>130</right>
+							<visible>Skin.HasSetting(ShowPVRStatus)</visible>
+							<control type="label">
+								<top>8</top>
+								<height>90</height>
+								<aligny>top</aligny>
+								<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font14</font>
+								<shadowcolor>text_shadow</shadowcolor>
+							</control>
+							<control type="label">
+								<left>60</left>
+								<top>46</top>
+								<height>90</height>
+								<aligny>top</aligny>
+								<font>font12</font>
+								<label>$INFO[ListItem.Title]</label>
+								<scroll>true</scroll>
+								<shadowcolor>text_shadow</shadowcolor>
+							</control>
 						</control>
 						<control type="label">
 							<left>12</left>
@@ -191,28 +225,55 @@
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
+							<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 						</control>
-						<control type="label">
+						<control type="group">
 							<left>105</left>
-							<top>8</top>
-							<height>90</height>
 							<right>170</right>
-							<aligny>top</aligny>
-							<font>font14</font>
-							<label>$INFO[ListItem.Label]</label>
- 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
-							<shadowcolor>text_shadow</shadowcolor>
+							<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
+							<control type="label">
+								<top>8</top>
+								<height>90</height>
+								<aligny>top</aligny>
+								<font>font14</font>
+								<label>$INFO[ListItem.Label]</label>
+								<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+								<shadowcolor>text_shadow</shadowcolor>
+							</control>
+							<control type="label">
+								<left>60</left>
+								<top>46</top>
+								<height>90</height>
+								<aligny>top</aligny>
+								<font>font12</font>
+								<label>$INFO[ListItem.Title]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<textcolor>$VAR[SkinColorVar]</textcolor>
+							</control>
 						</control>
-						<control type="label">
-							<left>165</left>
-							<top>46</top>
-							<height>90</height>
-							<right>170</right>
-							<aligny>top</aligny>
-							<font>font12</font>
-							<label>$INFO[ListItem.Title]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<textcolor>$VAR[SkinColorVar]</textcolor>
+						<control type="group">
+							<left>105</left>
+							<right>130</right>
+							<visible>Skin.HasSetting(ShowPVRStatus)</visible>
+							<control type="label">
+								<top>8</top>
+								<height>90</height>
+								<aligny>top</aligny>
+								<font>font14</font>
+								<label>$INFO[ListItem.Label]</label>
+								<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+								<shadowcolor>text_shadow</shadowcolor>
+							</control>
+							<control type="label">
+								<left>60</left>
+								<top>46</top>
+								<height>90</height>
+								<aligny>top</aligny>
+								<font>font12</font>
+								<label>$INFO[ListItem.Title]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<textcolor>$VAR[SkinColorVar]</textcolor>
+							</control>
 						</control>
 						<control type="label">
 							<left>12</left>

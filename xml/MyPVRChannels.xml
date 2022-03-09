@@ -11,7 +11,9 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<include>PVRChannelsList</include>
-				<include>PVRChannelsExtendedList</include>
+				<include content="PVRChannelsExtendedList">
+					<param name="list_id" value="50"/>
+				</include>
 				<include>PVRChannelsBigList</include>
 			</control>
 			<control type="group">
