@@ -231,10 +231,10 @@
 			</control>
 			<control type="grouplist">
 				<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-					<param name="left" value="1190"/>
+					<param name="left" value="1340"/>
 				</include>
 				<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-					<param name="left" value="760"/>
+					<param name="left" value="1010"/>
 				</include>
 				<right>30</right>
 				<bottom>138</bottom>

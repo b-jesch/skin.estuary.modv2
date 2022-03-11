@@ -3412,9 +3412,22 @@
 				<left>0</left>
 				<bottom>-240</bottom>
 				<width>100%</width>
+				<height>550</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<visible>![VideoPlayer.HasMenu + System.HasMediaDVD] + !Window.IsVisible(playerprocessinfo)</visible>
+				<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
+				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
+				<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
+				<animation effect="slide" end="0,35" time="0" condition="[[VideoPlayer.Content(files) + !String.StartsWith(Player.Filenameandpath,http)] | String.Contains(Player.Art(thumb),ytimg)] + ![Window.IsVisible(playerprocessinfo) | Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | Window.IsVisible(MusicVisualisation.xml) | VideoPlayer.HasEpg | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]]">Conditional</animation>
+				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<bottom>-240</bottom>
+				<width>100%</width>
 				<height>590</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<visible>![VideoPlayer.HasMenu + System.HasMediaDVD]</visible>
+				<visible>![VideoPlayer.HasMenu + System.HasMediaDVD] + Window.IsVisible(playerprocessinfo)</visible>
 				<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
 				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
 				<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
@@ -3773,7 +3786,20 @@
 						<height>281</height>
 						<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<visible>!Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio]</visible>
+						<visible>!Window.IsVisible(playerprocessinfo) + !Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio]</visible>
+						<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
+						<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
+						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
+						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+					</control>
+					<control type="image">
+						<right>0</right>
+						<bottom>350</bottom>
+						<width>500</width>
+						<height>281</height>
+						<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
+						<aspectratio align="center" aligny="bottom">keep</aspectratio>
+						<visible>Window.IsVisible(playerprocessinfo) + !Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio]</visible>
 						<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
 						<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
