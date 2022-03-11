@@ -3412,7 +3412,7 @@
 				<left>0</left>
 				<bottom>-240</bottom>
 				<width>100%</width>
-				<height>550</height>
+				<height>590</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<visible>![VideoPlayer.HasMenu + System.HasMediaDVD]</visible>
 				<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
@@ -4030,7 +4030,7 @@
 						<right>30</right>
 						<height>30</height>
 						<align>right</align>
-						<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
+						<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]$INFO[Player.ChapterName, : ]</label>
 						<font>font12</font>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<visible>player.chaptercount</visible>
@@ -4043,7 +4043,7 @@
 						<right>30</right>
 						<height>30</height>
 						<align>right</align>
-						<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
+						<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]$INFO[Player.ChapterName, : ]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<animation effect="fade" time="200">VisibleChange</animation>

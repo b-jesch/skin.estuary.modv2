@@ -41,6 +41,7 @@ supports animated poster only.
   * Remove dependencies of Embuary Helper/Script from addon.xml
   * Add dependencies of Embuary Helper/Script to "needed Addons" in skin settings
   * Fixes on PVR channel status visibility and media menu in several channel views
+  * Player process info extended (thanks to crazyturk who pointed this out)
 
 
 - .6
