@@ -37,6 +37,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.0+matrix ###
+- .8
+  * Remove detection and use of extrafanart folder, as this isn't used by addons anymore
+  * small changes to skinshortcut template (loading menues up to 100% faster), many thanks to beatmasterRS
+
+
 - .7
   * Remove dependencies of Embuary Helper/Script from addon.xml
   * Add dependencies of Embuary Helper/Script to "needed Addons" in skin settings

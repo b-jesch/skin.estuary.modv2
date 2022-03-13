@@ -621,24 +621,6 @@
 				<param name="onclick2" value="PlayMedia($ESCINFO[ListItem.FileNameAndPath])"/>
 				<param name="visible" value="!Skin.HasSetting(VideoInfo_NextUpEpisodes)"/>
 			</include>
-			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,movie)">
-				<param name="content_path" value="$VAR[VideoInfoImagesVar]"/>
-				<param name="list_id" value="63000"/>
-				<param name="onclick" value="SetFocus(9001)"/>
-				<param name="visible" value="!Skin.HasSetting(VideoInfo_MoviesExtrafanarts)"/>
-			</include>
-			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">
-				<param name="content_path" value="$VAR[VideoInfoImagesVar]"/>
-				<param name="list_id" value="63000"/>
-				<param name="onclick" value="SetFocus(9001)"/>
-				<param name="visible" value="!Skin.HasSetting(VideoInfo_TVShowsExtrafanarts)"/>
-			</include>
-			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,musicvideo)">
-				<param name="content_path" value="$VAR[VideoInfoImagesVar]"/>
-				<param name="list_id" value="63000"/>
-				<param name="onclick" value="SetFocus(9001)"/>
-				<param name="visible" value="!Skin.HasSetting(VideoInfo_MusicVideosExtrafanarts)"/>
-			</include>
 		</control>
 		<control type="group">
 			<bottom>0</bottom>

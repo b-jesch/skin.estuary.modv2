@@ -461,24 +461,6 @@
 				<param name="visible_play" value="true" />
 				<param name="visible" value="!Skin.HasSetting(MusicInfo_SongList)"/>
 			</include>
-			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,artist)">
-				<param name="content_path" value="$VAR[VideoInfoImagesVar]"/>
-				<param name="list_id" value="63000"/>
-				<param name="onclick" value="SetFocus(9001)"/>
-				<param name="visible" value="!Skin.HasSetting(MusicInfo_ArtistsExtrafanarts)"/>
-			</include>
-			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,album)">
-				<param name="content_path" value="$VAR[VideoInfoImagesVar]"/>
-				<param name="list_id" value="63000"/>
-				<param name="onclick" value="SetFocus(9001)"/>
-				<param name="visible" value="!Skin.HasSetting(MusicInfo_AlbumsExtrafanarts)"/>
-			</include>
-			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,song)">
-				<param name="content_path" value="$VAR[VideoInfoImagesVar]"/>
-				<param name="list_id" value="63000"/>
-				<param name="onclick" value="SetFocus(9001)"/>
-				<param name="visible" value="!Skin.HasSetting(MusicInfo_SongsExtrafanarts)"/>
-			</include>
 		</control>
 		<control type="group">
 			<bottom>0</bottom>
