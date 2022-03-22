@@ -39,6 +39,7 @@ supports animated poster only.
 ### 3.4.0+matrix ###
 - .8
   * Remove detection and use of extrafanart folder, as this isn't used by addons anymore
+  * Remove fanart section from DialogVideoInfo and DialogMusicInfo
   * small changes to skinshortcut template (loading menues up to 100% faster), many thanks to beatmasterRS
 
 

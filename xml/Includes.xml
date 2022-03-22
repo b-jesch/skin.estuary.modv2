@@ -1031,31 +1031,28 @@
 				</control>
 				<control type="group">
 					<width>108</width>
-					<visible>!Skin.HasSetting(show_mediaaspectratioflag)</visible>
+					<visible>!Skin.HasSetting(show_mediaaspectratioflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
 						<param name="fallback" value="flags/aspectratio/fallback.png" />
-						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
 						<param name="width" value="108" />
 						<param name="top" value="5" />
 					</include>
 				</control>
 				<control type="group">
 					<width>130</width>
-					<visible>!Skin.HasSetting(show_mediaaudiocodecflag)</visible>
+					<visible>!Skin.HasSetting(show_mediaaudiocodecflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="$PARAM[audiocodec_var]" />
-						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)" />
 						<param name="top" value="5" />
 					</include>
 				</control>
 				<control type="group">
 					<width>130</width>
-					<visible>!Skin.HasSetting(show_mediaaudiochannelsflag)</visible>
+					<visible>!Skin.HasSetting(show_mediaaudiochannelsflag)+ !String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
 						<param name="fallback" value="flags/audiochannel/fallback.png" />
-						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)" />
 						<param name="top" value="5" />
 					</include>
 				</control>
