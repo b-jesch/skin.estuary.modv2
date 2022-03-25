@@ -1093,7 +1093,7 @@
 	</variable>
 	<variable name="InfoListPathVar">
 		<value condition="String.IsEmpty(Container.PluginName)">$INFO[ListItem.FolderPath]</value>
-		<value></value>
+		<value/>
 	</variable>
 	<variable name="MusicInfoTextboxVar">
 		<value condition="String.IsEqual(ListItem.DbType,song) + !String.IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment,[B]$LOCALIZE[569][/B][CR][COLOR=white],[/COLOR]]</value>
@@ -1616,7 +1616,7 @@
 		<value>dialogs/volume/volume1.png</value>
 	</variable>
 	<variable name="ListSubLabelVar">
-		<value condition="ListItem.IsCollection"></value>
+		<value condition="ListItem.IsCollection"/>
 		<value>$INFO[ListItem.Year, (,)]</value>
 	</variable>
 	<variable name="VideoInfoMainLabelVar">
