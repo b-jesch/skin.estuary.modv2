@@ -41,6 +41,7 @@ supports animated poster only.
   * Remove detection and use of extrafanart folder, as this isn't used by addons anymore
   * Remove fanart section from DialogVideoInfo and DialogMusicInfo
   * small changes to skinshortcut template (loading menues up to 100% faster), many thanks to beatmasterRS
+  * add bookmarks button to simplified video osd
 
 
 - .7

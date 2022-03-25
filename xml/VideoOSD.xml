@@ -240,14 +240,6 @@
 					<visible>!VideoPlayer.Content(livetv) + ![VideoPlayer.HasMenu + System.HasMediaDVD]  + !VideoPlayer.Content(musicvideos) + !String.Contains(Player.Art(thumb),ytimg) + !VideoPlayer.Content(files)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
-				<control type="radiobutton" id="700">
-					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/bookmarks.png"/>
-					</include>
-					<onclick>ActivateWindow(videobookmarks)</onclick>
-					<visible>!VideoPlayer.Content(livetv)</visible>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
-				</control>
 				<control type="radiobutton" id="703">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/teletext.png"/>
@@ -276,6 +268,13 @@
 						<param name="texture" value="osd/fullscreen/buttons/settings-audio.png"/>
 					</include>
 					<onclick>AudioNextLanguage</onclick>
+				</control>
+				<control type="radiobutton" id="700">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/bookmarks.png"/>
+					</include>
+					<onclick>ActivateWindow(videobookmarks)</onclick>
+					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="radiobutton" id="70011">
 					<include content="OSDButton">
