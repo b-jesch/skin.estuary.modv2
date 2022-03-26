@@ -278,24 +278,6 @@
 						<param name="label" value="$LOCALIZE[184]" />
 						<param name="visible" value="Control.IsEnabled(6)" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="String.IsEqual(ListItem.DBType,movie)">
-						<param name="id" value="105" />
-						<param name="icon" value="icons/infodialogs/settings.png" />
-						<param name="label" value="$LOCALIZE[40292]" />
-						<param name="onclick_1" value="Activatewindow(1143)" />
-					</include>
-					<include content="InfoDialogSmallButton" condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">
-						<param name="id" value="105" />
-						<param name="icon" value="icons/infodialogs/settings.png" />
-						<param name="label" value="$LOCALIZE[40292]" />
-						<param name="onclick_1" value="Activatewindow(1144)" />
-					</include>
-					<include content="InfoDialogSmallButton" condition="String.IsEqual(ListItem.DBType,musicvideo)">
-						<param name="id" value="105" />
-						<param name="icon" value="icons/infodialogs/settings.png" />
-						<param name="label" value="$LOCALIZE[40292]" />
-						<param name="onclick_1" value="Activatewindow(1145)" />
-					</include>
 				</control>
 			</control>
 			<control type="label">

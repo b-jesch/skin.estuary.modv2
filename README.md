@@ -37,6 +37,12 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.0+matrix ###
+- .9
+  * Player process window in small osd adjusted
+  * List settings button in DialogVideoInfo removed
+  * Option for showimg artist list in skin settings added
+
+
 - .8
   * Remove detection and use of extrafanart folder, as this isn't used by addons anymore
   * Remove fanart section from DialogVideoInfo and DialogMusicInfo
