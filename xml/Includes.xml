@@ -4490,7 +4490,7 @@
 				<left>0</left>
 				<bottom>-410</bottom>
 				<width>100%</width>
-				<height>550</height>
+				<height>590</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<animation effect="slide" end="0,-290" time="0" condition="Window.IsVisible(1138)">Conditional</animation>
 				<animation effect="slide" end="0,-350" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1139)">Conditional</animation>
@@ -4499,7 +4499,7 @@
 			</control>
 			<control type="image">
 				<right>0</right>
-				<bottom>140</bottom>
+				<bottom>180</bottom>
 				<width>400</width>
 				<height>225</height>
 				<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
