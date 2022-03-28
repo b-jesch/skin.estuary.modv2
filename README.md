@@ -40,7 +40,9 @@ supports animated poster only.
 - .9
   * Player process window in small osd adjusted
   * List settings button in DialogVideoInfo removed
-  * Option for showimg artist list in skin settings added
+  * Option for showing artist list in skin settings added
+  * Fixed issue with missing widget titles
+  * Albums count from widget templates removed
 
 
 - .8
