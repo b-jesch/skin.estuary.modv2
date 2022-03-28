@@ -315,6 +315,17 @@
 				</control>
 			</control>
 		</controls>	
+	</other>
+	<other include="PersonalWidgetVariable">
+		<condition tag="property" attribute="name|widget">PersonalWidgetPanel</condition>
+		<condition tag="property" attribute="name|widget">PersonalWidgetList</condition>
+		<match>any</match>
+		<property name="id" tag="mainmenuid" />
+		<controls>
+			<control type="group">
+				<!-- Fake group to prevent log errors -->
+			</control>
+		</controls>
 		<variables>
 			<variable name="WidgetLabelFocus22100$SKINSHORTCUTS[id]">
 				<value condition="String.IsEqual(Container(22100$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
