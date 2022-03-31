@@ -956,12 +956,12 @@
 		<value>d8181818</value>
 	</variable>
 	<variable name="RatingColorVar">
-		<value condition="System.Date(03-31,04-02) + !Skin.HasSetting(DisableThemes)">ff23729b</value>
+		<value condition="$EXP[PreEasterTheme]">ff23729b</value>
 		<value condition="!String.IsEmpty(Skin.String(RatingStringColor))">$INFO[Skin.String(RatingStringColor)]</value>
 		<value>white</value>
 	</variable>
 	<variable name="UserRatingColorVar">
-		<value condition="System.Date(03-31,04-02) + !Skin.HasSetting(DisableThemes)">ff23729b</value>
+		<value condition="$EXP[PreEasterTheme]">ff23729b</value>
 		<value condition="!String.IsEmpty(Skin.String(UserRatingStringColor))">$INFO[Skin.String(UserRatingStringColor)]</value>
 		<value>white</value>
 	</variable>

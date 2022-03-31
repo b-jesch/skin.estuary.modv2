@@ -43,6 +43,8 @@ supports animated poster only.
   * Option for showing artist list in skin settings added
   * Fixed issue with missing widget titles
   * Albums count from widget templates removed
+  * Missing language strings (GER) for rating colors added
+  * some modifications on holiday themes
 
 
 - .8

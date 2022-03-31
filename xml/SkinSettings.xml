@@ -993,7 +993,7 @@
 					<label2>$VAR[RatingSettingLabel2Var]</label2>
 				</control>
 				<control type="button" id="712">
-					<label>  ∟$VAR[Label_SkinSetting_RatingColor]</label>
+					<label>  ∟$LOCALIZE[40282]</label>
 					<label2>$VAR[Label_SkinSetting_RatingStringColor]</label2>
 					<include>DefaultSettingButton</include>
 					<onclick condition="!Skin.String(RatingStringColor)">RunScript(script.skin.helper.colorpicker,skinstring=RatingStringColor)</onclick>
