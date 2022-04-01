@@ -956,12 +956,12 @@
 		<value>d8181818</value>
 	</variable>
 	<variable name="RatingColorVar">
-		<value condition="$EXP[PreEasterTheme]">ff23729b</value>
+		<value condition="$EXP[PreEasterTheme]">ffff0b03</value>
 		<value condition="!String.IsEmpty(Skin.String(RatingStringColor))">$INFO[Skin.String(RatingStringColor)]</value>
 		<value>white</value>
 	</variable>
 	<variable name="UserRatingColorVar">
-		<value condition="$EXP[PreEasterTheme]">ff23729b</value>
+		<value condition="$EXP[PreEasterTheme]">ffff0b03</value>
 		<value condition="!String.IsEmpty(Skin.String(UserRatingStringColor))">$INFO[Skin.String(UserRatingStringColor)]</value>
 		<value>white</value>
 	</variable>
@@ -988,6 +988,7 @@
 	<variable name="SkinColorVar">
 		<value condition="$EXP[ChristmasTime]">ffe30022</value>
 		<value condition="$EXP[HalloweenTime]">fff38844</value>
+		<value condition="$EXP[PreEasterTime]">ffffc852</value>
 		<value condition="$EXP[EasterTime]">ffe9d66b</value>
 		<value condition="$EXP[ValentineTime]">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
@@ -996,16 +997,18 @@
 	<variable name="GradientColorVar">
 		<value condition="$EXP[ChristmasTime]">ffe30022</value>
 		<value condition="$EXP[HalloweenTime]">fff38844</value>
+		<value condition="$EXP[PreEasterTime]">ffff9d52</value>
 		<value condition="$EXP[EasterTime]">ffe9d66b</value>
 		<value condition="$EXP[ValentineTime]">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
 		<value>gradient_focus</value>
 	</variable>
 	<variable name="BackgroundColorVar">
-		<value condition="$EXP[ChristmasTheme]">ff11624a</value>
-		<value condition="$EXP[HalloweenTheme]">ff3b3b3b</value>
-		<value condition="$EXP[EasterTheme]">ff57a4cb</value>
-		<value condition="$EXP[ValentineTheme]">ffca76a6</value>
+		<value condition="$EXP[ChristmasTime]">ff11624a</value>
+		<value condition="$EXP[HalloweenTime]">ff3b3b3b</value>
+		<value condition="$EXP[PreEasterTime]">ffff7252</value>
+		<value condition="$EXP[EasterTime]">ff57a4cb</value>
+		<value condition="$EXP[ValentineTime]">ffca76a6</value>
 		<value condition="!String.IsEmpty(Skin.String(BackgroundColor))">$INFO[Skin.String(BackgroundColor)]</value>
 		<value>primary_background</value>
 	</variable>

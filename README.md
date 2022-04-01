@@ -44,7 +44,7 @@ supports animated poster only.
   * Fixed issue with missing widget titles
   * Albums count from widget templates removed
   * Missing language strings (GER) for rating colors added
-  * some modifications on holiday themes
+  * some modifications on holiday themes, Palm Week colors added
 
 
 - .8

@@ -2091,7 +2091,7 @@
 					<aspectratio>keep</aspectratio>
 					<width>56</width>
 					<height>56</height>
-					<texture colordiffuse="$VAR[LogoColorVar]">themes/palmweek/logo.png</texture>
+					<texture>themes/palmweek/logo.png</texture>
 					<visible>$EXP[PreEasterTheme]</visible>
 				</control>
 				<control type="image">
@@ -2162,7 +2162,7 @@
 					<aspectratio>keep</aspectratio>
 					<width>56</width>
 					<height>56</height>
-					<texture colordiffuse="$VAR[LogoColorVar]">themes/palmweek/logo.png</texture>
+					<texture>themes/palmweek/logo.png</texture>
 					<visible>$EXP[PreEasterTheme]</visible>
 				</control>
 				<control type="image">
