@@ -1368,14 +1368,15 @@
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 	</variable>
 	<variable name="3DFlagVar">
-		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
-		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
-		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
-		<value condition="ListItem.IsStereoscopic + String.Contains(ListItem.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>
 		<value condition="ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
+		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + String.Contains(Container(60).ListItem.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + Container(60).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
 		<value condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml) + !String.IsEmpty(Container(60).ListItem.VideoResolution)">$INFO[Container(60).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 		<value>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</value>
