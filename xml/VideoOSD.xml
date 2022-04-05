@@ -218,9 +218,9 @@
 					</include>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.DBID)">RunScript(script.embuary.info,call=movie,dbid=$INFO[VideoPlayer.DBID])</onclick>
-					<onclick condition="VideoPlayer.Content(movies) + String.IsEmpty(VideoPlayer.DBID)">RunScript(script.embuary.info,call=movie,query=$INFO[VideoPlayer.Title],year=$INFO[VideoPlayer.Year]</onclick>
+					<onclick condition="VideoPlayer.Content(movies) + String.IsEmpty(VideoPlayer.DBID)">RunScript(script.embuary.info,call=movie,query=$INFO[VideoPlayer.Title],year=$INFO[VideoPlayer.Year])</onclick>
 					<onclick condition="VideoPlayer.Content(episodes) + !StringIsEmpty(VideoPlayer.TvShowDBID)">RunScript(script.embuary.info,call=tv,dbid=$INFO[VideoPlayer.TvShowDBID])</onclick>
-					<onclick condition="VideoPlayer.Content(episodes) + String.IsEmpty(VideoPlayer.TvShowDBID)">RunScript(script.embuary.info,call=tv,query=$INFO[VideoPlayer.TvShowTitle],year=$INFO[VideoPlayer.Year]</onclick>
+					<onclick condition="VideoPlayer.Content(episodes) + String.IsEmpty(VideoPlayer.TvShowDBID)">RunScript(script.embuary.info,call=tv,query=$INFO[VideoPlayer.TvShowTitle],year=$INFO[VideoPlayer.Year])</onclick>
 					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + System.AddonIsEnabled(script.embuary.helper)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
