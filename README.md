@@ -39,6 +39,7 @@ supports animated poster only.
 ### 3.4.0+matrix ###
 - .10
   * Russian language updated, thanks to aleksslab
+  * Navigation in PVRGuide optimized
 
 
 - .9

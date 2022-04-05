@@ -141,7 +141,7 @@
 						<onup condition="Skin.HasSetting(ShowPVRGroups)">50</onup>
 						<onup condition="!Skin.HasSetting(ShowPVRGroups)">11</onup>
 						<ondown condition="Skin.HasSetting(ShowPVRGroups)">50</ondown>
-						<ondown condition="Skin.HasSetting(ShowPVRGroups)">11</ondown>
+						<ondown condition="!Skin.HasSetting(ShowPVRGroups)">11</ondown>
 						<onback condition="!Skin.HasSetting(ShowPVRGroups)">11</onback>
 						<viewtype label="19297">list</viewtype>
 						<progresstexture border="0,60,18,14" colordiffuse="$VAR[SkinColorVar]">windows/pvr/epg_progress.png</progresstexture>
@@ -312,7 +312,7 @@
 						<onup condition="Skin.HasSetting(ShowPVRGroups)">51</onup>
 						<onup condition="!Skin.HasSetting(ShowPVRGroups)">11</onup>
 						<ondown condition="Skin.HasSetting(ShowPVRGroups)">51</ondown>
-						<ondown condition="Skin.HasSetting(ShowPVRGroups)">11</ondown>
+						<ondown condition="!Skin.HasSetting(ShowPVRGroups)">11</ondown>
 						<onback condition="!Skin.HasSetting(ShowPVRGroups)">11</onback>
 						<viewtype label="19298">list</viewtype>
 						<progresstexture border="5,10,5,10" colordiffuse="$VAR[SkinColorVar]">windows/pvr/epg_progress_horizontal.png</progresstexture>
