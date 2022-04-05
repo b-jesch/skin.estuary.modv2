@@ -910,6 +910,7 @@
 	<variable name="Label_SkinSetting_SkinColor">
 		<value condition="$EXP[ChristmasTheme]">$LOCALIZE[40269]</value>
 		<value condition="$EXP[HalloweenTheme]">$LOCALIZE[40270]</value>
+		<value condition="$EXP[PreEasterTheme]">$LOCALIZE[40315]</value>
 		<value condition="$EXP[EasterTheme]">$LOCALIZE[40271]</value>
 		<value condition="$EXP[ValentineTheme]">$LOCALIZE[40272]</value>
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
@@ -918,6 +919,7 @@
 	<variable name="Label_SkinSetting_GradientColor">
 		<value condition="$EXP[ChristmasTheme]">$LOCALIZE[40269]</value>
 		<value condition="$EXP[HalloweenTheme]">$LOCALIZE[40270]</value>
+		<value condition="$EXP[PreEasterTheme]">$LOCALIZE[40315]</value>
 		<value condition="$EXP[EasterTheme]">$LOCALIZE[40271]</value>
 		<value condition="$EXP[ValentineTheme]">$LOCALIZE[40272]</value>
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
@@ -926,6 +928,7 @@
 	<variable name="Label_SkinSetting_BackgroundColor">
 		<value condition="$EXP[ChristmasTheme]">$LOCALIZE[40269]</value>
 		<value condition="$EXP[HalloweenTheme]">$LOCALIZE[40270]</value>
+		<value condition="$EXP[PreEasterTheme]">$LOCALIZE[40315]</value>
 		<value condition="$EXP[EasterTheme]">$LOCALIZE[40271]</value>
 		<value condition="$EXP[ValentineTheme]">$LOCALIZE[40272]</value>
 		<value condition="!String.IsEmpty(Skin.String(BackgroundColor))">$INFO[Skin.String(BackgroundColor)]</value>

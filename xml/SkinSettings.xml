@@ -618,7 +618,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick condition="!Skin.String(SkinColor)">RunScript(script.skin.helper.colorpicker,skinstring=SkinColor)</onclick>
 					<onclick condition="Skin.String(SkinColor)">Skin.Reset(SkinColor)</onclick>
-					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
+					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
 				</control>
 				<control type="radiobutton" id="810">
 					<label>$LOCALIZE[40223]</label>
@@ -633,7 +633,7 @@
 					<onclick condition="!Skin.String(GradientColor)">RunScript(script.skin.helper.colorpicker,skinstring=GradientColor)</onclick>
 					<onclick condition="Skin.String(GradientColor)">Skin.Reset(GradientColor)</onclick>
 					<visible>Skin.HasSetting(EnableGradientColor)</visible>
-					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
+					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
 				</control>
 				<control type="button" id="801">
 					<label>$LOCALIZE[40033]</label>
@@ -641,7 +641,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick condition="!Skin.String(BackgroundColor)">RunScript(script.skin.helper.colorpicker,skinstring=BackgroundColor)</onclick>
 					<onclick condition="Skin.String(BackgroundColor)">Skin.Reset(BackgroundColor)</onclick>
-					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
+					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
 				</control>
 				<control type="button" id="809">
 					<label>$LOCALIZE[31156]</label>
@@ -999,7 +999,7 @@
 					<onclick condition="!Skin.String(RatingStringColor)">RunScript(script.skin.helper.colorpicker,skinstring=RatingStringColor)</onclick>
 					<onclick condition="Skin.String(RatingStringColor)">Skin.Reset(RatingStringColor)</onclick>
 					<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)</visible>
-					<enable>!$EXP[EasterTheme]</enable>
+					<enable>!$EXP[PreEasterTheme] + !$EXP[EasterTheme]</enable>
 				</control>
 				<control type="button" id="713">
 					<label>  ∟$LOCALIZE[40283]</label>
