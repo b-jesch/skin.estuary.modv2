@@ -413,8 +413,8 @@
                 <width>300</width>
                 <height>75</height>
                 <visible>true</visible>
-                <texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">button-fo.png</texturefocus>
-                <texturenofocus colordiffuse="71FFFFFF" border="40">button-nofo.png</texturenofocus>
+                <texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/button-fo.png</texturefocus>
+                <texturenofocus colordiffuse="71FFFFFF" border="40">buttons/button-alt-nofo.png</texturenofocus>
                 <label />
                 <font>font13_title</font>
                 <textcolor>white</textcolor>
