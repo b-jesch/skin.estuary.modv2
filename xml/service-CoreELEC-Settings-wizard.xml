@@ -407,6 +407,22 @@
                 <onleft>1000</onleft>
                 <visible>!String.IsEmpty(Control.GetLabel(1500))</visible>
             </control>
+            <control type="button" id="1501">
+                <left>320</left>
+                <top>576</top>
+                <width>300</width>
+                <height>75</height>
+                <visible>true</visible>
+                <texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">button-fo.png</texturefocus>
+                <texturenofocus colordiffuse="71FFFFFF" border="40">button-nofo.png</texturenofocus>
+                <label />
+                <font>font13_title</font>
+                <textcolor>white</textcolor>
+                <align>center</align>
+                <onup>1000</onup>
+                <onleft>1000</onleft>
+                <visible>!String.IsEmpty(Control.GetLabel(1501))</visible>
+            </control>
         </control>
     </controls>
 </window>

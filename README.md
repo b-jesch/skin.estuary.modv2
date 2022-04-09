@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.0+matrix ###
+- .11
+  * Missing control 1501 in CoreELEC/LibreELEC Settings Wizard added
+
+
 - .10
   * Russian language updated, thanks to aleksslab
   * Navigation in PVRGuide optimized
