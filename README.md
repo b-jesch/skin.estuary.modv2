@@ -39,6 +39,7 @@ supports animated poster only.
 ### 3.4.0+matrix ###
 - .11
   * Missing control 1501 in CoreELEC/LibreELEC Settings Wizard added
+  * Condition for Palm Week fixed
 
 
 - .10

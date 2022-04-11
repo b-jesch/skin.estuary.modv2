@@ -52,7 +52,7 @@
 	<expression name="HalloweenTime">System.Date(10-31,11-01) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="HalloweenTheme">$EXP[HalloweenTime] + $EXP[EnableTheme]</expression>
 	<!-- Palm Sunday to Maundy Thursday -->
-	<expression name="PreEasterTime">System.Date(04-11,04-14) + !SkinHasSetting(DisableThemes)</expression>
+	<expression name="PreEasterTime">System.Date(04-11,04-14) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="PreEasterTheme">$EXP[PreEasterTime] + $EXP[EnableTheme]</expression>
 	<!-- Easter from Good Friday to Easter Monday -->
 	<expression name="EasterTime">System.Date(04-14,04-19) + !Skin.HasSetting(DisableThemes)</expression>
