@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.0+matrix ###
+- .12
+  * fixed incorrect poster overlays in episode view
+
+
 - .11
   * Missing control 1501 in CoreELEC/LibreELEC Settings Wizard added
   * Condition for Palm Week fixed

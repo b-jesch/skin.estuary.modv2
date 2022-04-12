@@ -36,28 +36,6 @@
 					<aspectratio>scale</aspectratio>
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
 				</control>
-				<control type="group">
-					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
-					<visible>!String.IsEmpty(ListItem.Thumb) + !String.IsEqual(ListItem.Thumb,ListItem.Art(poster))</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>253</width>
-						<height>360</height>
-						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="AAFFFFFF" fallback="DefaultVideo.png">colors/black.png</texture>
-					</control>
-					<control type="image">
-						<left>2</left>
-						<top>2</top>
-						<width>249</width>
-						<height>356</height>
-						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture fallback="DefaultVideoFanart.png">$VAR[EpisodeThumbInfoVar]</texture>
-						<bordertexture>colors/white.png</bordertexture>
-						<bordersize>1</bordersize>
-					</control>
-				</control>
 			</control>
 			<control type="image" id="3336">
 				<top>18</top>
