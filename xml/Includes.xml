@@ -1010,7 +1010,7 @@
 				</control>
 				<control type="group">
 					<width>130</width>
-					<visible>!Skin.HasSetting(show_mediavideocodecflag)</visible>
+					<visible>!Skin.HasSetting(show_mediavideocodecflag) + !String.IsEmpty(ListItem.VideoCodec)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoCodec,flags/videocodec/,.png]" />
 						<param name="fallback" value="flags/videocodec/fallback.png" />
