@@ -39,6 +39,7 @@ supports animated poster only.
 ### 3.4.0+matrix ###
 - .12
   * fixed incorrect poster overlays in episode view
+  * some icons added
 
 
 - .11
