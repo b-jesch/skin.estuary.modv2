@@ -2752,6 +2752,14 @@
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
+			<texture colordiffuse="$VAR[PatternColorVar]">special://skin/extras/patterns/pattern17.png</texture>
+			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
+			<visible>$EXP[PreEasterTheme]</visible>
+		</control>
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">special://skin/extras/patterns/pattern15.png</texture>
 			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
 			<visible>$EXP[EasterTheme]</visible>
