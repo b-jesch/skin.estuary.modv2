@@ -41,6 +41,7 @@ supports animated poster only.
   * fixed incorrect poster overlays in episode view
   * some icons added
   * Media flag gap closed if video codec is missing
+  * Background pattern added
 
 
 - .11
