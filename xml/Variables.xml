@@ -33,12 +33,10 @@
 		<value condition="System.Platform.Linux">Linux</value>
 		<value>unknown</value>
 	</variable>
-	<!--
 	<variable name="PasswordButtonVar">
 		<value condition="String.IsEqual(Control.GetLabel(310),$LOCALIZE[12308])">$LOCALIZE[12309]</value>
 		<value>$LOCALIZE[12308]</value>
 	</variable>
-	-->
 	<variable name="SettingsForcedViewsMoviesVar">
 			<value condition="Skin.HasSetting(movies.50)">$LOCALIZE[535]</value>
 			<value condition="Skin.HasSetting(movies.55)">$LOCALIZE[31107]</value>
