@@ -42,6 +42,7 @@ supports animated poster only.
   * some icons added
   * Media flag gap closed if video codec is missing
   * Background pattern added
+  * fixed missing content path for movie genres
 
 
 - .11

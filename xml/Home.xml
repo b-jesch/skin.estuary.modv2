@@ -165,7 +165,8 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5400"/>
 						</include>
-						<include content="WidgetListGenres" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_genremovies)">
+						<include content="WidgetListSquare" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_genremovies)">
+							<param name="content_path" value="videodb://movies/genres/"/>
 							<param name="widget_header" value="$LOCALIZE[135]"/>
 							<param name="widget_header_focus" value="$INFO[Container(5500).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
