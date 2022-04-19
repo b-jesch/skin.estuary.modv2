@@ -931,8 +931,7 @@
 				<control type="colorbutton" id="707">
 					<label>  ∟$LOCALIZE[40093]</label>
 					<include>DefaultSettingButton</include>
-					<!-- <colorbox>$INFO[Skin.String(MediaFlagsColor)]</colorbox> -->
-					<colorbox>Otto ist doof</colorbox>
+					<colorbox>$INFO[Skin.String(MediaFlagsColor)]</colorbox>
 					<onclick>Skin.Setcolor(MediaFlagsColor,40093)</onclick>
 					<visible>!Skin.HasSetting(hide_mediaflags)</visible>
 				</control>
