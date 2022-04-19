@@ -39,11 +39,11 @@ supports animated poster only.
 ### 4.0.0+nexus ###
 - .0
   * Player.Cutlist (deprecated) changed to Player.Editlist
-  * Cut & Scenemarkers added
+  * Cut & Scene Markers added
   * update player processinfo (video scan type progressiv/interlaced)
   * Show/hide button for passwords in keyboard added
-  * Color Picker Dialog added
-  * 
+  * Default color picker dialog added
+  * Skinhelper Colorpicker from optional addons list removed
   
 
 ### 3.4.0+nexus ###
