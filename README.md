@@ -36,7 +36,17 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 
-### 3.4.0+matrix ###
+### 4.0.0+nexus ###
+- .0
+  * Player.Cutlist (deprecated) changed to Player.Editlist
+  * Cut & Scenemarkers added
+  * update player processinfo (video scan type progressiv/interlaced)
+  * Show/hide button for passwords in keyboard added
+  * Color Picker Dialog added
+  * 
+  
+
+### 3.4.0+nexus ###
 - .12
   * fixed incorrect poster overlays in episode view
   * some icons added

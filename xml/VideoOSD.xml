@@ -53,7 +53,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 					</include>
 					<onclick>PlayerControl(Previous)</onclick>
-					<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | Player.SeekEnabled</visible>
+					<visible>Player.HasSceneMarkers + Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)]</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="6001">
@@ -61,7 +61,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 					</include>
 					<onclick>PlayerControl(BigSkipBackward)</onclick>
-					<visible>!VideoPlayer.Content(livetv) + !Player.ChapterCount</visible>
+					<visible>!VideoPlayer.Content(livetv) + !Player.HasSceneMarkers + !Player.ChapterCount</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="601">
@@ -129,7 +129,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 					</include>
 					<onclick>PlayerControl(Next)</onclick>
-					<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [VideoPlayer.Content(LiveTV) + Player.SeekEnabled]</visible>
+					<visible>Player.HasSceneMarkers | Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)] | PVR.IsTimeShift</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="6051">
@@ -137,7 +137,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 					</include>
 					<onclick>PlayerControl(BigSkipForward)</onclick>
-					<visible>!VideoPlayer.Content(livetv) + !Player.ChapterCount</visible>
+					<visible>!VideoPlayer.Content(livetv) + !Player.HasSceneMarkers + !Player.ChapterCount</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="804">
@@ -412,7 +412,37 @@
 					<lefttexture>colors/white.png</lefttexture>
 					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
 					<righttexture>colors/white.png</righttexture>
-					<info>Player.Cutlist</info>
+					<info>Player.Editlist</info>
+				</control>
+				<control type="ranges">
+					<top>4</top>
+					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
+						<param name="left" value="460"/>
+					</include>
+					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
+						<param name="left" value="30"/>
+					</include>
+					<right>30</right>
+					<height>8</height>
+					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/red50.png</texturebg>
+					<righttexture>colors/red.png</righttexture>
+					<info>Player.Cuts</info>
+				</control>
+				<control type="ranges">
+					<top>4</top>
+					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
+						<param name="left" value="460"/>
+					</include>
+					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
+						<param name="left" value="30"/>
+					</include>
+					<right>30</right>
+					<height>6</height>
+					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+					<righttexture>colors/white.png</righttexture>
+					<info>Player.SceneMarkers</info>
 				</control>
 				<control type="ranges">
 					<top>4</top>

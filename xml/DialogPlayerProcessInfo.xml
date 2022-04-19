@@ -192,7 +192,7 @@
 				<control type="label">
 					<height>35</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videowidth),$LOCALIZE[38031] : [COLOR white],x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS][/COLOR]</label>
+					<label>$INFO[Player.Process(videowidth),$LOCALIZE[38031] : [COLOR white],x]$INFO[Player.Process(videoheight)]$INFO[Player.Process(videoscantype)]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS][/COLOR]</label>
 					<font>font12</font>
 					<visible>Player.HasVideo</visible>
 					<textcolor>$VAR[SkinColorVar]</textcolor>

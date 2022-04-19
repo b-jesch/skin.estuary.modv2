@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.4.0+nexus.12" name="Estuary MOD V2 Nexus" provider-name="Guilouz, K20 branch by PvD">
+<addon id="skin.estuary.modv2" version="4.0.0+nexus" name="Estuary MOD V2 Nexus" provider-name="Guilouz, K20 branch by PvD">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
-		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="xbmc.gui" version="5.16.0"/>
 		<import addon="script.skinshortcuts" version="1.1.3"/>
         <import addon="script.image.resource.select" version="3.0.2"/>
 		<import addon="script.module.pvr.artwork" version="2.0.0"/>

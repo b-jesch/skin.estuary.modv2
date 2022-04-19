@@ -212,36 +212,32 @@
 					<onclick>Skin.ToggleSetting(Alt_color.lyrics)</onclick>
 					<visible>!Skin.HasSetting(enable_animatedlyrics)</visible>
 				</control>
-				<control type="button" id="217">
+				<control type="colorbutton" id="217">
 					<label>    ∟$LOCALIZE[737] 1</label>
-					<label2>$VAR[Label_SkinSetting_LyricsColor1]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(LyricsColor1)">RunScript(script.skin.helper.colorpicker,skinstring=LyricsColor1)</onclick>
-					<onclick condition="Skin.String(LyricsColor1)">Skin.Reset(LyricsColor1)</onclick>
+					<colorbox>$INFO[Skin.String(LyricsColor1)]</colorbox>
+					<onclick>Skin.Setcolor(LyricsColor1,737)</onclick>
 					<visible>!Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
 				</control>
-				<control type="button" id="218">
+				<control type="colorbutton" id="218">
 					<label>    ∟$LOCALIZE[737] 2</label>
-					<label2>$VAR[Label_SkinSetting_LyricsColor2]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(LyricsColor2)">RunScript(script.skin.helper.colorpicker,skinstring=LyricsColor2)</onclick>
-					<onclick condition="Skin.String(LyricsColor2)">Skin.Reset(LyricsColor2)</onclick>
+					<colorbox>$INFO[Skin.String(LyricsColor2)]</colorbox>
+					<onclick>Skin.Setcolor(LyricsColor2,737)</onclick>
 					<visible>!Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
 				</control>
-				<control type="button" id="219">
+				<control type="colorbutton" id="219">
 					<label>    ∟$LOCALIZE[737] 3</label>
-					<label2>$VAR[Label_SkinSetting_LyricsColor3]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(LyricsColor3)">RunScript(script.skin.helper.colorpicker,skinstring=LyricsColor3)</onclick>
-					<onclick condition="Skin.String(LyricsColor3)">Skin.Reset(LyricsColor3)</onclick>
+					<colorbox>$INFO[Skin.String(LyricsColor3)]</colorbox>
+					<onclick>Skin.Setcolor(LyricsColor3,737)</onclick>
 					<visible>!Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
 				</control>
-				<control type="button" id="220">
+				<control type="colorbutton" id="220">
 					<label>    ∟$LOCALIZE[737] 4</label>
-					<label2>$VAR[Label_SkinSetting_LyricsColor4]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(LyricsColor4)">RunScript(script.skin.helper.colorpicker,skinstring=LyricsColor4)</onclick>
-					<onclick condition="Skin.String(LyricsColor4)">Skin.Reset(LyricsColor4)</onclick>
+					<colorbox>$INFO[Skin.String(LyricsColor4)]</colorbox>
+					<onclick>Skin.Setcolor(LyricsColor4,737)</onclick>
 					<visible>!Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
 				</control>
 				<control type="radiobutton" id="213">
@@ -409,17 +405,6 @@
 					<onclick condition="!System.HasAddon(service.sleepy.watchdog)">InstallAddon(service.sleepy.watchdog)</onclick>
 					<onclick condition="System.HasAddon(service.sleepy.watchdog)">Addon.OpenSettings(service.sleepy.watchdog)</onclick>
 					<selected>System.HasAddon(service.sleepy.watchdog)</selected>
-					<include>DefaultSettingButton</include>
-				</control>
-				<control type="radiobutton" id="311">
-					<label>Skin Helper Service ColorPicker $INFO[System.AddonVersion(script.skin.helper.colorpicker),(,)]</label>
-					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
-					<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">Addon.OpenSettings(script.skin.helper.colorpicker)</onclick>
-					<selected>System.HasAddon(script.skin.helper.colorpicker)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="radiobutton" id="312">
@@ -612,12 +597,11 @@
 				<ondown>800</ondown>
 				<pagecontrol>60</pagecontrol>
 				<visible>Container(9000).HasFocus(4)</visible>
-				<control type="button" id="803">
+				<control type="colorbutton" id="803">
 					<label>$LOCALIZE[40020]</label>
-					<label2>$VAR[Label_SkinSetting_SkinColor]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(SkinColor)">RunScript(script.skin.helper.colorpicker,skinstring=SkinColor)</onclick>
-					<onclick condition="Skin.String(SkinColor)">Skin.Reset(SkinColor)</onclick>
+					<colorbox>$INFO[Skin.String(SkinColor)]</colorbox>
+					<onclick>Skin.Setcolor(SkinColor,40020,button_focus)</onclick>
 					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
 				</control>
 				<control type="radiobutton" id="810">
@@ -626,21 +610,19 @@
 					<onclick>Skin.ToggleSetting(EnableGradientColor)</onclick>
 					<selected>Skin.HasSetting(EnableGradientColor)</selected>
 				</control>
-				<control type="button" id="811">
+				<control type="colorbutton" id="811">
 					<label>  ∟$LOCALIZE[40224]</label>
-					<label2>$VAR[Label_SkinSetting_GradientColor]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(GradientColor)">RunScript(script.skin.helper.colorpicker,skinstring=GradientColor)</onclick>
-					<onclick condition="Skin.String(GradientColor)">Skin.Reset(GradientColor)</onclick>
+					<colorbox>$INFO[Skin.String(GradientColor)]</colorbox>
+					<onclick>Skin.Setcolor(GradientColor,40224)</onclick>
 					<visible>Skin.HasSetting(EnableGradientColor)</visible>
 					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
 				</control>
-				<control type="button" id="801">
+				<control type="colorbutton" id="801">
 					<label>$LOCALIZE[40033]</label>
-					<label2>$VAR[Label_SkinSetting_BackgroundColor]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(BackgroundColor)">RunScript(script.skin.helper.colorpicker,skinstring=BackgroundColor)</onclick>
-					<onclick condition="Skin.String(BackgroundColor)">Skin.Reset(BackgroundColor)</onclick>
+					<colorbox>$INFO[Skin.String(BackgroundColor)]</colorbox>
+					<onclick>Skin.Setcolor(BackgroundColor,40033)</onclick>
 					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
 				</control>
 				<control type="button" id="809">
@@ -946,12 +928,12 @@
 					<onclick>ActivateWindow(1137)</onclick>
 					<visible>!Skin.HasSetting(hide_mediaflags)</visible>
 				</control>
-				<control type="button" id="707">
+				<control type="colorbutton" id="707">
 					<label>  ∟$LOCALIZE[40093]</label>
-					<label2>$VAR[Label_SkinSetting_MediaFlagsColor]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(MediaFlagsColor)">RunScript(script.skin.helper.colorpicker,skinstring=MediaFlagsColor)</onclick>
-					<onclick condition="Skin.String(MediaFlagsColor)">Skin.Reset(MediaFlagsColor)</onclick>
+					<!-- <colorbox>$INFO[Skin.String(MediaFlagsColor)]</colorbox> -->
+					<colorbox>Otto ist doof</colorbox>
+					<onclick>Skin.Setcolor(MediaFlagsColor,40093)</onclick>
 					<visible>!Skin.HasSetting(hide_mediaflags)</visible>
 				</control>
 				<control type="label" id="30019">
@@ -978,12 +960,11 @@
 					<selected>Skin.HasSetting(stationlogo_border)</selected>
 					<visible>Skin.HasSetting(show_borders)</visible>
 				</control>
-				<control type="button" id="710">
+				<control type="colorbutton" id="710">
 					<label>  ∟$LOCALIZE[40021]</label>
-					<label2>$VAR[Label_SkinSetting_BorderColor]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(BorderColor)">RunScript(script.skin.helper.colorpicker,skinstring=BorderColor)</onclick>
-					<onclick condition="Skin.String(BorderColor)">Skin.Reset(BorderColor)</onclick>
+					<colorbox>$INFO[Skin.String(BorderColor)]</colorbox>
+					<onclick>Skin.Setcolor(BorderColor,40021)</onclick>
 					<visible>Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="button" id="711">
@@ -992,21 +973,19 @@
 					<onclick>Skin.SelectBool(31024, 40148|, 40232|circle_rating, 40233|circle_userrating, 40281|circle_bothrating)</onclick>
 					<label2>$VAR[RatingSettingLabel2Var]</label2>
 				</control>
-				<control type="button" id="712">
+				<control type="colorbutton" id="712">
 					<label>  ∟$LOCALIZE[40282]</label>
-					<label2>$VAR[Label_SkinSetting_RatingStringColor]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(RatingStringColor)">RunScript(script.skin.helper.colorpicker,skinstring=RatingStringColor)</onclick>
-					<onclick condition="Skin.String(RatingStringColor)">Skin.Reset(RatingStringColor)</onclick>
+					<colorbox>$INFO[Skin.String(RatingStringColor)]</colorbox>
+					<onclick>Skin.Setcolor(RatingStringColor,40282)</onclick>
 					<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)</visible>
 					<enable>!$EXP[PreEasterTheme] + !$EXP[EasterTheme]</enable>
 				</control>
-				<control type="button" id="713">
+				<control type="colorbutton" id="713">
 					<label>  ∟$LOCALIZE[40283]</label>
-					<label2>$VAR[Label_SkinSetting_UserRatingStringColor]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(UserRatingStringColor)">RunScript(script.skin.helper.colorpicker,skinstring=UserRatingStringColor)</onclick>
-					<onclick condition="Skin.String(UserRatingStringColor)">Skin.Reset(UserRatingStringColor)</onclick>
+					<colorbox>$INFO[Skin.String(UserRatingStringColor)]</colorbox>
+					<onclick>Skin.Setcolor(UserRatingStringColor,40283)</onclick>
 					<visible>Skin.HasSetting(circle_bothrating)</visible>
 				</control>
 				<control type="button" id="714">
