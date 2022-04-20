@@ -116,10 +116,10 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="colorbutton">
-		<colorwidth>170</colorwidth>
+		<colorwidth>76</colorwidth>
 		<colorheight>76</colorheight>
-		<texturecolormask>buttons/color-button-box.png</texturecolormask>
-		<texturecolordisabledmask colordiffuse="disabled">buttons/color-button-box.png</texturecolordisabledmask>
+		<texturecolormask>buttons/color-button-box-square.png</texturecolormask>
+		<texturecolordisabledmask colordiffuse="disabled">buttons/color-button-box-square.png</texturecolordisabledmask>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>disabled</disabledcolor>
@@ -127,6 +127,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
+		<right>20</right>
 	</default>
 	<default type="scrollbar">
 		<texturesliderbackground colordiffuse="29FFFFFF">colors/white.png</texturesliderbackground>

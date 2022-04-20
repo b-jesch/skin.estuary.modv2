@@ -83,7 +83,7 @@
 		<param name="height">70</param>
 		<param name="textoffsetx">40</param>
 		<param name="font">font13</param>
-		<param name="textwidth"></param>
+		<param name="textwidth" />
 		<definition>
 			<textoffsetx>$PARAM[textoffsetx]</textoffsetx>
 			<top>0</top>
@@ -95,6 +95,33 @@
 			<font>$PARAM[font]</font>
 			<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
 			<texturenofocus />
+		</definition>
+	</include>
+	<include name="DefaultColorSettingButton">
+		<param name="id" />
+		<param name="label" />
+		<param name="label2" />
+		<param name="header" />
+		<param name="setting" />
+		<param name="visible">true</param>
+		<param name="enable">true</param>
+		<definition>
+			<control type="colorbutton" id="$PARAM[id]0">
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<colorbox>$INFO[Skin.String($PARAM[setting])]</colorbox>
+				<onclick>Skin.Reset($PARAM[setting])</onclick>
+				<visible>Skin.String($PARAM[setting]) + [$PARAM[visible]] + [$PARAM[enable]]</visible>
+				<!--<enable>$PARAM[enable]</enable>-->
+			</control>
+			<control type="button" id="$PARAM[id]1">
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick>Skin.Setcolor($PARAM[setting],$PARAM[header])</onclick>
+				<visible>!Skin.String($PARAM[setting]) + [$PARAM[visible]] | ![$PARAM[enable]]</visible>
+				<enable>$PARAM[enable]</enable>
+			</control>
 		</definition>
 	</include>
 	<include name="DialogSettingButton">
