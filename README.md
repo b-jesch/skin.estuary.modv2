@@ -43,6 +43,7 @@ supports animated poster only.
   * Default color picker dialog added
   * Introducing DefaultColorSettingsButton
   * Skinhelper Colorpicker from optional addons list removed
+  * Autohide OSD from skin settings removed 
   
 
 ### 3.4.0+nexus ###
