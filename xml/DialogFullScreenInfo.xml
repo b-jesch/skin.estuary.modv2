@@ -542,7 +542,7 @@
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[HdrTypeVar]" />
-					<param name="visible" value="String.Contains(Player.HdrType,dolbyvision) | String.Contains(Player.Filenameandpath,.dv.) |  | String.Contains(Player.Filenameandpath,.dovi.) | String.Contains(Player.Filenameandpath,.dolbyvision.)" />
+					<param name="visible" value="String.Contains(Player.HdrType,dolbyvision) | String.Contains(Player.Filenameandpath,.dv.) | String.Contains(Player.Filenameandpath,.dovi.) | String.Contains(Player.Filenameandpath,.dolbyvision.)" />
 					<param name="width" value="115" />
 					<param name="top" value="5" />
 				</include>
