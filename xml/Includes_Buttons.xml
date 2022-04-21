@@ -112,7 +112,6 @@
 				<colorbox>$INFO[Skin.String($PARAM[setting])]</colorbox>
 				<onclick>Skin.Reset($PARAM[setting])</onclick>
 				<visible>Skin.String($PARAM[setting]) + [$PARAM[visible]] + [$PARAM[enable]]</visible>
-				<!--<enable>$PARAM[enable]</enable>-->
 			</control>
 			<control type="button" id="$PARAM[id]1">
 				<include>DefaultSettingButton</include>

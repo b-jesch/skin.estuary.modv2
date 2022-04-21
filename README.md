@@ -35,6 +35,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.0+nexus ###
+- .1
+  * HDR type by filename recognition removed from fullscreeninfo
+  
+
 - .0
   * Player.Cutlist (deprecated) changed to Player.Editlist
   * Cut & Scene Markers added
