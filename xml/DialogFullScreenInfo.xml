@@ -249,59 +249,7 @@
 					<font>Font-Flag-Small</font>
 				</control>
 			</control>
-			<!--
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icons/infodialogs/audio.png</texture>
-				<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-			</control>
-			<control type="image">
-				<width>10</width>
-				<height>10</height>
-				<aspectratio>keep</aspectratio>
-				<texture/>
-				<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.AudioLanguage,icons/infodialogs/flags/,.png]</texture>
-				<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-			</control>
-			<control type="image">
-				<width>50</width>
-				<height>10</height>
-				<aspectratio>keep</aspectratio>
-				<texture/>
-				<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icons/infodialogs/subtitles.png</texture>
-				<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-			</control>
-			<control type="image">
-				<width>10</width>
-				<height>10</height>
-				<aspectratio>keep</aspectratio>
-				<texture/>
-				<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-			</control>
-			<control type="image">
-				<width>40</width>
-				<height>40</height>
-				<aspectratio>keep</aspectratio>
-				<texture fallback="icons/infodialogs/flags/fallback.png">$INFO[VideoPlayer.SubtitlesLanguage,icons/infodialogs/flags/,.png]</texture>
-				<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
-			</control>
-			-->
 		</control>
-
 		<control type="group">
 			<left>30</left>
 			<top>600</top>

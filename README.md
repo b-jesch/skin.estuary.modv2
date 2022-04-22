@@ -37,6 +37,8 @@ supports animated poster only.
 ### 4.0.0+nexus ###
 - .1
   * HDR type by filename recognition removed from fullscreeninfo
+  * Revert removing of Autohide OSD setting from skin settings (disable setting in Interface/OSD)
+  * some Fixes on PVR Radio OSD
   
 
 - .0

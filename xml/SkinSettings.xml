@@ -861,6 +861,19 @@
 					<onclick>Skin.ToggleSetting(hide_popup)</onclick>
 					<selected>Skin.HasSetting(hide_popup)</selected>
 				</control>
+				<control type="button" id="719">
+					<label>$LOCALIZE[40377]</label>
+					<label2>$INFO[Skin.String(autoclose_osd)]</label2>
+					<include>DefaultSettingButton</include>
+					<description>autoclose OSD menu</description>
+					<onclick condition="String.IsEmpty(Skin.String(autoclose_osd))">Skin.SetString(autoclose_osd,$LOCALIZE[40378])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40384])">Skin.SetString(autoclose_osd,$LOCALIZE[40378])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40383])">Skin.SetString(autoclose_osd,$LOCALIZE[40384])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40382])">Skin.SetString(autoclose_osd,$LOCALIZE[40383])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40381])">Skin.SetString(autoclose_osd,$LOCALIZE[40382])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40380])">Skin.SetString(autoclose_osd,$LOCALIZE[40381])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40378])">Skin.SetString(autoclose_osd,$LOCALIZE[40380])</onclick>
+				</control>
 				<control type="label" id="30017">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>

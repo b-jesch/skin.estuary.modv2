@@ -137,13 +137,13 @@
  					<selected>!PVR.IsRecordingPlayingChannel</selected>
  					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
  					<visible>PVR.CanRecordPlayingChannel</visible>
- 					<visible>VideoPlayer.Content(livetv)</visible>
+ 					<visible>MusicPlayer.Content(LiveTV)</visible>
  				</control>
                 <control type="radiobutton" id="62040">
 					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
+						<param name="texture" value="osd/fullscreen/buttons/plot.png"/>
 					</include>
-					<onclick>ActivateWindow(fullscreeninfo)</onclick>
+					<onclick>ActivateWindow(1138)</onclick>
 					<visible>MusicPlayer.Content(LiveTV)</visible>
 				</control>
                 <control type="radiobutton" id="62041">
@@ -156,7 +156,7 @@
 				</control>
 				<control type="radiobutton" id="62042">
 					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/guide.png"/>
+						<param name="texture" value="osd/fullscreen/buttons/livetv.png"/>
 					</include>
 					<onclick>Dialog.Close(MusicOSD)</onclick>
 					<onclick>ActivateWindow(PVRChannelGuide)</onclick>
