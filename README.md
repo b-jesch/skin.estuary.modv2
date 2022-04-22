@@ -43,6 +43,7 @@ supports animated poster only.
   * Media flag gap closed if video codec is missing
   * Background pattern added
   * fixed missing content path for movie genres
+  * some PVR Radio fixes
 
 
 - .11
