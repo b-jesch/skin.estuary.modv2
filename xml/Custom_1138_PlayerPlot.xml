@@ -12,18 +12,6 @@
 			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
 			<control type="textbox">
 				<left>460</left>
-				<top>123</top>
-				<right>30</right>
-				<height>190</height>
-				<align>justify</align>
-				<font>fontplot</font>
-				<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
-				<autoscroll delay="9000" time="5000" repeat="8000">true</autoscroll>
-				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
-				<visible>![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)] + !Pvr.IsPlayingRadio</visible>
-			</control>
-			<control type="textbox">
-				<left>460</left>
 				<top>70</top>
 				<right>30</right>
 				<height>180</height>
@@ -32,7 +20,7 @@
 				<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
 				<autoscroll delay="9000" time="5000" repeat="8000">true</autoscroll>
 				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
-				<visible>![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)] + Pvr.IsPlayingRadio</visible>
+				<visible>![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]</visible>
 			</control>
 			<control type="group">
 				<visible>[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]</visible>
