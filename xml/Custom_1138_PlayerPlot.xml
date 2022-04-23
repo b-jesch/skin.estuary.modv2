@@ -12,7 +12,7 @@
 			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
 			<control type="textbox">
 				<left>460</left>
-				<top>65</top>
+				<top>123</top>
 				<right>30</right>
 				<height>180</height>
 				<align>justify</align>
