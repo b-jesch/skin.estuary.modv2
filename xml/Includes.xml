@@ -3506,9 +3506,9 @@
 				<visible>![VideoPlayer.HasMenu + System.HasMediaDVD] + !Window.IsVisible(1138) + !Window.IsVisible(1139) + !Window.IsVisible(1122) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(playerprocessinfo)</visible>
 				<control type="textbox">
 					<left>460</left>
-					<top>65</top>
+					<top>123</top>
 					<right>30</right>
-					<height>180</height>
+					<height>190</height>
 					<align>justify</align>
 					<font>fontplot</font>
 					<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
@@ -3935,6 +3935,7 @@
 						<scroll>true</scroll>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>!VideoPlayer.Content(LiveTV) + !Window.IsVisible(MusicVisualisation.xml) + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1139)</visible>
+						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<animation effect="slide" end="0,40" time="0" condition="[[VideoPlayer.Content(files) + !String.StartsWith(Player.Filenameandpath,http)] | String.Contains(Player.Art(thumb),ytimg)] + !Window.IsVisible(1138) + ![Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 					</control>
 					<control type="label">
@@ -3960,6 +3961,7 @@
 						<scroll>true</scroll>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>Window.IsVisible(MusicVisualisation.xml) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 					</control>
 					<control type="label">
 						<left>460</left>
@@ -3972,6 +3974,7 @@
 						<scroll>true</scroll>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio</visible>
+						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1139)</visible>
 						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 					</control>
