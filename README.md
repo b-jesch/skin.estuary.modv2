@@ -35,6 +35,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.0+nexus ###
+- .2
+  * Partially reverted changes on Video/Audio OSD
+
+
 - .1
   * HDR type by filename recognition removed from fullscreeninfo
   * Revert removing of Autohide OSD setting from skin settings (disable setting in Interface/OSD)
