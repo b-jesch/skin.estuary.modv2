@@ -3961,6 +3961,7 @@
 						<scroll>true</scroll>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>Window.IsVisible(MusicVisualisation.xml) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 					</control>
 					<control type="label">
 						<left>460</left>
