@@ -824,6 +824,7 @@
 		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12)">12</value>
 		<value condition="String.Contains(ListItem.mpaa,13) | String.Contains(Container(60).ListItem.mpaa,13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),13)">13</value>
 		<value condition="String.Contains(ListItem.mpaa,14) | String.Contains(Container(60).ListItem.mpaa,14) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),14)">14</value>
+		<value condition="String.Contains(ListItem.mpaa,15) | String.Contains(Container(60).ListItem.mpaa,15) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),15)">15</value>
 		<value condition="String.Contains(ListItem.mpaa,16) | String.Contains(Container(60).ListItem.mpaa,16) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),16)">16</value>
 		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(Container(60).ListItem.mpaa,18) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),18)">18</value>
 		<value condition="String.Contains(ListItem.mpaa,U) | String.Contains(Container(60).ListItem.mpaa,U) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),U)">U</value>

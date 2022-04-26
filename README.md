@@ -37,6 +37,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.0+matrix ###
+- .13
+  * color scheme 'chicken' added
+  * UK:15 rating added
+  
+
 - .12
   * fixed incorrect poster overlays in episode view
   * some icons added
