@@ -37,6 +37,7 @@ supports animated poster only.
 ### 4.0.0+nexus ###
 - .2
   * Partially reverted changes on Video/Audio OSD
+  * UK:15 rating added
 
 
 - .1
