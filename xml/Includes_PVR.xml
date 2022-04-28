@@ -821,6 +821,7 @@
 						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
+						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>160</left>
@@ -906,6 +907,7 @@
 						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
+						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>160</left>
