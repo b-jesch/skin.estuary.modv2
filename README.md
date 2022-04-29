@@ -39,7 +39,7 @@ supports animated poster only.
 ### 3.4.0+matrix ###
 - .13
   * color scheme 'chicken' added
-  * UK:15 rating added
+  * UK/MPAA 15 rating added
   
 
 - .12
