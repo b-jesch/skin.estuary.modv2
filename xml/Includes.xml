@@ -4690,10 +4690,20 @@
 			<bottom>105</bottom>
 			<right>30</right>
 			<height>30</height>
+			<label>$INFO[Player.SeekTime]$INFO[Player.Duration, / ]</label>
+			<font>font12</font>
+			<align>right</align>
+			<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + !VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+		</control>
+		<control type="label">
+			<left>30</left>
+			<bottom>105</bottom>
+			<right>30</right>
+			<height>30</height>
 			<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
 			<font>font12</font>
 			<align>right</align>
-			<visible>!VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+			<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + !VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
 		</control>
 		<control type="label">
 			<left>30</left>
