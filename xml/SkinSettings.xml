@@ -53,6 +53,16 @@
 					<selected>Skin.HasSetting(SmallOSDVideo)</selected>
                     <onclick>Skin.ToggleSetting(SmallOSDVideo)</onclick>
 				</control>
+				<control type="button" id="111">
+					<label>  ∟$LOCALIZE[40413]</label>
+					<include>DefaultSettingButton</include>
+					<label2>$VAR[OsdMediaTimeVar]</label2>
+					<description>display media time on osd</description>
+					<onclick condition="String.IsEmpty(Skin.String(OsdMediaTime))">Skin.SetString(OsdMediaTime,1)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(OsdMediaTime),0)">Skin.SetString(OsdMediaTime,1)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(OsdMediaTime),1)">Skin.SetString(OsdMediaTime,0)</onclick>
+					<visible>Skin.HasSetting(SmallOSDVideo)</visible>
+				</control>
 				<control type="radiobutton" id="110">
 					<label>$LOCALIZE[40407]</label>
 					<include>DefaultSettingButton</include>

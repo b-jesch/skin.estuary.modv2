@@ -35,6 +35,15 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.0+nexus ###
+- .4
+  * add missing hdr type flag in video OSD
+  * Settings option for displaying current time/total time and time remaining in small video OSD
+  
+
+- .3
+  * add missing color scheme 'chicken.xml'
+  
+
 - .2
   * Partially reverted changes on Video/Audio OSD
   * UK:15 rating added
