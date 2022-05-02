@@ -4720,10 +4720,20 @@
 			<bottom>105</bottom>
 			<right>30</right>
 			<height>30</height>
+			<label>$INFO[PVR.EpgEventSeekTime]$INFO[PVR.EpgEventDuration, / ]</label>
+			<font>font12</font>
+			<align>right</align>
+			<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + VideoPlayer.HasEpg</visible>
+		</control>
+		<control type="label">
+			<left>30</left>
+			<bottom>105</bottom>
+			<right>30</right>
+			<height>30</height>
 			<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
 			<font>font12</font>
 			<align>right</align>
-			<visible>VideoPlayer.HasEpg</visible>
+			<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + VideoPlayer.HasEpg</visible>
 		</control>
 	</include>
 	<include name="SplashScreen">
