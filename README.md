@@ -43,7 +43,7 @@ supports animated poster only.
 
 - .13
   * color scheme 'chicken' added
-  * UK:15 rating added
+  * UK/MPAA 15 rating added
   
 
 - .12
