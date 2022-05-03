@@ -39,6 +39,7 @@ supports animated poster only.
 ### 3.4.0+matrix ###
 - .14
   * Settings option for displaying current time/total time and time remaining in small video OSD
+  * File view in video widgets added (movie, tvshow)
   
 
 - .13
