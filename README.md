@@ -39,6 +39,7 @@ supports animated poster only.
   * add missing hdr type flag in video OSD
   * Settings option for displaying current time/total time and time remaining in small video OSD
   * changing fanart, many thanks to samfisher (Team-Kodi)
+  * File view in video widgets added (movie, tvshow)
   
 
 - .3
