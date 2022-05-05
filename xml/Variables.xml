@@ -1343,13 +1343,6 @@
 		<value condition="String.Contains(ListItem.Filenameandpath,bluray) | String.Contains(ListItem.Filenameandpath,blu-ray) | String.Contains(ListItem.Filenameandpath,bdrip)">flags/bluray.png</value>
 	</variable>
 	<variable name="HdrTypeVar">
-		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.HdrType)">$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.HdrType)">$INFO[ListItem.Container.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
-		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<!-- HDR+ type recognition by filename -->
 		<value condition="String.Contains(ListItem.Filenameandpath,.hdrplus.) | String.Contains(ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(VideoPlayer.Filenameandpath,.hdrplus.) | String.Contains(VideoPlayer.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
@@ -1358,6 +1351,13 @@
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5083).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5084).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5094).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
+		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.HdrType)">$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.HdrType)">$INFO[ListItem.Container.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(60).ListItem.HdrType)">$INFO[Container(60).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
+		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="3DFlagVar">
 		<value condition="String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
