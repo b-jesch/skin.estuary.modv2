@@ -101,6 +101,14 @@
 								<align>justify</align>
 								<autoscroll delay="5000" repeat="7500" time="4000">true</autoscroll>
 							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>10</posy>
+								<width>260</width>
+								<height>360</height>
+								<texture fallback="fallback.png">$INFO[ListItem.Icon]</texture>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+							</control>
 						</control>
 					</focusedlayout>
 				</control>
