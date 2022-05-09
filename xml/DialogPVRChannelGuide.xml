@@ -25,7 +25,7 @@
 					<width>100</width>
 					<height>100</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultTVShows.png">$INFO[Player.Icon]</texture>
+					<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label" id="2">
 					<description>header label</description>
@@ -35,7 +35,7 @@
 					<height>40</height>
 					<font>font14</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<label>[B]$INFO[VideoPlayer.ChannelName, $LOCALIZE[19069] : [COLOR white],[/COLOR]][/B]</label>
+					<label>[B]$INFO[ListItem.ChannelName, $LOCALIZE[19069] : [COLOR white],[/COLOR]][/B]</label>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>true</scroll>
 				</control>
