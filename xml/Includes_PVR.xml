@@ -118,12 +118,16 @@
 				<width>370</width>
 				<height>410</height>
 				<control type="image">
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+					<fadetime>200</fadetime>
+				</control>
+				<control type="image">
+					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarInfo]</texture>
 					<fadetime>200</fadetime>
 				</control>
 				<include content="BusyPvrArtworkSpinner">
-					<param name="top" value="210" />
+					<param name="top" value="165" />
 					<param name="left" value="145" />
 				</include>
 			</control>
@@ -1176,6 +1180,13 @@
 				<left>25</left>
 				<width>340</width>
 				<height>262</height>
+				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<left>25</left>
+				<width>340</width>
+				<height>262</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
 				<visible>!Player.HasVideo</visible>
@@ -1246,6 +1257,110 @@
 				<align>center</align>
 				<label>$LOCALIZE[19055]</label>
 				<visible>String.IsEmpty(ListItem.Plot)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="PVRChannelInfoPanel">
+		<include content="ContentPanel">
+			<param name="left">875</param>
+			<param name="width" value="1100" />
+			<param name="height" value="460" />
+			<param name="top" value="640" />
+		</include>
+		<control type="group">
+			<left>875</left>
+			<bottom>0</bottom>
+			<height>460</height>
+			<control type="label">
+				<top>45</top>
+				<left>40</left>
+				<right>30</right>
+				<height>40</height>
+				<font>font14</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>[B]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]][/B]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<top>90</top>
+				<left>40</left>
+				<right>30</right>
+				<height>30</height>
+				<font>font12</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>[B]$INFO[ListItem.Genre, $LOCALIZE[515] : [COLOR white],[/COLOR]][/B]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="image">
+				<top>140</top>
+				<left>40</left>
+				<width>340</width>
+				<height>245</height>
+				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<top>140</top>
+				<left>40</left>
+				<width>340</width>
+				<height>245</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
+				<fadetime>200</fadetime>
+			</control>
+			<include content="BusyPvrArtworkSpinner">
+				<param name="top" value="222" />
+				<param name="left" value="170" />
+			</include>
+			<control type="label">
+				<top>135</top>
+				<left>405</left>
+				<right>30</right>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<label>$VAR[SeasonEpisodeLabel,[B],[/B]]</label>
+			</control>
+			<control type="textbox">
+				<left>405</left>
+				<top>180</top>
+				<bottom>77</bottom>
+				<right>30</right>
+				<font>font12</font>
+				<align>justify</align>
+				<label>$INFO[ListItem.Plot]</label>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<visible>!String.IsEmpty(ListItem.EpisodeName) | !String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode)</visible>
+			</control>
+			<control type="textbox">
+				<left>405</left>
+				<top>140</top>
+				<right>30</right>
+				<bottom>77</bottom>
+				<font>font12</font>
+				<align>justify</align>
+				<label>$INFO[ListItem.Plot]</label>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<visible>String.IsEmpty(ListItem.EpisodeName) + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)</visible>
+			</control>
+			<control type="label">
+				<left>405</left>
+				<top>170</top>
+				<right>30</right>
+				<height>200</height>
+				<font>font25_title</font>
+				<textcolor>grey</textcolor>
+				<align>center</align>
+				<label>$LOCALIZE[19055]</label>
+				<visible>String.IsEmpty(ListItem.Plot)</visible>
+			</control>
+			<control type="group">
+				<bottom>0</bottom>
+				<height>70</height>
+				<right>-15</right>
+				<include content="MediaFlagsInfoDialogRight">
+					<param name="align" value="right" />
+					<param name="pvr" value="true" />
+				</include>
 			</control>
 		</control>
 	</include>

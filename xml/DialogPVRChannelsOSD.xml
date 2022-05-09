@@ -7,24 +7,27 @@
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
 				<depth>DepthOSD</depth>
-				<include>OpenClose_Left</include>
+				<include>Animation_BottomSlide</include>
 				<include content="ContentPanel">
-					<param name="width" value="941" />
+					<param name="width" value="945" />
+					<param name="height" value="460" />
+					<param name="top" value="640" />
 				</include>
 				<control type="label">
-					<top>20</top>
-					<width>881</width>
-					<font>font12</font>
+					<top>665</top>
+					<width>885</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<left>20</left>
+					<font>font14</font>
 					<label>$INFO[VideoPlayer.ChannelGroup,[B]$LOCALIZE[19141]:[/B] ,]</label>
 					<visible>Skin.HasSetting(ShowPVRGroups)</visible>
 				</control>
 				<control type="group">
-					<top>20</top>
-					<width>881</width>
+					<top>660</top>
+					<width>885</width>
 					<visible>!Skin.HasSetting(ShowPVRGroups)</visible>
 					<control type="image">
-						<left>20</left>
-						<right>20</right>
 						<height>50</height>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 					</control>
@@ -89,13 +92,13 @@
 				</control>
 				<control type="fixedlist" id="11">
 					<left>0</left>
-					<top>80</top>
+					<top>720</top>
 					<bottom>10</bottom>
 					<width>881</width>
 					<onleft>PreviousChannelGroup</onleft>
 					<onright>NextChannelGroup</onright>
 					<onup>2</onup>
-					<ondown>2</ondown>
+					<ondown>11</ondown>
 					<pagecontrol>60</pagecontrol>
 					<movement>5</movement>
 					<focusposition>5</focusposition>
@@ -125,7 +128,7 @@
 							<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
 						</control>
 						<control type="progress">
-							<left>105</left>
+							<left>110</left>
 							<top>58</top>
 							<width>50</width>
 							<height>12</height>
@@ -142,7 +145,7 @@
 							<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 						</control>
 						<control type="group">
-							<left>105</left>
+							<left>110</left>
 							<right>170</right>
 							<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 							<control type="label">
@@ -166,7 +169,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<left>105</left>
+							<left>110</left>
 							<right>130</right>
 							<visible>Skin.HasSetting(ShowPVRStatus)</visible>
 							<control type="label">
@@ -193,7 +196,7 @@
 							<left>12</left>
 							<top>0</top>
 							<height>90</height>
-							<width>75</width>
+							<width>80</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font32_title</font>
@@ -211,7 +214,7 @@
 							<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
 						</control>
 						<control type="progress">
-							<left>105</left>
+							<left>110</left>
 							<top>58</top>
 							<width>50</width>
 							<height>12</height>
@@ -228,7 +231,7 @@
 							<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 						</control>
 						<control type="group">
-							<left>105</left>
+							<left>110</left>
 							<right>170</right>
 							<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 							<control type="label">
@@ -252,7 +255,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<left>105</left>
+							<left>110</left>
 							<right>130</right>
 							<visible>Skin.HasSetting(ShowPVRStatus)</visible>
 							<control type="label">
@@ -279,7 +282,7 @@
 							<left>12</left>
 							<top>0</top>
 							<height>90</height>
-							<width>75</width>
+							<width>80</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font32_title</font>
@@ -289,19 +292,19 @@
 						</control>
 					</itemlayout>
 				</control>
-			</control>
-			<control type="scrollbar" id="60">
-				<top>80</top>
-				<bottom>10</bottom>
-				<left>869</left>
-				<width>12</width>
-				<onleft>11</onleft>
-				<texturesliderbackground />
-				<onright>11</onright>
-				<ondown>61</ondown>
-				<onup>61</onup>
-				<animation effect="zoom" start="100,100" end="50,100" center="881,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
-				<orientation>vertical</orientation>
+				<control type="scrollbar" id="60">
+					<top>720</top>
+					<bottom>7</bottom>
+					<left>869</left>
+					<width>12</width>
+					<onleft>11</onleft>
+					<onright>11</onright>
+					<ondown>61</ondown>
+					<onup>61</onup>
+					<animation effect="zoom" start="100,100" end="50,100" center="881,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+					<orientation>vertical</orientation>
+				</control>
+				<include>PVRChannelInfoPanel</include>
 			</control>
 		</control>
 	</controls>
