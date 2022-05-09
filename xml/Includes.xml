@@ -3410,6 +3410,13 @@
 			<left>$PARAM[left]</left>
 		</definition>
 	</include>
+	<include name="ContextMenuPosition">
+		<definition>
+			<top>$PARAM[top]</top>
+			<height>$PARAM[height]</height>
+		</definition>
+		<height max="$PARAM[height]">auto</height>
+	</include>
 	<include name="FocusPosition">
 		<definition>
 			<focusposition>$PARAM[focusposition]</focusposition>

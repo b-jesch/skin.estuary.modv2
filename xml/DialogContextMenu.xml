@@ -27,6 +27,12 @@
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
+			<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels)">
+				<param name="top">-40</param>
+			</include>
+			<include content="ContextMenuPosition" condition="Window.IsVisible(pvrchannelguide)">
+				<param name="top">-55</param>
+			</include>
 			<animation effect="slide" end="0,-263" time="0" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(Custom_1132_MoviesSetsInfo.xml)">Conditional</animation>
 			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(home)">Conditional</animation>
 			<animation effect="slide" end="-340,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40005]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
@@ -53,99 +59,114 @@
 			<animation effect="slide" end="-40,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20020]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="-40,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20020]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<control type="group">
-			<width>510</width>
-			<height>80</height>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<bottom>0</bottom>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<width>510</width>
+				<height>80</height>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<height>70</height>
+					<texture colordiffuse="$VAR[SkinColorVar]" border="2">colors/white70.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<height>70</height>
+					<texture colordiffuse="$VAR[GradientColorVar]" border="2">lists/focus-gradient.png</texture>
+					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>0</top>
+					<right>80</right>
+					<height>70</height>
+					<font>font32_title</font>
+					<label>$LOCALIZE[40024]</label>
+					<aligny>center</aligny>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="button" id="22002">
+					<description>button overlay to avoid closing in dialog area</description>
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<texturefocus />
+					<texturenofocus />
+				</control>
+				<control type="radiobutton">
+					<right>10</right>
+					<top>11</top>
+					<width>48</width>
+					<height>48</height>
+					<radiowidth>48</radiowidth>
+					<radioheight>48</radioheight>
+					<texturefocus />
+					<texturenofocus />
+					<label/>
+					<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
+					<onclick>Action(close)</onclick>
+					<visible>!Skin.HasSetting(touchmode)</visible>
+				</control>
+				<control type="button">
+					<right>10</right>
+					<top>11</top>
+					<width>48</width>
+					<height>48</height>
+					<texturefocus>dialogs/close.png</texturefocus>
+					<texturenofocus>dialogs/close.png</texturenofocus>
+					<onclick>Action(close)</onclick>
+					<visible>Skin.HasSetting(touchmode)</visible>
+				</control>
 			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<height>70</height>
-				<texture colordiffuse="$VAR[SkinColorVar]" border="2">colors/white70.png</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<height>70</height>
-				<texture colordiffuse="$VAR[GradientColorVar]" border="2">lists/focus-gradient.png</texture>
-				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-			</control>
-			<control type="label">
-				<left>20</left>
-				<top>0</top>
-				<right>80</right>
-				<height>70</height>
-				<font>font32_title</font>
-				<label>$LOCALIZE[40024]</label>
-				<aligny>center</aligny>
-				<shadowcolor>black</shadowcolor>
-				<scroll>true</scroll>
-			</control>
-			<control type="button" id="22002">
-				<description>button overlay to avoid closing in dialog area</description>
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<bottom>0</bottom>
-				<texturefocus />
-				<texturenofocus />
-			</control>
-			<control type="radiobutton">
-				<right>10</right>
-				<top>11</top>
-				<width>48</width>
-				<height>48</height>
-				<radiowidth>48</radiowidth>
-				<radioheight>48</radioheight>
-				<texturefocus />
-				<texturenofocus />
-				<label/>
-				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
-				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
-				<onclick>Action(close)</onclick>
-				<visible>!Skin.HasSetting(touchmode)</visible>
-			</control>
-			<control type="button">
-				<right>10</right>
-				<top>11</top>
-				<width>48</width>
-				<height>48</height>
-				<texturefocus>dialogs/close.png</texturefocus>
-				<texturenofocus>dialogs/close.png</texturenofocus>
-				<onclick>Action(close)</onclick>
-				<visible>Skin.HasSetting(touchmode)</visible>
-			</control>
-		</control>
 			<control type="image" id="999">
 				<description>background image</description>
-				<left>0</left>
-				<top>80</top>
 				<width>510</width>
-				<height>850</height>
+				<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide)">
+					<param name="top">80</param>
+					<param name="height">205</param>
+				</include>
+				<include content="ContextMenuPosition" condition="![Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide)]">
+					<param name="top">80</param>
+					<param name="height">530</param>
+				</include>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
 			<control type="grouplist" id="996">
 				<description>grouplist for context buttons</description>
-				<left>0</left>
-				<top>80</top>
-				<width>510</width>
-				<height max="850">auto</height>
+				<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide)">
+					<param name="top">80</param>
+					<param name="height">205</param>
+				</include>
+				<include content="ContextMenuPosition" condition="![Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide)]">
+					<param name="top">80</param>
+					<param name="height">530</param>
+				</include>
 				<usecontrolcoords>true</usecontrolcoords>
 			</control>
-			<include content="UpDownArrows">
+			<include content="UpDownArrows" condition="Window.IsActive(pvrosdchannels) | Window.IsVisible(pvrchannelguide)">
 				<param name="container_id" value="996" />
-				<param name="posx" value="201" />
+				<param name="posx" value="200" />
 				<param name="up_posy" value="-40" />
-				<param name="down_posy" value="950" />
+				<param name="down_posy" value="300" />
+			</include>
+			<include content="UpDownArrows" condition="![Window.IsActive(pvrosdchannels) | Window.IsVisible(pvrchannelguide)]">
+				<param name="container_id" value="996" />
+				<param name="posx" value="225" />
+				<param name="up_posy" value="-40" />
+				<param name="down_posy" value="630" />
 			</include>
 		</control>
 		<control type="button" id="1000">
