@@ -185,6 +185,10 @@
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
+	<variable name="PVRArtworksVarOSD">
+		<value condition="!Window.IsVisible(tvchannels)">$VAR[PVRArtworksVar]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
 	<variable name="PVRArtworksVarInfo">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart))">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
@@ -1826,12 +1830,25 @@
 		<value condition="String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)">$INFO[ListItem.EpisodeName]</value>
 		<value>$VAR[SeasonPrefixVar]$INFO[ListItem.Season]$VAR[EpisodePrefixVar]$INFO[ListItem.Episode,, -]$INFO[ListItem.EpisodeName, ]</value>
   	</variable>
+		<variable name="SeasonEpisodeLabelOSD">
+		<value condition="String.IsEmpty(Container(11).ListItem.EpisodeName)">$INFO[Container(11).ListItem.Season,$LOCALIZE[20373] ]$INFO[Container(11).ListItem.Episode, $LOCALIZE[20359] ]</value>
+		<value condition="String.IsEmpty(Container(11).ListItem.Season) + String.IsEmpty(Container(11).ListItem.Episode)">$INFO[Container(11).ListItem.EpisodeName]</value>
+		<value>$VAR[SeasonPrefixVarOSD]$INFO[Container(11).ListItem.Season]$VAR[EpisodePrefixVarOSD]$INFO[Container(11).ListItem.Episode,,: ]$INFO[Container(11).ListItem.EpisodeName]</value>
+  	</variable>
 	<variable name="SeasonPrefixVar">
 		<value condition="Integer.IsGreater(ListItem.Season,9)">S</value>
 		<value>S0</value>
 	</variable>
+	<variable name="SeasonPrefixVarOSD">
+		<value condition="Integer.IsGreater(Container(11).ListItem.Season,9)">S</value>
+		<value>S0</value>
+	</variable>
 	<variable name="EpisodePrefixVar">
 		<value condition="Integer.IsGreater(ListItem.Episode,9)">E</value>
+		<value>E0</value>
+	</variable>
+	<variable name="EpisodePrefixVarOSD">
+		<value condition="Integer.IsGreater(Container(11).ListItem.Episode,9)">E</value>
 		<value>E0</value>
 	</variable>
 	<variable name="ExpirationDateTimeLabel">

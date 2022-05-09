@@ -1278,7 +1278,7 @@
 				<height>40</height>
 				<font>font14</font>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
-				<label>[B]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]][/B]</label>
+				<label>[B]$INFO[Container(11).ListItem.StartTime,, - ]$INFO[Container(11).ListItem.EndTime]$INFO[Container(11).ListItem.EpgEventTitle,  [COLOR white],[/COLOR]][/B]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
@@ -1288,7 +1288,7 @@
 				<height>30</height>
 				<font>font12</font>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
-				<label>[B]$INFO[ListItem.Genre, $LOCALIZE[515] : [COLOR white],[/COLOR]][/B]</label>
+				<label>[B]$INFO[Container(11).ListItem.Genre, $LOCALIZE[515] : [COLOR white],[/COLOR]][/B]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
@@ -1305,7 +1305,7 @@
 				<width>340</width>
 				<height>245</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
+				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarOSD]</texture>
 				<fadetime>200</fadetime>
 			</control>
 			<include content="BusyPvrArtworkSpinner">
@@ -1318,7 +1318,7 @@
 				<right>30</right>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
-				<label>$VAR[SeasonEpisodeLabel,[B],[/B]]</label>
+				<label>$VAR[SeasonEpisodeLabelOSD,[B],[/B]]</label>
 			</control>
 			<control type="textbox">
 				<left>405</left>
@@ -1327,9 +1327,9 @@
 				<right>30</right>
 				<font>font12</font>
 				<align>justify</align>
-				<label>$INFO[ListItem.Plot]</label>
+				<label>$INFO[Container(11).ListItem.Plot]</label>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>!String.IsEmpty(ListItem.EpisodeName) | !String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode)</visible>
+				<visible>!String.IsEmpty(Container(11).ListItem.EpisodeName) | !String.IsEmpty(Container(11).ListItem.Season) | !String.IsEmpty(Container(11).ListItem.Episode)</visible>
 			</control>
 			<control type="textbox">
 				<left>405</left>
@@ -1338,9 +1338,9 @@
 				<bottom>77</bottom>
 				<font>font12</font>
 				<align>justify</align>
-				<label>$INFO[ListItem.Plot]</label>
+				<label>$INFO[Container(11).ListItem.Plot]</label>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>String.IsEmpty(ListItem.EpisodeName) + String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)</visible>
+				<visible>String.IsEmpty(Container(11).ListItem.EpisodeName) + String.IsEmpty(Container(11).ListItem.Season) + String.IsEmpty(Container(11).ListItem.Episode)</visible>
 			</control>
 			<control type="label">
 				<left>405</left>
@@ -1351,7 +1351,7 @@
 				<textcolor>grey</textcolor>
 				<align>center</align>
 				<label>$LOCALIZE[19055]</label>
-				<visible>String.IsEmpty(ListItem.Plot)</visible>
+				<visible>String.IsEmpty(Container(11).ListItem.Plot)</visible>
 			</control>
 			<control type="group">
 				<bottom>0</bottom>
