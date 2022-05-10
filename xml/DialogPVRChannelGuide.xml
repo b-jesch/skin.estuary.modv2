@@ -46,7 +46,7 @@
 					<height>30</height>
 					<font>font12</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<label>[B]$INFO[ListItem.StartDate, $LOCALIZE[19128] : [COLOR white],[/COLOR]][/B]</label>
+					<label>[B]$INFO[Container(11).ListItem.StartDate, $LOCALIZE[19128] : [COLOR white],[/COLOR]][/B]</label>
 					<scroll>true</scroll>
 				</control>
 					<control type="fixedlist" id="11">

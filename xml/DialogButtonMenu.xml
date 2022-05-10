@@ -109,7 +109,13 @@
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
 						<onclick>Powerdown</onclick>
-						<visible>System.CanPowerDown</visible>
+						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[13016]</label>
+						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon>
+						<onclick>RunAddon(service.rpm,poweroff)</onclick>
+						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13013]</label>
@@ -335,7 +341,13 @@
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
 						<onclick>Powerdown</onclick>
-						<visible>System.CanPowerDown</visible>
+						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[13016]</label>
+						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon>
+						<onclick>RunAddon(service.rpm,poweroff)</onclick>
+						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13013]</label>
@@ -379,7 +391,7 @@
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer) + !SystemAddonIsEnabled(service.sleepy.watchdog)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !SystemAddon.IsEnabled(service.sleepy.watchdog)</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
@@ -480,7 +492,13 @@
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
 						<onclick>Powerdown</onclick>
-						<visible>System.CanPowerDown</visible>
+						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[13016]</label>
+						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon>
+						<onclick>RunAddon(service.rpm,poweroff)</onclick>
+						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13013]</label>
@@ -615,15 +633,6 @@
 				<height>56</height>
 				<texture colordiffuse="$VAR[LogoColorVar]">$VAR[LogoVar]</texture>
 			</control>
-			<!--
-			<control type="image">
-				<aspectratio>keep</aspectratio>
-				<width>56</width>
-				<height>56</height>
-				<texture colordiffuse="$VAR[GradientColorVar]">icons/logo-gradient.png</texture>
-				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-			</control>
-			-->
 			<control type="image">
 				<left>55</left>
 				<top>4</top>

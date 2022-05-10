@@ -35,6 +35,12 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+### 3.4.1+matrix ###
+- .0
+  * improved Channel Guide OSD, Channel OSD
+  * missing HDR label on Live-TV (PVR) added
+  * Record flag added
+
 
 ### 3.4.0+matrix ###
 - .14
