@@ -3465,48 +3465,6 @@
 				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138)">Conditional</animation>
 			</control>
 			<control type="group">
-				<visible>Window.IsActive(fullscreenvideo) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
-				<width>400</width>
-				<right>50</right>
-				<control type="image">
-					<top>-17</top>
-					<left>20</left>
-					<width>74</width>
-					<height>74</height>
-					<texture>osd/fullscreen/buttons/record.png</texture>
-				</control>
-				<control type="label">
-					<top>-18</top>
-					<left>90</left>
-					<width>400</width>
-					<height>74</height>
-					<aligny>center</aligny>
-					<font>font25_title</font>
-					<label>$LOCALIZE[19158]</label>
-				</control>
-			</control>
-			<control type="group">
-				<visible>Window.IsActive(visualisation) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
-				<width>400</width>
-				<right>50</right>
-				<control type="image">
-					<top>-17</top>
-					<left>20</left>
-					<width>74</width>
-					<height>74</height>
-					<texture>osd/fullscreen/buttons/record.png</texture>
-				</control>
-				<control type="label">
-					<top>-18</top>
-					<left>90</left>
-					<width>400</width>
-					<height>74</height>
-					<aligny>center</aligny>
-					<font>font25_title</font>
-					<label>$LOCALIZE[19158]</label>
-				</control>
-			</control>
-			<control type="group">
 				<bottom>0</bottom>
 				<height>550</height>
 				<visible>Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)</visible>
@@ -4429,7 +4387,7 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>1530</left>
+				<left>1430</left>
 				<bottom>140</bottom>
 				<right>30</right>
 				<height>50</height>
@@ -4440,6 +4398,25 @@
 				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				<orientation>horizontal</orientation>
 				<visible>!Player.ChannelPreviewActive</visible>
+				<control type="group">
+					<visible>Window.IsActive(fullscreenvideo) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
+					<width>120</width>
+					<height>50</height>
+					<control type="image">
+						<width>120</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flags/cadre2.png</texture>
+					</control>
+					<control type="label">
+						<width>60</width>
+						<height>40</height>
+						<align>center</align>
+						<textcolor>red</textcolor>
+						<label>REC</label>
+						<font>Font-Flag-Small3</font>
+					</control>
+				</control>
 				<control type="group">
 					<visible>System.GetBool(pvrplayback.signalquality)</visible>
 					<width>120</width>
@@ -4532,44 +4509,6 @@
 				<animation effect="slide" end="0,-350" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1139)">Conditional</animation>
 				<animation effect="slide" end="0,-250" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
 				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
-			</control>
-			<control type="group">
-				<visible>Window.IsActive(fullscreenvideo) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
-				<control type="image">
-					<top>116</top>
-					<left>970</left>
-					<width>74</width>
-					<height>74</height>
-					<texture>osd/fullscreen/buttons/record.png</texture>
-				</control>
-				<control type="label">
-					<top>115</top>
-					<left>1040</left>
-					<width>400</width>
-					<height>74</height>
-					<aligny>center</aligny>
-					<font>font25_title</font>
-					<label>$LOCALIZE[19158]</label>
-				</control>
-			</control>
-			<control type="group">
-				<visible>Window.IsActive(visualisation) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
-				<control type="image">
-					<top>116</top>
-					<left>970</left>
-					<width>74</width>
-					<height>74</height>
-					<texture>osd/fullscreen/buttons/record.png</texture>
-				</control>
-				<control type="label">
-					<top>115</top>
-					<left>1040</left>
-					<width>400</width>
-					<height>74</height>
-					<aligny>center</aligny>
-					<font>font25_title</font>
-					<label>$LOCALIZE[19158]</label>
-				</control>
 			</control>
 			<control type="group" id="6000">
 				<top>-5</top>

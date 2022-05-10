@@ -33,7 +33,11 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
-
+### 4.0.1+nexus ###
+- .0
+  * improved Channel Guide OSD, Channel OSD
+  * missing HDR label on Live-TV (PVR) added
+  
 ### 4.0.0+nexus ###
 - .4
   * add missing hdr type flag in video OSD
