@@ -4403,10 +4403,10 @@
 					<width>120</width>
 					<height>50</height>
 					<control type="image">
-						<width>120</width>
-						<height>40</height>
+						<width>76</width>
+						<height>50</height>
 						<aspectratio>keep</aspectratio>
-						<texture>flags/cadre2.png</texture>
+						<texture colordiffuse="FFFF0000">flags/cadre_small.png</texture>
 					</control>
 					<control type="label">
 						<width>60</width>
