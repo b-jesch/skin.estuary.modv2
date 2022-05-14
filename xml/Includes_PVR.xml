@@ -1169,19 +1169,19 @@
 				<bottom>-30</bottom>
 				<height>430</height>
 			</control>
-			<control type="videowindow">
-				<left>25</left>
-				<width>340</width>
-				<height>262</height>
-				<visible>Player.HasVideo</visible>
-				<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
-			</control>
 			<control type="image">
 				<left>25</left>
 				<width>340</width>
 				<height>262</height>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 				<fadetime>200</fadetime>
+			</control>
+			<control type="videowindow">
+				<left>25</left>
+				<width>340</width>
+				<height>262</height>
+				<visible>Player.HasVideo</visible>
+				<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
 			</control>
 			<control type="image">
 				<left>25</left>
