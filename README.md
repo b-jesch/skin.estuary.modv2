@@ -34,6 +34,11 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
+- .1
+  * use sort order of upcoming next episodes from embuary skinhelper addon
+  * move decorator into background (epg guide)
+
+
 - .0
   * improved Channel Guide OSD, Channel OSD
   * missing HDR label on Live-TV (PVR) added

@@ -247,8 +247,8 @@
 							<param name="widget_header" value="$LOCALIZE[40372]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
-							<param name="sortby" value="date"/>
-							<param name="sortorder" value="ascending"/>
+							<!--<param name="sortby" value="date"/>
+							<param name="sortorder" value="ascending"/>-->
 							<param name="list_id" value="6500"/>
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + !Skin.HasSetting(HomeBanner)">
@@ -256,8 +256,8 @@
 							<param name="widget_header" value="$LOCALIZE[40372]"/>
 							<param name="widget_header_focus" value="$INFO[Container(65001).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
-							<param name="sortby" value="date"/>
-							<param name="sortorder" value="descending"/>
+							<!--<param name="sortby" value="date"/>
+							<param name="sortorder" value="descending"/>-->
 							<param name="list_id" value="65001"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_inprogresstvshows)">
