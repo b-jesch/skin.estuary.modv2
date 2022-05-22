@@ -895,6 +895,7 @@
 					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40381])">Skin.SetString(autoclose_osd,$LOCALIZE[40382])</onclick>
 					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40380])">Skin.SetString(autoclose_osd,$LOCALIZE[40381])</onclick>
 					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40378])">Skin.SetString(autoclose_osd,$LOCALIZE[40380])</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(autoclose_osd)) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40378]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40380]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40381]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40382]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40383]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[40384])">Skin.SetString(autoclose_osd,$LOCALIZE[40378])</onclick>
 				</control>
 				<control type="label" id="30017">
 					<textoffsetx>45</textoffsetx>
@@ -1280,6 +1281,7 @@
 					<onclick condition="String.IsEmpty(Skin.String(widget_action))">Skin.SetString(widget_action,$LOCALIZE[40389])</onclick>
 					<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390])">Skin.SetString(widget_action,$LOCALIZE[40389])</onclick>
 					<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389])">Skin.SetString(widget_action,$LOCALIZE[40390])</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(widget_action)) + !String.IsEqual(Skin.String(widget_action),$LOCALIZE[40389]) + !String.IsEqual(Skin.String(widget_action),$LOCALIZE[40390])">Skin.SetString(widget_action,$LOCALIZE[40389])</onclick>
 				</control>
 				<control type="radiobutton" id="10021">
 					<label>$LOCALIZE[40268]</label>
