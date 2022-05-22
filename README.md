@@ -37,6 +37,7 @@ supports animated poster only.
 - .1
   * use sort order of upcoming next episodes from embuary skinhelper addon
   * move decorator into background (epg guide)
+  * Fix bug on skin settings is unchangeable if a setting met no language string when language has changed.
 
 
 - .0
