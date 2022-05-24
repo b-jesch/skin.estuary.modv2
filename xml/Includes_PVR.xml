@@ -130,6 +130,22 @@
 					<param name="top" value="165" />
 					<param name="left" value="145" />
 				</include>
+				<control type="group">
+					<left>0</left>
+					<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
+					<control type="image">
+							<width>80</width>
+							<height>80</height>
+							<texture flipy="true">overlays/overlay-bg.png</texture>
+						</control>
+					<control type="image">
+						<left>3</left>
+						<top>3</top>
+						<width>48</width>
+						<height>48</height>
+						<texture colordiffuse="DDFFFFFF" fallback="defaultnas.png">$INFO[Window(Home).Property(PVR.Artwork.ListItem.is_db)]</texture>
+					</control>
+				</control>
 			</control>
 			<control type="group">
 				<top>120</top>

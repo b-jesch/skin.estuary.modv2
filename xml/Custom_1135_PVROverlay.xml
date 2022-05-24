@@ -15,6 +15,7 @@
 				<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<visible>!Skin.HasSetting(enable_playerclearlogo) + !Skin.HasSetting(show_artistclearlogo)</visible>
+				<fadetime>100</fadetime>
 			</control>
 			<control type="image">
 				<left>0</left>

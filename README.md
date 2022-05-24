@@ -34,6 +34,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
+- .2
+  * Improved OSD animations (reduce flickering on channel changes)
+
+
 - .1
   * use sort order of upcoming next episodes from embuary skinhelper addon
   * move decorator into background (epg guide)
