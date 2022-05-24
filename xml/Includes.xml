@@ -3460,7 +3460,7 @@
 				<height>550</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<visible>[VideoPlayer.HasMenu + System.HasMediaDVD]</visible>
-				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks)">Conditional</animation>
+				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1138)">Conditional</animation>
 				<animation effect="slide" end="0,-240" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
 			</control>
 			<control type="group">
