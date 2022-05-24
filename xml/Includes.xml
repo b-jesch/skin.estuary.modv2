@@ -3462,7 +3462,6 @@
 				<visible>[VideoPlayer.HasMenu + System.HasMediaDVD]</visible>
 				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks)">Conditional</animation>
 				<animation effect="slide" end="0,-240" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
-				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138)">Conditional</animation>
 			</control>
 			<control type="group">
 				<bottom>0</bottom>
@@ -3768,6 +3767,7 @@
 						<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+						<fadetime>100</fadetime>
 					</control>
 					<control type="image">
 						<right>0</right>
@@ -3781,6 +3781,7 @@
 						<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+						<fadetime>100</fadetime>
 					</control>
 					<control type="image">
 						<right>0</right>

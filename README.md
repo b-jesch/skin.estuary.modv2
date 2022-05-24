@@ -36,6 +36,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.1+matrix ###
+- .2
+  * Improved OSD animations (reduce flickering on channel changes)
+
+
 - .1
   * use sort order of upcoming next episodes from embuary skinhelper addon
   * move decorator background of video preview from epg window into background

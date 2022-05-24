@@ -113,7 +113,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/channelswitch.png"/>
 					</include>
 					<onclick>action(number0)</onclick>
-					<onclick>close</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<visible>VideoPlayer.Content(livetv) + !Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="604">
