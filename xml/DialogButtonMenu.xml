@@ -107,13 +107,13 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[13016]</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
+						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon>
 						<onclick>Powerdown</onclick>
 						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[13016]</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon>
+						<label>$LOCALIZE[13016] (RPM)</label>
+						<icon>special://skin/extras/icons/Power menu/powerdown_rpm.png</icon>
 						<onclick>RunAddon(service.rpm,poweroff)</onclick>
 						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
 					</item>
@@ -344,8 +344,8 @@
 						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[13016]</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon>
+						<label>$LOCALIZE[13016] (RPM)</label>
+						<icon>special://skin/extras/icons/Power menu/powerdown_rpm.png</icon>
 						<onclick>RunAddon(service.rpm,poweroff)</onclick>
 						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
 					</item>
@@ -495,8 +495,8 @@
 						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[13016]</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon>
+						<label>$LOCALIZE[13016] (RPM)</label>
+						<icon>special://skin/extras/icons/Power menu/powerdown_rpm.png</icon>
 						<onclick>RunAddon(service.rpm,poweroff)</onclick>
 						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
 					</item>
