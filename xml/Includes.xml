@@ -4400,6 +4400,25 @@
 				<orientation>horizontal</orientation>
 				<visible>!Player.ChannelPreviewActive</visible>
 				<control type="group">
+					<width>60</width>
+					<height>50</height>
+					<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
+					<control type="image">
+						<width>61</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flags/cadre_small.png</texture>
+					</control>
+					<control type="image">
+						<left>7</left>
+						<top>-4</top>
+						<width>48</width>
+						<height>48</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="$VAR[SkinColorVar]">flags/nas_2.png</texture>
+					</control>
+				</control>
+				<control type="group">
 					<visible>Window.IsActive(fullscreenvideo) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
 					<width>60</width>
 					<height>50</height>
@@ -4407,7 +4426,7 @@
 						<width>61</width>
 						<height>40</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="FFFF0000">flags/cadre_small.png</texture>
+						<texture>flags/cadre_small.png</texture>
 					</control>
 					<control type="label">
 						<width>60</width>

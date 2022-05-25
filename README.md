@@ -37,7 +37,9 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 ### 3.4.1+matrix ###
 - .2
-  * Improved OSD animations (reduce flickering on channel changes)
+  * Improved OSD animations (reduce flickering slides)
+  * Icon Powerdown/Timer added (active addon "Recording & Power Manager - RPM")
+  * OSD PVR flag added if broadcast is available in local file system
 
 
 - .1
