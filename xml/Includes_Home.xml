@@ -3482,7 +3482,7 @@
 				<height>70</height>
 				<texture>overlays/overlay-bg.png</texture>
 				<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)]</visible>
+				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
 				<animation effect="slide" end="0,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
 			<control type="image">
@@ -3970,7 +3970,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
-				<visible>!String.IsEqual(listitem.dbtype,genre)]</visible>
+				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
 				<animation effect="slide" end="0,56" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
 			<control type="textbox">
