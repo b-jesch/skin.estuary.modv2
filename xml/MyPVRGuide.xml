@@ -160,6 +160,14 @@
 						</rulerlayout>
 						<channellayout height="70" width="390">
 							<control type="image">
+								<left>5</left>
+								<top>1</top>
+								<height>68</height>
+								<width>78</width>
+								<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
+								<visible>Skin.HasSetting(ShowPVRChannelNumbers) + Skin.HasSetting(EnablePvrIconBG)</visible>
+							</control>
+							<control type="image">
 								<left>7</left>
 								<top>3</top>
 								<width>74</width>

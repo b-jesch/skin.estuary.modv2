@@ -124,7 +124,7 @@
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<aspectratio align="right">keep</aspectratio>
+							<aspectratio align="center">keep</aspectratio>
 							<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
 						</control>
 						<control type="progress">
@@ -206,11 +206,19 @@
 					</focusedlayout>
 					<itemlayout height="90" width="881">
 						<control type="image">
+							<right>24</right>
+							<top>8</top>
+							<height>74</height>
+							<width>84</width>
+							<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
+							<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
+						</control>
+						<control type="image">
 							<right>26</right>
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<aspectratio align="right">keep</aspectratio>
+							<aspectratio align="center">keep</aspectratio>
 							<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
 						</control>
 						<control type="progress">

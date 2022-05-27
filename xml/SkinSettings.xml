@@ -673,6 +673,20 @@
 					<param name="header">40035</param>
 					<param name="setting">PatternColor</param>
 				</include>
+				<control type="radiobutton" id="804">
+					<label>$LOCALIZE[40416]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(EnablePvrIconBG)</onclick>
+					<selected>Skin.HasSetting(EnablePvrIconBG)</selected>
+				</control>
+				<include content="DefaultColorSettingButton">
+					<param name="visible">Skin.HasSetting(EnablePvrIconBG)</param>
+					<param name="id">806</param>
+					<param name="label">  ∟$LOCALIZE[40033]</param>
+					<param name="label2">$VAR[Label_SkinSetting_PvrIconBG]</param>
+					<param name="header">40033</param>
+					<param name="setting">PvrIconBG</param>
+				</include>
 				<control type="button" id="807">
 					<label>$LOCALIZE[40037]</label>
 					<include>DefaultSettingButton</include>
