@@ -685,6 +685,20 @@
 					<onclick condition="Skin.String(PatternColor)">Skin.Reset(PatternColor)</onclick>
 					<visible>!String.IsEmpty(Skin.String(background_overlay)) + !String.IsEqual(Skin.String(background_overlay),0)</visible>
 				</control>
+				<control type="radiobutton" id="804">
+					<label>$LOCALIZE[40416]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(EnablePvrIconBG)</onclick>
+					<selected>Skin.HasSetting(EnablePvrIconBG)</selected>
+				</control>
+				<control type="button" id="806">
+					<label>  ∟$LOCALIZE[40033]</label>
+					<label2>$VAR[Label_SkinSetting_PvrIconBG]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!Skin.String(PvrIconBG)">RunScript(script.skin.helper.colorpicker,skinstring=PvrIconBG)</onclick>
+					<onclick condition="Skin.String(PvrIconBG)">Skin.Reset(PvrIconBG)</onclick>
+					<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
+				</control>
 				<control type="button" id="807">
 					<label>$LOCALIZE[40037]</label>
 					<include>DefaultSettingButton</include>

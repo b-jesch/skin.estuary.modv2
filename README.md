@@ -40,7 +40,7 @@ supports animated poster only.
   * Improved OSD animations (reduce flickering slides)
   * Icon Powerdown/Timer added (active addon "Recording & Power Manager - RPM")
   * OSD PVR flag added if broadcast is available in local file system
-
+  * Background for PVR channel icons added
 
 - .1
   * use sort order of upcoming next episodes from embuary skinhelper addon

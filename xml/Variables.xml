@@ -948,6 +948,10 @@
 		<value condition="!String.IsEmpty(Skin.String(PatternColor))">$INFO[Skin.String(PatternColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
+	<variable name="Label_SkinSetting_PvrIconBG">
+		<value condition="!String.IsEmpty(Skin.String(PvrIconBG))">$INFO[Skin.String(PvrIconBG)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
 	<variable name="Label_SkinSetting_LyricsColor1">
 		<value condition="!String.IsEmpty(Skin.String(LyricsColor1))">$INFO[Skin.String(LyricsColor1)]</value>
 		<value>$LOCALIZE[15109]</value>
@@ -997,6 +1001,10 @@
 	<variable name="LyricsColor4Var">
 		<value condition="!String.IsEmpty(Skin.String(LyricsColor4))">$INFO[Skin.String(LyricsColor4)]</value>
 		<value>ffffffff</value>
+	</variable>
+	<variable name="PvrIconBGVar">
+		<value condition="!String.IsEmpty(Skin.String(PvrIconBG))">$INFO[Skin.String(PvrIconBG)]</value>
+		<value>dialog_tint</value>
 	</variable>
 	<variable name="SkinColorVar">
 		<value condition="$EXP[ChristmasTime]">ffe30022</value>

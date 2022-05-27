@@ -181,7 +181,15 @@
 				<right>30</right>
 				<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 				<control type="image">
+					<top>3</top>
+					<height>104</height>
+					<width>134</width>
+					<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
+					<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
+				</control>
+				<control type="image">
 					<top>5</top>
+					<left>2</left>
 					<height>100</height>
 					<width>130</width>
 					<align>right</align>
@@ -658,6 +666,14 @@
 				<control type="group">
 					<top>0</top>
 					<control type="image">
+						<right>18</right>
+						<top>8</top>
+						<height>74</height>
+						<width>84</width>
+						<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
+						<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
+					</control>
+					<control type="image">
 						<right>20</right>
 						<top>10</top>
 						<width>80</width>
@@ -856,6 +872,14 @@
 				<control type="group">
 					<top>0</top>
 					<control type="image">
+						<left>8</left>
+						<top>8</top>
+						<height>104</height>
+						<width>134</width>
+						<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
+						<visible>Skin.HasSetting(ShowPVRChannelNumbers) + Skin.HasSetting(EnablePvrIconBG)</visible>
+					</control>
+					<control type="image">
 						<left>10</left>
 						<top>10</top>
 						<width>130</width>
@@ -967,12 +991,20 @@
 						<bordersize>20</bordersize>
 					</control>
 					<control type="image">
-						<right>12</right>
-						<top>30</top>
+						<right>8</right>
+						<top>26</top>
+						<height>74</height>
+						<width>104</width>
+						<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
+						<visible>Skin.HasSetting(ShowPVRChannelNumbers) + Skin.HasSetting(EnablePvrIconBG)</visible>
+					</control>
+					<control type="image">
+						<right>10</right>
+						<top>28</top>
 						<width>100</width>
 						<height>70</height>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio align="right" aligny="top">keep</aspectratio>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="label">
@@ -998,39 +1030,40 @@
 						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="label">
-						<top>95</top>
+						<top>97</top>
 						<left>30</left>
 						<right>12</right>
-						<height>30</height>
-						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
+						<height>20</height>
+						<label>$INFO[ListItem.EpgEventTitle,[B],[/B]]</label>
 						<font>font10</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
-					<control type="label">
+					<control type="group">
 						<top>128</top>
 						<left>30</left>
-						<width>75</width>
-						<height>20</height>
-						<label>$INFO[ListItem.StartTime]</label>
-						<font>font10</font>
-					</control>
-					<control type="label">
-						<top>128</top>
-						<width>75</width>
-						<right>12</right>
-						<height>20</height>
-						<align>right</align>
-						<label>$INFO[ListItem.EndTime]</label>
-						<font>font10</font>
-					</control>
-					<control type="progress">
-						<top>140</top>
-						<left>105</left>
-						<right>87</right>
-						<height>12</height>
-						<colordiffuse>88FFFFFF</colordiffuse>
-						<visible>ListItem.HasEpg</visible>
-						<info>ListItem.Progress</info>
+						<height>15</height>
+						<width>338</width>
+						<control type="label">
+							<width>80</width>
+							<label>$INFO[ListItem.StartTime]</label>
+							<font>font10</font>
+						</control>
+						<control type="label">
+							<width>80</width>
+							<right>0</right>
+							<align>right</align>
+							<label>$INFO[ListItem.EndTime]</label>
+							<font>font10</font>
+						</control>
+						<control type="progress">
+							<top>12</top>
+							<left>75</left>
+							<right>75</right>
+							<height>12</height>
+							<colordiffuse>88FFFFFF</colordiffuse>
+							<visible>ListItem.HasEpg</visible>
+							<info>ListItem.Progress</info>
+						</control>
 					</control>
 					<control type="label">
 						<top>160</top>
@@ -1077,12 +1110,12 @@
 						<visible>Skin.HasSetting(EnableGradientColor)</visible>
 					</control>
 					<control type="image">
-						<right>12</right>
-						<top>30</top>
+						<right>10</right>
+						<top>28</top>
 						<width>100</width>
 						<height>70</height>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio align="right" aligny="top">keep</aspectratio>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="label">
@@ -1110,38 +1143,40 @@
 						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="label">
-						<top>95</top>
+						<top>97</top>
 						<left>30</left>
 						<right>12</right>
-						<height>30</height>
-						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
+						<height>20</height>
+						<label>$INFO[ListItem.EpgEventTitle,[B],[/B]]</label>
 						<font>font10</font>
+						<scroll>true</scroll>
 					</control>
-					<control type="label">
+					<control type="group">
 						<top>128</top>
 						<left>30</left>
-						<width>75</width>
-						<height>20</height>
-						<label>$INFO[ListItem.StartTime]</label>
-						<font>font10</font>
-					</control>
-					<control type="label">
-						<top>128</top>
-						<width>75</width>
-						<right>12</right>
-						<height>20</height>
-						<align>right</align>
-						<label>$INFO[ListItem.EndTime]</label>
-						<font>font10</font>
-					</control>
-					<control type="progress">
-						<top>140</top>
-						<left>105</left>
-						<right>87</right>
-						<height>12</height>
-						<colordiffuse>88FFFFFF</colordiffuse>
-						<visible>ListItem.HasEpg</visible>
-						<info>ListItem.Progress</info>
+						<height>15</height>
+						<width>338</width>
+						<control type="label">
+							<width>80</width>
+							<label>$INFO[ListItem.StartTime]</label>
+							<font>font10</font>
+						</control>
+						<control type="label">
+							<width>80</width>
+							<right>0</right>
+							<align>right</align>
+							<label>$INFO[ListItem.EndTime]</label>
+							<font>font10</font>
+						</control>
+						<control type="progress">
+							<top>12</top>
+							<left>75</left>
+							<right>75</right>
+							<height>12</height>
+							<colordiffuse>88FFFFFF</colordiffuse>
+							<visible>ListItem.HasEpg</visible>
+							<info>ListItem.Progress</info>
+						</control>
 					</control>
 					<control type="label">
 						<top>160</top>
