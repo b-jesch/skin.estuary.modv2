@@ -4147,10 +4147,6 @@
 				<visible>VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="grouplist">
-				<control type="label" id="4392">
-					<visible>false</visible>
-					<label>$VAR[HdrTypeVar]</label>
-				</control>
 				<left>460</left>
 				<bottom>145</bottom>
 				<right>400</right>
@@ -4203,13 +4199,13 @@
 					<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
 				</include>
 				<include content="MediaFlagOSD">
-					<param name="texture" value="$VAR[HdrTypeVar]" />
+					<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(MusicVisualisation.xml)" />
 					<param name="width" value="58" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlagOSD">
-					<param name="texture" value="$VAR[HdrTypeVar]" />
+					<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution,.png]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(MusicVisualisation.xml)" />
 					<param name="width" value="94" />
 					<param name="top" value="5" />

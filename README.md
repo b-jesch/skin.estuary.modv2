@@ -34,6 +34,11 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
+- .3
+  * PVR widgets 'Timers' and 'Saved search results' added
+  * smaller Bugfixes
+
+
 - .2
   * Improved OSD animations (reduce flickering slides)
   * Icon Powerdown/Timer added (active addon "Recording & Power Manager - RPM")
