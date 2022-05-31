@@ -28,16 +28,10 @@
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<control type="radiobutton" id="11111">
-						<label>$LOCALIZE[40097] : $LOCALIZE[19158]</label>
+						<label>$LOCALIZE[40097] : $LOCALIZE[19040]</label>
 						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(hide_nowrecordingchannel)</selected>
-						<onclick>Skin.ToggleSetting(hide_nowrecordingchannel)</onclick>
-					</control>
-					<control type="radiobutton" id="11112">
-						<label>$LOCALIZE[40097] : $LOCALIZE[19157]</label>
-						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(hide_nextrecordingchannel)</selected>
-						<onclick>Skin.ToggleSetting(hide_nextrecordingchannel)</onclick>
+						<selected>Skin.HasSetting(hide_recordingtimers)</selected>
+						<onclick>Skin.ToggleSetting(hide_recordingtimers)</onclick>
 					</control>
 					<control type="radiobutton" id="11113">
 						<label>$LOCALIZE[40097] : $LOCALIZE[31148]</label>
@@ -63,6 +57,12 @@
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_recordingchannels)</selected>
 						<onclick>Skin.ToggleSetting(hide_recordingchannels)</onclick>
+					</control>
+					<control type="radiobutton" id="11112">
+						<label>$LOCALIZE[40097] : $LOCALIZE[40417]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_searches)</selected>
+						<onclick>Skin.ToggleSetting(hide_searches)</onclick>
 					</control>
 					<control type="radiobutton" id="11117">
 						<label>$LOCALIZE[40097] : $LOCALIZE[40161]</label>

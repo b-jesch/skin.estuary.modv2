@@ -188,6 +188,10 @@
 					<param name="label" value="$LOCALIZE[137]" />
 				</include>
 				<include content="DefaultDialogButton">
+					<param name="id" value="29" />
+					<param name="label" value="$LOCALIZE[190]" />
+				</include>
+				<include content="DefaultDialogButton">
 					<param name="id" value="28" />
 					<param name="label" value="$LOCALIZE[13007]" />
 				</include>

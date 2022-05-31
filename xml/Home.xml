@@ -542,6 +542,7 @@
 					<control type="grouplist" id="12001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>12010</pagecontrol>
+						<!--
 						<control type="grouplist" id="12855">
 							<height>390</height>
 							<left>50</left>
@@ -571,6 +572,7 @@
 								</include>
 							</control>
 						</control>
+						-->
 						<include content="WidgetListCategoriesBig" condition="System.HasPVRAddon + !Skin.HasSetting(hide_tvcategories)">
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12900).ListItem.Label, | ]"/>
@@ -581,6 +583,21 @@
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="list_id" value="129001"/>
 							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + [PVR.HasNonRecordingTVTimer | PVR.IsRecordingTV] + !Skin.HasSetting(hide_recordingtimers)">
+							<param name="content_path" value="pvr://timers/tv/timers/?view=hidedisabled"/>
+							<param name="sortorder" value="ascending"/>
+							<param name="sortby" value="date"/>
+							<param name="widget_header" value="$LOCALIZE[19040]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.ChannelName, | ]$INFO[Container(12700).ListItem.Title, - ,]"/>
+							<param name="widget_target" value="tvtimers"/>
+							<param name="list_id" value="12700"/>
+							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
+							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName,: ,]"/>
+							<!--
+							<param name="label" value="$INFO[PVR.NextRecordingChannel]$INFO[PVR.TVNextRecordingDateTime, - ,]" />
+							<param name="label2" value="$INFO[PVR.TVNextRecordingTitle]" />
+							-->
 						</include>
 						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + System.AddonIsEnabled(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
 							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
@@ -631,6 +648,17 @@
 							<param name="widget_target" value="tvguide"/>
 							<param name="list_id" value="12600"/>
 							<param name="item_limit" value="2000"/>
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_searches)">
+							<param name="content_path" value="pvr://search/tv/savedsearches"/>
+							<param name="sortorder" value="descending"/>
+							<param name="sortby" value="date"/>
+							<param name="widget_header" value="$LOCALIZE[40417]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12800).ListItem.Label, | ]$INFO[Container(12600).ListItem.Label2, - ,]"/>
+							<param name="widget_target" value="tvsearch"/>
+							<param name="list_id" value="12800"/>
+							<param name="icon" value="defaultaddonssearch.png" />
+							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]" />
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!System.HasPVRAddon">
