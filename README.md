@@ -36,6 +36,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.1+matrix ###
+- .3
+  * Bugfix in Variables.xml
+
+
 - .2
   * Improved OSD animations (reduce flickering slides)
   * Icon Powerdown/Timer added (active addon "Recording & Power Manager - RPM")
