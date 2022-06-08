@@ -36,6 +36,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.1+matrix ###
+- .4
+  * Texture update
+
+
 - .3
   * Bugfix in Variables.xml
 
