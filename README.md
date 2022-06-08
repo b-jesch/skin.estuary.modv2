@@ -34,6 +34,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
+- .4
+  * Textures update
+
+
 - .3
   * PVR widgets 'Timers' and 'Saved search results' added
   * smaller Bugfixes
