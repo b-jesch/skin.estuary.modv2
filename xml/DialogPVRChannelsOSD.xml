@@ -8,7 +8,12 @@
 			<control type="group">
 				<depth>DepthOSD</depth>
 				<include>Animation_BottomSlide</include>
-				<include content="ContentPanel">
+				<include content="ContentPanel" condition="Skin.HasSetting(use_fullOsdList">
+					<param name="width" value="945" />
+					<param name="height" value="1120" />
+					<param name="top" value="-20" />
+				</include>
+				<include content="ContentPanel" condition="!Skin.HasSetting(use_fullOsdList">
 					<param name="width" value="945" />
 					<param name="height" value="460" />
 					<param name="top" value="640" />
@@ -24,7 +29,12 @@
 					<visible>Skin.HasSetting(ShowPVRGroups)</visible>
 				</control>
 				<control type="group">
-					<top>660</top>
+					<include content="ItemTop" condition="Skin.HasSetting(use_fullOsdList)">
+						<param name="top">0</param>
+					</include>
+					<include content="ItemTop" condition="!Skin.HasSetting(use_fullOsdList)">
+						<param name="top">660</param>
+					</include>
 					<width>885</width>
 					<visible>!Skin.HasSetting(ShowPVRGroups)</visible>
 					<control type="image">
@@ -91,8 +101,13 @@
 					</control>
 				</control>
 				<control type="fixedlist" id="11">
+					<include content="ItemTop" condition="Skin.HasSetting(use_fullOsdList)">
+						<param name="top">60</param>
+					</include>
+					<include content="ItemTop" condition="!Skin.HasSetting(use_fullOsdList)">
+						<param name="top">720</param>
+					</include>
 					<left>0</left>
-					<top>720</top>
 					<bottom>10</bottom>
 					<width>881</width>
 					<onleft>PreviousChannelGroup</onleft>
@@ -301,6 +316,12 @@
 					</itemlayout>
 				</control>
 				<control type="scrollbar" id="60">
+					<include content="ItemTop" condition="Skin.HasSetting(use_fullOsdList)">
+						<param name="top">60</param>
+					</include>
+					<include content="ItemTop" condition="!Skin.HasSetting(use_fullOsdList)">
+						<param name="top">720</param>
+					</include>
 					<top>720</top>
 					<bottom>7</bottom>
 					<left>869</left>

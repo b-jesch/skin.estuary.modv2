@@ -36,6 +36,9 @@ supports animated poster only.
 ### 4.0.1+nexus ###
 - .4
   * Textures update
+  * Movie set Info fixed  
+  * Category 'PVR & Live TV' in skin settings added
+  * changeable list height for channel and program OSD implemented
 
 
 - .3

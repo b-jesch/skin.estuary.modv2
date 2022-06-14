@@ -3410,6 +3410,11 @@
 			<left>$PARAM[left]</left>
 		</definition>
 	</include>
+	<include name="ItemTop">
+		<definition>
+			<top>$PARAM[top]</top>
+		</definition>
+	</include>
 	<include name="ContextMenuPosition">
 		<definition>
 			<top>$PARAM[top]</top>
