@@ -113,12 +113,6 @@
 					<onclick>Skin.ToggleSetting(show_discart)</onclick>
 					<enable>!Skin.HasSetting(SmallOSDVideo)</enable>
 				</control>
-				<control type="radiobutton" id="103">
-					<label>$LOCALIZE[40195]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(disable_PVRNextUp)</selected>
-					<onclick>Skin.ToggleSetting(disable_PVRNextUp)</onclick>
-				</control>
 				<control type="radiobutton" id="107">
 					<label>$LOCALIZE[40264]</label>
 					<include>DefaultSettingButton</include>
@@ -554,6 +548,58 @@
 					<include>DefaultSettingButton</include>
 				</control>
 			</control>
+			<control type="grouplist" id="400">
+				<top>168</top>
+				<left>0</left>
+				<right>0</right>
+				<bottom>142</bottom>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>400</onup>
+				<ondown>400</ondown>
+				<pagecontrol>60</pagecontrol>
+				<visible>Container(9000).HasFocus(7)</visible>
+				<control type="radiobutton" id="401">
+					<label>$LOCALIZE[40361]</label>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!System.HasAddon(script.module.pvr.artwork)">InstallAddon(script.module.pvr.artwork)</onclick>
+					<onclick condition="System.HasAddon(script.module.pvr.artwork)">Skin.ToggleSetting(Skin_enablePvrArtwork)</onclick>
+					<selected>Skin.HasSetting(Skin_enablePvrArtwork)</selected>
+				</control>
+				<control type="radiobutton" id="403">
+					<include>DefaultSettingButton</include>
+					<label>  ∟$LOCALIZE[40371]</label>
+					<onclick>Skin.ToggleSetting(prefer_PvrFanart)</onclick>
+					<selected>Skin.HasSetting(prefer_PvrFanart)</selected>
+					<visible>Skin.HasSetting(Skin_enablePvrArtwork)</visible>
+				</control>
+				<control type="radiobutton" id="402">
+					<label>$LOCALIZE[40418]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(use_fullOsdList)</onclick>
+					<selected>Skin.HasSetting(use_fullOsdList)</selected>
+				</control>
+				<control type="radiobutton" id="404">
+					<label>$LOCALIZE[40195]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(disable_PVRNextUp)</selected>
+					<onclick>Skin.ToggleSetting(disable_PVRNextUp)</onclick>
+				</control>
+				<control type="radiobutton" id="405">
+					<label>$LOCALIZE[40416]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(EnablePvrIconBG)</onclick>
+					<selected>Skin.HasSetting(EnablePvrIconBG)</selected>
+				</control>
+				<control type="button" id="406">
+					<label>  ∟$LOCALIZE[40033]</label>
+					<label2>$VAR[Label_SkinSetting_PvrIconBG]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!Skin.String(PvrIconBG)">RunScript(script.skin.helper.colorpicker,skinstring=PvrIconBG)</onclick>
+					<onclick condition="Skin.String(PvrIconBG)">Skin.Reset(PvrIconBG)</onclick>
+					<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
+				</control>
+			</control>
 			<control type="grouplist" id="500">
 				<top>168</top>
 				<left>0</left>
@@ -684,20 +730,6 @@
 					<onclick condition="!Skin.String(PatternColor)">RunScript(script.skin.helper.colorpicker,skinstring=PatternColor)</onclick>
 					<onclick condition="Skin.String(PatternColor)">Skin.Reset(PatternColor)</onclick>
 					<visible>!String.IsEmpty(Skin.String(background_overlay)) + !String.IsEqual(Skin.String(background_overlay),0)</visible>
-				</control>
-				<control type="radiobutton" id="804">
-					<label>$LOCALIZE[40416]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(EnablePvrIconBG)</onclick>
-					<selected>Skin.HasSetting(EnablePvrIconBG)</selected>
-				</control>
-				<control type="button" id="806">
-					<label>  ∟$LOCALIZE[40033]</label>
-					<label2>$VAR[Label_SkinSetting_PvrIconBG]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick condition="!Skin.String(PvrIconBG)">RunScript(script.skin.helper.colorpicker,skinstring=PvrIconBG)</onclick>
-					<onclick condition="Skin.String(PvrIconBG)">Skin.Reset(PvrIconBG)</onclick>
-					<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
 				</control>
 				<control type="button" id="807">
 					<label>$LOCALIZE[40037]</label>
@@ -1100,20 +1132,6 @@
                     <onclick condition="Skin.String(ap_source)">Skin.Reset(ap_source)</onclick>
 					<visible>Skin.HasSetting(Skin_EnableAnimatedPosters)</visible>
                 </control>
-				<control type="radiobutton" id="604">
-					<label>$LOCALIZE[40361]</label>
-					<include>DefaultSettingButton</include>
-					<onclick condition="!System.HasAddon(script.module.pvr.artwork)">InstallAddon(script.module.pvr.artwork)</onclick>
-					<onclick condition="System.HasAddon(script.module.pvr.artwork)">Skin.ToggleSetting(Skin_enablePvrArtwork)</onclick>
-					<selected>Skin.HasSetting(Skin_enablePvrArtwork)</selected>
-				</control>
-				<control type="radiobutton" id="605">
-					<include>DefaultSettingButton</include>
-					<label>  ∟$LOCALIZE[40371]</label>
-					<onclick>Skin.ToggleSetting(prefer_PvrFanart)</onclick>
-					<selected>Skin.HasSetting(prefer_PvrFanart)</selected>
-					<visible>Skin.HasSetting(Skin_enablePvrArtwork)</visible>
-				</control>
 				<control type="button" id="606">
 					<label>$LOCALIZE[31149]</label>
 					<label2>$VAR[Label_SkinSetting_MovieGenreFanart]</label2>
@@ -1428,6 +1446,9 @@
 					<item id="10">
 						<label>$LOCALIZE[40079]</label>
 					</item>
+					<item id="7">
+						<label>$LOCALIZE[14204]</label>
+					</item>
 					<item id="4">
 						<label>$LOCALIZE[40019]</label>
 					</item>
@@ -1457,12 +1478,14 @@
 				<onleft condition="Container(9000).HasFocus(2)">1000</onleft>
 				<onleft condition="Container(9000).HasFocus(3)">600</onleft>
 				<onleft condition="Container(9000).HasFocus(5)">900</onleft>
+				<onleft condition="Container(9000).HasFocus(7)">400</onleft>
 				<onleft condition="Container(9000).HasFocus(8)">300</onleft>
 				<onleft condition="Container(9000).HasFocus(9)">200</onleft>
 				<onright condition="Container(9000).HasFocus(1)">700</onright>
 				<onright condition="Container(9000).HasFocus(2)">1000</onright>
 				<onright condition="Container(9000).HasFocus(3)">600</onright>
 				<onright condition="Container(9000).HasFocus(5)">900</onright>
+				<onright condition="Container(9000).HasFocus(7)">400</onright>
 				<onright condition="Container(9000).HasFocus(8)">300</onright>
 				<onright condition="Container(9000).HasFocus(9)">200</onright>
 				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>

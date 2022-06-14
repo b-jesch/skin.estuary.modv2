@@ -38,6 +38,7 @@
 				<texture background="true" fallback="fallback.png">$VAR[ClearLogoVar]</texture>
 				<fadetime>300</fadetime>
 				<include>OpenClose_Right</include>
+				<visible>Control.HasFocus(60)</visible>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
@@ -165,13 +166,6 @@
 			<top>337</top>
 			<left>342</left>
 			<right>50</right>
-			<control type="label">
-				<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre),$LOCALIZE[135] : [COLOR white],[/COLOR]][CR]$INFO[Window(Home).Property(SkinHelper.ListItem.Director),$LOCALIZE[20348] : [COLOR white],[/COLOR]][CR]$INFO[Window(Home).Property(SkinHelper.ListItem.Studio),$LOCALIZE[20388] : [COLOR white],[/COLOR]][CR]$INFO[Window(Home).Property(SkinHelper.ListItem.Years),$LOCALIZE[652] : [COLOR white],[/COLOR]]</label>
-				<font>fontplot</font>
-				<textcolor>$VAR[SkinColorVar]</textcolor>
-				<scroll>true</scroll>
-				<visible>!Control.HasFocus(60)</visible>
-			</control>
 			<control type="label">
 				<label>$INFO[Container(60).ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR]][CR]$INFO[Container(60).ListItem.Director,$LOCALIZE[20339] : [COLOR white],[/COLOR]]</label>
 				<font>fontplot</font>

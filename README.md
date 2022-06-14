@@ -38,6 +38,9 @@ supports animated poster only.
 ### 3.4.1+matrix ###
 - .4
   * Texture update
+  * Movie set Info fixed  
+  * Category 'PVR & Live TV' in skin settings added
+  * changeable list height for channel and program OSD implemented
 
 
 - .3
