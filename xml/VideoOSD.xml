@@ -53,7 +53,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 					</include>
 					<onclick>PlayerControl(Previous)</onclick>
-					<visible>Player.HasSceneMarkers + Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)]</visible>
+					<visible>Player.HasSceneMarkers | Integer.IsGreater(Player.ChapterCount,1) | Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)]</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="6001">
@@ -61,7 +61,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 					</include>
 					<onclick>PlayerControl(BigSkipBackward)</onclick>
-					<visible>!VideoPlayer.Content(livetv) + !Player.HasSceneMarkers + !Player.ChapterCount</visible>
+					<visible>!VideoPlayer.Content(livetv) + !Player.HasSceneMarkers + !Integer.IsGreater(Player.ChapterCount,1)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="601">
@@ -124,20 +124,20 @@
 					<visible>Player.SeekEnabled</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
-				<control type="radiobutton" id="605">
-					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
-					</include>
-					<onclick>PlayerControl(Next)</onclick>
-					<visible>Player.HasSceneMarkers | Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)] | PVR.IsTimeShift</visible>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
-				</control>
 				<control type="radiobutton" id="6051">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 					</include>
 					<onclick>PlayerControl(BigSkipForward)</onclick>
 					<visible>!VideoPlayer.Content(livetv) + !Player.HasSceneMarkers + !Player.ChapterCount</visible>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+				</control>
+				<control type="radiobutton" id="605">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
+					</include>
+					<onclick>PlayerControl(Next)</onclick>
+					<visible>Player.HasSceneMarkers | Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)] | PVR.IsTimeShift</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="804">
