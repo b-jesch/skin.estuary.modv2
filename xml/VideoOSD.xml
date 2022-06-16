@@ -53,7 +53,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 					</include>
 					<onclick>PlayerControl(Previous)</onclick>
-					<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | Player.SeekEnabled</visible>
+					<visible>Integer.IsGreater(Player.ChapterCount,1) | Integer.IsGreater(Playlist.Length(video),1) | Player.SeekEnabled</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="6001">
@@ -61,7 +61,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 					</include>
 					<onclick>PlayerControl(BigSkipBackward)</onclick>
-					<visible>!VideoPlayer.Content(livetv) + !Player.ChapterCount</visible>
+					<visible>!VideoPlayer.Content(livetv) + !Integer.IsGreater(Player.ChapterCount,1)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="601">
@@ -124,20 +124,20 @@
 					<visible>Player.SeekEnabled</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
-				<control type="radiobutton" id="605">
-					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
-					</include>
-					<onclick>PlayerControl(Next)</onclick>
-					<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [VideoPlayer.Content(LiveTV) + Player.SeekEnabled]</visible>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
-				</control>
 				<control type="radiobutton" id="6051">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 					</include>
 					<onclick>PlayerControl(BigSkipForward)</onclick>
-					<visible>!VideoPlayer.Content(livetv) + !Player.ChapterCount</visible>
+					<visible>!VideoPlayer.Content(livetv) + !Integer.IsGreater(Player.ChapterCount,1)</visible>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+				</control>
+				<control type="radiobutton" id="605">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
+					</include>
+					<onclick>PlayerControl(Next)</onclick>
+					<visible>Integer.IsGreater(Player.ChapterCount,1) | Integer.IsGreater(Playlist.Length(video),1) | [VideoPlayer.Content(LiveTV) + Player.SeekEnabled]</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="804">
