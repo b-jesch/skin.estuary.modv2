@@ -34,6 +34,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
+- .5
+  * Bugfix in Video OSD
+
+
 - .4
   * Textures update
   * Movie set Info fixed  
