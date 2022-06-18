@@ -19,7 +19,7 @@
 				<top>80</top>
 				<control type="grouplist" id="11100">
 					<width>1000</width>
-					<height>480</height>
+					<height>490</height>
 					<itemgap>0</itemgap>
 					<onup>11100</onup>
 					<ondown>11100</ondown>
@@ -62,7 +62,13 @@
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_allradios)</selected>
 						<onclick>Skin.ToggleSetting(hide_allradios)</onclick>
-					</control>			
+					</control>
+					<control type="radiobutton" id="11117">
+						<label>$LOCALIZE[40097] : $LOCALIZE[19174]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_radiogroups)</selected>
+						<onclick>Skin.ToggleSetting(hide_radiogroups)</onclick>
+					</control>
 				</control>
 				<include content="SettingsScrollbar">
 					<param name="height">485</param>

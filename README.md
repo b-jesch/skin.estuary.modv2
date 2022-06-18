@@ -38,6 +38,7 @@ supports animated poster only.
 ### 3.4.1+matrix ###
 - .5
   * Bugfix Video OSD
+  * Radio Channel Groups in Home Menu added
 
 
 - .4

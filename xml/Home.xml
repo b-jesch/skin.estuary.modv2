@@ -247,8 +247,6 @@
 							<param name="widget_header" value="$LOCALIZE[40372]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
-							<!--<param name="sortby" value="date"/>
-							<param name="sortorder" value="ascending"/>-->
 							<param name="list_id" value="6500"/>
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + !Skin.HasSetting(HomeBanner)">
@@ -256,8 +254,6 @@
 							<param name="widget_header" value="$LOCALIZE[40372]"/>
 							<param name="widget_header_focus" value="$INFO[Container(65001).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
-							<!--<param name="sortby" value="date"/>
-							<param name="sortorder" value="ascending"/>-->
 							<param name="list_id" value="65001"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_inprogresstvshows)">
@@ -722,6 +718,14 @@
 							<param name="item_limit" value="2000"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
 							<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.Season, - ,x]$INFO[ListItem.Episode,,.]$INFO[ListItem.EpisodeName, ]"/>
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_radiogroups)">
+							<param name="content_path" value="pvr://channels/radio"/>
+							<param name="widget_header" value="$LOCALIZE[19174]"/>
+							<param name="widget_header_focus" value="$INFO[Container(13500).ListItem.Label, | ]"/>
+							<param name="widget_target" value="radioguide"/>
+							<param name="list_id" value="13500"/>
+							<param name="item_limit" value="2000"/>
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!System.HasPVRAddon">
