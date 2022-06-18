@@ -36,6 +36,7 @@ supports animated poster only.
 ### 4.0.1+nexus ###
 - .5
   * Bugfix in Video OSD
+  * Radio Channel Groups in Home Menu added 
 
 
 - .4
