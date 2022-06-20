@@ -316,24 +316,6 @@
 						<param name="icon" value="icons/infodialogs/update.png" />
 						<param name="onclick_1" value="SendClick(6)" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="String.IsEqual(ListItem.DBType,artist)">
-						<param name="id" value="105" />
-						<param name="icon" value="icons/infodialogs/settings.png" />
-						<param name="label" value="$LOCALIZE[40292]" />
-						<param name="onclick_1" value="Activatewindow(1146)" />
-					</include>
-					<include content="InfoDialogSmallButton" condition="String.IsEqual(ListItem.DBType,album)">
-						<param name="id" value="105" />
-						<param name="icon" value="icons/infodialogs/settings.png" />
-						<param name="label" value="$LOCALIZE[40292]" />
-						<param name="onclick_1" value="Activatewindow(1147)" />
-					</include>
-					<include content="InfoDialogSmallButton" condition="String.IsEqual(ListItem.DBType,song)">
-						<param name="id" value="105" />
-						<param name="icon" value="icons/infodialogs/settings.png" />
-						<param name="label" value="$LOCALIZE[40292]" />
-						<param name="onclick_1" value="Activatewindow(1148)" />
-					</include>
 				</control>
 			</control>
 			<control type="label">
@@ -448,18 +430,6 @@
 				<param name="limit" value="100"/>
 				<param name="onclick" value="Dialog.Close(MusicInformation)" />
 				<param name="onclick2" value="ActivateWindow(Music,musicdb://albums/$INFO[ListItem.DBID]/,return)" />
-				<param name="visible" value="!Skin.HasSetting(MusicInfo_AlbumList)"/>
-			</include>
-			<include content="WidgetListSongsInfo" condition="String.IsEqual(ListItem.DBTYPE,album)">
-				<param name="list_id" value="50"/>
-				<param name="content_path" value="musicdb://albums/$INFO[ListItem.DBID]/"/>
-				<param name="widget_target" value="music"/>
-				<param name="limit" value="100"/>
-				<param name="onclick" value="Dialog.Close(MusicInformation)" />
-				<param name="condition" value="Skin.HasSetting(show_musicvisualisation)" />
-				<param name="onclick2" value="PlayMedia($ESCINFO[ListItem.FileNameAndPath])" />
-				<param name="visible_play" value="true" />
-				<param name="visible" value="!Skin.HasSetting(MusicInfo_SongList)"/>
 			</include>
 		</control>
 		<control type="group">

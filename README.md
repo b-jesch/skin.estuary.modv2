@@ -37,6 +37,8 @@ supports animated poster only.
 - .5
   * Bugfix in Video OSD
   * Radio Channel Groups in Home Menu added 
+  * settings button from music info removed
+  * special settings for artists, extra fanart and discography removed 
 
 
 - .4
