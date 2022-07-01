@@ -35,6 +35,10 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+- .6
+  * Fix cast aspect ratio for 21:9 displays
+
+
 ### 3.4.1+matrix ###
 - .5
   * Bugfix Video OSD

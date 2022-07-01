@@ -409,7 +409,7 @@
 			<control type="button" id="6051">
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[40147]</label>
-				<label2>[B]$INFO[Container.Viewmode][/B]</label2>
+				<label2>$INFO[Container.Viewmode,[B],[/B]]</label2>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 				<onclick>Container.NextViewMode</onclick>
 				<visible>!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(musicvideos) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(images)</visible>
@@ -417,7 +417,7 @@
 			<control type="button" id="60511">
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[40147]</label>
-				<label2>[B]$INFO[Container.Viewmode][/B]</label2>
+				<label2>$INFO[Container.Viewmode,[B],[/B]]</label2>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 				<onclick>SetFocus(50)</onclick>
 				<onclick>ActivateWindow(1131)</onclick>
@@ -426,14 +426,14 @@
 			<control type="button" id="6053">
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[31022]</label>
-				<label2>[B]$INFO[Container.SortMethod][/B]</label2>
+				<label2>$INFO[Container.SortMethod,[B],[/B]]</label2>
 				<visible>Control.IsEnabled(3)</visible>
 				<onclick>SendClick(3)</onclick>
 			</control>
 			<control type="button" id="6052">
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[31032]</label>
-				<label2>[B]$INFO[Container.SortOrder][/B]</label2>
+				<label2>$INFO[Container.SortOrder,[B],[/B]]</label2>
 				<visible>Control.IsEnabled(4)</visible>
 				<onclick>SendClick(4)</onclick>
 			</control>
