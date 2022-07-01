@@ -34,6 +34,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
+- .6
+  * Fix cast aspect ratio for 21:9 displays
+
+
 - .5
   * Bugfix in Video OSD
   * Radio Channel Groups in Home Menu added 
