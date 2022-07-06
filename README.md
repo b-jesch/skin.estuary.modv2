@@ -37,6 +37,7 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 - .6
   * Fix cast aspect ratio for 21:9 displays
+  * Improved Next Popup for TV-Shows
 
 
 ### 3.4.1+matrix ###
