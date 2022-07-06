@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1134">
-	<onload>Dialog.Close(fullscreeninfo,true)</onload>
+	<onload>RunScript(script.module.pvr.artwork,get_artwork,prefix=PVR.Nextup&amp;title=$INFO[VideoPlayer.NextTitle]&amp;genre=$INFO[VideoPlayer.NextGenre]&amp;channel=$INFO[VideoPlayer.ChannelName])</onload>
+	<onunload>RunScript(script.module.pvr.artwork,clear_artwork,prefix=PVR.Nextup)</onunload>
 	<visible>Window.IsActive(fullscreenvideo) + VideoPlayer.Content(livetv) + !Skin.HasSetting(disable_PVRNextUp)</visible>
 	<visible>!Window.IsVisible(VideoOSD.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRChannelGuide.xml) + !Window.IsVisible(DialogFullScreenInfo.xml) + !Window.IsVisible(Custom_1135_PVROverlay.xml)</visible>
 	<controls>
@@ -9,51 +10,67 @@
 			<right>64</right>
 			<bottom>90</bottom>
 			<width>382</width>
-			<height>358</height>
+			<height>308</height>
+			<control type="image">
+				<top>-217</top>
+				<width>382</width>
+				<height>215</height>
+				<texture>$INFO[Window(Home).Property(PVR.Nextup.clearart)]</texture>
+				<aspectratio>scale</aspectratio>
+				<visible>!Skin.HasSetting(enable_playerclearart)</visible>
+			</control>
 			<control type="image">
 				<width>382</width>
-				<height>358</height>
+				<height>310</height>
 				<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-picturelayout.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<visible>Skin.HasSetting(show_borders)</visible>
+			</control>
+			<control type="image">
+				<left>-18</left>
+				<top>-18</top>
+				<width>418</width>
+				<height>344</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<aspectratio>stretch</aspectratio>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
-				<left>2</left>
-				<top>2</top>
-				<width>378</width>
-				<height>354</height>
+				<left>-18</left>
+				<top>-18</top>
+				<width>418</width>
+				<height>344</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders)</visible>
-			</control>
-			<control type="image">
-				<left>2</left>
-				<top>2</top>
-				<width>378</width>
-				<height>354</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
-				<left>20</left>
-				<top>22</top>
-				<width>342</width>
-				<height>200</height>
+				<left>2</left>
+				<top>2</top>
+				<width>378</width>
+				<height>217</height>
+				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<left>7</left>
+				<top>7</top>
+				<width>368</width>
+				<height>207</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="DefaultVideoFanart.png">$INFO[Player.Art(thumb)]</texture>
+				<texture fallback="DefaultVideoFanart.png">$VAR[PVRNextupVar]</texture>
+				<fadetime>200</fadetime>
 			</control>
 			<control type="label">
-				<left>2</left>
-				<top>236</top>
-				<width>378</width>
+				<left>12</left>
+				<top>219</top>
+				<width>368</width>
 				<height>36</height>
 				<aligny>center</aligny>
 				<align>center</align>
-				<textoffsetx>5</textoffsetx>
 				<font>font12</font>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -61,16 +78,16 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
-				<left>22</left>
-				<top>288</top>
-				<width>338</width>
+				<left>2</left>
+				<top>260</top>
+				<width>378</width>
 				<height>48</height>
 				<texture colordiffuse="$VAR[SkinColorVar]">colors/white.png</texture>
 			</control>
 			<control type="label">
-				<left>27</left>
-				<top>288</top>
-				<width>328</width>
+				<left>12</left>
+				<top>260</top>
+				<width>368</width>
 				<height>48</height>
 				<font>font12</font>
 				<shadowcolor>black</shadowcolor>

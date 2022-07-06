@@ -36,6 +36,7 @@ supports animated poster only.
 ### 4.0.1+nexus ###
 - .6
   * Fix cast aspect ratio for 21:9 displays
+  * Improved Next Popup for TV-Shows
 
 
 - .5
