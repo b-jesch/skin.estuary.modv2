@@ -195,6 +195,11 @@
 		<value condition="!String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
+	<variable name="PVRNextupVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Nextup.fanart))">$INFO[Window(Home).Property(PVR.Nextup.fanart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Nextup.poster))">$INFO[Window(Home).Property(PVR.Nextup.poster)]</value>
+		<value>$INFO[Player.Art(thumb)]</value>
+	</variable>
 	<variable name="PVRMetadataCastandroleVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.castandrole)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.cast))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.cast)]</value>
