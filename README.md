@@ -35,12 +35,18 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+
+### 3.4.1+matrix ###
+- .7
+  * Dutch language updated (many thanks to Klojum)
+  * some adjustments
+
+
 - .6
   * Fix cast aspect ratio for 21:9 displays
   * Improved Next Popup for TV-Shows
 
 
-### 3.4.1+matrix ###
 - .5
   * Bugfix Video OSD
   * Radio Channel Groups in Home Menu added
