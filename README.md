@@ -34,6 +34,11 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
+- .7
+  * Dutch language updated (many thanks to Klojum)
+  * some adjustments
+
+
 - .6
   * Fix cast aspect ratio for 21:9 displays
   * Improved Next Popup for TV-Shows
