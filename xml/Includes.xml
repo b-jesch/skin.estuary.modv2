@@ -2660,7 +2660,7 @@
 						<width>auto</width>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$INFO[System.Date(dd. MMM yyyy)]</label>
+						<label>$INFO[System.Date]</label>
 						<visible>Skin.HasSetting(show_date)</visible>
 					</control>
 					<control type="label">
