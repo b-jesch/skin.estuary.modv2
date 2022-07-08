@@ -37,6 +37,7 @@ supports animated poster only.
 - .7
   * Dutch language updated (many thanks to Klojum)
   * some adjustments
+  * new Font Economica introduced 
 
 
 - .6
