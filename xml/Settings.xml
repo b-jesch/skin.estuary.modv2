@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!--<onload condition="!Skin.HasSetting(FirstTimeRun2)">ActivateWindow(1136)</onload>-->
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
 			<centerleft>50%</centerleft>
-			<width>1600</width>
+			<width>1900</width>
 			<top>0</top>
 			<bottom>0</bottom>
 			<include>OpenClose_Right</include>
