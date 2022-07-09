@@ -1096,7 +1096,7 @@
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="text_label" value="$LOCALIZE[40260]" />
 						<param name="button_label" value="$LOCALIZE[10048]" />
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 						<param name="button_id" value="16800"/>

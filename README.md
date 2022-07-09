@@ -37,7 +37,7 @@ supports animated poster only.
 - .7
   * Dutch language updated (many thanks to Klojum)
   * some adjustments
-  * new Font Economica introduced 
+  * introducing Font Economica 
 
 
 - .6
@@ -135,3 +135,4 @@ supports animated poster only.
 ![Improved OSD](resources/screenshots/screenshot_9.png)
 ![simplified OSD](resources/screenshots/screenshot_10.png)
 ![colored flags](resources/screenshots/screenshot_11.png)
+![improved nextup info](resources/screenshots/screenshot_12.png)
