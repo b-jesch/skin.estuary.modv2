@@ -35,7 +35,7 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
 - .7
-  * DDutch + Hungarian language updated (many thanks to Klojum and frodo19)
+  * Dutch + Hungarian language updated (many thanks to Klojum and frodo19)
   * some adjustments
   * introducing Font Economica 
 
