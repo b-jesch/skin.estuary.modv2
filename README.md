@@ -38,7 +38,7 @@ supports animated poster only.
 
 ### 3.4.1+matrix ###
 - .7
-  * Dutch language updated (many thanks to Klojum)
+  * Dutch + Hungarian language updated (many thanks to Klojum and frodo19)
   * some adjustments
   * introducing Font Economica 
 
