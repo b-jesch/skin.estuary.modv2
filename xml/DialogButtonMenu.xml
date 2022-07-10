@@ -7,8 +7,8 @@
 		<include condition="!Skin.HasSetting(powermenu_list)">DefaultBackground</include>
 		<control type="group">
 			<centerleft>50%</centerleft>
-			<width>1600</width>
-			<centertop>50%</centertop>
+			<width>1900</width>
+			<centertop>60%</centertop>
 			<height>795</height>
 			<include>OpenClose_Right</include>
 			<visible>!Skin.HasSetting(powermenu_iconlist) + !Skin.HasSetting(powermenu_list)</visible>
@@ -17,10 +17,10 @@
 				<width>100%</width>
 				<top>0</top>
 				<height>780</height>
-				<itemlayout height="260" width="400">
+				<itemlayout height="260" width="380">
 					<control type="image">
 						<left>-5</left>
-						<width>410</width>
+						<width>390</width>
 						<height>270</height>
 						<texture>dialogs/dialog-bg-nobo.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -45,7 +45,7 @@
 						<aligny>center</aligny>
 					</control>
 				</itemlayout>
-				<focusedlayout height="230" width="400">
+				<focusedlayout height="230" width="380">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
@@ -54,7 +54,7 @@
        					</animation>
 						<control type="image">
 							<left>-5</left>
-							<width>410</width>
+							<width>390</width>
 							<height>270</height>
 							<texture>dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -63,7 +63,7 @@
 						<control type="image">
 							<top>-6</top>
 							<left>-11</left>
-							<width>422</width>
+							<width>402</width>
 							<height>282</height>
 							<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -72,7 +72,7 @@
 						<control type="image">
 							<top>-6</top>
 							<left>-11</left>
-							<width>422</width>
+							<width>402</width>
 							<height>282</height>
 							<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 							<bordersize>20</bordersize>
