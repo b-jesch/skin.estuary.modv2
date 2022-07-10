@@ -246,6 +246,11 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "Elérhető"
 
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31049"
+msgid "Show content"
+msgstr "Tartalom mutatása"
+
 #: /xml/Variables.xml
 msgctxt "#31050"
 msgid "Show plot"
@@ -298,7 +303,7 @@ msgstr "Főmenü elemek"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31062"
-msgid "Weather fanart pack"
+msgid "Weather fanarts pack"
 msgstr "Időjárás fanart csomag"
 
 #: /xml/Includes_MediaMenu.xml
@@ -549,10 +554,10 @@ msgstr "Képek megjelenítése a térképen"
 
 #: /xml/Variables.xml
 msgctxt "#31125"
-msgid "Press for actor info"
-msgstr "Nyomja meg a le gombot a színész információkhoz"
+msgid "is"
+msgstr "van"
 
-#: /xml/Includes_MediaMenu.xml
+
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31126"
 msgid "Press [B]OK[/B] to show plot"
@@ -1693,16 +1698,6 @@ msgctxt "#40192"
 msgid "Please enter password"
 msgstr "Jelszó megadása"
 
-#: /xml/Includes_Home.xml
-msgctxt "#40193"
-msgid "Enter password"
-msgstr "Jelszó"
-
-#: /xml/Includes_Home.xml
-msgctxt "#40194"
-msgid "This content is password protected.[CR]Please enter the password to access it."
-msgstr "Jelszóval védett tartalom.[CR] Add meg a jelszót a hozzáféréshez"
-
 #: /xml/SkinSettings.xml
 msgctxt "#40195"
 msgid "Enable Next Up popup for Live TV"
@@ -1857,7 +1852,7 @@ msgstr "Másodlagos szín"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40225"
-msgid "Use small OSD"
+msgid "Use small Video OSD"
 msgstr "Kisebb OSD"
 
 #: /xml/script-skinshortcuts.xml
@@ -2195,6 +2190,11 @@ msgctxt "#40292"
 msgid "Lists settings"
 msgstr "Lista beállítás"
 
+#: /xml/SkinSettings.xml
+msgctxt "#40293"
+msgid "Show Actors list"
+msgstr "Színész lista mutatása"
+
 #: /xml/script-script.extendedinfo-DialogVideoInfo.xml
 msgctxt "#40294"
 msgid "Episode count"
@@ -2299,6 +2299,11 @@ msgstr "Szerep a Sorozatban"
 msgctxt "#40314"
 msgid "Crew member in TV show"
 msgstr "Stábtag a sorozatban"
+
+#: /xml/SkinSettings.xml
+msgctxt "#40315"
+msgid "Palm Week"
+msgstr "Nagyhét"
 
 msgctxt "#40350"
 msgid "Channel groups"
@@ -2531,9 +2536,67 @@ msgstr "Tomatometer átlagolt közönség"
 
 #: SkinSettings.xml
 msgctxt "#40407"
-msgid "Use simplified OSD Navigation"
+msgid "Use simplified Video OSD Navigation"
 msgstr "Egyszerűsített OSD navigáció"
 
 msgctxt "#40408"
 msgid "Previous seen Channel"
 msgstr "Előzőleg nézett csatorna"
+
+
+#: Includes_MediaMenu.xml
+msgctxt "#40409"
+msgid "Show PVR Channel Status"
+msgstr "PVR csatorna állapotának megjelenítése"
+
+#: DialogPlayerProcessInfo
+
+msgctxt "#40410"
+msgid "Display Mode"
+msgstr "Képernyőmód"
+
+msgctxt "#40411"
+msgid "Eoft & Gamut"
+msgstr ""
+
+msgctxt "#40412"
+msgid "Color Depth"
+msgstr "Színmélység"
+
+#: SkinSettings.xml
+
+msgctxt "#40413"
+msgid "Display Media Time"
+msgstr "Média hossz megjelenítése"
+
+msgctxt "#40414"
+msgid "current Time / total Time"
+msgstr "jelenlegi idő / teljes hossz"
+
+msgctxt "#40415"
+msgid "Remaining Time"
+msgstr "Hátralevő idő"
+
+#: SkinSettings.xml
+
+msgctxt "#40416"
+msgid "Use Background for PVR Channel Icons"
+msgstr "Háttér a PVR csatorna ikonoknak"
+
+#: Custom_1127_settingsTVWidgets.xml
+
+msgctxt "#40417"
+msgid "Saved Search Results"
+msgstr "Mentett keresési előzmények"
+
+#: SkinSettings.xml
+
+msgctxt "#40418"
+msgid "Use full Height for Channel and Program OSD"
+msgstr "Teljes magasságú csatorna és program OSD"
+
+#: Font.xml
+
+msgctxt "#40419"
+msgid "Economica based"
+msgstr "Economica alapú"
