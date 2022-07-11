@@ -37,6 +37,7 @@ supports animated poster only.
 - .8
   * fix text adjustment in settings
   * fix incorrect shown clearlogo
+  * set "show cast list" as general option in video info
 
 
 - .7
