@@ -37,6 +37,12 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.1+matrix ###
+- .8
+  * fix text adjustment in settings
+  * fix incorrect shown clearlogo
+  * set "show cast list" as general option in video info
+
+
 - .7
   * Dutch + Hungarian language updated (many thanks to Klojum and frodo19)
   * some adjustments
