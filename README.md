@@ -34,6 +34,11 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.1+nexus ###
+- .8
+  * fix text adjustment in settings
+  * fix incorrect shown clearlogo
+
+
 - .7
   * Dutch + Hungarian language updated (many thanks to Klojum and frodo19)
   * some adjustments
