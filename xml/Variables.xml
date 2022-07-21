@@ -1356,6 +1356,7 @@
 		<value condition="String.Contains(ListItem.Filenameandpath,hddvd)">flags/hddvd.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,web-dl) | String.Contains(ListItem.Filenameandpath,webdl)">flags/webdl.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,dvd)">flags/dvd.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,.iso)">flags/iso.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,bluray) | String.Contains(ListItem.Filenameandpath,blu-ray) | String.Contains(ListItem.Filenameandpath,bdrip)">flags/bluray.png</value>
 	</variable>
 	<variable name="HdrTypeVar">

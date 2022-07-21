@@ -38,6 +38,7 @@ supports animated poster only.
   * fix text adjustment in settings
   * fix incorrect shown clearlogo
   * set "show cast list" as general option in video info
+  * introducing ISO flag as source flag
 
 
 - .7
