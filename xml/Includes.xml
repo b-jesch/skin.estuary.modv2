@@ -1000,10 +1000,9 @@
 				</control>
 				<control type="group">
 					<width>71</width>
-					<visible>!Skin.HasSetting(show_mediaresolutionflag)</visible>
+					<visible>!Skin.HasSetting(show_mediaresolutionflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="$PARAM[resolution_var]" />
-						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)" />
 						<param name="width" value="71" />
 						<param name="top" value="5" />
 					</include>
