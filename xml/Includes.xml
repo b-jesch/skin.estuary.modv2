@@ -1292,37 +1292,43 @@
 				<include content="MediaFlag">
 					<param name="texture" value="flags/hdtv.png" />
 					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,HDTV) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,PDTV) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,HDTVRIP) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,TVRIP) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdtv) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,pdtv) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdtvrip) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,tvrip)" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdtv) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,pdtv) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdtvrip) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,tvrip)" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/vhs.png" />
 					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,VHS) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,VHSRIP) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,vhs) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,vhsrip)" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,vhs) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,vhsrip)" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/hddvd.png" />
 					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,HDDVD) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hddvd)" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hddvd)" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/webdl.png" />
 					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEB-DL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEBDL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web-dl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,webdl)" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web-dl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,webdl)" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/dvd.png" />
 					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,DVD) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,dvd)" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,dvd)" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/bluray.png" />
 					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,bluray) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,blu-ray) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,bdrip) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,BLURAY) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,BLU-RAY) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,BDRIP)" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,bluray) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,blu-ray) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,bdrip)" />
+					<param name="top" value="5" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/iso.png" />
+					<param name="width" value="71" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,.iso)" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
