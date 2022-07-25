@@ -3224,7 +3224,7 @@
 				<align>center</align>
 			</control>
 		</itemlayout>
-		<focusedlayout height="230" width="380">
+		<focusedlayout height="260" width="380">
 			<control type="group">
 				<depth>DepthContentPopout</depth>
 				<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
@@ -3251,7 +3251,7 @@
 				<control type="image">
 					<top>-6</top>
 					<left>-11</left>
-					<width>422</width>
+					<width>402</width>
 					<height>282</height>
 					<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 					<bordersize>20</bordersize>

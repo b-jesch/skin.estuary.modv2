@@ -672,6 +672,7 @@
 				</control>
 				<include content="DefaultColorSettingButton">
 					<param name="enable">!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</param>
+					<param name="visible">Skin.HasSetting(EnableGradientColor)</param>
 					<param name="id">811</param>
 					<param name="label">  ∟$LOCALIZE[40224]</param>
 					<param name="label2">$VAR[Label_SkinSetting_GradientColor]</param>
@@ -681,7 +682,7 @@
 				<include content="DefaultColorSettingButton">
 					<param name="enable">!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</param>
 					<param name="id">801</param>
-					<param name="label">  ∟$LOCALIZE[40033]</param>
+					<param name="label">$LOCALIZE[40033]</param>
 					<param name="label2">$VAR[Label_SkinSetting_BackgroundColor]</param>
 					<param name="header">40033</param>
 					<param name="setting">BackgroundColor</param>
