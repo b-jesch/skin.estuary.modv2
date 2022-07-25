@@ -3223,7 +3223,7 @@
 				<align>center</align>
 			</control>
 		</itemlayout>
-		<focusedlayout height="230" width="380">
+		<focusedlayout height="260" width="380">
 			<control type="group">
 				<depth>DepthContentPopout</depth>
 				<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">

@@ -140,7 +140,7 @@
 					<width>700</width>
 					<height>35</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSNR,$LOCALIZE[19009] : [COLOR white],[/COLOR]]</label>
+					<label>$INFO[PVR.ActStreamSnr,$LOCALIZE[19009] : [COLOR white],[/COLOR]]</label>
 					<font>font12</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -149,7 +149,7 @@
 					<top>0</top>
 					<width>700</width>
 					<height>10</height>
-					<info>PVR.ActStreamProgrSNR</info>
+					<info>PVR.ActStreamProgrSnr</info>
 				</control>
 			</control>
 			<control type="grouplist">
