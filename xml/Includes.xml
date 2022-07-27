@@ -1563,6 +1563,26 @@
 		</control>
 		<control type="group">
 			<top>5</top>
+			<width>130</width>
+			<visible>!String.IsEmpty($PARAM[listitem_prefix]ListItem.Rating) + [Container.Content(albums) | Container.Content(songs)]</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/rating.png" />
+				<param name="width" value="130" />
+			</include>
+			<control type="label">
+				<top>-1</top>
+				<left>51</left>
+				<width>76</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[$PARAM[listitem_prefix]ListItem.Rating]</label>
+				<font>font_flag</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<top>5</top>
 			<width>103</width>
 			<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 			<include content="MediaFlag">
