@@ -1444,7 +1444,7 @@
 		<control type="group">
 			<top>5</top>
 			<width>130</width>
-			<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(ListItem.Rating(imdb))</visible>
+			<visible>!String.IsEmpty(ListItem.Rating(imdb))</visible>
 			<include content="MediaFlag">
 				<param name="texture" value="flags/imdb.png" />
 				<param name="width" value="130" />
@@ -1464,7 +1464,7 @@
 		<control type="group">
 			<top>5</top>
 			<width>130</width>
-			<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(ListItem.Rating(tmdb))</visible>
+			<visible>!String.IsEmpty(ListItem.Rating(tmdb))</visible>
 			<include content="MediaFlag">
 				<param name="texture" value="flags/tmdb.png" />
 				<param name="width" value="130" />
@@ -1484,7 +1484,7 @@
 		<control type="group">
 			<top>5</top>
 			<width>130</width>
-			<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(ListItem.Rating(themoviedb))</visible>
+			<visible>!String.IsEmpty(ListItem.Rating(themoviedb))</visible>
 			<include content="MediaFlag">
 				<param name="texture" value="flags/tmdb.png" />
 				<param name="width" value="130" />
@@ -1504,7 +1504,7 @@
 		<control type="group">
 			<top>5</top>
 			<width>130</width>
-			<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(ListItem.Rating(tvdb))</visible>
+			<visible>!String.IsEmpty(ListItem.Rating(tvdb))</visible>
 			<include content="MediaFlag">
 				<param name="texture" value="flags/tvdb.png" />
 				<param name="width" value="130" />
@@ -1524,7 +1524,7 @@
 		<control type="group">
 			<top>5</top>
 			<width>140</width>
-			<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(Window(Home).Property(rotten))</visible>
+			<visible>!String.IsEmpty(Window(Home).Property(rotten))</visible>
 			<include content="MediaFlag">
 				<param name="texture" value="flags/rotten.png" />
 				<param name="width" value="140" />
@@ -1545,7 +1545,7 @@
 		<control type="group">
 			<top>5</top>
 			<width>130</width>
-			<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(Window(Home).Property(metacritic))</visible>
+			<visible>!String.IsEmpty(Window(Home).Property(metacritic))</visible>
 			<include content="MediaFlag">
 				<param name="texture" value="flags/metacritic.png" />
 				<param name="width" value="130" />

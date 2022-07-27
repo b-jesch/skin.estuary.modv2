@@ -1653,7 +1653,7 @@
 	</variable>
 	<variable name="VideoInfoSubLabelVar">
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]-[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$VAR[SeasonNumberVar] [COLOR white]-[/COLOR] $VAR[EpisodeNumberVar]</value>
+		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Season) + !String.IsEmpty(ListItem.Episode)">$VAR[SeasonNumberVar] [COLOR white]-[/COLOR] $VAR[EpisodeNumberVar]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Tagline,[I],[/I]]</value>
 		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Artist]$INFO[ListItem.Album, [COLOR white]-[/COLOR] ,]</value>
 	</variable>
