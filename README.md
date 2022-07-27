@@ -33,6 +33,11 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+### 4.0.2+nexus ###
+- .0 
+  * Introducing Flix Landscape View
+  
+
 ### 4.0.1+nexus ###
 - .8
   * fix text adjustment in settings
