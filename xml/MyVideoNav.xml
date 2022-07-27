@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-	<views>50,51,52,53,54,505,55,500,504,501,502,503,506,507,508,509</views>
+	<views>50,51,52,53,54,505,55,500,504,501,502,503,506,507,508,509,510</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -26,6 +26,7 @@
 			<include>View_507_Mosaic_Vertical</include>
 			<include>View_508_DoubleLists</include>
 			<include>View_509_TripleLists</include>
+			<include>View_510_Flix</include>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>

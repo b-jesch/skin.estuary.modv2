@@ -25,6 +25,7 @@
 	<include file="View_507_Mosaic_Vertical.xml" />
 	<include file="View_508_DoubleLists.xml" />
 	<include file="View_509_TripleLists.xml" />
+	<include file="View_510_Flix.xml" />
 	<include file="Variables.xml" />
 	<include file="script-skinshortcuts-includes.xml"/>
 	<constant name="DepthDialog">0.50</constant>
@@ -283,7 +284,7 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[FanartAnimated]</texture>
-			<visible>Skin.HasSetting(show_fanart) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Control.IsVisible(502) | [Window.IsVisible(DialogVideoInfo.xml) + !Player.HasVideo]</visible>
+			<visible>Skin.HasSetting(show_fanart) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Control.IsVisible(502) + !Control.IsVisible(510) | [Window.IsVisible(DialogVideoInfo.xml) + !Player.HasVideo]</visible>
 		</control>
 	</include>
 	<include name="BusyPvrArtworkSpinner">
@@ -1266,6 +1267,320 @@
 				</control>
 			</control>
 		</definition>
+	</include>
+	<include name="MediaFlagsAudioSubs">
+		<control type="group">
+			<width>130</width>
+			<height>50</height>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/language.png" />
+				<param name="width" value="130" />
+			</include>
+			<control type="label">
+				<width>63</width>
+				<left>57</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(AudioLanguage.1)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<width>205</width>
+			<height>50</height>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/language.2.png" />
+				<param name="width" value="205" />
+			</include>
+			<control type="label">
+				<width>63</width>
+				<left>57</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(AudioLanguage.1)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<width>63</width>
+				<left>132</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(AudioLanguage.2)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<width>280</width>
+			<height>50</height>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !String.IsEmpty(ListItem.Property(AudioLanguage.2)) + !String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/language.3.png" />
+				<param name="width" value="280" />
+			</include>
+			<control type="label">
+				<width>63</width>
+				<left>57</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(AudioLanguage.1)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<width>63</width>
+				<left>132</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(AudioLanguage.2)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<width>63</width>
+				<left>207</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(AudioLanguage.3)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="image">
+			<width>10</width>
+			<height>10</height>
+			<aspectratio>keep</aspectratio>
+			<texture/>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+		</control>
+		<control type="group">
+			<width>130</width>
+			<height>50</height>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/st_language.png" />
+				<param name="width" value="130" />
+			</include>
+			<control type="label">
+				<width>63</width>
+				<left>57</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(SubtitleLanguage.1)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<width>205</width>
+			<height>50</height>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/st_language.2.png" />
+				<param name="width" value="205" />
+			</include>
+			<control type="label">
+				<width>63</width>
+				<left>57</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(SubtitleLanguage.1)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<width>63</width>
+				<left>132</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(SubtitleLanguage.2)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<width>280</width>
+			<height>50</height>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + !String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/st_language.3.png" />
+				<param name="width" value="280" />
+			</include>
+			<control type="label">
+				<width>63</width>
+				<left>57</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(SubtitleLanguage.1)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<width>63</width>
+				<left>132</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(SubtitleLanguage.2)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<width>63</width>
+				<left>207</left>
+				<height>50</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(SubtitleLanguage.3)]</label>
+				<font>Font-Flag-Small</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+	</include>
+	<include name="MediaFlagsRatings">
+		<control type="group">
+			<top>5</top>
+			<width>130</width>
+			<visible>!String.IsEmpty(ListItem.Rating(imdb))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/imdb.png" />
+				<param name="width" value="130" />
+			</include>
+			<control type="label">
+				<top>-1</top>
+				<left>51</left>
+				<width>76</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Rating(imdb)]</label>
+				<font>font_flag</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<top>5</top>
+			<width>130</width>
+			<visible>!String.IsEmpty(ListItem.Rating(tmdb))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/tmdb.png" />
+				<param name="width" value="130" />
+			</include>
+			<control type="label">
+				<top>-1</top>
+				<left>51</left>
+				<width>76</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Rating(tmdb)]</label>
+				<font>font_flag</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<top>5</top>
+			<width>130</width>
+			<visible>!String.IsEmpty(ListItem.Rating(themoviedb))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/tmdb.png" />
+				<param name="width" value="130" />
+			</include>
+			<control type="label">
+				<top>-1</top>
+				<left>51</left>
+				<width>76</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Rating(themoviedb)]</label>
+				<font>font_flag</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<top>5</top>
+			<width>130</width>
+			<visible>!String.IsEmpty(ListItem.Rating(tvdb))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/tvdb.png" />
+				<param name="width" value="130" />
+			</include>
+			<control type="label">
+				<top>-1</top>
+				<left>51</left>
+				<width>76</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Rating(tvdb)]</label>
+				<font>font_flag</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<top>5</top>
+			<width>140</width>
+			<visible>!String.IsEmpty(Window(Home).Property(rotten))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/rotten.png" />
+				<param name="width" value="140" />
+			</include>
+			<control type="label">
+				<top>-1</top>
+				<left>52</left>
+				<width>86</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>!String.IsEmpty(Window(Home).Property(rotten))</visible>
+				<label>$INFO[Window(Home).Property(rotten)]%</label>
+				<font>font_flag</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<top>5</top>
+			<width>130</width>
+			<visible>!String.IsEmpty(Window(Home).Property(metacritic))</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/metacritic.png" />
+				<param name="width" value="130" />
+			</include>
+			<control type="label">
+				<top>-1</top>
+				<left>51</left>
+				<width>76</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Home).Property(metacritic)]</label>
+				<font>font_flag</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<top>5</top>
+			<width>103</width>
+			<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/myrating.png" />
+				<param name="width" value="103" />
+			</include>
+			<control type="label">
+				<top>-1</top>
+				<left>51</left>
+				<width>49</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.UserRating]</label>
+				<font>font_flag</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+			</control>
+		</control>
 	</include>
 	<include name="MediaFlagsInfoDialogLeft">
 		<param name="infolabel_prefix"></param>
@@ -2883,7 +3198,7 @@
 						<left>12</left>
 						<width>36</width>
 						<height>36</height>
-						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="[Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506)] + !Window.IsActive(MyPVRGuide.xml) + !Window.IsActive(MyPVRChannels.xml)">Conditional</animation>
+						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="[Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506) | Control.IsVisible(510)] + !Window.IsActive(MyPVRGuide.xml) + !Window.IsActive(MyPVRChannels.xml)">Conditional</animation>
 						<texturefocus colordiffuse="$VAR[SkinColorVar]">frame/menu-nofo.png</texturefocus>
 						<texturenofocus>frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>

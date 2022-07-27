@@ -47,6 +47,7 @@
 			<value condition="Skin.HasSetting(movies.503)">$LOCALIZE[40005]</value>
 			<value condition="Skin.HasSetting(movies.506)">$LOCALIZE[40017]</value>
 			<value condition="Skin.HasSetting(movies.507)">$LOCALIZE[40146]</value>
+			<value condition="Skin.HasSetting(movies.510)">$LOCALIZE[40420]</value>
 			<value>$LOCALIZE[40148]</value>
 	</variable>
 	<variable name="SettingsForcedViewsSetsVar">
@@ -63,6 +64,7 @@
 			<value condition="Skin.HasSetting(sets.506)">$LOCALIZE[40017]</value>
 			<value condition="Skin.HasSetting(sets.507)">$LOCALIZE[40146]</value>
 			<value condition="Skin.HasSetting(sets.508)">$LOCALIZE[40212]</value>
+			<value condition="Skin.HasSetting(sets.510)">$LOCALIZE[40420]</value>
 			<value>$LOCALIZE[40148]</value>
 	</variable>
 	<variable name="SettingsForcedViewsSetMoviesVar">
@@ -79,6 +81,7 @@
 			<value condition="Skin.HasSetting(setmovies.503)">$LOCALIZE[40005]</value>
 			<value condition="Skin.HasSetting(setmovies.506)">$LOCALIZE[40017]</value>
 			<value condition="Skin.HasSetting(setmovies.507)">$LOCALIZE[40146]</value>
+			<value condition="Skin.HasSetting(setmovies.510)">$LOCALIZE[40420]</value>
 			<value>$LOCALIZE[40148]</value>
 	</variable>
 	<variable name="SettingsForcedViewsTVShowsVar">
@@ -96,6 +99,7 @@
 			<value condition="Skin.HasSetting(tvshows.506)">$LOCALIZE[40017]</value>
 			<value condition="Skin.HasSetting(tvshows.507)">$LOCALIZE[40146]</value>
 			<value condition="Skin.HasSetting(tvshows.509)">$LOCALIZE[40214]</value>
+			<value condition="Skin.HasSetting(tvshows.510)">$LOCALIZE[40420]</value>
 			<value>$LOCALIZE[40148]</value>
 	</variable>
 	<variable name="SettingsForcedViewsSeasonsVar">
@@ -270,7 +274,8 @@
 	<variable name="MainLabelMoviesSetsInfoVar">
 		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Title)">$INFO[Container(60).ListItem.Title]$INFO[Container(60).ListItem.Year, (,)]</value>
 		<value condition="Control.HasFocus(60) + String.IsEmpty(Container(60).ListItem.Title)">$INFO[Container(60).ListItem.Label]$INFO[Container(60).ListItem.Year, (,)]</value>
-        <value condition="!Control.HasFocus(60)">$INFO[ListItem.Label]</value>
+		<value condition="ListItem.IsCollection">$INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Title]</value>
 	</variable>
 	<variable name="SubLabelMoviesSetsInfoVar">
 		<value condition="Control.HasFocus(60)">$INFO[Container(60).ListItem.Tagline,[I],[/I]]</value>
@@ -334,6 +339,7 @@
 		<value condition="Container.Content(movies) + Control.HasFocus(11121)">special://skin/extras/views/movies/503.png</value>
 		<value condition="Container.Content(movies) + Control.HasFocus(11122)">special://skin/extras/views/movies/506.png</value>
 		<value condition="Container.Content(movies) + Control.HasFocus(11123)">special://skin/extras/views/movies/507.png</value>
+		<value condition="Container.Content(movies) + Control.HasFocus(11126)">special://skin/extras/views/movies/510.png</value>
 		<value condition="Container.Content(sets) + Control.HasFocus(11111)">special://skin/extras/views/sets/50.png</value>
 		<value condition="Container.Content(sets) + Control.HasFocus(11112)">special://skin/extras/views/sets/51.png</value>
 		<value condition="Container.Content(sets) + Control.HasFocus(11113)">special://skin/extras/views/sets/53.png</value>
@@ -361,6 +367,7 @@
 		<value condition="Container.Content(tvshows) + Control.HasFocus(11122)">special://skin/extras/views/tvshows/506.png</value>
 		<value condition="Container.Content(tvshows) + Control.HasFocus(11123)">special://skin/extras/views/tvshows/507.png</value>
 		<value condition="Container.Content(tvshows) + Control.HasFocus(11125)">special://skin/extras/views/tvshows/509.png</value>
+		<value condition="Container.Content(tvshows) + Control.HasFocus(11126)">special://skin/extras/views/tvshows/510.png</value>
 		<value condition="Container.Content(seasons) + Control.HasFocus(11111)">special://skin/extras/views/seasons/50.png</value>
 		<value condition="Container.Content(seasons) + Control.HasFocus(11112)">special://skin/extras/views/seasons/51.png</value>
 		<value condition="Container.Content(seasons) + Control.HasFocus(11113)">special://skin/extras/views/seasons/53.png</value>
@@ -1660,7 +1667,7 @@
 	</variable>
 	<variable name="VideoInfoSubLabelVar">
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]-[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$VAR[SeasonNumberVar] [COLOR white]-[/COLOR] $VAR[EpisodeNumberVar]</value>
+		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Season) + !String.IsEmpty(ListItem.Episode)">$VAR[SeasonNumberVar] [COLOR white]-[/COLOR] $VAR[EpisodeNumberVar]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Tagline,[I],[/I]]</value>
 		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Artist]$INFO[ListItem.Album, [COLOR white]-[/COLOR] ,]</value>
 	</variable>

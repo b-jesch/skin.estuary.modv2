@@ -35,6 +35,10 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+### 3.4.2+matrix ###
+- .0
+  * Introducing Flix Landscape View
+
 
 ### 3.4.1+matrix ###
 - .8
