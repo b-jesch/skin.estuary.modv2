@@ -293,7 +293,6 @@
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<visible>Container.Content(movies)</visible>
 			</control>
-
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<control type="grouplist">
