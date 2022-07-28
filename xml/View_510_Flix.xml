@@ -307,12 +307,16 @@
 					<orientation>horizontal</orientation>
 					<align>left</align>
 					<aligny>center</aligny>
-					<include>MediaFlagsAudioSubs</include>
+					<include content="MediaFlagsAudioSubs">
+						<param name="infolabel_prefix"/>
+					</include>
 					<include content="MediaFlag">
 						<param name="width" value="5" />
 						<param name="top" value="5" />
 					</include>
-					<include>MediaFlagsRatings</include>
+					<include content="MediaFlagsRatings">
+						<param name="infolabel_prefix"/>
+					</include>
 				</control>
 				<control type="textbox">
 					<left>50</left>
@@ -326,7 +330,6 @@
 				</control>
 			</control>
 		</control>
-
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<visible>Control.IsVisible(510)</visible>
@@ -352,7 +355,6 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>8</preloaditems>
-
 				<itemlayout height="255" width="440">
 					<control type="group">
 						<top>20</top>
@@ -372,7 +374,6 @@
 						</include>
 					</control>
 				</focusedlayout>
-
 				<itemlayout height="255" width="440">
 					<control type="group">
 						<top>20</top>
@@ -392,7 +393,6 @@
 						</include>
 					</control>
 				</focusedlayout>
-
 			</control>
 		</control>
 		<control type="scrollbar" id="60">

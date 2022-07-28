@@ -829,7 +829,7 @@
 				<control type="button" id="907">
 					<include>DefaultSettingButton</include>
 					<description>forced view movies</description>
-					<onclick>Skin.SelectBool(40150, 40148|movies.0, 535|movies.50, 31107|movies.55, 20021|movies.51, 31100|movies.53, 31101|movies.54, 40016|movies.505, 31102|movies.500, 40015|movies.504, 20020|movies.501, 20445|movies.502, 40005|movies.503, 40017|movies.506, 40146|movies.507)</onclick>
+					<onclick>Skin.SelectBool(40150, 40148|movies.0, 535|movies.50, 31107|movies.55, 20021|movies.51, 31100|movies3, 31101|movies.54, 40016|movies.505, 31102|movies.500, 40015|movies.504, 20020|movies.501, 20445|movies.502, 40420|movies.510, 40005|movies.503, 40017|movies.506, 40146|movies.507)</onclick>
 					<visible>Library.HasContent(movies) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[40150]</label>
 					<label2>$VAR[SettingsForcedViewsMoviesVar]</label2>
@@ -837,7 +837,7 @@
 				<control type="button" id="908">
 					<include>DefaultSettingButton</include>
 					<description>forced view sets</description>
-					<onclick>Skin.SelectBool(40151, 40148|sets.0, 535|sets.50, 31107|sets.55, 20021|sets.51, 31100|sets.53, 31101|sets.54, 40016|sets.505, 31102|sets.500, 40015|sets.504, 20445|sets.502, 40005|sets.503, 40017|sets.506, 40146|sets.507, 40212|sets.508)</onclick>
+					<onclick>Skin.SelectBool(40151, 40148|sets.0, 535|sets.50, 31107|sets.55, 20021|sets.51, 31100|sets.53, 31101|sets.54, 40016|sets.505, 31102|sets.500, 40015|sets.504, 20445|sets.502, 40420|sets.510, 40005|sets.503, 40017|sets.506, 40146|sets.507, 40212|sets.508)</onclick>
 					<visible>Library.HasContent(movies) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[40151]</label>
 					<label2>$VAR[SettingsForcedViewsSetsVar]</label2>
@@ -845,7 +845,7 @@
 				<control type="button" id="909">
 					<include>DefaultSettingButton</include>
 					<description>forced view setmovies</description>
-					<onclick>Skin.SelectBool(40152, 40148|setmovies.0, 535|setmovies.50, 31107|setmovies.55, 20021|setmovies.51, 31100|setmovies.53, 31101|setmovies.54, 40016|setmovies.505, 31102|setmovies.500, 40015|setmovies.504, 20020|setmovies.501, 20445|setmovies.502, 40005|setmovies.503, 40017|setmovies.506, 40146|setmovies.507)</onclick>
+					<onclick>Skin.SelectBool(40152, 40148|setmovies.0, 535|setmovies.50, 31107|setmovies.55, 20021|setmovies.51, 31100|setmovies.53, 31101|setmovies.54, 40016|setmovies.505, 31102|setmovies.500, 40015|setmovies.504, 20020|setmovies.501, 20445|setmovies.502, 40420|setmovies.510, 40005|setmovies.503, 40017|setmovies.506, 40146|setmovies.507)</onclick>
 					<visible>Library.HasContent(movies) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[40152]</label>
 					<label2>$VAR[SettingsForcedViewsSetMoviesVar]</label2>
@@ -853,7 +853,7 @@
 				<control type="button" id="910">
 					<include>DefaultSettingButton</include>
 					<description>forced view tvshows</description>
-					<onclick>Skin.SelectBool(40153, 40148|tvshows.0, 535|tvshows.50, 31107|tvshows.55, 20021|tvshows.51, 31100|tvshows.53, 31101|tvshows.54, 40016|tvshows.505, 31102|tvshows.500, 40015|tvshows.504, 20020|tvshows.501, 20445|tvshows.502, 40005|tvshows.503, 40017|tvshows.506, 40146|tvshows.507, 40214|tvshows.509)</onclick>
+					<onclick>Skin.SelectBool(40153, 40148|tvshows.0, 535|tvshows.50, 31107|tvshows.55, 20021|tvshows.51, 31100|tvshows.53, 31101|tvshows.54, 40016|tvshows.505, 31102|tvshows.500, 40015|tvshows.504, 20020|tvshows.501, 20445|tvshows.502, 40420|tvshows.510, 40005|tvshows.503, 40017|tvshows.506, 40146|tvshows.507, 40214|tvshows.509)</onclick>
 					<visible>Library.HasContent(tvshows) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[40153]</label>
 					<label2>$VAR[SettingsForcedViewsTVShowsVar]</label2>
