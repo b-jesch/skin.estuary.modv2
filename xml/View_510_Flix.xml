@@ -245,7 +245,7 @@
 				<height>120</height>
 				<aspectratio align="bottom" aligny="center">keep</aspectratio>
 				<texture>$INFO[ListItem.Art(clearlogo)]</texture>
-				<visible>!ListItem.IsCollection + !ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
 				<top>60</top>
@@ -302,7 +302,7 @@
 
 					<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 					<left>50</left>
-					<top>235</top>
+					<top>238</top>
 					<height>70</height>
 					<width>820</width>
 					<itemgap>5</itemgap>
@@ -318,7 +318,7 @@
 				</control>
 				<control type="textbox">
 					<left>50</left>
-					<top>300</top>
+					<top>310</top>
 					<width>1100</width>
 					<height>165</height>
 					<font>fontplot2</font>
