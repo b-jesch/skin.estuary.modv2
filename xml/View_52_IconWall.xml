@@ -71,7 +71,7 @@
 							<align>center</align>
 							<visible>String.StartsWith(Container.FolderPath,musicdb://)</visible>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<left>25</left>
 							<top>148</top>
 							<width>346</width>
@@ -80,6 +80,7 @@
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
 							<align>center</align>
 							<aligny>center</aligny>
+							<scroll>true</scroll>
 						</control>
 					</control>
 				</itemlayout>
@@ -157,7 +158,7 @@
 							<align>center</align>
 							<visible>String.StartsWith(Container.FolderPath,musicdb://)</visible>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<left>25</left>
 							<top>148</top>
 							<width>346</width>
@@ -166,6 +167,7 @@
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
 							<align>center</align>
 							<aligny>center</aligny>
+							<scroll>true</scroll>
 						</control>
 					</control>
 				</focusedlayout>
