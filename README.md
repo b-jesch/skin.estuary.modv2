@@ -36,6 +36,7 @@ supports animated poster only.
 ### 4.0.2+nexus ###
 - .1
   * Transparency of label background of widgets (Flix view) customizable
+  * semitransparent Background for plot in video info added
 
 
 - .0 
