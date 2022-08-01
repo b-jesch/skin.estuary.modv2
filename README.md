@@ -38,6 +38,7 @@ supports animated poster only.
 ### 3.4.2+matrix ###
 - .1
   * Transparency of label background of widgets (Flix view) customizable
+  * semitransparent Background for plot in video info added
 
 
 - .0

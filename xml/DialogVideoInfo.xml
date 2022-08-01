@@ -62,6 +62,24 @@
 				<left>330</left>
 				<right>30</right>
 				<top>50</top>
+				<control type="image">
+					<top>-100</top>
+					<left>-120</left>
+					<right>200</right>
+					<height>650</height>
+					<aspectratio>stretch</aspectratio>
+					<texture colordiffuse="$VAR[BackgroundColorVar]" diffuse="overlays/dialoginfo_text.png">colors/grey50.png</texture>
+					<visible>!Skin.HasSetting(enable_LibraryClearArt) + !String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
+					</control>
+				<control type="image">
+					<top>-100</top>
+					<left>-150</left>
+					<right>-100</right>
+					<height>650</height>
+					<aspectratio>stretch</aspectratio>
+					<texture colordiffuse="$VAR[BackgroundColorVar]" diffuse="overlays/dialoginfo_text.png">colors/grey50.png</texture>
+					<visible>Skin.HasSetting(enable_LibraryClearArt) | String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
+					</control>
 				<control type="label">
 					<top>-14</top>
 					<left>16</left>
