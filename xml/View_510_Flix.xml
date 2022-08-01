@@ -85,10 +85,10 @@
 			</control>
 			<control type="image">
 				<left>34</left>
-				<top>190</top>
+				<top>180</top>
 				<width>382</width>
-				<height>35</height>
-				<texture>overlays/back.png</texture>
+				<height>45</height>
+				<texture flipy="true" colordiffuse="$VAR[Bars_Opacity]">frame/infobar.png</texture>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 			</control>
 			<control type="image">

@@ -34,6 +34,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.2+nexus ###
+- .1
+  * Transparency of label background of widgets (Flix view) customizable
+
+
 - .0 
   * Introducing Flix Landscape View
   
