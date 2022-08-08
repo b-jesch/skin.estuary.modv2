@@ -217,8 +217,8 @@
 			<visible>Control.IsVisible(510)</visible>
 			<control type="group">
 				<visible>!Player.HasVideo</visible>
-				<right>20</right>
-				<top>80</top>
+				<right>0</right>
+				<top>0</top>
 				<height>50%</height>
 				<width>50%</width>
 				<depth>DepthContentPopout</depth>
