@@ -37,6 +37,7 @@ supports animated poster only.
 - .1
   * Transparency of label background of widgets (Flix view) customizable
   * semitransparent Background for plot in video info added
+  * Overlay texture in Flix view changed 
 
 
 - .0 

@@ -97,6 +97,15 @@
 			<include>OpenClose_Right</include>
 			<visible>$EXP[ValentineTheme] + !$EXP[infodialog_active]</visible>
 		</control>
+		<control type="image">
+			<top>0</top>
+			<right>20</right>
+			<height>271</height>
+			<width>254</width>
+			<texture>themes/palmweek/corner.png</texture>
+			<include>OpenClose_Right</include>
+			<visible>$EXP[PreEasterTheme] + !$EXP[infodialog_active]</visible>
+		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group" id="2000">
