@@ -190,7 +190,7 @@
 				<control type="button" id="405">
                    <description>Edit submenu</description>
                    <include>DefaultSettingButton</include>
-                   <label>$LOCALIZE[40226]</label>
+                   <label>$LOCALIZE[31426]</label>
                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                    <visible>!String.IsEqual(Container(211).ListItem.Property(defaultID),libreelec) + !String.IsEqual(Container(211).ListItem.Property(widget),PicturesWidget) + !String.IsEqual(Container(211).ListItem.Property(widget),GamesWidget) + !String.IsEqual(Container(211).ListItem.Property(widget),FavoritesWidget) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget)</visible>
                 </control>
@@ -209,7 +209,7 @@
 				</control>
 				<control type="button" id="10005">
 					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[40136]</label>
+					<label>$LOCALIZE[31336]</label>
 					<label2>$VAR[Label_SkinSetting_Widget]</label2>
 					<onclick>Skin.Reset(widgetAnimation1)</onclick>
 					<onclick>Skin.Reset(widgetAnimation2)</onclick>
@@ -226,7 +226,7 @@
 					<visible>!String.IsEqual(Container(211).ListItem.Property(defaultID),libreelec)</visible>
 				</control>
 				<control type="button" id="10006">
-					<label>$LOCALIZE[40098]</label>
+					<label>$LOCALIZE[31298]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1123)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MoviesWidget)</visible>
@@ -239,43 +239,43 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),TVShowsWidget)</visible>
 				</control>
 				<control type="button" id="10007">
-					<label>$LOCALIZE[40099]</label>
+					<label>$LOCALIZE[31299]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1124)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),TVShowsWidget)</visible>
 				</control>
 				<control type="button" id="10008">
-					<label>$LOCALIZE[40100]</label>
+					<label>$LOCALIZE[31300]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1125)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MusicWidget)</visible>
 				</control>
 				<control type="button" id="1009">
-					<label>$LOCALIZE[40101]</label>
+					<label>$LOCALIZE[31301]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1126)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MusicVideosWidget)</visible>
 				</control>
 				<control type="button" id="10010">
-					<label>$LOCALIZE[40102]</label>
+					<label>$LOCALIZE[31302]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1127)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),LiveTVWidget)</visible>
 				</control>
 				<control type="button" id="10011">
-					<label>$LOCALIZE[40103]</label>
+					<label>$LOCALIZE[31303]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1128)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),RadioWidget)</visible>
 				</control>
 				<control type="button" id="10012">
-					<label>$LOCALIZE[40104]</label>
+					<label>$LOCALIZE[31304]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1129)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),AddonsWidget)</visible>
 				</control>
 				<control type="button" id="10013">
-					<label>$LOCALIZE[40105]</label>
+					<label>$LOCALIZE[31305]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1130)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),VideoWidget)</visible>
@@ -291,20 +291,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14751">
-					<label>  ∟$LOCALIZE[40137] 1</label>
+					<label>  ∟$LOCALIZE[31337] 1</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence1Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation1)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.1))]</visible>
 				</control>
 				<control type="button" id="14752">
-					<label>  ∟$LOCALIZE[40167] 1</label>
+					<label>  ∟$LOCALIZE[31367] 1</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy1Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.1))]</visible>
 				</control>
 				<control type="button" id="14753">
-					<label>  ∟$LOCALIZE[40168] 1</label>
+					<label>  ∟$LOCALIZE[31368] 1</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection1Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.1))]</visible>
@@ -320,20 +320,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14761">
-					<label>  ∟$LOCALIZE[40137] 2</label>
+					<label>  ∟$LOCALIZE[31337] 2</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence2Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation2)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))]</visible>
 				</control>
 				<control type="button" id="14762">
-					<label>  ∟$LOCALIZE[40167] 2</label>
+					<label>  ∟$LOCALIZE[31367] 2</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy2Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))]</visible>
 				</control>
 				<control type="button" id="14763">
-					<label>  ∟$LOCALIZE[40168] 2</label>
+					<label>  ∟$LOCALIZE[31368] 2</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection2Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))]</visible>
@@ -349,20 +349,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14771">
-					<label>  ∟$LOCALIZE[40137] 3</label>
+					<label>  ∟$LOCALIZE[31337] 3</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence3Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation3)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))]</visible>
 				</control>
 				<control type="button" id="14772">
-					<label>  ∟$LOCALIZE[40167] 3</label>
+					<label>  ∟$LOCALIZE[31367] 3</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy3Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))]</visible>
 				</control>
 				<control type="button" id="14773">
-					<label>  ∟$LOCALIZE[40168] 3</label>
+					<label>  ∟$LOCALIZE[31368] 3</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection3Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))]</visible>
@@ -378,20 +378,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14781">
-					<label>  ∟$LOCALIZE[40137] 4</label>
+					<label>  ∟$LOCALIZE[31337] 4</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence4Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation4)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))]</visible>
 				</control>
 				<control type="button" id="14782">
-					<label>  ∟$LOCALIZE[40167] 4</label>
+					<label>  ∟$LOCALIZE[31367] 4</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy4Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))]</visible>
 				</control>
 				<control type="button" id="14783">
-					<label>  ∟$LOCALIZE[40168] 4</label>
+					<label>  ∟$LOCALIZE[31368] 4</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection4Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))]</visible>
@@ -407,20 +407,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14791">
-					<label>  ∟$LOCALIZE[40137] 5</label>
+					<label>  ∟$LOCALIZE[31337] 5</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence5Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation5)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))]</visible>
 				</control>
 				<control type="button" id="14792">
-					<label>  ∟$LOCALIZE[40167] 5</label>
+					<label>  ∟$LOCALIZE[31367] 5</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy5Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))]</visible>
 				</control>
 				<control type="button" id="14793">
-					<label>  ∟$LOCALIZE[40168] 5</label>
+					<label>  ∟$LOCALIZE[31368] 5</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection5Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))]</visible>
@@ -436,20 +436,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14801">
-					<label>  ∟$LOCALIZE[40137] 6</label>
+					<label>  ∟$LOCALIZE[31337] 6</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence6Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation6)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))]</visible>
 				</control>
 				<control type="button" id="14802">
-					<label>  ∟$LOCALIZE[40167] 6</label>
+					<label>  ∟$LOCALIZE[31367] 6</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy6Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))]</visible>
 				</control>
 				<control type="button" id="14803">
-					<label>  ∟$LOCALIZE[40168] 6</label>
+					<label>  ∟$LOCALIZE[31368] 6</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection6Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))]</visible>
@@ -465,20 +465,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14811">
-					<label>  ∟$LOCALIZE[40137] 7</label>
+					<label>  ∟$LOCALIZE[31337] 7</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence7Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation7)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.7))]</visible>
 				</control>
 				<control type="button" id="14812">
-					<label>  ∟$LOCALIZE[40167] 7</label>
+					<label>  ∟$LOCALIZE[31367] 7</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy7Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.7))]</visible>
 				</control>
 				<control type="button" id="14813">
-					<label>  ∟$LOCALIZE[40168] 7</label>
+					<label>  ∟$LOCALIZE[31368] 7</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection7Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.7))]</visible>
@@ -494,20 +494,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14821">
-					<label>  ∟$LOCALIZE[40137] 8</label>
+					<label>  ∟$LOCALIZE[31337] 8</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence8Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation8)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.8))]</visible>
 				</control>
 				<control type="button" id="14822">
-					<label>  ∟$LOCALIZE[40167] 8</label>
+					<label>  ∟$LOCALIZE[31367] 8</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy8Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.8))]</visible>
 				</control>
 				<control type="button" id="14823">
-					<label>  ∟$LOCALIZE[40168] 8</label>
+					<label>  ∟$LOCALIZE[31368] 8</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection8Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.8))]</visible>
@@ -523,20 +523,20 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel)</visible>
 				</control>
 				<control type="button" id="14831">
-					<label>  ∟$LOCALIZE[40137]</label>
+					<label>  ∟$LOCALIZE[31337]</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetsAppearence9Label2Var]</label2>
 					<onclick>Skin.ToggleSetting(widgetAnimation9)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.9))]</visible>
 				</control>
 				<control type="button" id="14832">
-					<label>  ∟$LOCALIZE[40167]</label>
+					<label>  ∟$LOCALIZE[31367]</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortBy9Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.9))]</visible>
 				</control>
 				<control type="button" id="14833">
-					<label>  ∟$LOCALIZE[40168]</label>
+					<label>  ∟$LOCALIZE[31368]</label>
 					<include>DefaultSettingButton</include>
 					<label2>$VAR[WidgetSortDirection9Label2Var]</label2>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.9))]</visible>
@@ -560,7 +560,7 @@
 			</control>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[40106]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[31306]" />
 			<param name="visible" value="true" />
 		</include>
 		<include>BottomBar</include>

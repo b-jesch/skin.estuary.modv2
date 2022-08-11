@@ -152,28 +152,28 @@
 				</control>
 				<control type="radiobutton" id="6060">
 					<include>MediaMenuItemsCommonRadio</include>
-					<label>$LOCALIZE[40273]</label>
+					<label>$LOCALIZE[31473]</label>
 					<selected>!Skin.HasSetting(ShowPVRGroups)</selected>
 					<onclick>Skin.ToggleSetting(ShowPVRGroups)</onclick>
 					<visible>Window.IsActive(MyPVRGuide.xml)</visible>
 				</control>
 				<control type="radiobutton" id="6057">
 					<include>MediaMenuItemsCommonRadio</include>
-					<label>$LOCALIZE[40385]</label>
+					<label>$LOCALIZE[31585]</label>
 					<selected>!Skin.HasSetting(ShowPVRChannelNumbers)</selected>
 					<onclick>Skin.ToggleSetting(ShowPVRChannelNumbers)</onclick>
 					<visible>Window.IsActive(MyPVRGuide.xml) | [Window.IsActive(MyPVRChannels.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31099]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31108])]]</visible>
 				</control>
 				<control type="radiobutton" id="6058">
 					<include>MediaMenuItemsCommonRadio</include>
-					<label>$LOCALIZE[40409]</label>
+					<label>$LOCALIZE[31609]</label>
 					<selected>!Skin.HasSetting(ShowPVRStatus)</selected>
 					<onclick>Skin.ToggleSetting(ShowPVRStatus)</onclick>
 					<visible>Window.IsActive(MyPVRGuide.xml) | [Window.IsActive(MyPVRChannels.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[535]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31107]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31108])]]</visible>
 				</control>
 				<control type="radiobutton" id="6061">
 					<include>MediaMenuItemsCommonRadio</include>
-					<label>$LOCALIZE[40240]</label>
+					<label>$LOCALIZE[31440]</label>
 					<selected>Skin.HasSetting(standard_PVRGenres)</selected>
 					<onclick>Skin.ToggleSetting(standard_PVRGenres)</onclick>
 					<visible>Window.IsActive(MyPVRGuide.xml)</visible>
@@ -408,7 +408,7 @@
 			</control>
 			<control type="button" id="6051">
 				<include>MediaMenuItemsCommon</include>
-				<label>$LOCALIZE[40147]</label>
+				<label>$LOCALIZE[31347]</label>
 				<label2>$INFO[Container.Viewmode,[B],[/B]]</label2>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 				<onclick>Container.NextViewMode</onclick>
@@ -416,7 +416,7 @@
 			</control>
 			<control type="button" id="60511">
 				<include>MediaMenuItemsCommon</include>
-				<label>$LOCALIZE[40147]</label>
+				<label>$LOCALIZE[31347]</label>
 				<label2>$INFO[Container.Viewmode,[B],[/B]]</label2>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 				<onclick>SetFocus(50)</onclick>

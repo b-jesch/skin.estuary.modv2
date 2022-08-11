@@ -31,7 +31,7 @@
 				<onright condition="Container.Content(tvshows) + Control.IsVisible(5093)">5093</onright>
 				<onup>509</onup>
 				<ondown>509</ondown>
-				<viewtype label="$LOCALIZE[40214]">list</viewtype>
+				<viewtype label="$LOCALIZE[31414]">list</viewtype>
 				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(tvshows)</visible>
 				<focusedlayout height="160" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(tvshows)">
 					<control type="group">
@@ -313,7 +313,7 @@
 				<onright>5092</onright>
 				<onup>5091</onup>
 				<ondown>5091</ondown>
-				<viewtype label="$LOCALIZE[40214]">list</viewtype>
+				<viewtype label="$LOCALIZE[31414]">list</viewtype>
 				<visible>Container.Content(artists)</visible>
 				<onclick>RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 				<focusedlayout height="160" condition="Container.Content(artists)">
@@ -445,7 +445,7 @@
 				<onright>5094</onright>
 				<onup>5093</onup>
 				<ondown>5093</ondown>
-				<viewtype label="$LOCALIZE[40214]">list</viewtype>
+				<viewtype label="$LOCALIZE[31414]">list</viewtype>
 				<visible>Container.Content(tvshows)</visible>
 				<focusedlayout height="160" condition="Container.Content(tvshows)">
 					<control type="group">
@@ -634,7 +634,7 @@
 				<orientation>vertical</orientation>
 				<movement>5</movement>
 				<focusposition>6</focusposition>
-				<viewtype label="$LOCALIZE[40214]">list</viewtype>
+				<viewtype label="$LOCALIZE[31414]">list</viewtype>
 				<visible>Container.Content(artists) | Container.Content(albums)</visible>
 				<focusedlayout height="80" condition="Container.Content(artists) | Container.Content(albums)">
 					<control type="group">
@@ -733,7 +733,7 @@
 				<onright>531</onright>
 				<onup>5094</onup>
 				<ondown>5094</ondown>
-				<viewtype label="$LOCALIZE[40214]">list</viewtype>
+				<viewtype label="$LOCALIZE[31414]">list</viewtype>
 				<visible>Container.Content(tvshows)</visible>
 				<focusedlayout height="160" condition="Container.Content(tvshows)">
 					<control type="group">

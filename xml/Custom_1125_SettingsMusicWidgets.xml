@@ -11,7 +11,7 @@
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1000" />
 				<param name="height" value="570" />
-				<param name="header_label" value="$LOCALIZE[40100]" />
+				<param name="header_label" value="$LOCALIZE[31300]" />
 				<param name="header_id" value="1" />
 			</include>
 			<control type="group" id="11000">
@@ -28,43 +28,43 @@
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<control type="radiobutton" id="11111">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31148]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31148]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_musiccategory)</selected>
 						<onclick>Skin.ToggleSetting(hide_musiccategory)</onclick>
 					</control>
 					<control type="radiobutton" id="11113">
-						<label>$LOCALIZE[40097] : $LOCALIZE[517]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[517]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_recentlyplayedalbums)</selected>
 						<onclick>Skin.ToggleSetting(hide_recentlyplayedalbums)</onclick>
 					</control>
 					<control type="radiobutton" id="11114">
-						<label>$LOCALIZE[40097] : $LOCALIZE[359]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[359]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_recentlyaddedalbums)</selected>
 						<onclick>Skin.ToggleSetting(hide_recentlyaddedalbums)</onclick>
 					</control>
 					<control type="radiobutton" id="11115">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31012]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31012]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_randomalbums)</selected>
 						<onclick>Skin.ToggleSetting(hide_randomalbums)</onclick>
 					</control>
 					<control type="radiobutton" id="11116">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31013]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31013]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_randomartists)</selected>
 						<onclick>Skin.ToggleSetting(hide_randomartists)</onclick>
 					</control>
 					<control type="radiobutton" id="1111">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31014]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31014]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_unplayedalbums)</selected>
 						<onclick>Skin.ToggleSetting(hide_unplayedalbums)</onclick>
 					</control>
 					<control type="radiobutton" id="11118">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31011]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31011]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_mostplayedalbums)</selected>
 						<onclick>Skin.ToggleSetting(hide_mostplayedalbums)</onclick>

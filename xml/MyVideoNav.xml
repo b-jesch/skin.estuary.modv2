@@ -598,7 +598,7 @@
 					</control>
 					<control type="radiobutton" id="627">
 						<include>MediaMenuItemsCommonRadio</include>
-						<label>$LOCALIZE[40164]</label>
+						<label>$LOCALIZE[31364]</label>
 						<onclick>Skin.ToggleSetting(greyedout_watched)</onclick>
 						<selected>Skin.HasSetting(greyedout_watched)</selected>
 					</control>

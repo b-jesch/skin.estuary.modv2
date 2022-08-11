@@ -369,14 +369,14 @@
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="154" />
-					<param name="label" value="$INFO[SkinHelper.Player.Rating.IMDB,$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[SkinHelper.ListItem.Votes.IMDB,[COLOR white] (,$LOCALIZE[40027])[/COLOR]]$INFO[Window(Home).Property(SkinHelper.Player.IMDB.Top250), [COLOR white]-[/COLOR] Top 250 : [COLOR white]#,[/COLOR]]" />
+					<param name="label" value="$INFO[SkinHelper.Player.Rating.IMDB,$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[SkinHelper.ListItem.Votes.IMDB,[COLOR white] (,$LOCALIZE[31227])[/COLOR]]$INFO[Window(Home).Property(SkinHelper.Player.IMDB.Top250), [COLOR white]-[/COLOR] Top 250 : [COLOR white]#,[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250)) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="155" />
-					<param name="label" value="$INFO[SkinHelper.Player.Rating.IMDB,$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[SkinHelper.ListItem.Votes.IMDB,[COLOR white] (,$LOCALIZE[40027])[/COLOR]]" />
+					<param name="label" value="$INFO[SkinHelper.Player.Rating.IMDB,$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[SkinHelper.ListItem.Votes.IMDB,[COLOR white] (,$LOCALIZE[31227])[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
@@ -411,7 +411,7 @@
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="160" />
-					<param name="label" value="$LOCALIZE[40236] : [COLOR white]$INFO[Window(Home).Property(SkinHelper.Player.Awards)][/COLOR]" />
+					<param name="label" value="$LOCALIZE[31436] : [COLOR white]$INFO[Window(Home).Property(SkinHelper.Player.Awards)][/COLOR]" />
 					<param name="visible" value="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),Oscar)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />

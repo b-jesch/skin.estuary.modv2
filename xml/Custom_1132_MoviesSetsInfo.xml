@@ -136,7 +136,7 @@
 				<textcolor>FFFFFFFF</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<haspath>true</haspath>
-				<label>$LOCALIZE[40291]</label>
+				<label>$LOCALIZE[31491]</label>
 				<visible>Control.HasFocus(60)</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -486,7 +486,7 @@
   					</include>
   					<include content="InfoDialogMetadata">
 					<param name="control_id" value="168" />
-					<param name="label" value="$LOCALIZE[40287] : [COLOR white]$INFO[Container(60).ListItem.DateAdded][/COLOR]" />
+					<param name="label" value="$LOCALIZE[31487] : [COLOR white]$INFO[Container(60).ListItem.DateAdded][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Container(60).ListItem.DateAdded)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />

@@ -239,28 +239,28 @@
 						</include>
 						<include content="WidgetNextWatchEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
-							<param name="widget_header" value="$LOCALIZE[40012]"/>
+							<param name="widget_header" value="$LOCALIZE[31212]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6700).ListItem.TVShowTitle, | , - ]$INFO[Container(6700).ListItem.Season,,x]$INFO[Container(6700).ListItem.Episode,,. ]$INFO[Container(6700).ListItem.Title]$INFO[Container(6700).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6700"/>
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + !Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
-							<param name="widget_header" value="$LOCALIZE[40012]"/>
+							<param name="widget_header" value="$LOCALIZE[31212]"/>
 							<param name="widget_header_focus" value="$INFO[Container(67001).ListItem.TVShowTitle, | , - ]$INFO[Container(67001).ListItem.Season,,x]$INFO[Container(67001).ListItem.Episode,,. ]$INFO[Container(67001).ListItem.Title]$INFO[Container(67001).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="67001"/>
 						</include>
 						<include content="WidgetNextWatchEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="plugin://script.embuary.info/nextaired/week"/>
-							<param name="widget_header" value="$LOCALIZE[40372]"/>
+							<param name="widget_header" value="$LOCALIZE[31572]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6500"/>
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + !Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="plugin://script.embuary.info/nextaired/week"/>
-							<param name="widget_header" value="$LOCALIZE[40372]"/>
+							<param name="widget_header" value="$LOCALIZE[31572]"/>
 							<param name="widget_header_focus" value="$INFO[Container(65001).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="65001"/>
@@ -621,7 +621,7 @@
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_allchannels)">
 							<param name="content_path" value="pvr://channels/tv/*"/>
-							<param name="widget_header" value="$LOCALIZE[40161]"/>
+							<param name="widget_header" value="$LOCALIZE[31361]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12400).ListItem.Label, | ]$INFO[Container(12400).ListItem.Label2, - ,]"/>
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12400"/>
@@ -631,7 +631,7 @@
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_channelgroups)">
 							<param name="content_path" value="pvr://channels/tv"/>
-							<param name="widget_header" value="$LOCALIZE[40350]"/>
+							<param name="widget_header" value="$LOCALIZE[31550]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12600).ListItem.Label, | ]$INFO[Container(12600).ListItem.Label2, - ,]"/>
 							<param name="widget_target" value="tvguide"/>
 							<param name="list_id" value="12600"/>
@@ -720,7 +720,7 @@
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_allradios)">
 							<param name="content_path" value="pvr://channels/radio/*"/>
-							<param name="widget_header" value="$LOCALIZE[40162]"/>
+							<param name="widget_header" value="$LOCALIZE[31362]"/>
 							<param name="widget_header_focus" value="$INFO[Container(13400).ListItem.Label, | ]"/>
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="13400"/>
@@ -986,7 +986,7 @@
 						</include>
 						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_mostplayemusicvideos) + !Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="special://skin/playlists/mostplayed_musicvideos.xsp"/>
-							<param name="widget_header" value="$LOCALIZE[40267]"/>
+							<param name="widget_header" value="$LOCALIZE[31467]"/>
 							<param name="widget_header_focus" value="$INFO[Container(16900).ListItem.Title, | ,]$INFO[Container(16900).ListItem.Year, (,)]$INFO[Container(16900).ListItem.PlayCount, | $LOCALIZE[576] : ]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="16900"/>
@@ -1038,7 +1038,7 @@
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_mostplayemusicvideos) + Skin.HasSetting(use_posterview)">
 							<param name="content_path" value="special://skin/playlists/mostplayed_musicvideos.xsp"/>
-							<param name="widget_header" value="$LOCALIZE[40267]"/>
+							<param name="widget_header" value="$LOCALIZE[31467]"/>
 							<param name="widget_header_focus" value="$INFO[Container(16900).ListItem.Title, | ,]$INFO[Container(16900).ListItem.Year, (,)]$INFO[Container(16900).ListItem.PlayCount, | $LOCALIZE[576] : ]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="16900"/>
@@ -1077,7 +1077,7 @@
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
-						<param name="text_label" value="$LOCALIZE[40260]" />
+						<param name="text_label" value="$LOCALIZE[31460]" />
 						<param name="button_label" value="$LOCALIZE[10048]" />
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 						<param name="button_id" value="16800"/>
@@ -1098,14 +1098,14 @@
 						<include>WidgetGroupListCommon</include>
 						<include content="WidgetListCategories">
 							<param name="content_path" value="sources://pictures/"/>
-							<param name="widget_header" value="$LOCALIZE[40175]"/>
+							<param name="widget_header" value="$LOCALIZE[31375]"/>
 							<param name="widget_header_focus" value="$INFO[Container(4100).ListItem.Label, | ]"/>
 							<param name="widget_target" value="pictures"/>
 							<param name="list_id" value="4100"/>
 						</include>
 					</control>
 					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40174]" />
+						<param name="text_label" value="$LOCALIZE[31374]" />
 						<param name="button_label" value="$LOCALIZE[10050]" />
 						<param name="button_onclick" value="ActivateWindow(pictures,root)"/>
 						<param name="button_id" value="4200"/>
@@ -1127,7 +1127,7 @@
 						<include>WidgetGroupListCommon</include>
 						<include content="WidgetListCategories">
 							<param name="content_path" value="sources://games/"/>
-							<param name="widget_header" value="$LOCALIZE[40172]"/>
+							<param name="widget_header" value="$LOCALIZE[31372]"/>
 							<param name="widget_header_focus" value="$INFO[Container(17100).ListItem.Label, | ]"/>
 							<param name="widget_target" value="games"/>
 							<param name="list_id" value="17100"/>
@@ -1144,7 +1144,7 @@
  						</include>
 					</control>
 					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[40173]" />
+						<param name="text_label" value="$LOCALIZE[31373]" />
 						<param name="button_label" value="$LOCALIZE[31116]" />
 						<param name="button2_label" value="$LOCALIZE[31118]" />
 						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/category.gameaddons,return)"/>
@@ -1327,7 +1327,7 @@
 								<right>20</right>
 								<shadowcolor>text_shadow</shadowcolor>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
-								<label>[UPPERCASE]• $LOCALIZE[40122] •[/UPPERCASE]</label>
+								<label>[UPPERCASE]• $LOCALIZE[31322] •[/UPPERCASE]</label>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
@@ -1410,7 +1410,7 @@
 								<left>20</left>
 								<right>20</right>
 								<shadowcolor>text_shadow</shadowcolor>
-								<label>$LOCALIZE[40260]</label>
+								<label>$LOCALIZE[31460]</label>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 								<visible>[!Library.HasContent(movies) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos)]</visible>

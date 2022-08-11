@@ -122,14 +122,14 @@
 						<visible>System.CanReboot</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40357]</label>
+						<label>$LOCALIZE[31557]</label>
 						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
 						<onclick>RestartApp</onclick>
 						<visible>System.Platform.Linux | System.Platform.Windows</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40356]</label>
+						<label>$LOCALIZE[31556]</label>
 						<icon>special://skin/extras/icons/Power menu/reboot_emmc.png</icon>
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
@@ -203,28 +203,28 @@
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					 <item>
-						<label>$LOCALIZE[40009]</label>
+						<label>$LOCALIZE[31209]</label>
 						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
 						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40013]</label>
+						<label>$LOCALIZE[31213]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40010]</label>
+						<label>$LOCALIZE[31210]</label>
 						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40014]</label>
+						<label>$LOCALIZE[31214]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
@@ -354,14 +354,14 @@
 						<visible>System.CanReboot</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40357]</label>
+						<label>$LOCALIZE[31557]</label>
 						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
 						<onclick>RestartApp</onclick>
 						<visible>System.Platform.Linux | System.Platform.Windows</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40356]</label>
+						<label>$LOCALIZE[31556]</label>
 						<icon>special://skin/extras/icons/Power menu/reboot_emmc.png</icon>
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
@@ -435,28 +435,28 @@
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					 <item>
-						<label>$LOCALIZE[40009]</label>
+						<label>$LOCALIZE[31209]</label>
 						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
 						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40013]</label>
+						<label>$LOCALIZE[31213]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40010]</label>
+						<label>$LOCALIZE[31210]</label>
 						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40014]</label>
+						<label>$LOCALIZE[31214]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
@@ -505,14 +505,14 @@
 						<visible>System.CanReboot</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40357]</label>
+						<label>$LOCALIZE[31557]</label>
 						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
 						<onclick>RestartApp</onclick>
 						<visible>System.Platform.Linux | System.Platform.Windows</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40356]</label>
+						<label>$LOCALIZE[31556]</label>
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
 						<visible>System.CanReboot</visible>
@@ -585,28 +585,28 @@
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					 <item>
-						<label>$LOCALIZE[40009]</label>
+						<label>$LOCALIZE[31209]</label>
 						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
 						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40013]</label>
+						<label>$LOCALIZE[31213]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(video)</onclick>
 						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40010]</label>
+						<label>$LOCALIZE[31210]</label>
 						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[40014]</label>
+						<label>$LOCALIZE[31214]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
 						<onclick>UpdateLibrary(music)</onclick>
 						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>

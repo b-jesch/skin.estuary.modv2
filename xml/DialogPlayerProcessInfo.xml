@@ -7,10 +7,10 @@
 		<control type="group">
 			<bottom>0</bottom>
 			<height>400</height>
-			<animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
-			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
-			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
-			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+			<animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
 			<control type="grouplist">
 				<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
 					<param name="left" value="460"/>
@@ -247,7 +247,7 @@
 					<width>700</width>
 					<height>35</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(amlogic.displaymode),$LOCALIZE[40410] : [COLOR white],[/COLOR]]</label>
+					<label>$INFO[Player.Process(amlogic.displaymode),$LOCALIZE[31610] : [COLOR white],[/COLOR]]</label>
 					<font>font12</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -257,7 +257,7 @@
 					<width>700</width>
 					<height>35</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(amlogic.pixformat),$LOCALIZE[40412] : [COLOR white],[/COLOR]]</label>
+					<label>$INFO[Player.Process(amlogic.pixformat),$LOCALIZE[31612] : [COLOR white],[/COLOR]]</label>
 					<font>font12</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -267,7 +267,7 @@
 					<width>700</width>
 					<height>35</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(amlogic.eoft_gamut),$LOCALIZE[40411] : [COLOR white],[/COLOR]]</label>
+					<label>$INFO[Player.Process(amlogic.eoft_gamut),$LOCALIZE[31611] : [COLOR white],[/COLOR]]</label>
 					<font>font12</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>

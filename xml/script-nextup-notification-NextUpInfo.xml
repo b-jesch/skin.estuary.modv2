@@ -13,19 +13,19 @@
             <animation effect="fade" end="100" time="200">WindowOpen</animation>
             <animation effect="fade" time="200">VisibleChange</animation>
             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-            <animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
-			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
-			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
-			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+            <animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
         </control>
         <control type="group">
             <animation effect="fade" end="100" time="200">WindowOpen</animation>
             <animation effect="fade" time="200">VisibleChange</animation>
             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-            <animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
-			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
-			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
-			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+            <animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
             <right>64</right>
             <bottom>64</bottom>
             <width>480</width>
@@ -44,7 +44,7 @@
                     <height>64</height>
                     <aligny>center</aligny>
                     <font>font12</font>
-                    <label>[UPPERCASE]$LOCALIZE[40075][/UPPERCASE]</label>
+                    <label>[UPPERCASE]$LOCALIZE[31275][/UPPERCASE]</label>
                     <shadowcolor>black</shadowcolor>
                 </control>
                 <control type="image" id="3005" description="fanart">

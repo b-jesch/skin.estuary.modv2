@@ -442,7 +442,7 @@
 							<height>332</height>
 							<font>font12</font>
 							<align>justify</align>
-							<label>$LOCALIZE[40030]</label>
+							<label>$LOCALIZE[31230]</label>
 							<visible>String.IsEmpty(Window.Property(showplot))</visible>
 							<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
@@ -546,7 +546,7 @@
 							<height>332</height>
 							<font>font12</font>
 							<align>justify</align>
-							<label>$LOCALIZE[40030]</label>
+							<label>$LOCALIZE[31230]</label>
 							<visible>String.IsEmpty(Window.Property(showplot))</visible>
 							<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
@@ -638,7 +638,7 @@
 						<textureradiooffnofocus colordiffuse="D0FFFFFF">dialogs/nextup/check.png</textureradiooffnofocus>
 						<textureradiooffdisabled colordiffuse="disabled">dialogs/nextup/check.png</textureradiooffdisabled>
 						<textureradioondisabled colordiffuse="disabled">dialogs/nextup/uncheck.png</textureradioondisabled>
-						<label>$LOCALIZE[40074]</label>
+						<label>$LOCALIZE[31274]</label>
 					</control>
 					<control type="radiobutton" id="201">
 						<width>262</width>
