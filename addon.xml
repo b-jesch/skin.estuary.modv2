@@ -21,11 +21,11 @@
 	<extension point="kodi.context.item">
       	<menu id="kodi.core.main">
       		<item library="scripts/context_menu_jumptoletter.py">
- 				<label>$LOCALIZE[40165]</label>
+ 				<label>$LOCALIZE[31365]</label>
  				<visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)] + !Window.IsVisible(Home)</visible>
  			</item>
       		<item library="scripts/context_menu_moviessets.py">
- 				<label>$LOCALIZE[40181]</label>
+ 				<label>$LOCALIZE[31381]</label>
  				<visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + String.IsEqual(ListItem.DBType,set) + !Window.IsVisible(Home)</visible>
  			</item>
     	</menu>
