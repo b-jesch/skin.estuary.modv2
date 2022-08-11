@@ -11,7 +11,7 @@
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1000" />
 				<param name="height" value="440" />
-				<param name="header_label" value="$LOCALIZE[40199]" />
+				<param name="header_label" value="$LOCALIZE[31399]" />
 				<param name="header_id" value="1" />
 			</include>
 			<control type="textbox">
@@ -22,7 +22,7 @@
 				<shadowcolor>black</shadowcolor>
 				<pagecontrol>3000</pagecontrol>
 				<font>font13</font>
-				<label>$LOCALIZE[40198]</label>
+				<label>$LOCALIZE[31398]</label>
 			</control>
 			<control type="grouplist" id="9000">
 				<orientation>horizontal</orientation>
@@ -33,7 +33,7 @@
 				<control type="radiobutton" id="2">
 					<width>430</width>
 					<height>100</height>
-					<label>$LOCALIZE[40200]</label>
+					<label>$LOCALIZE[31400]</label>
 					<font>font25_title</font>
 					<textoffsetx>38</textoffsetx>
 					<textwidth>280</textwidth>

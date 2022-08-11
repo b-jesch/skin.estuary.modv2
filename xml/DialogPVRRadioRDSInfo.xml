@@ -205,7 +205,7 @@
 					<height>170</height>
 					<align>justify</align>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<label>$INFO[RDS.InfoNews,$LOCALIZE[29916] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoNewsLocal,$LOCALIZE[29917] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoStock,$LOCALIZE[29920] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoSport,$LOCALIZE[29918] : [COLOR white],[/COLOR][CR]]$INFO[RDS.Infolottery,$LOCALIZE[29919] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoWeather,$LOCALIZE[400] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoCinema,$LOCALIZE[19602] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoHoroscope,$LOCALIZE[29922] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoOther,$LOCALIZE[29921] : [COLOR white],[/COLOR][CR]]</label>
+					<label>$INFO[RDS.InfoNews,$LOCALIZE[29916] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoNewsLocal,$LOCALIZE[29917] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoStock,$LOCALIZE[29920] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoSport,$LOCALIZE[29918] : [COLOR white],[/COLOR][CR]]$INFO[RDS.Infolottery,$LOCALIZE[29919] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoWeather,$LOCALIZE[312] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoCinema,$LOCALIZE[19602] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoHoroscope,$LOCALIZE[29922] : [COLOR white],[/COLOR][CR]]$INFO[RDS.InfoOther,$LOCALIZE[29921] : [COLOR white],[/COLOR][CR]]</label>
 					<autoscroll delay="5000" time="3000" repeat="10000">true</autoscroll>
 				</control>
 			</control>

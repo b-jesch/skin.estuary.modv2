@@ -39,6 +39,7 @@ supports animated poster only.
   * semitransparent Background for plot in video info added
   * Overlay texture in Flix view changed 
   * fix wrong behaviour on info button if a movie is paused
+  * reorder language ids above 40xxx to 31xxx and usages to fit within the recommended range for skins
 
 
 - .0 

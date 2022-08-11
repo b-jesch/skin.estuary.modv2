@@ -11,7 +11,7 @@
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1000" />
 				<param name="height" value="570" />
-				<param name="header_label" value="$LOCALIZE[40105]" />
+				<param name="header_label" value="$LOCALIZE[31305]" />
 				<param name="header_id" value="1" />
 			</include>
 			<control type="group" id="11000">
@@ -28,19 +28,19 @@
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<control type="radiobutton" id="11111">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31148]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31148]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_videocategories)</selected>
 						<onclick>Skin.ToggleSetting(hide_videocategories)</onclick>
 					</control>
 					<control type="radiobutton" id="11112">
-						<label>$LOCALIZE[40097] : $LOCALIZE[20094]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[20094]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_videosources)</selected>
 						<onclick>Skin.ToggleSetting(hide_videosources)</onclick>
 					</control>
 					<control type="radiobutton" id="11113">
-						<label>$LOCALIZE[40097] : $LOCALIZE[136]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[136]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_videoplaylists)</selected>
 						<onclick>Skin.ToggleSetting(hide_videoplaylists)</onclick>

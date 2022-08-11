@@ -11,7 +11,7 @@
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1000" />
 				<param name="height" value="570" />
-				<param name="header_label" value="$LOCALIZE[40103]" />
+				<param name="header_label" value="$LOCALIZE[31303]" />
 				<param name="header_id" value="1" />
 			</include>
 			<control type="group" id="11000">
@@ -28,44 +28,44 @@
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<control type="radiobutton" id="11111">
-						<label>$LOCALIZE[40097] : $LOCALIZE[19158]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[19158]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_nowrecordingradio)</selected>
 						<onclick>Skin.ToggleSetting(hide_nowrecordingradio)</onclick>
 					</control>
 					<control type="radiobutton" id="11112">
-						<label>$LOCALIZE[40097] : $LOCALIZE[19157]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[19157]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_nextrecordingradio)</selected>
 						<onclick>Skin.ToggleSetting(hide_nextrecordingradio)</onclick>
 					</control>
 					<control type="radiobutton" id="11113">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31148]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31148]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_radiocategories)</selected>
 						<onclick>Skin.ToggleSetting(hide_radiocategories)</onclick>
 					</control>
 					<control type="radiobutton" id="11114">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31018]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31018]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_lastplayedradio)</selected>
 						<onclick>Skin.ToggleSetting(hide_lastplayedradio)</onclick>
 					</control>
 					<control type="radiobutton" id="11115">
-						<label>$LOCALIZE[40097] : $LOCALIZE[31015]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31015]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_recordingradio)</selected>
 						<onclick>Skin.ToggleSetting(hide_recordingradio)</onclick>
 					</control>
 					<control type="radiobutton" id="11116">
-						<label>$LOCALIZE[40097] : $LOCALIZE[40162]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31362]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_allradios)</selected>
 						<onclick>Skin.ToggleSetting(hide_allradios)</onclick>
 					</control>			
 					</control>
 					<control type="radiobutton" id="11117">
-						<label>$LOCALIZE[40097] : $LOCALIZE[19174]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[19174]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_radiogroups)</selected>
 						<onclick>Skin.ToggleSetting(hide_radiogroups)</onclick>

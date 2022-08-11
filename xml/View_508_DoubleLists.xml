@@ -34,7 +34,7 @@
 				<onup>508</onup>
 				<ondown>508</ondown>
 				<oninfo condition="String.IsEqual(ListItem.DBType,set)">ActivateWindow(1132)</oninfo>
-				<viewtype label="$LOCALIZE[40212]">list</viewtype>
+				<viewtype label="$LOCALIZE[31412]">list</viewtype>
 				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(seasons)</visible>
 				<focusedlayout height="160" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(seasons)">
 					<control type="group">
@@ -371,7 +371,7 @@
 				<onright>531</onright>
 				<onup>5081</onup>
 				<ondown>5081</ondown>
-				<viewtype label="$LOCALIZE[40212]">list</viewtype>
+				<viewtype label="$LOCALIZE[31412]">list</viewtype>
 				<visible>Container.Content(albums)</visible>
 				<focusedlayout height="80" condition="Container.Content(albums)">
 					<control type="group">
@@ -458,7 +458,7 @@
 				<orientation>vertical</orientation>
 				<movement>2</movement>
 				<focusposition>3</focusposition>
-				<viewtype label="$LOCALIZE[40212]">list</viewtype>
+				<viewtype label="$LOCALIZE[31412]">list</viewtype>
 				<visible>Container.Content(artists)</visible>
 				<onclick>RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 				<focusedlayout height="160" condition="Container.Content(artists)">
@@ -589,7 +589,7 @@
 				<onleft>508</onleft>
 				<onup>5083</onup>
 				<ondown>5083</ondown>
-				<viewtype label="$LOCALIZE[40212]">list</viewtype>
+				<viewtype label="$LOCALIZE[31412]">list</viewtype>
 				<visible>Container.Content(sets)</visible>
 				<focusedlayout height="160" condition="Container.Content(sets)">
 					<control type="group">
@@ -763,7 +763,7 @@
 				<onleft>508</onleft>
 				<onup>5084</onup>
 				<ondown>5084</ondown>
-				<viewtype label="$LOCALIZE[40212]">list</viewtype>
+				<viewtype label="$LOCALIZE[31412]">list</viewtype>
 				<visible>Container.Content(seasons)</visible>
 				<focusedlayout height="160" condition="Container.Content(seasons)">
 					<control type="group">

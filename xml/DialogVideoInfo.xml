@@ -492,14 +492,14 @@
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="153" />
-					<param name="label" value="$INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[40026] : [COLOR white], - [/COLOR]][COLOR white]$INFO[Window(Home).Property(NextAired.LatestNumber),, : ]$INFO[Window(Home).Property(NextAired.LatestTitle)][/COLOR]" />
+					<param name="label" value="$INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[31226] : [COLOR white], - [/COLOR]][COLOR white]$INFO[Window(Home).Property(NextAired.LatestNumber),, : ]$INFO[Window(Home).Property(NextAired.LatestTitle)][/COLOR]" />
 					<param name="visible" value="String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !String.IsEmpty(Window(Home).Property(NextAired.LatestDate)) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="154" />
-					<param name="label" value="$INFO[Window(Home).Property(NextAired.NextDate),$LOCALIZE[40025] : [COLOR white], - [/COLOR]][COLOR white]$INFO[Window(Home).Property(NextAired.NextNumber),, : ]$INFO[Window(Home).Property(NextAired.NextTitle)][/COLOR]" />
+					<param name="label" value="$INFO[Window(Home).Property(NextAired.NextDate),$LOCALIZE[31225] : [COLOR white], - [/COLOR]][COLOR white]$INFO[Window(Home).Property(NextAired.NextNumber),, : ]$INFO[Window(Home).Property(NextAired.NextTitle)][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
@@ -688,7 +688,7 @@
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="168" />
-					<param name="label" value="$LOCALIZE[40287] : [COLOR white]$INFO[ListItem.DateAdded][/COLOR]" />
+					<param name="label" value="$LOCALIZE[31487] : [COLOR white]$INFO[ListItem.DateAdded][/COLOR]" />
 					<param name="visible" value="!String.IsEmpty(ListItem.DateAdded)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
@@ -860,7 +860,7 @@
 							<align>center</align>
 							<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
 							<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
-							<label>$LOCALIZE[40288]</label>
+							<label>$LOCALIZE[31488]</label>
 							<onleft>SetFocus(9004)</onleft>
 							<onright>SetFocus(9004)</onright>
 							<onback>9004</onback>

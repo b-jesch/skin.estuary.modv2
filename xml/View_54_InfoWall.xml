@@ -1758,7 +1758,7 @@
 				<visible>!String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
 				<animation effect="slide" start="0,50" end="0,0" time="300" tween="cubic" easing="out" reversible="false">Focus</animation>
 				<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-				<animation effect="slide" end="1,0" time="0" condition="Control.IsVisible(505) | [String.IsEqual(Container.ViewMode,$LOCALIZE[40016]) + [Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogBusy.xml) | Window.IsVisible(DialogKeyboard.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogVideoInfo.xml)]]">Conditional</animation>
+				<animation effect="slide" end="1,0" time="0" condition="Control.IsVisible(505) | [String.IsEqual(Container.ViewMode,$LOCALIZE[31216]) + [Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogBusy.xml) | Window.IsVisible(DialogKeyboard.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogVideoInfo.xml)]]">Conditional</animation>
 				<control type="image">
 					<right>3</right>
 					<top>0</top>
@@ -2002,7 +2002,7 @@
 				<visible>!String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
 				<animation effect="slide" start="0,50" end="0,0" time="300" tween="cubic" easing="out" reversible="false">Focus</animation>
 				<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-				<animation effect="slide" end="1,0" time="0" condition="Control.IsVisible(505) | [String.IsEqual(Container.ViewMode,$LOCALIZE[40016]) + [Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogBusy.xml) | Window.IsVisible(DialogKeyboard.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogVideoInfo.xml)]]">Conditional</animation>
+				<animation effect="slide" end="1,0" time="0" condition="Control.IsVisible(505) | [String.IsEqual(Container.ViewMode,$LOCALIZE[31216]) + [Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogBusy.xml) | Window.IsVisible(DialogKeyboard.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogVideoInfo.xml)]]">Conditional</animation>
 				<control type="image">
 					<right>3</right>
 					<top>0</top>

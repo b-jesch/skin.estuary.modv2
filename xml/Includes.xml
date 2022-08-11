@@ -165,7 +165,7 @@
 				<include content="DialogBackgroundCommons">
 					<param name="width" value="905" />
 					<param name="height" value="480" />
-					<param name="header_label" value="$LOCALIZE[40165]" />
+					<param name="header_label" value="$LOCALIZE[31365]" />
 					<param name="header_id" value="1" />
 				</include>
 				<control type="panel" id="8001">
@@ -2638,7 +2638,7 @@
 		</control>
 	</include>
 	<include name="TopBar">
-		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[40391]: , | ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
+		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31591]: , | ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
 		<param name="visible">true</param>
 		<param name="width">900</param>
 		<definition>
@@ -3135,7 +3135,7 @@
 						<height>36</height>
 						<aligny>center</aligny>
 						<font>font25_title</font>
-						<label>$LOCALIZE[40165]</label>
+						<label>$LOCALIZE[31365]</label>
 						<onclick>SetFocus(8000)</onclick>
 						<texturefocus />
 						<texturenofocus />
@@ -3474,7 +3474,7 @@
 					<control type="textbox">
 						<width>100%</width>
 						<height>300</height>
-						<label>$LOCALIZE[40263]</label>
+						<label>$LOCALIZE[31463]</label>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font36_title</font>
@@ -4037,7 +4037,7 @@
 							<width>526</width>
 							<align>right</align>
 							<height>38</height>
-							<label>[B][UPPERCASE]$LOCALIZE[40090][/UPPERCASE][/B]</label>
+							<label>[B][UPPERCASE]$LOCALIZE[31290][/UPPERCASE][/B]</label>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
 							<font>font12</font>
 							<aligny>center</aligny>
@@ -4941,7 +4941,7 @@
 				<height>80</height>
 				<bottom>60</bottom>
 				<font>font28_title</font>
-				<label>$LOCALIZE[40284]</label>
+				<label>$LOCALIZE[31484]</label>
 			</control>
 		</control>
 	</include>

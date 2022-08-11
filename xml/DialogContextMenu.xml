@@ -35,8 +35,8 @@
 			</include>
 			<animation effect="slide" end="0,-263" time="0" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(Custom_1132_MoviesSetsInfo.xml)">Conditional</animation>
 			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(home)">Conditional</animation>
-			<animation effect="slide" end="-340,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40005]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="-370,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40005]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-340,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31205]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-370,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31205]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="0,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[535])">Conditional</animation>
 			<animation effect="slide" end="0,-60" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31107])">Conditional</animation>
 			<animation effect="slide" end="-96,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20021]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
@@ -44,18 +44,18 @@
 			<animation effect="slide" end="12,-50" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31101])">Conditional</animation>
 			<animation effect="slide" end="44,-110" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31100]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="0,-110" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31100]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="-19,-50" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40016]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="-39,-50" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40016]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-19,-50" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31216]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-39,-50" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31216]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="-6,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="-20,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="-6,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40015]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="-20,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40015]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-6,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31215]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="-20,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31215]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="2.5,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20445]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="0,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20445]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40017]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40017]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40146]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-			<animation effect="slide" end="0,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40146]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31217]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31217]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="10,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31346]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" end="0,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31346]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="-40,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20020]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="-40,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20020]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<control type="group">
@@ -89,7 +89,7 @@
 					<right>80</right>
 					<height>70</height>
 					<font>font32_title</font>
-					<label>$LOCALIZE[40024]</label>
+					<label>$LOCALIZE[31224]</label>
 					<aligny>center</aligny>
 					<shadowcolor>black</shadowcolor>
 					<scroll>true</scroll>

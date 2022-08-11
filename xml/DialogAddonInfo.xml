@@ -21,7 +21,7 @@
 					<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
 					<onup>50</onup>
 					<ondown>9000</ondown>
-					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[40008] $INFO[ListItem.AddonVersion],home)</onclick>
+					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31208] $INFO[ListItem.AddonVersion],home)</onclick>
 					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.AddonNews],home)</onclick>
 					<onclick>ActivateWindow(1102)</onclick>
 					<enable>!String.IsEmpty(ListItem.AddonNews)</enable>
@@ -252,7 +252,7 @@
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
-						<label>$INFO[ListItem.Property(Addon.ID),$LOCALIZE[40358] : [COLOR white],[/COLOR][CR]]</label>
+						<label>$INFO[ListItem.Property(Addon.ID),$LOCALIZE[31558] : [COLOR white],[/COLOR][CR]]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
 					<control type="label">

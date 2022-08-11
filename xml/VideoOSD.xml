@@ -19,10 +19,10 @@
 			<bottom>0</bottom>
 			<height>180</height>
 			<animation effect="fade" time="200">VisibleChange</animation>
-			<animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
-			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
-			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Conditional</animation>
-			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Conditional</animation>
+			<animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
 			<visible>!Window.IsVisible(sliderdialog)</visible>
 			<control type="label">
 				<right>30</right>
@@ -297,12 +297,12 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/scope.png"/>
 					</include>
-					<onclick condition="String.IsEmpty(Skin.String(scope_mode))">Skin.SetString(scope_mode,$LOCALIZE[40277])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Skin.SetString(scope_mode,$LOCALIZE[40277])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Skin.SetString(scope_mode,$LOCALIZE[40276])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40275])">Skin.SetString(scope_mode,$LOCALIZE[40279])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40278])">Skin.SetString(scope_mode,$LOCALIZE[40275])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40277])">Skin.SetString(scope_mode,$LOCALIZE[40278])</onclick>
+					<onclick condition="String.IsEmpty(Skin.String(scope_mode))">Skin.SetString(scope_mode,$LOCALIZE[31477])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Skin.SetString(scope_mode,$LOCALIZE[31477])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Skin.SetString(scope_mode,$LOCALIZE[31476])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Skin.SetString(scope_mode,$LOCALIZE[31479])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Skin.SetString(scope_mode,$LOCALIZE[31475])</onclick>
+					<onclick condition="String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31477])">Skin.SetString(scope_mode,$LOCALIZE[31478])</onclick>
 					<visible>Skin.HasSetting(ScopeMode)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>

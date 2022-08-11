@@ -81,7 +81,7 @@
 						<visible>Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(artists) | Container.Content(albums)</visible>
 					</control>
 					<control type="button" id="11115">
-						<label>$LOCALIZE[40016]</label>
+						<label>$LOCALIZE[31216]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(505)</onclick>
 						<onclick>Action(close)</onclick>
@@ -95,7 +95,7 @@
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | Container.Content(images)</visible>
 					</control>
 					<control type="button" id="11118">
-						<label>$LOCALIZE[40015]</label>
+						<label>$LOCALIZE[31215]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(504)</onclick>
 						<onclick>Action(close)</onclick>
@@ -116,42 +116,42 @@
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 					</control>
 					<control type="button" id="11126">
-						<label>$LOCALIZE[40420]</label>
+						<label>$LOCALIZE[31620]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(510)</onclick>
 						<onclick>Action(close)</onclick>
 						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 					</control>
 					<control type="button" id="11121">
-						<label>$LOCALIZE[40005]</label>
+						<label>$LOCALIZE[31205]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(503)</onclick>
 						<onclick>Action(close)</onclick>
 						<visible>Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)</visible>
 					</control>
 					<control type="button" id="11122">
-						<label>$LOCALIZE[40017]</label>
+						<label>$LOCALIZE[31217]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(506)</onclick>
 						<onclick>Action(close)</onclick>
 						<visible>Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 					</control>
 					<control type="button" id="11123">
-						<label>$LOCALIZE[40146]</label>
+						<label>$LOCALIZE[31346]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(507)</onclick>
 						<onclick>Action(close)</onclick>
 						<visible>Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 					</control>
 					<control type="button" id="11124">
-						<label>$LOCALIZE[40212]</label>
+						<label>$LOCALIZE[31412]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(508)</onclick>
 						<onclick>Action(close)</onclick>
 						<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(seasons)</visible>
 					</control>
 					<control type="button" id="11125">
-						<label>$LOCALIZE[40214]</label>
+						<label>$LOCALIZE[31414]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(509)</onclick>
 						<onclick>Action(close)</onclick>
