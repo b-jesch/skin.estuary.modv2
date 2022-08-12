@@ -613,7 +613,7 @@
 				<control type="button" id="506">
 					<label>$LOCALIZE[31325]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(40125, 31099|powermenu_panel, 40228|powermenu_iconlist, 40227|powermenu_list)</onclick>
+					<onclick>Skin.SelectBool(31325, 31099|powermenu_panel, 31428|powermenu_iconlist, 31427|powermenu_list)</onclick>
 					<label2>$VAR[PowerMenuAspectLabel2Var]</label2>
 				</control>
 				<control type="radiobutton" id="507">
@@ -733,13 +733,13 @@
 				<control type="button" id="807">
 					<label>$LOCALIZE[31237]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(40037, 15109|, 40038|opacity_0, 40039|opacity_5, 40040|opacity_10, 40041|opacity_15, 40042|opacity_20, 40043|opacity_25, 40044|opacity_30, 40045|opacity_35, 40046|opacity_40, 40047|opacity_45, 40048|opacity_50, 40049|opacity_55, 40050|opacity_60, 40051|opacity_65, 40052|opacity_70, 40053|opacity_75, 40054|opacity_80, 40055|opacity_85, 40056|opacity_90, 40057|opacity_95, 40058|opacity_100)</onclick>
+					<onclick>Skin.SelectBool(31237, 15109|, 31238|opacity_0, 31239|opacity_5, 31240|opacity_10, 31241|opacity_15, 31242|opacity_20, 31243|opacity_25, 31244|opacity_30, 31245|opacity_35, 31246|opacity_40, 31247|opacity_45, 31248|opacity_50, 31249|opacity_55, 31250|opacity_60, 31251|opacity_65, 31252|opacity_70, 31253|opacity_75, 31254|opacity_80, 31255|opacity_85, 31256|opacity_90, 31257|opacity_95, 31258|opacity_100)</onclick>
 					<label2>$VAR[OpacitySettingLabel2Var]</label2>
 				</control>
 				<control type="button" id="808">
 					<label>$LOCALIZE[31324]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(40124, 15109|, 40038|opacitybars_0, 40039|opacitybars_5, 40040|opacitybars_10, 40041|opacitybars_15, 40042|opacitybars_20, 40043|opacitybars_25, 40044|opacitybars_30, 40045|opacitybars_35, 40046|opacitybars_40, 40047|opacitybars_45, 40048|opacitybars_50, 40049|opacitybars_55, 40050|opacitybars_60, 40051|opacitybars_65, 40052|opacitybars_70, 40053|opacitybars_75, 40054|opacitybars_80, 40055|opacitybars_85, 40056|opacitybars_90, 40057|opacitybars_95, 40058|opacitybars_100)</onclick>
+					<onclick>Skin.SelectBool(31324, 15109|, 31238|opacitybars_0, 31239|opacitybars_5, 31240|opacitybars_10, 31241|opacitybars_15, 31242|opacitybars_20, 31243|opacitybars_25, 31244|opacitybars_30, 31245|opacitybars_35, 31246|opacitybars_40, 31247|opacitybars_45, 31248|opacitybars_50, 31249|opacitybars_55, 31250|opacitybars_60, 31251|opacitybars_65, 31252|opacitybars_70, 31253|opacitybars_75, 31254|opacitybars_80, 31255|opacitybars_85, 31256|opacitybars_90, 31257|opacitybars_95, 31258|opacitybars_100)</onclick>
 					<label2>$VAR[OpacityBarsSettingLabel2Var]</label2>
 				</control>
 			</control>
@@ -829,7 +829,7 @@
 				<control type="button" id="907">
 					<include>DefaultSettingButton</include>
 					<description>forced view movies</description>
-					<onclick>Skin.SelectBool(40150, 40148|movies.0, 535|movies.50, 31107|movies.55, 20021|movies.51, 31100|movies3, 31101|movies.54, 40016|movies.505, 31102|movies.500, 40015|movies.504, 20020|movies.501, 20445|movies.502, 40420|movies.510, 40005|movies.503, 40017|movies.506, 40146|movies.507)</onclick>
+					<onclick>Skin.SelectBool(31350, 31348|movies.0, 535|movies.50, 31107|movies.55, 20021|movies.51, 31100|movies3, 31101|movies.54, 31216|movies.505, 31102|movies.500, 31215|movies.504, 20020|movies.501, 20445|movies.502, 31620|movies.510, 31205|movies.503, 31217|movies.506, 31346|movies.507)</onclick>
 					<visible>Library.HasContent(movies) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31350]</label>
 					<label2>$VAR[SettingsForcedViewsMoviesVar]</label2>
@@ -837,7 +837,7 @@
 				<control type="button" id="908">
 					<include>DefaultSettingButton</include>
 					<description>forced view sets</description>
-					<onclick>Skin.SelectBool(40151, 40148|sets.0, 535|sets.50, 31107|sets.55, 20021|sets.51, 31100|sets.53, 31101|sets.54, 40016|sets.505, 31102|sets.500, 40015|sets.504, 20445|sets.502, 40420|sets.510, 40005|sets.503, 40017|sets.506, 40146|sets.507, 40212|sets.508)</onclick>
+					<onclick>Skin.SelectBool(31351, 31348|sets.0, 535|sets.50, 31107|sets.55, 20021|sets.51, 31100|sets.53, 31101|sets.54, 31216|sets.505, 31102|sets.500, 31215|sets.504, 20445|sets.502, 31620|sets.510, 31205|sets.503, 31217|sets.506, 31346|sets.507, 31412|sets.508)</onclick>
 					<visible>Library.HasContent(movies) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31351]</label>
 					<label2>$VAR[SettingsForcedViewsSetsVar]</label2>
@@ -845,7 +845,7 @@
 				<control type="button" id="909">
 					<include>DefaultSettingButton</include>
 					<description>forced view setmovies</description>
-					<onclick>Skin.SelectBool(40152, 40148|setmovies.0, 535|setmovies.50, 31107|setmovies.55, 20021|setmovies.51, 31100|setmovies.53, 31101|setmovies.54, 40016|setmovies.505, 31102|setmovies.500, 40015|setmovies.504, 20020|setmovies.501, 20445|setmovies.502, 40420|setmovies.510, 40005|setmovies.503, 40017|setmovies.506, 40146|setmovies.507)</onclick>
+					<onclick>Skin.SelectBool(31352, 31348|setmovies.0, 535|setmovies.50, 31107|setmovies.55, 20021|setmovies.51, 31100|setmovies.53, 31101|setmovies.54, 31216|setmovies.505, 31102|setmovies.500, 31215|setmovies.504, 20020|setmovies.501, 20445|setmovies.502, 31620|setmovies.510, 31205|setmovies.503, 31217|setmovies.506, 31346|setmovies.507)</onclick>
 					<visible>Library.HasContent(movies) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31352]</label>
 					<label2>$VAR[SettingsForcedViewsSetMoviesVar]</label2>
@@ -853,7 +853,7 @@
 				<control type="button" id="910">
 					<include>DefaultSettingButton</include>
 					<description>forced view tvshows</description>
-					<onclick>Skin.SelectBool(40153, 40148|tvshows.0, 535|tvshows.50, 31107|tvshows.55, 20021|tvshows.51, 31100|tvshows.53, 31101|tvshows.54, 40016|tvshows.505, 31102|tvshows.500, 40015|tvshows.504, 20020|tvshows.501, 20445|tvshows.502, 40420|tvshows.510, 40005|tvshows.503, 40017|tvshows.506, 40146|tvshows.507, 40214|tvshows.509)</onclick>
+					<onclick>Skin.SelectBool(31353, 31348|tvshows.0, 535|tvshows.50, 31107|tvshows.55, 20021|tvshows.51, 31100|tvshows.53, 31101|tvshows.54, 31216|tvshows.505, 31102|tvshows.500, 31215|tvshows.504, 20020|tvshows.501, 20445|tvshows.502, 31620|tvshows.510, 31205|tvshows.503, 31217|tvshows.506, 31346|tvshows.507, 31414|tvshows.509)</onclick>
 					<visible>Library.HasContent(tvshows) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31353]</label>
 					<label2>$VAR[SettingsForcedViewsTVShowsVar]</label2>
@@ -861,7 +861,7 @@
 				<control type="button" id="911">
 					<include>DefaultSettingButton</include>
 					<description>forced view seasons</description>
-					<onclick>Skin.SelectBool(40154, 40148|seasons.0, 535|seasons.50, 31107|seasons.55, 20021|seasons.51, 31100|seasons.53, 31101|seasons.54, 40016|seasons.505, 31102|seasons.500, 40015|seasons.504, 20445|seasons.502, 40017|seasons.506, 40146|seasons.507, 40212|seasons.508)</onclick>
+					<onclick>Skin.SelectBool(31354, 31348|seasons.0, 535|seasons.50, 31107|seasons.55, 20021|seasons.51, 31100|seasons.53, 31101|seasons.54, 31216|seasons.505, 31102|seasons.500, 31215|seasons.504, 20445|seasons.502, 31217|seasons.506, 31346|seasons.507, 31412|seasons.508)</onclick>
 					<visible>Library.HasContent(tvshows) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31354]</label>
 					<label2>$VAR[SettingsForcedViewsSeasonsVar]</label2>
@@ -869,7 +869,7 @@
 				<control type="button" id="912">
 					<include>DefaultSettingButton</include>
 					<description>forced view episodes</description>
-					<onclick>Skin.SelectBool(40155, 40148|episodes.0, 535|episodes.50, 31107|episodes.55, 31101|episodes.54, 31102|episodes.500, 20445|episodes.502, 40005|episodes.503)</onclick>
+					<onclick>Skin.SelectBool(31355, 31348|episodes.0, 535|episodes.50, 31107|episodes.55, 31101|episodes.54, 31102|episodes.500, 20445|episodes.502, 31205|episodes.503)</onclick>
 					<visible>Library.HasContent(tvshows) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31355]</label>
 					<label2>$VAR[SettingsForcedViewsEpisodesVar]</label2>
@@ -877,7 +877,7 @@
 				<control type="button" id="913">
 					<include>DefaultSettingButton</include>
 					<description>forced view artists</description>
-					<onclick>Skin.SelectBool(40156, 40148|artists.0, 535|artists.50, 31107|artists.55, 31100|artists.53, 31101|artists.54, 40016|artists.505, 31102|artists.500, 40015|artists.504, 40017|artists.506, 40146|artists.507, 40212|artists.508, 40214|artists.509)</onclick>
+					<onclick>Skin.SelectBool(31356, 31348|artists.0, 535|artists.50, 31107|artists.55, 31100|artists.53, 31101|artists.54, 31216|artists.505, 31102|artists.500, 31215|artists.504, 31217|artists.506, 31346|artists.507, 31412|artists.508, 31414|artists.509)</onclick>
 					<visible>Library.HasContent(music) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31356]</label>
 					<label2>$VAR[SettingsForcedViewsArtistsVar]</label2>
@@ -885,7 +885,7 @@
 				<control type="button" id="914">
 					<include>DefaultSettingButton</include>
 					<description>forced view albums</description>
-					<onclick>Skin.SelectBool(40157, 40148|albums.0, 31107|albums.55, 31100|albums.53, 31101|albums.54, 31102|albums.500, 40017|albums.506, 40146|albums.507, 40212|albums.508)</onclick>
+					<onclick>Skin.SelectBool(31357, 31348|albums.0, 31107|albums.55, 31100|albums.53, 31101|albums.54, 31102|albums.500, 31217|albums.506, 31346|albums.507, 31412|albums.508)</onclick>
 					<visible>Library.HasContent(music) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31357]</label>
 					<label2>$VAR[SettingsForcedViewsAlbumsVar]</label2>
@@ -893,7 +893,7 @@
 				<control type="button" id="915">
 					<include>DefaultSettingButton</include>
 					<description>forced view musicvideos</description>
-					<onclick>Skin.SelectBool(40158, 40148|musicvideos.0, 31107|musicvideos.55, 31100|musicvideos.53, 31101|musicvideos.54, 31102|musicvideos.500, 20445|musicvideos.502, 40017|musicvideos.506, 40146|musicvideos.507)</onclick>
+					<onclick>Skin.SelectBool(31358, 31348|musicvideos.0, 31107|musicvideos.55, 31100|musicvideos.53, 31101|musicvideos.54, 31102|musicvideos.500, 20445|musicvideos.502, 31217|musicvideos.506, 31346|musicvideos.507)</onclick>
 					<visible>Library.HasContent(musicvideos) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31358]</label>
 					<label2>$VAR[SettingsForcedViewsMusicVideosVar]</label2>
@@ -1045,7 +1045,7 @@
 				<control type="button" id="711">
 					<label>$LOCALIZE[31024]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(31024, 40148|, 40232|circle_rating, 40233|circle_userrating, 40281|circle_bothrating)</onclick>
+					<onclick>Skin.SelectBool(31024, 31348|, 31432|circle_rating, 31433|circle_userrating, 31481|circle_bothrating)</onclick>
 					<label2>$VAR[RatingSettingLabel2Var]</label2>
 				</control>
 				<control type="button" id="712">
@@ -1068,7 +1068,7 @@
 				<control type="button" id="714">
 					<label>$LOCALIZE[31602]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(40402, 40403|tomatometerallcritics, 40404|tomatometeravgcritics, 40405|tomatometerallaudience, 40406|tomatometeravgaudience)</onclick>
+					<onclick>Skin.SelectBool(31514, 31603|tomatometerallcritics, 31604|tomatometeravgcritics, 31605|tomatometerallaudience, 31606|tomatometeravgaudience)</onclick>
 					<label2>$VAR[RottenSettingLabel2Var]</label2>
 				</control>
 				<control type="radiobutton" id="715">
@@ -1200,7 +1200,7 @@
 				<control type="button" id="10023">
 					<include>DefaultSettingButton</include>
 					<description>menu logo</description>
-					<onclick>Skin.SelectBool(40367, 15109|MenuLogoDefault, 40368|MenuLogoLE, 40369|MenuLogoCE)</onclick>
+					<onclick>Skin.SelectBool(31567, 15109|MenuLogoDefault, 31568|MenuLogoLE, 31569|MenuLogoCE)</onclick>
 					<label>$LOCALIZE[31567]</label>
 					<label2>$VAR[Label_SkinSetting_Logo]</label2>
 				</control>
