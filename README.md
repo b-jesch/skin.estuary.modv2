@@ -34,6 +34,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.2+nexus ###
+- .2
+  * Fix wrong *elec labels (thanks C4Wiz)
+
+
 - .1
   * Transparency of label background of widgets (Flix view) customizable
   * semitransparent Background for plot in video info added
