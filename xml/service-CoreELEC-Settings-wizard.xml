@@ -252,7 +252,7 @@
                                 <aligny>center</aligny>
                                 <font>font12</font>
                                 <visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
-                                <label>[B]$ADDON[service.libreelec.settings 602] : [/B]$INFO[ListItem.Property(Address)]</label>
+                                <label>[B]$ADDON[service.coreelec.settings 602] : [/B]$INFO[ListItem.Property(Address)]</label>
                             </control>
                             <!-- State -->
                             <control type="label">
@@ -262,7 +262,7 @@
                                 <height>50</height>
                                 <aligny>center</aligny>
                                 <font>font12</font>
-                                <label>[B]$ADDON[service.libreelec.settings 604] : [/B]$INFO[ListItem.Property(State)]</label>
+                                <label>[B]$ADDON[service.coreelec.settings 604] : [/B]$INFO[ListItem.Property(State)]</label>
                             </control>
                             <!-- Signal strength -->
                             <control type="progress">
@@ -351,7 +351,7 @@
                                 <aligny>center</aligny>
                                 <font>font12</font>
                                 <visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
-                                <label>[B]$ADDON[service.libreelec.settings 602] : [/B]$INFO[ListItem.Property(Address)]</label>
+                                <label>[B]$ADDON[service.coreelec.settings 602] : [/B]$INFO[ListItem.Property(Address)]</label>
                             </control>
                             <!-- State -->
                             <control type="label">
@@ -361,7 +361,7 @@
                                 <height>50</height>
                                 <aligny>center</aligny>
                                 <font>font12</font>
-                                <label>[B]$ADDON[service.libreelec.settings 604] : [/B]$INFO[ListItem.Property(State)]</label>
+                                <label>[B]$ADDON[service.coreelec.settings 604] : [/B]$INFO[ListItem.Property(State)]</label>
                             </control>
                             <!-- Signal strength -->
                             <control type="progress">
