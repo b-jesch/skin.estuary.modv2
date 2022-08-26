@@ -36,6 +36,7 @@ supports animated poster only.
 ### 4.0.2+nexus ###
 - .2
   * Fix wrong *elec labels (thanks C4Wiz)
+  * Add missing search button on video/audio side blade
 
 
 - .1
