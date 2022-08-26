@@ -620,6 +620,10 @@
 						<selected>system.ismaster</selected>
 						<visible>system.haslocks</visible>
 					</control>
+					<control type="button" id="8">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[137]</label>
+					</control>
 					<control type="togglebutton" id="619">
 						<description>Update library</description>
 						<include>MediaMenuItemsCommon</include>
