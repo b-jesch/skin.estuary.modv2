@@ -41,6 +41,7 @@ supports animated poster only.
   * Add missing search button on video/audio side blade
   * Add missing previews in view selection window
   * Flix view improvements
+  * skin script for animated artwork removed (obsolete, use animated artwork addon instead)
 
 
 - .1
