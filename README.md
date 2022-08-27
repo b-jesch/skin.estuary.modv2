@@ -39,6 +39,8 @@ supports animated poster only.
 - .2
   * Fix wrong *elec labels (thanks C4Wiz)
   * Add missing search button on video/audio side blade
+  * Add missing previews in view selection window
+  * Flix view improvements
 
 
 - .1

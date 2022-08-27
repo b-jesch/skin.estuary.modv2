@@ -641,6 +641,8 @@
 		<value condition="!String.IsEmpty(Listitem.Art(season.landscape))">$INFO[ListItem.Art(season.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.landscape))">$INFO[ListItem.Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="InfoWidgetThumbVar2">
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>

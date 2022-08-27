@@ -58,19 +58,9 @@
 				<top>-10</top>
 				<width>420</width>
 				<height>255</height>
-				<texture background="true">$VAR[WidgetThumbViewVar]</texture>
+				<texture background="true" fallback="DefaultVideoFanart.png">$VAR[WidgetThumbViewVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>-10</top>
-				<width>420</width>
-				<height>255</height>
-				<texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Art(fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<bordersize>20</bordersize>
-				<visible>String.IsEmpty(ListItem.Art(season.landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + String.IsEmpty(ListItem.Art(landscape))</visible>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image">
@@ -349,7 +339,7 @@
 				<onright>510</onright>
 				<onleft>510</onleft>
 				<ondown>60</ondown>
-				<viewtype label="40420">biginfo</viewtype>
+				<viewtype label="$LOCALIZE[31620]">biginfo</viewtype>
 				<pagecontrol>60</pagecontrol>
                  <focusposition></focusposition>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
