@@ -41,6 +41,7 @@ supports animated poster only.
   * Flix view improvements
   * skin script for animated artwork removed (obsolete, use animated artwork addon instead)
   * improved PVR status display in channel views
+  * improved tvshow widgets (home menu)
 
 
 - .1
