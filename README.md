@@ -34,6 +34,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.0.2+nexus ###
+- .3
+  * Fix wrong viewtype labels
+
+
 - .2
   * Fix unchanged label IDs in shortcuts
   * Fix wrong *elec labels (thanks C4Wiz)
