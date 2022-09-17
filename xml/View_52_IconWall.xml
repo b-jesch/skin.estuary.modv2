@@ -19,7 +19,7 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content() | Container.Content(tags) | Container.Content(years) | Container.Content(roles) | Container.Content(sources) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(playlists) | Container.Content(unknown)</visible>
 				<animation effect="slide" end="74,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
-				<viewtype label="31099">icon</viewtype>
+				<viewtype label="$LOCALIZE[31099]">icon</viewtype>
 				<itemlayout height="280" width="440" condition="Container.Content() | Container.Content(tags) | Container.Content(playlists) | [Container.Content(studios) + !String.IsEmpty(Skin.String(studiologos.path))] | [Container.Content(genres) + !String.IsEmpty(Skin.String(moviegenreicons.path))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(moviecountryicons.path))]">
 					<control type="group">
 						<top>150</top>

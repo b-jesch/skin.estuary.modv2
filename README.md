@@ -36,6 +36,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 3.4.2+matrix ###
+- .3
+  * Fix wrong viewtype labels
+
+
 - .2
   * Fix unchanged label IDs in shortcuts
   * Fix wrong *elec labels (thanks C4Wiz)
