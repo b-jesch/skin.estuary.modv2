@@ -37,6 +37,7 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 ### 3.4.2+matrix ###
 - .2
+  * Fix unchanged label IDs in shortcuts
   * Fix wrong *elec labels (thanks C4Wiz)
   * Add missing search button on video/audio side blade
   * Add missing previews in view selection window
@@ -44,7 +45,7 @@ supports animated poster only.
   * skin script for animated artwork removed (obsolete, use animated artwork addon instead)
   * improved PVR status display in channel views
   * improved tvshow widgets
-
+  
 
 - .1
   * Transparency of label background of widgets (Flix view) customizable
