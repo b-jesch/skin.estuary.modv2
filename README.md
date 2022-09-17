@@ -35,6 +35,7 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 ### 4.0.2+nexus ###
 - .2
+  * Fix unchanged label IDs in shortcuts
   * Fix wrong *elec labels (thanks C4Wiz)
   * Add missing search button on video/audio side blade
   * Add missing previews in view selection window
