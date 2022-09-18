@@ -38,6 +38,7 @@ supports animated poster only.
 ### 3.4.2+matrix ###
 - .3
   * Fix wrong viewtype labels
+  * some more improvements on tvshow widgets 
 
 
 - .2
