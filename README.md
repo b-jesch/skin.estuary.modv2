@@ -36,6 +36,7 @@ supports animated poster only.
 ### 4.0.2+nexus ###
 - .3
   * Fix wrong viewtype labels
+  * some more improvements on tvshow widgets
 
 
 - .2
