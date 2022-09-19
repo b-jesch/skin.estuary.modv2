@@ -37,6 +37,7 @@ supports animated poster only.
 - .3
   * Fix wrong viewtype labels
   * some more improvements on tvshow widgets
+  * Exclude actors list from autoclose on player OSD
 
 
 - .2
