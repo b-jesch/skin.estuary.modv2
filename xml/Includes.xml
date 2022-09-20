@@ -4612,7 +4612,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Window.IsActive(fullscreenvideo) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
+					<visible>Window.IsActive(fullscreenvideo) + PVR.IsRecording + !Player.ChannelPreviewActive</visible>
 					<width>60</width>
 					<height>50</height>
 					<control type="image">
