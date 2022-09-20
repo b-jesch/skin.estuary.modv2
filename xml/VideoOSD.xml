@@ -167,23 +167,15 @@
 					<radioposy>0</radioposy>
 					<selected>!PVR.IsRecordingPlayingChannel</selected>
 					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
-					<visible>PVR.CanRecordPlayingChannel</visible>
-					<visible>VideoPlayer.Content(livetv)</visible>
+					<visible>PVR.CanRecordPlayingChannel + VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="radiobutton" id="607">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
 					</include>
-					<onclick>ActivateWindow(fullscreeninfo)</onclick>
-					<visible>!String.IsEmpty(VideoPlayer.Plot) + !VideoPlayer.Content(livetv)</visible>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
-				</control>
-				<control type="radiobutton" id="70045">
-					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/plot.png"/>
-					</include>
-					<onclick>ActivateWindow(1138)</onclick>
-					<visible>VideoPlayer.Content(livetv)</visible>
+					<onclick condition="VideoPlayer.Content(livetv) | Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(1138)</onclick>
+					<onclick condition="!VideoPlayer.Content(livetv) + !Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(fullscreeninfo)</onclick>
+					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="70040">
