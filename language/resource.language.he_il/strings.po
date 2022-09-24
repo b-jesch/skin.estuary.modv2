@@ -7,15 +7,16 @@ msgstr ""
 "Project-Id-Version: Skin MOD - Estuary MOD V2 - KODI 18\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-12 11:39+0300\n"
-"Last-Translator: A. Dumbledore\n"
-"Language-Team: Eng2Heb\n"
+"PO-Revision-Date: 2022-09-24 14:59+0000\n"
+"Last-Translator: C4Wiz <c4wiz@live.com>\n"
+"Language-Team: Hebrew (Israel) <https://hosted.weblate.org/projects/skin-"
+"estuary-modv2/glossary/he_IL/>\n"
+"Language: he_il\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: he_IL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
+"X-Generator: Weblate 4.14.1\n"
 
 #: /xml/Home.xml /xml/DialogSeekBar.xml
 msgctxt "#31000"
@@ -143,8 +144,12 @@ msgstr "בחר דירוג להצגה עבור פריטי מדיה"
 
 #: /xml/DialogFavourites.xml
 msgctxt "#31025"
-msgid "No favourites found. You can add any item from media views to this list by using the context menu."
-msgstr "לא נמצאו מועדפים. ניתן להוסיף כל פריט מתצוגות מדיה לרשימה זו, באמצעות תפריט הקישור."
+msgid ""
+"No favourites found. You can add any item from media views to this list by "
+"using the context menu."
+msgstr ""
+"לא נמצאו מועדפים. ניתן להוסיף כל פריט מתצוגות מדיה לרשימה זו, באמצעות תפריט "
+"הקישור."
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31026"
@@ -219,8 +224,13 @@ msgstr "אפשרויות רשימת השמעה"
 
 #: /xml/SmartPlaylistEditor.xml
 msgctxt "#31043"
-msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
-msgstr "הגדר את הסוג והוסף כללים ליצירת רשימת השמעה חכמה. רשימות השמעה אלו דינמיות וכוללות את כל פריטי המדיה ממסד הנתונים שלך, החלים על הכללים שבחרת."
+msgid ""
+"Set the type and add rules to create a smart playlist. These playlists are "
+"dynamic and include all media items from your database which apply to your "
+"chosen rules."
+msgstr ""
+"הגדר את הסוג והוסף כללים ליצירת רשימת השמעה חכמה. רשימות השמעה אלו דינמיות "
+"וכוללות את כל פריטי המדיה ממסד הנתונים שלך, החלים על הכללים שבחרת."
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31044"
@@ -245,12 +255,12 @@ msgstr "זמין"
 #: /xml/Variables.xml
 msgctxt "#31050"
 msgid "Show plot"
-msgstr ""
+msgstr "הצג עלילה"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31051"
 msgid "Enable Splash screen"
-msgstr ""
+msgstr "אפשר מסך פתיחה"
 
 #: /xml/Includes.xml
 msgctxt "#31052"
@@ -265,12 +275,12 @@ msgstr "מבוסס על אריאל"
 #: /xml/Variables.xml
 msgctxt "#31054"
 msgid "Forward jumping"
-msgstr ""
+msgstr "קפיצה קדימה"
 
 #: /xml/Variables.xml
 msgctxt "#31055"
 msgid "Backward jumping"
-msgstr ""
+msgstr "קפיצה לאחור"
 
 #: /xml/MyMusicNav.xml /xml/MyVideoNav.xml
 msgctxt "#31056"
@@ -443,13 +453,21 @@ msgstr "הכנס את הטקסט כאן..."
 
 #: /xml/Home.xml
 msgctxt "#31104"
-msgid "Your video library is currently empty. In order to populate it with your personal media, add a video source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "ספריית הווידאו שלך ריקה כעת. כדי לאכלס אותה במדיה האישית שלך, הוסף מקור וידאו והגדר אותו. לאחר הוספת המקור והוספה לאינדקס, תוכל לגלוש בספרייה שלך."
+msgid ""
+"Your video library is currently empty. In order to populate it with your "
+"personal media, add a video source and configure it. After the source has "
+"been added and indexed you will be able to browse your library."
+msgstr ""
+"ספריית הווידאו שלך ריקה כעת. כדי לאכלס אותה במדיה האישית שלך, הוסף מקור "
+"וידאו והגדר אותו. לאחר הוספת המקור והוספה לאינדקס, תוכל לגלוש בספרייה שלך."
 
 #: /xml/Home.xml
 msgctxt "#31105"
-msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
-msgstr "הוסף מקורות וידאו והגדר את סוג התוכן המתאים כדי לאכלס את ספריות הווידאו שלך."
+msgid ""
+"Add video sources and set the appropriate content type in order to populate "
+"your video libraries."
+msgstr ""
+"הוסף מקורות וידאו והגדר את סוג התוכן המתאים כדי לאכלס את ספריות הווידאו שלך."
 
 #: /xml/Variables.xml
 msgctxt "#31106"
@@ -464,13 +482,21 @@ msgstr "רשימה רחבה"
 
 #: /xml/Home.xml
 msgctxt "#31110"
-msgid "Your music library is currently empty. In order to populate it with your personal media, add a music source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "ספריית המוסיקה שלך ריקה כעת. כדי לאכלס אותה עם המדיה האישית שלך, הוסף מקור מוסיקה והגדר אותו. לאחר הוספת המקור והוספה לאינדקס, תוכל לגלוש בספריה שלך."
+msgid ""
+"Your music library is currently empty. In order to populate it with your "
+"personal media, add a music source and configure it. After the source has "
+"been added and indexed you will be able to browse your library."
+msgstr ""
+"ספריית המוסיקה שלך ריקה כעת. כדי לאכלס אותה עם המדיה האישית שלך, הוסף מקור "
+"מוסיקה והגדר אותו. לאחר הוספת המקור והוספה לאינדקס, תוכל לגלוש בספריה שלך."
 
 #: /xml/Home.xml
 msgctxt "#31111"
-msgid "View your personal pictures or download one of the many image add-ons from the official repository."
-msgstr "הצג את התמונות האישיות שלך או הורד אחת מהרחבות התמונה הרבות מהמאגר הרשמי."
+msgid ""
+"View your personal pictures or download one of the many image add-ons from "
+"the official repository."
+msgstr ""
+"הצג את התמונות האישיות שלך או הורד אחת מהרחבות התמונה הרבות מהמאגר הרשמי."
 
 #: /xml/VideoOSD.xml
 msgctxt "#31112"
@@ -509,13 +535,21 @@ msgstr "כנס לדפדפן ההרחבות"
 
 #: /xml/Home.xml
 msgctxt "#31119"
-msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
-msgstr "עדיין לא מותקנות הרחבות. בקר בדפדפן ההרחבות שלנו, כדי לעיין באוסף שלנו ולשפר את חווית הקודי שלך."
+msgid ""
+"You do not have any add-ons installed yet. Visit our add-on browser to "
+"browse through our collection and improve your Kodi experience."
+msgstr ""
+"עדיין לא מותקנות הרחבות. בקר בדפדפן ההרחבות שלנו, כדי לעיין באוסף שלנו ולשפר "
+"את חווית הקודי שלך."
 
 #: /xml/Home.xml
 msgctxt "#31120"
-msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
-msgstr "עדיין לא הגדרת ספק מזג אוויר. כדי להציג מידע על מזג האוויר, בחר ספק מזג אוויר והגדר את המיקום שלך."
+msgid ""
+"You did not set up a weather provider yet. In order to view weather "
+"information, choose a weather provider and set up your location."
+msgstr ""
+"עדיין לא הגדרת ספק מזג אוויר. כדי להציג מידע על מזג האוויר, בחר ספק מזג "
+"אוויר והגדר את המיקום שלך."
 
 #: /xml/Home.xml
 msgctxt "#31121"
@@ -540,7 +574,7 @@ msgstr "הצג תמונות"
 #: /xml/Variables.xml
 msgctxt "#31125"
 msgid "is"
-msgstr ""
+msgstr "הוא"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31126"
@@ -624,8 +658,12 @@ msgstr "מהירות ניגון"
 
 #: /xml/Home.xml
 msgctxt "#31143"
-msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "אתה עדיין לא הגדרת לקוח PVR. כדי להשתמש ב-PVR, בחר בהרחבת לקוח PVR והגדר אותה. בקר בכתובת: http://kodi.wiki/view/PVR למידע נוסף."
+msgid ""
+"You did not set up PVR yet. In order to use PVR, choose a PVR client addon "
+"and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr ""
+"אתה עדיין לא הגדרת לקוח PVR. כדי להשתמש ב-PVR, בחר בהרחבת לקוח PVR והגדר "
+"אותה. בקר בכתובת: http://kodi.wiki/view/PVR למידע נוסף."
 
 #: /xml/Home.xml
 msgctxt "#31144"
@@ -664,8 +702,12 @@ msgstr "סרטוני מוזיקה אקראיים"
 
 #: /xml/Includes.xml
 msgctxt "#31153"
-msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
-msgstr "לא מותקנות הרחבות מהסוג זה. אנא כנס לדפדפן ההרחבות  כדי להוריד הרחבות שנוצרו על ידי הקהילה שלנו."
+msgid ""
+"You do not have any add-ons of this type installed. Enter the add-on browser "
+"to download add-ons created by our community."
+msgstr ""
+"לא מותקנות הרחבות מהסוג זה. אנא כנס לדפדפן ההרחבות  כדי להוריד הרחבות שנוצרו "
+"על ידי הקהילה שלנו."
 
 #: /xml/MyWeather.xml
 msgctxt "#31154"
@@ -709,7 +751,9 @@ msgstr "לוח ספרות"
 
 #: /xml/Home.xml
 msgctxt "#31162"
-msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgid ""
+"Play your personal games or download one of the many game add-ons from the "
+"official repository."
 msgstr "שחק את המשחקים האישיים שלך או הורד אחד מהמשחקים הרבים מהמאגר הרשמי."
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
@@ -729,8 +773,12 @@ msgstr "הוסף מקורות מדיה"
 
 #: /xml/Custom_1120_SourcesDialog.xml
 msgctxt "#31202"
-msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
-msgstr "קיצורי דרך למחלקת 'קבצים'  לכל סוגי המדיה. עבור לשם כדי להוסיף מקורות נוספים עבור מסדי הנתונים שלך."
+msgid ""
+"Shortcuts to the \"Files\" sections of each media type. Go there to add "
+"additional sources for your databases."
+msgstr ""
+"קיצורי דרך למחלקת 'קבצים'  לכל סוגי המדיה. עבור לשם כדי להוסיף מקורות נוספים "
+"עבור מסדי הנתונים שלך."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31203"
@@ -754,8 +802,10 @@ msgstr "אפס את הגדרות התפריט הראשי"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31207"
-msgid "Are you sure you want to reset display of all menu items back to default ?"
-msgstr "האם אתה בטוח שברצונך לאפס את התצוגה של כל פריטי התפריט בחזרה לברירת מחדל?"
+msgid ""
+"Are you sure you want to reset display of all menu items back to default ?"
+msgstr ""
+"האם אתה בטוח שברצונך לאפס את התצוגה של כל פריטי התפריט בחזרה לברירת מחדל?"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31208"
@@ -885,7 +935,7 @@ msgstr "צבע רקע"
 #: /xml/Variables.xml
 msgctxt "#31234"
 msgid "Next chapter"
-msgstr ""
+msgstr "הפרק הבא"
 
 msgctxt "#31235"
 msgid "Background pattern color"
@@ -894,7 +944,7 @@ msgstr "צבע תבנית רקע"
 #: /xml/Variables.xml
 msgctxt "#31236"
 msgid "Previous chapter"
-msgstr ""
+msgstr "הפרק הקודם"
 
 msgctxt "#31237"
 msgid "Opacity for fanart as background"
@@ -1013,7 +1063,7 @@ msgstr "הצג פאנארט נוספים"
 #: /xml/Variables.xml
 msgctxt "#31260"
 msgid "Pause"
-msgstr ""
+msgstr "הַפסָקָה"
 
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31261"
@@ -1153,7 +1203,7 @@ msgstr "הצג גרפיקת דיסק"
 #: /xml/SkinSettings.xml
 msgctxt "#31288"
 msgid "Show Clearlogo on video info"
-msgstr ""
+msgstr "הצג את Clearlogo בפרטי וידאו"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31289"
@@ -1308,7 +1358,7 @@ msgstr "הגדרות נוספות."
 #: /xml/SkinSettings.xml
 msgctxt "#31319"
 msgid "Show, add and remove animated posters"
-msgstr ""
+msgstr "הצג, הוסף והסר פוסטרים מונפשים"
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#31320"
@@ -1505,9 +1555,7 @@ msgctxt "#31358"
 msgid "Forced view for music videos"
 msgstr "תצוגות כפויות לסרטיוני מוזיקה"
 
-#: 40159 Empty String
-
-#: /xml/Variables.xml
+#: 40159 Empty String /xml/Variables.xml
 msgctxt "#31360"
 msgid "Power menu-related settings: Configure it to your likings."
 msgstr "הגדרות הקשורות לתפריט הכיבוי: הגדר אותו לפי העדפותיך."
@@ -1555,7 +1603,9 @@ msgstr "כיוון המיון של היישומון"
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31369"
 msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
-msgstr "לחץ [B]אישור[/B] כדי להציג תיאור או [B]שמאל[/B] כדי להציג מחדש תמונות ממוזערות"
+msgstr ""
+"לחץ [B]אישור[/B] כדי להציג תיאור או [B]שמאל[/B] כדי להציג מחדש תמונות "
+"ממוזערות"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31370"
@@ -1574,13 +1624,25 @@ msgstr "מקורות משחקים"
 
 #: /xml/Home.xml
 msgctxt "#31373"
-msgid "Your games library is currently empty. In order to populate it with your personal games, add a games source. After the source has been added you will be able to browse your games list. You will also need to install necessary add-ons for games."
-msgstr "ספריית המשחקים שלך ריקה. כדי לאכלס אותו עם המשחקים האישיים שלך, תוסיף מקור למשחקים. לאחר הוספת המקור, תוכל לעיין ברשימת המשחקים שלך. שים לב שאתה תצטרך להתקין את התוספים הנדרשים למשחקים."
+msgid ""
+"Your games library is currently empty. In order to populate it with your "
+"personal games, add a games source. After the source has been added you will "
+"be able to browse your games list. You will also need to install necessary "
+"add-ons for games."
+msgstr ""
+"ספריית המשחקים שלך ריקה. כדי לאכלס אותו עם המשחקים האישיים שלך, תוסיף מקור "
+"למשחקים. לאחר הוספת המקור, תוכל לעיין ברשימת המשחקים שלך. שים לב שאתה תצטרך "
+"להתקין את התוספים הנדרשים למשחקים."
 
 #: /xml/Home.xml
 msgctxt "#31374"
-msgid "Your pictures library is currently empty. In order to populate it with your personal pictures, add a pictures source. After the source has been added you will be able to browse your pictures list."
-msgstr "ספריית התמונות שלך ריקה. כדי לאכלס אותו עם התמונות האישיות שלך, תוסיף מקור לתמונות. לאחר הוספת המקור, תוכל לעיין ברשימת התמונות שלך."
+msgid ""
+"Your pictures library is currently empty. In order to populate it with your "
+"personal pictures, add a pictures source. After the source has been added "
+"you will be able to browse your pictures list."
+msgstr ""
+"ספריית התמונות שלך ריקה. כדי לאכלס אותו עם התמונות האישיות שלך, תוסיף מקור "
+"לתמונות. לאחר הוספת המקור, תוכל לעיין ברשימת התמונות שלך."
 
 #: /xml/Home.xml
 msgctxt "#31375"
@@ -1644,8 +1706,12 @@ msgstr "הצג את יישומון קיצור דרך 'הגדרות'"
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31398"
-msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
-msgstr "יש צורך לאתחל את קודי, '[B]לאפס את התפריט הראשי ואת הגדרות הכיבוי [/B]' בהגדרות המעטפת לאחר התקנת גרסה זו."
+msgid ""
+"It's necessary to reboot Kodi and '[B]Reset main menu and power menu "
+"settings[/B]' in skin settings after installation of this version."
+msgstr ""
+"יש צורך לאתחל את קודי, '[B]לאפס את התפריט הראשי ואת הגדרות הכיבוי [/B]' "
+"בהגדרות המעטפת לאחר התקנת גרסה זו."
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31399"
@@ -1665,7 +1731,7 @@ msgstr "צבע הטקס לדירוג"
 #: /xml/SkinSettings.xml
 msgctxt "#31402"
 msgid "Show visualisation effects behind background"
-msgstr ""
+msgstr "הצג אפקטי הדמיה מאחורי רקע"
 
 msgctxt "#31403"
 msgid "Posters panel"
@@ -1756,17 +1822,17 @@ msgstr "הרחבות אופציונליות"
 #: /xml/Variables.xml
 msgctxt "#31420"
 msgid "Directed by"
-msgstr ""
+msgstr "בימוי"
 
 #: /xml/Variables.xml
 msgctxt "#31421"
 msgid "Similar to"
-msgstr ""
+msgstr "דומה ל"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31422"
 msgid "Play trailers in full screen"
-msgstr ""
+msgstr "הפעל טריילרים במסך מלא"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31423"
@@ -1781,7 +1847,7 @@ msgstr "צבע משני"
 #: /xml/SkinSettings.xml
 msgctxt "#31425"
 msgid "Use small OSD"
-msgstr ""
+msgstr "השתמש ב-OSD קטן"
 
 msgctxt "#31426"
 msgid "Personalize 'Categories' widget"
@@ -1805,7 +1871,7 @@ msgstr "הגדר מפתח API מותאם אישית"
 #: /xml/SkinSettings.xml
 msgctxt "#31430"
 msgid "Hide video info when video is paused"
-msgstr ""
+msgstr "הסתר מידע על סרטון כאשר הסרטון מושהה"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31431"
@@ -1940,22 +2006,26 @@ msgstr "הצג אלבומים של אמנים"
 #: /xml/SkinSettings.xml
 msgctxt "#31457"
 msgid "Show artist ClearArt"
-msgstr ""
+msgstr "הצג את האמן ClearArt"
 
 #: /xml/Custom_1101_SettingsList.xml
 msgctxt "#31458"
 msgid "Select Program"
-msgstr ""
+msgstr "בחר תוכנית"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31459"
 msgid "Enable themes (Valentine's Day, Easter, Halloween & Christmas)"
-msgstr ""
+msgstr "אפשר ערכות נושא (יום האהבה, חג הפסחא, ליל כל הקדושים וחג המולד)"
 
 #: /xml/Home.xml
 msgctxt "#31460"
-msgid "Your library is currently empty.[CR]In order to populate it with your personal media, add  sources and configure them."
-msgstr "ספריית הווידאו שלך ריקה כעת.[CR]כדי לאכלס אותה עם המדיה האישית שלך, הוסף מקורות והגדר אותם."
+msgid ""
+"Your library is currently empty.[CR]In order to populate it with your "
+"personal media, add  sources and configure them."
+msgstr ""
+"ספריית הווידאו שלך ריקה כעת.[CR]כדי לאכלס אותה עם המדיה האישית שלך, הוסף "
+"מקורות והגדר אותם."
 
 #: /xml/Variables.xml
 msgctxt "#31461"
@@ -2000,19 +2070,539 @@ msgstr "הצג שמות מדיה ללא שמות יישומונים"
 #: /xml/Variables.xml
 msgctxt "#31469"
 msgid "Christmas Theme"
-msgstr ""
+msgstr "נושא חג המולד"
 
 #: /xml/Variables.xml
 msgctxt "#31470"
 msgid "Halloween Theme"
-msgstr ""
+msgstr "נושא ליל כל הקדושים"
 
 #: /xml/Variables.xml
 msgctxt "#31471"
 msgid "Easter Theme"
-msgstr ""
+msgstr "נושא חג הפסחא"
 
 #: /xml/Variables.xml
 msgctxt "#31472"
 msgid "Valentine's Day Theme"
+msgstr "נושא ליום האהבה"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31473"
+msgid "Show channel groups"
+msgstr "הצג קבוצות ערוצים"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31474"
+msgid "Scope mode for constant image height (CIH) setup"
+msgstr "מצב היקף להגדרת גובה תמונה קבוע (CIH)."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31475"
+msgid "2:35:1 (1920x817)"
+msgstr "2:35:1 (1920x817)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31476"
+msgid "2:40:1 (1920x800)"
+msgstr "2:40:1 (1920x800)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31477"
+msgid "1:77:1 (1920x1080)"
+msgstr "1:77:1 (1920x1080)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31478"
+msgid "1:85:1 (1920x1038)"
+msgstr "1:85:1 (1920x1038)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31479"
+msgid "2:37:1 (1920x810)"
+msgstr "2:37:1 (1920x810)"
+
+#: /xml/Variables.xml
+msgctxt "#31480"
+msgid "Scope mode"
+msgstr "מצב היקף"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31481"
+msgid "My ratings and scrapers ratings"
+msgstr "דירוגי הדירוגים והמגרדים שלי"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31482"
+msgid "Scrapers ratings text color"
+msgstr "מגרדים מדורגים את צבע הטקסט"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31483"
+msgid "My ratings text color"
+msgstr "צבע הטקסט של הדירוגים שלי"
+
+#: /xml/Includes.xml
+msgctxt "#31484"
+msgid "Loading..."
+msgstr "טוען..."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31485"
+msgid "Parental control related settings."
+msgstr "הגדרות הקשורות לבקרת הורים."
+
+#: /xml/Custom_1101_SettingsList.xml
+msgctxt "#31486"
+msgid "Select Resolution"
+msgstr "בחר רזולוציה"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31487"
+msgid "Date added"
+msgstr "תאריך הוסף"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31488"
+msgid "Show extended info"
+msgstr "הצג מידע מורחב"
+
+#: /xml/Variables.xml
+msgctxt "#31489"
+msgid "By"
+msgstr "על ידי"
+
+#: /xml/Variables.xml
+msgctxt "#31490"
+msgid "Movies from movie set"
+msgstr "סרטים מסט סרטים"
+
+#: /xml/Custom_1132_MoviesSetsInfo.xml
+msgctxt "#31491"
+msgid "Press [B]DOWN[/B] to show info from selected movie"
+msgstr "לחץ על [B]DOWN[/B] כדי להציג מידע מהסרט שנבחר"
+
+#: /xml/Variables.xml
+msgctxt "#31492"
+msgid "Lists settings"
+msgstr "רשימות הגדרות"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31493"
+msgid "Show Actors list"
+msgstr "הצג את רשימת השחקנים"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#31494"
+msgid "Episode count"
+msgstr "ספירת פרקים"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31495"
+msgid "Movies from director"
+msgstr "סרטים של במאי"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31496"
+msgid "Similar movies"
+msgstr "סרטים דומים"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31497"
+msgid "Movies from studio"
+msgstr "סרטים מהאולפן"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31498"
+msgid "Next Up episodes"
+msgstr "הפרקים הבאים"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31499"
+msgid "Similar TV shows"
+msgstr "תוכניות טלוויזיה דומות"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31500"
+msgid "Fanarts list"
+msgstr "רשימת מעריצים"
+
+#: /xml/Variables.xml
+msgctxt "#31501"
+msgid "Albums from library"
+msgstr "אלבומים מהספרייה"
+
+#: /xml/Variables.xml
+msgctxt "#31502"
+msgid "Complete discography"
+msgstr "דיסקוגרפיה מלאה"
+
+#: /xml/Variables.xml
+msgctxt "#31503"
+msgid "Songs from album"
+msgstr "שירים מתוך אלבום"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#31504"
+msgid "Press [B]OK[/B] to show back thumb"
+msgstr "לחץ על [B]OK[/B] כדי להציג את האגודל האחורי"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#31505"
+msgid "Episode of the season"
+msgstr "פרק העונה"
+
+#: /xml/Variables.xml
+msgctxt "#31506"
+msgid "Posters"
+msgstr "פוסטרים"
+
+#: /xml/Variables.xml
+msgctxt "#31507"
+msgid "Fanarts"
+msgstr "מעריצים"
+
+#: /xml/Variables.xml
+msgctxt "#31508"
+msgid "Resume playback at"
+msgstr "המשך השמעה ב"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31509"
+msgid "Press [B]OK[/B] to show biography"
+msgstr "לחץ על [B]OK[/B] כדי להציג ביוגרפיה"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31510"
+msgid "Website"
+msgstr "אתר אינטרנט"
+
+#: /xml/Variables.xml
+msgctxt "#31511"
+msgid "Role in movie"
+msgstr "תפקיד בסרט"
+
+#: /xml/Variables.xml
+msgctxt "#31512"
+msgid "Crew member in movie"
+msgstr "חבר צוות בסרט"
+
+#: /xml/Variables.xml
+msgctxt "#31513"
+msgid "Role in TV show"
+msgstr "תפקיד בתוכנית טלוויזיה"
+
+#: /xml/Variables.xml
+msgctxt "#31514"
+msgid "Crew member in TV show"
+msgstr "חבר צוות בתוכנית טלוויזיה"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31515"
+msgid "Palm Week"
+msgstr "שבוע הדקלים"
+
+msgctxt "#31550"
+msgid "Channel groups"
+msgstr "קבוצות ערוצים"
+
+msgctxt "#31551"
+msgid "German Telecast Offers"
+msgstr "הצעות טלוויזיה גרמנית"
+
+msgctxt "#31552"
+msgid "Also apply to radio and internet station logos"
+msgstr "חל גם על לוגו של תחנות רדיו ואינטרנט"
+
+msgctxt "#31553"
+msgid "Use poster view for music video widgets"
+msgstr "השתמש בתצוגת פוסטר עבור ווידג'טים של סרטוני מוזיקה"
+
+msgctxt "#31554"
+msgid "Show year of publication in title"
+msgstr "הצג את שנת ההוצאה בכותרת"
+
+msgctxt "#31555"
+msgid "Optional icons and fanart packs"
+msgstr "סמלים אופציונליים וחבילות פנטסטיות"
+
+msgctxt "#31556"
+msgid "Reboot from NAND (Android)"
+msgstr "אתחול מחדש מ-NAND (אנדרואיד)"
+
+msgctxt "#31557"
+msgid "Restart Kodi"
+msgstr "הפעל מחדש את קודי"
+
+msgctxt "#31558"
+msgid "Addon-ID"
+msgstr "תוסף-מזהה"
+
+msgctxt "#31559"
+msgid "Platform"
+msgstr "פּלַטפוֹרמָה"
+
+msgctxt "#31560"
+msgid "Forced Views"
+msgstr "צפיות מאולצות"
+
+msgctxt "#31561"
+msgid "Show PVR related Artworks"
+msgstr "הצג יצירות אמנות הקשורות ל-PVR"
+
+msgctxt "#31562"
+msgid "PVR Artwork Configuration"
+msgstr "תצורת יצירות אמנות PVR"
+
+msgctxt "#31563"
+msgid "Show date"
+msgstr "הצג תאריך"
+
+msgctxt "#31564"
+msgid "Top Bar"
+msgstr "בר עליון"
+
+msgctxt "#31565"
+msgid "Bottom Bar"
+msgstr "בר תחתון"
+
+msgctxt "#31566"
+msgid "Media"
+msgstr "כְּלֵי תִקְשׁוֹרֶת"
+
+msgctxt "#31567"
+msgid "Kodi/Distribution Logo"
+msgstr "לוגו קודי/הפצה"
+
+msgctxt "#31568"
+msgid "LibreELEC"
+msgstr "LibreELEC"
+
+msgctxt "#31569"
+msgid "CoreELEC"
+msgstr "CoreELEC"
+
+msgctxt "#31570"
+msgid "Show extended Power Menu"
+msgstr "הצג תפריט הפעלה מורחב"
+
+msgctxt "#31571"
+msgid "Prefer Fanart in EPG preview window if available"
+msgstr "העדיפו את Fanart בחלון התצוגה המקדימה של EPG אם זמין"
+
+msgctxt "#31572"
+msgid "Upcoming episodes"
+msgstr "פרקים קרובים"
+
+msgctxt "#31573"
+msgid "Show MPAA rating"
+msgstr "הצג דירוג MPAA"
+
+msgctxt "#31574"
+msgid "(until "
+msgstr "(עד "
+
+msgctxt "#31575"
+msgid "Show Color Depth"
+msgstr "הצג עומק צבע"
+
+msgctxt "#31576"
+msgid "Show additional Infos within the PVR widgets"
+msgstr "הצג מידע נוסף בתוך ווידג'טים של PVR"
+
+msgctxt "#31577"
+msgid "Close Video OSD automatically after"
+msgstr "סגור וידאו OSD באופן אוטומטי לאחר"
+
+msgctxt "#31578"
+msgid "disabled"
+msgstr "נָכֶה"
+
+msgctxt "#31580"
+msgid "3 seconds"
+msgstr "3 שניות"
+
+msgctxt "#31581"
+msgid "5 seconds"
+msgstr "5 שניות"
+
+msgctxt "#31582"
+msgid "7 seconds"
+msgstr "7 שניות"
+
+msgctxt "#31583"
+msgid "10 seconds"
+msgstr "10 שניות"
+
+msgctxt "#31584"
+msgid "15 seconds"
+msgstr "15 שניות"
+
+msgctxt "#31585"
+msgid "Show Channel Numbers"
+msgstr "הצג את מספרי הערוצים"
+
+msgctxt "#31586"
+msgid "Show Date of First aired"
+msgstr "תאריך שידור התוכנית לראשונה"
+
+msgctxt "#31587"
+msgid "Item Path of Picture Widgets"
+msgstr "נתיב פריט של ווידג'טים של תמונה"
+
+msgctxt "#31588"
+msgid "Default Action on 'Movie' and 'TV-Show' Widgets"
+msgstr "פעולת ברירת מחדל בווידג'טים של 'סרט' ו'תוכנית טלוויזיה'"
+
+msgctxt "#31589"
+msgid "Play Item"
+msgstr "שחק פריט"
+
+msgctxt "#31590"
+msgid "Show Info"
+msgstr "הצג מידע"
+
+msgctxt "#31591"
+msgid "Sort Order"
+msgstr "סדר המיון"
+
+msgctxt "#31592"
+msgid "Show Path Navigation (Breadcrumbs) in List Views"
+msgstr "הצג ניווט בנתיב (פירורי לחם) בתצוגות רשימה"
+
+msgctxt "#31593"
+msgid "Show only 'current item / item count' Information"
+msgstr "הצג רק מידע 'פריט נוכחי / ספירת פריטים'"
+
+msgctxt "#31594"
+msgid "Set Animated Poster"
+msgstr "סט פוסטר מונפש"
+
+msgctxt "#31595"
+msgid "Remove Animated Poster"
+msgstr "הסר פוסטר מונפש"
+
+msgctxt "#31596"
+msgid "Animated Poster removed"
+msgstr "פוסטר מונפש הוסר"
+
+msgctxt "#31597"
+msgid "Animated Poster added"
+msgstr "פוסטר מונפש נוסף"
+
+msgctxt "#31598"
+msgid "Local Path to animated Poster Folder"
+msgstr "נתיב מקומי לתיקיית פוסטר מונפש"
+
+msgctxt "#31599"
+msgid ""
+"The folder of the animated Poster Collection was not defined yet. Define a "
+"Folder on the local File System containing animated Posters within the Skin "
+"Settings."
 msgstr ""
+"התיקיה של אוסף הפוסטרים המונפש עדיין לא הוגדרה. הגדר תיקיה במערכת הקבצים "
+"המקומית המכילה פוסטרים מונפשים בתוך הגדרות העור."
+
+msgctxt "#31600"
+msgid "Could not assign animated Poster"
+msgstr "לא ניתן להקצות פוסטר מונפש"
+
+msgctxt "#31601"
+msgid "Hit Probability: "
+msgstr "הסתברות פגיעה: "
+
+#: SkinSettings.xml
+msgctxt "#31602"
+msgid "'Rotten Tomatoes' Rating Category"
+msgstr "קטגוריית דירוג 'עגבניות רקובות'"
+
+#: SkinSettings.xml
+msgctxt "#31603"
+msgid "Tomatometer all Critics"
+msgstr "עגבניות כל המבקרים"
+
+#: SkinSettings.xml
+msgctxt "#31604"
+msgid "Tomatometer average Critics"
+msgstr "עגבניות ממוצע מבקרים"
+
+#: SkinSettings.xml
+msgctxt "#31605"
+msgid "Tomatometer all Audience"
+msgstr "עגבניות לכל הקהל"
+
+#: SkinSettings.xml
+msgctxt "#31606"
+msgid "Tomatometer average Audience"
+msgstr "קהל ממוצע של עגבניות"
+
+#: SkinSettings.xml
+msgctxt "#31607"
+msgid "Use simplified Video OSD Navigation"
+msgstr "השתמש בניווט פשוט ב-Video OSD"
+
+msgctxt "#31608"
+msgid "Previous seen Channel"
+msgstr "ראה בעבר הערוץ"
+
+#: Includes_MediaMenu.xml
+msgctxt "#31609"
+msgid "Show PVR Channel Status"
+msgstr "הצג סטטוס ערוץ PVR"
+
+#: DialogPlayerProcessInfo
+msgctxt "#31610"
+msgid "Display Mode"
+msgstr "מצב תצוגה"
+
+msgctxt "#31611"
+msgid "Eoft & Gamut"
+msgstr "Eoft & Gamut"
+
+msgctxt "#31612"
+msgid "Color Depth"
+msgstr "עומק צבע"
+
+#: SkinSettings.xml
+msgctxt "#31613"
+msgid "Display Media Time"
+msgstr "הצגת זמן מדיה"
+
+msgctxt "#31614"
+msgid "current Time / total Time"
+msgstr "זמן נוכחי / זמן כולל"
+
+msgctxt "#31615"
+msgid "Remaining Time"
+msgstr "זמן שנותר"
+
+#: SkinSettings.xml
+msgctxt "#31616"
+msgid "Use Background for PVR Channel Icons"
+msgstr "השתמש ברקע עבור סמלי ערוץ PVR"
+
+#: Custom_1127_settingsTVWidgets.xml
+msgctxt "#31617"
+msgid "Saved Search Results"
+msgstr "תוצאות חיפוש שמורות"
+
+#: SkinSettings.xml
+msgctxt "#31618"
+msgid "Use full Height for Channel and Program OSD"
+msgstr "השתמש בגובה מלא עבור OSD של ערוץ ותוכנית"
+
+#: Font.xml
+msgctxt "#31619"
+msgid "Economica based"
+msgstr "מבוסס כלכלה"
+
+#. viewtype name
+#: /xml/View_510_Flix.xml
+msgctxt "#31620"
+msgid "Flix Landscape"
+msgstr "פליקס נוף"
+
+#: Variables.xml (SkinSettings.xml)
+msgctxt "#31621"
+msgid "Visualization of the PVR and TV screen related settings."
+msgstr "הדמיה של ההגדרות הקשורות ל-PVR ולמסך הטלוויזיה."
