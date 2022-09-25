@@ -35,6 +35,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .4
+  -* update translations for french, czech and hebrew languages (thanks C4Wiz)
+
+
 - .3
   * Fix wrong viewtype labels
   * some more improvements on tvshow widgets
