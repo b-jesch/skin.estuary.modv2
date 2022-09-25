@@ -5,14 +5,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2019-01-16 19:00+0100\n"
-"Last-Translator: Fábio Vieitas Marques\n"
-"Language-Team: Portuguese (Brazil)\n"
+"PO-Revision-Date: 2022-09-25 13:01+0000\n"
+"Last-Translator: C4Wiz <c4wiz@live.com>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/skin-"
+"estuary-modv2/glossary/pt_BR/>\n"
+"Language: pt_br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt\n"
-"X-Generator: Notepad++ 7.9.5 \ n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: /xml/Home.xml /xml/DialogSeekBar.xml
 msgctxt "#31000"
@@ -54,9 +56,7 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Filmes não vistos"
 
-#: Missing string 31108
-
-#: /xml/MyVideoNav.xml
+#: Missing string 31108 /xml/MyVideoNav.xml
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Baixar ícones"
@@ -119,7 +119,8 @@ msgctxt "#31020"
 msgid "Actions"
 msgstr "Ações"
 
-#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml /xml/Includes_MediaMenu.xml /xml/EventLog.xml
+#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml
+#: /xml/Includes_MediaMenu.xml /xml/EventLog.xml
 msgctxt "#31021"
 msgid "Misc options"
 msgstr "Opções diversas"
@@ -141,8 +142,12 @@ msgstr "Escolha a classificação a ser exibida para itens de mídia"
 
 #: /xml/DialogFavourites.xml
 msgctxt "#31025"
-msgid "No favourites found. You can add any item from media views to this list by using the context menu."
-msgstr "Nenhum favorito encontrado. Você pode adicionar qualquer item das visualizações de mídia a esta lista usando o menu de contexto."
+msgid ""
+"No favourites found. You can add any item from media views to this list by "
+"using the context menu."
+msgstr ""
+"Nenhum favorito encontrado. Você pode adicionar qualquer item das "
+"visualizações de mídia a esta lista usando o menu de contexto."
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31026"
@@ -184,7 +189,8 @@ msgctxt "#31034"
 msgid "Extended info"
 msgstr "Informação estendida"
 
-#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
+#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml
+#: /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
 msgctxt "#31035"
 msgid "Pages"
 msgstr "Páginas"
@@ -216,8 +222,14 @@ msgstr "Opções da lista de reprodução"
 
 #: /xml/SmartPlaylistEditor.xml
 msgctxt "#31043"
-msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
-msgstr "Defina o tipo e adicione regras para criar uma lista de reprodução inteligente. Essas listas de reprodução são dinâmicas e incluem todos os itens de mídia de seu banco de dados que se aplicam às regras escolhidas."
+msgid ""
+"Set the type and add rules to create a smart playlist. These playlists are "
+"dynamic and include all media items from your database which apply to your "
+"chosen rules."
+msgstr ""
+"Defina o tipo e adicione regras para criar uma lista de reprodução "
+"inteligente. Essas listas de reprodução são dinâmicas e incluem todos os "
+"itens de mídia de seu banco de dados que se aplicam às regras escolhidas."
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31044"
@@ -357,7 +369,7 @@ msgstr "Termina em"
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31082"
 msgid "add-on de letras"
-msgstr ""
+msgstr "add-on de letras"
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31083"
@@ -407,7 +419,8 @@ msgstr "Opções de canal"
 #: /xml/LoginScreen.xml
 msgctxt "#31098"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Selecione seu perfil de usuário Kodi [CR] para fazer o login e continuar"
+msgstr ""
+"Selecione seu perfil de usuário Kodi [CR] para fazer o login e continuar"
 
 #. viewtype name
 #: /xml/View_52_IconWall.xml
@@ -440,13 +453,23 @@ msgstr "Digite o texto aqui..."
 
 #: /xml/Home.xml
 msgctxt "#31104"
-msgid "Your video library is currently empty. In order to populate it with your personal media, add a video source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "Sua biblioteca de vídeo está vazia no momento. Para preenchê-la com sua mídia pessoal, adicione uma fonte de vídeo e configure-a. Depois que a fonte for adicionada e indexada, você poderá navegar em sua biblioteca."
+msgid ""
+"Your video library is currently empty. In order to populate it with your "
+"personal media, add a video source and configure it. After the source has "
+"been added and indexed you will be able to browse your library."
+msgstr ""
+"Sua biblioteca de vídeo está vazia no momento. Para preenchê-la com sua "
+"mídia pessoal, adicione uma fonte de vídeo e configure-a. Depois que a fonte "
+"for adicionada e indexada, você poderá navegar em sua biblioteca."
 
 #: /xml/Home.xml
 msgctxt "#31105"
-msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
-msgstr "Adicione fontes de vídeo e defina o tipo de conteúdo apropriado para preencher suas bibliotecas de vídeo."
+msgid ""
+"Add video sources and set the appropriate content type in order to populate "
+"your video libraries."
+msgstr ""
+"Adicione fontes de vídeo e defina o tipo de conteúdo apropriado para "
+"preencher suas bibliotecas de vídeo."
 
 #: /xml/Variables.xml
 msgctxt "#31106"
@@ -461,13 +484,23 @@ msgstr "Lista Ampla"
 
 #: /xml/Home.xml
 msgctxt "#31110"
-msgid "Your music library is currently empty. In order to populate it with your personal media, add a music source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "Sua biblioteca de música está vazia no momento. Para preenchê-la com sua mídia pessoal, adicione uma fonte de música e configure-a. Depois que a fonte for adicionada e indexada, você poderá navegar em sua biblioteca."
+msgid ""
+"Your music library is currently empty. In order to populate it with your "
+"personal media, add a music source and configure it. After the source has "
+"been added and indexed you will be able to browse your library."
+msgstr ""
+"Sua biblioteca de música está vazia no momento. Para preenchê-la com sua "
+"mídia pessoal, adicione uma fonte de música e configure-a. Depois que a "
+"fonte for adicionada e indexada, você poderá navegar em sua biblioteca."
 
 #: /xml/Home.xml
 msgctxt "#31111"
-msgid "View your personal pictures or download one of the many image add-ons from the official repository."
-msgstr "Veja suas fotos pessoais ou baixe um dos muitos add-ons de imagem do repositório oficial."
+msgid ""
+"View your personal pictures or download one of the many image add-ons from "
+"the official repository."
+msgstr ""
+"Veja suas fotos pessoais ou baixe um dos muitos add-ons de imagem do "
+"repositório oficial."
 
 #: /xml/VideoOSD.xml
 msgctxt "#31112"
@@ -506,13 +539,21 @@ msgstr "Entrar no navegador do add-on"
 
 #: /xml/Home.xml
 msgctxt "#31119"
-msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
-msgstr "Você ainda não tem nenhum add-on instalado. Visite nosso navegador de add-on para navegar por nossa coleção e melhorar sua experiência Kodi."
+msgid ""
+"You do not have any add-ons installed yet. Visit our add-on browser to "
+"browse through our collection and improve your Kodi experience."
+msgstr ""
+"Você ainda não tem nenhum add-on instalado. Visite nosso navegador de add-on "
+"para navegar por nossa coleção e melhorar sua experiência Kodi."
 
 #: /xml/Home.xml
 msgctxt "#31120"
-msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
-msgstr "Você não configurou nenhum provedor de meteorologia. Para ver as informações meteorológicas, escolha um provedor e insira sua localização."
+msgid ""
+"You did not set up a weather provider yet. In order to view weather "
+"information, choose a weather provider and set up your location."
+msgstr ""
+"Você não configurou nenhum provedor de meteorologia. Para ver as informações "
+"meteorológicas, escolha um provedor e insira sua localização."
 
 #: /xml/Home.xml
 msgctxt "#31121"
@@ -562,7 +603,9 @@ msgstr "As configurações gerais se aplicam a todas as áreas da Skin"
 #: /xml/Variables.xml
 msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Configurações relacionadas ao menu principal: configure a tela principal de acordo com sua preferência."
+msgstr ""
+"Configurações relacionadas ao menu principal: configure a tela principal de "
+"acordo com sua preferência."
 
 #: /shortcuts/addons.DATA.xml
 msgctxt "#31131"
@@ -621,8 +664,12 @@ msgstr "Velocidade de reprodução"
 
 #: /xml/Home.xml
 msgctxt "#31143"
-msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "Você ainda não configurou o PVR. Para usar o PVR, escolha um add-on do cliente PVR e configure-o. Visite http://kodi.wiki/view/PVR para saber mais."
+msgid ""
+"You did not set up PVR yet. In order to use PVR, choose a PVR client addon "
+"and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr ""
+"Você ainda não configurou o PVR. Para usar o PVR, escolha um add-on do "
+"cliente PVR e configure-o. Visite http://kodi.wiki/view/PVR para saber mais."
 
 #: /xml/Home.xml
 msgctxt "#31144"
@@ -661,8 +708,12 @@ msgstr "Vídeos musicais aleatórios"
 
 #: /xml/Includes.xml
 msgctxt "#31153"
-msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
-msgstr "Você não tem nenhum complemento deste tipo instalado. Entre no navegador do complemento para baixar complementos criados por nossa comunidade."
+msgid ""
+"You do not have any add-ons of this type installed. Enter the add-on browser "
+"to download add-ons created by our community."
+msgstr ""
+"Você não tem nenhum complemento deste tipo instalado. Entre no navegador do "
+"complemento para baixar complementos criados por nossa comunidade."
 
 #: /xml/MyWeather.xml
 msgctxt "#31154"
@@ -706,8 +757,12 @@ msgstr "Teclado numérico"
 
 #: /xml/Home.xml
 msgctxt "#31162"
-msgid "Play your personal games or download one of the many game add-ons from the official repository."
-msgstr "Jogue seus jogos pessoais ou baixe um dos muitos add-ons de jogo do repositório oficial."
+msgid ""
+"Play your personal games or download one of the many game add-ons from the "
+"official repository."
+msgstr ""
+"Jogue seus jogos pessoais ou baixe um dos muitos add-ons de jogo do "
+"repositório oficial."
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31163"
@@ -726,8 +781,12 @@ msgstr "Adicionar fontes de mídia"
 
 #: /xml/Custom_1120_SourcesDialog.xml
 msgctxt "#31202"
-msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
-msgstr "Atalhos para as seções \"Arquivos\" de cada tipo de mídia. Vá lá para adicionar fontes adicionais para seus bancos de dados."
+msgid ""
+"Shortcuts to the \"Files\" sections of each media type. Go there to add "
+"additional sources for your databases."
+msgstr ""
+"Atalhos para as seções \"Arquivos\" de cada tipo de mídia. Vá lá para "
+"adicionar fontes adicionais para seus bancos de dados."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31203"
@@ -751,8 +810,11 @@ msgstr "Redefinir configurações do menu principal"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31207"
-msgid "Are you sure you want to reset display of all menu items back to default ?"
-msgstr "Tem certeza de que deseja redefinir a exibição de todos os itens de menu para o padrão?"
+msgid ""
+"Are you sure you want to reset display of all menu items back to default ?"
+msgstr ""
+"Tem certeza de que deseja redefinir a exibição de todos os itens de menu "
+"para o padrão?"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31208"
@@ -1307,7 +1369,7 @@ msgstr "Configurações adicionais."
 #: /xml/SkinSettings.xml
 msgctxt "#31319"
 msgid "Show, add and remove animated posters"
-msgstr ""
+msgstr "Mostrar, adicionar e remover pôsteres animados"
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#31320"
@@ -1397,7 +1459,7 @@ msgstr "Ajustar tipo de widgets"
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31337"
 msgid "Widget appearence"
-msgstr ""
+msgstr "Aparência do widget"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31338"
@@ -1512,7 +1574,9 @@ msgstr "Mostrar informações em tela inteira para filmes e séries"
 #: /xml/Variables.xml
 msgctxt "#31360"
 msgid "Power menu-related settings: Configure it to your likings."
-msgstr "Configurações relacionadas ao menu de energia: configure de acordo com suas preferências."
+msgstr ""
+"Configurações relacionadas ao menu de energia: configure de acordo com suas "
+"preferências."
 
 #: /xml/Home.xml
 msgctxt "#31361"
@@ -1557,7 +1621,9 @@ msgstr "Direção de classificação do widget"
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31369"
 msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
-msgstr "Pressione [B] OK [/B] para ler a descrição ou [B] Esquerda [/B] para mostrar a miniatura"
+msgstr ""
+"Pressione [B] OK [/B] para ler a descrição ou [B] Esquerda [/B] para mostrar "
+"a miniatura"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31370"
@@ -1576,13 +1642,27 @@ msgstr "Fontes de jogos"
 
 #: /xml/Home.xml
 msgctxt "#31373"
-msgid "Your games library is currently empty. In order to populate it with your personal games, add a games source. After the source has been added you will be able to browse your games list. You will also need to install necessary add-ons for games."
-msgstr "Sua biblioteca de jogos está vazia no momento. Para preenchê-la com seus jogos pessoais, adicione uma fonte de jogos. Depois que a fonte for adicionada, você poderá navegar em sua lista de jogos. Você também precisará instalar os complementos necessários para jogos."
+msgid ""
+"Your games library is currently empty. In order to populate it with your "
+"personal games, add a games source. After the source has been added you will "
+"be able to browse your games list. You will also need to install necessary "
+"add-ons for games."
+msgstr ""
+"Sua biblioteca de jogos está vazia no momento. Para preenchê-la com seus "
+"jogos pessoais, adicione uma fonte de jogos. Depois que a fonte for "
+"adicionada, você poderá navegar em sua lista de jogos. Você também precisará "
+"instalar os complementos necessários para jogos."
 
 #: /xml/Home.xml
 msgctxt "#31374"
-msgid "Your pictures library is currently empty. In order to populate it with your personal pictures, add a pictures source. After the source has been added you will be able to browse your pictures list."
-msgstr "Sua biblioteca de imagens está vazia no momento. Para preenchê-la com suas imagens pessoais, adicione uma fonte de imagens. Depois que a fonte for adicionada, você poderá navegar em sua lista de imagens."
+msgid ""
+"Your pictures library is currently empty. In order to populate it with your "
+"personal pictures, add a pictures source. After the source has been added "
+"you will be able to browse your pictures list."
+msgstr ""
+"Sua biblioteca de imagens está vazia no momento. Para preenchê-la com suas "
+"imagens pessoais, adicione uma fonte de imagens. Depois que a fonte for "
+"adicionada, você poderá navegar em sua lista de imagens."
 
 #: /xml/Home.xml
 msgctxt "#31375"
@@ -1641,8 +1721,13 @@ msgstr "Mostrar atalho de widget de 'Configurações'"
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31398"
-msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
-msgstr "É necessário reiniciar o Kodi e '[B] Redefinir as configurações do menu principal e do menu de energia [/B]' nas configurações do skin após a instalação desta versão."
+msgid ""
+"It's necessary to reboot Kodi and '[B]Reset main menu and power menu "
+"settings[/B]' in skin settings after installation of this version."
+msgstr ""
+"É necessário reiniciar o Kodi e '[B] Redefinir as configurações do menu "
+"principal e do menu de energia [/B]' nas configurações do skin após a "
+"instalação desta versão."
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31399"
@@ -1953,8 +2038,12 @@ msgstr "Ativar temas (Dia dos Namorados, Páscoa, Halloween e Natal)"
 
 #: /xml/Home.xml
 msgctxt "#31460"
-msgid "Your library is currently empty.[CR]In order to populate it with your personal media, add  sources and configure them."
-msgstr "Sua biblioteca está vazia no momento. [CR] Para preenchê-la com sua mídia pessoal, adicione fontes e configure-as."
+msgid ""
+"Your library is currently empty.[CR]In order to populate it with your "
+"personal media, add  sources and configure them."
+msgstr ""
+"Sua biblioteca está vazia no momento. [CR] Para preenchê-la com sua mídia "
+"pessoal, adicione fontes e configure-as."
 
 #: /xml/Variables.xml
 msgctxt "#31461"
@@ -1974,7 +2063,9 @@ msgstr "Não há transmissão neste dia"
 #: /xml/SkinSettings.xml
 msgctxt "#31464"
 msgid "Automatically show music video info at beginning and end of playing"
-msgstr "Mostrar automaticamente informações do videoclipe no início e no final da reprodução"
+msgstr ""
+"Mostrar automaticamente informações do videoclipe no início e no final da "
+"reprodução"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31465"
@@ -2109,7 +2200,8 @@ msgstr "Filmes do set de filmagem"
 #: /xml/Custom_1132_MoviesSetsInfo.xml
 msgctxt "#31491"
 msgid "Press [B]DOWN[/B] to show info from selected movie"
-msgstr "Pressione [B] PARA BAIXO [/B] para mostrar informações do filme selecionado"
+msgstr ""
+"Pressione [B] PARA BAIXO [/B] para mostrar informações do filme selecionado"
 
 #: /xml/Variables.xml
 msgctxt "#31492"
@@ -2228,3 +2320,301 @@ msgstr "Grupos de canais"
 msgctxt "#31551"
 msgid "German Telecast Offers"
 msgstr "German Telecast Offers"
+
+msgctxt "#31552"
+msgid "Also apply to radio and internet station logos"
+msgstr "Também se aplica a logotipos de estações de rádio e internet"
+
+msgctxt "#31553"
+msgid "Use poster view for music video widgets"
+msgstr "Use a visualização de pôster para widgets de videoclipe"
+
+msgctxt "#31554"
+msgid "Show year of publication in title"
+msgstr "Mostrar ano de publicação no título"
+
+msgctxt "#31555"
+msgid "Optional icons and fanart packs"
+msgstr "Ícones opcionais e pacotes de fanarts"
+
+msgctxt "#31556"
+msgid "Reboot from NAND (Android)"
+msgstr "Reinicializar a partir de NAND (Android)"
+
+msgctxt "#31557"
+msgid "Restart Kodi"
+msgstr "Reinicie o Kodi"
+
+msgctxt "#31558"
+msgid "Addon-ID"
+msgstr "ID do complemento"
+
+msgctxt "#31559"
+msgid "Platform"
+msgstr "Plataforma"
+
+msgctxt "#31560"
+msgid "Forced Views"
+msgstr "Visualizações forçadas"
+
+msgctxt "#31561"
+msgid "Show PVR related Artworks"
+msgstr "Mostrar obras de arte relacionadas a PVR"
+
+msgctxt "#31562"
+msgid "PVR Artwork Configuration"
+msgstr "Configuração da arte do PVR"
+
+msgctxt "#31563"
+msgid "Show date"
+msgstr "Mostrar data"
+
+msgctxt "#31564"
+msgid "Top Bar"
+msgstr "Barra superior"
+
+msgctxt "#31565"
+msgid "Bottom Bar"
+msgstr "Barra inferior"
+
+msgctxt "#31566"
+msgid "Media"
+msgstr "meios de comunicação"
+
+msgctxt "#31567"
+msgid "Kodi/Distribution Logo"
+msgstr "Kodi/Logotipo de Distribuição"
+
+msgctxt "#31568"
+msgid "LibreELEC"
+msgstr "LibreELEC"
+
+msgctxt "#31569"
+msgid "CoreELEC"
+msgstr "CoreELEC"
+
+msgctxt "#31570"
+msgid "Show extended Power Menu"
+msgstr "Mostrar menu de energia estendido"
+
+msgctxt "#31571"
+msgid "Prefer Fanart in EPG preview window if available"
+msgstr "Prefira Fanart na janela de visualização do EPG, se disponível"
+
+msgctxt "#31572"
+msgid "Upcoming episodes"
+msgstr "Próximos episódios"
+
+msgctxt "#31573"
+msgid "Show MPAA rating"
+msgstr "Mostrar classificação MPAA"
+
+msgctxt "#31574"
+msgid "(until "
+msgstr "(até "
+
+msgctxt "#31575"
+msgid "Show Color Depth"
+msgstr "Mostrar profundidade de cor"
+
+msgctxt "#31576"
+msgid "Show additional Infos within the PVR widgets"
+msgstr "Mostrar informações adicionais nos widgets PVR"
+
+msgctxt "#31577"
+msgid "Close Video OSD automatically after"
+msgstr "Feche o OSD de vídeo automaticamente após"
+
+msgctxt "#31578"
+msgid "disabled"
+msgstr "Desativado"
+
+msgctxt "#31580"
+msgid "3 seconds"
+msgstr "3 segundos"
+
+msgctxt "#31581"
+msgid "5 seconds"
+msgstr "5 segundos"
+
+msgctxt "#31582"
+msgid "7 seconds"
+msgstr "7 segundos"
+
+msgctxt "#31583"
+msgid "10 seconds"
+msgstr "10 segundos"
+
+msgctxt "#31584"
+msgid "15 seconds"
+msgstr "15 segundos"
+
+msgctxt "#31585"
+msgid "Show Channel Numbers"
+msgstr "Mostrar números de canal"
+
+msgctxt "#31586"
+msgid "Show Date of First aired"
+msgstr "Mostrar Data da Primeira Exibição"
+
+msgctxt "#31587"
+msgid "Item Path of Picture Widgets"
+msgstr "Caminho do item dos widgets de imagem"
+
+msgctxt "#31588"
+msgid "Default Action on 'Movie' and 'TV-Show' Widgets"
+msgstr "Ação padrão nos widgets 'Filme' e 'Programa de TV'"
+
+msgctxt "#31589"
+msgid "Play Item"
+msgstr "Reproduzir item"
+
+msgctxt "#31590"
+msgid "Show Info"
+msgstr "Mostrar informações"
+
+msgctxt "#31591"
+msgid "Sort Order"
+msgstr "Ordem de classificação"
+
+msgctxt "#31592"
+msgid "Show Path Navigation (Breadcrumbs) in List Views"
+msgstr "Mostrar navegação de caminho (migalhas de pão) em exibições de lista"
+
+msgctxt "#31593"
+msgid "Show only 'current item / item count' Information"
+msgstr "Mostrar apenas informações de 'item atual/contagem de itens'"
+
+msgctxt "#31594"
+msgid "Set Animated Poster"
+msgstr "Definir Pôster Animado"
+
+msgctxt "#31595"
+msgid "Remove Animated Poster"
+msgstr "Remover pôster animado"
+
+msgctxt "#31596"
+msgid "Animated Poster removed"
+msgstr "Pôster animado removido"
+
+msgctxt "#31597"
+msgid "Animated Poster added"
+msgstr "Pôster animado adicionado"
+
+msgctxt "#31598"
+msgid "Local Path to animated Poster Folder"
+msgstr "Caminho local para a pasta de pôsteres animados"
+
+msgctxt "#31599"
+msgid ""
+"The folder of the animated Poster Collection was not defined yet. Define a "
+"Folder on the local File System containing animated Posters within the Skin "
+"Settings."
+msgstr ""
+"A pasta da coleção de pôsteres animados ainda não foi definida. Defina uma "
+"pasta no sistema de arquivos local contendo pôsteres animados nas "
+"configurações de capa."
+
+msgctxt "#31600"
+msgid "Could not assign animated Poster"
+msgstr "Não foi possível atribuir o pôster animado"
+
+msgctxt "#31601"
+msgid "Hit Probability: "
+msgstr "Probabilidade de acerto: "
+
+#: SkinSettings.xml
+msgctxt "#31602"
+msgid "'Rotten Tomatoes' Rating Category"
+msgstr "Categoria de classificação 'Rotten Tomatoes'"
+
+#: SkinSettings.xml
+msgctxt "#31603"
+msgid "Tomatometer all Critics"
+msgstr "Tomatômetro todos os críticos"
+
+#: SkinSettings.xml
+msgctxt "#31604"
+msgid "Tomatometer average Critics"
+msgstr "Críticos médios do Tomatômetro"
+
+#: SkinSettings.xml
+msgctxt "#31605"
+msgid "Tomatometer all Audience"
+msgstr "Tomatometer todos os públicos"
+
+#: SkinSettings.xml
+msgctxt "#31606"
+msgid "Tomatometer average Audience"
+msgstr "Público médio do Tomatometer"
+
+#: SkinSettings.xml
+msgctxt "#31607"
+msgid "Use simplified Video OSD Navigation"
+msgstr "Use a navegação OSD de vídeo simplificada"
+
+msgctxt "#31608"
+msgid "Previous seen Channel"
+msgstr "Canal visto anteriormente"
+
+#: Includes_MediaMenu.xml
+msgctxt "#31609"
+msgid "Show PVR Channel Status"
+msgstr "Mostrar status do canal PVR"
+
+#: DialogPlayerProcessInfo
+msgctxt "#31610"
+msgid "Display Mode"
+msgstr "Modo de exibição"
+
+msgctxt "#31611"
+msgid "Eoft & Gamut"
+msgstr "Eoft & Gamut"
+
+msgctxt "#31612"
+msgid "Color Depth"
+msgstr "Profundidade de cor"
+
+#: SkinSettings.xml
+msgctxt "#31613"
+msgid "Display Media Time"
+msgstr "Exibir tempo de mídia"
+
+msgctxt "#31614"
+msgid "current Time / total Time"
+msgstr "Tempo atual / Tempo total"
+
+msgctxt "#31615"
+msgid "Remaining Time"
+msgstr "Tempo restante"
+
+#: SkinSettings.xml
+msgctxt "#31616"
+msgid "Use Background for PVR Channel Icons"
+msgstr "Usar plano de fundo para ícones de canal PVR"
+
+#: Custom_1127_settingsTVWidgets.xml
+msgctxt "#31617"
+msgid "Saved Search Results"
+msgstr "Resultados de pesquisa salvos"
+
+#: SkinSettings.xml
+msgctxt "#31618"
+msgid "Use full Height for Channel and Program OSD"
+msgstr "Use altura total para canal e programa OSD"
+
+#: Font.xml
+msgctxt "#31619"
+msgid "Economica based"
+msgstr "Base econômica"
+
+#. viewtype name
+#: /xml/View_510_Flix.xml
+msgctxt "#31620"
+msgid "Flix Landscape"
+msgstr "Flix Paisagem"
+
+#: Variables.xml (SkinSettings.xml)
+msgctxt "#31621"
+msgid "Visualization of the PVR and TV screen related settings."
+msgstr "Visualização das configurações relacionadas ao PVR e à tela da TV."

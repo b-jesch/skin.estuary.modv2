@@ -36,7 +36,7 @@ supports animated poster only.
 
 ### 4.0.2+nexus ###
 - .4
-  -* update translations for french, czech and hebrew languages (thanks C4Wiz)
+  * update translations for all languages (thanks for the bunch of work to C4Wiz)
 
 
 - .3
