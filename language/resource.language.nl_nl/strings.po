@@ -7,14 +7,16 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Guilouz\n"
-"Language-Team: Dutch (Netherlands)\n"
+"PO-Revision-Date: 2022-09-24 12:26+0000\n"
+"Last-Translator: C4Wiz <c4wiz@live.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/skin-estuary-modv2/"
+"glossary/nl/>\n"
+"Language: nl_nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl_NL\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: /xml/Home.xml /xml/DialogSeekBar.xml
 msgctxt "#31000"
@@ -123,7 +125,8 @@ msgctxt "#31020"
 msgid "Actions"
 msgstr "Acties"
 
-#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml /xml/Includes_MediaMenu.xml /xml/EventLog.xml
+#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml
+#: /xml/Includes_MediaMenu.xml /xml/EventLog.xml
 msgctxt "#31021"
 msgid "Misc options"
 msgstr "Overige opties"
@@ -145,8 +148,12 @@ msgstr "Kies waardering voor mediabestanden"
 
 #: /xml/DialogFavourites.xml
 msgctxt "#31025"
-msgid "No favourites found. You can add any item from media views to this list by using the context menu."
-msgstr "Geen favorieten gevonden. Je kunt elk item uit media-weergaven toevoegen aan deze lijst met het contextmenu."
+msgid ""
+"No favourites found. You can add any item from media views to this list by "
+"using the context menu."
+msgstr ""
+"Geen favorieten gevonden. Je kunt elk item uit media-weergaven toevoegen aan "
+"deze lijst met het contextmenu."
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31026"
@@ -181,14 +188,15 @@ msgstr "Volgorde"
 #: /xml/DialogVideoInfo.xml /xml/DialogSongInfo.xml
 msgctxt "#31033"
 msgid "Your rating"
-msgstr "Jouw waardering"
+msgstr "Uw beoordeling"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31034"
 msgid "Extended info"
 msgstr "Uitgebreide info"
 
-#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
+#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml
+#: /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
 msgctxt "#31035"
 msgid "Pages"
 msgstr "Pagina's"
@@ -220,8 +228,14 @@ msgstr "Afspeellijstopties"
 
 #: /xml/SmartPlaylistEditor.xml
 msgctxt "#31043"
-msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
-msgstr "Stel het type in en voeg regels toe om een slimme afspeellijst te maken. Deze afspeellijsten zijn dynamisch en bevatten alle media-items vanuit je database die voldoen aan de gekozen regels."
+msgid ""
+"Set the type and add rules to create a smart playlist. These playlists are "
+"dynamic and include all media items from your database which apply to your "
+"chosen rules."
+msgstr ""
+"Stel het type in en voeg regels toe om een slimme afspeellijst te maken. "
+"Deze afspeellijsten zijn dynamisch en bevatten alle media-items vanuit je "
+"database die voldoen aan de gekozen regels."
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31044"
@@ -432,13 +446,24 @@ msgstr "Voor hier tekst in..."
 
 #: /xml/Home.xml
 msgctxt "#31104"
-msgid "Your library is currently empty. In order to populate it with your personal media, enter \"Files\" section, add a media source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "Je bibliotheek is momenteel leeg. Om deze te vullen met je eigen media, ga naar de \"Bestanden\" sectie, voeg een medialocatie toe en configureer deze. Nadat de bron is toegevoegd en geïndexeerd, kun je je bibliotheek bekijken."
+msgid ""
+"Your library is currently empty. In order to populate it with your personal "
+"media, enter \"Files\" section, add a media source and configure it. After "
+"the source has been added and indexed you will be able to browse your "
+"library."
+msgstr ""
+"Je bibliotheek is momenteel leeg. Om deze te vullen met je eigen media, ga "
+"naar de \"Bestanden\" sectie, voeg een medialocatie toe en configureer deze. "
+"Nadat de bron is toegevoegd en geïndexeerd, kun je je bibliotheek bekijken."
 
 #: /xml/Home.xml
 msgctxt "#31105"
-msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
-msgstr "Voeg video bronnen toe en stel het juiste contenttype in om je videobibliotheken te vullen."
+msgid ""
+"Add video sources and set the appropriate content type in order to populate "
+"your video libraries."
+msgstr ""
+"Voeg video bronnen toe en stel het juiste contenttype in om je "
+"videobibliotheken te vullen."
 
 #: /xml/Variables.xml
 msgctxt "#31106"
@@ -458,8 +483,12 @@ msgstr "Ga naar bestandensectie"
 
 #: /xml/Home.xml
 msgctxt "#31111"
-msgid "View your personal pictures or download one of the many image add-ons from the official repository."
-msgstr "Toon je persoonlijke afbeeldingen of download één van de vele afbeeldingsadd-ons uit de officiële repository."
+msgid ""
+"View your personal pictures or download one of the many image add-ons from "
+"the official repository."
+msgstr ""
+"Toon je persoonlijke afbeeldingen of download één van de vele afbeeldingsadd-"
+"ons uit de officiële repository."
 
 #: /xml/VideoOSD.xml
 msgctxt "#31112"
@@ -498,13 +527,21 @@ msgstr "Ga naar add-on verkenner"
 
 #: /xml/Home.xml
 msgctxt "#31119"
-msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
-msgstr "Je hebt nog geen add-ons geïnstalleerd. Bezoek onze add-on verkenner om door onze collectie te browsen en je Kodi-beleving te verbeteren."
+msgid ""
+"You do not have any add-ons installed yet. Visit our add-on browser to "
+"browse through our collection and improve your Kodi experience."
+msgstr ""
+"Je hebt nog geen add-ons geïnstalleerd. Bezoek onze add-on verkenner om door "
+"onze collectie te browsen en je Kodi-beleving te verbeteren."
 
 #: /xml/Home.xml
 msgctxt "#31120"
-msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
-msgstr "Je hebt nog geen weerprovider ingesteld. Om weerberichten te zien, kies een weerprovider en stel de locatie in."
+msgid ""
+"You did not set up a weather provider yet. In order to view weather "
+"information, choose a weather provider and set up your location."
+msgstr ""
+"Je hebt nog geen weerprovider ingesteld. Om weerberichten te zien, kies een "
+"weerprovider en stel de locatie in."
 
 #: /xml/Home.xml
 msgctxt "#31121"
@@ -544,12 +581,14 @@ msgstr "Bijdragers"
 #: /xml/Variables.xml
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
-msgstr "Algemene instellingen die van toepassing zijn op alle onderdelen van de skin."
+msgstr ""
+"Algemene instellingen die van toepassing zijn op alle onderdelen van de skin."
 
 #: /xml/Variables.xml
 msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Hoofdmenu gerelateerde instellingen: Configureer het homescreen naar wens."
+msgstr ""
+"Hoofdmenu gerelateerde instellingen: Configureer het homescreen naar wens."
 
 #: /shortcuts/addons.DATA.xml
 msgctxt "#31131"
@@ -608,8 +647,13 @@ msgstr "Afspeelsnelheid"
 
 #: /xml/Home.xml
 msgctxt "#31143"
-msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "Je hebt nog geen PVR ingesteld. Om gebruik te kunnen maken van PVR, kies een PVR-cliënt addon en configureer deze. Bezoek https://kodi.wiki/view/PVR om meer te weten tekomen."
+msgid ""
+"You did not set up PVR yet. In order to use PVR, choose a PVR client addon "
+"and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr ""
+"Je hebt nog geen PVR ingesteld. Om gebruik te kunnen maken van PVR, kies een "
+"PVR-cliënt addon en configureer deze. Bezoek https://kodi.wiki/view/PVR om "
+"meer te weten tekomen."
 
 #: /xml/Home.xml
 msgctxt "#31144"
@@ -648,8 +692,12 @@ msgstr "Willekeurige muziekvideo's"
 
 #: /xml/Includes.xml
 msgctxt "#31153"
-msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
-msgstr "Je hebt nog geen enkele add-on van dit type geïnstalleerd. Bezoek de add-onverkenner om add-ons te downloaden gecreëerd door onze community."
+msgid ""
+"You do not have any add-ons of this type installed. Enter the add-on browser "
+"to download add-ons created by our community."
+msgstr ""
+"Je hebt nog geen enkele add-on van dit type geïnstalleerd. Bezoek de add-"
+"onverkenner om add-ons te downloaden gecreëerd door onze community."
 
 #: /xml/MyWeather.xml
 msgctxt "#31154"
@@ -693,8 +741,12 @@ msgstr "Numeriek pad"
 
 #: /xml/Home.xml
 msgctxt "#31162"
-msgid "Play your personal games or download one of the many game add-ons from the official repository."
-msgstr "Speel je persoonlijke spellen, of download één van de vele speladd-ons uit de officiële repository."
+msgid ""
+"Play your personal games or download one of the many game add-ons from the "
+"official repository."
+msgstr ""
+"Speel je persoonlijke spellen, of download één van de vele speladd-ons uit "
+"de officiële repository."
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31163"
@@ -713,8 +765,12 @@ msgstr "Voeg media bronnen toe"
 
 #: /xml/Custom_1120_SourcesDialog.xml
 msgctxt "#31202"
-msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
+msgid ""
+"Shortcuts to the \"Files\" sections of each media type. Go there to add "
+"additional sources for your databases."
 msgstr ""
+"Snelkoppelingen naar de secties \"Bestanden\" van elk mediatype. Ga daarheen "
+"om extra bronnen voor uw databases toe te voegen."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31203"
@@ -738,7 +794,8 @@ msgstr "Hoofdmenu instellingen resetten"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31207"
-msgid "Are you sure you want to reset display of all menu items back to default ?"
+msgid ""
+"Are you sure you want to reset display of all menu items back to default ?"
 msgstr "Hoofdmenu instellingen terugzetten? Weet u dit zeker?"
 
 #: /xml/SkinSettings.xml
@@ -1294,7 +1351,7 @@ msgstr "Extra instellingen"
 #: /xml/SkinSettings.xml
 msgctxt "#31319"
 msgid "Show, add and remove animated posters"
-msgstr ""
+msgstr "Geanimeerde posters weergeven, toevoegen en verwijderen"
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#31320"
@@ -1563,13 +1620,23 @@ msgstr "Spelbronnen"
 
 #: /xml/Home.xml
 msgctxt "#31373"
-msgid "Your games library is currently empty. In order to populate it with your personal games, add a games source. After the source has been added you will be able to browse your games list. You will also need to install necessary add-ons for games."
+msgid ""
+"Your games library is currently empty. In order to populate it with your "
+"personal games, add a games source. After the source has been added you will "
+"be able to browse your games list. You will also need to install necessary "
+"add-ons for games."
 msgstr "Spelbibliotheek is leeg"
 
 #: /xml/Home.xml
 msgctxt "#31374"
-msgid "Your pictures library is currently empty. In order to populate it with your personal pictures, add a pictures source. After the source has been added you will be able to browse your pictures list."
-msgstr "Afbeeldingsbibliotheek is leeg"
+msgid ""
+"Your pictures library is currently empty. In order to populate it with your "
+"personal pictures, add a pictures source. After the source has been added "
+"you will be able to browse your pictures list."
+msgstr ""
+"Uw fotobibliotheek is momenteel leeg. Om het te vullen met uw persoonlijke "
+"foto's, voegt u een fotobron toe. Nadat de bron is toegevoegd, kunt u door "
+"uw lijst met afbeeldingen bladeren."
 
 #: /xml/Home.xml
 msgctxt "#31375"
@@ -1633,8 +1700,12 @@ msgstr "Instellingen laten zien voor snelkoppelingen widgets"
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31398"
-msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
-msgstr "Kodi dient opnieuw te worden opgestart. Herstel hoofdmenu en powermenu-instellingen binnen de skin-instellingen"
+msgid ""
+"It's necessary to reboot Kodi and '[B]Reset main menu and power menu "
+"settings[/B]' in skin settings after installation of this version."
+msgstr ""
+"Kodi dient opnieuw te worden opgestart. Herstel hoofdmenu en powermenu-"
+"instellingen binnen de skin-instellingen"
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31399"
@@ -1945,7 +2016,9 @@ msgstr "Thema's activeren (Valentijnsdag, Pasen, Halloween en Kerstmis)"
 
 #: /xml/Home.xml
 msgctxt "#31460"
-msgid "Your library is currently empty.[CR]In order to populate it with your personal media, add  sources and configure them."
+msgid ""
+"Your library is currently empty.[CR]In order to populate it with your "
+"personal media, add  sources and configure them."
 msgstr "Bibliotheek is op het moment leeg"
 
 #: /xml/Variables.xml
@@ -2016,32 +2089,32 @@ msgstr "Kanaalgroepen tonen"
 #: /xml/SkinSettings.xml
 msgctxt "#31474"
 msgid "Scope mode for constant image height (CIH) setup"
-msgstr ""
+msgstr "Scope-modus voor instelling van constante beeldhoogte (CIH)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31475"
 msgid "2:35:1 (1920x817)"
-msgstr ""
+msgstr "2:35:1 (1920x817)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31476"
 msgid "2:40:1 (1920x800)"
-msgstr ""
+msgstr "2:40:1 (1920x800)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31477"
 msgid "1:77:1 (1920x1080)"
-msgstr ""
+msgstr "1:77:1 (1920x1080)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31478"
 msgid "1:85:1 (1920x1038)"
-msgstr ""
+msgstr "1:85:1 (1920x1038)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31479"
 msgid "2:37:1 (1920x810)"
-msgstr ""
+msgstr "2:37:1 (1920x810)"
 
 #: /xml/Variables.xml
 msgctxt "#31480"
@@ -2406,8 +2479,13 @@ msgid "Local Path to animated Poster Folder"
 msgstr "In welke map staan de bewegende posters"
 
 msgctxt "#31599"
-msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
-msgstr "Folder voor bewegende posters nog niet aangemaakt. Deze dus aanmaken waar de posters in zitten."
+msgid ""
+"The folder of the animated Poster Collection was not defined yet. Define a "
+"Folder on the local File System containing animated Posters within the Skin "
+"Settings."
+msgstr ""
+"Folder voor bewegende posters nog niet aangemaakt. Deze dus aanmaken waar de "
+"posters in zitten."
 
 msgctxt "#31600"
 msgid "Could not assign animated Poster"
@@ -2493,7 +2571,17 @@ msgid "Use full Height for Channel and Program OSD"
 msgstr "Gebruik de volledige hoogte voor kanaal- en programma-OSD"
 
 #: Font.xml
-
 msgctxt "#31619"
 msgid "Economica based"
 msgstr "Gebaseerd op Economica"
+
+#. viewtype name
+#: /xml/View_510_Flix.xml
+msgctxt "#31620"
+msgid "Flix Landscape"
+msgstr "Flix Landschap"
+
+#: Variables.xml (SkinSettings.xml)
+msgctxt "#31621"
+msgid "Visualization of the PVR and TV screen related settings."
+msgstr "Visualisatie van de PVR- en tv-schermgerelateerde instellingen."
