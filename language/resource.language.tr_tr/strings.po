@@ -7,14 +7,16 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: SnnUntz\n"
-"Language-Team: Turkish (Turkey)\n"
+"PO-Revision-Date: 2022-09-25 13:21+0000\n"
+"Last-Translator: C4Wiz <c4wiz@live.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"skin-estuary-modv2/languages/tr/>\n"
+"Language: tr_tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr_TR\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: /xml/Home.xml /xml/DialogSeekBar.xml
 msgctxt "#31000"
@@ -57,7 +59,6 @@ msgid "Unwatched movies"
 msgstr "İzlenmemiş filmler"
 
 #: Missing string 31108
-
 #: /xml/MyVideoNav.xml
 msgctxt "#31009"
 msgid "Download icons"
@@ -144,7 +145,9 @@ msgstr "Medya öğeleri için gösterilecek derecelendirmeyi seçin"
 #: /xml/DialogFavourites.xml
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
-msgstr "Hiçbir sık kullanılan bulunamadı. İçerik menüsünü kullanarak medya görünümlerindeki herhangi bir öğeyi bu listeye ekleyebilirsiniz."
+msgstr ""
+"Hiçbir sık kullanılan bulunamadı. İçerik menüsünü kullanarak medya "
+"görünümlerindeki herhangi bir öğeyi bu listeye ekleyebilirsiniz."
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31026"
@@ -219,7 +222,10 @@ msgstr "Çalma listesi seçenekleri"
 #: /xml/SmartPlaylistEditor.xml
 msgctxt "#31043"
 msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
-msgstr "Akıllı çalma listesi oluşturmak için kurallar ekleyin ve türünü ayarlayın. Bu çalma listeleri dinamiktir ve seçtiğiniz kuralları veritabanınızdaki tüm medya öğelerine uygular."
+msgstr ""
+"Akıllı çalma listesi oluşturmak için kurallar ekleyin ve türünü ayarlayın. "
+"Bu çalma listeleri dinamiktir ve seçtiğiniz kuralları veritabanınızdaki tüm "
+"medya öğelerine uygular."
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31044"
@@ -249,7 +255,7 @@ msgstr "Özeti göster"
 #: /xml/SkinSettings.xml
 msgctxt "#31051"
 msgid "Enable Splash screen"
-msgstr ""
+msgstr "Açılış ekranını etkinleştir"
 
 #: /xml/Includes.xml
 msgctxt "#31052"
@@ -443,12 +449,18 @@ msgstr "Metni buraya girin..."
 #: /xml/Home.xml
 msgctxt "#31104"
 msgid "Your video library is currently empty. In order to populate it with your personal media, add a video source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "Kitaplığınız şu anda boş. Kitaplığınızı kişisel medyalarınız ile doldurmak için \"Dosyalar\" bölümüne girdikten sonra bir medya kaynağını ekleyin ve yapılandırın. Kaynak eklendikten ve içeriği tarandıktan sonra kitaplığınıza gözatabilirsiniz."
+msgstr ""
+"Kitaplığınız şu anda boş. Kitaplığınızı kişisel medyalarınız ile doldurmak "
+"için \"Dosyalar\" bölümüne girdikten sonra bir medya kaynağını ekleyin ve "
+"yapılandırın. Kaynak eklendikten ve içeriği tarandıktan sonra kitaplığınıza "
+"gözatabilirsiniz."
 
 #: /xml/Home.xml
 msgctxt "#31105"
 msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
-msgstr "Video kitaplığınızı doldurmak için video kaynakları ekleyin ve  uygun içerik türünü ayarlayın."
+msgstr ""
+"Video kitaplığınızı doldurmak için video kaynakları ekleyin ve  uygun içerik "
+"türünü ayarlayın."
 
 #: /xml/Variables.xml
 msgctxt "#31106"
@@ -464,12 +476,17 @@ msgstr "Geniş Liste"
 #: /xml/Home.xml
 msgctxt "#31110"
 msgid "Your music library is currently empty. In order to populate it with your personal media, add a music source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "Müzik kitaplığınız şu anda boş. Kişisel medyanızla doldurmak için bir müzik kaynağı ekleyin ve yapılandırın. Kaynak eklendikten ve dizine eklendikten sonra kitaplığınıza göz atabilirsiniz."
+msgstr ""
+"Müzik kitaplığınız şu anda boş. Kişisel medyanızla doldurmak için bir müzik "
+"kaynağı ekleyin ve yapılandırın. Kaynak eklendikten ve dizine eklendikten "
+"sonra kitaplığınıza göz atabilirsiniz."
 
 #: /xml/Home.xml
 msgctxt "#31111"
 msgid "View your personal pictures or download one of the many image add-ons from the official repository."
-msgstr "Kişisel resimlerinizi görüntüleyin veya resmi depodaki birçok resim eklentisinden birini indirin."
+msgstr ""
+"Kişisel resimlerinizi görüntüleyin veya resmi depodaki birçok resim "
+"eklentisinden birini indirin."
 
 #: /xml/VideoOSD.xml
 msgctxt "#31112"
@@ -509,12 +526,17 @@ msgstr "Eklenti tarayıcısına girin"
 #: /xml/Home.xml
 msgctxt "#31119"
 msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
-msgstr "Henüz yüklü herhangi bir eklenti yok. Kodi deneyiminizi geliştirmek için eklenti tarayıcımızı ziyaret edip koleksiyonumuza gözatın."
+msgstr ""
+"Henüz yüklü herhangi bir eklenti yok. Kodi deneyiminizi geliştirmek için "
+"eklenti tarayıcımızı ziyaret edip koleksiyonumuza gözatın."
 
 #: /xml/Home.xml
 msgctxt "#31120"
 msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
-msgstr "Henüz bir hava durumu bilgisi sağlayıcı ayarlamamışsınız. Hava durumu bilgilerini görüntülemek için, bir hava durumu bilgisi sağlayıcı seçin ve konumunuzu ayarlayın."
+msgstr ""
+"Henüz bir hava durumu bilgisi sağlayıcı ayarlamamışsınız. Hava durumu "
+"bilgilerini görüntülemek için, bir hava durumu bilgisi sağlayıcı seçin ve "
+"konumunuzu ayarlayın."
 
 #: /xml/Home.xml
 msgctxt "#31121"
@@ -539,7 +561,7 @@ msgstr "Haritada resimleri göster"
 #: /xml/Variables.xml
 msgctxt "#31125"
 msgid "is"
-msgstr ""
+msgstr "dır-dir"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31126"
@@ -564,7 +586,8 @@ msgstr "Genel ayarlar dış görünümün tüm alanlarına uygulanır."
 #: /xml/Variables.xml
 msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Ana menü ile ilgili ayarlar: Ana ekranı kendi zevkinize göre yapılandırın."
+msgstr ""
+"Ana menü ile ilgili ayarlar: Ana ekranı kendi zevkinize göre yapılandırın."
 
 #: /shortcuts/addons.DATA.xml
 msgctxt "#31131"
@@ -624,7 +647,10 @@ msgstr "Oynatma hızı"
 #: /xml/Home.xml
 msgctxt "#31143"
 msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "Henüz hiçbir PVR ayarlanmamış. PVR özelliğini kullanabilmek için bir PVR istemci eklentisi seçin ve yapılandırın. Daha fazlasını öğrenmek için lütfen http://kodi.wiki/view/PVR adresini ziyaret edin."
+msgstr ""
+"Henüz hiçbir PVR ayarlanmamış. PVR özelliğini kullanabilmek için bir PVR "
+"istemci eklentisi seçin ve yapılandırın. Daha fazlasını öğrenmek için lütfen "
+"http://kodi.wiki/view/PVR adresini ziyaret edin."
 
 #: /xml/Home.xml
 msgctxt "#31144"
@@ -664,7 +690,9 @@ msgstr "Rastgele müzik videosu"
 #: /xml/Includes.xml
 msgctxt "#31153"
 msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
-msgstr "Bu türde yüklü bir eklentiniz yok. Eklenti tarayıcısına girip topluluğumuzun ürettiği eklentileri indirebilirsiniz."
+msgstr ""
+"Bu türde yüklü bir eklentiniz yok. Eklenti tarayıcısına girip topluluğumuzun "
+"ürettiği eklentileri indirebilirsiniz."
 
 #: /xml/MyWeather.xml
 msgctxt "#31154"
@@ -709,7 +737,9 @@ msgstr "Sayısal tuş takımı"
 #: /xml/Home.xml
 msgctxt "#31162"
 msgid "Play your personal games or download one of the many game add-ons from the official repository."
-msgstr "Kişisel oyunlarınızı oynayın veya resmi depodaki birçok oyun eklentisinden birini indirin."
+msgstr ""
+"Kişisel oyunlarınızı oynayın veya resmi depodaki birçok oyun eklentisinden "
+"birini indirin."
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31163"
@@ -729,7 +759,9 @@ msgstr "Medya kaynakları ekle"
 #: /xml/Custom_1120_SourcesDialog.xml
 msgctxt "#31202"
 msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
-msgstr "Her medya türünden \"Dosyalar\" bölümlerine kısayollar. Veritabanlarınıza ek kaynaklar eklemek için oraya gidin."
+msgstr ""
+"Her medya türünden \"Dosyalar\" bölümlerine kısayollar. Veritabanlarınıza ek "
+"kaynaklar eklemek için oraya gidin."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31203"
@@ -754,7 +786,9 @@ msgstr "Ana menü ayarlarını sıfırlama"
 #: /xml/SkinSettings.xml
 msgctxt "#31207"
 msgid "Are you sure you want to reset display of all menu items back to default ?"
-msgstr "Tüm menü öğelerinin görüntüsünü varsayılana sıfırlamak istediğinizden emin misiniz?"
+msgstr ""
+"Tüm menü öğelerinin görüntüsünü varsayılana sıfırlamak istediğinizden emin "
+"misiniz?"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31208"
@@ -1309,7 +1343,7 @@ msgstr "Ek ayarlar."
 #: /xml/SkinSettings.xml
 msgctxt "#31319"
 msgid "Show, add and remove animated posters"
-msgstr ""
+msgstr "Animasyonlu posterleri gösterin, ekleyin ve kaldırın"
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#31320"
@@ -1507,7 +1541,6 @@ msgid "Forced view for music videos"
 msgstr "Müzik videoları için görünümü zorla"
 
 #: 40159 Empty String
-
 #: /xml/Variables.xml
 msgctxt "#31360"
 msgid "Power menu-related settings: Configure it to your likings."
@@ -1556,7 +1589,9 @@ msgstr "Widget sıralama yönü"
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31369"
 msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
-msgstr "Açıklamayı okumak için [B]OK[/B] tuşuna basın veya geri küçük resmi göstermek için [B]Sol[/B] tuşa basın."
+msgstr ""
+"Açıklamayı okumak için [B]OK[/B] tuşuna basın veya geri küçük resmi "
+"göstermek için [B]Sol[/B] tuşa basın."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31370"
@@ -1576,12 +1611,18 @@ msgstr "Oyun kaynakları"
 #: /xml/Home.xml
 msgctxt "#31373"
 msgid "Your games library is currently empty. In order to populate it with your personal games, add a games source. After the source has been added you will be able to browse your games list. You will also need to install necessary add-ons for games."
-msgstr "Oyun kitaplığınız şu an boş. Kişisel oyunlarınızla doldurmak için bir oyun kaynağı ekleyin. Kaynak eklendikten sonra, oyun listene göz atabilirsiniz. Ayrıca oyunlar için gerekli eklentileri kurmanız gerekecektir."
+msgstr ""
+"Oyun kitaplığınız şu an boş. Kişisel oyunlarınızla doldurmak için bir oyun "
+"kaynağı ekleyin. Kaynak eklendikten sonra, oyun listene göz atabilirsiniz. "
+"Ayrıca oyunlar için gerekli eklentileri kurmanız gerekecektir."
 
 #: /xml/Home.xml
 msgctxt "#31374"
 msgid "Your pictures library is currently empty. In order to populate it with your personal pictures, add a pictures source. After the source has been added you will be able to browse your pictures list."
-msgstr "Resimler kitaplığınız şu anda boş. Kişisel fotoğraflarınızla doldurmak için bir resim kaynağı ekleyin. Kaynak eklendikten sonra resimler listesine göz atabilirsiniz."
+msgstr ""
+"Resimler kitaplığınız şu anda boş. Kişisel fotoğraflarınızla doldurmak için "
+"bir resim kaynağı ekleyin. Kaynak eklendikten sonra resimler listesine göz "
+"atabilirsiniz."
 
 #: /xml/Home.xml
 msgctxt "#31375"
@@ -1646,7 +1687,10 @@ msgstr "'Ayarlar' kısayol widget'ini göster"
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31398"
 msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
-msgstr "Bu sürümü yükledikten sonra Kodi'yi yeniden başlatmanız ve dış görünüm ayarlarından '[B]ana menü ve güç menüsü ayarlarını sıfırlamanız gerekiyor.[/B]'"
+msgstr ""
+"Bu sürümü yükledikten sonra Kodi'yi yeniden başlatmanız ve dış görünüm "
+"ayarlarından '[B]ana menü ve güç menüsü ayarlarını sıfırlamanız "
+"gerekiyor.[/B]'"
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31399"
@@ -1758,17 +1802,17 @@ msgstr "İsteğe bağlı eklentiler"
 #: /xml/Variables.xml
 msgctxt "#31420"
 msgid "Directed by"
-msgstr ""
+msgstr "Yöneten"
 
 #: /xml/Variables.xml
 msgctxt "#31421"
 msgid "Similar to"
-msgstr ""
+msgstr "Benzer"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31422"
 msgid "Play trailers in full screen"
-msgstr ""
+msgstr "Fragmanları tam ekranda oynatın"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31423"
@@ -1953,12 +1997,15 @@ msgstr "Programı seç"
 #: /xml/SkinSettings.xml
 msgctxt "#31459"
 msgid "Enable themes (Valentine's Day, Easter, Halloween & Christmas)"
-msgstr "Temaları etkinleştir (Sevgililer Günü, Paskalya, Cadılar Bayramı & Noel)"
+msgstr ""
+"Temaları etkinleştir (Sevgililer Günü, Paskalya, Cadılar Bayramı & Noel)"
 
 #: /xml/Home.xml
 msgctxt "#31460"
 msgid "Your library is currently empty.[CR]In order to populate it with your personal media, add  sources and configure them."
-msgstr "Kitaplığınız şu anda boş.[CR]Kişisel medyanızla doldurmak için kaynakları ekleyin ve yapılandırın."
+msgstr ""
+"Kitaplığınız şu anda boş.[CR]Kişisel medyanızla doldurmak için kaynakları "
+"ekleyin ve yapılandırın."
 
 #: /xml/Variables.xml
 msgctxt "#31461"
@@ -1978,7 +2025,8 @@ msgstr "Bugün yayın yok"
 #: /xml/SkinSettings.xml
 msgctxt "#31464"
 msgid "Automatically show music video info at beginning and end of playing"
-msgstr "Müzik video bilgisini oynatmanın başında ve sonunda otomatik olarak göster"
+msgstr ""
+"Müzik video bilgisini oynatmanın başında ve sonunda otomatik olarak göster"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31465"
@@ -2079,3 +2127,461 @@ msgstr "Derecelendirmelerim metin rengi"
 msgctxt "#31484"
 msgid "Loading..."
 msgstr "Yükleniyor..."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31485"
+msgid "Parental control related settings."
+msgstr "Ebeveyn kontrolü ile ilgili ayarlar."
+
+#: /xml/Custom_1101_SettingsList.xml
+msgctxt "#31486"
+msgid "Select Resolution"
+msgstr "Çözünürlük Seç"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31487"
+msgid "Date added"
+msgstr "Ekleme Tarihi"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31488"
+msgid "Show extended info"
+msgstr "Genişletilmiş bilgileri göster"
+
+#: /xml/Variables.xml
+msgctxt "#31489"
+msgid "By"
+msgstr "İle"
+
+#: /xml/Variables.xml
+msgctxt "#31490"
+msgid "Movies from movie set"
+msgstr "Film setinden filmler"
+
+#: /xml/Custom_1132_MoviesSetsInfo.xml
+msgctxt "#31491"
+msgid "Press [B]DOWN[/B] to show info from selected movie"
+msgstr "Seçilen filmden bilgileri göstermek için [B]AŞAĞI[/B] düğmesine basın"
+
+#: /xml/Variables.xml
+msgctxt "#31492"
+msgid "Lists settings"
+msgstr "Liste ayarları"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31493"
+msgid "Show Actors list"
+msgstr "Aktör listesini göster"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#31494"
+msgid "Episode count"
+msgstr "bölüm sayısı"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31495"
+msgid "Movies from director"
+msgstr "Yönetmenden filmler"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31496"
+msgid "Similar movies"
+msgstr "benzer filmler"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31497"
+msgid "Movies from studio"
+msgstr "Stüdyodan filmler"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31498"
+msgid "Next Up episodes"
+msgstr "Sonraki Bölümler"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31499"
+msgid "Similar TV shows"
+msgstr "Benzer TV şovları"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31500"
+msgid "Fanarts list"
+msgstr "Fanart listesi"
+
+#: /xml/Variables.xml
+msgctxt "#31501"
+msgid "Albums from library"
+msgstr "Kitaplıktan albümler"
+
+#: /xml/Variables.xml
+msgctxt "#31502"
+msgid "Complete discography"
+msgstr "Komple diskografi"
+
+#: /xml/Variables.xml
+msgctxt "#31503"
+msgid "Songs from album"
+msgstr "albümden şarkılar"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#31504"
+msgid "Press [B]OK[/B] to show back thumb"
+msgstr "Başparmağı geri göstermek için [B]Tamam[/B]'e basın"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#31505"
+msgid "Episode of the season"
+msgstr "Sezonun bölümü"
+
+#: /xml/Variables.xml
+msgctxt "#31506"
+msgid "Posters"
+msgstr "Posterler"
+
+#: /xml/Variables.xml
+msgctxt "#31507"
+msgid "Fanarts"
+msgstr "Fanartlar"
+
+#: /xml/Variables.xml
+msgctxt "#31508"
+msgid "Resume playback at"
+msgstr "Oynatmaya devam et"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31509"
+msgid "Press [B]OK[/B] to show biography"
+msgstr "Biyografiyi göstermek için [B]Tamam[/B]'e basın"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31510"
+msgid "Website"
+msgstr "İnternet sitesi"
+
+#: /xml/Variables.xml
+msgctxt "#31511"
+msgid "Role in movie"
+msgstr "filmde rol"
+
+#: /xml/Variables.xml
+msgctxt "#31512"
+msgid "Crew member in movie"
+msgstr "Filmde ekip üyesi"
+
+#: /xml/Variables.xml
+msgctxt "#31513"
+msgid "Role in TV show"
+msgstr "TV şovunda rol"
+
+#: /xml/Variables.xml
+msgctxt "#31514"
+msgid "Crew member in TV show"
+msgstr "TV şovunda ekip üyesi"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31515"
+msgid "Palm Week"
+msgstr "Palmiye Haftası"
+
+msgctxt "#31550"
+msgid "Channel groups"
+msgstr "Kanal grupları"
+
+msgctxt "#31551"
+msgid "German Telecast Offers"
+msgstr "Alman Telecast Teklifleri"
+
+msgctxt "#31552"
+msgid "Also apply to radio and internet station logos"
+msgstr "Radyo ve internet istasyonu logoları için de geçerlidir"
+
+msgctxt "#31553"
+msgid "Use poster view for music video widgets"
+msgstr "Müzik videosu widget'ları için poster görünümünü kullanın"
+
+msgctxt "#31554"
+msgid "Show year of publication in title"
+msgstr "Yayın yılını başlıkta göster"
+
+msgctxt "#31555"
+msgid "Optional icons and fanart packs"
+msgstr "İsteğe bağlı simgeler ve fanart paketleri"
+
+msgctxt "#31556"
+msgid "Reboot from NAND (Android)"
+msgstr "NAND'dan yeniden başlatma (Android)"
+
+msgctxt "#31557"
+msgid "Restart Kodi"
+msgstr "Kodi'yi yeniden başlatın"
+
+msgctxt "#31558"
+msgid "Addon-ID"
+msgstr "Eklenti Kimliği"
+
+msgctxt "#31559"
+msgid "Platform"
+msgstr "platformu"
+
+msgctxt "#31560"
+msgid "Forced Views"
+msgstr "Zorunlu Görüntülemeler"
+
+msgctxt "#31561"
+msgid "Show PVR related Artworks"
+msgstr "PVR ile ilgili Yapıtları Göster"
+
+msgctxt "#31562"
+msgid "PVR Artwork Configuration"
+msgstr "PVR Yapıt Yapılandırması"
+
+msgctxt "#31563"
+msgid "Show date"
+msgstr "Tarihi göster"
+
+msgctxt "#31564"
+msgid "Top Bar"
+msgstr "Üst Çubuk"
+
+msgctxt "#31565"
+msgid "Bottom Bar"
+msgstr "Alt çubuk"
+
+msgctxt "#31566"
+msgid "Media"
+msgstr "medya"
+
+msgctxt "#31567"
+msgid "Kodi/Distribution Logo"
+msgstr "Kodi/Dağıtım Logosu"
+
+msgctxt "#31568"
+msgid "LibreELEC"
+msgstr "LibreELEC"
+
+msgctxt "#31569"
+msgid "CoreELEC"
+msgstr "CoreELEC"
+
+msgctxt "#31570"
+msgid "Show extended Power Menu"
+msgstr "Genişletilmiş Güç Menüsünü göster"
+
+msgctxt "#31571"
+msgid "Prefer Fanart in EPG preview window if available"
+msgstr "Varsa, EPG önizleme penceresinde Fanart'ı tercih edin"
+
+msgctxt "#31572"
+msgid "Upcoming episodes"
+msgstr "Gelecek bölümler"
+
+msgctxt "#31573"
+msgid "Show MPAA rating"
+msgstr "MPAA derecesini göster"
+
+msgctxt "#31574"
+msgid "(until "
+msgstr "(a kadar "
+
+msgctxt "#31575"
+msgid "Show Color Depth"
+msgstr "Renk Derinliğini Göster"
+
+msgctxt "#31576"
+msgid "Show additional Infos within the PVR widgets"
+msgstr "PVR widget'larında ek Bilgiler göster"
+
+msgctxt "#31577"
+msgid "Close Video OSD automatically after"
+msgstr "sonra Video OSD'yi otomatik olarak kapatın."
+
+msgctxt "#31578"
+msgid "disabled"
+msgstr "engelli"
+
+msgctxt "#31580"
+msgid "3 seconds"
+msgstr "3 saniye"
+
+msgctxt "#31581"
+msgid "5 seconds"
+msgstr "5 saniye"
+
+msgctxt "#31582"
+msgid "7 seconds"
+msgstr "7 saniye"
+
+msgctxt "#31583"
+msgid "10 seconds"
+msgstr "10 saniye"
+
+msgctxt "#31584"
+msgid "15 seconds"
+msgstr "15 saniye"
+
+msgctxt "#31585"
+msgid "Show Channel Numbers"
+msgstr "Kanal Numaralarını Göster"
+
+msgctxt "#31586"
+msgid "Show Date of First aired"
+msgstr "İlk Yayınlanma Tarihini Göster"
+
+msgctxt "#31587"
+msgid "Item Path of Picture Widgets"
+msgstr "Resim Widget'larının Öğe Yolu"
+
+msgctxt "#31588"
+msgid "Default Action on 'Movie' and 'TV-Show' Widgets"
+msgstr "\"Film\" ve \"TV Şovu\" Widget'larında Varsayılan İşlem"
+
+msgctxt "#31589"
+msgid "Play Item"
+msgstr "Öğeyi Oynat"
+
+msgctxt "#31590"
+msgid "Show Info"
+msgstr "Bilgi göster"
+
+msgctxt "#31591"
+msgid "Sort Order"
+msgstr "Sıralama düzeni"
+
+msgctxt "#31592"
+msgid "Show Path Navigation (Breadcrumbs) in List Views"
+msgstr "Liste Görünümlerinde Yol Gezinmesini (Breadcrumbs) Göster"
+
+msgctxt "#31593"
+msgid "Show only 'current item / item count' Information"
+msgstr "Yalnızca 'geçerli öğe / öğe sayısı' Bilgilerini göster"
+
+msgctxt "#31594"
+msgid "Set Animated Poster"
+msgstr "Hareketli Poster Ayarla"
+
+msgctxt "#31595"
+msgid "Remove Animated Poster"
+msgstr "Animasyonlu Posteri Kaldır"
+
+msgctxt "#31596"
+msgid "Animated Poster removed"
+msgstr "Animasyonlu Poster kaldırıldı"
+
+msgctxt "#31597"
+msgid "Animated Poster added"
+msgstr "Animasyonlu Poster eklendi"
+
+msgctxt "#31598"
+msgid "Local Path to animated Poster Folder"
+msgstr "Animasyonlu Poster Klasörüne Yerel Yol"
+
+msgctxt "#31599"
+msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
+msgstr ""
+"Animasyonlu Poster Koleksiyonunun klasörü henüz tanımlanmadı. Dış Görünüm "
+"Ayarlarında yerel Dosya Sisteminde animasyonlu Posterler içeren bir Klasör "
+"tanımlayın."
+
+msgctxt "#31600"
+msgid "Could not assign animated Poster"
+msgstr "Animasyonlu Poster atanamadı"
+
+msgctxt "#31601"
+msgid "Hit Probability: "
+msgstr "Vuruş Olasılığı: "
+
+#: SkinSettings.xml
+msgctxt "#31602"
+msgid "'Rotten Tomatoes' Rating Category"
+msgstr "'Çürük Domates' Derecelendirme Kategorisi"
+
+#: SkinSettings.xml
+msgctxt "#31603"
+msgid "Tomatometer all Critics"
+msgstr "Tomatoometer tüm Eleştirmenler"
+
+#: SkinSettings.xml
+msgctxt "#31604"
+msgid "Tomatometer average Critics"
+msgstr "Tomatoometer ortalama Eleştirmenler"
+
+#: SkinSettings.xml
+msgctxt "#31605"
+msgid "Tomatometer all Audience"
+msgstr "Tüm İzleyiciler için Tomatoometer"
+
+#: SkinSettings.xml
+msgctxt "#31606"
+msgid "Tomatometer average Audience"
+msgstr "Tomatometer ortalama İzleyici"
+
+#: SkinSettings.xml
+msgctxt "#31607"
+msgid "Use simplified Video OSD Navigation"
+msgstr "Basitleştirilmiş Video OSD Gezinmesini Kullanın"
+
+msgctxt "#31608"
+msgid "Previous seen Channel"
+msgstr "Önceki Görülen Kanal"
+
+#: Includes_MediaMenu.xml
+msgctxt "#31609"
+msgid "Show PVR Channel Status"
+msgstr "PVR Kanal Durumunu Göster"
+
+#: DialogPlayerProcessInfo
+msgctxt "#31610"
+msgid "Display Mode"
+msgstr "Ekran modu"
+
+msgctxt "#31611"
+msgid "Eoft & Gamut"
+msgstr "Eoft ve Gam"
+
+msgctxt "#31612"
+msgid "Color Depth"
+msgstr "Renk derinliği"
+
+#: SkinSettings.xml
+msgctxt "#31613"
+msgid "Display Media Time"
+msgstr "Medya Zamanını Görüntüle"
+
+msgctxt "#31614"
+msgid "current Time / total Time"
+msgstr "mevcut Zaman / toplam Zaman"
+
+msgctxt "#31615"
+msgid "Remaining Time"
+msgstr "Kalan süre"
+
+#: SkinSettings.xml
+msgctxt "#31616"
+msgid "Use Background for PVR Channel Icons"
+msgstr "PVR Kanal Simgeleri için Arka Plan Kullan"
+
+#: Custom_1127_settingsTVWidgets.xml
+msgctxt "#31617"
+msgid "Saved Search Results"
+msgstr "Kaydedilmiş Arama Sonuçları"
+
+#: SkinSettings.xml
+msgctxt "#31618"
+msgid "Use full Height for Channel and Program OSD"
+msgstr "Kanal ve Program OSD'si için tam Yüksekliği kullanın"
+
+#: Font.xml
+msgctxt "#31619"
+msgid "Economica based"
+msgstr "ekonomik temelli"
+
+#. viewtype name
+#: /xml/View_510_Flix.xml
+msgctxt "#31620"
+msgid "Flix Landscape"
+msgstr "Flix Manzara"
+
+#: Variables.xml (SkinSettings.xml)
+msgctxt "#31621"
+msgid "Visualization of the PVR and TV screen related settings."
+msgstr "PVR ve TV ekranı ile ilgili ayarların görselleştirilmesi."
