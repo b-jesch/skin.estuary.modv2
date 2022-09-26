@@ -25,10 +25,10 @@ The HDR type recognition by filename will be removed if Kodi detects the HDR typ
 
 ### Animated Artwork ###
 
-As the setup of animated artwork was done by skinhelper addon (which was removed from skin) the skin itself has now taken 
+As the setup of animated artwork was done by skinhelper addon (which was removed from skin) the addon "Animated Artwork Module" has now taken 
 the management of those artwork. Animated artwork has some limitations (see Kodi Wiki: https://kodi.wiki/view/Artwork_types#Animated_Artwork). 
-To get this feature work properly, you have to assign a folder within the skin settings, which contains all the artwork. This 
-folder **must** be a folder of your local filesystem. Also you can use network share, which  **must** be mounted to a local mountpoint.
+To get this feature work properly, you have to assign a folder within the addon settings, which contains all the artwork. This 
+folder **must** be a folder of your local filesystem. You can use network share, but this **must** be mounted to a local mountpoint.
 Put all your artwork into this folder. Subfolders are allowed (without nesting). 
 
 If you navigate in your movie library, you'll have a new entry now to (re)assign animated Artwork in the context menu. The skin
