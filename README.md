@@ -37,6 +37,8 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .5
+  * changes on PVR preview images
 
 - .4
   * update translations for all languages (thanks for the bunch of work to C4Wiz)
