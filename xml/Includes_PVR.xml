@@ -122,30 +122,34 @@
 					<fadetime>200</fadetime>
 				</control>
 				<control type="image">
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarInfo]</texture>
 					<fadetime>200</fadetime>
 				</control>
-				<include content="BusyPvrArtworkSpinner">
-					<param name="top" value="165" />
-					<param name="left" value="145" />
-				</include>
 				<control type="group">
 					<left>0</left>
 					<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
 					<control type="image">
-							<width>80</width>
-							<height>80</height>
+							<width>120</width>
+							<height>120</height>
 							<texture flipy="true">overlays/overlay-bg.png</texture>
 						</control>
 					<control type="image">
 						<left>3</left>
 						<top>3</top>
-						<width>48</width>
-						<height>48</height>
+						<width>36</width>
+						<height>36</height>
 						<texture colordiffuse="DDFFFFFF" fallback="defaultnas.png">flags/nas_2.png</texture>
 					</control>
 				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="165" />
+					<param name="left" value="145" />
+				</include>
 			</control>
 			<control type="group">
 				<top>120</top>
@@ -1222,21 +1226,7 @@
 				<bottom>-30</bottom>
 				<height>430</height>
 			</control>
-			<control type="image">
-				<left>25</left>
-				<width>340</width>
-				<height>262</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
-				<fadetime>200</fadetime>
-			</control>
-			<control type="videowindow">
-				<left>25</left>
-				<width>340</width>
-				<height>262</height>
-				<visible>Player.HasVideo</visible>
-				<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
-			</control>
-			<control type="image">
+			<control type="group">
 				<left>25</left>
 				<width>340</width>
 				<height>262</height>
@@ -1244,11 +1234,32 @@
 				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
 				<visible>!Player.HasVideo</visible>
 				<fadetime>200</fadetime>
+				<control type="image">
+					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				</control>
+				<control type="videowindow">
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<visible>Player.HasVideo</visible>
+					<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
+				</control>
+				<control type="image">
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
+					<visible>!Player.HasVideo</visible>
+					<fadetime>200</fadetime>
+				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="91" />
+					<param name="left" value="130" />
+				</include>
 			</control>
-			<include content="BusyPvrArtworkSpinner">
-				<param name="top" value="91" />
-				<param name="left" value="155" />
-			</include>
 			<control type="label">
 				<top>-9</top>
 				<left>395</left>
@@ -1344,27 +1355,28 @@
 				<label>[B]$INFO[Container(11).ListItem.Genre, $LOCALIZE[515] : [COLOR white],[/COLOR]][/B]</label>
 				<scroll>true</scroll>
 			</control>
-			<control type="image">
+			<control type="group">
 				<top>140</top>
 				<left>40</left>
 				<width>340</width>
 				<height>245</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
-				<fadetime>200</fadetime>
+				<control type="image">
+					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				</control>
+				<control type="image">
+					<top>5</top>
+					<left>5</left>
+					<right>5</right>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarOSD]</texture>
+					<fadetime>200</fadetime>
+				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="82" />
+					<param name="left" value="130" />
+				</include>
 			</control>
-			<control type="image">
-				<top>140</top>
-				<left>40</left>
-				<width>340</width>
-				<height>245</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarOSD]</texture>
-				<fadetime>200</fadetime>
-			</control>
-			<include content="BusyPvrArtworkSpinner">
-				<param name="top" value="222" />
-				<param name="left" value="170" />
-			</include>
 			<control type="label">
 				<top>135</top>
 				<left>405</left>
