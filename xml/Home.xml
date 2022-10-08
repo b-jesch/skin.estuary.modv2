@@ -547,37 +547,6 @@
 					<control type="grouplist" id="12001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>12010</pagecontrol>
-						<!--
-						<control type="grouplist" id="12855">
-							<height>390</height>
-							<left>50</left>
-							<right>0</right>
-							<top>36</top>
-							<orientation>horizontal</orientation>
-							<visible>[PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer] + [!Skin.HasSetting(hide_nowrecordingchannel) | !Skin.HasSetting(hide_nextrecordingchannel)]</visible>
-							<align>left</align>
-							<control type="group">
-								<width>674</width>
-								<visible>PVR.IsRecordingTV + !Skin.HasSetting(hide_nowrecordingchannel)</visible>
-								<include content="PVRWidget" condition="!Skin.HasSetting(hide_nowrecordingchannel)">
-									<param name="icon" value="$INFO[PVR.TVNowRecordingChannelIcon]" />
-									<param name="header" value="$LOCALIZE[19158]" />
-									<param name="label1" value="$INFO[PVR.TVNowRecordingDateTime]" />
-									<param name="label2" value="$INFO[PVR.TVNowRecordingTitle][CR][COLOR=grey]$INFO[PVR.TVNowRecordingChannel][/COLOR]" />
-								</include>
-							</control>
-							<control type="group">
-								<width>674</width>
-								<visible>PVR.HasNonRecordingTVTimer + !Skin.HasSetting(hide_nextrecordingchannel)</visible>
-								<include content="PVRWidget" condition="!Skin.HasSetting(hide_nextrecordingchannel)">
-									<param name="icon" value="$INFO[PVR.TVNextRecordingChannelIcon]" />
-									<param name="header" value="$LOCALIZE[19157]" />
-									<param name="label1" value="$INFO[PVR.TVNextRecordingDateTime]" />
-									<param name="label2" value="$INFO[PVR.TVNextRecordingTitle][CR][COLOR=grey]$INFO[PVR.TVNextRecordingChannel][/COLOR]" />
-								</include>
-							</control>
-						</control>
-						-->
 						<include content="WidgetListCategoriesBig" condition="System.HasPVRAddon + !Skin.HasSetting(hide_tvcategories)">
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12900).ListItem.Label, | ]"/>
@@ -599,10 +568,6 @@
 							<param name="list_id" value="12700"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName,: ,]"/>
-							<!--
-							<param name="label" value="$INFO[PVR.NextRecordingChannel]$INFO[PVR.TVNextRecordingDateTime, - ,]" />
-							<param name="label2" value="$INFO[PVR.TVNextRecordingTitle]" />
-							-->
 						</include>
 						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + System.AddonIsEnabled(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
 							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
