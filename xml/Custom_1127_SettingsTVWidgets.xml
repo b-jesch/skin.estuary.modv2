@@ -33,6 +33,13 @@
 						<selected>Skin.HasSetting(hide_recordingtimers)</selected>
 						<onclick>Skin.ToggleSetting(hide_recordingtimers)</onclick>
 					</control>
+					<control type="radiobutton" id="11119">
+						<label> ∟$LOCALIZE[31622]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_disabledtimers)</selected>
+						<onclick>Skin.ToggleSetting(hide_disabledtimers)</onclick>
+						<enable>!Skin.HasSetting(hide_recordingtimers)</enable>
+					</control>
 					<control type="radiobutton" id="11113">
 						<label>$LOCALIZE[31297] : $LOCALIZE[31148]</label>
 						<include>DefaultSettingButton</include>

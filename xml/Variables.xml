@@ -1110,8 +1110,8 @@
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.HasReminder">windows/pvr/bell.png</value>
-		<value condition="ListItem.HasTimerSchedule + ListItem.TimerIsActive">windows/pvr/schedule.png</value>
-		<value condition="ListItem.HasTimer + ListItem.TimerIsActive">windows/pvr/timer.png</value>
+		<value condition="ListItem.HasTimerSchedule + [ListItem.TimerIsActive | String.IsEqual(ListItem.Comment,$LOCALIZE[305])]">windows/pvr/schedule.png</value>
+		<value condition="ListItem.HasTimer + [ListItem.TimerIsActive | String.IsEqual(ListItem.Comment,$LOCALIZE[305])]">windows/pvr/timer.png</value>
 		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">windows/pvr/schedule_disabled.png</value>
 		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">windows/pvr/timer_disabled.png</value>
 		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">windows/pvr/schedule_error.png</value>
@@ -1123,7 +1123,7 @@
 		<value condition="ListItem.IsLive">windows/pvr/live.png</value>
 		<value condition="ListItem.IsPremiere | ListItem.IsNew">windows/pvr/premiered.png</value>
 		<value condition="ListItem.IsFinale">windows/pvr/finished.png</value>
-		<value condition="ListItem.IsEncrypted + !Window.IsVisible(tvguide)">windows/pvr/encrypt.png</value>
+		<value condition="ListItem.IsEncrypted + ![Window.IsVisible(tvguide) | Window.IsVisible(home)]">windows/pvr/encrypt.png</value>
 	</variable>
 	<variable name="PVRTimerIcon">
 		<value condition="ListItem.IsRecording">icons/pvr/PVR-IsRecording.png</value>

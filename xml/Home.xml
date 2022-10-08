@@ -558,8 +558,19 @@
 							<param name="list_id" value="129001"/>
 							<param name="visible" value="Skin.HasSetting(UseSmallerCategories)" />
 						</include>
-						<include content="WidgetListChannels" condition="System.HasPVRAddon + [PVR.HasNonRecordingTVTimer | PVR.IsRecordingTV] + !Skin.HasSetting(hide_recordingtimers)">
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + [PVR.HasNonRecordingTVTimer | PVR.IsRecordingTV] + !Skin.HasSetting(hide_recordingtimers) + Skin.HasSetting(hide_disabledtimers">
 							<param name="content_path" value="pvr://timers/tv/timers/?view=hidedisabled"/>
+							<param name="sortorder" value="ascending"/>
+							<param name="sortby" value="date"/>
+							<param name="widget_header" value="$LOCALIZE[19040]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.ChannelName, | ]$INFO[Container(12700).ListItem.Title, - ,]"/>
+							<param name="widget_target" value="tvtimers"/>
+							<param name="list_id" value="12700"/>
+							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
+							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName,: ,]"/>
+						</include>
+						<include content="WidgetListChannels" condition="System.HasPVRAddon + [PVR.HasNonRecordingTVTimer | PVR.IsRecordingTV] + !Skin.HasSetting(hide_recordingtimers) + !Skin.HasSetting(hide_disabledtimers">
+							<param name="content_path" value="pvr://timers/tv/timers/"/>
 							<param name="sortorder" value="ascending"/>
 							<param name="sortby" value="date"/>
 							<param name="widget_header" value="$LOCALIZE[19040]"/>
