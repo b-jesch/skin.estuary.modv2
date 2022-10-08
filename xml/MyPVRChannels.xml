@@ -37,14 +37,14 @@
 					<param name="flipx" value="true" />
 				</include>
 				<control type="scrollbar" id="73">
-					<left>-50</left>
+					<left>-65</left>
 					<top>list_y_offset</top>
 					<width>12</width>
 					<bottom>list_y_offset</bottom>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<orientation>vertical</orientation>
-					<animation effect="zoom" start="100,100" end="50,100" center="-48,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+					<animation effect="zoom" start="100,100" end="50,100" center="-53,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(73)">conditional</animation>
 				</control>
 				<include>PVRInfoPanel</include>
 			</control>

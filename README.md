@@ -36,7 +36,9 @@ supports animated poster only.
 
 ### 4.0.2+nexus ###
 - .5
-  * changes on PVR preview images
+  * improved PVR image preview
+  * improved EPG timeline (8 rows)
+  * improved PVR event icons
 
 
 - .4

@@ -1109,15 +1109,35 @@
 	</variable>
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
-		<value condition="[ListItem.HasTimer | ListItem.HasTimerSchedule] + ListItem.TimerIsActive">windows/pvr/timer.png</value>
-		<value condition="[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.TimerIsActive">windows/pvr/timer_disabled.png</value>
+		<value condition="ListItem.HasReminder">windows/pvr/bell.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerIsActive">windows/pvr/schedule.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerIsActive">windows/pvr/timer.png</value>
+		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">windows/pvr/schedule_disabled.png</value>
+		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">windows/pvr/timer_disabled.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">windows/pvr/schedule_error.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasError">windows/pvr/timer_error.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">windows/pvr/schedule_conflict.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasConflict">windows/pvr/timer_conflict.png</value>
 		<value condition="ListItem.HasArchive">windows/pvr/archive.png</value>
-		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
 		<value condition="ListItem.IsPlaying">windows/pvr/play.png</value>
 		<value condition="ListItem.IsLive">windows/pvr/live.png</value>
 		<value condition="ListItem.IsPremiere | ListItem.IsNew">windows/pvr/premiered.png</value>
 		<value condition="ListItem.IsFinale">windows/pvr/finished.png</value>
-		<value condition="ListItem.IsEncrypted">windows/pvr/encrypt.png</value>
+		<value condition="ListItem.IsEncrypted + !Window.IsVisible(tvguide)">windows/pvr/encrypt.png</value>
+	</variable>
+	<variable name="PVRTimerIcon">
+		<value condition="ListItem.IsRecording">icons/pvr/PVR-IsRecording.png</value>
+		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">icons/pvr/PVR-HasTimerScheduleError.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasError">icons/pvr/PVR-HasTimerError.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerScheduleConflict.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerConflict.png</value>
+		<value condition="ListItem.HasRecording">icons/pvr/PVR-HasRecording.png</value>
+		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerScheduleDisabled.png</value>
+		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerDisabled.png</value>
+		<value condition="ListItem.HasTimerSchedule">icons/pvr/PVR-HasTimerSchedule.png</value>
+		<value condition="ListItem.HasTimer">icons/pvr/PVR-HasTimer.png</value>
+		<value condition="ListItem.IsPlayable">icons/pvr/PVR-HasArchive.png</value>
 	</variable>
 	<variable name="AutoCompletionContentVar">
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>
@@ -1815,20 +1835,6 @@
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre]</value>
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,: ][COLOR=grey]$INFO[Player.Title][/COLOR]</value>
-	</variable>
-	<variable name="PVRTimerIcon">
-		<value condition="ListItem.IsRecording">icons/pvr/PVR-IsRecording.png</value>
-		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
-		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">icons/pvr/PVR-HasTimerScheduleError.png</value>
-		<value condition="ListItem.HasTimer + ListItem.TimerHasError">icons/pvr/PVR-HasTimerError.png</value>
-		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerScheduleConflict.png</value>
-		<value condition="ListItem.HasTimer + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerConflict.png</value>
-		<value condition="ListItem.HasRecording">icons/pvr/PVR-HasRecording.png</value>
-		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerScheduleDisabled.png</value>
-		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerDisabled.png</value>
-		<value condition="ListItem.HasTimerSchedule">icons/pvr/PVR-HasTimerSchedule.png</value>
-		<value condition="ListItem.HasTimer">icons/pvr/PVR-HasTimer.png</value>
-		<value condition="ListItem.IsPlayable">icons/pvr/PVR-HasArchive.png</value>	
 	</variable>
 	<variable name="SeasonEpisodePlayerLabel">
 		<value condition="String.IsEmpty(VideoPlayer.EpisodeName)">$INFO[VideoPlayer.Season, - $LOCALIZE[20373] ]$INFO[VideoPlayer.Episode, - $LOCALIZE[20359] ]</value>
