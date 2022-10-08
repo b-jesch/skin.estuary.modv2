@@ -249,7 +249,7 @@
 							</control>
 							<control type="image">
 								<width>60</width>
-								<height>60</height>
+								<height>61</height>
 								<texture>overlays/overlay-bg.png</texture>
 								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>
@@ -268,7 +268,6 @@
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
-								<scroll>true</scroll>
 								<visible>![ListItem.HasTimer | ListItem.HasReminder]</visible>
 							</control>
 							<control type="label" id="1">
@@ -279,7 +278,6 @@
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
-								<scroll>true</scroll>
 								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>
 						</itemlayout>
@@ -307,7 +305,7 @@
 							</control>
 							<control type="image">
 								<width>60</width>
-								<height>60</height>
+								<height>61</height>
 								<texture>overlays/overlay-bg.png</texture>
 								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>
