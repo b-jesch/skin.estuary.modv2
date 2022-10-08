@@ -38,7 +38,9 @@ supports animated poster only.
 
 ### 3.4.2+matrix ###
 - .5
-  * changes on PVR preview images
+  * improved PVR image preview
+  * improved EPG timeline (8 rows)
+  * improved PVR event icons
 
 - .4
   * update translations for all languages (thanks for the bunch of work to C4Wiz)

@@ -1380,27 +1380,49 @@
 				<textcolor>grey</textcolor>
 				<label>$VAR[SeasonEpisodeLabelOSD,[B],[/B]]</label>
 			</control>
-			<control type="textbox">
+			<control type="group">
 				<left>405</left>
-				<top>180</top>
 				<bottom>77</bottom>
 				<right>30</right>
-				<font>font12</font>
-				<align>justify</align>
-				<label>$INFO[Container(11).ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>!String.IsEmpty(Container(11).ListItem.EpisodeName) | !String.IsEmpty(Container(11).ListItem.Season) | !String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				<visible>Window.IsVisible(pvrosdchannels)</visible>
+				<control type="textbox">
+					<top>180</top>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$INFO[Container(11).ListItem.Plot]$INFO[Container(11).ListItem.NextTitle,[CR][CR][B]$LOCALIZE[31396] : [/B]]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEmpty(Container(11).ListItem.EpisodeName) | !String.IsEmpty(Container(11).ListItem.Season) | !String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				</control>
+				<control type="textbox">
+					<top>140</top>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$INFO[Container(11).ListItem.Plot]$INFO[Container(11).ListItem.NextTitle,[CR][CR][B]$LOCALIZE[31396] : [/B]]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEmpty(Container(11).ListItem.EpisodeName) + String.IsEmpty(Container(11).ListItem.Season) + String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				</control>
 			</control>
-			<control type="textbox">
+			<control type="group">
 				<left>405</left>
-				<top>140</top>
-				<right>30</right>
 				<bottom>77</bottom>
-				<font>font12</font>
-				<align>justify</align>
-				<label>$INFO[Container(11).ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>String.IsEmpty(Container(11).ListItem.EpisodeName) + String.IsEmpty(Container(11).ListItem.Season) + String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				<right>30</right>
+				<visible>Window.IsVisible(pvrchannelguide)</visible>
+				<control type="textbox">
+					<top>180</top>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$INFO[Container(11).ListItem.Plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEmpty(Container(11).ListItem.EpisodeName) | !String.IsEmpty(Container(11).ListItem.Season) | !String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				</control>
+				<control type="textbox">
+					<top>140</top>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$INFO[Container(11).ListItem.Plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEmpty(Container(11).ListItem.EpisodeName) + String.IsEmpty(Container(11).ListItem.Season) + String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				</control>
 			</control>
 			<control type="label">
 				<left>405</left>

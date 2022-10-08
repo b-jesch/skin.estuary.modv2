@@ -92,17 +92,17 @@
 						<focusedlayout height="76" width="881">
 							<control type="image">
 								<left>0</left>
-								<right>0</right>
+								<right>6</right>
 								<bottom>0</bottom>
 								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 								<visible>Control.hasFocus(11)</visible>
 							</control>
 							<control type="image">
 								<left>0</left>
-								<right>0</right>
+								<right>6</right>
 								<bottom>0</bottom>
 								<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
-								<visible>Control.hasFocus</visible>
+								<visible>Control.hasFocus(11)</visible>
 								<visible>Skin.HasSetting(EnableGradientColor)</visible>
 							</control>
 							<control type="label">
@@ -125,10 +125,12 @@
 					<control type="scrollbar" id="60">
 						<top>100</top>
 						<bottom>7</bottom>
-						<left>875</left>
-						<width>6</width>
+						<left>870</left>
+						<width>12</width>
 						<onleft>11</onleft>
+						<onright>11</onright>
 						<orientation>vertical</orientation>
+						<animation effect="zoom" start="100,100" end="50,100" center="882,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 					</control>
 				</control>
 				<include>PVRChannelInfoPanel</include>
