@@ -5,6 +5,7 @@
         <param name="icon">$INFO[ListItem.Icon]</param>
         <param name="label">$INFO[ListItem.Label]</param>
         <param name="label2">$INFO[ListItem.Title]</param>
+        <param name="onclick" />
         <definition>
             <include content="CategoryLabel">
                 <param name="label">$PARAM[widget_header]</param>
@@ -228,6 +229,8 @@
                     </control>
                 </focusedlayout>
                 <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
+                <onclick condition="String.IsEqual($PARAM[onclick],31624)">ActivateWindow(pvrtimersetting)</onclick>
+                <onclick condition="String.IsEqual($PARAM[onclick],31625)">ActivateWindow(pvrguideinfo)</onclick>
             </control>
         </definition>
     </include>

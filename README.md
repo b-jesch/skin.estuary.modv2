@@ -39,6 +39,7 @@ supports animated poster only.
   * improved PVR image preview
   * improved EPG timeline (8 rows)
   * improved PVR event icons
+  * improved skin settings for textual selections (independend from language settings)
 
 
 - .4
