@@ -587,6 +587,7 @@
 					<param name="header">31233</param>
 					<param name="setting">PvrIconBG</param>
 				</include>
+				<!-- # not working yet
 				<control type="button" id="407">
 					<label>$LOCALIZE[31623]</label>
 					<label2>$VAR[TimerWidgetActionVar]</label2>
@@ -597,6 +598,7 @@
 					<onclick condition="String.IsEqual(Skin.String(timerwidget_action),31624)">Skin.SetString(timerwidget_action,31625)</onclick>
 					<onclick condition="!String.IsEmpty(Skin.String(timerwidget_action)) + !String.IsEqual(Skin.String(timerwidget_action),31624) + !String.IsEqual(Skin.String(timerwidget_action),31625)">Skin.SetString(timerwidget_action,31624)</onclick>
 				</control>
+				-->
 			</control>
 			<control type="grouplist" id="500">
 				<top>168</top>
