@@ -42,6 +42,7 @@ supports animated poster only.
   * improved EPG timeline (has now 8 rows)
   * new designed PVR event icons
   * visibility of pvr & tv settings depends now on enabled PVR addons
+  * improved skin settings for textual selections (independend from language settings)
 
 
 - .4

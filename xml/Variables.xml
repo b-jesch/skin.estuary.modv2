@@ -1075,6 +1075,25 @@
 		<value condition="Skin.HasSetting(opacity_100)">FFFFFFFF</value>
 		<value>37FFFFFF</value>
 	</variable>
+	<variable name="AutocloseOsdVar">
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31578)">$LOCALIZE[31578]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31580)">$LOCALIZE[31580]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31581)">$LOCALIZE[31581]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31582)">$LOCALIZE[31582]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31583)">$LOCALIZE[31583]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31584)">$LOCALIZE[31584]</value>
+		<value>$LOCALIZE[31578]</value>
+	</variable>
+	<variable name="WidgetActionVar">
+		<value condition="String.IsEqual(Skin.String(widget_action),31589)">$LOCALIZE[31589]</value>
+		<value condition="String.IsEqual(Skin.String(widget_action),31590)">$LOCALIZE[31590]</value>
+		<value>$LOCALIZE[31589]</value>
+	</variable>
+	<variable name="TimerWidgetActionVar">
+		<value condition="String.IsEqual(Skin.String(timerwidget_action),31623)">$LOCALIZE[31623]</value>
+		<value condition="String.IsEqual(Skin.String(timerwidget_action),31624)">$LOCALIZE[31624]</value>
+		<value>$LOCALIZE[31623]</value>
+	</variable>
 	<variable name="Bars_Opacity">
 		<value condition="Skin.HasSetting(opacitybars_0)">00FFFFFF</value>
 		<value condition="Skin.HasSetting(opacitybars_5)">0DFFFFFF</value>
@@ -1124,20 +1143,6 @@
 		<value condition="ListItem.IsPremiere | ListItem.IsNew">windows/pvr/premiered.png</value>
 		<value condition="ListItem.IsFinale">windows/pvr/finished.png</value>
 		<value condition="ListItem.IsEncrypted + !Window.IsVisible(tvguide)">windows/pvr/encrypt.png</value>
-	</variable>
-	<variable name="PVRTimerIcon">
-		<value condition="ListItem.IsRecording">icons/pvr/PVR-IsRecording.png</value>
-		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
-		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">icons/pvr/PVR-HasTimerScheduleError.png</value>
-		<value condition="ListItem.HasTimer + ListItem.TimerHasError">icons/pvr/PVR-HasTimerError.png</value>
-		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerScheduleConflict.png</value>
-		<value condition="ListItem.HasTimer + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerConflict.png</value>
-		<value condition="ListItem.HasRecording">icons/pvr/PVR-HasRecording.png</value>
-		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerScheduleDisabled.png</value>
-		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerDisabled.png</value>
-		<value condition="ListItem.HasTimerSchedule">icons/pvr/PVR-HasTimerSchedule.png</value>
-		<value condition="ListItem.HasTimer">icons/pvr/PVR-HasTimer.png</value>
-		<value condition="ListItem.IsPlayable">icons/pvr/PVR-HasArchive.png</value>
 	</variable>
 	<variable name="AutoCompletionContentVar">
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>

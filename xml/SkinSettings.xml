@@ -598,6 +598,18 @@
 					<onclick condition="Skin.String(PvrIconBG)">Skin.Reset(PvrIconBG)</onclick>
 					<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
 				</control>
+				<!-- Nexus
+				<control type="button" id="407">
+					<label>$LOCALIZE[31622]</label>
+					<label2>$VAR[TimerWidgetActionVar]</label2>
+					<include>DefaultSettingButton</include>
+					<description>default action on timer widgets</description>
+					<onclick condition="String.IsEmpty(Skin.String(timerwidget_action))">Skin.SetString(timerwidget_action,31623)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(timerwidget_action),31624)">Skin.SetString(timerwidget_action,31623)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(timerwidget_action),31623)">Skin.SetString(timerwidget_action,31624)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(timerwidget_action)) + !String.IsEqual(Skin.String(timerwidget_action),31623) + !String.IsEqual(Skin.String(timerwidget_action),31624)">Skin.SetString(timerwidget_action,31623)</onclick>
+				</control>
+				-->
 			</control>
 			<control type="grouplist" id="500">
 				<top>168</top>
@@ -930,17 +942,17 @@
 				</control>
 				<control type="button" id="719">
 					<label>$LOCALIZE[31577]</label>
-					<label2>$INFO[Skin.String(autoclose_osd)]</label2>
+					<label2>$VAR[AutocloseOsdVar]</label2>
 					<include>DefaultSettingButton</include>
 					<description>autoclose OSD menu</description>
-					<onclick condition="String.IsEmpty(Skin.String(autoclose_osd))">Skin.SetString(autoclose_osd,$LOCALIZE[31578])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31584])">Skin.SetString(autoclose_osd,$LOCALIZE[31578])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31583])">Skin.SetString(autoclose_osd,$LOCALIZE[31584])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31582])">Skin.SetString(autoclose_osd,$LOCALIZE[31583])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31581])">Skin.SetString(autoclose_osd,$LOCALIZE[31582])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31580])">Skin.SetString(autoclose_osd,$LOCALIZE[31581])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31578])">Skin.SetString(autoclose_osd,$LOCALIZE[31580])</onclick>
-					<onclick condition="!String.IsEmpty(Skin.String(autoclose_osd)) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31578]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31580]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31581]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31582]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31583]) + !String.IsEqual(Skin.String(autoclose_osd),$LOCALIZE[31584])">Skin.SetString(autoclose_osd,$LOCALIZE[31578])</onclick>
+					<onclick condition="String.IsEmpty(Skin.String(autoclose_osd))">Skin.SetString(autoclose_osd,31578)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),31584)">Skin.SetString(autoclose_osd,31578)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),31583)">Skin.SetString(autoclose_osd,31584)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),31582)">Skin.SetString(autoclose_osd,31583)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),31581)">Skin.SetString(autoclose_osd,31582)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),31580)">Skin.SetString(autoclose_osd,31581)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),31578)">Skin.SetString(autoclose_osd,31580)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(autoclose_osd)) + !String.IsEqual(Skin.String(autoclose_osd),31578) + !String.IsEqual(Skin.String(autoclose_osd),31580) + !String.IsEqual(Skin.String(autoclose_osd),31581) + !String.IsEqual(Skin.String(autoclose_osd),31582) + !String.IsEqual(Skin.String(autoclose_osd),31583) + !String.IsEqual(Skin.String(autoclose_osd),31584)">Skin.SetString(autoclose_osd,31578)</onclick>
 				</control>
 				<control type="label" id="30017">
 					<textoffsetx>45</textoffsetx>
@@ -1306,13 +1318,13 @@
 				</control>
 				<control type="button" id="10016">
 					<label>$LOCALIZE[31588]</label>
-					<label2>$INFO[Skin.String(widget_action)]</label2>
+					<label2>$VAR[WidgetActionVar]</label2>
 					<include>DefaultSettingButton</include>
 					<description>default action on movie/tv show widgets</description>
-					<onclick condition="String.IsEmpty(Skin.String(widget_action))">Skin.SetString(widget_action,$LOCALIZE[31589])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[31590])">Skin.SetString(widget_action,$LOCALIZE[31589])</onclick>
-					<onclick condition="String.IsEqual(Skin.String(widget_action),$LOCALIZE[31589])">Skin.SetString(widget_action,$LOCALIZE[31590])</onclick>
-					<onclick condition="!String.IsEmpty(Skin.String(widget_action)) + !String.IsEqual(Skin.String(widget_action),$LOCALIZE[31589]) + !String.IsEqual(Skin.String(widget_action),$LOCALIZE[31590])">Skin.SetString(widget_action,$LOCALIZE[31589])</onclick>
+					<onclick condition="String.IsEmpty(Skin.String(widget_action))">Skin.SetString(widget_action,31589)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(widget_action),31590)">Skin.SetString(widget_action,31589)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(widget_action),31589)">Skin.SetString(widget_action,31590)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(widget_action)) + !String.IsEqual(Skin.String(widget_action),31589) + !String.IsEqual(Skin.String(widget_action),31590)">Skin.SetString(widget_action,31589)</onclick>
 				</control>
 				<control type="radiobutton" id="10021">
 					<label>$LOCALIZE[31468]</label>
