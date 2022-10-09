@@ -600,14 +600,14 @@
 				</control>
 				<!-- Nexus
 				<control type="button" id="407">
-					<label>$LOCALIZE[31622]</label>
+					<label>$LOCALIZE[31623]</label>
 					<label2>$VAR[TimerWidgetActionVar]</label2>
 					<include>DefaultSettingButton</include>
 					<description>default action on timer widgets</description>
-					<onclick condition="String.IsEmpty(Skin.String(timerwidget_action))">Skin.SetString(timerwidget_action,31623)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(timerwidget_action),31624)">Skin.SetString(timerwidget_action,31623)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(timerwidget_action),31623)">Skin.SetString(timerwidget_action,31624)</onclick>
-					<onclick condition="!String.IsEmpty(Skin.String(timerwidget_action)) + !String.IsEqual(Skin.String(timerwidget_action),31623) + !String.IsEqual(Skin.String(timerwidget_action),31624)">Skin.SetString(timerwidget_action,31623)</onclick>
+					<onclick condition="String.IsEmpty(Skin.String(timerwidget_action))">Skin.SetString(timerwidget_action,31624)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(timerwidget_action),31625)">Skin.SetString(timerwidget_action,31624)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(timerwidget_action),31624)">Skin.SetString(timerwidget_action,31625)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(timerwidget_action)) + !String.IsEqual(Skin.String(timerwidget_action),31624) + !String.IsEqual(Skin.String(timerwidget_action),31625)">Skin.SetString(timerwidget_action,31624)</onclick>
 				</control>
 				-->
 			</control>
