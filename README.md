@@ -37,6 +37,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .6
+  * Refinements on PVR EPG view
+  * show seek bar only (without OSD parts) while seeking
+
+
 - .5
   * improved PVR image preview
   * improved EPG timeline (has now 8 rows)

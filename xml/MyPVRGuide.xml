@@ -20,7 +20,7 @@
 						<left>0</left>
 						<top>-10</top>
 						<width>100%</width>
-						<bottom>402</bottom>
+						<bottom>397</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 						<visible>Skin.HasSetting(ShowPVRGroups)</visible>
 					</control>
@@ -28,7 +28,7 @@
 						<left>0</left>
 						<top>44</top>
 						<width>100%</width>
-						<bottom>348</bottom>
+						<bottom>343</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 						<visible>!Skin.HasSetting(ShowPVRGroups) + Control.IsVisible(50)</visible>
 					</control>
@@ -150,7 +150,7 @@
 						<rulerlayout height="45" width="390">
 							<control type="label">
 								<top>-5</top>
-								<width>350</width>
+								<width>390</width>
 								<height>45</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -529,7 +529,7 @@
 						<right>0</right>
 						<top>47</top>
 						<width>12</width>
-						<bottom>403</bottom>
+						<bottom>400</bottom>
 						<onleft>10</onleft>
 						<onright>10</onright>
 						<orientation>vertical</orientation>
@@ -539,10 +539,10 @@
 						<animation effect="slide" end="0,54" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
 					</control>
 				</control>
+				<include>PVRPanelViewInfoPanel</include>
 				<include content="BottomBar">
 					<param name="info_visible" value="true" />
 				</include>
-				<include>PVRPanelViewInfoPanel</include>
 				<control type="group">
 					<bottom>0</bottom>
 					<height>70</height>
