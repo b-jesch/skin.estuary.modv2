@@ -3616,6 +3616,263 @@
 			<focusposition>$PARAM[focusposition]</focusposition>
 		</definition>
 	</include>
+	<include name="SeekBar">
+		<param name="left">30</param>
+		<param name="top">100</param>
+		<definition>
+			<control type="group">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<right>30</right>
+				<control type="image">
+					<left>-20</left>
+					<right>-20</right>
+					<top>-50</top>
+					<height>80</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<visible>!Pvr.IsTimeShift + [Player.Seeking | Player.DisplayAfterSeek]</visible>
+				</control>
+				<control type="image">
+					<left>-20</left>
+					<right>-20</right>
+					<top>-100</top>
+					<height>130</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<visible>Pvr.IsTimeShift + [Player.Seeking | Player.DisplayAfterSeek]</visible>
+				</control>
+				<control type="group" id="6000">
+					<top>-5</top>
+					<visible>PVR.IsTimeShift + !Player.ChannelPreviewActive</visible>
+					<animation effect="fade" time="300">VisibleChange</animation>
+					<control type="label">
+						<bottom>155</bottom>
+						<height>30</height>
+						<font>font12</font>
+						<align>right</align>
+						<label>$INFO[PVR.TimeshiftProgressEndTime]</label>
+					</control>
+					<control type="label">
+						<bottom>155</bottom>
+						<height>30</height>
+						<font>font12</font>
+						<label>$INFO[PVR.TimeshiftProgressStartTime]</label>
+					</control>
+					<control type="label">
+						<bottom>155</bottom>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<label>[B]$LOCALIZE[31026][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
+					</control>
+					<control type="progress">
+						<top>-52</top>
+						<height>10</height>
+						<info>PVR.timeshiftprogress</info>
+						<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+						<midtexture>colors/white50.png</midtexture>
+						<visible>VideoPlayer.Content(livetv)</visible>
+					</control>
+				</control>
+				<control type="progress">
+					<height>10</height>
+					<info>PVR.EpgEventProgress</info>
+					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+					<visible>VideoPlayer.HasEpg</visible>
+				</control>
+				<control type="progress">
+					<height>10</height>
+					<info>Player.ProgressCache</info>
+					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<midtexture>colors/white50.png</midtexture>
+					<visible>!VideoPlayer.Content(livetv)</visible>
+				</control>
+				<control type="progress">
+					<height>10</height>
+					<info>Player.Progress</info>
+					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+					<visible>!VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="ranges">
+					<height>10</height>
+					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+					<lefttexture>colors/white.png</lefttexture>
+					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+					<righttexture>colors/white.png</righttexture>
+					<info>Player.Cutlist</info>
+				</control>
+				<control type="ranges">
+					<top>4</top>
+					<height>6</height>
+					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
+					<righttexture>colors/white.png</righttexture>
+					<info>Player.Chapters</info>
+				</control>
+				<control type="slider" id="401">
+					<left>5</left>
+					<top>-5</top>
+					<height>20</height>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+					<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">colors/white.png</textureslidernibfocus>
+					<visible>Player.SeekEnabled + !VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="slider" id="402">
+					<left>5</left>
+					<top>-5</top>
+					<right>30</right>
+					<height>20</height>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+					<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">colors/white.png</textureslidernibfocus>
+					<visible>Player.SeekEnabled + VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="group">
+					<visible>Player.SeekEnabled</visible>
+					<visible>!Window.IsVisible(sliderdialog)</visible>
+					<control type="button" id="87">
+						<include>HiddenObject</include>
+						<onup>200</onup>
+						<onunfocus condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onunfocus>
+						<ondown>200</ondown>
+						<onright>StepForward</onright>
+						<onleft>StepBack</onleft>
+						<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
+					</control>
+					<control type="slider">
+						<top>-5</top>
+						<height>20</height>
+						<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+						<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
+						<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+						<info>Player.Progress</info>
+						<action>seek</action>
+						<visible>!Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					<control type="slider">
+						<top>-5</top>
+						<height>20</height>
+						<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+						<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernib>
+						<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+						<info>Player.Progress</info>
+						<action>seek</action>
+						<visible>Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					<control type="slider">
+						<top>-5</top>
+						<height>20</height>
+						<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+						<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
+						<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+						<info>PVR.TimeshiftProgressPlayPos</info>
+						<action>pvr.seek</action>
+						<visible>!Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					<control type="slider">
+						<top>-5</top>
+						<height>20</height>
+						<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+						<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernib>
+						<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+						<info>PVR.TimeshiftProgressPlayPos</info>
+						<action>pvr.seek</action>
+						<visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
+					</control>
+				</control>
+				<control type="label">
+					<bottom>105</bottom>
+					<height>30</height>
+					<label>$VAR[SeekLabel]</label>
+					<font>font12</font>
+					<visible>![Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)] | Player.HasVideo</visible>
+				</control>
+				<control type="label">
+					<bottom>105</bottom>
+					<right>30</right>
+					<height>30</height>
+					<label>$VAR[SeekLabel] - [COLOR white]$INFO[Playlist.Position, $LOCALIZE[554] ]$INFO[Playlist.Length,/][/COLOR]</label>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<font>font12</font>
+					<visible>Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0) + !Player.HasVideo</visible>
+				</control>
+				<control type="label">
+					<bottom>105</bottom>
+					<right>30</right>
+					<height>30</height>
+					<label>$VAR[SeekTimeLabelVar]</label>
+					<font>font12</font>
+					<align>center</align>
+					<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
+				</control>
+				<control type="group">
+					<visible>Skin.HasSetting(SmallOSDVideo)</visible>
+					<control type="label">
+						<bottom>105</bottom>
+						<height>30</height>
+						<label>$INFO[Player.SeekTime]$INFO[Player.Duration, / ]</label>
+						<font>font12</font>
+						<align>right</align>
+						<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + !VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+					</control>
+					<control type="label">
+						<bottom>105</bottom>
+						<height>30</height>
+						<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
+						<font>font12</font>
+						<align>right</align>
+						<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + !VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+					</control>
+					<control type="label">
+						<bottom>105</bottom>
+						<height>30</height>
+						<label>$INFO[PVR.EpgEventSeekTime]$INFO[PVR.EpgEventDuration, / ]</label>
+						<font>font12</font>
+						<align>right</align>
+						<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + VideoPlayer.HasEpg</visible>
+					</control>
+					<control type="label">
+						<bottom>105</bottom>
+						<height>30</height>
+						<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
+						<font>font12</font>
+						<align>right</align>
+						<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + VideoPlayer.HasEpg</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Skin.HasSetting(SmallOSDVideo)</visible>
+					<control type="label">
+						<bottom>105</bottom>
+						<height>30</height>
+						<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
+						<font>font12</font>
+						<align>right</align>
+						<visible>!VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+					</control>
+					<control type="label">
+						<bottom>105</bottom>
+						<height>30</height>
+						<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
+						<font>font12</font>
+						<align>right</align>
+						<visible>VideoPlayer.HasEpg</visible>
+					</control>
+				</control>
+				<control type="label">
+					<bottom>105</bottom>
+					<height>30</height>
+					<label>$INFO[Player.SeekTime]</label>
+					<font>font12</font>
+					<align>right</align>
+					<visible>Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
 	<include name="OSDWithInfo">
 		<control type="group">
 			<visible>!Player.HasGame</visible>
@@ -3674,97 +3931,9 @@
 					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				</control>
 			</control>
-			<control type="group" id="6000">
-				<top>-5</top>
-				<visible>PVR.IsTimeShift + !Player.ChannelPreviewActive</visible>
-				<animation effect="fade" time="300">VisibleChange</animation>
-				<control type="label">
-					<left>460</left>
-					<bottom>155</bottom>
-					<right>30</right>
-					<height>30</height>
-					<font>font12</font>
-					<align>right</align>
-					<label>$INFO[PVR.TimeshiftProgressEndTime]</label>
-				</control>
-				<control type="label">
-					<left>460</left>
-					<bottom>155</bottom>
-					<right>30</right>
-					<height>30</height>
-					<font>font12</font>
-					<label>$INFO[PVR.TimeshiftProgressStartTime]</label>
-				</control>
-				<control type="label">
-					<left>460</left>
-					<bottom>155</bottom>
-					<right>30</right>
-					<height>30</height>
-					<font>font12</font>
-					<align>center</align>
-					<label>[B]$LOCALIZE[31026][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
-				</control>
-				<control type="progress">
-					<left>460</left>
-					<top>45</top>
-					<right>30</right>
-					<height>10</height>
-					<info>PVR.timeshiftprogress</info>
-					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-					<midtexture>colors/white50.png</midtexture>
-					<visible>VideoPlayer.Content(livetv)</visible>
-				</control>
-			</control>
-			<control type="progress">
-				<left>460</left>
-				<top>100</top>
-				<right>30</right>
-				<height>10</height>
-				<info>PVR.EpgEventProgress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
-				<visible>VideoPlayer.HasEpg</visible>
-			</control>
-			<control type="progress">
-				<left>460</left>
-				<top>100</top>
-				<right>30</right>
-				<height>10</height>
-				<info>Player.ProgressCache</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture>colors/white50.png</midtexture>
-				<visible>!VideoPlayer.Content(livetv)</visible>
-			</control>
-			<control type="progress">
-				<left>460</left>
-				<top>100</top>
-				<right>30</right>
-				<height>10</height>
-				<info>Player.Progress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
-				<visible>!VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
-			</control>
-			<control type="slider" id="401">
-				<left>465</left>
-				<top>95</top>
-				<right>30</right>
-				<height>20</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">colors/white.png</textureslidernibfocus>
-				<visible>Player.SeekEnabled + !VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
-			</control>
-			<control type="slider" id="402">
-				<left>465</left>
-				<top>95</top>
-				<right>30</right>
-				<height>20</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">colors/white.png</textureslidernibfocus>
-				<visible>Player.SeekEnabled + VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
-			</control>
+			<include content="SeekBar">
+				<param name="left">460</param>
+			</include>
 		</control>
 		<control type="image">
 			<depth>DepthOSD+</depth>
@@ -4280,66 +4449,6 @@
 					</control>
 				</control>
 			</control>
-			<control type="label">
-				<left>460</left>
-				<bottom>105</bottom>
-				<right>30</right>
-				<height>30</height>
-				<label>$VAR[SeekLabel]</label>
-				<textcolor>$VAR[SkinColorVar]</textcolor>
-				<font>font12</font>
-				<visible>![Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)]</visible>
-			</control>
-			<control type="label">
-				<left>460</left>
-				<bottom>105</bottom>
-				<right>30</right>
-				<height>30</height>
-				<label>$VAR[SeekLabel] - [COLOR white]$LOCALIZE[554] $INFO[Playlist.Position]/$INFO[Playlist.Length][/COLOR]</label>
-				<textcolor>$VAR[SkinColorVar]</textcolor>
-				<font>font12</font>
-				<visible>Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)</visible>
-			</control>
-			<control type="label">
-				<left>460</left>
-				<bottom>105</bottom>
-				<right>30</right>
-				<height>30</height>
-				<label>$VAR[SeekTimeLabelVar]</label>
-				<font>font12</font>
-				<align>center</align>
-				<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
-			</control>
-			<control type="label">
-				<left>460</left>
-				<bottom>105</bottom>
-				<right>30</right>
-				<height>30</height>
-				<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
-				<font>font12</font>
-				<align>right</align>
-				<visible>!VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-			</control>
-			<control type="label">
-				<left>460</left>
-				<bottom>105</bottom>
-				<right>30</right>
-				<height>30</height>
-				<label>$INFO[Player.SeekTime]</label>
-				<font>font12</font>
-				<align>right</align>
-				<visible>Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream</visible>
-			</control>
-			<control type="label">
-				<left>460</left>
-				<bottom>105</bottom>
-				<right>30</right>
-				<height>30</height>
-				<font>font12</font>
-				<align>right</align>
-				<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
-				<visible>VideoPlayer.HasEpg</visible>
-			</control>
 			<control type="grouplist">
 				<left>460</left>
 				<bottom>145</bottom>
@@ -4720,176 +4829,9 @@
 				<animation effect="slide" end="0,-250" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
 				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 			</control>
-			<control type="group" id="6000">
-				<top>-5</top>
-				<visible>PVR.IsTimeShift + !Player.ChannelPreviewActive</visible>
-				<animation effect="fade" time="300">VisibleChange</animation>
-				<control type="label">
-					<left>30</left>
-					<bottom>155</bottom>
-					<right>30</right>
-					<height>30</height>
-					<font>font12</font>
-					<align>right</align>
-					<label>$INFO[PVR.TimeshiftProgressEndTime]</label>
-				</control>
-				<control type="label">
-					<left>30</left>
-					<bottom>155</bottom>
-					<right>30</right>
-					<height>30</height>
-					<font>font12</font>
-					<label>$INFO[PVR.TimeshiftProgressStartTime]</label>
-				</control>
-				<control type="label">
-					<left>30</left>
-					<bottom>155</bottom>
-					<right>30</right>
-					<height>30</height>
-					<font>font12</font>
-					<align>center</align>
-					<label>[B]$LOCALIZE[31026][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
-				</control>
-				<control type="progress">
-					<left>30</left>
-					<top>45</top>
-					<right>30</right>
-					<height>10</height>
-					<info>PVR.timeshiftprogress</info>
-					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-					<midtexture>colors/white50.png</midtexture>
-					<visible>VideoPlayer.Content(livetv)</visible>
-				</control>
-			</control>
-			<control type="progress">
-				<left>30</left>
-				<top>100</top>
-				<right>30</right>
-				<height>10</height>
-				<info>PVR.EpgEventProgress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
-				<visible>VideoPlayer.HasEpg</visible>
-			</control>
-			<control type="progress">
-				<left>30</left>
-				<top>100</top>
-				<right>30</right>
-				<height>10</height>
-				<info>Player.ProgressCache</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture>colors/white50.png</midtexture>
-				<visible>!VideoPlayer.Content(livetv)</visible>
-			</control>
-			<control type="progress">
-				<left>30</left>
-				<top>100</top>
-				<right>30</right>
-				<height>10</height>
-				<info>Player.Progress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
-				<visible>!VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
-			</control>
-			<control type="slider" id="401">
-				<left>35</left>
-				<top>95</top>
-				<right>30</right>
-				<height>20</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">colors/white.png</textureslidernibfocus>
-				<visible>Player.SeekEnabled + !VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
-			</control>
-			<control type="slider" id="402">
-				<left>35</left>
-				<top>95</top>
-				<right>30</right>
-				<height>20</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">colors/white.png</textureslidernibfocus>
-				<visible>Player.SeekEnabled + VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
-			</control>
-		</control>
-		<control type="label">
-			<left>30</left>
-			<bottom>105</bottom>
-			<right>30</right>
-			<height>30</height>
-			<label>$VAR[SeekLabel]</label>
-			<font>font12</font>
-			<visible>![Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)]</visible>
-		</control>
-		<control type="label">
-			<left>30</left>
-			<bottom>105</bottom>
-			<right>30</right>
-			<height>30</height>
-			<label>$VAR[SeekLabel] - [COLOR white]$INFO[Playlist.Position, $LOCALIZE[554]]$INFO[Playlist.Length,/][/COLOR]</label>
-			<textcolor>$VAR[SkinColorVar]</textcolor>
-			<font>font12</font>
-			<visible>Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)</visible>
-		</control>
-		<control type="label">
-			<left>30</left>
-			<bottom>105</bottom>
-			<right>30</right>
-			<height>30</height>
-			<label>$VAR[SeekTimeLabelVar]</label>
-			<font>font12</font>
-			<align>center</align>
-			<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
-		</control>
-		<control type="label">
-			<left>30</left>
-			<bottom>105</bottom>
-			<right>30</right>
-			<height>30</height>
-			<label>$INFO[Player.SeekTime]$INFO[Player.Duration, / ]</label>
-			<font>font12</font>
-			<align>right</align>
-			<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + !VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-		</control>
-		<control type="label">
-			<left>30</left>
-			<bottom>105</bottom>
-			<right>30</right>
-			<height>30</height>
-			<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
-			<font>font12</font>
-			<align>right</align>
-			<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + !VideoPlayer.HasEpg + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-		</control>
-		<control type="label">
-			<left>30</left>
-			<bottom>105</bottom>
-			<right>30</right>
-			<height>30</height>
-			<label>$INFO[Player.SeekTime]</label>
-			<font>font12</font>
-			<align>right</align>
-			<visible>Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream</visible>
-		</control>
-		<control type="label">
-			<left>30</left>
-			<bottom>105</bottom>
-			<right>30</right>
-			<height>30</height>
-			<label>$INFO[PVR.EpgEventSeekTime]$INFO[PVR.EpgEventDuration, / ]</label>
-			<font>font12</font>
-			<align>right</align>
-			<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + VideoPlayer.HasEpg</visible>
-		</control>
-		<control type="label">
-			<left>30</left>
-			<bottom>105</bottom>
-			<right>30</right>
-			<height>30</height>
-			<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
-			<font>font12</font>
-			<align>right</align>
-			<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + VideoPlayer.HasEpg</visible>
+			<include content="SeekBar">
+				<param name="left">30</param>
+			</include>
 		</control>
 	</include>
 	<include name="SplashScreen">
