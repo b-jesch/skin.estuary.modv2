@@ -38,6 +38,7 @@ supports animated poster only.
 - .6
   * Refinements on PVR EPG view
   * show seek bar only (without OSD parts) while seeking
+  * Replace GUIBool Player.DisplayAfterSeek with Player.HasPerformedSeek()
 
 
 - .5

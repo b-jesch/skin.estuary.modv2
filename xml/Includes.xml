@@ -3630,7 +3630,7 @@
 					<top>-50</top>
 					<height>80</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<visible>!Pvr.IsTimeShift + [Player.Seeking | Player.DisplayAfterSeek]</visible>
+					<visible>!Pvr.IsTimeShift + [Player.Seeking | Player.HasPerformedSeek(3)]</visible>
 				</control>
 				<control type="image">
 					<left>-20</left>
@@ -3638,7 +3638,7 @@
 					<top>-100</top>
 					<height>130</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<visible>Pvr.IsTimeShift + [Player.Seeking | Player.DisplayAfterSeek]</visible>
+					<visible>Pvr.IsTimeShift + [Player.Seeking | Player.HasPerformedSeek(3)]</visible>
 				</control>
 				<control type="group" id="6000">
 					<top>-5</top>
