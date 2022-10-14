@@ -39,6 +39,7 @@ supports animated poster only.
   * Refinements on PVR EPG view
   * show seek bar only (without OSD parts) while seeking
   * Replace GUIBool Player.DisplayAfterSeek with Player.HasPerformedSeek()
+  * close power menu on Poweroff (RPM) before rpm addon starts
 
 
 - .5
