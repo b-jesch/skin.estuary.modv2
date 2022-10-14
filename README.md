@@ -40,6 +40,7 @@ supports animated poster only.
 - .6
   * Refinements on PVR EPG view
   * show seek bar only (without OSD parts) while seeking
+  * close power menu on Poweroff (RPM) before rpm addon starts
 
 
 - .5
