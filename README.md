@@ -41,6 +41,7 @@ supports animated poster only.
   * Refinements on PVR EPG view
   * show seek bar only (without OSD parts) while seeking
   * close power menu on Poweroff (RPM) before rpm addon starts
+  * Introducing audio samplerate flag for lossless audio codecs 
 
 
 - .5
