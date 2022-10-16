@@ -1230,10 +1230,6 @@
 				<left>25</left>
 				<width>340</width>
 				<height>262</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
-				<visible>!Player.HasVideo</visible>
-				<fadetime>200</fadetime>
 				<control type="image">
 					<texture colordiffuse="dialog_tint">colors/white.png</texture>
 				</control>
