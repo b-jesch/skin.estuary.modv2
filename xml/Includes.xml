@@ -61,6 +61,8 @@
 	<!-- Valentines Day 14.02 -->
 	<expression name="ValentineTime">System.Date(02-14,02-15) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="ValentineTheme">$EXP[ValentineTime] + $EXP[EnableTheme]</expression>
+	<!-- Expression lossless audio -->
+	<expression name="isLossless">String.isEqual(Videoplayer.AudioCodec,cdda) | String.IsEqual(VideoPlayer.AudioCodec,wavpack) | String.IsEqual(Videoplayer.AudioCodec,flac) | String.IsEqual(Videoplayer.AudioCodec,pcm_bluray) | String.IsEqual(Videoplayer.AudioCodec,wav) | String.IsEqual(Videoplayer.AudioCodec,pcm) | String.IsEqual(Videoplayer.AudioCodec,pcm_s16le) | String.IsEqual(Videoplayer.AudioCodec,alac) | String.IsEqual(Videoplayer.AudioCodec,pcm_s24le) | String.IsEqual(Videoplayer.AudioCodec,ape) | String.IsEqual(Videoplayer.AudioCodec,sacd)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -1808,7 +1810,7 @@
 				<control type="group">
 					<width>205</width>
 					<height>50</height>
-					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
+					<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
 					<control type="image">
 						<top>5</top>
 						<width>205</width>
@@ -1823,7 +1825,29 @@
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[MusicPlayer.BitRate] kbps</label>
+						<label>$INFO[MusicPlayer.SampleRate,, kHz]</label>
+						<font>font_flag</font>
+					</control>
+				</control>
+				<control type="group">
+					<width>205</width>
+					<height>50</height>
+					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
+					<control type="image">
+						<top>5</top>
+						<width>205</width>
+						<height>50</height>
+						<texture>flags/cadre2.png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<top>4</top>
+						<left>3</left>
+						<width>199</width>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
 						<font>font_flag</font>
 					</control>
 				</control>
@@ -1845,7 +1869,7 @@
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[MusicPlayer.BitsPerSample] bits</label>
+						<label>$INFO[MusicPlayer.BitsPerSample,, bits]</label>
 						<font>font_flag</font>
 					</control>
 				</control>
@@ -4553,7 +4577,7 @@
 				<control type="group">
 					<width>155</width>
 					<height>40</height>
-					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + Window.IsVisible(MusicVisualisation.xml) + !Integer.IsGreater(MusicPlayer.BitRate,10000)</visible>
+					<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(MusicVisualisation.xml) + !Integer.IsGreater(MusicPlayer.SampleRate,10000)</visible>
 					<control type="image">
 						<top>5</top>
 						<width>155</width>
@@ -4566,14 +4590,14 @@
 						<height>40</height>
 						<align>center</align>
 						<top>2</top>
-						<label>$INFO[MusicPlayer.BitRate] kbps</label>
+						<label>$INFO[MusicPlayer.SampleRate,, kHz]</label>
 						<font>Font-Flag-Small</font>
 					</control>
 				</control>
 				<control type="group">
 					<width>200</width>
 					<height>40</height>
-					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + Window.IsVisible(MusicVisualisation.xml) + Integer.IsGreater(MusicPlayer.BitRate,9999)</visible>
+					<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(MusicVisualisation.xml) + Integer.IsGreater(MusicPlayer.SampleRate,9999)</visible>
 					<control type="image">
 						<top>5</top>
 						<width>200</width>
@@ -4586,7 +4610,47 @@
 						<height>40</height>
 						<align>center</align>
 						<top>2</top>
-						<label>$INFO[MusicPlayer.BitRate] kbps</label>
+						<label>$INFO[MusicPlayer.SampleRate,, kHz]</label>
+						<font>Font-Flag-Small</font>
+					</control>
+				</control>
+				<control type="group">
+					<width>155</width>
+					<height>40</height>
+					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(MusicVisualisation.xml) + !Integer.IsGreater(MusicPlayer.BitRate,10000)</visible>
+					<control type="image">
+						<top>5</top>
+						<width>155</width>
+						<height>40</height>
+						<texture>flags/cadre.png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>155</width>
+						<height>40</height>
+						<align>center</align>
+						<top>2</top>
+						<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
+						<font>Font-Flag-Small</font>
+					</control>
+				</control>
+				<control type="group">
+					<width>200</width>
+					<height>40</height>
+					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(MusicVisualisation.xml) + Integer.IsGreater(MusicPlayer.BitRate,9999)</visible>
+					<control type="image">
+						<top>5</top>
+						<width>200</width>
+						<height>40</height>
+						<texture>flags/cadre3.png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>40</height>
+						<align>center</align>
+						<top>2</top>
+						<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
 						<font>Font-Flag-Small</font>
 					</control>
 				</control>
@@ -4606,7 +4670,7 @@
 						<height>40</height>
 						<align>center</align>
 						<top>2</top>
-						<label>$INFO[MusicPlayer.BitsPerSample] bits</label>
+						<label>$INFO[MusicPlayer.BitsPerSample,, bits]</label>
 						<font>Font-Flag-Small</font>
 					</control>
 				</control>

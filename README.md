@@ -40,6 +40,7 @@ supports animated poster only.
   * show seek bar only (without OSD parts) while seeking
   * Replace GUIBool Player.DisplayAfterSeek with Player.HasPerformedSeek()
   * close power menu on Poweroff (RPM) before rpm addon starts
+  * Introducing audio samplerate flag for lossless audio codecs
 
 
 - .5
