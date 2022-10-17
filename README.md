@@ -35,6 +35,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .7
+  * show simplified seek bar optional (skin settings)
+
+
 - .6
   * Refinements on PVR EPG view
   * show seek bar only (without OSD parts) while seeking

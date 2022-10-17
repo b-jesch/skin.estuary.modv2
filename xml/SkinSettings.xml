@@ -29,6 +29,17 @@
 				<ondown>100</ondown>
 				<pagecontrol>60</pagecontrol>
 				<visible>Container(9000).HasFocus(10)</visible>
+				<control type="label" id="900011">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>70</height>
+					<label>$LOCALIZE[31627]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
 				<control type="radiobutton" id="1091">
 					<label>$LOCALIZE[31474]</label>
 					<include>DefaultSettingButton</include>
@@ -69,11 +80,11 @@
 					<selected>Skin.HasSetting(SimplyfiedOSDVideo)</selected>
                     <onclick>Skin.ToggleSetting(SimplyfiedOSDVideo)</onclick>
 				</control>
-				<control type="radiobutton" id="114">
-					<label>$LOCALIZE[31359]</label>
+				<control type="radiobutton" id="103">
+					<label>$LOCALIZE[31630]</label>
 					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(ExtendedOSDInfo)</selected>
-                    <onclick>Skin.ToggleSetting(ExtendedOSDInfo)</onclick>
+					<selected>Skin.HasSetting(ShowSeekBar)</selected>
+                    <onclick>Skin.ToggleSetting(ShowSeekBar)</onclick>
 				</control>
 				<control type="radiobutton" id="105">
 					<label>$LOCALIZE[31430]</label>
@@ -81,17 +92,46 @@
 					<selected>Skin.HasSetting(Hide_OSDInfo)</selected>
                     <onclick>Skin.ToggleSetting(Hide_OSDInfo)</onclick>
 				</control>
+				<control type="label" id="900012">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>70</height>
+					<label>$LOCALIZE[19033]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="radiobutton" id="114">
+					<label>$LOCALIZE[31359]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(ExtendedOSDInfo)</selected>
+                    <onclick>Skin.ToggleSetting(ExtendedOSDInfo)</onclick>
+				</control>
 				<control type="radiobutton" id="106">
-					<label>$LOCALIZE[31441]</label>
+					<label>  ∟$LOCALIZE[31441]</label>
                     <include>DefaultSettingButton</include>
                     <selected>!Skin.HasSetting(disable_PauseOnExtraInfos)</selected>
                     <onclick>Skin.ToggleSetting(disable_PauseOnExtraInfos)</onclick>
+					<visible>!Skin.HasSetting(ExtendedOSDInfo)</visible>
                 </control>
 				<control type="radiobutton" id="115">
 					<label>$LOCALIZE[31493]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(VideoInfo_MovieCastList)</selected>
 					<onclick>Skin.ToggleSetting(VideoInfo_MovieCastList)</onclick>
+				</control>
+				<control type="label" id="900013">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>70</height>
+					<label>$LOCALIZE[31628]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
                 <control type="radiobutton" id="108">
 					<label>$LOCALIZE[31288]</label>
