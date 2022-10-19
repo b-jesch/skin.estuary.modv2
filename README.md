@@ -36,7 +36,9 @@ supports animated poster only.
 
 ### 4.0.2+nexus ###
 - .7
-  * show simplified seek bar optional (skin settings)
+  * make simplified seek bar optional (skin settings)
+  * improved skin settings
+  * Bugfixes
 
 
 - .6

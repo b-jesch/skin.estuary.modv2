@@ -866,6 +866,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(ForcedViews.Enabled)</onclick>
 					<selected>Skin.HasSetting(ForcedViews.Enabled)</selected>
+					<enable>Library.HasContent(movies) | Library.HasContent(tvshows)</enable>
 				</control>
 				<control type="button" id="907">
 					<include>DefaultSettingButton</include>
@@ -1520,6 +1521,7 @@
 				<onleft condition="Container(9000).HasFocus(7)">400</onleft>
 				<onleft condition="Container(9000).HasFocus(8)">300</onleft>
 				<onleft condition="Container(9000).HasFocus(9)">200</onleft>
+				<onleft condition="Container(9000).HasFocus(10)">100</onleft>
 				<onright condition="Container(9000).HasFocus(1)">700</onright>
 				<onright condition="Container(9000).HasFocus(2)">1000</onright>
 				<onright condition="Container(9000).HasFocus(3)">600</onright>
@@ -1527,12 +1529,13 @@
 				<onright condition="Container(9000).HasFocus(7)">400</onright>
 				<onright condition="Container(9000).HasFocus(8)">300</onright>
 				<onright condition="Container(9000).HasFocus(9)">200</onright>
+				<onright condition="Container(9000).HasFocus(10)">100</onright>
 				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 				<hitrect x="0" y="0" w="60" h="100%" />
-				<visible>Control.IsVisible(200) | Control.IsVisible(300) | Control.IsVisible(600) | Control.IsVisible(700) | Control.IsVisible(900) | Control.IsVisible(1000)</visible>
+				<visible>Control.IsVisible(100) | Control.IsVisible(200) | Control.IsVisible(300) | Control.IsVisible(600) | Control.IsVisible(700) | Control.IsVisible(900) | Control.IsVisible(1000)</visible>
 			</control>
 		</control>
 		<include content="TopBar">
