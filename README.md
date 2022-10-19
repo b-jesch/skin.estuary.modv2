@@ -38,7 +38,9 @@ supports animated poster only.
 
 ### 3.4.2+matrix ###
 - .7
-  * show simplified seek bar optional (skin settings)
+  * make simplified seek bar optional (skin settings)
+  * improved skin settings
+  * Bugfixes
 
 
 - .6

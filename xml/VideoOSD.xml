@@ -309,6 +309,18 @@
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 			</control>
+			<control type="group">
+				<top>90</top>
+				<right>30</right>
+				<visible>Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)</visible>
+				<include content="ItemLeft" condition="!Skin.HasSetting(SmallOSDVideo)">
+					<param name="left" value="460"/>
+				</include>
+				<include content="ItemLeft" condition="Skin.HasSetting(SmallOSDVideo)">
+					<param name="left" value="30"/>
+				</include>
+				<include>SeekBarProgress</include>
+			</control>
 		</control>
 	</controls>
 </window>
