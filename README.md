@@ -35,6 +35,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .8
+  * Hungarian language update
+  * Font fix of Economica font family
+
+
 - .7
   * make simplified seek bar optional (skin settings)
   * improved skin settings
