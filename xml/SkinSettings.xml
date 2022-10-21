@@ -639,6 +639,16 @@
 					<onclick condition="!String.IsEmpty(Skin.String(timerwidget_action)) + !String.IsEqual(Skin.String(timerwidget_action),31624) + !String.IsEqual(Skin.String(timerwidget_action),31625)">Skin.SetString(timerwidget_action,31624)</onclick>
 				</control>
 				-->
+				<control type="button" id="408">
+					<label>$LOCALIZE[31631]</label>
+					<label2>$VAR[ChannelSwitchVar]</label2>
+					<include>DefaultSettingButton</include>
+					<description>default action on channel switch osd button</description>
+					<onclick condition="String.IsEmpty(Skin.String(channelswitch_action))">Skin.SetString(channelswitch_action,31632)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(channelswitch_action),31633)">Skin.SetString(channelswitch_action,31632)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(channelswitch_action),31632)">Skin.SetString(channelswitch_action,31633)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(channelswitch_action)) + !String.IsEqual(Skin.String(channelswitch_action),31632) + !String.IsEqual(Skin.String(channelswitch_action),31633)">Skin.SetString(channelswitch_action,31632)</onclick>
+				</control>
 			</control>
 			<control type="grouplist" id="500">
 				<top>168</top>

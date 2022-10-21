@@ -38,6 +38,8 @@ supports animated poster only.
 - .8
   * Hungarian language update
   * Font fix of Economica font family
+  * Revert mistakenly changes on DialogSeekBar
+  * PVR: show five last seen channels / switch to last channel on video OSD by option
 
 
 - .7
