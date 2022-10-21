@@ -1,7 +1,8 @@
 <window id="1110" type="dialog">
     <visible>[System.IdleTime(3) + String.IsEqual(Skin.String(autoclose_osd),31580)] | [System.IdleTime(5) + String.IsEqual(Skin.String(autoclose_osd),31581)] | [System.IdleTime(7) + String.IsEqual(Skin.String(autoclose_osd),31582)] | [System.IdleTime(10) + String.IsEqual(Skin.String(autoclose_osd),31583)] | [System.IdleTime(15) + String.IsEqual(Skin.String(autoclose_osd),31584)]</visible>
-    <visible>[Window.IsVisible(videoosd) | Window.IsVisible(musicosd)] + !WindowIsVisible(pvrosdteletext) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(DialogSubtitles.xml) + !Windows.IsVisible(DialogSlider.xml) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml) + !Window.IsVisible(DialogPlayerProcessInfo.xml) + !Window.IsVisible(Custom_1138_PlayerPlot.xml) + !Window.IsVisible(Custom_1122_ActorsList.xml)</visible>
+    <visible>[Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(1133)] + !WindowIsVisible(pvrosdteletext) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(DialogSubtitles.xml) + !Windows.IsVisible(DialogSlider.xml) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml) + !Window.IsVisible(DialogPlayerProcessInfo.xml) + !Window.IsVisible(Custom_1138_PlayerPlot.xml) + !Window.IsVisible(Custom_1122_ActorsList.xml)</visible>
     <onload condition="Window.IsVisible(videoosd)">Dialog.Close(videoosd)</onload>
     <onload condition="Window.IsVisible(musicosd)">Dialog.Close(musicosd)</onload>
+    <onload condition="Window.IsVisible(1133)">Dialog.Close(1133)</onload>
     <controls/>
 </window>
