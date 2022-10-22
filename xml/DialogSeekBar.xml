@@ -18,7 +18,7 @@
 			</include>
 			<include condition="![Player.Seeking | HasPerformedSeek(3)] + ![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithInfo</include>
 			<include condition="!Skin.HasSetting(ShowSeekBar) + ![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithInfo</include>
-			<include condition="![Player.Seeking | HasPerformedSeek(3)] + [Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithoutInfo</include>
+			<include condition="![Player.Seeking | HasPerformedSeek(3)] + ![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithoutInfo</include>
 			<include condition="!Skin.HasSetting(ShowSeekBar) + [Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithoutInfo</include>
 		</control>	
 	</controls>
