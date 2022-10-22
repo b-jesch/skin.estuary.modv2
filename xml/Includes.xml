@@ -2631,22 +2631,50 @@
 				<texturefocus />
 				<texturenofocus />
 			</control>
-			<control type="radiobutton">
+			<control type="group">
 				<right>10</right>
 				<top>11</top>
 				<width>48</width>
 				<height>48</height>
-				<radiowidth>48</radiowidth>
-				<radioheight>48</radioheight>
-				<texturefocus />
-				<texturenofocus />
-				<label/>
-				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
-				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
-				<onclick>Action(close)</onclick>
-				<visible>!Skin.HasSetting(touchmode)</visible>
+				<control type="radiobutton">
+					<radiowidth>48</radiowidth>
+					<radioheight>48</radioheight>
+					<texturefocus />
+					<texturenofocus />
+					<label/>
+					<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
+					<onclick>Action(close)</onclick>
+					<visible>!Skin.HasSetting(touchmode) + !Skin.HasSetting(MenuLogoLE) + !Skin.HasSetting(MenuLogoCE)</visible>
+				</control>
+				<control type="radiobutton">
+					<radiowidth>48</radiowidth>
+					<radioheight>48</radioheight>
+					<texturefocus />
+					<texturenofocus />
+					<label/>
+					<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/le-logo-white.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="EEFFFFFF">icons/le-logo-white.png</textureradioonnofocus>
+					<onclick>Action(close)</onclick>
+					<visible>!Skin.HasSetting(touchmode) + Skin.HasSetting(MenuLogoLE)</visible>
+				</control>
+				<control type="radiobutton">
+					<radiowidth>48</radiowidth>
+					<radioheight>48</radioheight>
+					<texturefocus />
+					<texturenofocus />
+					<label/>
+					<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/ce-logo-white.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="EEFFFFFF">icons/ce-logo-white.png</textureradioonnofocus>
+					<onclick>Action(close)</onclick>
+					<visible>!Skin.HasSetting(touchmode) + Skin.HasSetting(MenuLogoCE)</visible>
+				</control>
 			</control>
 			<control type="button">
 				<right>10</right>
