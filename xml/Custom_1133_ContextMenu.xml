@@ -1,99 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1133">
-	<onload condition="Window.IsVisible(videoosd)">Dialog.Close(videoosd)</onload>
-	<onload>SetFocus(11)</onload>
+	<onload>SetFocus(11,1)</onload>
 	<defaultcontrol>11</defaultcontrol>
 	<controls>
-		<control type="button">
-			<left>-1920</left>
-			<top>-1080</top>
-			<width>5760</width>
-			<height>3240</height>
-			<texturefocus />
-			<texturenofocus />
-			<onclick>Action(close)</onclick>
-		</control>
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<include>Animation_DialogPopupOpenClose</include>
 			<width>510</width>
 			<height>380</height>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<bottom>0</bottom>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<height>70</height>
-				<texture colordiffuse="$VAR[SkinColorVar]" border="2">colors/white70.png</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<height>70</height>
-				<texture colordiffuse="$VAR[GradientColorVar]" border="2">lists/focus-gradient.png</texture>
-				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-			</control>
-			<control type="label">
-				<left>20</left>
-				<top>0</top>
-				<right>80</right>
-				<height>70</height>
-				<font>font32_title</font>
-				<label>$LOCALIZE[31016]</label>
-				<aligny>center</aligny>
-				<shadowcolor>black</shadowcolor>
-				<scroll>true</scroll>
-			</control>
-			<control type="button" id="22002">
-				<description>button overlay to avoid closing in dialog area</description>
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<bottom>0</bottom>
-				<texturefocus />
-				<texturenofocus />
-			</control>
-			<control type="radiobutton">
-				<right>10</right>
-				<top>11</top>
-				<width>48</width>
-				<height>48</height>
-				<radiowidth>48</radiowidth>
-				<radioheight>48</radioheight>
-				<texturefocus />
-				<texturenofocus />
-				<label/>
-				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
-				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
-				<onclick>Action(close)</onclick>
-				<visible>!Skin.HasSetting(touchmode)</visible>
-			</control>
-			<control type="button">
-				<right>10</right>
-				<top>11</top>
-				<width>48</width>
-				<height>48</height>
-				<texturefocus>dialogs/close.png</texturefocus>
-				<texturenofocus>dialogs/close.png</texturenofocus>
-				<onclick>Action(close)</onclick>
-				<visible>Skin.HasSetting(touchmode)</visible>
-			</control>
+			<include>OpenClose_Fade</include>
+			<include content="DialogBackgroundCommons">
+				<param name="width">510</param>
+				<param name="height">380</param>
+				<param name="darken_bg">false</param>
+				<param name="header_label">$LOCALIZE[31016]</param>
+				<param name="header_id">11331</param>
+			</include>
 			<control type="group">
 				<top>80</top>
 				<width>510</width>
-				<control type="image" id="999">
+				<control type="image">
 					<description>background image</description>
-					<width>510</width>
 					<texture colordiffuse="dialog_tint">colors/white.png</texture>
 				</control>
 				<control type="list" id="11">
@@ -101,20 +28,13 @@
 					<onright>11</onright>
 					<onup>11</onup>
 					<ondown>11</ondown>
-					<focusposition>3</focusposition>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<focusedlayout height="60" width="510">
 						<control type="image">
-							<left>0</left>
-							<right>0</right>
-							<bottom>0</bottom>
 							<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 							<visible>Control.hasFocus(11)</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<right>0</right>
-							<bottom>0</bottom>
 							<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
 							<visible>Control.hasFocus(11)</visible>
 							<visible>Skin.HasSetting(EnableGradientColor)</visible>

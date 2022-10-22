@@ -2642,10 +2642,10 @@
 					<texturefocus />
 					<texturenofocus />
 					<label/>
-					<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
-					<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="CCFFFFFF">icons/logo.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="CCFFFFFF">icons/logo.png</textureradioonnofocus>
 					<onclick>Action(close)</onclick>
 					<visible>!Skin.HasSetting(touchmode) + !Skin.HasSetting(MenuLogoLE) + !Skin.HasSetting(MenuLogoCE)</visible>
 				</control>
@@ -2655,10 +2655,10 @@
 					<texturefocus />
 					<texturenofocus />
 					<label/>
-					<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/le-logo-white.png</textureradiooffnofocus>
-					<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="EEFFFFFF">icons/le-logo-white.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="CCFFFFFF">icons/le-logo-white.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="CCFFFFFF">icons/le-logo-white.png</textureradioonnofocus>
 					<onclick>Action(close)</onclick>
 					<visible>!Skin.HasSetting(touchmode) + Skin.HasSetting(MenuLogoLE)</visible>
 				</control>
@@ -2668,10 +2668,10 @@
 					<texturefocus />
 					<texturenofocus />
 					<label/>
-					<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/ce-logo-white.png</textureradiooffnofocus>
-					<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="EEFFFFFF">icons/ce-logo-white.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="CCFFFFFF">icons/ce-logo-white.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="CCFFFFFF">icons/ce-logo-white.png</textureradioonnofocus>
 					<onclick>Action(close)</onclick>
 					<visible>!Skin.HasSetting(touchmode) + Skin.HasSetting(MenuLogoCE)</visible>
 				</control>
