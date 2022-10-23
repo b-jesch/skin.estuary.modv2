@@ -40,7 +40,8 @@ supports animated poster only.
 - .8
   * Hungarian language update
   * Font fix of Economica font family
-  * PVR: show five last seen channels /switch to last channel on video OSD by option
+  * PVR OSD: Introducing last five channel switch (optional)
+  * smaller fixes
 
 
 - .7
