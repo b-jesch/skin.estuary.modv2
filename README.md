@@ -39,8 +39,8 @@ supports animated poster only.
   * Hungarian language update
   * Font fix of Economica font family
   * Revert mistakenly changes on DialogSeekBar
-  * PVR: show five last seen channels / switch to last channel on video OSD by option
-  * include distribution logos on dialogs
+  * PVR OSD: Introducing last five channel switch (optional)
+  * smaller fixes
 
 
 - .7
