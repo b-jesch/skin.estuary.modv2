@@ -41,6 +41,7 @@ supports animated poster only.
   * Revert mistakenly changes on DialogSeekBar
   * PVR OSD: Introducing last five channel switch (optional)
   * smaller fixes
+  * add missing studio logos on several widget layouts
 
 
 - .7
