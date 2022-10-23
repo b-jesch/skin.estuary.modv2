@@ -3326,9 +3326,10 @@
 		<param name="height">120%</param>
 		<param name="flipx">false</param>
 		<param name="visible">true</param>
+		<param name="colordiffuse">EDFFFFFF</param>
 		<definition>
 			<control type="image">
-				<texture flipx="$PARAM[flipx]" colordiffuse="EDFFFFFF">lists/panel.png</texture>
+				<texture flipx="$PARAM[flipx]" colordiffuse="$PARAM[colordiffuse]">lists/panel.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<width>$PARAM[width]</width>
