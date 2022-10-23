@@ -42,6 +42,7 @@ supports animated poster only.
   * Font fix of Economica font family
   * PVR OSD: Introducing last five channel switch (optional)
   * smaller fixes
+  * add missing studio logos on several widget layouts
 
 
 - .7

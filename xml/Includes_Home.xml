@@ -86,6 +86,17 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>String.IsEmpty(ListItem.Art(poster.0)) + String.IsEqual(listitem.dbtype,genre)</visible>
 				</control>
+
+				<control type="image">
+					<left>6</left>
+					<top>11</top>
+					<width>371</width>
+					<height>169</height>
+					<texture fallback="DefaultStudios.png">$VAR[WidgetStudioIconVar]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>String.IsEmpty(ListItem.Art(poster.0)) + String.IsEqual(listitem.dbtype,studio)</visible>
+				</control>
+
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -93,7 +104,7 @@
 					<height>169</height>
 					<texture fallback="DefaultVideo.png">$VAR[InfoWidgetThumbVar]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>String.IsEmpty(ListItem.Art(poster.0)) + !String.IsEqual(listitem.dbtype,genre)</visible>
+					<visible>String.IsEmpty(ListItem.Art(poster.0)) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 					<visible>!String.IsEqual(listitem.dbtype,episode)</visible>
 					<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 				</control>
@@ -104,7 +115,7 @@
 					<height>229</height>
 					<texture fallback="DefaultVideo.png">$VAR[InfoWidgetThumbVar]</texture>
 					<aspectratio align="center" aligny="center">scale</aspectratio>
-					<visible>String.IsEmpty(ListItem.Art(poster.0)) + !String.IsEqual(listitem.dbtype,genre)</visible>
+					<visible>String.IsEmpty(ListItem.Art(poster.0)) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 					<visible>!String.IsEqual(listitem.dbtype,episode)</visible>
 					<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 				</control>
@@ -3700,7 +3711,7 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3712,7 +3723,7 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3721,7 +3732,7 @@
 				<height>316</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3740,7 +3751,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + [String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3750,7 +3761,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + [String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3825,7 +3836,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWidgetThumbVar]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
 				<visible>!String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3836,7 +3847,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWidgetThumbVar]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
 				<visible>!String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3858,7 +3869,7 @@
 				<texture background="true">colors/black.png</texture>
 				<aspectratio>scale</aspectratio>
 				<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3869,7 +3880,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWidgetThumbVar2]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
 				<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3880,7 +3891,7 @@
 				<texture background="true">colors/black.png</texture>
 				<aspectratio>scale</aspectratio>
 				<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3891,7 +3902,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWidgetThumbVar2]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
 				<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3902,7 +3913,7 @@
 				<texture background="true" fallback="DefaultBanner.png">$VAR[BannerVar]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -3912,7 +3923,7 @@
 				<texture background="true" fallback="DefaultVideoFanart.png">$VAR[BannerVar]</texture>
 				<aspectratio aligny="center">scale</aspectratio>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 			</control>
 			<control type="image">
 				<left>30</left>
@@ -3925,6 +3936,16 @@
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
+				<left>30</left>
+				<top>50</top>
+				<width>256</width>
+				<height>185</height>
+				<texture fallback="DefaultStudios.png">$VAR[WidgetStudioIconVar]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>String.IsEqual(listitem.dbtype,studio)</visible>
+				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+			</control>
+			<control type="image">
 				<left>45</left>
 				<top>60</top>
 				<width>300</width>
@@ -3932,6 +3953,16 @@
 				<texture fallback="DefaultGenre.png">$VAR[WidgetGenreIconVar]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+			</control>
+			<control type="image">
+				<left>45</left>
+				<top>60</top>
+				<width>300</width>
+				<height>202</height>
+				<texture fallback="DefaultStudios.png">$VAR[WidgetStudioIconVar]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>String.IsEqual(listitem.dbtype,studio)</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -3961,7 +3992,7 @@
 				<height>70</height>
 				<texture>overlays/overlay-bg.png</texture>
 				<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<animation effect="slide" end="0,56" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
 			<control type="image">
@@ -3970,7 +4001,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<animation effect="slide" end="0,56" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
 			<control type="textbox">
@@ -5718,14 +5749,14 @@
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 					</control>
 					<control type="image">
 						<width>316</width>
 						<height>200</height>
 						<texture>dialogs/dialog-bg-nobo.png</texture>
 						<bordersize>20</bordersize>
-						<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 					</control>
 					<control type="image">
 						<width>316</width>
@@ -5733,7 +5764,7 @@
 						<texture>dialogs/dialog-bg-nobo.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>Skin.HasSetting(show_borders) + String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>Skin.HasSetting(show_borders) + [String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 					</control>
 					<control type="image">
 						<width>316</width>
@@ -5751,7 +5782,7 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>!String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5762,7 +5793,7 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar]</texture>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 						<visible>!String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5772,7 +5803,7 @@
 						<height>99</height>
 						<texture background="true">$VAR[LibraryClearLogoVar]</texture>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[String.IsEmpty(Listitem.Art(season.landscape)) + String.IsEmpty(Listitem.Art(tvshow.landscape)) + String.IsEmpty(Listitem.Art(landscape))]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
@@ -5784,7 +5815,7 @@
 						<texture>colors/black.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5795,7 +5826,7 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar2]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5806,7 +5837,7 @@
 						<texture>colors/black.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5817,7 +5848,7 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar2]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5830,6 +5861,16 @@
 						<visible>String.IsEqual(listitem.dbtype,genre)</visible>
 						<animation effect="slide" end="0,15" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 					</control>
+					<control type="image">
+						<top>30</top>
+						<left>30</left>
+						<width>256</width>
+						<height>110</height>
+						<texture fallback="DefaultStudios.png">$VAR[WidgetStudioIconVar]</texture>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<visible>String.IsEqual(listitem.dbtype,studio)</visible>
+						<animation effect="slide" end="0,15" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+					</control>
 					<control type="label">
 						<left>28</left>
 						<top>143</top>
@@ -5839,7 +5880,7 @@
 						<font>font25_narrow</font>
 						<shadowcolor>text_shadow</shadowcolor>
 						<align>center</align>
-						<visible>String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="label">
@@ -5851,7 +5892,7 @@
 						<font>font25_narrow</font>
 						<shadowcolor>text_shadow</shadowcolor>
 						<align>left</align>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5860,7 +5901,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5890,7 +5931,7 @@
 						<height>70</height>
 						<texture>overlays/overlay-bg.png</texture>
 						<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -5899,7 +5940,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[WallWatchedIconVar]</texture>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6011,7 +6052,7 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>!String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6022,7 +6063,7 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar]</texture>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 						<visible>!String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6032,7 +6073,7 @@
 						<height>99</height>
 						<texture background="true">$VAR[LibraryClearLogoVar]</texture>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[String.IsEmpty(Listitem.Art(season.landscape)) + String.IsEmpty(Listitem.Art(tvshow.landscape)) + String.IsEmpty(Listitem.Art(landscape))]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
@@ -6044,7 +6085,7 @@
 						<texture>colors/black.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6055,7 +6096,7 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar2]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6066,7 +6107,7 @@
 						<texture>colors/black.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6077,7 +6118,7 @@
 						<texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar2]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>String.IsEqual($PARAM[infolabel_prefix]listitem.dbtype,episode)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6090,6 +6131,16 @@
 						<visible>String.IsEqual(listitem.dbtype,genre)</visible>
 						<animation effect="slide" end="0,15" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 					</control>
+					<control type="image">
+						<top>30</top>
+						<left>30</left>
+						<width>256</width>
+						<height>110</height>
+						<texture fallback="DefaultStudios.png">$VAR[WidgetStudioIconVar]</texture>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<visible>String.IsEqual(listitem.dbtype,studio)</visible>
+						<animation effect="slide" end="0,15" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+					</control>
 					<control type="label">
 						<left>28</left>
 						<top>143</top>
@@ -6099,7 +6150,7 @@
 						<font>font25_narrow</font>
 						<shadowcolor>text_shadow</shadowcolor>
 						<align>center</align>
-						<visible>String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="label">
@@ -6111,7 +6162,7 @@
 						<font>font25_narrow</font>
 						<shadowcolor>text_shadow</shadowcolor>
 						<align>left</align>
-						<visible>!String.IsEqual(listitem.dbtype,genre)-</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6120,7 +6171,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6130,7 +6181,7 @@
 						<height>70</height>
 						<texture>overlays/overlay-bg.png</texture>
 						<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
@@ -6139,7 +6190,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[WallWatchedIconVar]</texture>
-						<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					</control>
 					<control type="image">
