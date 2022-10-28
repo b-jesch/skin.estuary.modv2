@@ -3681,46 +3681,6 @@
 				<onleft>StepBack</onleft>
 				<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
 			</control>
-			<control type="slider">
-				<top>-5</top>
-				<height>20</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
-				<info>Player.Progress</info>
-				<action>seek</action>
-				<visible>!Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
-			</control>
-			<control type="slider">
-				<top>-5</top>
-				<height>20</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-				<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
-				<info>Player.Progress</info>
-				<action>seek</action>
-				<visible>Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
-			</control>
-			<control type="slider">
-				<top>-5</top>
-				<height>20</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
-				<info>PVR.TimeshiftProgressPlayPos</info>
-				<action>pvr.seek</action>
-				<visible>!Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
-			</control>
-			<control type="slider">
-				<top>-5</top>
-				<height>20</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-				<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
-				<info>PVR.TimeshiftProgressPlayPos</info>
-				<action>pvr.seek</action>
-				<visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
-			</control>
 			<control type="ranges">
 				<height>10</height>
 				<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
@@ -3737,6 +3697,50 @@
 				<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
 				<righttexture>colors/white.png</righttexture>
 				<info>Player.Chapters</info>
+			</control>
+			<control type="group">
+				<visible>![Player.Seeking | Player.DisplayAfterSeek]</visible>
+				<include>Visible_Fade</include>
+				<control type="slider">
+					<top>-5</top>
+					<height>20</height>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<info>Player.Progress</info>
+					<action>seek</action>
+					<visible>!Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="slider">
+					<top>-5</top>
+					<height>20</height>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<info>Player.Progress</info>
+					<action>seek</action>
+					<visible>Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="slider">
+					<top>-5</top>
+					<height>20</height>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<info>PVR.TimeshiftProgressPlayPos</info>
+					<action>pvr.seek</action>
+					<visible>!Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="slider">
+					<top>-5</top>
+					<height>20</height>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<info>PVR.TimeshiftProgressPlayPos</info>
+					<action>pvr.seek</action>
+					<visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
+				</control>
 			</control>
 		</control>
 	</include>
@@ -3818,6 +3822,7 @@
 					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
 					<visible>!VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
 				</control>
+				<include content="SeekBarProgress" condition="![Window.IsVisible(videoosd) | Window.IsVisible(musicosd)]"/>
 				<control type="slider" id="401">
 					<left>5</left>
 					<top>-5</top>
@@ -3837,7 +3842,6 @@
 					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled + VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
 				</control>
-				<include content="SeekBarProgress" condition="!Window.IsVisible(videoosd) | !Window.IsVisible(musicosd)"/>
 				<control type="label">
 					<bottom>105</bottom>
 					<height>30</height>
