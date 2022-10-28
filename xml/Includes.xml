@@ -3700,7 +3700,7 @@
 				<info>Player.Chapters</info>
 			</control>
 			<control type="group">
-				<visible>![Player.Seeking | Player.DisplayAfterSeek]</visible>
+				<visible>![Player.Seeking | HasPerformedSeek(3)]</visible>
 				<include>Visible_Fade</include>
 				<control type="slider">
 					<top>-5</top>
