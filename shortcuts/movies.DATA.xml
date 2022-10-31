@@ -7,6 +7,12 @@
         <action>ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</action>
     </shortcut>
     <shortcut>
+        <label>31634</label>
+        <label2>Common Shortcut</label2>
+        <icon>icons/lastseen.png</icon>
+        <action>ActivateWindow(Videos,special://skin/playlists/last_seen.xsp,return)</action>
+    </shortcut>
+    <shortcut>
         <label>10024</label>
         <label2>Common Shortcut</label2>
         <icon>DefaultMovieTitle.png</icon>
