@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>996</defaultcontrol>
+	<defaultcontrol always="true">996</defaultcontrol>
 	<include>Animation_DialogPopupOpenClose</include>
 	<coordinates>
 		<left>0</left>
@@ -149,7 +149,6 @@
 			</control>
 			<control type="grouplist" id="996">
 				<description>grouplist for context buttons</description>
-				<defaultcontrol>1100</defaultcontrol>
 				<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])">
 					<param name="top">80</param>
 					<param name="height">205</param>
@@ -167,8 +166,9 @@
 					<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
 					<label>$LOCALIZE[31635]</label>
-					<onclick>PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
-					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
+					<onclick condition="!String.IsEmpty(ListItem.Trailer) + !Window.IsVisible(Home)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
+					<onclick condition="!String.IsEmpty(Window(home).Property(TrailerPath)) + Window.IsVisible(Home)">PlayMedia($ESCINFO[Window(home).Property(TrailerPath)])</onclick>
+					<visible>!String.IsEmpty(ListItem.Trailer) | [Window.IsVisible(Home) + !String.IsEmpty(Window(home).Property(TrailerPath))]</visible>
 				</control>
 				<control type="button" id="1000">
 					<description>button template</description>
