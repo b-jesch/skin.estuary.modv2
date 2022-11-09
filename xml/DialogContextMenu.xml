@@ -149,6 +149,7 @@
 			</control>
 			<control type="grouplist" id="996">
 				<description>grouplist for context buttons</description>
+				<defaultcontrol>1100</defaultcontrol>
 				<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])">
 					<param name="top">80</param>
 					<param name="height">205</param>
@@ -158,6 +159,26 @@
 					<param name="height">530</param>
 				</include>
 				<usecontrolcoords>true</usecontrolcoords>
+				<control type="button" id="1100">
+					<top></top>
+					<width>510</width>
+					<height>65</height>
+					<align>center</align>
+					<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+					<texturenofocus />
+					<label>$LOCALIZE[31635]</label>
+					<onclick>PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
+					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
+				</control>
+				<control type="button" id="1000">
+					<description>button template</description>
+					<left>0</left>
+					<width>510</width>
+					<height>65</height>
+					<align>center</align>
+					<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+					<texturenofocus />
+				</control>
 			</control>
 			<include content="UpDownArrows" condition="Window.IsActive(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])">
 				<param name="container_id" value="996" />
@@ -171,16 +192,6 @@
 				<param name="up_posy" value="-40" />
 				<param name="down_posy" value="630" />
 			</include>
-		</control>
-		<control type="button" id="1000">
-			<description>button template</description>
-			<left>0</left>
-			<top></top>
-			<width>510</width>
-			<height>65</height>
-			<align>center</align>
-			<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
-			<texturenofocus />
 		</control>
 	</controls>
 </window>
