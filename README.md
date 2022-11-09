@@ -38,6 +38,8 @@ supports animated poster only.
 
 ### 3.4.2+matrix ###
 - .9
+  * add "play trailer" to contextmenu
+  * fix unmatched parentheses in Home.xml
   * fix doubled background in flex view
   * fix position and size of context menu in flix view
   * last seen movie template added (reset/modify main menu required)
