@@ -35,6 +35,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .10
+  * Widget header for TV timer in Home menu modified
+
+
 - .9
   * add "play trailer" to contextmenu
   * fix unmatched parentheses in Home.xml

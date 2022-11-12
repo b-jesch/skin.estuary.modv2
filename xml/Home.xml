@@ -563,7 +563,7 @@
 							<param name="sortorder" value="ascending"/>
 							<param name="sortby" value="date"/>
 							<param name="widget_header" value="$LOCALIZE[19040]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.ChannelName, | ]$INFO[Container(12700).ListItem.Title, - ,]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Datetime, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,]"/>
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
@@ -575,7 +575,7 @@
 							<param name="sortorder" value="ascending"/>
 							<param name="sortby" value="date"/>
 							<param name="widget_header" value="$LOCALIZE[19040]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.ChannelName, | ]$INFO[Container(12700).ListItem.Title, - ,]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Datetime, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,]"/>
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
