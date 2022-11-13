@@ -8,12 +8,12 @@
 			<control type="group">
 				<depth>DepthOSD</depth>
 				<include>Animation_BottomSlide</include>
-				<include content="ContentPanel" condition="Skin.HasSetting(use_fullOsdList">
+				<include content="ContentPanel" condition="Skin.HasSetting(use_fullOsdList)">
 					<param name="width" value="945" />
 					<param name="height" value="1120" />
 					<param name="top" value="-20" />
 				</include>
-				<include content="ContentPanel" condition="!Skin.HasSetting(use_fullOsdList">
+				<include content="ContentPanel" condition="!Skin.HasSetting(use_fullOsdList)">
 					<param name="width" value="945" />
 					<param name="height" value="460" />
 					<param name="top" value="640" />
