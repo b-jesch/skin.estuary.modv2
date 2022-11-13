@@ -5211,6 +5211,10 @@
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="focused" value="true" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<itemlayout width="390" height="400" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
@@ -5240,6 +5244,10 @@
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="focused" value="true" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
@@ -5309,6 +5317,10 @@
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="focused" value="true" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<itemlayout width="390" height="450" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
@@ -5338,6 +5350,10 @@
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="focused" value="true" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
@@ -5407,6 +5423,10 @@
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="focused" value="true" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<itemlayout width="390" height="400" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
@@ -5436,6 +5456,10 @@
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="focused" value="true" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
@@ -5505,6 +5529,10 @@
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="focused" value="true" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<itemlayout width="390" height="450" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
@@ -5534,6 +5562,10 @@
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="focused" value="true" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
@@ -5604,6 +5636,10 @@
 							<param name="focused" value="true" />
 							<param name="fallback_image" value="$PARAM[fallback_icon]" />
 						</include>
+						<control type="button">
+							<visible>false</visible>
+							<onfocus>ClearProperty(TrailerPath,home)</onfocus>
+						</control>
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
