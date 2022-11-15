@@ -37,6 +37,7 @@ supports animated poster only.
 ### 4.0.2+nexus ###
 - .10
   * Widget header for TV timer in Home menu modified
+  * include "Jump to Letter" in Flix view
 
 
 - .9
