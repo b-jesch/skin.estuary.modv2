@@ -4568,7 +4568,7 @@
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution,.png]" />
+					<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(MusicVisualisation.xml)" />
 					<param name="width" value="94" />
 					<param name="top" value="5" />
@@ -4579,6 +4579,7 @@
 					<param name="width" value="86" />
 					<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
 				</include>
+
 				<control type="group">
 					<width>155</width>
 					<height>40</height>
