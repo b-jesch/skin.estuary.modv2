@@ -338,9 +338,9 @@
 				<onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
 				<onright>510</onright>
 				<onleft>510</onleft>
-				<ondown>60</ondown>
+				<ondown>5199</ondown>
 				<viewtype label="$LOCALIZE[31620]">biginfo</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>5199</pagecontrol>
                  <focusposition></focusposition>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
@@ -384,16 +384,6 @@
 					</control>
 				</focusedlayout>
 			</control>
-		</control>
-		<control type="scrollbar" id="60">
-			<bottom>70</bottom>
-			<height>12</height>
-			<width>100%</width>
-			<orientation>horizontal</orientation>
-			<texturesliderbackground />
-			<onup>510</onup>
-			<ondown>510</ondown>
-			<visible>Control.IsVisible(510)</visible>
 		</control>
 	</include>
 </includes>

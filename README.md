@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .10
+  * include "Jump to Letter" in Flix view
+
+
 - .9
   * add "play trailer" to contextmenu
   * fix unmatched parentheses in Home.xml
