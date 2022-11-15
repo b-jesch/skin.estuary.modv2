@@ -168,7 +168,7 @@
 					<label>$LOCALIZE[31635]</label>
 					<onclick condition="!String.IsEmpty(ListItem.Trailer) + !Window.IsVisible(Home)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
 					<onclick condition="!String.IsEmpty(Window(home).Property(TrailerPath)) + Window.IsVisible(Home)">PlayMedia($ESCINFO[Window(home).Property(TrailerPath)])</onclick>
-					<visible>!String.IsEmpty(ListItem.Trailer) | [Window.IsVisible(Home) + !String.IsEmpty(Window(home).Property(TrailerPath))]</visible>
+					<visible>Skin.HasSetting(ShowTrailerEntry) + [!String.IsEmpty(ListItem.Trailer) | [Window.IsVisible(Home) + !String.IsEmpty(Window(home).Property(TrailerPath))]]</visible>
 				</control>
 				<control type="button" id="1000">
 					<description>button template</description>

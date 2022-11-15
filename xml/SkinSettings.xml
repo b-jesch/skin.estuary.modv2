@@ -860,6 +860,12 @@
 					<onclick>Skin.ToggleSetting(TrailerFullscreen)</onclick>
 					<selected>Skin.HasSetting(TrailerFullscreen)</selected>
 				</control>
+				<control type="radiobutton" id="916">
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31636]</label>
+					<onclick>Skin.ToggleSetting(ShowTrailerEntry)</onclick>
+					<selected>Skin.HasSetting(ShowTrailerEntry)</selected>
+				</control>
 				<control type="label" id="30014">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
