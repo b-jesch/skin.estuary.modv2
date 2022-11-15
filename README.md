@@ -39,7 +39,7 @@ supports animated poster only.
 ### 3.4.2+matrix ###
 - .10
   * include "Jump to Letter" in Flix view
-
+  * make 'Play Trailer' in context menu customizable
 
 - .9
   * add "play trailer" to contextmenu
