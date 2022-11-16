@@ -40,6 +40,7 @@ supports animated poster only.
 - .10
   * include "Jump to Letter" in Flix view
   * make 'Play Trailer' in context menu customizable
+  * show next timer and available disk space in tv timers window
 
 - .9
   * add "play trailer" to contextmenu
