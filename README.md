@@ -39,6 +39,7 @@ supports animated poster only.
   * Widget header for TV timer in Home menu modified
   * include 'Jump to Letter' in Flix view
   * make 'Play Trailer' in context menu customizable
+  * show next timer and available disk space in tv timers window
 
 
 - .9
