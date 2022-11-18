@@ -1227,6 +1227,50 @@
 			</control>
 		</definition>
 	</include>
+	<include name="InfoWallProgressLayout">
+		<param name="left">35</param>
+		<param name="top">352</param>
+		<param name="top_2">380</param>
+		<param name="width">250</param>
+		<definition>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top_2]</top>
+				<width>$PARAM[width]</width>
+				<height>4</height>
+				<texture>dialogs/back.png</texture>
+				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+			</control>
+			<control type="progress">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>ListItem.PercentPlayed</info>
+				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>4</height>
+				<texture>dialogs/back.png</texture>
+				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+			</control>
+			<control type="progress">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>ListItem.Progress</info>
+				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoWallMovieLayout">
 		<param name="focused">false</param>
 		<definition>
@@ -1509,42 +1553,7 @@
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home)  + !String.IsEqual(listitem.dbtype,genre)</visible>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircleGreyed</include>
 			</control>
-			<control type="image">
-				<left>35</left>
-				<top>380</top>
-				<width>250</width>
-				<height>4</height>
-				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-			</control>
-			<control type="progress">
-				<left>35</left>
-				<top>352</top>
-				<width>250</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.PercentPlayed</info>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-			</control>
-			<control type="image">
-				<left>35</left>
-				<top>352</top>
-				<width>250</width>
-				<height>4</height>
-				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
-			</control>
-			<control type="progress">
-				<left>35</left>
-				<top>352</top>
-				<width>250</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.Progress</info>
-				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
-			</control>
+			<include>InfoWallProgressLayout</include>
 			<control type="group">
 				<top>195</top>
 				<visible>[Skin.HasSetting(enable_LibraryDiscArt) + !Window.IsVisible(Home)] | [Skin.HasSetting(enable_HomeDiscArt) + Window.IsVisible(Home)]</visible>

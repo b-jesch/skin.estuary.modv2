@@ -1402,12 +1402,6 @@
 					<onclick>Skin.ToggleSetting(UseSmallerCategories)</onclick>
 					<selected>Skin.HasSetting(UseSmallerCategories)</selected>
 				</control>
-				<control type="radiobutton" id="10015">
-					<label>$LOCALIZE[31553]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(use_posterview)</onclick>
-					<selected>Skin.HasSetting(use_posterview)</selected>
-				</control>
 				<control type="radiobutton" id="10018">
 					<label>$LOCALIZE[31370]</label>
 					<include>DefaultSettingButton</include>

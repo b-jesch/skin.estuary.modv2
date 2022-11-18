@@ -2423,6 +2423,7 @@
 	</include>
 	<include name="WidgetListPoster">
 		<param name="visible">true</param>
+		<param name="fallback_icon">DefaultVideo</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -2449,8 +2450,19 @@
 					<control type="group">
 						<left>68</left>
 						<top>10</top>
-						<include content="InfoWallMovieLayout">
+						<include content="InfoWallMovieLayout" condition="!Skin.HasSetting(HideWidgetLabels)">
 							<param name="focused" value="false" />
+						</include>
+						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels)">
+							<param name="main_label" value="$PARAM[label_focus]" />
+							<param name="focused" value="false" />
+							<param name="fallback_image" value="$PARAM[fallback_icon]" />
+						</include>
+						<include content="InfoWallProgressLayout" condition="Skin.HasSetting(HideWidgetLabels)">
+							<param name="top" value="350" />
+							<param name="top_2" value="378" />
+							<param name="left" value="20" />
+							<param name="width" value="275" />
 						</include>
 					</control>
 				</itemlayout>
@@ -2467,8 +2479,19 @@
 							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
 							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
 						</animation>
-						<include content="InfoWallMovieLayout">
+						<include content="InfoWallMovieLayout" condition="!Skin.HasSetting(HideWidgetLabels)">
 							<param name="focused" value="true" />
+						</include>
+						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels)">
+							<param name="main_label" value="$PARAM[label_focus]" />
+							<param name="focused" value="true" />
+							<param name="fallback_image" value="$PARAM[fallback_icon]" />
+						</include>
+						<include content="InfoWallProgressLayout" condition="Skin.HasSetting(HideWidgetLabels)">
+							<param name="top" value="350" />
+							<param name="top_2" value="378" />
+							<param name="left" value="20" />
+							<param name="width" value="275" />
 						</include>
 					</control>
 				</focusedlayout>

@@ -20,10 +20,6 @@
 		<value condition="String.IsEqual(listitem.dbtype,tvshow)">$LOCALIZE[1024]</value>
 		<value>$LOCALIZE[208]</value>
 	</variable>
-	<variable name="WidgetViewPoster">
-        <value condition="!Skin.HasSetting(use_posterview)">WidgetListSquare</value>
-        <value>WidgetListPoster</value>
-    </variable>
 	<variable name="OSVar">
 		<value condition="System.Platform.Android">Android</value>
 		<value condition="System.Platform.IOS">IOS</value>
@@ -1222,6 +1218,7 @@
 	<variable name="InfoWallThumbVar">
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(set)) + String.IsEqual(listitem.dbtype,set)">$INFO[ListItem.Art(set)]</value>
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="String.IsEmpty(ListItem.Art(thumb)) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb)) + String.IsEqual(listitem.dbtype,episode)">$INFO[ListItem.Art(thumb)]</value>
