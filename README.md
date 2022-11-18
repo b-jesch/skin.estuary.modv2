@@ -40,6 +40,8 @@ supports animated poster only.
   * include 'Jump to Letter' in Flix view
   * make 'Play Trailer' in context menu customizable
   * show next timer and available disk space in tv timers window
+  * remove skin setting 'use poster view for music videos'
+  * add title labels to poster view widgets
 
 
 - .9
