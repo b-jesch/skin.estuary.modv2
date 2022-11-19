@@ -35,6 +35,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .11
+  * update playlist view
+
+  
 - .10
   * Widget header for TV timer in Home menu modified
   * include 'Jump to Letter' in Flix view
