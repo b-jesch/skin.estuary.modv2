@@ -177,13 +177,13 @@
 		<definition>
 			<control type="button" id="$PARAM[control_id]">
 				<width>$PARAM[width]</width>
-				<height>110</height>
+				<height>70</height>
 				<align>left</align>
 				<aligny>top</aligny>
 				<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
 				<texturenofocus />
 				<textoffsetx>40</textoffsetx>
-				<textoffsety>35</textoffsety>
+				<textoffsety>13</textoffsety>
 				<label>$PARAM[label]</label>
 				<onclick>$PARAM[onclick]</onclick>
 				<selectedcolor>white</selectedcolor>

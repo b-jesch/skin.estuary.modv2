@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .11
+  * update playlist view
+
+
 - .10
   * include 'Jump to Letter' in Flix view
   * make 'Play Trailer' in context menu customizable
