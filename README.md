@@ -37,6 +37,7 @@ supports animated poster only.
 ### 4.0.2+nexus ###
 - .11
   * update playlist view
+  * extend setting 'Show Fanart' to all video views (affected earlier only to home widgets)
 
   
 - .10
