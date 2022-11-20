@@ -41,6 +41,7 @@ supports animated poster only.
   * update playlist view
   * extend setting 'Show Fanart' to all video views (affected earlier only to home widgets)
   * fix missing channel logo in PVR info views
+  * fix usage of endtime and endtime resume media flags
 
 
 - .10
