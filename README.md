@@ -40,6 +40,7 @@ supports animated poster only.
 - .11
   * update playlist view
   * extend setting 'Show Fanart' to all video views (affected earlier only to home widgets)
+  * fix missing channel logo in PVR info views
 
 
 - .10
