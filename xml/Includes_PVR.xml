@@ -121,12 +121,23 @@
 					<texture colordiffuse="dialog_tint">colors/white.png</texture>
 				</control>
 				<control type="image">
+					<depth>DepthContentPopout</depth>
 					<left>5</left>
 					<right>5</right>
 					<top>5</top>
 					<bottom>5</bottom>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarInfo]</texture>
+					<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<visible>String.IsEmpty(Control.GetLabel(24001))</visible>
+				</control>
+				<control type="image" id="24001">
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[PVRArtworksVarInfo]</texture>
 					<fadetime>200</fadetime>
 				</control>
 				<control type="group">
@@ -1241,12 +1252,23 @@
 					<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
 				</control>
 				<control type="image">
+					<depth>DepthContentPopout</depth>
 					<left>5</left>
 					<right>5</right>
 					<top>5</top>
 					<bottom>5</bottom>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
+					<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<visible>!Player.HasVideo + String.IsEmpty(Control.GetLabel(24002))</visible>
+				</control>
+				<control type="image" id="24002">
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[PVRArtworksVar]</texture>
 					<visible>!Player.HasVideo</visible>
 					<fadetime>200</fadetime>
 				</control>
