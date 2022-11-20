@@ -39,6 +39,7 @@ supports animated poster only.
 ### 3.4.2+matrix ###
 - .11
   * update playlist view
+  * extend setting 'Show Fanart' to all video views (affected earlier only to home widgets)
 
 
 - .10
