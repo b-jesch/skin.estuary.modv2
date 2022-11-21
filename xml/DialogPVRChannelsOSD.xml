@@ -18,15 +18,24 @@
 					<param name="height" value="460" />
 					<param name="top" value="640" />
 				</include>
-				<control type="label">
-					<top>665</top>
-					<width>885</width>
-					<height>40</height>
-					<aligny>center</aligny>
-					<left>20</left>
-					<font>font14</font>
-					<label>$INFO[VideoPlayer.ChannelGroup,[B]$LOCALIZE[19141]:[/B] ,]</label>
-					<visible>Skin.HasSetting(ShowPVRGroups)</visible>
+				<control type="group">
+					<include content="ItemTop" condition="Skin.HasSetting(use_fullOsdList)">
+						<param name="top">0</param>
+					</include>
+					<include content="ItemTop" condition="!Skin.HasSetting(use_fullOsdList)">
+						<param name="top">660</param>
+					</include>
+					<control type="label">
+						<top>5</top>
+						<width>885</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<left>20</left>
+						<font>font14</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<label>$INFO[VideoPlayer.ChannelGroup,[B]$LOCALIZE[19141]:[COLOR white] ,[/COLOR][/B]]</label>
+						<visible>Skin.HasSetting(ShowPVRGroups)</visible>
+					</control>
 				</control>
 				<control type="group">
 					<include content="ItemTop" condition="Skin.HasSetting(use_fullOsdList)">
