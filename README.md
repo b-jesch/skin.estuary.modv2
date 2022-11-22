@@ -1,5 +1,7 @@
 # Skin Estuary MOD V2 for KODI 19 Matrix KN Edition #
 
+**Some screenshots You'll find at the end of this Readme**
+
 ## Installation Notes ##
 
 It's strongly recommended to install the skin via the "Kodinerds Repo", as this is the only way to guarantee that additional 
@@ -612,3 +614,6 @@ Note: In my opinion, the adaptation to Kodi 19 is complete. Future changes will 
 ![simplified OSD](resources/screenshots/screenshot_10.png)
 ![colored flags](resources/screenshots/screenshot_11.png)
 ![improved nextup info](resources/screenshots/screenshot_12.png)
+![improved PVR event icons](resources/screenshots/screenshot_13.png)
+![various color...](resources/screenshots/screenshot_14.png)
+![...and font schemes](resources/screenshots/screenshot_15.png)
