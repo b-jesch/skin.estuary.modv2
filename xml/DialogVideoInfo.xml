@@ -190,6 +190,7 @@
 						<param name="id" value="8" />
 						<param name="icon" value="icons/infodialogs/play.png" />
 						<param name="label" value="$LOCALIZE[208]" />
+						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">
 						<param name="id" value="8" />
