@@ -1380,12 +1380,23 @@
 					<texture colordiffuse="dialog_tint">colors/white.png</texture>
 				</control>
 				<control type="image">
+					<depth>DepthContentPopout</depth>
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<visible>!Player.HasVideo + String.IsEmpty(Control.GetLabel(24003))</visible>
+				</control>
+				<control type="image" id="24003">
 					<top>5</top>
 					<left>5</left>
 					<right>5</right>
 					<bottom>5</bottom>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarOSD]</texture>
+					<texture>$VAR[PVRArtworksVarOSD]</texture>
 					<fadetime>200</fadetime>
 				</control>
 				<include content="BusyPvrArtworkSpinner">
