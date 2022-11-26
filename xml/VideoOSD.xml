@@ -247,7 +247,8 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/settings-subtitle.png"/>
 					</include>
-					<onclick>NextSubtitle</onclick>
+					<onclick condition="!Skin.HasSetting(SimplyfiedOSDVideo)">NextSubtitle</onclick>
+					<onclick condition="Skin.HasSetting(SimplyfiedOSDVideo)">ActivateWindow(osdsubtitlesettings)</onclick>
 					<visible>VideoPlayer.HasSubtitles</visible>
 				</control>
 				<control type="radiobutton" id="7041">
@@ -261,7 +262,8 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/settings-audio.png"/>
 					</include>
-					<onclick>AudioNextLanguage</onclick>
+					<onclick condition="!Skin.HasSetting(SimplyfiedOSDVideo)">AudioNextLanguage</onclick>
+					<onclick condition="Skin.HasSetting(SimplyfiedOSDVideo)">ActivateWindow(osdaudiosettings)</onclick>
 				</control>
 				<control type="radiobutton" id="700">
 					<include content="OSDButton">
