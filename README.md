@@ -37,6 +37,12 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .12
+  * Textures.xbt updated (av1 flag added)
+  * fix missing channel logo in Guide and Video OSD
+  * link subtitles/audio OSD buttons to subtitles/audio settings for more flexibility (simplified OSD)
+
+
 - .11
   * update playlist view
   * extend setting 'Show Fanart' to all video views (affected earlier only to home widgets)
