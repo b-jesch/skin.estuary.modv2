@@ -39,6 +39,7 @@ supports animated poster only.
 ### 4.0.2+nexus ###
 - .12
   * Textures.xbt updated (av1 flag added)
+  * coloured flags updated (thanks to frodo19) 
   * fix missing channel logo in Guide and Video OSD
   * link subtitles/audio OSD buttons to subtitles/audio settings for more flexibility (simplified OSD)
 
