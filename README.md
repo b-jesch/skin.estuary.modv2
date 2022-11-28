@@ -44,6 +44,7 @@ supports animated poster only.
   * coloured flags updated (thanks to frodo19) 
   * fix missing channel logo in Guide and Video OSD
   * link subtitles/audio OSD buttons to subtitles/audio settings for more flexibility (simplified OSD)
+  * new more uniformed resolution flags (thanks again to frodo19)
 
 
 - .11
