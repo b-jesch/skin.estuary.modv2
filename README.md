@@ -43,6 +43,7 @@ supports animated poster only.
   * fix missing channel logo in Guide and Video OSD
   * link subtitles/audio OSD buttons to subtitles/audio settings for more flexibility (simplified OSD)
   * new more uniformed resolution flags (thanks again to frodo19)
+  * modify cond visibility for 'Jump to Letter'
 
 
 - .11
