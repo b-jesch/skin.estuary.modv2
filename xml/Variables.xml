@@ -667,7 +667,7 @@
 		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 	</variable>
 	<variable name="VideoInfoPlayerFanartVar">
-		<value condition="!Skin.HasSetting(EnableExtraFanart) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(show_fanart) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 		<value condition="VideoPlayer.Content(movies)">special://skin/extras/home-images/movies.jpg</value>
 		<value condition="VideoPlayer.Content(episodes)">special://skin/extras/home-images/tvshows.jpg</value>
 	</variable>

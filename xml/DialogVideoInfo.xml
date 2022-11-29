@@ -118,7 +118,7 @@
 						<onright>138</onright>
 						<ondown>5000</ondown>
 						<onup>5002</onup>
-						<texturenofocus border="21"></texturenofocus>
+						<texturenofocus border="21"/>
 						<visible>!Skin.HasSetting(enable_LibraryClearArt) + !String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
 					<control type="button" id="138">
@@ -134,7 +134,7 @@
 						<onright>138</onright>
 						<ondown>5000</ondown>
 						<onup>5002</onup>
-						<texturenofocus border="21"></texturenofocus>
+						<texturenofocus border="21"/>
 						<visible>Skin.HasSetting(enable_LibraryClearArt) | String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
 					<control type="textbox">

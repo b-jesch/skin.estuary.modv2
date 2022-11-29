@@ -45,6 +45,7 @@ supports animated poster only.
   * new more uniformed resolution flags (thanks again to frodo19)
   * modify cond visibility for 'Jump to Letter'
   * fix playing Live TV while (fullscreen) video info becomes active  
+  * avoid stuttering if skin setting 'Play video in background' isn't set
 
 
 - .11

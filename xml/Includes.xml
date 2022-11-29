@@ -3030,6 +3030,16 @@
 				<visible>!Slideshow.IsActive</visible>
 				<visible>!Skin.HasSetting(background_showvideo) + ![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 			</control>
+			<control type="videowindow">
+				<depth>DepthBackground</depth>
+				<left>-400</left>
+				<top>0</top>
+				<width>320</width>
+				<height>240</height>
+				<visible>Player.HasVideo</visible>
+				<visible>!Slideshow.IsActive</visible>
+				<visible>Skin.HasSetting(background_showvideo)</visible>
+			</control>
 			<control type="group">
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
