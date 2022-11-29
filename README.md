@@ -46,6 +46,7 @@ supports animated poster only.
   * link subtitles/audio OSD buttons to subtitles/audio settings for more flexibility (simplified OSD)
   * new more uniformed resolution flags (thanks again to frodo19)
   * modify cond visibility for 'Jump to Letter'
+  * fix playing Live TV while (fullscreen) video info becomes active  
 
 
 - .11
