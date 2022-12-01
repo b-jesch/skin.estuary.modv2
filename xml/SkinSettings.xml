@@ -433,7 +433,7 @@
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="radiobutton" id="309">
-					<label>German Telecast Offers $INFO[System.AddonVersion(script.service.gto),(,)]</label>
+					<label>Telecast Offers $INFO[System.AddonVersion(script.service.gto),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
 					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
