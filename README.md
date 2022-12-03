@@ -39,6 +39,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .13
+  * smaller fixes and textures updates
+
+
 - .12
   * Textures.xbt updated (av1 flag added)
   * coloured flags updated (thanks to frodo19) 
