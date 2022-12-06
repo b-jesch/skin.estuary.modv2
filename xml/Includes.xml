@@ -3147,7 +3147,7 @@
 						<onclick>SetFocus(8000)</onclick>
 						<visible>!Control.IsVisible(6160) + !Window.IsVisible(script-globalsearch.xml)</visible>
 						<visible>[Control.HasFocus(531) | Control.HasFocus(5199) | Control.HasFocus(50600) | Control.HasFocus(502600)] + ![Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506) | Control.IsVisible(510)]</visible>
-						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)</visible>
+						<visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</visible>
 						<animation effect="slide" end="-186,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 					</control>
 					<control type="button">
@@ -3161,7 +3161,7 @@
 						<onclick>SetFocus(8000)</onclick>
 						<visible>!Control.IsVisible(6160)</visible>
 						<visible>[Control.HasFocus(531) | Control.HasFocus(5199)] + [Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506) | Control.IsVisible(510)]</visible>
-						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)</visible>
+						<visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</visible>
 						<animation effect="slide" end="-184,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 					</control>
 					<control type="button" id="6160">
@@ -3202,7 +3202,7 @@
 						<texturenofocus />
 						<visible>Control.HasFocus(531) | Control.HasFocus(5199) | Control.HasFocus(50600) | Control.HasFocus(502600)</visible>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)</visible>
+						<visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</visible>
 						<visible>!Window.IsVisible(script-globalsearch.xml)</visible>
 						<animation effect="slide" end="-186,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 					</control>

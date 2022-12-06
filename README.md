@@ -39,7 +39,8 @@ supports animated poster only.
 ### 4.0.2+nexus ###
 - .13
   * smaller fixes and textures updates
-
+  * fix cond visibility for label 'Jump to letter'
+  * fix incorrectly resolved condition while showing seekbar, when 'use small OSD' was not set
 
 - .12
   * Textures.xbt updated (av1 flag added)
