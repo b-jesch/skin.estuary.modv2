@@ -16,9 +16,9 @@
 			<include content="SeekBar" condition="Skin.HasSetting(ShowSeekBar) + [Player.Seeking | Player.DisplayAfterSeek]">
 				<param name="top">990</param>
 			</include>
-			<include condition="![Player.Seeking | Player.DisplayAfterSeek] + ![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithInfo</include>
+			<include condition="![Player.Seeking | Player.DisplayAfterSeek] + ![[Skin.HasSetting(SmallOSDVideo) | Skin.HasSetting(ShowSeekBar)] + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithInfo</include>
 			<include condition="!Skin.HasSetting(ShowSeekBar) + ![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithInfo</include>
-			<include condition="![Player.Seeking | Player.DisplayAfterSeek] + [Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithoutInfo</include>
+			<include condition="![Player.Seeking | Player.DisplayAfterSeek] + [[Skin.HasSetting(SmallOSDVideo) | Skin.HasSetting(ShowSeekBar)] + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithoutInfo</include>
 			<include condition="!Skin.HasSetting(ShowSeekBar) + [Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">OSDWithoutInfo</include>
 		</control>	
 	</controls>

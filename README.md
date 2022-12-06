@@ -41,6 +41,8 @@ supports animated poster only.
 ### 3.4.2+matrix ###
 - .13
   * smaller fixes and textures updates
+  * fix cond visibility for label 'Jump to letter'
+  * fix incorrectly resolved condition while showing seekbar, when 'use small OSD' was not set
 
 
 - .12
