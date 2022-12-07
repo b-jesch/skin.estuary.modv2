@@ -41,6 +41,7 @@ supports animated poster only.
   * smaller fixes and textures updates
   * fix cond visibility for label 'Jump to letter'
   * fix incorrectly resolved condition while showing seekbar, when 'use small OSD' was not set
+  * add Flix view to music videos
 
 - .12
   * Textures.xbt updated (av1 flag added)
