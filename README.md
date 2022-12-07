@@ -44,6 +44,7 @@ supports animated poster only.
   * fix cond visibility for label 'Jump to letter'
   * fix incorrectly resolved condition while showing seekbar, when 'use small OSD' was not set
   * add Flix view to music videos
+  * set info dialog metadata to invisible if trailer is playing
 
 
 - .12
