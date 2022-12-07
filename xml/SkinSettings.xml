@@ -962,7 +962,7 @@
 				<control type="button" id="915">
 					<include>DefaultSettingButton</include>
 					<description>forced view musicvideos</description>
-					<onclick>Skin.SelectBool(31358, 31348|musicvideos.0, 31107|musicvideos.55, 31100|musicvideos.53, 31101|musicvideos.54, 31102|musicvideos.500, 20445|musicvideos.502, 31217|musicvideos.506, 31346|musicvideos.507)</onclick>
+					<onclick>Skin.SelectBool(31358, 31348|musicvideos.0, 31107|musicvideos.55, 31100|musicvideos.53, 31101|musicvideos.54, 31102|musicvideos.500, 20445|musicvideos.502, 31620|musicvideos.510, 31217|musicvideos.506, 31346|musicvideos.507)</onclick>
 					<visible>Library.HasContent(musicvideos) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31358]</label>
 					<label2>$VAR[SettingsForcedViewsMusicVideosVar]</label2>

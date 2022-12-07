@@ -247,7 +247,7 @@
 				<height>65</height>
 				<align>left</align>
 				<scroll>true</scroll>
-				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
 			<control type="label">
 				<top>135</top>
@@ -260,7 +260,7 @@
 				<align>left</align>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<scroll>true</scroll>
-				<visible>[Container.Content(movies) | Container.Content(tvshows)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
 			<control type="label">
 				<top>185</top>
@@ -323,14 +323,14 @@
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<visible>Control.IsVisible(510)</visible>
-			<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
 			<include>Visible_Right</include>
 			<left>-8</left>
 			<right>0</right>
 			<top>405</top>
-			<animation effect="slide" end=",-10" time="0" condition="Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
+			<animation effect="slide" end=",-10" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)">Conditional</animation>
 			<control type="panel" id="510">
-				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
 				<top>80</top>
 				<width>100%</width>
 				<height>650</height>
