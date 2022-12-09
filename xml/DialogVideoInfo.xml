@@ -436,6 +436,7 @@
 		<control type="group">
 			<bottom>0</bottom>
 			<height>430</height>
+			<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 			<control type="image" id="3335">
 				<top>0</top>
 				<right>50</right>
