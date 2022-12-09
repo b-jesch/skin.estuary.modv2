@@ -256,8 +256,8 @@
 				<control type="radiobutton" id="221">
 					<label>$LOCALIZE[31637]</label>
 					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(script.artistslideshow)">Skin.ToggleSetting(enable_lyrics)</onclick>
-					<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
+					<onclick condition="System.HasAddon(script.cu.lrclyrics)">Skin.ToggleSetting(enable_lyrics)</onclick>
+					<onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
 					<selected>!Skin.HasSetting(enable_lyrics)</selected>
 				</control>
 				<control type="radiobutton" id="212">
