@@ -43,6 +43,7 @@
 	<constant name="dialogbuttons_itemgap">-20</constant>
 	<constant name="list_y_offset">0</constant>
 	<constant name="list_item_height">80</constant>
+
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-image.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | ControlGroup(8000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131) | Window.IsActive(MyPlaylist.xml)</expression>
 	<expression name="EnableTheme">![VideoPlayer.IsFullscreen | Window.IsActive(fullscreeninfo) | Window.IsVisible(visualisation) | Window.IsVisible(1104)]</expression>
@@ -63,6 +64,9 @@
 	<expression name="ValentineTheme">$EXP[ValentineTime] + $EXP[EnableTheme]</expression>
 	<!-- Expression lossless audio -->
 	<expression name="isLossless">String.isEqual(Videoplayer.AudioCodec,cdda) | String.IsEqual(VideoPlayer.AudioCodec,wavpack) | String.IsEqual(Videoplayer.AudioCodec,flac) | String.IsEqual(Videoplayer.AudioCodec,pcm_bluray) | String.IsEqual(Videoplayer.AudioCodec,wav) | String.IsEqual(Videoplayer.AudioCodec,pcm) | String.IsEqual(Videoplayer.AudioCodec,pcm_s16le) | String.IsEqual(Videoplayer.AudioCodec,alac) | String.IsEqual(Videoplayer.AudioCodec,pcm_s24le) | String.IsEqual(Videoplayer.AudioCodec,ape) | String.IsEqual(Videoplayer.AudioCodec,sacd)</expression>
+	<!-- Expression Seek, Skip Forwarding and Rewinding -->
+	<expression name="isSeeking">Player.Seeking | Player.HasPerformedSeek(3) | Player.Forwarding | Player.Rewinding</expression>
+
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -3768,7 +3772,7 @@
 					<top>-50</top>
 					<height>80</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<visible>!Pvr.IsTimeShift + [Player.Seeking | Player.HasPerformedSeek(3)]</visible>
+					<visible>!Pvr.IsTimeShift + $EXP[isSeeking]</visible>
 				</control>
 				<control type="image">
 					<left>-20</left>
@@ -3776,7 +3780,7 @@
 					<top>-100</top>
 					<height>130</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<visible>Pvr.IsTimeShift + [Player.Seeking | Player.HasPerformedSeek(3)]</visible>
+					<visible>Pvr.IsTimeShift + $EXP[isSeeking]</visible>
 				</control>
 				<control type="group" id="6000">
 					<top>-5</top>

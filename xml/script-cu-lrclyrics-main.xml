@@ -11,8 +11,8 @@
 		<control type="group">
 			<include>Animation_TopSlide</include>
 			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
-			<include condition="Skin.HasSetting(enable_animatedlyrics)">ClassicLyrics</include>
-			<include condition="!Skin.HasSetting(enable_animatedlyrics)">AnimatedLyrics</include>
+			<include condition="!Skin.HasSettings(enable_lyrics) + Skin.HasSetting(enable_animatedlyrics)">ClassicLyrics</include>
+			<include condition="!Skin.HasSettings(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics)">AnimatedLyrics</include>
 			<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
 			<control type="label" id="200">
 				<description>Scraper label</description>
