@@ -63,6 +63,9 @@
 	<expression name="ValentineTheme">$EXP[ValentineTime] + $EXP[EnableTheme]</expression>
 	<!-- Expression lossless audio -->
 	<expression name="isLossless">String.isEqual(Videoplayer.AudioCodec,cdda) | String.IsEqual(VideoPlayer.AudioCodec,wavpack) | String.IsEqual(Videoplayer.AudioCodec,flac) | String.IsEqual(Videoplayer.AudioCodec,pcm_bluray) | String.IsEqual(Videoplayer.AudioCodec,wav) | String.IsEqual(Videoplayer.AudioCodec,pcm) | String.IsEqual(Videoplayer.AudioCodec,pcm_s16le) | String.IsEqual(Videoplayer.AudioCodec,alac) | String.IsEqual(Videoplayer.AudioCodec,pcm_s24le) | String.IsEqual(Videoplayer.AudioCodec,ape) | String.IsEqual(Videoplayer.AudioCodec,sacd)</expression>
+	<!-- Expression Seek, Skip Forwarding and Rewinding -->
+	<expression name="isSeeking">Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding</expression>
+
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -3767,7 +3770,7 @@
 					<top>-50</top>
 					<height>80</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<visible>!Pvr.IsTimeShift + [Player.Seeking | Player.DisplayAfterSeek]</visible>
+					<visible>!Pvr.IsTimeShift + $EXP[isSeeking]</visible>
 				</control>
 				<control type="image">
 					<left>-20</left>
@@ -3775,7 +3778,7 @@
 					<top>-100</top>
 					<height>130</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<visible>Pvr.IsTimeShift + [Player.Seeking | Player.DisplayAfterSeek]</visible>
+					<visible>Pvr.IsTimeShift + $EXP[isSeeking]</visible>
 				</control>
 				<control type="group" id="6000">
 					<top>-5</top>

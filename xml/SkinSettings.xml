@@ -242,8 +242,26 @@
 					<selected>!Skin.HasSetting(enable_artistclearart)</selected>
 					<onclick>Skin.ToggleSetting(enable_artistclearart)</onclick>
 				</control>
+				<control type="label" id="30020">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>70</height>
+					<label>$LOCALIZE[24013]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="radiobutton" id="221">
+					<label>$LOCALIZE[31637]</label>
+					<include>DefaultSettingButton</include>
+					<onclick condition="System.HasAddon(script.cu.lrclyrics)">Skin.ToggleSetting(enable_lyrics)</onclick>
+					<onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
+					<selected>!Skin.HasSetting(enable_lyrics)</selected>
+				</control>
 				<control type="radiobutton" id="212">
-					<label>$LOCALIZE[31379]</label>
+					<label>  ∟$LOCALIZE[31379]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_animatedlyrics)</onclick>
 					<selected>!Skin.HasSetting(enable_animatedlyrics)</selected>
@@ -261,7 +279,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick condition="!Skin.String(LyricsColor1)">RunScript(script.skin.helper.colorpicker,skinstring=LyricsColor1)</onclick>
 					<onclick condition="Skin.String(LyricsColor1)">Skin.Reset(LyricsColor1)</onclick>
-					<visible>!Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
+					<visible>!Skin.HasSetting(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
 				</control>
 				<control type="button" id="218">
 					<label>    ∟$LOCALIZE[737] 2</label>
@@ -269,7 +287,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick condition="!Skin.String(LyricsColor2)">RunScript(script.skin.helper.colorpicker,skinstring=LyricsColor2)</onclick>
 					<onclick condition="Skin.String(LyricsColor2)">Skin.Reset(LyricsColor2)</onclick>
-					<visible>!Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
+					<visible>!Skin.HasSetting(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
 				</control>
 				<control type="button" id="219">
 					<label>    ∟$LOCALIZE[737] 3</label>
@@ -277,7 +295,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick condition="!Skin.String(LyricsColor3)">RunScript(script.skin.helper.colorpicker,skinstring=LyricsColor3)</onclick>
 					<onclick condition="Skin.String(LyricsColor3)">Skin.Reset(LyricsColor3)</onclick>
-					<visible>!Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
+					<visible>!Skin.HasSetting(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
 				</control>
 				<control type="button" id="220">
 					<label>    ∟$LOCALIZE[737] 4</label>
@@ -285,13 +303,14 @@
 					<include>DefaultSettingButton</include>
 					<onclick condition="!Skin.String(LyricsColor4)">RunScript(script.skin.helper.colorpicker,skinstring=LyricsColor4)</onclick>
 					<onclick condition="Skin.String(LyricsColor4)">Skin.Reset(LyricsColor4)</onclick>
-					<visible>!Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
+					<visible>!Skin.HasSetting(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</visible>
 				</control>
 				<control type="radiobutton" id="213">
 					<label>$LOCALIZE[31431]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_scrollingtext)</onclick>
 					<selected>!Skin.HasSetting(enable_scrollingtext)</selected>
+					<visible>Skin.HasSetting(enable_lyrics)</visible>
 				</control>
 				<control type="radiobutton" id="210">
 					<label>$LOCALIZE[31286]</label>
