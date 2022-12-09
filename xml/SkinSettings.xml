@@ -265,6 +265,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_animatedlyrics)</onclick>
 					<selected>!Skin.HasSetting(enable_animatedlyrics)</selected>
+					<enable>!Skin.HasSetting(enable_lyrics)</enable>
 				</control>
 				<control type="radiobutton" id="216">
 					<label>  ∟$LOCALIZE[31363]</label>
@@ -272,6 +273,7 @@
 					<selected>Skin.HasSetting(Alt_color.lyrics)</selected>
 					<onclick>Skin.ToggleSetting(Alt_color.lyrics)</onclick>
 					<visible>!Skin.HasSetting(enable_animatedlyrics)</visible>
+					<enable>!Skin.HasSetting(enable_lyrics)</enable>
 				</control>
 				<control type="button" id="217">
 					<label>    ∟$LOCALIZE[737] 1</label>
