@@ -43,6 +43,7 @@ supports animated poster only.
   * fix incorrectly resolved condition while showing seekbar, when 'use small OSD' was not set
   * add Flix view to music videos
   * set info dialog metadata to invisible if trailer is playing
+  * set power/settings/search/fullscreen menu buttons to vertical orientation if smaller main menu is set
 
 
 - .12
