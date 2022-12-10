@@ -3668,6 +3668,11 @@
 			<top>$PARAM[top]</top>
 		</definition>
 	</include>
+	<include name="ItemMovement">
+		<definition>
+			<movement>$PARAM[movement]</movement>
+		</definition>
+	</include>
 	<include name="ContextMenuPosition">
 		<definition>
 			<top>$PARAM[top]</top>

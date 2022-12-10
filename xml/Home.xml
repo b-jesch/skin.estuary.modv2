@@ -1613,10 +1613,20 @@
 				</include>
 				<control type="fixedlist" id="9000">
 					<left>0</left>
-					<top>240</top>
+					<include condition="!Skin.HasSetting(MinimizeMainMenu)" content="ItemTop">
+						<param name="top">240</param>
+					</include>
+					<include condition="!Skin.HasSetting(MinimizeMainMenu)" content="ItemMovement">
+						<param name="movement">7</param>
+					</include>
+					<include condition="Skin.HasSetting(MinimizeMainMenu)" content="ItemTop">
+						<param name="top">410</param>
+					</include>
+					<include condition="Skin.HasSetting(MinimizeMainMenu)" content="ItemMovement">
+						<param name="movement">5</param>
+					</include>
 					<width>462</width>
 					<bottom>-10</bottom>
-					<movement>7</movement>
 					<focusposition>0</focusposition>
 					<onfocus>ClearProperty(listposition,home)</onfocus>
 					<onfocus>ClearProperty(SkinHelper.WidgetContainer,home)</onfocus>
@@ -1840,156 +1850,105 @@
 					</control>
 				</control>
 				<control type="image">
-					<top>108</top>
-					<left>0</left>
-					<width>95</width>
-					<height>80</height>
-					<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
-					<visible>Skin.HasSetting(MinimizeMainMenu) + !Skin.HasSetting(EnableGradientColor) + [Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
+					<top>390</top>
+					<left>5</left>
+					<width>85</width>
+					<height>2</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">colors/white50.png</texture>
+					<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
 				</control>
 				<control type="grouplist" id="700">
-					<orientation>horizontal</orientation>
-					<left>0</left>
+					<orientation>vertical</orientation>
+					<left>10</left>
 					<width>95</width>
-					<height>110</height>
+					<height>270</height>
 					<top>100</top>
+					<itemgap>15</itemgap>
 					<onup>SetFocus(9000,99,absolute)</onup>
 					<ondown>SetFocus(9000,0,absolute)</ondown>
 					<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
-					<include content="IconButton">
+					<include condition="Skin.HasSetting(EnableGradientColor)" content="IconButton">
 						<param name="control_id" value="804" />
 						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
 						<param name="icon" value="icons/power.png" />
 						<param name="label" value="$LOCALIZE[33060]" />
-						<param name="height" value="95" />
-						<param name="width" value="95" />
-						<param name="texturefocus" value="" />
-						<param name="radioposx" value="28" />
+						<param name="height" value="70" />
+						<param name="width" value="70" />
+						<param name="texturefocus" value="buttons/roundbutton-fo-gradient-180.png" />
+						<param name="radioposx" value="14" />
 					</include>
-					<include content="IconButton">
+					<include condition="Skin.HasSetting(EnableGradientColor)" content="IconButton">
 						<param name="control_id" value="802" />
 						<param name="onclick" value="ActivateWindow(settings)" />
 						<param name="icon" value="icons/settings.png" />
 						<param name="label" value="$LOCALIZE[21417]" />
-						<param name="height" value="95" />
-						<param name="width" value="95" />
-						<param name="texturefocus" value="" />
-						<param name="radioposx" value="28" />
+						<param name="height" value="70" />
+						<param name="width" value="70" />
+						<param name="texturefocus" value="buttons/roundbutton-fo-gradient-180.png" />
+						<param name="radioposx" value="14" />
 					</include>
-					<include content="IconButton">
+					<include condition="Skin.HasSetting(EnableGradientColor)" content="IconButton">
 						<param name="control_id" value="801" />
 						<param name="onclick" value="ActivateWindow(1107)" />
 						<param name="icon" value="icons/search.png" />
 						<param name="label" value="$LOCALIZE[137]" />
-						<param name="height" value="95" />
-						<param name="width" value="95" />
-						<param name="texturefocus" value="" />
-						<param name="radioposx" value="28" />
+						<param name="height" value="70" />
+						<param name="width" value="70" />
+						<param name="texturefocus" value="buttons/roundbutton-fo-gradient-180.png" />
+						<param name="radioposx" value="14" />
 					</include>
-					<include content="IconButton">
+					<include condition="Skin.HasSetting(EnableGradientColor)" content="IconButton">
 						<param name="control_id" value="803" />
 						<param name="onclick" value="Fullscreen" />
 						<param name="icon" value="icons/now-playing/fullscreen.png" />
 						<param name="label" value="$LOCALIZE[31000]" />
 						<param name="visible" value="Player.HasMedia" />
-						<param name="height" value="95" />
-						<param name="width" value="95" />
-						<param name="texturefocus" value="" />
-						<param name="radioposx" value="28" />
+						<param name="height" value="70" />
+						<param name="width" value="70" />
+						<param name="texturefocus" value="buttons/roundbutton-fo-gradient-180.png" />
+						<param name="radioposx" value="14" />
 					</include>
-				</control>
-				<control type="image">
-					<top>108</top>
-					<left>0</left>
-					<width>95</width>
-					<height>80</height>
-					<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
-					<visible>Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor) + [Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
-				</control>
-				<control type="group">
-					<visible>Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor)</visible>
-					<control type="image">
-						<top>108</top>
-						<left>0</left>
-						<width>95</width>
-						<height>80</height>
-						<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
-						<visible>Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)</visible>
-					</control>
-					<control type="image">
-						<top>128</top>
-						<left>28</left>
-						<width>40</width>
-						<height>40</height>
-						<aspectratio>keep</aspectratio>
-						<texture>icons/power.png</texture>
-						<visible>Control.HasFocus(804)</visible>
-					</control>
-					<control type="image">
-						<top>128</top>
-						<left>28</left>
-						<width>40</width>
-						<height>40</height>
-						<aspectratio>keep</aspectratio>
-						<texture>icons/settings.png</texture>
-						<visible>Control.HasFocus(802)</visible>
-					</control>
-					<control type="image">
-						<top>128</top>
-						<left>28</left>
-						<width>40</width>
-						<height>40</height>
-						<aspectratio>keep</aspectratio>
-						<texture>icons/search.png</texture>
-						<visible>Control.HasFocus(801)</visible>
-					</control>
-					<control type="image">
-						<top>128</top>
-						<left>28</left>
-						<width>40</width>
-						<height>40</height>
-						<aspectratio>keep</aspectratio>
-						<texture>icons/now-playing/fullscreen.png</texture>
-						<visible>Control.HasFocus(803) + Player.HasMedia</visible>
-					</control>
-				</control>
-				<control type="group">
-					<control type="image">
-						<left>15</left>
-						<top>195</top>
-						<width>14</width>
-						<height>14</height>
-						<texture flipx="true">overlays/arrowright.png</texture>
-						<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
-						<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
-						<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
-						<visible>ControlGroup(700).HasFocus</visible>
-						<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
-					</control>
-					<control type="image">
-						<top>201</top>
-						<height>2</height>
-						<left>30</left>
-						<width>35</width>
-						<texture>colors/white.png</texture>
-						<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
-						<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
-						<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
-						<visible>ControlGroup(700).HasFocus</visible>
-						<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
-					</control>
-					<control type="image">
-						<left>66</left>
-						<top>195</top>
-						<width>14</width>
-						<height>14</height>
-						<texture>overlays/arrowright.png</texture>
-						<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
-						<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
-						<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
-						<visible>ControlGroup(700).HasFocus</visible>
-						<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
-					</control>
+					<include condition="!Skin.HasSetting(EnableGradientColor)" content="IconButton">
+						<param name="control_id" value="804" />
+						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
+						<param name="icon" value="icons/power.png" />
+						<param name="label" value="$LOCALIZE[33060]" />
+						<param name="height" value="80" />
+						<param name="width" value="80" />
+						<param name="texturefocus" value="buttons/roundbutton-fo2.png" />
+						<param name="radioposx" value="20" />
+					</include>
+					<include condition="!Skin.HasSetting(EnableGradientColor)" content="IconButton">
+						<param name="control_id" value="802" />
+						<param name="onclick" value="ActivateWindow(settings)" />
+						<param name="icon" value="icons/settings.png" />
+						<param name="label" value="$LOCALIZE[21417]" />
+						<param name="height" value="80" />
+						<param name="width" value="80" />
+						<param name="texturefocus" value="buttons/roundbutton-fo2.png" />
+						<param name="radioposx" value="20" />
+					</include>
+					<include condition="!Skin.HasSetting(EnableGradientColor)" content="IconButton">
+						<param name="control_id" value="801" />
+						<param name="onclick" value="ActivateWindow(1107)" />
+						<param name="icon" value="icons/search.png" />
+						<param name="label" value="$LOCALIZE[137]" />
+						<param name="height" value="80" />
+						<param name="width" value="80" />
+						<param name="texturefocus" value="buttons/roundbutton-fo2.png" />
+						<param name="radioposx" value="20" />
+					</include>
+					<include condition="!Skin.HasSetting(EnableGradientColor)" content="IconButton">
+						<param name="control_id" value="803" />
+						<param name="onclick" value="Fullscreen" />
+						<param name="icon" value="icons/now-playing/fullscreen.png" />
+						<param name="label" value="$LOCALIZE[31000]" />
+						<param name="visible" value="Player.HasMedia" />
+						<param name="height" value="80" />
+						<param name="width" value="80" />
+						<param name="texturefocus" value="buttons/roundbutton-fo2.png" />
+						<param name="radioposx" value="20" />
+					</include>
 				</control>
 			</control>
 			<include>BottomBar</include>
