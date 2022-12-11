@@ -184,7 +184,7 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[15067]</label>
 					<font>font25_title</font>
-					<onclick>Action(close)</onclick>
+					<onclick>Dialog.Close(all)</onclick>
 					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				</control>

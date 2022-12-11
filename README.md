@@ -44,6 +44,7 @@ supports animated poster only.
   * add Flix view to music videos
   * set info dialog metadata to invisible if trailer is playing
   * set power/settings/search/fullscreen menu buttons to vertical orientation if smaller main menu is set
+  * add missing video info window if fullscreen video info is not set
 
 
 - .12
@@ -55,7 +56,7 @@ supports animated poster only.
   * modify cond visibility for 'Jump to Letter'
   * fix playing Live TV while (fullscreen) video info becomes active  
   * avoid stuttering if skin setting 'Play video in background' isn't set
- * modifications on 'telecast offers' info window 
+  * modifications on 'telecast offers' info window 
 
 
 - .11

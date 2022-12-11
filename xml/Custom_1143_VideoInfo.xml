@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1143">
+	<defaultcontrol always="true">1</defaultcontrol>
+	<include>OpenClose_FadeSlide_Right</include>
+	<controls>
+		<control type="group">
+			<bottom>0</bottom>
+			<height>550</height>
+			<visible>!Window.IsVisible(1138) | !Window.IsVisible(videoosd)</visible>
+			<animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
+			<control type="image">
+				<left>0</left>
+				<bottom>-220</bottom>
+				<width>100%</width>
+				<height>550</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+				<control type="image">
+					<right>0</right>
+					<bottom>330</bottom>
+					<width>400</width>
+					<height>225</height>
+					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<visible>!Skin.HasSetting(enable_playerclearart)</visible>
+					<animation effect="slide" end="0,-290" time="0" condition="Window.IsVisible(1138)">Conditional</animation>
+					<animation effect="slide" end="0,-350" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1139)">Conditional</animation>
+					<animation effect="slide" end="0,-250" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
+					<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+				</control>
+				<control type="label">
+					<include content="ItemLeft" condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.StartsWith(Player.Filenameandpath,http)">
+						<param name="left" value="239"/>
+					</include>
+					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
+						<param name="left" value="315"/>
+					</include>
+					<bottom>260</bottom>
+					<right>30</right>
+					<height>30</height>
+					<label>[B]$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)][/B]</label>
+					<scroll>true</scroll>
+					<font>font37</font>
+					<scroll>true</scroll>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<visible>!VideoPlayer.Content(LiveTV) + !Window.IsVisible(MusicVisualisation.xml)</visible>
+				</control>
+				<control type="label">
+					<include content="ItemLeft" condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.StartsWith(Player.Filenameandpath,http)">
+						<param name="left" value="239"/>
+					</include>
+					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
+						<param name="left" value="315"/>
+					</include>
+					<bottom>260</bottom>
+					<right>30</right>
+					<height>30</height>
+					<label>[B]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode,,.]$INFO[VideoPlayer.EpisodeName, ][/B]</label>
+					<scroll>true</scroll>
+					<font>font37</font>
+					<scroll>true</scroll>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<visible>VideoPlayer.Content(LiveTV) | VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<include content="ItemLeft" condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.StartsWith(Player.Filenameandpath,http)">
+						<param name="left" value="239"/>
+					</include>
+					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
+						<param name="left" value="315"/>
+					</include>
+					<bottom>20</bottom>
+					<right>30</right>
+					<height>30</height>
+					<label>$INFO[VideoPlayer.Genre]</label>
+					<font>font12</font>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="label">
+					<include content="ItemLeft" condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.StartsWith(Player.Filenameandpath,http)">
+						<param name="left" value="239"/>
+					</include>
+					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
+						<param name="left" value="315"/>
+					</include>
+					<bottom>20</bottom>
+					<right>30</right>
+					<height>30</height>
+					<label>$INFO[VideoPlayer.ChannelName,[B],[/B]]$INFO[VideoPlayer.Genre,[COLOR white] [B]-[/B] [/COLOR]]</label>
+					<font>font12</font>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="label">
+					<left>30</left>
+					<bottom>20</bottom>
+					<right>30</right>
+					<height>30</height>
+					<align>right</align>
+					<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
+					<font>font12</font>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<visible>player.chaptercount</visible>
+				</control>
+				<control type="label">
+					<left>30</left>
+					<bottom>20</bottom>
+					<right>30</right>
+					<height>30</height>
+					<align>right</align>
+					<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031] : [COLOR white], - ][COLOR white]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime : ][/COLOR]</label>
+					<font>font12</font>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<scroll>true</scroll>
+					<visible>VideoPlayer.HasEpg + VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="textbox">
+					<include content="ItemLeft" condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.StartsWith(Player.Filenameandpath,http)">
+						<param name="left" value="239"/>
+					</include>
+					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
+						<param name="left" value="315"/>
+					</include>
+					<top>310</top>
+					<right>30</right>
+					<height>190</height>
+					<align>justify</align>
+					<font>fontplot</font>
+					<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
+					<autoscroll delay="9000" time="5000" repeat="8000">true</autoscroll>
+				</control>
+				<control type="image">
+					<depth>DepthOSD+</depth>
+					<left>30</left>
+					<top>260</top>
+					<width>179</width>
+					<height>255</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture background="true" fallback="DefaultVideo.png">$VAR[NowPlayingPosterVar]</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.StartsWith(Player.Filenameandpath,http)</visible>
+				</control>
+				<control type="image">
+					<depth>DepthOSD+</depth>
+					<left>30</left>
+					<top>260</top>
+					<width>255</width>
+					<height>255</height>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<texture background="true" fallback="DefaultVideo.png">$VAR[NowPlayingLandscapeVar]</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<visible>![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)] + !VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="image">
+					<depth>DepthOSD+</depth>
+					<left>30</left>
+					<top>260</top>
+					<width>255</width>
+					<height>255</height>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<texture background="true" fallback="DefaultTVSquare.png">$VAR[NowPlayingPosterVar]</texture>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+				</control>
+			</control>
+			<control type="grouplist" id="9001">
+				<orientation>horizontal</orientation>
+				<left>10</left>
+				<bottom>320</bottom>
+				<width>1000</width>
+				<height>100</height>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<itemgap>-20</itemgap>
+				<onup>SetFocus(800)</onup>
+				<ondown>SetFocus(800)</ondown>
+				<usecontrolcoords>true</usecontrolcoords>
+				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive + ![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">Conditional</animation>
+				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive + [Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">Conditional</animation>
+				<control type="button" id="1">
+					<width>auto</width>
+					<height>100</height>
+					<textoffsetx>30</textoffsetx>
+					<label>$LOCALIZE[15067]</label>
+					<font>font25_title</font>
+					<onclick>Dialog.Close(all)</onclick>
+					<oninfo>Dialog.Close(all)</oninfo>
+					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

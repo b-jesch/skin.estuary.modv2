@@ -1295,6 +1295,13 @@
 					<onclick>Skin.ToggleSetting(TopNameItem)</onclick>
 					<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
 				</control>
+				<control type="radiobutton" id="10026">
+					<label>  ∟$LOCALIZE[31638]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(MinimizeOptionsMenu)</selected>
+					<onclick>Skin.ToggleSetting(MinimizeOptionsMenu)</onclick>
+					<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
+				</control>
 				<control type="radiobutton" id="10001">
 					<label>$LOCALIZE[31204]</label>
 					<include>DefaultSettingButton</include>
