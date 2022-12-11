@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">5000</defaultcontrol>
 	<onload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + Player.Playing + !VideoPlayer.Content(livetv)">PlayerControl(Play)</onload>
 	<onunload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + !VideoPlayer.Content(livetv)">PlayerControl(Play)</onunload>
+	<onload condition="Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(1143)</onload>
 	<controls>
 		<control type="group">
 			<visible>[VideoPlayer.content(movies) | VideoPlayer.Content(episodes)] + !Skin.HasSetting(ExtendedOSDInfo)</visible>

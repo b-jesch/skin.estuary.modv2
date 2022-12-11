@@ -46,6 +46,7 @@ supports animated poster only.
   * add Flix view to music videos
   * set info dialog metadata to invisible if trailer is playing
   * set power/settings/search/fullscreen menu buttons to vertical orientation if smaller main menu is set
+  * add missing video info window if fullscreen video info is not set
 
 
 - .12
