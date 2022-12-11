@@ -19,7 +19,6 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			<control type="group">
-				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				<control type="image">
 					<right>0</right>
 					<bottom>330</bottom>
@@ -183,8 +182,6 @@
 				<onup>SetFocus(800)</onup>
 				<ondown>SetFocus(800)</ondown>
 				<usecontrolcoords>true</usecontrolcoords>
-				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive + ![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">Conditional</animation>
-				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive + [Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">Conditional</animation>
 				<control type="button" id="1">
 					<width>auto</width>
 					<height>100</height>
