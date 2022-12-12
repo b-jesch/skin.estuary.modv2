@@ -64,7 +64,7 @@
 					<font>font37</font>
 					<scroll>true</scroll>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<visible>VideoPlayer.Content(LiveTV) | VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="label">
 					<include content="ItemLeft" condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.StartsWith(Player.Filenameandpath,http)">
