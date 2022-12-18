@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .14
+  * fixes on video info window
+
+
 - .13
   * smaller fixes and textures updates
   * fix cond visibility for label 'Jump to letter'
