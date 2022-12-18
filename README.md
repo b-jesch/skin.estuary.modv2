@@ -39,6 +39,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .14
+  * fixes on video info window
+
+
 - .13
   * smaller fixes and textures updates
   * fix cond visibility for label 'Jump to letter'
