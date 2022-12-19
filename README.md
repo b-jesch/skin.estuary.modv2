@@ -39,6 +39,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .15
+  * another behaviour of video info window fixed when fullscreen info is set and PVR is playing live TV
+
+
 - .14
   * fixes on video info window
 
