@@ -37,6 +37,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .16
+  * add missing preview for musicvideos on view selection window (1131) 
+  * add selection for default action on PVR widgets
+ 
+
 - .15
   * another behaviour of video info window fixed when fullscreen info is set and PVR is playing live TV
 

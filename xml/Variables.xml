@@ -1087,6 +1087,11 @@
 		<value condition="String.IsEqual(Skin.String(widget_action),31590)">$LOCALIZE[31590]</value>
 		<value>$LOCALIZE[31334]</value>
 	</variable>
+	<variable name="WidgetActionPVRVar">
+		<value condition="String.IsEqual(Skin.String(widget_action_pvr),31589)">$LOCALIZE[31589]</value>
+		<value condition="String.IsEqual(Skin.String(widget_action_pvr),31590)">$LOCALIZE[31590]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
 	<variable name="TimerWidgetActionVar">
 		<value condition="String.IsEqual(Skin.String(timerwidget_action),31624)">$LOCALIZE[31624]</value>
 		<value condition="String.IsEqual(Skin.String(timerwidget_action),31625)">$LOCALIZE[31625]</value>
