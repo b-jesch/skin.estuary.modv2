@@ -1411,6 +1411,17 @@
 					<onclick condition="String.IsEqual(Skin.String(widget_action),31589)">Skin.SetString(widget_action,31590)</onclick>
 					<onclick condition="!String.IsEmpty(Skin.String(widget_action)) + !String.IsEqual(Skin.String(widget_action),31589) + !String.IsEqual(Skin.String(widget_action),31590)">Skin.SetString(widget_action,31589)</onclick>
 				</control>
+				<control type="button" id="10027">
+					<label>$LOCALIZE[31639]</label>
+					<label2>$VAR[WidgetActionPVRVar]</label2>
+					<include>DefaultSettingButton</include>
+					<description>default action on pvr widgets</description>
+					<onclick condition="String.IsEmpty(Skin.String(widget_action_pvr))">Skin.SetString(widget_action_pvr,31589)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(widget_action_pvr),31590)">Skin.SetString(widget_action_pvr,31589)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(widget_action_pvr),31589)">Skin.SetString(widget_action_pvr,31590)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(widget_action_pvr)) + !String.IsEqual(Skin.String(widget_action_pvr),31589) + !String.IsEqual(Skin.String(widget_action_pvr),31590)">Skin.SetString(widget_action_pvr,31589)</onclick>
+					<visible>System.HasPVRAddon</visible>
+				</control>
 				<control type="radiobutton" id="10021">
 					<label>$LOCALIZE[31468]</label>
 					<include>DefaultSettingButton</include>
