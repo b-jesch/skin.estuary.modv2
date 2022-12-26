@@ -285,7 +285,7 @@
 				</control>
 				<control type="group">
 					<visible>Window.IsVisible(tvrecordings)</visible>
-					<top>110</top>
+					<top>95</top>
 					<control type="label">
 						<font>font12</font>
 						<label>$INFO[ListItem.Date,$LOCALIZE[577] : ,]</label>
@@ -296,12 +296,18 @@
 						<font>font12</font>
 						<label>$INFO[ListItem.Size,$LOCALIZE[21802] : ,]</label>
 					</control>
+					<control type="label">
+						<top>70</top>
+						<font>font12</font>
+						<label>$INFO[ListItem.ExpirationDate,$LOCALIZE[19299] : , ]$INFO[ListItem.ExpirationTime]</label>
+						<visible>!String.IsEmpty(ListItem.ExpirationDate)</visible>
+					</control>
 					<control type="group">
 						<top>52</top>
 						<height>25</height>
 						<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 						<control type="progress">
-							<top>52</top>
+							<top>65</top>
 							<height>12</height>
 							<width>350</width>
 							<colordiffuse>88FFFFFF</colordiffuse>

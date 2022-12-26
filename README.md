@@ -41,6 +41,7 @@ supports animated poster only.
   * add missing preview for musicvideos on view selection window (1131) 
   * add selection for default action on PVR widgets
   * prepare dates for special themes 2023
+  * add PVR recording expiration date info
  
 
 - .15
