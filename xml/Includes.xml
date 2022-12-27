@@ -3077,9 +3077,8 @@
 						<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</imagepath>
 						<timeperimage>3000</timeperimage>
 						<randomize>true</randomize>
-						<animation effect="slide" end="-10000,-10000" time="0" condition="Control.IsVisible(502) + !$EXP[infodialog_active]">Conditional</animation>
-						<visible>!Window.IsVisible(Home.xml) + Skin.HasSetting(show_fanart)</visible>
-						<visible>Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
+						<visible>!Window.IsVisible(Home.xml) + !Skin.HasSetting(show_fanart) + !Control.IsVisible(502) + !Control.IsVisible(510) + !$EXP[infodialog_active]</visible>
+						<visible>!Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
 					</control>
 					<control type="image">
 						<left>-3</left>
