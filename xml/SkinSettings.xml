@@ -5,16 +5,6 @@
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
-		<control type="multiimage" id="32112">
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<fadetime>400</fadetime>
-			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</imagepath>
-			<timeperimage>3000</timeperimage>
-			<randomize>true</randomize>
-			<visible>!Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
-		</control>
 		<control type="group" id="10000">
 			<left>470</left>
 			<include>OpenClose_Right</include>
