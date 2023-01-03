@@ -49,13 +49,13 @@
 	<!-- Christmas Time from 1. Advent to 2. Christmas Date, fix end date (26.12.) -->
 	<expression name="ChristmasTime">System.Date(12-03,12-27) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="ChristmasTheme">$EXP[ChristmasTime] + $EXP[EnableTheme]</expression>
-	<!-- Halloween, frix date (31.10) -->
+	<!-- Halloween, fix date (31.10) -->
 	<expression name="HalloweenTime">System.Date(10-31,11-01) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="HalloweenTheme">$EXP[HalloweenTime] + $EXP[EnableTheme]</expression>
 	<!-- Palm Sunday to Maundy Thursday, variable date -->
 	<expression name="PreEasterTime">System.Date(04-03,04-07) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="PreEasterTheme">$EXP[PreEasterTime] + $EXP[EnableTheme]</expression>
-	<!-- Easter from Good Friday to Easter Monday, vaiable date -->
+	<!-- Easter from Good Friday to Easter Monday, variable date -->
 	<expression name="EasterTime">System.Date(04-07,04-11) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="EasterTheme">$EXP[EasterTime] + $EXP[EnableTheme]</expression>
 	<!-- Valentines Day, fix date (14.02) -->
