@@ -1,4 +1,4 @@
-# Skin Estuary MOD V2 for KODI 19 Matrix KN Edition #
+# Skin Estuary MOD V2 for KODI 20 Nexus KN Edition #
 
 **Some screenshots You'll find at the end of this Readme**
 
