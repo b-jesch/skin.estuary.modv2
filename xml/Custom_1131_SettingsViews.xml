@@ -44,7 +44,7 @@
 					<onleft>60</onleft>
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
-					<align>center</align>
+					<align>top</align>
 					<control type="button" id="11111">
 						<label>$LOCALIZE[535]</label>
 						<include>DefaultSettingButton</include>
@@ -120,7 +120,7 @@
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(510)</onclick>
 						<onclick>Action(close)</onclick>
-						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
 					</control>
 					<control type="button" id="11121">
 						<label>$LOCALIZE[31205]</label>

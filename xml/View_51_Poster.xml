@@ -45,7 +45,7 @@
 					<hitrect x="100" y="0" w="800" h="400" />
 					<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(games)</visible>
 					<preloaditems>1</preloaditems>
-					<viewtype label="20021">icon</viewtype>
+					<viewtype label="$LOCALIZE[20021]">icon</viewtype>
 					<itemlayout width="317">
 						<control type="group">
 							<left>-220</left>

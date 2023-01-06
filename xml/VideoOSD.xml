@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<onload condition="!Player.PauseEnabled">SetFocus(603)</onload>
+	<onload condition="Player.Rewinding | Player.Forwarding">SetFocus(6021)</onload>
 	<defaultcontrol always="true">602</defaultcontrol>
 	<include>Animation_BottomSlide</include>
 	<depth>DepthOSD</depth>
@@ -112,7 +113,8 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/channelswitch.png"/>
 					</include>
-					<onclick>action(number0)</onclick>
+					<onclick condition="!String.IsEqual(Skin.String(channelswitch_action),31633)">action(number0)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(channelswitch_action),31633)">ActivateWindow(1133)</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<visible>VideoPlayer.Content(livetv) + !Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
@@ -167,23 +169,15 @@
 					<radioposy>0</radioposy>
 					<selected>!PVR.IsRecordingPlayingChannel</selected>
 					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
-					<visible>PVR.CanRecordPlayingChannel</visible>
-					<visible>VideoPlayer.Content(livetv)</visible>
+					<visible>PVR.CanRecordPlayingChannel + VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="radiobutton" id="607">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
 					</include>
-					<onclick>ActivateWindow(fullscreeninfo)</onclick>
-					<visible>!String.IsEmpty(VideoPlayer.Plot) + !VideoPlayer.Content(livetv)</visible>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
-				</control>
-				<control type="radiobutton" id="70045">
-					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/plot.png"/>
-					</include>
-					<onclick>ActivateWindow(1138)</onclick>
-					<visible>VideoPlayer.Content(livetv)</visible>
+					<onclick condition="VideoPlayer.Content(livetv) | Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(1138)</onclick>
+					<onclick condition="!VideoPlayer.Content(livetv) + !Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(fullscreeninfo)</onclick>
+					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="70040">
@@ -253,7 +247,8 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/settings-subtitle.png"/>
 					</include>
-					<onclick>NextSubtitle</onclick>
+					<onclick condition="!Skin.HasSetting(SimplyfiedOSDVideo)">NextSubtitle</onclick>
+					<onclick condition="Skin.HasSetting(SimplyfiedOSDVideo)">ActivateWindow(osdsubtitlesettings)</onclick>
 					<visible>VideoPlayer.HasSubtitles</visible>
 				</control>
 				<control type="radiobutton" id="7041">
@@ -267,7 +262,8 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/settings-audio.png"/>
 					</include>
-					<onclick>AudioNextLanguage</onclick>
+					<onclick condition="!Skin.HasSetting(SimplyfiedOSDVideo)">AudioNextLanguage</onclick>
+					<onclick condition="Skin.HasSetting(SimplyfiedOSDVideo)">ActivateWindow(osdaudiosettings)</onclick>
 				</control>
 				<control type="radiobutton" id="700">
 					<include content="OSDButton">
@@ -318,117 +314,15 @@
 			</control>
 			<control type="group">
 				<top>90</top>
-				<visible>Player.SeekEnabled</visible>
-				<visible>!Window.IsVisible(sliderdialog)</visible>
-				<control type="button" id="87">
-					<include>HiddenObject</include>
-					<onup>200</onup>
-					<onunfocus condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onunfocus>
-					<ondown>200</ondown>
-					<onright>StepForward</onright>
-					<onleft>StepBack</onleft>
-					<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
-				</control>
-				<control type="slider">
-					<top>-5</top>
-					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="460"/>
-					</include>
-					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="30"/>
-					</include>
-					<right>30</right>
-					<height>20</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
-					<info>Player.Progress</info>
-					<action>seek</action>
-					<visible>!Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
-				</control>
-				<control type="slider">
-					<top>-5</top>
-					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="460"/>
-					</include>
-					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="30"/>
-					</include>
-					<right>30</right>
-					<height>20</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-					<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
-					<info>Player.Progress</info>
-					<action>seek</action>
-					<visible>Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
-				</control>	
-				<control type="slider">
-					<top>-5</top>
-					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="460"/>
-					</include>
-					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="30"/>
-					</include>
-					<right>30</right>
-					<height>20</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
-					<info>PVR.TimeshiftProgressPlayPos</info>
-					<action>pvr.seek</action>
-					<visible>!Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
-				</control>
-				<control type="slider">
-					<top>-5</top>
-					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="460"/>
-					</include>
-					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="30"/>
-					</include>
-					<right>30</right>
-					<height>20</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-					<textureslidernib colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="$VAR[SkinColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
-					<info>PVR.TimeshiftProgressPlayPos</info>
-					<action>pvr.seek</action>
-					<visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
-				</control>
-				<control type="ranges">
-					<top>0</top>
-					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="460"/>
-					</include>
-					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="30"/>
-					</include>
-					<right>30</right>
-					<height>10</height>
-					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
-					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
-					<lefttexture>colors/white.png</lefttexture>
-					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
-					<righttexture>colors/white.png</righttexture>
-					<info>Player.Cutlist</info>
-				</control>
-				<control type="ranges">
-					<top>4</top>
-					<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="460"/>
-					</include>
-					<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-						<param name="left" value="30"/>
-					</include>
-					<right>30</right>
-					<height>6</height>
-					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
-					<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
-					<righttexture>colors/white.png</righttexture>
-					<info>Player.Chapters</info>
-				</control>
+				<right>30</right>
+				<visible>Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)</visible>
+				<include content="ItemLeft" condition="!Skin.HasSetting(SmallOSDVideo)">
+					<param name="left" value="460"/>
+				</include>
+				<include content="ItemLeft" condition="Skin.HasSetting(SmallOSDVideo)">
+					<param name="left" value="30"/>
+				</include>
+				<include>SeekBarProgress</include>
 			</control>
 		</control>
 	</controls>

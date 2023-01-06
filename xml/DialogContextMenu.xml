@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>996</defaultcontrol>
+	<defaultcontrol always="true">996</defaultcontrol>
 	<include>Animation_DialogPopupOpenClose</include>
 	<coordinates>
 		<left>0</left>
@@ -32,6 +32,9 @@
 			</include>
 			<include content="ContextMenuPosition" condition="Window.IsVisible(pvrchannelguide)">
 				<param name="top">-55</param>
+			</include>
+			<include content="ContextMenuPosition" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[31620])">
+				<param name="top">-100</param>
 			</include>
 			<animation effect="slide" end="0,-263" time="0" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(Custom_1132_MoviesSetsInfo.xml)">Conditional</animation>
 			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(home)">Conditional</animation>
@@ -134,11 +137,11 @@
 			<control type="image" id="999">
 				<description>background image</description>
 				<width>510</width>
-				<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide)">
+				<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])">
 					<param name="top">80</param>
 					<param name="height">205</param>
 				</include>
-				<include content="ContextMenuPosition" condition="![Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide)]">
+				<include content="ContextMenuPosition" condition="![Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])]">
 					<param name="top">80</param>
 					<param name="height">530</param>
 				</include>
@@ -146,38 +149,49 @@
 			</control>
 			<control type="grouplist" id="996">
 				<description>grouplist for context buttons</description>
-				<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide)">
+				<include content="ContextMenuPosition" condition="Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])">
 					<param name="top">80</param>
 					<param name="height">205</param>
 				</include>
-				<include content="ContextMenuPosition" condition="![Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide)]">
+				<include content="ContextMenuPosition" condition="![Window.IsVisible(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])]">
 					<param name="top">80</param>
 					<param name="height">530</param>
 				</include>
 				<usecontrolcoords>true</usecontrolcoords>
+				<control type="button" id="1100">
+					<top></top>
+					<width>510</width>
+					<height>65</height>
+					<align>center</align>
+					<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+					<texturenofocus />
+					<label>$LOCALIZE[31635]</label>
+					<onclick condition="!String.IsEmpty(ListItem.Trailer) + !Window.IsVisible(Home)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
+					<onclick condition="!String.IsEmpty(Window(home).Property(TrailerPath)) + Window.IsVisible(Home)">PlayMedia($ESCINFO[Window(home).Property(TrailerPath)])</onclick>
+					<visible>Skin.HasSetting(ShowTrailerEntry) + [!String.IsEmpty(ListItem.Trailer) | [Window.IsVisible(Home) + !String.IsEmpty(Window(home).Property(TrailerPath))]]</visible>
+				</control>
+				<control type="button" id="1000">
+					<description>button template</description>
+					<left>0</left>
+					<width>510</width>
+					<height>65</height>
+					<align>center</align>
+					<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+					<texturenofocus />
+				</control>
 			</control>
-			<include content="UpDownArrows" condition="Window.IsActive(pvrosdchannels) | Window.IsVisible(pvrchannelguide)">
+			<include content="UpDownArrows" condition="Window.IsActive(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])">
 				<param name="container_id" value="996" />
 				<param name="posx" value="200" />
 				<param name="up_posy" value="-40" />
 				<param name="down_posy" value="300" />
 			</include>
-			<include content="UpDownArrows" condition="![Window.IsActive(pvrosdchannels) | Window.IsVisible(pvrchannelguide)]">
+			<include content="UpDownArrows" condition="![Window.IsActive(pvrosdchannels) | Window.IsVisible(pvrchannelguide) | String.IsEqual(Container.ViewMode,$LOCALIZE[31620])]">
 				<param name="container_id" value="996" />
 				<param name="posx" value="225" />
 				<param name="up_posy" value="-40" />
 				<param name="down_posy" value="630" />
 			</include>
-		</control>
-		<control type="button" id="1000">
-			<description>button template</description>
-			<left>0</left>
-			<top></top>
-			<width>510</width>
-			<height>65</height>
-			<align>center</align>
-			<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
-			<texturenofocus />
 		</control>
 	</controls>
 </window>

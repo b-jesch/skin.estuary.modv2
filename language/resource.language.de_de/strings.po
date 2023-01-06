@@ -281,7 +281,7 @@ msgstr "Zurück springen"
 #: /xml/MyMusicNav.xml /xml/MyVideoNav.xml
 msgctxt "#31056"
 msgid "Go to playlist"
-msgstr "Zur Playlist..."
+msgstr "Zur Wiedergabeliste gehen"
 
 #: /xml/SettingsProfile.xml
 msgctxt "#31057"
@@ -1117,12 +1117,12 @@ msgstr "Popup-Benachrichtigungen während der Wiedergabe verhindern"
 #: /xml/SkinSettings.xml
 msgctxt "#31278"
 msgid "Music OSD"
-msgstr "Musik"
+msgstr "Musik OSD"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31279"
 msgid "Video OSD"
-msgstr "Videos"
+msgstr "Video OSD"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31280"
@@ -1620,8 +1620,8 @@ msgstr "Aktuelle Playlist"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31379"
-msgid "Show animated lyrics"
-msgstr "Animierte Liedertexte anzeigen"
+msgid "animate lyrics"
+msgstr "Liedertexte animieren"
 
 #: /xml/Custom_1132_MoviesSetsInfo.xml
 msgctxt "#31380"
@@ -2349,7 +2349,7 @@ msgid "Local Path to animated Poster Folder"
 msgstr "Lokaler Pfad zum Verzeichnis der animierten Poster"
 
 msgctxt "#31599"
-msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings please."
+msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
 msgstr "Das Verzeichnis mit der Sammlung animierter Poster wurde nicht definiert. Bitte Verzeichnis im lokalen Dateisystem in den Skineinstellungen festlegen, welches animierte Poster enthält."
 
 msgctxt "#31600"
@@ -2456,3 +2456,76 @@ msgstr "Flix Landscape"
 msgctxt "#31621"
 msgid "Visualization of the PVR and TV screen related settings."
 msgstr "Einstellungen für PVR und TV."
+
+#: SkinSettings.xml
+
+msgctxt "#31622"
+msgid "Disabled timers"
+msgstr "Inaktive Timer"
+
+
+#: SkinSettings.xml
+
+msgctxt "#31623"
+msgid "Default Action on 'Timer' Widgets"
+msgstr "Standard-Auswahlaktion bei 'Timer' Widgets"
+
+msgctxt "#31624"
+msgid "Show Timer Settings"
+msgstr "Zeige Timer Einstellungen"
+
+msgctxt "#31625"
+msgid "Show Broadcast Information"
+msgstr "Zeige Sendungsinformation"
+
+msgctxt "#31627"
+msgid "Video and Audio OSD"
+msgstr "Video und Audio OSD"
+
+msgctxt "#31628"
+msgid "OSD Artwork"
+msgstr "OSD Artwork"
+
+msgctxt "#31630"
+msgid "Use simple Seekbar on Chapter and Time Seeking"
+msgstr "Benutze einfache Suchleiste bei Kapitel- und zeitlichen Sprüngen"
+
+msgctxt "#31631"
+msgid "Action on 'last channel switch' OSD Button"
+msgstr "Aktion für 'letzter Kanal' OSD Button"
+
+msgctxt "#31632"
+msgid "Switch to last Channel directly"
+msgstr "Schalte direkt auf letzten Kanal"
+
+msgctxt "#31633"
+msgid "Show last five Channels"
+msgstr "Zeige die letzten fünf Kanäle"
+
+msgctxt "#31634"
+msgid "Last watched"
+msgstr "Zuletzt gesehen"
+
+#: DialogContextMenu.xml
+
+msgctxt "#31635"
+msgid "Play Trailer"
+msgstr "Trailer abspielen"
+
+msgctxt "#31636"
+msgid "Show 'Play Trailer' in Context Menu"
+msgstr "Zeige 'Trailer abspielen' im Kontext Menü"
+
+#: Skinsettings.xml
+
+msgctxt "#31637"
+msgid "Show Lyrics"
+msgstr "Zeige Liedtexte"
+
+msgctxt "#31638"
+msgid "Minimized Options Menu"
+msgstr "Verkleinertes Optionsmenü"
+
+msgctxt "#31639"
+msgid "Default Action on 'PVR' Widgets"
+msgstr "Standard-Auswahlaktion bei 'PVR' Widgets"

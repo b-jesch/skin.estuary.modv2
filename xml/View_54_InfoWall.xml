@@ -89,7 +89,7 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
@@ -101,7 +101,7 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
@@ -110,7 +110,7 @@
 				<height>386</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
@@ -119,7 +119,7 @@
 				<height>316</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
@@ -129,7 +129,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + [String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
@@ -139,7 +139,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(show_borders) + [String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="image">
@@ -214,7 +214,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<visible>!Window.IsVisible(script-globalsearch.xml)</visible>
 			</control>
 			<control type="image">
@@ -245,6 +245,16 @@
 				<texture fallback="DefaultGenre.png">$VAR[WidgetGenreIconVar]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(listitem.dbtype,genre)</visible>
+				<animation effect="slide" end="0,-10" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]">Conditional</animation>
+			</control>
+			<control type="image">
+				<left>40</left>
+				<top>50</top>
+				<width>236</width>
+				<height>236</height>
+				<texture fallback="DefaultStudios.png">$VAR[WidgetStudioIconVar]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>String.IsEqual(listitem.dbtype,studio)</visible>
 				<animation effect="slide" end="0,-10" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]">Conditional</animation>
 			</control>
 			<control type="textbox">
@@ -291,7 +301,7 @@
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)</visible>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 			</control>
 			<control type="label">
 				<left>25</left>
@@ -1017,7 +1027,7 @@
 				<width>276</width>
 				<height>155</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
-				<aspectratio aligny="top">keep</aspectratio>
+				<aspectratio>scale</aspectratio>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -1026,7 +1036,7 @@
 				<width>350</width>
 				<height>197</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
-				<aspectratio aligny="top">keep</aspectratio>
+				<aspectratio>scale</aspectratio>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -1217,6 +1227,50 @@
 			</control>
 		</definition>
 	</include>
+	<include name="InfoWallProgressLayout">
+		<param name="left">35</param>
+		<param name="top">352</param>
+		<param name="top_2">380</param>
+		<param name="width">250</param>
+		<definition>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top_2]</top>
+				<width>$PARAM[width]</width>
+				<height>4</height>
+				<texture>dialogs/back.png</texture>
+				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+			</control>
+			<control type="progress">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>ListItem.PercentPlayed</info>
+				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>4</height>
+				<texture>dialogs/back.png</texture>
+				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+			</control>
+			<control type="progress">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>ListItem.Progress</info>
+				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoWallMovieLayout">
 		<param name="focused">false</param>
 		<definition>
@@ -1303,7 +1357,7 @@
 					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
-					<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+					<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				</control>
 				<control type="image">
 					<left>54</left>
@@ -1313,6 +1367,16 @@
 					<texture fallback="DefaultGenre.png">$VAR[WidgetGenreIconVar]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>String.IsEqual(listitem.dbtype,genre)</visible>
+					<animation effect="slide" end="0,44" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>54</left>
+					<top>40</top>
+					<width>212</width>
+					<height>212</height>
+					<texture fallback="DefaultStudios.png">$VAR[WidgetStudioIconVar]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>String.IsEqual(listitem.dbtype,studio)</visible>
 					<animation effect="slide" end="0,44" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 				</control>
 			</control>
@@ -1390,7 +1454,7 @@
 					<height>80</height>
 					<texture>overlays/overlay-bg.png</texture>
 					<visible>ListItem.IsResumable | Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-					<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+					<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -1428,7 +1492,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
-				<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 			</control>
 			<control type="image">
 				<left>35</left>
@@ -1489,42 +1553,7 @@
 				<visible>Skin.HasSetting(greyedout_watched_home) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home)  + !String.IsEqual(listitem.dbtype,genre)</visible>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircleGreyed</include>
 			</control>
-			<control type="image">
-				<left>35</left>
-				<top>380</top>
-				<width>250</width>
-				<height>4</height>
-				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-			</control>
-			<control type="progress">
-				<left>35</left>
-				<top>352</top>
-				<width>250</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.PercentPlayed</info>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-			</control>
-			<control type="image">
-				<left>35</left>
-				<top>352</top>
-				<width>250</width>
-				<height>4</height>
-				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
-			</control>
-			<control type="progress">
-				<left>35</left>
-				<top>352</top>
-				<width>250</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.Progress</info>
-				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
-			</control>
+			<include>InfoWallProgressLayout</include>
 			<control type="group">
 				<top>195</top>
 				<visible>[Skin.HasSetting(enable_LibraryDiscArt) + !Window.IsVisible(Home)] | [Skin.HasSetting(enable_HomeDiscArt) + Window.IsVisible(Home)]</visible>
@@ -2051,7 +2080,7 @@
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">54</onup>
 				<onup condition="!Integer.IsGreater(Container.NumPages,1) + !Skin.HasSetting(KioskMode)">9000</onup>
 				<ondown>54</ondown>
-				<viewtype label="31101">icon</viewtype>
+				<viewtype label="$LOCALIZE[31101]">icon</viewtype>
 				<preloaditems>2</preloaditems>
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>

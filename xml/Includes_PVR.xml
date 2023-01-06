@@ -119,33 +119,47 @@
 				<height>410</height>
 				<control type="image">
 					<texture colordiffuse="dialog_tint">colors/white.png</texture>
-					<fadetime>200</fadetime>
 				</control>
 				<control type="image">
+					<depth>DepthContentPopout</depth>
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarInfo]</texture>
+					<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<visible>String.IsEmpty(Control.GetLabel(24001))</visible>
+				</control>
+				<control type="image" id="24001">
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[PVRArtworksVarInfo]</texture>
 					<fadetime>200</fadetime>
 				</control>
-				<include content="BusyPvrArtworkSpinner">
-					<param name="top" value="165" />
-					<param name="left" value="145" />
-				</include>
 				<control type="group">
 					<left>0</left>
 					<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
 					<control type="image">
-							<width>80</width>
-							<height>80</height>
+							<width>120</width>
+							<height>120</height>
 							<texture flipy="true">overlays/overlay-bg.png</texture>
 						</control>
 					<control type="image">
 						<left>3</left>
 						<top>3</top>
-						<width>48</width>
-						<height>48</height>
+						<width>36</width>
+						<height>36</height>
 						<texture colordiffuse="DDFFFFFF" fallback="defaultnas.png">flags/nas_2.png</texture>
 					</control>
 				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="165" />
+					<param name="left" value="145" />
+				</include>
 			</control>
 			<control type="group">
 				<top>120</top>
@@ -271,7 +285,7 @@
 				</control>
 				<control type="group">
 					<visible>Window.IsVisible(tvrecordings)</visible>
-					<top>110</top>
+					<top>95</top>
 					<control type="label">
 						<font>font12</font>
 						<label>$INFO[ListItem.Date,$LOCALIZE[577] : ,]</label>
@@ -282,8 +296,14 @@
 						<font>font12</font>
 						<label>$INFO[ListItem.Size,$LOCALIZE[21802] : ,]</label>
 					</control>
+					<control type="label">
+						<top>70</top>
+						<font>font12</font>
+						<label>$INFO[ListItem.ExpirationDate,$LOCALIZE[19299] : , ]$INFO[ListItem.ExpirationTime]</label>
+						<visible>!String.IsEmpty(ListItem.ExpirationDate)</visible>
+					</control>
 					<control type="group">
-						<top>52</top>
+						<top>65</top>
 						<height>25</height>
 						<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 						<control type="progress">
@@ -816,6 +836,7 @@
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
+							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
 							<left>210</left>
@@ -910,6 +931,7 @@
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
+							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
 							<left>210</left>
@@ -1209,8 +1231,8 @@
 	<include name="PVRPanelViewInfoPanel">
 		<control type="group">
 			<bottom>0</bottom>
-			<height>365</height>
-			<animation effect="slide" end="0,44" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
+			<height>370</height>
+			<animation effect="slide" end="0,55" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
 			<control type="image">
 				<texture colordiffuse="99FFFFFF">lists/panel.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -1220,33 +1242,47 @@
 				<bottom>-30</bottom>
 				<height>430</height>
 			</control>
-			<control type="image">
+			<control type="group">
 				<left>25</left>
 				<width>340</width>
 				<height>262</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
-				<fadetime>200</fadetime>
+				<control type="image">
+					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				</control>
+				<control type="videowindow">
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<visible>Player.HasVideo</visible>
+					<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
+				</control>
+				<control type="image">
+					<depth>DepthContentPopout</depth>
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<visible>!Player.HasVideo + String.IsEmpty(Control.GetLabel(24002))</visible>
+				</control>
+				<control type="image" id="24002">
+					<left>5</left>
+					<right>5</right>
+					<top>5</top>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[PVRArtworksVar]</texture>
+					<visible>!Player.HasVideo</visible>
+					<fadetime>200</fadetime>
+				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="91" />
+					<param name="left" value="130" />
+				</include>
 			</control>
-			<control type="videowindow">
-				<left>25</left>
-				<width>340</width>
-				<height>262</height>
-				<visible>Player.HasVideo</visible>
-				<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
-			</control>
-			<control type="image">
-				<left>25</left>
-				<width>340</width>
-				<height>262</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
-				<visible>!Player.HasVideo</visible>
-				<fadetime>200</fadetime>
-			</control>
-			<include content="BusyPvrArtworkSpinner">
-				<param name="top" value="91" />
-				<param name="left" value="155" />
-			</include>
 			<control type="label">
 				<top>-9</top>
 				<left>395</left>
@@ -1342,27 +1378,28 @@
 				<label>[B]$INFO[Container(11).ListItem.Genre, $LOCALIZE[515] : [COLOR white],[/COLOR]][/B]</label>
 				<scroll>true</scroll>
 			</control>
-			<control type="image">
+			<control type="group">
 				<top>140</top>
 				<left>40</left>
 				<width>340</width>
 				<height>245</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
-				<fadetime>200</fadetime>
+				<control type="image">
+					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				</control>
+				<control type="image">
+					<top>5</top>
+					<left>5</left>
+					<right>5</right>
+					<bottom>5</bottom>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarOSD]</texture>
+					<fadetime>200</fadetime>
+				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="82" />
+					<param name="left" value="130" />
+				</include>
 			</control>
-			<control type="image">
-				<top>140</top>
-				<left>40</left>
-				<width>340</width>
-				<height>245</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVarOSD]</texture>
-				<fadetime>200</fadetime>
-			</control>
-			<include content="BusyPvrArtworkSpinner">
-				<param name="top" value="222" />
-				<param name="left" value="170" />
-			</include>
 			<control type="label">
 				<top>135</top>
 				<left>405</left>
@@ -1371,27 +1408,49 @@
 				<textcolor>grey</textcolor>
 				<label>$VAR[SeasonEpisodeLabelOSD,[B],[/B]]</label>
 			</control>
-			<control type="textbox">
+			<control type="group">
 				<left>405</left>
-				<top>180</top>
 				<bottom>77</bottom>
 				<right>30</right>
-				<font>font12</font>
-				<align>justify</align>
-				<label>$INFO[Container(11).ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>!String.IsEmpty(Container(11).ListItem.EpisodeName) | !String.IsEmpty(Container(11).ListItem.Season) | !String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				<visible>Window.IsVisible(pvrosdchannels)</visible>
+				<control type="textbox">
+					<top>180</top>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$INFO[Container(11).ListItem.Plot]$INFO[Container(11).ListItem.NextTitle,[CR][CR][B]$LOCALIZE[31396] : [/B]]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEmpty(Container(11).ListItem.EpisodeName) | !String.IsEmpty(Container(11).ListItem.Season) | !String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				</control>
+				<control type="textbox">
+					<top>140</top>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$INFO[Container(11).ListItem.Plot]$INFO[Container(11).ListItem.NextTitle,[CR][CR][B]$LOCALIZE[31396] : [/B]]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEmpty(Container(11).ListItem.EpisodeName) + String.IsEmpty(Container(11).ListItem.Season) + String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				</control>
 			</control>
-			<control type="textbox">
+			<control type="group">
 				<left>405</left>
-				<top>140</top>
-				<right>30</right>
 				<bottom>77</bottom>
-				<font>font12</font>
-				<align>justify</align>
-				<label>$INFO[Container(11).ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>String.IsEmpty(Container(11).ListItem.EpisodeName) + String.IsEmpty(Container(11).ListItem.Season) + String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				<right>30</right>
+				<visible>Window.IsVisible(pvrchannelguide)</visible>
+				<control type="textbox">
+					<top>180</top>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$INFO[Container(11).ListItem.Plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEmpty(Container(11).ListItem.EpisodeName) | !String.IsEmpty(Container(11).ListItem.Season) | !String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				</control>
+				<control type="textbox">
+					<top>140</top>
+					<font>font12</font>
+					<align>justify</align>
+					<label>$INFO[Container(11).ListItem.Plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEmpty(Container(11).ListItem.EpisodeName) + String.IsEmpty(Container(11).ListItem.Season) + String.IsEmpty(Container(11).ListItem.Episode)</visible>
+				</control>
 			</control>
 			<control type="label">
 				<left>405</left>

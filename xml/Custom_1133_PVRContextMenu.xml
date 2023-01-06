@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1133">
+	<onload>SetFocus(11,1)</onload>
+	<defaultcontrol>11</defaultcontrol>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>510</width>
+			<height>380</height>
+			<include>OpenClose_Fade</include>
+			<include content="DialogBackgroundCommons">
+				<param name="width">510</param>
+				<param name="height">380</param>
+				<param name="darken_bg">false</param>
+				<param name="header_label">$LOCALIZE[31016]</param>
+				<param name="header_id">11331</param>
+			</include>
+			<control type="group">
+				<top>80</top>
+				<width>510</width>
+				<control type="image">
+					<description>background image</description>
+					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				</control>
+				<control type="list" id="11">
+					<onleft>11</onleft>
+					<onright>11</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<focusedlayout height="60" width="510">
+						<control type="image">
+							<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
+							<visible>Control.hasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
+							<visible>Control.hasFocus(11)</visible>
+							<visible>Skin.HasSetting(EnableGradientColor)</visible>
+						</control>
+						<control type="label">
+							<top>10</top>
+							<height>40</height>
+							<left>20</left>
+							<right>20</right>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font13</font>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</focusedlayout>
+					<itemlayout height="60" width="510">
+						<control type="label">
+							<top>10</top>
+							<height>40</height>
+							<left>20</left>
+							<right>20</right>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font13</font>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</itemlayout>
+					<content limit="5" sortby="lastplayed" sortorder="descending">pvr://channels/tv/*?view=lastplayed</content>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

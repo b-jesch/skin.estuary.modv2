@@ -7,22 +7,22 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-12-07 11:00+0300\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/kodi-"
-"main/language/ru_RU/)\n"
-"Language: ru_RU\n"
+"PO-Revision-Date: 2022-09-24 13:39+0000\n"
+"Last-Translator: C4Wiz <c4wiz@live.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"skin-estuary-modv2/languages/ru/>\n"
+"Language: ru_ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.7\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: /xml/Home.xml /xml/DialogSeekBar.xml
 msgctxt "#31000"
 msgid "Now playing"
-msgstr "Сейчас играет:"
+msgstr "Сейчас играет"
 
 #: /xml/Home.xml
 msgctxt "#31001"
@@ -127,7 +127,8 @@ msgctxt "#31020"
 msgid "Actions"
 msgstr "Действия"
 
-#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml /xml/Includes_MediaMenu.xml /xml/EventLog.xml
+#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml
+#: /xml/Includes_MediaMenu.xml /xml/EventLog.xml
 msgctxt "#31021"
 msgid "Misc options"
 msgstr "Другие параметры"
@@ -149,8 +150,12 @@ msgstr "Выберите рейтинг для отображения на ме�
 
 #: /xml/DialogFavourites.xml
 msgctxt "#31025"
-msgid "No favourites found. You can add any item from media views to this list by using the context menu."
-msgstr "Список избранного пуст. Вы можете добавить сюда любой медиаконтент с помощью контекстного меню."
+msgid ""
+"No favourites found. You can add any item from media views to this list by "
+"using the context menu."
+msgstr ""
+"Список избранного пуст. Вы можете добавить сюда любой медиаконтент с помощью "
+"контекстного меню."
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31026"
@@ -192,7 +197,8 @@ msgctxt "#31034"
 msgid "Extended info"
 msgstr "Дополнительная информация"
 
-#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
+#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml
+#: /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
 msgctxt "#31035"
 msgid "Pages"
 msgstr "Страницы"
@@ -228,8 +234,15 @@ msgstr "Параметры плейлиста"
 
 #: /1080i/SmartPlaylistEditor.xml:126
 msgctxt "#31043"
-msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
-msgstr "Установите тип и добавьте правила для создания умного плейлиста. Эти плейлисты являются динамическими и включают в себя все мультимедийные элементы из вашей базы данных, которые соответствуют установленным вами правилам."
+msgid ""
+"Set the type and add rules to create a smart playlist. These playlists are "
+"dynamic and include all media items from your database which apply to your "
+"chosen rules."
+msgstr ""
+"Установите тип и добавьте правила для создания умного плейлиста. Эти "
+"плейлисты являются динамическими и включают в себя все мультимедийные "
+"элементы из вашей базы данных, которые соответствуют установленным вами "
+"правилам."
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31044"
@@ -452,13 +465,23 @@ msgstr "Введите текст здесь..."
 
 #: /xml/Home.xml
 msgctxt "#31104"
-msgid "Your video library is currently empty. In order to populate it with your personal media, add a video source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "Ваша библиотека видео сейчас пуста. Чтобы заполнить её данными, добавьте источник видео и настройте его. После того как источник будет добавлен и проиндексирован вы сможете просматривать библиотеку."
+msgid ""
+"Your video library is currently empty. In order to populate it with your "
+"personal media, add a video source and configure it. After the source has "
+"been added and indexed you will be able to browse your library."
+msgstr ""
+"Ваша библиотека видео сейчас пуста. Чтобы заполнить её данными, добавьте "
+"источник видео и настройте его. После того как источник будет добавлен и "
+"проиндексирован вы сможете просматривать библиотеку."
 
 #: /xml/Home.xml
 msgctxt "#31105"
-msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
-msgstr "Добавьте медиаисточник и установите правильный тип его содержимого для заполнения видеобиблиотеки."
+msgid ""
+"Add video sources and set the appropriate content type in order to populate "
+"your video libraries."
+msgstr ""
+"Добавьте медиаисточник и установите правильный тип его содержимого для "
+"заполнения видеобиблиотеки."
 
 #: /xml/Variables.xml
 msgctxt "#31106"
@@ -474,18 +497,28 @@ msgstr "Широкий список"
 #. viewtype name
 #: /xml/Includes_PVR.xml
 msgctxt "#31108"
-msgid "Большой список"
-msgstr ""
+msgid "BigList"
+msgstr "Большой список"
 
 #: /xml/Home.xml
 msgctxt "#31110"
-msgid "Your music library is currently empty. In order to populate it with your personal media, add a music source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "Ваша музыкальная библиотека сейчас пуста. Чтобы ее наполнить добавьте источник музыки и настройте его. После того как источник будет добавлен и проиндексирован вы сможете просматривать библиотеку."
+msgid ""
+"Your music library is currently empty. In order to populate it with your "
+"personal media, add a music source and configure it. After the source has "
+"been added and indexed you will be able to browse your library."
+msgstr ""
+"Ваша музыкальная библиотека сейчас пуста. Чтобы ее наполнить добавьте "
+"источник музыки и настройте его. После того как источник будет добавлен и "
+"проиндексирован вы сможете просматривать библиотеку."
 
 #: /xml/Home.xml
 msgctxt "#31111"
-msgid "View your personal pictures or download one of the many image add-ons from the official repository."
-msgstr "Просмотр личных фотографий или загрузка одного из многих фотодополнений из официального репозитория."
+msgid ""
+"View your personal pictures or download one of the many image add-ons from "
+"the official repository."
+msgstr ""
+"Просмотр личных фотографий или загрузка одного из многих фотодополнений из "
+"официального репозитория."
 
 #: /xml/VideoOSD.xml
 msgctxt "#31112"
@@ -524,13 +557,21 @@ msgstr "Доступ к браузеру дополнений"
 
 #: /xml/Home.xml
 msgctxt "#31119"
-msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
-msgstr "У вас пока что нет установленных дополнений… Посетите наш браузер дополнений, чтобы просмотреть нашу коллекцию и улучшить свой Kodi."
+msgid ""
+"You do not have any add-ons installed yet. Visit our add-on browser to "
+"browse through our collection and improve your Kodi experience."
+msgstr ""
+"У вас пока что нет установленных дополнений… Посетите наш браузер "
+"дополнений, чтобы просмотреть нашу коллекцию и улучшить свой Kodi."
 
 #: /xml/Home.xml
 msgctxt "#31120"
-msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
-msgstr "Вы не настроили провайдера погоды. Необходимо выбрать провайдера и настроить местоположение"
+msgid ""
+"You did not set up a weather provider yet. In order to view weather "
+"information, choose a weather provider and set up your location."
+msgstr ""
+"Вы еще не настроили провайдера погоды. Чтобы просмотреть информацию о "
+"погоде, выберите провайдера погоды и настройте свое местоположение."
 
 #: /xml/Home.xml
 msgctxt "#31121"
@@ -580,7 +621,9 @@ msgstr "Основные настройки, применяемые ко все�
 #: /xml/Variables.xml
 msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Настройки, относящиеся к главному меню: настройте домашний экран по своему вкусу."
+msgstr ""
+"Настройки, относящиеся к главному меню: настройте домашний экран по своему "
+"вкусу."
 
 #: /shortcuts/addons.DATA.xml
 msgctxt "#31131"
@@ -639,8 +682,12 @@ msgstr "Скорость проигрывания"
 
 #: /xml/Home.xml
 msgctxt "#31143"
-msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "В системе не найдено PVR-клиентов. Если собираетесь использовать PVR, выберите дополнение PVR-клиента и настройте его. Дополнительная информация на http://kodi.wiki/view/PVR"
+msgid ""
+"You did not set up PVR yet. In order to use PVR, choose a PVR client addon "
+"and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr ""
+"Вы еще не настроили PVR. Чтобы использовать PVR, выберите надстройку клиента "
+"PVR и настройте ее. Посетите http://kodi.wiki/view/PVR, чтобы узнать больше."
 
 #: /xml/Home.xml
 msgctxt "#31144"
@@ -679,8 +726,12 @@ msgstr "Случайные муз. видео"
 
 #: /xml/Includes.xml
 msgctxt "#31153"
-msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
-msgstr "У вас нет установленных дополнений этого типа. Откройте браузер дополнений, чтобы загрузить дополнения, созданные сообществом."
+msgid ""
+"You do not have any add-ons of this type installed. Enter the add-on browser "
+"to download add-ons created by our community."
+msgstr ""
+"У вас нет установленных дополнений этого типа. Откройте браузер дополнений, "
+"чтобы загрузить дополнения, созданные сообществом."
 
 #: /xml/MyWeather.xml
 msgctxt "#31154"
@@ -690,7 +741,7 @@ msgstr "Нажмите [B]OK[/B] для переключения местопо�
 #: /xml/VideoOSDBookmarks.xml
 msgctxt "#31155"
 msgid "No bookmarks created yet."
-msgstr "Нет закладок"
+msgstr "Закладки еще не созданы."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31156"
@@ -724,8 +775,12 @@ msgstr "Цифровая клавиатура"
 
 #: /xml/Home.xml
 msgctxt "#31162"
-msgid "Play your personal games or download one of the many game add-ons from the official repository."
-msgstr "Играйте в ваши игры или загрузите один из многих игровых аддонов из официального репозитория."
+msgid ""
+"Play your personal games or download one of the many game add-ons from the "
+"official repository."
+msgstr ""
+"Играйте в ваши игры или загрузите один из многих игровых аддонов из "
+"официального репозитория."
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31163"
@@ -744,8 +799,12 @@ msgstr "Добавить источники медиаданных"
 
 #: /xml/Custom_1120_SourcesDialog.xml
 msgctxt "#31202"
-msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
-msgstr "Ссылки к разделам «Файлы» каждого типа носителя. Перейдите туда, чтобы добавить дополнительные источники для ваших баз данных."
+msgid ""
+"Shortcuts to the \"Files\" sections of each media type. Go there to add "
+"additional sources for your databases."
+msgstr ""
+"Ссылки к разделам «Файлы» каждого типа носителя. Перейдите туда, чтобы "
+"добавить дополнительные источники для ваших баз данных."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31203"
@@ -769,8 +828,10 @@ msgstr "Сбросить настройки главного меню"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31207"
-msgid "Are you sure you want to reset display of all menu items back to default ?"
-msgstr "Вы действительно хотите сбросить все элементы меню на значения по-умолчанию?"
+msgid ""
+"Are you sure you want to reset display of all menu items back to default ?"
+msgstr ""
+"Вы действительно хотите сбросить все элементы меню на значения по-умолчанию?"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31208"
@@ -885,7 +946,7 @@ msgstr "програмное декодирование"
 #: /xml/Variables.xml
 msgctxt "#31230"
 msgid "Plot masked to avoid spoilers."
-msgstr "Скрывать сюжет для предотвращения спойлеров"
+msgstr "Сюжет замаскирован во избежание спойлеров."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31231"
@@ -920,107 +981,107 @@ msgstr "Непрозрачность для фанарта в качестве �
 #: /xml/SkinSettings.xml
 msgctxt "#31238"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31239"
 msgid "5%"
-msgstr ""
+msgstr "5%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31240"
 msgid "10%"
-msgstr ""
+msgstr "10%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31241"
 msgid "15%"
-msgstr ""
+msgstr "15%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31242"
 msgid "20%"
-msgstr ""
+msgstr "20%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31243"
 msgid "25%"
-msgstr ""
+msgstr "25%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31244"
 msgid "30%"
-msgstr ""
+msgstr "30%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31245"
 msgid "35%"
-msgstr ""
+msgstr "35%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31246"
 msgid "40%"
-msgstr ""
+msgstr "40%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31247"
 msgid "45%"
-msgstr ""
+msgstr "45%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31248"
 msgid "50%"
-msgstr ""
+msgstr "50%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31249"
 msgid "55%"
-msgstr ""
+msgstr "55%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31250"
 msgid "60%"
-msgstr ""
+msgstr "60%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31251"
 msgid "65%"
-msgstr ""
+msgstr "65%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31252"
 msgid "70%"
-msgstr ""
+msgstr "70%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31253"
 msgid "75%"
-msgstr ""
+msgstr "75%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31254"
 msgid "80%"
-msgstr ""
+msgstr "80%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31255"
 msgid "85%"
-msgstr ""
+msgstr "85%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31256"
 msgid "90%"
-msgstr ""
+msgstr "90%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31257"
 msgid "95%"
-msgstr ""
+msgstr "95%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31258"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31259"
@@ -1035,7 +1096,7 @@ msgstr "Пауза"
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31261"
 msgid "Press [B]OK[/B] to read description"
-msgstr "Нажмите [B]OK[/ B], чтобы прочитать описание"
+msgstr "Нажмите [B]OK[/B], чтобы прочитать описание"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31262"
@@ -1345,7 +1406,7 @@ msgstr "Информация об оборудовании"
 #: /xml/Home.xml
 msgctxt "#31323"
 msgid "Hard disk usage:"
-msgstr "Использование жесткого диска"
+msgstr "Использование жесткого диска:"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31324"
@@ -1530,7 +1591,7 @@ msgstr "Отображать полноэкранную информацию о 
 #: /xml/Variables.xml
 msgctxt "#31360"
 msgid "Power menu-related settings: Configure it to your likings."
-msgstr "Настройки меню выключения: настройте так, как вам нравится"
+msgstr "Параметры, связанные с меню питания: настройте его по своему вкусу."
 
 #: /xml/Home.xml
 msgctxt "#31361"
@@ -1575,7 +1636,9 @@ msgstr "Направление сортировки в виджете"
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31369"
 msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
-msgstr "Нажмите [B]OK[/B] чтобы прочитать описание или [B]Влево[/B] чтобы снова показать изображение"
+msgstr ""
+"Нажмите [B]OK[/B] чтобы прочитать описание или [B]Влево[/B] чтобы снова "
+"показать изображение"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31370"
@@ -1594,13 +1657,26 @@ msgstr "Источники игр"
 
 #: /xml/Home.xml
 msgctxt "#31373"
-msgid "Your games library is currently empty. In order to populate it with your personal games, add a games source. After the source has been added you will be able to browse your games list. You will also need to install necessary add-ons for games."
-msgstr "Ваша библиотека игр сейчас пуста. Чтобы заполнить её данными, добавьте источник игр и настройте его. После того как источник будет добавлен и проиндексирован вы сможете просматривать библиотеку."
+msgid ""
+"Your games library is currently empty. In order to populate it with your "
+"personal games, add a games source. After the source has been added you will "
+"be able to browse your games list. You will also need to install necessary "
+"add-ons for games."
+msgstr ""
+"Ваша библиотека игр сейчас пуста. Чтобы заполнить её данными, добавьте "
+"источник игр и настройте его. После того как источник будет добавлен и "
+"проиндексирован вы сможете просматривать библиотеку."
 
 #: /xml/Home.xml
 msgctxt "#31374"
-msgid "Your pictures library is currently empty. In order to populate it with your personal pictures, add a pictures source. After the source has been added you will be able to browse your pictures list."
-msgstr "Ваша библиотека изображений сейчас пуста. Чтобы заполнить её данными, добавьте источник изображений и настройте его. После того как источник будет добавлен и проиндексирован вы сможете просматривать библиотеку."
+msgid ""
+"Your pictures library is currently empty. In order to populate it with your "
+"personal pictures, add a pictures source. After the source has been added "
+"you will be able to browse your pictures list."
+msgstr ""
+"Ваша библиотека изображений сейчас пуста. Чтобы заполнить её данными, "
+"добавьте источник изображений и настройте его. После того как источник будет "
+"добавлен и проиндексирован вы сможете просматривать библиотеку."
 
 #: /xml/Home.xml
 msgctxt "#31375"
@@ -1684,7 +1760,8 @@ msgstr "Продолжительность доступности элемент
 
 #: /xml/Custom_1133_ParentalControl.xml
 msgctxt "#31391"
-msgid "Password-protected content.[CR]Press [B]Enter[/B] and please enter password."
+msgid ""
+"Password-protected content.[CR]Press [B]Enter[/B] and please enter password."
 msgstr "Контент, защищенный паролем.[CR]Нажмите [B]Ввод[/B] и введите пароль."
 
 #: /xml/DialogKeyboard.xml
@@ -1709,8 +1786,12 @@ msgstr "Показывать виджет ярльков 'Настроек'"
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31398"
-msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
-msgstr "Необходимо перезапустить Kodi и выбрать '[B]Сбросить настройки главного меню и меню выключения[/B]' в настройках обложки после установки этой версии"
+msgid ""
+"It's necessary to reboot Kodi and '[B]Reset main menu and power menu "
+"settings[/B]' in skin settings after installation of this version."
+msgstr ""
+"После установки этой версии необходимо перезагрузить Kodi и «[B] Сбросить "
+"настройки главного меню и меню питания [/B]» в настройках скина."
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31399"
@@ -1892,12 +1973,12 @@ msgstr "Мой рейтинг"
 #: /xml/Variables.xml
 msgctxt "#31434"
 msgid "win"
-msgstr ""
+msgstr "победить"
 
 #: /xml/Variables.xml
 msgctxt "#31435"
 msgid "wins"
-msgstr ""
+msgstr "выигрывает"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31436"
@@ -1927,7 +2008,8 @@ msgstr "Стандартные цвета для жанров"
 #: /xml/SkinSettings.xml
 msgctxt "#31441"
 msgid "Pause video during access to info"
-msgstr "Останавливать воспроизведение видео во время доступа к информации о видео"
+msgstr ""
+"Останавливать воспроизведение видео во время доступа к информации о видео"
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#31442"
@@ -2021,8 +2103,13 @@ msgstr "Включить темы (День святого Валентина, �
 
 #: /xml/Home.xml
 msgctxt "#31460"
-msgid "Your library is currently empty.[CR]In order to populate it with your personal media, add  sources and configure them."
-msgstr "Ваша библиотека сейчас пуста.[CR]Чтобы заполнить её данными войдите в раздел \"Файлы\", добавьте медиаисточник и настройте его. После того как источник будет добавлен и проиндексирован вы сможете просматривать библиотеку."
+msgid ""
+"Your library is currently empty.[CR]In order to populate it with your "
+"personal media, add  sources and configure them."
+msgstr ""
+"Ваша библиотека сейчас пуста.[CR]Чтобы заполнить её данными войдите в раздел "
+"\"Файлы\", добавьте медиаисточник и настройте его. После того как источник "
+"будет добавлен и проиндексирован вы сможете просматривать библиотеку."
 
 #: /xml/Variables.xml
 msgctxt "#31461"
@@ -2042,7 +2129,9 @@ msgstr "В этот день трансляций нет"
 #: /xml/SkinSettings.xml
 msgctxt "#31464"
 msgid "Automatically show music video info at beginning and end of playing"
-msgstr "Автоматически показывать информацию о видеоклипе в начале и окончании воспроизведения"
+msgstr ""
+"Автоматически показывать информацию о видеоклипе в начале и окончании "
+"воспроизведения"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31465"
@@ -2097,27 +2186,27 @@ msgstr "Режим области для настройки постоянной
 #: /xml/SkinSettings.xml
 msgctxt "#31475"
 msgid "2:35:1 (1920x817)"
-msgstr ""
+msgstr "2:35:1 (1920x817)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31476"
 msgid "2:40:1 (1920x800)"
-msgstr ""
+msgstr "2:40:1 (1920x800)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31477"
 msgid "1:77:1 (1920x1080)"
-msgstr ""
+msgstr "1:77:1 (1920x1080)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31478"
 msgid "1:85:1 (1920x1038)"
-msgstr ""
+msgstr "1:85:1 (1920x1038)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31479"
 msgid "2:37:1 (1920x810)"
-msgstr ""
+msgstr "2:37:1 (1920x810)"
 
 #: /xml/Variables.xml
 msgctxt "#31480"
@@ -2147,7 +2236,7 @@ msgstr "Загрузка..."
 #: /xml/SkinSettings.xml
 msgctxt "#31485"
 msgid "Parental control related settings."
-msgstr "Настройки, связанные с родительским контролем"
+msgstr "Настройки, связанные с родительским контролем."
 
 #: /xml/Custom_1101_SettingsList.xml
 msgctxt "#31486"
@@ -2369,15 +2458,15 @@ msgstr "Медиа"
 
 msgctxt "#31567"
 msgid "Kodi/Distribution Logo"
-msgstr ""
+msgstr "Коди / Логотип дистрибутива"
 
 msgctxt "#31568"
 msgid "LibreELEC"
-msgstr ""
+msgstr "LibreELEC"
 
 msgctxt "#31569"
 msgid "CoreELEC"
-msgstr ""
+msgstr "CoreELEC"
 
 msgctxt "#31570"
 msgid "Show extended Power Menu"
@@ -2492,8 +2581,13 @@ msgid "Local Path to animated Poster Folder"
 msgstr "Локальный путь к папке анимированных постеров"
 
 msgctxt "#31599"
-msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
-msgstr "Папка коллекции анимированных постеров еще не определена. В настройках обложки укажите путь к папке, содержащей анимированные постеры."
+msgid ""
+"The folder of the animated Poster Collection was not defined yet. Define a "
+"Folder on the local File System containing animated Posters within the Skin "
+"Settings."
+msgstr ""
+"Папка коллекции анимированных постеров еще не определена. В настройках "
+"обложки укажите путь к папке, содержащей анимированные постеры."
 
 msgctxt "#31600"
 msgid "Could not assign animated Poster"
@@ -2543,7 +2637,6 @@ msgid "Show PVR Channel Status"
 msgstr "Показать статус канала PVR"
 
 #: DialogPlayerProcessInfo
-
 msgctxt "#31610"
 msgid "Display Mode"
 msgstr "Режим отображения"
@@ -2555,3 +2648,47 @@ msgstr "Эффект и гамма"
 msgctxt "#31612"
 msgid "Color Depth"
 msgstr "Глубина цвета"
+
+#: SkinSettings.xml
+msgctxt "#31613"
+msgid "Display Media Time"
+msgstr "Отображение времени мультимедиа"
+
+msgctxt "#31614"
+msgid "current Time / total Time"
+msgstr "текущее время / общее время"
+
+msgctxt "#31615"
+msgid "Remaining Time"
+msgstr "Оставшееся время"
+
+#: SkinSettings.xml
+msgctxt "#31616"
+msgid "Use Background for PVR Channel Icons"
+msgstr "Использовать фон для значков каналов PVR"
+
+#: Custom_1127_settingsTVWidgets.xml
+msgctxt "#31617"
+msgid "Saved Search Results"
+msgstr "Сохраненные результаты поиска"
+
+#: SkinSettings.xml
+msgctxt "#31618"
+msgid "Use full Height for Channel and Program OSD"
+msgstr "Используйте полную высоту для канала и программы OSD"
+
+#: Font.xml
+msgctxt "#31619"
+msgid "Economica based"
+msgstr "Экономика на основе"
+
+#. viewtype name
+#: /xml/View_510_Flix.xml
+msgctxt "#31620"
+msgid "Flix Landscape"
+msgstr "Фликс Пейзаж"
+
+#: Variables.xml (SkinSettings.xml)
+msgctxt "#31621"
+msgid "Visualization of the PVR and TV screen related settings."
+msgstr "Визуализация настроек, связанных с PVR и экраном телевизора."

@@ -20,10 +20,6 @@
 		<value condition="String.IsEqual(listitem.dbtype,tvshow)">$LOCALIZE[1024]</value>
 		<value>$LOCALIZE[208]</value>
 	</variable>
-	<variable name="WidgetViewPoster">
-        <value condition="!Skin.HasSetting(use_posterview)">WidgetListSquare</value>
-        <value>WidgetListPoster</value>
-    </variable>
 	<variable name="OSVar">
 		<value condition="System.Platform.Android">Android</value>
 		<value condition="System.Platform.IOS">IOS</value>
@@ -157,6 +153,7 @@
 			<value condition="Skin.HasSetting(musicvideos.502)">$LOCALIZE[20445]</value>
 			<value condition="Skin.HasSetting(musicvideos.506)">$LOCALIZE[31217]</value>
 			<value condition="Skin.HasSetting(musicvideos.507)">$LOCALIZE[31346]</value>
+			<value condition="Skin.HasSetting(musicvideos.510)">$LOCALIZE[31620]</value>
 			<value>$LOCALIZE[31348]</value>
 	</variable>
 	<variable name="CollectionNumberVar">
@@ -414,6 +411,7 @@
 		<value condition="Container.Content(musicvideos) + Control.HasFocus(11120)">special://skin/extras/views/musicvideos/502.png</value>
 		<value condition="Container.Content(musicvideos) + Control.HasFocus(11122)">special://skin/extras/views/musicvideos/506.png</value>
 		<value condition="Container.Content(musicvideos) + Control.HasFocus(11123)">special://skin/extras/views/musicvideos/507.png</value>
+		<value condition="Container.Content(musicvideos) + Control.HasFocus(11126)">special://skin/extras/views/musicvideos/510.png</value>
 		<value>special://skin/extras/views/splash_small.png</value>
 	</variable>
 	<variable name="VideoLibraryScanLabel">
@@ -632,6 +630,7 @@
 		<value condition="!String.IsEmpty(Listitem.Art(season.landscape))">$INFO[ListItem.Art(season.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.landscape))">$INFO[ListItem.Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(fanart)) + !String.StartsWith(ListItem.FolderPath,plugin://)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
@@ -641,6 +640,8 @@
 		<value condition="!String.IsEmpty(Listitem.Art(season.landscape))">$INFO[ListItem.Art(season.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.landscape))">$INFO[ListItem.Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="InfoWidgetThumbVar2">
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
@@ -668,7 +669,7 @@
 		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 	</variable>
 	<variable name="VideoInfoPlayerFanartVar">
-		<value condition="!Skin.HasSetting(EnableExtraFanart) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(show_fanart) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 		<value condition="VideoPlayer.Content(movies)">special://skin/extras/home-images/movies.jpg</value>
 		<value condition="VideoPlayer.Content(episodes)">special://skin/extras/home-images/tvshows.jpg</value>
 	</variable>
@@ -1072,6 +1073,35 @@
 		<value condition="Skin.HasSetting(opacity_100)">FFFFFFFF</value>
 		<value>37FFFFFF</value>
 	</variable>
+	<variable name="AutocloseOsdVar">
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31578)">$LOCALIZE[31578]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31580)">$LOCALIZE[31580]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31581)">$LOCALIZE[31581]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31582)">$LOCALIZE[31582]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31583)">$LOCALIZE[31583]</value>
+		<value condition="String.IsEqual(Skin.String(autoclose_osd),31584)">$LOCALIZE[31584]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
+	<variable name="WidgetActionVar">
+		<value condition="String.IsEqual(Skin.String(widget_action),31589)">$LOCALIZE[31589]</value>
+		<value condition="String.IsEqual(Skin.String(widget_action),31590)">$LOCALIZE[31590]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
+	<variable name="WidgetActionPVRVar">
+		<value condition="String.IsEqual(Skin.String(widget_action_pvr),31589)">$LOCALIZE[31589]</value>
+		<value condition="String.IsEqual(Skin.String(widget_action_pvr),31590)">$LOCALIZE[31590]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
+	<variable name="TimerWidgetActionVar">
+		<value condition="String.IsEqual(Skin.String(timerwidget_action),31624)">$LOCALIZE[31624]</value>
+		<value condition="String.IsEqual(Skin.String(timerwidget_action),31625)">$LOCALIZE[31625]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
+	<variable name="ChannelSwitchVar">
+		<value condition="String.IsEqual(Skin.String(channelswitch_action),31632)">$LOCALIZE[31632]</value>
+		<value condition="String.IsEqual(Skin.String(channelswitch_action),31633)">$LOCALIZE[31633]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
 	<variable name="Bars_Opacity">
 		<value condition="Skin.HasSetting(opacitybars_0)">00FFFFFF</value>
 		<value condition="Skin.HasSetting(opacitybars_5)">0DFFFFFF</value>
@@ -1106,13 +1136,21 @@
 	</variable>
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
-		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">windows/pvr/timer.png</value>
+		<value condition="ListItem.HasReminder">windows/pvr/bell.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerIsActive">windows/pvr/schedule.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerIsActive">windows/pvr/timer.png</value>
+		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">windows/pvr/schedule_disabled.png</value>
+		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">windows/pvr/timer_disabled.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">windows/pvr/schedule_error.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasError">windows/pvr/timer_error.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">windows/pvr/schedule_conflict.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasConflict">windows/pvr/timer_conflict.png</value>
 		<value condition="ListItem.HasArchive">windows/pvr/archive.png</value>
-		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
 		<value condition="ListItem.IsPlaying">windows/pvr/play.png</value>
-		<value condition="ListItem.IsPremiere">windows/pvr/premiered.png</value>
+		<value condition="ListItem.IsLive">windows/pvr/live.png</value>
+		<value condition="ListItem.IsPremiere | ListItem.IsNew">windows/pvr/premiered.png</value>
 		<value condition="ListItem.IsFinale">windows/pvr/finished.png</value>
-		<value condition="ListItem.IsEncrypted">windows/pvr/encrypt.png</value>
+		<value condition="ListItem.IsEncrypted + !Window.IsVisible(tvguide)">windows/pvr/encrypt.png</value>
 	</variable>
 	<variable name="AutoCompletionContentVar">
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>
@@ -1187,8 +1225,11 @@
 	<variable name="InfoWallThumbVar">
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(set)) + String.IsEqual(listitem.dbtype,set)">$INFO[ListItem.Art(set)]</value>
 		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="String.IsEmpty(ListItem.Art(thumb)) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(thumb)) + String.IsEqual(listitem.dbtype,episode)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEqual(listitem.dbtype,episode)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -1574,7 +1615,8 @@
 		<value condition="Control.HasFocus(606) + PVR.IsRecordingPlayingChannel">$LOCALIZE[19059]</value>
 		<value condition="Control.HasFocus(606)">$LOCALIZE[264]</value>
 		<value condition="Control.HasFocus(607)">$LOCALIZE[19033]</value>
-		<value condition="Control.HasFocus(608)">$LOCALIZE[31608]</value>
+		<value condition="Control.HasFocus(608) + String.IsEqual(Skin.String(channelswitch_action),31632)">$LOCALIZE[31608]</value>
+		<value condition="Control.HasFocus(608) + String.IsEqual(Skin.String(channelswitch_action),31633)">$LOCALIZE[31016]</value>
 		<value condition="Control.HasFocus(6021)">$LOCALIZE[208]</value>
 		<value condition="Control.HasFocus(70011)">$LOCALIZE[31138]</value>
 		<value condition="Control.HasFocus(70012) | Control.HasFocus(70013)">$LOCALIZE[31034]</value>
@@ -1820,20 +1862,6 @@
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre]</value>
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,: ][COLOR=grey]$INFO[Player.Title][/COLOR]</value>
-	</variable>
-	<variable name="PVRTimerIcon">
-		<value condition="ListItem.IsRecording">icons/pvr/PVR-IsRecording.png</value>
-		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
-		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">icons/pvr/PVR-HasTimerScheduleError.png</value>
-		<value condition="ListItem.HasTimer + ListItem.TimerHasError">icons/pvr/PVR-HasTimerError.png</value>
-		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerScheduleConflict.png</value>
-		<value condition="ListItem.HasTimer + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerConflict.png</value>
-		<value condition="ListItem.HasRecording">icons/pvr/PVR-HasRecording.png</value>
-		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerScheduleDisabled.png</value>
-		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerDisabled.png</value>
-		<value condition="ListItem.HasTimerSchedule">icons/pvr/PVR-HasTimerSchedule.png</value>
-		<value condition="ListItem.HasTimer">icons/pvr/PVR-HasTimer.png</value>
-		<value condition="ListItem.IsPlayable">icons/pvr/PVR-HasArchive.png</value>	
 	</variable>
 	<variable name="SeasonEpisodePlayerLabel">
 		<value condition="String.IsEmpty(VideoPlayer.EpisodeName)">$INFO[VideoPlayer.Season, - $LOCALIZE[20373] ]$INFO[VideoPlayer.Episode, - $LOCALIZE[20359] ]</value>

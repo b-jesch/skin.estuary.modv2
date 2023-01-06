@@ -20,7 +20,7 @@
 						<left>0</left>
 						<top>-10</top>
 						<width>100%</width>
-						<bottom>402</bottom>
+						<bottom>397</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 						<visible>Skin.HasSetting(ShowPVRGroups)</visible>
 					</control>
@@ -28,7 +28,7 @@
 						<left>0</left>
 						<top>44</top>
 						<width>100%</width>
-						<bottom>348</bottom>
+						<bottom>343</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 						<visible>!Skin.HasSetting(ShowPVRGroups) + Control.IsVisible(50)</visible>
 					</control>
@@ -131,7 +131,7 @@
 						<left>0</left>
 						<top>0</top>
 						<right>20</right>
-						<bottom>405</bottom>
+						<bottom>398</bottom>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<timeblocks>30</timeblocks>
@@ -150,7 +150,7 @@
 						<rulerlayout height="45" width="390">
 							<control type="label">
 								<top>-5</top>
-								<width>350</width>
+								<width>390</width>
 								<height>45</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -158,11 +158,11 @@
 								<textcolor>$VAR[SkinColorVar]</textcolor>
 							</control>
 						</rulerlayout>
-						<channellayout height="70" width="390">
+						<channellayout height="62" width="390">
 							<control type="image">
 								<left>5</left>
 								<top>1</top>
-								<height>68</height>
+								<height>56</height>
 								<width>78</width>
 								<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
 								<visible>Skin.HasSetting(ShowPVRChannelNumbers) + Skin.HasSetting(EnablePvrIconBG)</visible>
@@ -171,7 +171,7 @@
 								<left>7</left>
 								<top>3</top>
 								<width>74</width>
-								<height>64</height>
+								<height>56</height>
 								<texture fallback="DefaultTVShows2.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 								<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
@@ -180,7 +180,7 @@
 								<left>7</left>
 								<top>3</top>
 								<width>74</width>
-								<height>64</height>
+								<height>56</height>
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font32_title</font>
@@ -192,26 +192,26 @@
 								<left>78</left>
 								<top>0</top>
 								<width>316</width>
-								<height>70</height>
+								<height>62</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.ChannelName]</label>
 								<aligny>center</aligny>
 								<textoffsetx>10</textoffsetx>
 							</control>
 						</channellayout>
-						<focusedchannellayout height="70" width="390">
+						<focusedchannellayout height="62" width="390">
 							<control type="image">
 								<top>3</top>
 								<left>0</left>
 								<width>386</width>
-								<height>64</height>
+								<height>56</height>
 								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 							</control>
 							<control type="image">
 								<left>7</left>
 								<top>3</top>
 								<width>74</width>
-								<height>64</height>
+								<height>56</height>
 								<texture fallback="DefaultTVShows2.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 								<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
@@ -220,7 +220,7 @@
 								<left>7</left>
 								<top>3</top>
 								<width>74</width>
-								<height>64</height>
+								<height>56</height>
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font32_title</font>
@@ -232,7 +232,7 @@
 								<left>78</left>
 								<top>0</top>
 								<width>316</width>
-								<height>70</height>
+								<height>60</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.ChannelName]</label>
 								<aligny>center</aligny>
@@ -240,68 +240,103 @@
 								<scroll>true</scroll>
 							</control>
 						</focusedchannellayout>
-						<itemlayout height="70" width="60">
+						<itemlayout height="60" width="60">
 							<control type="image" id="2">
 								<top>1</top>
 								<width>58</width>
-								<height>68</height>
+								<height>60</height>
 								<texture border="3" fallback="windows/pvr/epg-genres/0.png">$VAR[PVRGenresVar]</texture>
 							</control>
-							<control type="label" id="1">
-								<left>6</left>
-								<top>5</top>
-								<width>50</width>
+							<control type="image">
+								<width>60</width>
+								<height>61</height>
+								<texture>overlays/overlay-bg.png</texture>
+								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
+							</control>
+							<control type="image">
+								<left>5</left>
+								<top>15</top>
+								<width>36</width>
 								<height>36</height>
+								<texture>$VAR[PVRStatusImageVar]</texture>
+							</control>
+							<control type="label" id="1">
+								<left>5</left>
+								<top>5</top>
+								<width>48</width>
+								<height>50</height>
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
+								<visible>![ListItem.HasTimer | ListItem.HasReminder]</visible>
 							</control>
-							<control type="image">
-								<left>6</left>
-								<top>43</top>
-								<width>20</width>
-								<height>20</height>
-								<texture>$VAR[PVRTimerIcon]</texture>
+							<control type="label" id="1">
+								<left>43</left>
+								<top>5</top>
+								<width>5</width>
+								<height>50</height>
+								<aligny>center</aligny>
+								<font>font13</font>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>
 						</itemlayout>
-						<focusedlayout height="70" width="60">
+						<focusedlayout height="60" width="60">
 							<control type="image" id="2">
 								<top>3</top>
 								<left>2</left>
 								<width>54</width>
-								<height>64</height>
+								<height>56</height>
 								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
 							<control type="image" id="2">
 								<top>1</top>
 								<width>58</width>
-								<height>68</height>
+								<height>60</height>
 								<texture border="8" colordiffuse="$VAR[SkinColorVar]">buttons/thumbnail_focused.png</texture>
 							</control>
 							<control type="image" id="2">
 								<top>1</top>
 								<width>58</width>
-								<height>68</height>
+								<height>60</height>
 								<texture border="3" fallback="windows/pvr/epg-genres/0.png">$VAR[PVRGenresVar]</texture>
 								<visible>!Control.HasFocus(50)</visible>
 							</control>
-							<control type="label" id="1">
-								<left>6</left>
-								<top>5</top>
-								<width>50</width>
+							<control type="image">
+								<width>60</width>
+								<height>61</height>
+								<texture>overlays/overlay-bg.png</texture>
+								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
+							</control>
+							<control type="image">
+								<left>5</left>
+								<top>15</top>
+								<width>36</width>
 								<height>36</height>
+								<texture fallback="fallback.png">$VAR[PVRStatusImageVar]</texture>
+							</control>
+							<control type="label" id="1">
+								<left>5</left>
+								<top>5</top>
+								<width>48</width>
+								<height>50</height>
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
 								<scroll>true</scroll>
+								<visible>![ListItem.HasTimer | ListItem.HasReminder]</visible>
 							</control>
-							<control type="image">
-								<left>6</left>
-								<top>43</top>
-								<width>20</width>
-								<height>20</height>
-								<texture>$VAR[PVRTimerIcon]</texture>
+							<control type="label" id="1">
+								<left>43</left>
+								<top>5</top>
+								<width>5</width>
+								<height>50</height>
+								<aligny>center</aligny>
+								<font>font13</font>
+								<label>$INFO[ListItem.Label]</label>
+								<scroll>true</scroll>
+								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>
 						</focusedlayout>
 					</control>
@@ -431,10 +466,10 @@
 							</control>
 							<control type="image">
 								<left>6</left>
-								<top>34</top>
-								<width>20</width>
-								<height>20</height>
-								<texture>$VAR[PVRTimerIcon]</texture>
+								<top>33</top>
+								<width>24</width>
+								<height>24</height>
+								<texture>$VAR[PVRStatusImageVar]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout height="58" width="60">
@@ -470,10 +505,10 @@
 							</control>
 							<control type="image">
 								<left>6</left>
-								<top>34</top>
-								<width>20</width>
-								<height>20</height>
-								<texture>$VAR[PVRTimerIcon]</texture>
+								<top>33</top>
+								<width>24</width>
+								<height>24</height>
+								<texture>$VAR[PVRStatusImageVar]</texture>
 							</control>
 						</focusedlayout>
 					</control>
@@ -481,7 +516,7 @@
 						<right>0</right>
 						<top>103</top>
 						<width>12</width>
-						<bottom>408</bottom>
+						<bottom>403</bottom>
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<orientation>vertical</orientation>
@@ -494,7 +529,7 @@
 						<right>0</right>
 						<top>47</top>
 						<width>12</width>
-						<bottom>408</bottom>
+						<bottom>400</bottom>
 						<onleft>10</onleft>
 						<onright>10</onright>
 						<orientation>vertical</orientation>
@@ -504,10 +539,10 @@
 						<animation effect="slide" end="0,54" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
 					</control>
 				</control>
+				<include>PVRPanelViewInfoPanel</include>
 				<include content="BottomBar">
 					<param name="info_visible" value="true" />
 				</include>
-				<include>PVRPanelViewInfoPanel</include>
 				<control type="group">
 					<bottom>0</bottom>
 					<height>70</height>

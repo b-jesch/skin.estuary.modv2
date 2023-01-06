@@ -1,5 +1,7 @@
 # Skin Estuary MOD V2 for KODI 19 Matrix KN Edition #
 
+**Some screenshots You'll find at the end of this Readme**
+
 ## Installation Notes ##
 
 It's strongly recommended to install the skin via the "Kodinerds Repo", as this is the only way to guarantee that additional 
@@ -25,17 +27,132 @@ The HDR type recognition by filename will be removed if Kodi detects the HDR typ
 
 ### Animated Artwork ###
 
-As the setup of animated artwork was done by skinhelper addon (which was removed from skin) the skin itself has now taken 
+As the setup of animated artwork was done by skinhelper addon (which was removed from skin) the addon "Animated Artwork Module" has now taken 
 the management of those artwork. Animated artwork has some limitations (see Kodi Wiki: https://kodi.wiki/view/Artwork_types#Animated_Artwork). 
-To get this feature work properly, you have to assign a folder within the skin settings, which contains all the artwork. This 
-folder **must** be a folder of your local filesystem. Also you can use network share, which  **must** be mounted to a local mountpoint.
+To get this feature work properly, you have to assign a folder within the addon settings, which contains all the artwork. This 
+folder **must** be a folder of your local filesystem. You can use network share, but this **must** be mounted to a local mountpoint.
 Put all your artwork into this folder. Subfolders are allowed (without nesting). 
 
 If you navigate in your movie library, you'll have a new entry now to (re)assign animated Artwork in the context menu. The skin
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+
 ### 3.4.2+matrix ###
+- .16
+  * add missing preview for musicvideos on view selection window (1131) 
+  * add selection for default action on PVR widgets
+  * prepare dates for special themes 2023
+  * add PVR recording expiration date info
+
+
+- .15
+  * another behaviour of video info window fixed when fullscreen info is set and PVR is playing live TV
+
+
+- .14
+  * fixes on video info window
+
+
+- .13
+  * smaller fixes and textures updates
+  * fix cond visibility for label 'Jump to letter'
+  * fix incorrectly resolved condition while showing seekbar, when 'use small OSD' was not set
+  * add Flix view to music videos
+  * set info dialog metadata to invisible if trailer is playing
+  * set power/settings/search/fullscreen menu buttons to vertical orientation if smaller main menu is set
+  * add missing video info window if fullscreen video info is not set
+
+
+- .12
+  * Textures.xbt updated (av1 flag added)
+  * coloured flags updated (thanks to frodo19) 
+  * fix missing channel logo in Guide and Video OSD
+  * link subtitles/audio OSD buttons to subtitles/audio settings for more flexibility (simplified OSD)
+  * new more uniformed resolution flags (thanks again to frodo19)
+  * modify cond visibility for 'Jump to Letter'
+  * fix playing Live TV while (fullscreen) video info becomes active
+  * avoid stuttering if skin setting 'Play video in background' isn't set
+  * modifications on 'telecast offers' info window 
+
+
+- .11
+  * update playlist view
+  * extend setting 'Show Fanart' to all video views (affected earlier only to home widgets)
+  * fix missing channel logo in PVR info views
+  * fix wrong used mediaflag of endtime and endtime resume with appendix AM/PM
+  * fix wrong position of channel group infolabel in PVR channel OSD
+
+
+- .10
+  * include 'Jump to Letter' in Flix view
+  * make 'Play Trailer' in context menu customizable
+  * show next timer and available disk space in tv timers window
+  * remove skin setting 'use poster view for music videos'
+  * add title labels to poster view widgets
+
+- .9
+  * add "play trailer" to contextmenu
+  * fix unmatched parentheses in Home.xml
+  * fix doubled background in flex view
+  * fix position and size of context menu in flix view
+  * last seen movie template added (reset/modify main menu required)
+  * seek bar components modified
+
+
+- .8
+  * Hungarian language update
+  * Font fix of Economica font family
+  * PVR OSD: Introducing last five channel switch (optional)
+  * smaller fixes
+  * add missing studio logos on several widget layouts
+
+
+- .7
+  * make simplified seek bar optional (skin settings)
+  * improved skin settings
+  * Bugfixes
+
+
+- .6
+  * Refinements on PVR EPG view
+  * show seek bar only (without OSD parts) while seeking
+  * close power menu on Poweroff (RPM) before rpm addon starts
+  * Introducing audio samplerate flag for lossless audio codecs 
+
+
+- .5
+  * improved PVR image preview
+  * improved EPG timeline (has now 8 rows)
+  * new designed PVR event icons
+  * visibility of pvr & tv settings depends now on enabled PVR addons
+  * improved skin settings for textual selections (independend from language settings)
+
+
+- .4
+  * update translations for all languages (thanks for the bunch of work to C4Wiz)
+
+
+- .3
+  * Fix wrong viewtype labels
+  * some more improvements on tvshow widgets
+  * Improvements on Player OSD:
+    * exclude actors list from autoclose
+    * custom info on small OSD
+    * global record flag (independent of actual channel recording)
+
+
+- .2
+  * Fix unchanged label IDs in shortcuts
+  * Fix wrong *elec labels (thanks C4Wiz)
+  * Add missing search button on video/audio side blade
+  * Add missing previews in view selection window
+  * Flix view improvements
+  * skin script for animated artwork removed (obsolete, use animated artwork addon instead)
+  * improved PVR status display in channel views
+  * improved tvshow widgets
+  
+
 - .1
   * Transparency of label background of widgets (Flix view) customizable
   * semitransparent Background for plot in video info added
@@ -534,3 +651,6 @@ Note: In my opinion, the adaptation to Kodi 19 is complete. Future changes will 
 ![simplified OSD](resources/screenshots/screenshot_10.png)
 ![colored flags](resources/screenshots/screenshot_11.png)
 ![improved nextup info](resources/screenshots/screenshot_12.png)
+![improved PVR event icons](resources/screenshots/screenshot_13.png)
+![various color...](resources/screenshots/screenshot_14.png)
+![...and font schemes](resources/screenshots/screenshot_15.png)

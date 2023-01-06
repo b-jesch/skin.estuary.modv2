@@ -189,17 +189,18 @@
 			<param name="info_visible" value="true" />
 		</include>
 		<control type="label">
-			<right>20</right>
+			<right>30</right>
 			<include>OpenClose_Right</include>
 			<bottom>10</bottom>
 			<width>850</width>
-			<height>60</height>
-			<label>$INFO[PVR.NextTimer]</label>
+			<height>50</height>
+			<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19106] ,]$INFO[PVR.BackendDiskSpace, | ,]</label>
 			<shadowcolor>black</shadowcolor>
 			<align>right</align>
 			<aligny>center</aligny>
-			<wrapmultiline>true</wrapmultiline>
-			<font>font27</font>
+			<wrapmultiline>false</wrapmultiline>
+			<scroll>true</scroll>
+			<font>font25_title</font>
 		</control>
 		<control type="group">
 			<include>MediaMenuCommon</include>

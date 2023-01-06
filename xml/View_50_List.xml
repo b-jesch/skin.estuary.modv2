@@ -21,6 +21,7 @@
 						<param name="top" value="-20" />
 						<param name="width" value="656" />
 						<param name="flipx" value="true" />
+						<param name="colordiffuse" value="DDFFFFFF" />
 					</include>
 					<control type="scrollbar" id="50600">
 						<left>20</left>
@@ -35,16 +36,27 @@
 					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>
-						<left>38</left>
-						<right>36</right>
-						<top>120</top>
-						<bottom>124</bottom>
+						<left>40</left>
+						<right>120</right>
+						<top>100</top>
 						<fadetime>200</fadetime>
-						<aspectratio aligny="bottom">keep</aspectratio>
+						<aspectratio aligny="top">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar2]</texture>
+						<visible>Skin.HasSetting(enable_LibraryDiscArt) + !String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
+					</control>
+					<control type="image">
+						<depth>DepthContentPopout</depth>
+						<left>40</left>
+						<right>40</right>
+						<top>100</top>
+						<bottom>120</bottom>
+						<fadetime>200</fadetime>
+						<aspectratio aligny="top">keep</aspectratio>
+						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar2]</texture>
+						<visible>!Skin.HasSetting(enable_LibraryDiscArt) | String.IsEmpty(ListItem.Art(discart)) | ListItem.IsCollection</visible>
 					</control>
 					<control type="group">
-						<top>650</top>
+						<top>690</top>
 						<left>680</left>
 						<visible>Skin.HasSetting(enable_LibraryDiscArt)</visible>
 						<visible>!String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
@@ -80,9 +92,19 @@
 						</control>
 					</control>
 					<control type="group">
+						<top>82</top>
 						<left>293</left>
-						<top>937</top>
 						<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
+						<visible>!Skin.HasSetting(enable_LibraryDiscArt) | String.IsEmpty(ListItem.Art(discart)) | ListItem.IsCollection</visible>
+						<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">
+							<param name="animation" value="True" />
+						</include>
+					</control>
+					<control type="group">
+						<top>82</top>
+						<left>243</left>
+						<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
+						<visible>Skin.HasSetting(enable_LibraryDiscArt) + !String.IsEmpty(ListItem.Art(discart) + !ListItem.IsCollection</visible>
 						<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">
 							<param name="animation" value="True" />
 						</include>
@@ -269,11 +291,11 @@
 				</control>
 				<control type="group">
 					<top>405</top>
-					<left>-403</left>
+					<left>0</left>
 					<visible>Skin.HasSetting(enable_LibraryDiscArt)</visible>
 					<visible>!String.IsEmpty(ListItem.Art(discart)) + !String.IsEqual(ListItem.DbType,album) + !String.IsEqual(ListItem.DbType,song) + !ListItem.IsCollection</visible>
-					<animation effect="slide" start="0,0" end="460,0" time="300" tween="cubic" easing="out">VisibleChange</animation>
-					<animation effect="fade" start="100" end="0" time="0" condition="String.IsEmpty(ListItem.Art(discart))">Conditional</animation>
+					<animation effect="slide" start="0,0" end="360,0" time="300" tween="cubic" easing="out">VisibleChange</animation>
+					<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(ListItem.Art(discart))">Conditional</animation>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>

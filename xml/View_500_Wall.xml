@@ -18,7 +18,7 @@
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">500</onup>
 				<onup condition="!Integer.IsGreater(Container.NumPages,1) + !Skin.HasSetting(KioskMode)">9000</onup>
 				<ondown>500</ondown>
-				<viewtype label="31102">icon</viewtype>
+				<viewtype label="$LOCALIZE[31102]">icon</viewtype>
 				<preloaditems>2</preloaditems>
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>

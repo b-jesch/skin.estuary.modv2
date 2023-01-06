@@ -172,6 +172,10 @@
 						<include>MediaMenuLabelCommon</include>
 						<label>$LOCALIZE[31020]</label>
 					</control>
+					<control type="button" id="8">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[137]</label>
+					</control>
 					<control type="togglebutton" id="619">
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[653]</label>
