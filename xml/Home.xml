@@ -601,19 +601,19 @@
 							<param name="sortby" value="lastplayed"/>
 							<param name="sortorder" value="descending"/>
 							<param name="widget_header" value="$LOCALIZE[31016]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12200).ListItem.Label, | ]$INFO[Container(12200).ListItem.Title, - ,]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12200).ListItem.Label, | ]$INFO[Container(12200).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]"/>
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12200"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
-							<param name="label2" value="$INFO[ListItem.Title]"/>
+							<param name="label2" value="$INFO[ListItem.Title] $VAR[SeasonEpisodeLabel]"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_recordingchannels)">
 							<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
 							<param name="sortby" value="date"/>
 							<param name="sortorder" value="descending"/>
 							<param name="widget_header" value="$LOCALIZE[31015]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12300).ListItem.ChannelName, | ]$INFO[Container(12300).ListItem.Label, - ,]$INFO[Container(12300).ListItem.Label2, - ,]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12300).ListItem.ChannelName, | ]$INFO[Container(12300).ListItem.Label, - ,]$INFO[Container(12300).ListItem.Label2, - ,] $VAR[SeasonEpisodeLabel]"/>
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12300"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
