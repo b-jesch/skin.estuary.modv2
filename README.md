@@ -37,6 +37,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.0.2+nexus ###
+- .17
+  * fix race condition in PVR next up that kodi causes to crash (issue #104)
+  * add season/episode labels to pvr widget
+
+ 
 - .16
   * add missing preview for musicvideos on view selection window (1131) 
   * add selection for default action on PVR widgets
