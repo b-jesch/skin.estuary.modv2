@@ -39,6 +39,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .18
+  * hungarian language updated
+  * flixview improvements (background for sets, movie sets poster)
+
+
 - .17
   * fix race condition in PVR next up that kodi causes to crash (issue #104)
   * add season/episode labels to pvr widget
