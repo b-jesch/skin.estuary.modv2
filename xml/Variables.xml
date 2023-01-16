@@ -1916,7 +1916,7 @@
  		<value>$LOCALIZE[20046]</value>
  	</variable>
  	<variable name="DialogInfoButtonsVar">
- 		<value condition="Control.HasFocus(8) + !String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season)">$LOCALIZE[208]</value>
+ 		<value condition="[Control.HasFocus(8) | Control.HasFocus(88)] + !String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season)">$LOCALIZE[208]</value>
  		<value condition="Control.HasFocus(8) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)]">$LOCALIZE[1024]</value>
  		<value condition="Control.HasFocus(120)">$LOCALIZE[1024]</value>
  		<value condition="Control.HasFocus(9)">$LOCALIZE[31508]$INFO[Window.Property(PercentPlayed), ,%]</value>

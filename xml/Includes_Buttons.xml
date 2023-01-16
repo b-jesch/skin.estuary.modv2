@@ -299,10 +299,10 @@
 	<include name="InfoDialogButton">
 		<param name="width">262</param>
 		<param name="radioposx">108</param>
-		<param name="condition_1"></param>
-		<param name="condition_2"></param>
-		<param name="condition_3"></param>
-		<param name="condition_4"></param>
+		<param name="condition_1" />
+		<param name="condition_2" />
+		<param name="condition_3" />
+		<param name="condition_4" />
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
 				<width>$PARAM[width]</width>
@@ -336,11 +336,11 @@
 	<include name="InfoDialogSmallButton">
 		<param name="width">148</param>
 		<param name="radioposx">50</param>
-		<param name="condition_1"></param>
-		<param name="condition_2"></param>
-		<param name="condition_3"></param>
-		<param name="condition_4"></param>
-		<param name="condition_5"></param>
+		<param name="condition_1" />
+		<param name="condition_2" />
+		<param name="condition_3" />
+		<param name="condition_4" />
+		<param name="condition_5" />
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
 				<oninfo>$PARAM[oninfo]</oninfo>
