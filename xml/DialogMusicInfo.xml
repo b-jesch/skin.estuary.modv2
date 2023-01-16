@@ -284,9 +284,8 @@
 						<param name="icon" value="icons/infodialogs/play.png" />
 						<param name="label" value="$LOCALIZE[208]" />
 						<param name="onclick_1" value="PlayMedia($INFO[ListItem.FilenameAndPath])" />
-						<param name="onclick_2" value="Action(close)" />
-						<param name="condition_2" value="true" />
 						<!--
+						<param name="onclick_2" value="Action(close)" />
 						<param name="condition_1" value="String.IsEmpty(ListItem.DBID)" />
 						<param name="onclick_2" value="RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])" />
 						<param name="condition_2" value="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)" />
