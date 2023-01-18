@@ -22,8 +22,8 @@
 				<control type="image">
 					<right>0</right>
 					<bottom>330</bottom>
-					<width>400</width>
-					<height>225</height>
+					<width>500</width>
+					<height>281</height>
 					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<visible>!Skin.HasSetting(enable_playerclearart)</visible>
