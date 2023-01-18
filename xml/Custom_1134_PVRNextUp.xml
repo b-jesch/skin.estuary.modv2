@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1134">
-	<onload condition="System.AddonIsEnabled(script.module.prv.artwork)">RunScript(script.module.pvr.artwork,get_artwork,prefix=PVR.Nextup&amp;title=$INFO[VideoPlayer.NextTitle]&amp;genre=$INFO[VideoPlayer.NextGenre]&amp;channel=$INFO[VideoPlayer.ChannelName])</onload>
-	<onunload condition="System.AddonIsEnabled(script.module.prv.artwork)">RunScript(script.module.pvr.artwork,clear_artwork,prefix=PVR.Nextup)</onunload>
+	<onload condition="System.AddonIsEnabled(script.module.pvr.artwork)">RunScript(script.module.pvr.artwork,get_artwork,prefix=PVR.Nextup&amp;title=$INFO[VideoPlayer.NextTitle]&amp;genre=$INFO[VideoPlayer.NextGenre]&amp;channel=$INFO[VideoPlayer.ChannelName])</onload>
+	<onunload condition="System.AddonIsEnabled(script.module.pvr.artwork)">RunScript(script.module.pvr.artwork,clear_artwork,prefix=PVR.Nextup)</onunload>
 	<visible>!Skin.HasSetting(disable_PVRNextUp) + VideoPlayer.Content(livetv) + Window.IsActive(fullscreenvideo) + !Window.IsVisible(videoosd) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(tvguide) + !Window.IsVisible(Custom_1135_PVROverlay.xml) + !Window.IsVisible(Custom_1143_VideoInfo.xml)</visible>
 	<controls>
 		<control type="group">
