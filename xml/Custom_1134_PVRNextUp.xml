@@ -60,7 +60,7 @@
 				<width>368</width>
 				<height>207</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="DefaultVideoFanart.png">$VAR[PVRNextupVar]</texture>
+				<texture fallback="windows/nextup/nextup.png">$VAR[PVRNextupVar]</texture>
 				<fadetime>200</fadetime>
 			</control>
 			<control type="label">
