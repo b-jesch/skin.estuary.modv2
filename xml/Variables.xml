@@ -199,7 +199,7 @@
 	<variable name="PVRNextupVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Nextup.fanart))">$INFO[Window(Home).Property(PVR.Nextup.fanart)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Nextup.poster))">$INFO[Window(Home).Property(PVR.Nextup.poster)]</value>
-		<value>$INFO[Player.Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 	</variable>
 	<variable name="PVRMetadataCastandroleVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.castandrole))">$INFO[Window(Home).Property(PVR.Artwork.ListItem.castandrole)]</value>
