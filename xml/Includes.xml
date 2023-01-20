@@ -3021,7 +3021,7 @@
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">$INFO[Skin.String(background_overlay),special://skin/extras/patterns/pattern,.png]</texture>
 			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
-			<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
+			<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
 		</control>
 	</include>
 	<include name="DefaultBackground">

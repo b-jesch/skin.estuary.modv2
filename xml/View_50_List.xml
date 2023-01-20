@@ -133,7 +133,7 @@
 				<onup>$PARAM[list_id]</onup>
 				<ondown>$PARAM[list_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(games) | Container.Content(musicvideos) | Container.Content(favourites) | Window.IsActive(MyPlaylist.xml)</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(games) | Container.Content(musicvideos) | Window.IsActive(MyPlaylist.xml)</visible>
 				<focusedlayout height="list_item_height">
 					<control type="image">
 						<left>0</left>
@@ -482,10 +482,15 @@
 						<align>justify</align>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
-						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist)</visible>
+						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist) + !Container.Content(favourites)</visible>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<!--
 						<visible>!String.IsEqual(Skin.Font, Arial) + !Container.Content(genres)</visible>
+						-->
+						<visible>!Container.Content(genres)</visible>
 					</control>
+
+					<!--
 					<control type="textbox" id="15500">
 						<top>640</top>
 						<width>535</width>
@@ -497,6 +502,7 @@
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>String.IsEqual(Skin.Font, Arial) + !Container.Content(genres)</visible>
 					</control>
+					-->
 					<control type="textbox" id="15501">
 						<top>495</top>
 						<width>535</width>
@@ -506,8 +512,11 @@
 						<label>$VAR[PlotSpoilerVar]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<!--
 						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+						-->
 					</control>
+					<!--
 					<control type="textbox" id="15501">
 						<top>495</top>
 						<width>535</width>
@@ -518,6 +527,39 @@
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					-->
+					<control type="grouplist">
+						<top>640</top>
+						<width>535</width>
+						<bottom>130</bottom>
+						<orientation>vertical</orientation>
+						<visible>Container.Content(favourites)</visible>
+						<include content="InfoDialogMetadata">
+							<param name="control_id" value="15502" />
+							<param name="label" value="$INFO[ListItem.Property(favourite.action),$LOCALIZE[15217] : [COLOR white],[/COLOR]]" />
+							<param name="visible" value="true" />
+							<param name="textcolor" value="$VAR[SkinColorVar]" />
+							<param name="font" value="fontplot" />
+						</include>
+						<include content="InfoDialogMetadata">
+							<param name="control_id" value="15503" />
+							<param name="label" value="$INFO[ListItem.Property(favourite.provider),$LOCALIZE[15225] : [COLOR white],[/COLOR]]" />
+							<param name="visible" value="true" />
+							<param name="textcolor" value="$VAR[SkinColorVar]" />
+							<param name="font" value="fontplot" />
+						</include>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>60</top>
+						<width>537</width>
+						<height>40</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font36_title</font>
+						<scroll>true</scroll>
+						<visible>Container.Content(favourites)</visible>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -546,8 +588,11 @@
 						<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<!--
 						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+						-->
 					</control>
+					<!--
 					<control type="textbox">
 						<left>10</left>
 						<top>-140</top>
@@ -559,6 +604,7 @@
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>String.IsEqual(Skin.Font, Arial)</visible>
 					</control>
+					-->
 					<control type="list" id="500551">
 						<left>7</left>
 						<bottom>85</bottom>
@@ -609,7 +655,10 @@
 						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<!--
 						<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+						-->
+						<visible>!String.IsEmpty(ListItem.Plot)</visible>
 					</control>
 					<control type="textbox">
 						<top>0</top>
@@ -620,8 +669,12 @@
 						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<!--
 						<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+						-->
+						<visible>String.IsEmpty(ListItem.Plot)</visible>
 					</control>
+					<!--
 					<control type="textbox">
 						<top>0</top>
 						<width>535</width>
@@ -632,6 +685,7 @@
 						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+						<visible>!String.IsEmpty(ListItem.Plot)</visible>
 					</control>
 					<control type="textbox">
 						<top>0</top>
@@ -644,6 +698,7 @@
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
 					</control>
+					-->
 					<control type="textbox">
 						<top>41</top>
 						<width>535</width>
