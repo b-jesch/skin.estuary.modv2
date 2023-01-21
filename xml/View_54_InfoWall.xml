@@ -267,11 +267,11 @@
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
 				<autoscroll delay="1000" time="1000" repeat="1000">$PARAM[focused]</autoscroll>
-				<visible>!String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,song) + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
+				<visible>!String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,song) + !String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEqual(ListItem.DBType,tvshow)</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 			</control>
 			<control type="group">
-				<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)</visible>
+				<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow)</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(Favourites)]]]</visible>
 				<control type="label">
 					<left>25</left>
