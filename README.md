@@ -41,6 +41,8 @@ supports animated poster only.
   * Introducing favourites browser
   * Bugfix Listview
   * Fix doubled label of 'in progress tv shows'
+  * Distribution logos in context menu added
+  * update screen calibration
 
 
 ### 4.0.2+nexus ###
