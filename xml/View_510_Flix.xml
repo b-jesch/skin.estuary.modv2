@@ -223,7 +223,7 @@
 				<control type="image">
 					<aspectratio>scale</aspectratio>
 					<fadetime>300</fadetime>
-					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$INFO[ListItem.Art(setfanart)]</texture>
+					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[WidgetThumbViewVar]</texture>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 			</control>

@@ -104,7 +104,7 @@
 						<top>82</top>
 						<left>243</left>
 						<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
-						<visible>Skin.HasSetting(enable_LibraryDiscArt) + !String.IsEmpty(ListItem.Art(discart) + !ListItem.IsCollection</visible>
+						<visible>Skin.HasSetting(enable_LibraryDiscArt) + !String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
 						<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">
 							<param name="animation" value="True" />
 						</include>
@@ -270,10 +270,10 @@
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
 				<control type="image">
-					<left>30</left>
-					<top>140</top>
-					<width>535</width>
-					<height>470</height>
+					<left>50</left>
+					<top>170</top>
+					<width>495</width>
+					<height>440</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true" fallback="DefaultVideo.png">$VAR[IconWallPosterVar]</texture>
@@ -484,25 +484,8 @@
 						<label>$VAR[ListBoxInfoVar]</label>
 						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist) + !Container.Content(favourites)</visible>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<!--
-						<visible>!String.IsEqual(Skin.Font, Arial) + !Container.Content(genres)</visible>
-						-->
 						<visible>!Container.Content(genres)</visible>
 					</control>
-
-					<!--
-					<control type="textbox" id="15500">
-						<top>640</top>
-						<width>535</width>
-						<bottom>90</bottom>
-						<align>justify</align>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$VAR[ListBoxInfoVar]</label>
-						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist)</visible>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>String.IsEqual(Skin.Font, Arial) + !Container.Content(genres)</visible>
-					</control>
-					-->
 					<control type="textbox" id="15501">
 						<top>495</top>
 						<width>535</width>
@@ -512,23 +495,7 @@
 						<label>$VAR[PlotSpoilerVar]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<!--
-						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-						-->
 					</control>
-					<!--
-					<control type="textbox" id="15501">
-						<top>495</top>
-						<width>535</width>
-						<bottom>80</bottom>
-						<align>justify</align>
-						<autoscroll time="3000" delay="7000" repeat="6000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$VAR[PlotSpoilerVar]</label>
-						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>String.IsEqual(Skin.Font, Arial)</visible>
-					</control>
-					-->
 					<control type="grouplist">
 						<top>640</top>
 						<width>535</width>
@@ -552,7 +519,7 @@
 					</control>
 					<control type="label">
 						<left>0</left>
-						<top>60</top>
+						<top>100</top>
 						<width>537</width>
 						<height>40</height>
 						<align>center</align>
@@ -588,23 +555,7 @@
 						<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<!--
-						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-						-->
 					</control>
-					<!--
-					<control type="textbox">
-						<left>10</left>
-						<top>-140</top>
-						<width>535</width>
-						<bottom>274</bottom>
-						<align>justify</align>
-						<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$VAR[ListBoxInfoVar]</label>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>String.IsEqual(Skin.Font, Arial)</visible>
-					</control>
-					-->
 					<control type="list" id="500551">
 						<left>7</left>
 						<bottom>85</bottom>
@@ -655,9 +606,6 @@
 						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<!--
-						<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
-						-->
 						<visible>!String.IsEmpty(ListItem.Plot)</visible>
 					</control>
 					<control type="textbox">
@@ -669,36 +617,8 @@
 						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<!--
-						<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-						-->
 						<visible>String.IsEmpty(ListItem.Plot)</visible>
 					</control>
-					<!--
-					<control type="textbox">
-						<top>0</top>
-						<width>535</width>
-						<bottom>244</bottom>
-						<left>10</left>
-						<align>justify</align>
-						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
-						<visible>!String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="textbox">
-						<top>0</top>
-						<width>535</width>
-						<bottom>244</bottom>
-						<left>10</left>
-						<align>justify</align>
-						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					-->
 					<control type="textbox">
 						<top>41</top>
 						<width>535</width>
