@@ -46,7 +46,8 @@ supports animated poster only.
 - .18
   * hungarian language updated
   * flixview improvements (background for sets, movie sets poster)
-
+  * run condition of pvr artwork module for pvr nextup fixed
+  
 
 - .17
   * fix race condition in PVR next up that kodi causes to crash (issue #104)
