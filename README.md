@@ -36,6 +36,13 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 
+### 4.1.0+nexus ###
+- .0
+  * Introducing favourites browser
+  * Bugfix Listview
+  * Fix doubled label of 'in progress tv shows'
+
+
 ### 4.0.2+nexus ###
 - .18
   * hungarian language updated
