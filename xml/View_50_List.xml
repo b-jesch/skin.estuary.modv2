@@ -104,7 +104,7 @@
 						<top>82</top>
 						<left>243</left>
 						<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
-						<visible>Skin.HasSetting(enable_LibraryDiscArt) + !String.IsEmpty(ListItem.Art(discart) + !ListItem.IsCollection</visible>
+						<visible>Skin.HasSetting(enable_LibraryDiscArt) + !String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
 						<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">
 							<param name="animation" value="True" />
 						</include>
