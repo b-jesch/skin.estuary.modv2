@@ -39,6 +39,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .19
+  * Listview bugfix
+
+
 - .18
   * hungarian language updated
   * flixview improvements (background for sets, movie sets poster)
