@@ -43,6 +43,7 @@ supports animated poster only.
   * Fix doubled label of 'in progress tv shows'
   * Distribution logos in context menu added
   * update screen calibration
+  * avoid flickering in settings window when video sources are shown and icon view is set
 
 
 ### 4.0.2+nexus ###

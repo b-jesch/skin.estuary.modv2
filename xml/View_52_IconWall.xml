@@ -87,7 +87,7 @@
 				<focusedlayout height="280" width="440" condition="Container.Content() | Container.Content(tags) | Container.Content(playlists) | [Container.Content(studios) + !String.IsEmpty(Skin.String(studiologos.path))] | [Container.Content(genres) + !String.IsEmpty(Skin.String(moviegenreicons.path))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(moviecountryicons.path))]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations) + !String.StartsWith(Container.FolderPath,sources://video)" reversible="false">
             				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
             				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
        					 </animation>
