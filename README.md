@@ -42,14 +42,13 @@ supports animated poster only.
 - .19
   * Listview bugfix
   * Fix doubled label of 'in progress tv shows'
-
+  * Distribution logos in context menu added
+  * avoid flickering in settings window when video sources are shown and icon view is set
 
 - .18
   * hungarian language updated
   * flixview improvements (background for sets, movie sets poster)
   * run condition of pvr artwork module for pvr nextup fixed
-  * Distribution logos in context menu added
-  * avoid flickering in settings window when video sources are shown and icon view is set
   
 
 - .17
