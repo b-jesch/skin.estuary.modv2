@@ -393,7 +393,7 @@
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer) + !SystemAddon.IsEnabled(service.sleepy.watchdog)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
