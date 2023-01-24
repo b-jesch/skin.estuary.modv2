@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timers>
+	<timer>
+		<name>splashtimer</name>
+        <description>Timer for displaying the splash screen while skin starts up</description>
+        <start reset="true">Window.IsActive(startup)</start>
+		<stop>[!Window.IsActive(startup) | Integer.IsGreater(Skin.TimerElapsedSecs(splashtimer),3)] | [Skin.HasSetting(EnableSplashScreen) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(splashtimer),1)]</stop>
+		<onstop>ReplaceWindow($INFO[System.StartupWindow])</onstop>
+	</timer>
+</timers>

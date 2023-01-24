@@ -2,7 +2,7 @@
 <window>
 	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
-	<onload>AlarmClock(SkinSplashStarted,SetProperty(SplashStarted,1,home),00:01,silent,false)</onload>
+	<!--<onload>AlarmClock(SkinSplashStarted,SetProperty(SplashStarted,1,home),00:01,silent,false)</onload>-->
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
@@ -2305,6 +2305,6 @@
 				<include>OpenClose_Right</include>
 			</control>
 		</control>
-		<include condition="!Skin.HasSetting(EnableSpashScreen)">SplashScreen</include>
+		<!--<include condition="!Skin.HasSetting(EnableSplashScreen)">SplashScreen</include>-->
 	</controls>
 </window>

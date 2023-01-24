@@ -687,8 +687,8 @@
 				<control type="radiobutton" id="509">
 					<label>$LOCALIZE[31051]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(EnableSpashScreen)</onclick>
-					<selected>!Skin.HasSetting(EnableSpashScreen)</selected>
+					<onclick>Skin.ToggleSetting(EnableSplashScreen)</onclick>
+					<selected>!Skin.HasSetting(EnableSplashScreen)</selected>
 				</control>
 				<control type="radiobutton" id="501">
 					<label>$LOCALIZE[31459]</label>

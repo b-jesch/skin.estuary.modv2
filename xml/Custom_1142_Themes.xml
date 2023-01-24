@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1142" type="dialog">
 	<zorder>9999</zorder>
-	<visible>!Window.IsVisible(startup) + !String.IsEmpty(Window(Home).Property(SplashStarted))</visible>
+	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
 		<!-- Christmas -->
 		<control type="group">

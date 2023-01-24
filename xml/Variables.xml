@@ -758,10 +758,6 @@
 		<value condition="!String.IsEmpty(Skin.String(widgetnumber))">$INFO[Skin.String(widgetnumber)]</value>
 		<value>25</value>
 	</variable>
-	<variable name="Label_SkinSetting_Startup">
-		<value condition="!String.IsEmpty(Skin.String(SplashScreen))">$INFO[Skin.String(SplashScreen)]</value>
-		<value condition="String.IsEmpty(Skin.String(SplashScreen))">$LOCALIZE[15109]</value>
-	</variable>
 	<variable name="Label_SkinSetting_MovieGenreFanart">
 		<value condition="!String.IsEmpty(Skin.String(MovieGenreFanart.name))">$INFO[Skin.String(MovieGenreFanart.name)]</value>
 		<value>$LOCALIZE[31264]</value>

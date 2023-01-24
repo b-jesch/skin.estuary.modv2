@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.0+nexus ###
+- .1
+  * Introducing Skin Timers as replacement for splash screen timers
+  
+
 - .0
   * Introducing favourites browser
   * Bugfix Listview
