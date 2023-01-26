@@ -2,7 +2,6 @@
 <window>
 	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
-	<!--<onload>AlarmClock(SkinSplashStarted,SetProperty(SplashStarted,1,home),00:01,silent,false)</onload>-->
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
@@ -62,49 +61,12 @@
 			<visible>!Control.HasFocus(9000) + String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget) + !String.IsEmpty(Container(9000).ListItem.Property(background)) + Skin.HasSetting(show_fanart) + !Player.HasMedia</visible>
 		</control>
 		<control type="image">
-			<top>0</top>
 			<right>0</right>
-			<height>235</height>
 			<width>320</width>
-			<texture>themes/christmas/corner.png</texture>
+			<height>280</height>
+			<texture>$VAR[ThemesVar]corner.png</texture>
 			<include>OpenClose_Right</include>
-			<visible>$EXP[ChristmasTheme] + !$EXP[infodialog_active]</visible>
-		</control>
-		<control type="image">
-			<top>0</top>
-			<right>0</right>
-			<height>271</height>
-			<width>300</width>
-			<texture>themes/halloween/corner.png</texture>
-			<include>OpenClose_Right</include>
-			<visible>$EXP[HalloweenTheme] + !$EXP[infodialog_active]</visible>
-		</control>
-		<control type="image">
-			<top>0</top>
-			<right>20</right>
-			<height>271</height>
-			<width>224</width>
-			<texture>themes/easter/corner.png</texture>
-			<include>OpenClose_Right</include>
-			<visible>$EXP[EasterTheme] + !$EXP[infodialog_active]</visible>
-		</control>
-		<control type="image">
-			<top>0</top>
-			<right>20</right>
-			<height>271</height>
-			<width>186</width>
-			<texture>themes/valentine/corner.png</texture>
-			<include>OpenClose_Right</include>
-			<visible>$EXP[ValentineTheme] + !$EXP[infodialog_active]</visible>
-		</control>
-		<control type="image">
-			<top>0</top>
-			<right>20</right>
-			<height>271</height>
-			<width>254</width>
-			<texture>themes/palmweek/corner.png</texture>
-			<include>OpenClose_Right</include>
-			<visible>$EXP[PreEasterTheme] + !$EXP[infodialog_active]</visible>
+			<visible>[$EXP[ChristmasTheme] | $EXP[HalloweenTheme] | $EXP[EasterTheme] | $EXP[ValentineTheme] | $EXP[PreEasterTheme]] + !$EXP[infodialog_active]</visible>
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -2305,6 +2267,5 @@
 				<include>OpenClose_Right</include>
 			</control>
 		</control>
-		<!--<include condition="!Skin.HasSetting(EnableSplashScreen)">SplashScreen</include>-->
 	</controls>
 </window>

@@ -40,6 +40,7 @@ supports animated poster only.
 - .1
   * Introducing Skin Timers as replacement for splash screen timers
   * extend power menu property "reboot from emmc/nand"
+  * Applying special seasonal themes to splash screen, update textures
   
 
 - .0

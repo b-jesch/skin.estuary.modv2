@@ -29,6 +29,14 @@
 		<value condition="System.Platform.Linux">Linux</value>
 		<value>unknown</value>
 	</variable>
+	<variable name="ThemesVar">
+		<value condition="$EXP[ChristmasTheme]">themes/christmas/</value>
+		<value condition="$EXP[HalloweenTheme]">themes/halloween/</value>
+		<value condition="$EXP[PreEasterTheme]">themes/palmweek/</value>
+		<value condition="$EXP[EasterTheme]">themes/easter/</value>
+		<value condition="$EXP[ValentineTheme]">themes/valentine/</value>
+		<value>themes/</value>
+	</variable>
 	<variable name="SettingsForcedViewsMoviesVar">
 			<value condition="Skin.HasSetting(movies.50)">$LOCALIZE[535]</value>
 			<value condition="Skin.HasSetting(movies.55)">$LOCALIZE[31107]</value>
@@ -412,7 +420,7 @@
 		<value condition="Container.Content(musicvideos) + Control.HasFocus(11122)">special://skin/extras/views/musicvideos/506.png</value>
 		<value condition="Container.Content(musicvideos) + Control.HasFocus(11123)">special://skin/extras/views/musicvideos/507.png</value>
 		<value condition="Container.Content(musicvideos) + Control.HasFocus(11126)">special://skin/extras/views/musicvideos/510.png</value>
-		<value>special://skin/extras/backgrounds/splash.png</value>
+		<value>themes/splash.png</value>
 	</variable>
 	<variable name="VideoLibraryScanLabel">
 		<value condition="Library.IsScanningVideo">$LOCALIZE[13353]</value>

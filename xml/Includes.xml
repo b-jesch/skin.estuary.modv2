@@ -47,7 +47,7 @@
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | ControlGroup(8000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131) | Window.IsActive(MyPlaylist.xml)</expression>
 	<expression name="EnableTheme">![VideoPlayer.IsFullscreen | Window.IsActive(fullscreeninfo) | Window.IsVisible(visualisation) | Window.IsVisible(1104)]</expression>
 	<!-- Christmas Time from 1. Advent to 2. Christmas Date, fix end date (26.12.) -->
-	<expression name="ChristmasTime">System.Date(12-03,12-27) + !Skin.HasSetting(DisableThemes)</expression>
+	<expression name="ChristmasTime">System.Date(01-03,12-27) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="ChristmasTheme">$EXP[ChristmasTime] + $EXP[EnableTheme]</expression>
 	<!-- Halloween, fix date (31.10) -->
 	<expression name="HalloweenTime">System.Date(10-31,11-01) + !Skin.HasSetting(DisableThemes)</expression>

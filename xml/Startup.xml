@@ -5,15 +5,16 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(EnableSplashScreen)</visible>
 			<control type="image">
+				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<aspectratio>scale</aspectratio>
-				<texture colordiffuse="EDFFFFFF">lists/panel.png</texture>
+				<texture>$VAR[ThemesVar]background.jpg</texture>
 			</control>
 			<control type="image">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<aspectratio>scale</aspectratio>
-				<texture>special://skin/extras/backgrounds/splash.png</texture>
+				<texture colordiffuse="AFFFFFFF">themes/splash.png</texture>
 			</control>
 		</control>
 	</controls>
