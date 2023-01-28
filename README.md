@@ -39,8 +39,9 @@ supports animated poster only.
 ### 4.1.0+nexus ###
 - .1
   * Introducing Skin Timers as replacement for splash screen timers
-  * extend power menu property "reboot from emmc/nand"
+  * extend power menu property "reboot from eMMC/NAND"
   * Applying special seasonal themes to splash screen, update textures
+  * fixed wrong behaviour on startup/logout when profiles are used (Issue #65)
   
 
 - .0
