@@ -135,7 +135,7 @@
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
 						<visible>System.CanReboot</visible>
-						<visible>System.PathExist("/dev/system")</visible>
+						<visible>System.PathExist("/dev/system") | System.PathExist("/dev/userdata")</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
@@ -369,7 +369,7 @@
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
 						<visible>System.CanReboot</visible>
-						<visible>System.PathExist("/dev/system")</visible>
+						<visible>System.PathExist("/dev/system") | System.PathExist("/dev/userdata")</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>
@@ -521,7 +521,7 @@
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot</onclick>
 						<visible>System.CanReboot</visible>
-						<visible>System.PathExist("/dev/system")</visible>
+						<visible>System.PathExist("/dev/system") | System.PathExist("/dev/userdata")</visible>
 						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
 					</item>
 					<item>

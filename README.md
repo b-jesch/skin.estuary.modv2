@@ -39,6 +39,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .20
+  * extend power menu property "reboot from eMMC/NAND"
+
+
 - .19
   * Listview bugfix
   * Fix doubled label of 'in progress tv shows'
