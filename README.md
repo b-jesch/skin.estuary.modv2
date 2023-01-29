@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.0+nexus ###
+- .2
+  * Add option for customizing own splash background
+
+
 - .1
   * Introducing Skin Timers as replacement for splash screen timers
   * extend power menu property "reboot from eMMC/NAND"
