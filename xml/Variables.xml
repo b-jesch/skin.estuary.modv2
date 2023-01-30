@@ -1359,8 +1359,16 @@
 		<value condition="String.IsEqual(listitem.dbtype,musicvideo) | String.IsEqual(listitem.dbtype,video)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(listitem.dbtype,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
-		<value condition="String.IsEqual(listitem.dbtype,song)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567] : [COLOR white],[/COLOR][CR]]</value>
+		<value condition="String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicplaylist)">$VAR[MusicTrackInfo,$LOCALIZE[554] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Artist,$LOCALIZE[557] : [COLOR white],[/COLOR][CR]]$INFO[listitem.Album,$LOCALIZE[558] : [COLOR white],[/COLOR][CR]]$VAR[InfoDiscVar,$LOCALIZE[427] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Year,$LOCALIZE[345] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.LastPlayed,$LOCALIZE[568] : [COLOR white],[/COLOR]]</value>
+		<value condition="String.IsEqual(ListItem.DBType,song) + Window.IsActive(musicplaylist)">[COLOR white][B]$LOCALIZE[31037] : [/COLOR]$INFO[Container.CurrentItem,,/]$INFO[Container.NumItems][/B][CR]$VAR[MusicTrackInfo,$LOCALIZE[554] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Artist,$LOCALIZE[557] : [COLOR white],[/COLOR][CR]]$INFO[listitem.Album,$LOCALIZE[558] : [COLOR white],[/COLOR][CR]]$VAR[InfoDiscVar,$LOCALIZE[427] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Year,$LOCALIZE[345] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567] : [COLOR white],[/COLOR]]</value>
 		<value condition="!String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]</value>
+	</variable>
+	<variable name="MusicTrackInfo">
+		<value condition="String.IsEmpty(listitem.Title)">$INFO[listitem.TrackNumber]</value>
+		<value>$INFO[listitem.TrackNumber,, -]$INFO[listitem.Title, ]</value>
+	</variable>
+	<variable name="InfoDiscVar">
+		<value condition="Integer.IsGreater(ListItem.TotalDiscs,1)">$INFO[ListItem.DiscNumber]$INFO[ListItem.DiscTitle, - ]</value>
 	</variable>
 	<variable name="WidgetGenreIconVar">
 		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.arctic.zephyr/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
