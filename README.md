@@ -39,6 +39,7 @@ supports animated poster only.
 ### 4.1.0+nexus ###
 - .2
   * Add option for customizing own splash background
+  * Add title list to album view pt.1
 
 
 - .1

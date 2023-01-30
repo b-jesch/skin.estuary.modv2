@@ -687,7 +687,7 @@
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
 						<include content="InfoList">
 							<param name="list_id" value="42000" />
-							<param name="bottom" value="100" />
+							<param name="bottom" value="120" />
 							<param name="width" value="540" />
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="descending" />
@@ -697,7 +697,7 @@
 						</include>
 						<include content="InfoList">
 							<param name="list_id" value="43000" />
-							<param name="bottom" value="100" />
+							<param name="bottom" value="120" />
 							<param name="width" value="540" />
 							<param name="sortby" value="track" />
 							<param name="sortorder" value="ascending" />

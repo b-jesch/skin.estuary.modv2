@@ -611,6 +611,8 @@
 				<bottom>$PARAM[bottom]</bottom>
 				<orientation>vertical</orientation>
 				<visible>$PARAM[visible]</visible>
+				<scrolltime tween="cubic">800</scrolltime>
+				<autoscroll delay="2000" repeat="5000" time="2000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
 					<control type="label">
 						<left>10</left>
