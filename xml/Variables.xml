@@ -680,11 +680,11 @@
 	</variable>
 	<!-- Music Visualization -->
 	<variable name="PlayerFanartVar">
+		<value condition="Skin.HasSetting(prefer_albumoverartistfanart) + !String.IsEmpty(Player.Art(album.fanart))">$INFO[Player.Art(album.fanart)]</value>
 		<value condition="Skin.HasSetting(enable_artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
 		<value condition="Skin.HasSetting(enable_artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
-		<value condition="String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmpty(Player.Art(fanart))">special://skin/extras/home-images/radio.jpg</value>
-		<value condition="!Skin.HasSetting(enable_artistslideshow) + String.IsEmpty(Player.Art(fanart)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
-		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(enable_artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmpty(Player.Art(album.fanart))">$INFO[Player.Art(album.fanart)]</value>
+		<value condition="String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Player.Art(album.fanart))">special://skin/extras/home-images/radio.jpg</value>
 	</variable>
 	<variable name="VideoInfoPlayerFanartVar">
 		<value condition="Skin.HasSetting(show_fanart) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>

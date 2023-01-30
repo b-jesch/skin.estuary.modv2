@@ -182,51 +182,58 @@
 					<enable>!Skin.HasSetting(hide_background_fanart)</enable>
 				</control>
 				<control type="radiobutton" id="204">
+					<label>$LOCALIZE[31641]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(prefer_albumoverartistfanart)</selected>
+					<onclick>Skin.ToggleSetting(prefer_albumoverartistfanart)</onclick>
+					<enable>!Skin.HasSetting(hide_background_fanart)</enable>
+				</control>
+				<control type="radiobutton" id="205">
 					<label>$LOCALIZE[31282]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(animate_artistslideshow)</selected>
 					<onclick>Skin.ToggleSetting(animate_artistslideshow)</onclick>
 					<enable>!Skin.HasSetting(hide_background_fanart)</enable>
 				</control>
-				<control type="radiobutton" id="214">
+				<control type="radiobutton" id="206">
 					<label>$LOCALIZE[31437]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(hide_fanartopacity)</selected>
 					<onclick>Skin.ToggleSetting(hide_fanartopacity)</onclick>
 					<enable>!Skin.HasSetting(hide_background_fanart)</enable>
 				</control>
-				<control type="radiobutton" id="205">
+				<control type="radiobutton" id="207">
 					<label>$LOCALIZE[31283]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(enable_visualisation)</selected>
 					<onclick>Skin.ToggleSetting(enable_visualisation)</onclick>
 				</control>
-				<control type="radiobutton" id="207">
+				<control type="radiobutton" id="208">
 					<label>  ∟$LOCALIZE[31402]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(show_visualisationbehind)</selected>
 					<onclick>Skin.ToggleSetting(show_visualisationbehind)</onclick>
 					<visible>Skin.HasSetting(enable_visualisation)</visible>
 				</control>
-				<control type="radiobutton" id="206">
+				<control type="radiobutton" id="209">
 					<label>$LOCALIZE[31287]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(show_disc)</selected>
 					<onclick>Skin.ToggleSetting(show_disc)</onclick>
 				</control>
-				<control type="radiobutton" id="208">
+				<control type="radiobutton" id="210">
 					<label>$LOCALIZE[31289]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(show_artistclearlogo)</selected>
 					<onclick>Skin.ToggleSetting(show_artistclearlogo)</onclick>
 				</control>
-				<control type="radiobutton" id="209">
+				<control type="radiobutton" id="211">
 					<label>$LOCALIZE[31291]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(show_artistbanner)</selected>
 					<onclick>Skin.ToggleSetting(show_artistbanner)</onclick>
 				</control>
-				<control type="radiobutton" id="215">
+				<control type="radiobutton" id="212">
 					<label>$LOCALIZE[31457]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(enable_artistclearart)</selected>
@@ -243,21 +250,21 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="radiobutton" id="221">
+				<control type="radiobutton" id="213">
 					<label>$LOCALIZE[31637]</label>
 					<include>DefaultSettingButton</include>
 					<onclick condition="System.HasAddon(script.cu.lrclyrics)">Skin.ToggleSetting(enable_lyrics)</onclick>
 					<onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
 					<selected>!Skin.HasSetting(enable_lyrics)</selected>
 				</control>
-				<control type="radiobutton" id="212">
+				<control type="radiobutton" id="214">
 					<label>  ∟$LOCALIZE[31379]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_animatedlyrics)</onclick>
 					<selected>!Skin.HasSetting(enable_animatedlyrics)</selected>
 					<enable>!Skin.HasSetting(enable_lyrics)</enable>
 				</control>
-				<control type="radiobutton" id="216">
+				<control type="radiobutton" id="215">
 					<label>  ∟$LOCALIZE[31363]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(Alt_color.lyrics)</selected>
@@ -267,7 +274,7 @@
 				</control>
 				<include content="DefaultColorSettingButton">
 					<param name="visible">!Skin.HasSetting(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</param>
-					<param name="id">217</param>
+					<param name="id">216</param>
 					<param name="label">     ∟$LOCALIZE[737] 1</param>
 					<param name="label2">$VAR[Label_SkinSetting_LyricsColor1]</param>
 					<param name="header">737</param>
@@ -275,7 +282,7 @@
 				</include>
 				<include content="DefaultColorSettingButton">
 					<param name="visible">!Skin.HasSetting(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</param>
-					<param name="id">218</param>
+					<param name="id">217</param>
 					<param name="label">     ∟$LOCALIZE[737] 2</param>
 					<param name="label2">$VAR[Label_SkinSetting_LyricsColor2]</param>
 					<param name="header">737</param>
@@ -283,7 +290,7 @@
 				</include>
 				<include content="DefaultColorSettingButton">
 					<param name="visible">!Skin.HasSetting(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</param>
-					<param name="id">219</param>
+					<param name="id">218</param>
 					<param name="label">     ∟$LOCALIZE[737] 3</param>
 					<param name="label2">$VAR[Label_SkinSetting_LyricsColor3]</param>
 					<param name="header">737</param>
@@ -291,20 +298,20 @@
 				</include>
 				<include content="DefaultColorSettingButton">
 					<param name="visible">!Skin.HasSetting(enable_lyrics) + !Skin.HasSetting(enable_animatedlyrics) + Skin.HasSetting(Alt_color.lyrics)</param>
-					<param name="id">220</param>
+					<param name="id">219</param>
 					<param name="label">     ∟$LOCALIZE[737] 4</param>
 					<param name="label2">$VAR[Label_SkinSetting_LyricsColor4]</param>
 					<param name="header">737</param>
 					<param name="setting">LyricsColor4</param>
 				</include>
-				<control type="radiobutton" id="213">
+				<control type="radiobutton" id="220">
 					<label>$LOCALIZE[31431]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_scrollingtext)</onclick>
 					<selected>!Skin.HasSetting(enable_scrollingtext)</selected>
 					<visible>Skin.HasSetting(enable_lyrics)</visible>
 				</control>
-				<control type="radiobutton" id="210">
+				<control type="radiobutton" id="221">
 					<label>$LOCALIZE[31286]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(SkinHelper.DisableScreenSaverOnFullScreenMusic)</selected>
