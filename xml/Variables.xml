@@ -854,6 +854,7 @@
 		<value condition="String.Contains(ListItem.mpaa,Rated PG-13) | String.Contains(Container(60).ListItem.mpaa,Rated PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated PG-13)">PG-13</value>
 		<value condition="String.Contains(ListItem.mpaa,Rated PG) | String.Contains(Container(60).ListItem.mpaa,Rated PG) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated PG)">PG</value>
 		<value condition="String.Contains(ListItem.mpaa,Rated G) | String.Contains(Container(60).ListItem.mpaa,Rated G) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated G)">G</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated M) | String.Contains(Container(60).ListItem.mpaa,Rated M) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated M)">M</value>
 		<value condition="String.Contains(ListItem.mpaa,Rated NC-17) | String.Contains(Container(60).ListItem.mpaa,Rated NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated NC-17)">NC-17</value>
 		<value condition="String.Contains(ListItem.mpaa,Not Rated) | String.Contains(Container(60).ListItem.mpaa,Not Rated) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Not Rated)">NR</value>
 		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12)">12</value>

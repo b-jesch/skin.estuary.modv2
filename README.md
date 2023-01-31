@@ -42,6 +42,7 @@ supports animated poster only.
   * Add title list to album view pt.1
   * Add additional info to album view pt.2
   * Add option "prefer album fanart over artist fanart" in music visualisation
+  * Fix MPAA rating "Rated M"
 
 
 - .1
