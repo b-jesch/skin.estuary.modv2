@@ -39,6 +39,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .21
+  * Updated NL language
+  
+
 - .20
   * extend power menu property "reboot from eMMC/NAND"
   * Add title list to album view pt.1
