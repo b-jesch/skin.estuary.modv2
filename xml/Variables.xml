@@ -841,6 +841,7 @@
 		<value condition="String.Contains(ListItem.mpaa,Rated PG-13) | String.Contains(Container(60).ListItem.mpaa,Rated PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated PG-13)">PG-13</value>
 		<value condition="String.Contains(ListItem.mpaa,Rated PG) | String.Contains(Container(60).ListItem.mpaa,Rated PG) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated PG)">PG</value>
 		<value condition="String.Contains(ListItem.mpaa,Rated G) | String.Contains(Container(60).ListItem.mpaa,Rated G) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated G)">G</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated M) | String.Contains(Container(60).ListItem.mpaa,Rated M) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated M)">M</value>
 		<value condition="String.Contains(ListItem.mpaa,Rated NC-17) | String.Contains(Container(60).ListItem.mpaa,Rated NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Rated NC-17)">NC-17</value>
 		<value condition="String.Contains(ListItem.mpaa,Not Rated) | String.Contains(Container(60).ListItem.mpaa,Not Rated) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),Not Rated)">NR</value>
 		<value condition="String.Contains(ListItem.mpaa,12) | String.Contains(Container(60).ListItem.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),12)">12</value>
@@ -1345,8 +1346,16 @@
 		<value condition="String.IsEqual(listitem.dbtype,musicvideo) | String.IsEqual(listitem.dbtype,video)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(listitem.dbtype,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
-		<value condition="String.IsEqual(listitem.dbtype,song)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567] : [COLOR white],[/COLOR][CR]]</value>
+		<value condition="String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicplaylist)">$VAR[MusicTrackInfo,$LOCALIZE[554] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Artist,$LOCALIZE[557] : [COLOR white],[/COLOR][CR]]$INFO[listitem.Album,$LOCALIZE[558] : [COLOR white],[/COLOR][CR]]$VAR[InfoDiscVar,$LOCALIZE[427] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Year,$LOCALIZE[345] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.LastPlayed,$LOCALIZE[568] : [COLOR white],[/COLOR]]</value>
+		<value condition="String.IsEqual(ListItem.DBType,song) + Window.IsActive(musicplaylist)">[COLOR white][B]$LOCALIZE[31037] : [/COLOR]$INFO[Container.CurrentItem,,/]$INFO[Container.NumItems][/B][CR]$VAR[MusicTrackInfo,$LOCALIZE[554] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Artist,$LOCALIZE[557] : [COLOR white],[/COLOR][CR]]$INFO[listitem.Album,$LOCALIZE[558] : [COLOR white],[/COLOR][CR]]$VAR[InfoDiscVar,$LOCALIZE[427] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Year,$LOCALIZE[345] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567] : [COLOR white],[/COLOR]]</value>
 		<value condition="!String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR][CR]]</value>
+	</variable>
+	<variable name="MusicTrackInfo">
+		<value condition="String.IsEmpty(listitem.Title)">$INFO[listitem.TrackNumber]</value>
+		<value>$INFO[listitem.TrackNumber,, -]$INFO[listitem.Title, ]</value>
+	</variable>
+	<variable name="InfoDiscVar">
+		<value condition="Integer.IsGreater(ListItem.TotalDiscs,1)">$INFO[ListItem.DiscNumber]$INFO[ListItem.DiscTitle, - ]</value>
 	</variable>
 	<variable name="WidgetGenreIconVar">
 		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.arctic.zephyr/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
