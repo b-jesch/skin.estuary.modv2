@@ -43,6 +43,7 @@ supports animated poster only.
   * Add additional info to album view pt.2
   * Add option "prefer album fanart over artist fanart" in music visualisation
   * Fix MPAA rating "Rated M"
+  * Add background opacity values to splash background
 
 
 - .1

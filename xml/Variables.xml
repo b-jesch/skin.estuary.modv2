@@ -1088,6 +1088,30 @@
 		<value condition="Skin.HasSetting(opacity_100)">FFFFFFFF</value>
 		<value>37FFFFFF</value>
 	</variable>
+	<variable name="Splash_Opacity">
+		<value condition="Skin.HasSetting(opacity_0)">4FFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_5)">57FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_10)">5FFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_15)">67FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_20)">6FFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_25)">77FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_30)">7FFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_35)">87FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_40)">8FFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_45)">97FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_50)">9FFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_55)">A7FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_60)">AFFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_65)">B7FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_70)">BFFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_75)">C7FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_80)">CFFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_85)">E7FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_90)">EFFFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_95)">F7FFFFFF</value>
+		<value condition="Skin.HasSetting(opacity_100)">FFFFFFFF</value>
+		<value>BFFFFFFF</value>
+	</variable>
 	<variable name="AutocloseOsdVar">
 		<value condition="String.IsEqual(Skin.String(autoclose_osd),31578)">$LOCALIZE[31578]</value>
 		<value condition="String.IsEqual(Skin.String(autoclose_osd),31580)">$LOCALIZE[31580]</value>
