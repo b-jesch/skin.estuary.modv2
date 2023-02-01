@@ -44,6 +44,7 @@ supports animated poster only.
   * Add option "prefer album fanart over artist fanart" in music visualisation
   * Fix MPAA rating "Rated M"
   * Add background opacity values to splash background
+  * Update NL language
 
 
 - .1
