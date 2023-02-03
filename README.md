@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.0+nexus ###
+- .3
+  * Fix missing HDR flag
+
+
 - .2
   * Add option for customizing own splash background
   * Add title list to album view pt.1

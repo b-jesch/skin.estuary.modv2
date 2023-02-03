@@ -1458,7 +1458,6 @@
 	<variable name="HdrTypeVar">
 		<!-- HDR+ type recognition by filename -->
 		<value condition="String.Contains(ListItem.Filenameandpath,.hdrplus.) | String.Contains(ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
-		<value condition="String.Contains(VideoPlayer.Filenameandpath,.hdrplus.) | String.Contains(VideoPlayer.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container.ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container.ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value condition="[String.Contains(Container(60).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(60).ListItem.Filenameandpath,.12bit.)] + Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">flags/videoresolution/hdrplus.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,.hdrplus.) | String.Contains(Container(5083).ListItem.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
@@ -1470,6 +1469,10 @@
 		<value condition="!String.IsEmpty(Container(5083).ListItem.HdrType)">$INFO[Container(5083).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5084).ListItem.HdrType)">$INFO[Container(5084).ListItem.HdrType,flags/videoresolution/,.png]</value>
 		<value condition="!String.IsEmpty(Container(5094).ListItem.HdrType)">$INFO[Container(5094).ListItem.HdrType,flags/videoresolution/,.png]</value>
+	</variable>
+	<variable name="VideoPlayerHdrTypeVar">
+		<value condition="String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
+		<value>$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="3DFlagVar">
 		<value condition="String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
