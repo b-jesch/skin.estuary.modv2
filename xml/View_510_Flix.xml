@@ -289,11 +289,11 @@
 				<top>185</top>
 				<control type="grouplist">
 					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
-					<visible>![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))]</visible>
+					<visible>![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Rating)] + String.IsEmpty()ListItem.LastPlayed</visible>
 					<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 					<top>53</top>
 					<height>70</height>
-					<width>820</width>
+					<width>1100</width>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
 					<align>left</align>
@@ -308,6 +308,34 @@
 					<include content="MediaFlagsRatings">
 						<param name="infolabel_prefix"/>
 					</include>
+					<control type="group">
+						<width>5</width>
+						<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
+						<include content="MediaFlag">
+							<param name="width" value="0" />
+						</include>
+					</control>
+					<control type="group">
+						<width>250</width>
+						<top>5</top>
+						<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
+						<include content="MediaFlag">
+							<param name="texture" value="flags/lastseen.png" />
+							<param name="width" value="250" />
+						</include>
+						<control type="label">
+							<width>192</width>
+							<top>-1</top>
+							<height>50</height>
+							<posx>54</posx>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font_flag</font>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.LastPlayed]</label>
+							<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+						</control>
+					</control>
 				</control>
 				<control type="list" id="51000">
 					<visible>ListItem.IsCollection + ![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
