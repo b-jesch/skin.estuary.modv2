@@ -30,13 +30,13 @@
 		<value>unknown</value>
 	</variable>
 	<variable name="ThemesVar">
-		<value condition="$EXP[ChristmasTheme]">themes/christmas/background.jpg</value>
-		<value condition="$EXP[HalloweenTheme]">themes/halloween/background.jpg</value>
-		<value condition="$EXP[PreEasterTheme]">themes/palmweek/background.jpg</value>
-		<value condition="$EXP[EasterTheme]">themes/easter/background.jpg</value>
-		<value condition="$EXP[ValentineTheme]">themes/valentine/background.jpg</value>
+		<value condition="$EXP[ChristmasTheme]">special://skin/extras/themes/christmas/background.jpg</value>
+		<value condition="$EXP[HalloweenTheme]">special://skin/extras/themes/halloween/background.jpg</value>
+		<value condition="$EXP[PreEasterTheme]">special://skin/extras/themes/palmweek/background.jpg</value>
+		<value condition="$EXP[EasterTheme]">special://skin/extras/themes/easter/background.jpg</value>
+		<value condition="$EXP[ValentineTheme]">special://skin/extras/themes/valentine/background.jpg</value>
 		<value condition="!String.IsEmpty(Skin.String(splash_background))">$INFO[Skin.String(splash_background)]</value>
-		<value>themes/background.jpg</value>
+		<value>special://skin/extras/themes/background.jpg</value>
 	</variable>
 	<variable name="SettingsForcedViewsMoviesVar">
 			<value condition="Skin.HasSetting(movies.50)">$LOCALIZE[535]</value>

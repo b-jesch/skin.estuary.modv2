@@ -484,7 +484,7 @@
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[VideoPlayerHdrTypeVar]" />
-					<param name="visible" value="String.Contains(VideoPlayer.HdrType,hdr) | String.Contains(VideoPlayer.HdrType,hlg) | String.Contains(VideoPlayer.Filenameandpath,.hdrplus.) | String.Contains(VideoPlayer.Filenameandpath,.12bit.)" />
+					<param name="visible" value="String.Contains(VideoPlayer.HdrType,hdr) | String.Contains(VideoPlayer.HdrType,hlg) | String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.12bit.)" />
 					<param name="width" value="71" />
 					<param name="top" value="5" />
 				</include>

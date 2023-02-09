@@ -39,7 +39,7 @@ supports animated poster only.
 ### 4.1.0+nexus ###
 - .3
   * Fix missing HDR flag
-
+  * Move themes back from Textures.xbt to file system
 
 - .2
   * Add option for customizing own splash background
