@@ -2,5 +2,8 @@
 <smartplaylist type="movies">
     <name>Last seen Movies</name>
     <match>all</match>
+    <rule field="playcount" operator="greaterthan">
+        <value>0</value>
+    </rule>
     <order direction="descending">lastplayed</order>
 </smartplaylist>

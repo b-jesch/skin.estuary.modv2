@@ -40,6 +40,7 @@ supports animated poster only.
 - .3
   * Fix missing HDR flag
   * Move themes back from Textures.xbt to file system
+  * Improved smart paly list (last seen movies)
 
 - .2
   * Add option for customizing own splash background
