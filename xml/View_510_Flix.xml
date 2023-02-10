@@ -288,9 +288,7 @@
 				<left>50</left>
 				<top>185</top>
 				<control type="grouplist">
-					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
-					<visible>![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.LastPlayed)]</visible>
-					<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+					<visible>[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + !Player.HasVideo + !String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
 					<top>53</top>
 					<height>70</height>
 					<width>1100</width>
@@ -338,7 +336,7 @@
 					</control>
 				</control>
 				<control type="list" id="51000">
-					<visible>ListItem.IsCollection + ![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+					<visible>ListItem.IsCollection + !Player.HasVideo + !String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
 					<top>8</top>
 					<width>980</width>
 					<height>102</height>
@@ -392,7 +390,6 @@
 			<top>405</top>
 			<animation effect="slide" end=",-10" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)">Conditional</animation>
 			<control type="panel" id="510">
-				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
 				<top>80</top>
 				<width>100%</width>
 				<height>650</height>
