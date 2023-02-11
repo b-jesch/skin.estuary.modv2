@@ -41,6 +41,7 @@ supports animated poster only.
   * coloured flags updated (Thanks to Frodo19)
   * Introducing volume amplification button (DSP) to video OSD
   * add Audio DSP addon to required addons list
+  * Home images changed
 
 
 - .3
