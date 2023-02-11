@@ -37,11 +37,18 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.0+nexus ###
+- .4
+  * coloured flags updated (Thanks to Frodo19)
+  * Introducing volume amplification button (DSP) to video OSD
+  * add Audio DSP addon to required addons list
+
+
 - .3
   * Fix missing HDR flag
   * Move themes back from Textures.xbt to file system
   * Improved smart play list (last seen movies)
   * Add last played flag to flix view
+
 
 - .2
   * Add option for customizing own splash background

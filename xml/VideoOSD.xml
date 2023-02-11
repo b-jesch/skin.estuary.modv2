@@ -265,6 +265,13 @@
 					<onclick condition="!Skin.HasSetting(SimplyfiedOSDVideo)">AudioNextLanguage</onclick>
 					<onclick condition="Skin.HasSetting(SimplyfiedOSDVideo)">ActivateWindow(osdaudiosettings)</onclick>
 				</control>
+				<control type="radiobutton" id="706">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/dsp.png"/>
+					</include>
+					<onclick>RunScript(script.input.adsp)</onclick>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + System.HasAddon(script.input.adsp)</visible>
+				</control>
 				<control type="radiobutton" id="700">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/bookmarks.png"/>
