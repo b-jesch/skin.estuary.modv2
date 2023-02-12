@@ -233,7 +233,7 @@
 				<left>40</left>
 				<width max="537">auto</width>
 				<height>120</height>
-				<aspectratio align="bottom" aligny="center">keep</aspectratio>
+				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture>$INFO[ListItem.Art(clearlogo)]</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
@@ -287,8 +287,9 @@
 				<include>OpenClose_Left</include>
 				<left>50</left>
 				<top>185</top>
+				<visible>!Player.HasVideo + !String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
 				<control type="grouplist">
-					<visible>[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + !Player.HasVideo + !String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
+					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
 					<top>53</top>
 					<height>70</height>
 					<width>1100</width>
@@ -336,7 +337,7 @@
 					</control>
 				</control>
 				<control type="list" id="51000">
-					<visible>ListItem.IsCollection + !Player.HasVideo + !String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
+					<visible>ListItem.IsCollection</visible>
 					<top>8</top>
 					<width>980</width>
 					<height>102</height>
@@ -369,15 +370,22 @@
 					</itemlayout>
 					<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
 				</control>
-				<control type="textbox">
-					<top>125</top>
-					<width>1100</width>
-					<height>165</height>
-					<font>fontplot2</font>
-					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>!ListItem.IsParentFolder</visible>
-				</control>
+			</control>
+			<control type="textbox">
+				<include>OpenClose_Left</include>
+				<include content="ItemTop" condition="String.StartsWith(Container.FolderPath,plugin://)">
+					<param name="top">235</param>
+				</include>
+				<include content="ItemTop" condition="!String.StartsWith(Container.FolderPath,plugin://)">
+					<param name="top">310</param>
+				</include>
+				<left>50</left>
+				<width>1100</width>
+				<bottom>615</bottom>
+				<font>fontplot2</font>
+				<label>$INFO[ListItem.Plot]</label>
+				<autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 		<control type="group">

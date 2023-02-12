@@ -36,12 +36,13 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 
-### 4.1.0+nexus ###
-- .4
+### 4.1.1+nexus ###
+- .0
   * coloured flags updated (Thanks to Frodo19)
   * Introducing volume amplification button (DSP) to video OSD
   * add Audio DSP addon to required addons list
   * Home images changed
+  * Improvements on Flix view (just one more...)
 
 
 - .3
