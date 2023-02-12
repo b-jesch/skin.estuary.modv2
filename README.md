@@ -333,3 +333,5 @@ supports animated poster only.
 ![improved PVR event icons](resources/screenshots/screenshot_13.png)
 ![various color...](resources/screenshots/screenshot_14.png)
 ![...and font schemes](resources/screenshots/screenshot_15.png)
+![Audio DSP](resources/screenshots/screenshot_16.png)
+![Flix Landscape](resources/screenshots/screenshot_17.png)
