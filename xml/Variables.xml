@@ -692,7 +692,10 @@
 		<value condition="VideoPlayer.Content(episodes)">special://skin/extras/home-images/tvshows.jpg</value>
 	</variable>
 	<variable name="PlayerInfoFanartVar">
+		<value condition="!String.IsEmpty(Player.Art(landscape))">$INFO[Player.Art(landscape)]</value>
 		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+		<value condition="VideoPlayer.Content(movies)">defaultmovies.png</value>
+		<value condition="VideoPlayer.Content(episodes)">defaulttvshows.png</value>
 	</variable>
 	<variable name="PlayerFanartOpacityVar">
 		<value condition="Skin.HasSetting(hide_fanartopacity) + !Player.ShowInfo + !Window.IsVisible(musicosd)"/>
@@ -1120,6 +1123,10 @@
 		<value condition="String.IsEqual(Skin.String(autoclose_osd),31583)">$LOCALIZE[31583]</value>
 		<value condition="String.IsEqual(Skin.String(autoclose_osd),31584)">$LOCALIZE[31584]</value>
 		<value>$LOCALIZE[31334]</value>
+	</variable>
+	<variable name="SeekBarOpacityVar">
+		<value condition="Skin.HasSetting(SeekbarOpacity)">3FFFFFFF</value>
+		<value>FFFFFFFF</value>
 	</variable>
 	<variable name="WidgetActionVar">
 		<value condition="String.IsEqual(Skin.String(widget_action),31589)">$LOCALIZE[31589]</value>

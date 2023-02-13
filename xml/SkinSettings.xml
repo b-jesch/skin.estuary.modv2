@@ -76,6 +76,13 @@
 					<selected>Skin.HasSetting(ShowSeekBar)</selected>
                     <onclick>Skin.ToggleSetting(ShowSeekBar)</onclick>
 				</control>
+				<control type="radiobutton" id="104">
+					<label>  ∟$LOCALIZE[31642]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(SeekbarOpacity)</selected>
+                    <onclick>Skin.ToggleSetting(SeekbarOpacity)</onclick>
+					<visible>Skin.HasSetting(ShowSeekbar)</visible>
+				</control>
 				<control type="radiobutton" id="105">
 					<label>$LOCALIZE[31430]</label>
 					<include>DefaultSettingButton</include>

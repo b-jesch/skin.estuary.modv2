@@ -64,7 +64,7 @@
 	<!-- Expression lossless audio -->
 	<expression name="isLossless">String.isEqual(Videoplayer.AudioCodec,cdda) | String.IsEqual(VideoPlayer.AudioCodec,wavpack) | String.IsEqual(Videoplayer.AudioCodec,flac) | String.IsEqual(Videoplayer.AudioCodec,pcm_bluray) | String.IsEqual(Videoplayer.AudioCodec,wav) | String.IsEqual(Videoplayer.AudioCodec,pcm) | String.IsEqual(Videoplayer.AudioCodec,pcm_s16le) | String.IsEqual(Videoplayer.AudioCodec,alac) | String.IsEqual(Videoplayer.AudioCodec,pcm_s24le) | String.IsEqual(Videoplayer.AudioCodec,ape) | String.IsEqual(Videoplayer.AudioCodec,sacd)</expression>
 	<!-- Expression Seek, Skip Forwarding and Rewinding -->
-	<expression name="isSeeking">Player.Seeking | Player.HasPerformedSeek(3) | Player.Forwarding | Player.Rewinding</expression>
+	<expression name="isSeeking">Player.Seeking | Player.HasPerformedSeek(5) | Player.Forwarding | Player.Rewinding</expression>
 
 	<include name="CommonScrollbars">
 		<control type="group">
@@ -3766,6 +3766,7 @@
 	<include name="SeekBar">
 		<param name="left">30</param>
 		<param name="top">100</param>
+		<param name="bg_visibility">true</param>
 		<definition>
 			<control type="group">
 				<left>$PARAM[left]</left>
@@ -3775,17 +3776,17 @@
 					<left>-20</left>
 					<right>-20</right>
 					<top>-50</top>
-					<height>80</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<visible>!Pvr.IsTimeShift + $EXP[isSeeking]</visible>
+					<height>132</height>
+					<texture colordiffuse="$VAR[SeekBarOpacityVar]">dialogs/dialog-bg-nobo.png</texture>
+					<visible>$PARAM[bg_visibility] + !Pvr.IsTimeShift</visible>
 				</control>
 				<control type="image">
 					<left>-20</left>
 					<right>-20</right>
 					<top>-100</top>
-					<height>130</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<visible>Pvr.IsTimeShift + $EXP[isSeeking]</visible>
+					<height>182</height>
+					<texture colordiffuse="$VAR[SeekBarOpacityVar]">dialogs/dialog-bg-nobo.png</texture>
+					<visible>$PARAM[bg_visibility] + Pvr.IsTimeShift</visible>
 				</control>
 				<control type="group" id="6000">
 					<top>-5</top>
@@ -4011,6 +4012,7 @@
 			</control>
 			<include content="SeekBar">
 				<param name="left">460</param>
+				<param name="bg_visibility">false</param>
 			</include>
 		</control>
 		<control type="image">
@@ -4949,6 +4951,7 @@
 			</control>
 			<include content="SeekBar">
 				<param name="left">30</param>
+				<param name="bg_visibility">false</param>
 			</include>
 		</control>
 	</include>

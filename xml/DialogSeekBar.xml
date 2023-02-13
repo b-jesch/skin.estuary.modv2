@@ -13,9 +13,28 @@
 			<animation effect="slide" end="0,-135" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
 			<animation effect="slide" end="0,-131.5" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
 			<animation effect="slide" end="0,-21" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
-			<include content="SeekBar" condition="Skin.HasSetting(ShowSeekBar) + $EXP[isSeeking]">
+			<include content="SeekBar" condition="Skin.HasSetting(ShowSeekBar) + Skin.HasSetting(SmallOSDVideo) + $EXP[isSeeking]">
 				<param name="top">990</param>
+				<param name="left">30</param>
 			</include>
+			<include content="SeekBar" condition="Skin.HasSetting(ShowSeekBar) + !Skin.HasSetting(SmallOSDVideo) + $EXP[isSeeking]">
+				<param name="top">990</param>
+				<param name="left">460</param>
+			</include>
+			<control type="group">
+				<left>30</left>
+				<bottom>10</bottom>
+				<width>400</width>
+				<height>225</height>
+				<control type="image">
+					<texture background="true">dialogs/dialog-bg-nobo.png</texture>
+					<visible>!Skin.HasSetting(SmallOSDVideo)</visible>
+				</control>
+				<control type="image">
+					<texture background="true">$VAR[PlayerInfoFanartVar]</texture>
+					<visible>!Skin.HasSetting(SmallOSDVideo)</visible>
+				</control>
+			</control>
 			<include condition="Player.HasAudio + !Player.HasVideo">OSDWithInfo</include>
 			<include condition="!$EXP[isSeeking] + !Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithInfo</include>
 			<include condition="!Skin.HasSetting(ShowSeekBar) + !Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithInfo</include>
