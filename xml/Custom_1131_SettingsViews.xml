@@ -30,7 +30,7 @@
 					<height>450</height>
 					<width>800</width>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$VAR[SettingsViewsImagesVar]</texture>
+					<texture fallback="special://skin/extras/themes/splash.png">$VAR[SettingsViewsImagesVar]</texture>
 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>4</bordersize>
 				</control>
@@ -50,7 +50,7 @@
 						<include>DefaultSettingButton</include>
 						<onclick>Container.SetViewMode(50)</onclick>
 						<onclick>Action(close)</onclick>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 					</control>
 					<control type="button" id="11116">
 						<label>$LOCALIZE[31107]</label>

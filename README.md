@@ -44,6 +44,7 @@ supports animated poster only.
   * Home images changed
   * Improvements on Flix view (just one more...)
   * add transparency option to seekbar background
+  * add missing list view to tvshow episodes
 
 
 - .3
