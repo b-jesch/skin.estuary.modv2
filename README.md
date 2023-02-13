@@ -45,8 +45,10 @@ supports animated poster only.
   * Improvements on Flix view (just one more...)
   * add transparency option to seekbar background
   * add missing list view to tvshow episodes
+  * fix TV-14 rating (wrongly shown as MPAA-14)
 
 
+### 4.1.0+nexus ###
 - .3
   * Fix missing HDR flag
   * Move themes back from Textures.xbt to file system

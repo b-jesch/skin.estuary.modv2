@@ -841,7 +841,7 @@
 		<value/>
 	</variable>
 	<variable name="MPAAImageVar">
-		<value condition="String.Contains(ListItem.mpaa,TV-Y7) | String.Contains(ListItem.mpaa,TV-Y) | String.Contains(ListItem.mpaa,TV-PG) | String.Contains(ListItem.mpaa,TV-G) | String.Contains(ListItem.mpaa,TV-MA)">flags/mpaa-tv.png</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-Y7) | String.Contains(ListItem.mpaa,TV-Y) | String.Contains(ListItem.mpaa,TV-PG) | String.Contains(ListItem.mpaa,TV-G) | String.Contains(ListItem.mpaa,TV-14) | String.Contains(ListItem.mpaa,TV-MA)">flags/mpaa-tv.png</value>
 		<value condition="String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)">flags/mpaa-long.png</value>
 		<value>flags/mpaa.png</value>
 	</variable>
