@@ -55,6 +55,7 @@ if __name__ == '__main__':
     content = ''
     mode = ''
 
+    xbmc.sleep(1000)
     monitor = xbmc.Monitor()
     xbmc.log('Estuary MOD V2 Nexus service handler started', level=xbmc.LOGINFO)
 
