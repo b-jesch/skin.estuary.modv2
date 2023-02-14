@@ -29,7 +29,7 @@
 		<value condition="System.Platform.Linux">Linux</value>
 		<value>unknown</value>
 	</variable>
-	<variable name="ThemesVar">
+	<variable name="ThemesBGVar">
 		<value condition="$EXP[ChristmasTheme]">special://skin/extras/themes/christmas/background.jpg</value>
 		<value condition="$EXP[HalloweenTheme]">special://skin/extras/themes/halloween/background.jpg</value>
 		<value condition="$EXP[PreEasterTheme]">special://skin/extras/themes/palmweek/background.jpg</value>
@@ -37,6 +37,13 @@
 		<value condition="$EXP[ValentineTheme]">special://skin/extras/themes/valentine/background.jpg</value>
 		<value condition="!String.IsEmpty(Skin.String(splash_background))">$INFO[Skin.String(splash_background)]</value>
 		<value>special://skin/extras/themes/background.jpg</value>
+	</variable>
+	<variable name="ThemesVar">
+		<value condition="$EXP[ChristmasTheme]">themes/christmas/</value>
+		<value condition="$EXP[HalloweenTheme]">themes/halloween/</value>
+		<value condition="$EXP[PreEasterTheme]">themes/palmweek/</value>
+		<value condition="$EXP[EasterTheme]">themes/easter/</value>
+		<value condition="$EXP[ValentineTheme]">themes/valentine/</value>
 	</variable>
 	<variable name="SettingsForcedViewsMoviesVar">
 			<value condition="Skin.HasSetting(movies.50)">$LOCALIZE[535]</value>

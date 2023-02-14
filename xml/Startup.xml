@@ -7,7 +7,7 @@
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<aspectratio>scale</aspectratio>
-				<texture colordiffuse="$VAR[Splash_Opacity]">$VAR[ThemesVar]</texture>
+				<texture colordiffuse="$VAR[Splash_Opacity]">$VAR[ThemesBGVar]</texture>
 				<visible>!Skin.HasSetting(enable_splash_background)</visible>
 			</control>
 			<control type="image">

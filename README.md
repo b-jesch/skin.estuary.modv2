@@ -46,7 +46,7 @@ supports animated poster only.
   * add transparency option to seekbar background
   * add missing list view to tvshow episodes
   * fix TV-14 rating (wrongly shown as MPAA-14)
-
+  * fix bug on seasonal themes
 
 ### 4.1.0+nexus ###
 - .3
