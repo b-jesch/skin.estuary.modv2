@@ -24,15 +24,17 @@
 			<control type="group">
 				<left>30</left>
 				<bottom>10</bottom>
-				<width>400</width>
-				<height>225</height>
+				<width>402</width>
+				<height>227</height>
 				<control type="image">
 					<texture background="true">dialogs/dialog-bg-nobo.png</texture>
-					<visible>!Skin.HasSetting(SmallOSDVideo)</visible>
 				</control>
 				<control type="image">
-					<texture background="true">$VAR[PlayerInfoFanartVar]</texture>
-					<visible>!Skin.HasSetting(SmallOSDVideo)</visible>
+					<left>2</left>
+					<right>2</right>
+					<top>2</top>
+					<bottom>2</bottom>
+					<texture>$VAR[NowPlayingLandscapeVar]</texture>
 				</control>
 			</control>
 			<include condition="Player.HasAudio + !Player.HasVideo">OSDWithInfo</include>

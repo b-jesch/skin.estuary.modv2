@@ -691,12 +691,6 @@
 		<value condition="VideoPlayer.Content(movies)">special://skin/extras/home-images/movies.jpg</value>
 		<value condition="VideoPlayer.Content(episodes)">special://skin/extras/home-images/tvshows.jpg</value>
 	</variable>
-	<variable name="PlayerInfoFanartVar">
-		<value condition="!String.IsEmpty(Player.Art(landscape))">$INFO[Player.Art(landscape)]</value>
-		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
-		<value condition="VideoPlayer.Content(movies)">defaultmovies.png</value>
-		<value condition="VideoPlayer.Content(episodes)">defaulttvshows.png</value>
-	</variable>
 	<variable name="PlayerFanartOpacityVar">
 		<value condition="Skin.HasSetting(hide_fanartopacity) + !Player.ShowInfo + !Window.IsVisible(musicosd)"/>
 		<value>88FFFFFF</value>
