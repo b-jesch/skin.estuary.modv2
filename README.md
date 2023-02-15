@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .1
+  * remove wrongly showed fanart/landscape on seek bar when simplyfied OSD is selected
+
+
 - .0
   * coloured flags updated (Thanks to Frodo19)
   * Introducing volume amplification button (DSP) to video OSD
