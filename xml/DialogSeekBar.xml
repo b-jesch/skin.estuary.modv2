@@ -35,7 +35,8 @@
 					<top>2</top>
 					<bottom>2</bottom>
 					<font>font14</font>
-					<label>$INFO[Player.Title,[B],[/B]]</label>
+					<scroll>true</scroll>
+					<label>[B]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,, - ]$INFO[VideoPlayer.Title][/B]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
