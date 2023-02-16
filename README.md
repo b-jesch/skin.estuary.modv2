@@ -38,7 +38,7 @@ supports animated poster only.
 
 ### 4.1.1+nexus ###
 - .1
-  * remove wrongly showed fanart/landscape on seek bar when simplyfied OSD is selected
+  * remove fanart/landscape from seek bar
 
 
 - .0
