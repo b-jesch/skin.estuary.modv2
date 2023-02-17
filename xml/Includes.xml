@@ -65,7 +65,6 @@
 	<expression name="isLossless">String.isEqual(Videoplayer.AudioCodec,cdda) | String.IsEqual(VideoPlayer.AudioCodec,wavpack) | String.IsEqual(Videoplayer.AudioCodec,flac) | String.IsEqual(Videoplayer.AudioCodec,pcm_bluray) | String.IsEqual(Videoplayer.AudioCodec,wav) | String.IsEqual(Videoplayer.AudioCodec,pcm) | String.IsEqual(Videoplayer.AudioCodec,pcm_s16le) | String.IsEqual(Videoplayer.AudioCodec,alac) | String.IsEqual(Videoplayer.AudioCodec,pcm_s24le) | String.IsEqual(Videoplayer.AudioCodec,ape) | String.IsEqual(Videoplayer.AudioCodec,sacd)</expression>
 	<!-- Expression Seek, Skip Forwarding and Rewinding -->
 	<expression name="isSeeking">Player.Seeking | Player.HasPerformedSeek(5) | Player.Forwarding | Player.Rewinding</expression>
-
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>

@@ -412,6 +412,7 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>8</preloaditems>
+				<visible>!Container.Content() + !Container.Content(genres) + !Container.Content(tags) + !Container.Content(years) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(roles) + !Container.Content(countries) + !Container.Content(studios) + !Container.Content(files) + !Container.Content(playlists)</visible>
 				<itemlayout height="255" width="440">
 					<control type="group">
 						<top>20</top>
