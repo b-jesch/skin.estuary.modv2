@@ -38,7 +38,7 @@ supports animated poster only.
 
 ### 4.1.1+nexus ###
 - .1
-  * remove fanart/landscape from seek bar
+  * improving + removing fanart/landscape from seek bar
 
 
 - .0

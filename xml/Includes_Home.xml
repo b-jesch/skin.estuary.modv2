@@ -4806,10 +4806,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="400"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="350"/>
 				</include>
 				<include content="WidgetListCommon">
@@ -4903,10 +4903,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="440"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="410"/>
 				</include>
 				<include content="WidgetListCommon">
@@ -5000,10 +5000,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="400"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="350"/>
 				</include>
 				<include content="WidgetListCommon">
@@ -5097,10 +5097,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="440"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="410"/>
 				</include>
 				<include content="WidgetListCommon">
@@ -5194,10 +5194,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="400"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="350"/>
 				</include>
 				<include content="WidgetListCommon">
@@ -5300,10 +5300,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="440"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="410"/>
 				</include>
 				<include content="WidgetListCommon">
@@ -5406,10 +5406,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="400"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="350"/>
 				</include>
 				<include content="WidgetListCommon">
@@ -5512,10 +5512,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="440"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="410"/>
 				</include>
 				<include content="WidgetListCommon">
@@ -5617,10 +5617,10 @@
 				<left>-10</left>
 				<top>120</top>
 				<right>0</right>
-				<include content="WidgetHeight" condition="Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="480"/>
 				</include>
-				<include content="WidgetHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
+				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
 					<param name="height" value="410"/>
 				</include>
 				<include content="WidgetListCommon">

@@ -24,7 +24,12 @@
 				<left>30</left>
 				<bottom>8</bottom>
 				<width>402</width>
-				<height>132</height>
+				<include content="ItemHeight" condition="!Pvr.IsTimeShift">
+					<param name="height">132</param>
+				</include>
+				<include content="ItemHeight" condition="Pvr.IsTimeShift">
+					<param name="height">182</param>
+				</include>
 				<visible>Skin.HasSetting(ShowSeekBar) + !Skin.HasSetting(SmallOSDVideo) + $EXP[isSeeking]</visible>
 				<control type="image">
 					<texture  colordiffuse="$VAR[SeekBarOpacityVar]">dialogs/dialog-bg-nobo.png</texture>
