@@ -56,7 +56,7 @@
 						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]</label>
 						<wrapmultiline>true</wrapmultiline>
-						<scroll>true</scroll>>
+						<scroll>true</scroll>
 						<visible>!ListItem.IsCollection + !Skin.HasSetting(hide_pubyear)</visible>
 					</control>
 					<control type="label">
