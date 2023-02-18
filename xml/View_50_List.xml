@@ -609,23 +609,12 @@
 						<visible>!String.IsEmpty(ListItem.Plot)</visible>
 					</control>
 					<control type="textbox">
-						<top>0</top>
-						<width>535</width>
-						<bottom>235</bottom>
-						<left>10</left>
-						<align>justify</align>
-						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="textbox">
 						<top>41</top>
 						<width>535</width>
 						<bottom>276</bottom>
 						<left>10</left>
 						<label>$LOCALIZE[19055]</label>
-						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
+						<visible>String.IsEmpty(ListItem.Plot)</visible>
 					</control>
 					<control type="list" id="50055">
 						<left>20</left>

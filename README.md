@@ -39,6 +39,7 @@ supports animated poster only.
 ### 4.1.1+nexus ###
 - .1
   * improving + removing fanart/landscape from seek bar
+  * fix display of long titles/filenames on list view (issue #114)
 
 
 - .0
