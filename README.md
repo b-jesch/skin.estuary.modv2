@@ -39,6 +39,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .22
+  * fix display of long titles/filenames on list view (issue #114)
+
+
 - .21
   * Updated NL language
   
