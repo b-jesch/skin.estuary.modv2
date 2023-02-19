@@ -39,6 +39,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 3.4.2+matrix ###
+- .23
+  * remove overlapping between title and plot in list view
+
+
 - .22
   * fix display of long titles/filenames on list view (issue #114)
 
