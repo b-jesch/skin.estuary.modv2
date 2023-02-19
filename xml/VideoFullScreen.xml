@@ -41,7 +41,7 @@
 		</control>
 		<control type="group" id="1">
 			<depth>DepthOSD+</depth>
-			<visible>[Player.Caching + Integer.IsGreater(Player.CacheLevel,0)] + ![Player.Seeking | Player.HasPerformedSeek(3) | [Player.Paused + !Skin.HasSetting(Hide_OSDInfo)] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput)]</visible>
+			<visible>[Player.Caching + Integer.IsGreater(Player.CacheLevel,0)] + ![$EXP[isSeeking] | [Player.Paused + !Skin.HasSetting(Hide_OSDInfo)] | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput)]</visible>
 			<animation effect="fade" delay="300" time="200">Visible</animation>
 			<animation effect="fade" delay="200" time="150">Hidden</animation>
 			<centerleft>50%</centerleft>
