@@ -47,12 +47,12 @@
 				<control type="group">
 					<width>550</width>
 					<control type="label">
-						<top>120</top>
+						<top>145</top>
 						<left>30</left>
 						<width>537</width>
 						<aligny>center</aligny>
 						<align>center</align>
-						<height>110</height>
+						<height>60</height>
 						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]</label>
 						<wrapmultiline>true</wrapmultiline>
@@ -60,12 +60,12 @@
 						<visible>!ListItem.IsCollection + !Skin.HasSetting(hide_pubyear)</visible>
 					</control>
 					<control type="label">
-						<top>120</top>
+						<top>145</top>
 						<left>30</left>
 						<width>537</width>
 						<aligny>center</aligny>
 						<align>center</align>
-						<height>110</height>
+						<height>60</height>
 						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
 						<wrapmultiline>true</wrapmultiline>

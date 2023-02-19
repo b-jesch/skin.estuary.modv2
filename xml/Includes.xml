@@ -3689,7 +3689,6 @@
 	<include name="SeekBarProgress">
 		<control type="group">
 			<visible>Player.SeekEnabled</visible>
-			<visible>!Window.IsVisible(sliderdialog)</visible>
 			<control type="button" id="87">
 				<include>HiddenObject</include>
 				<onup>200</onup>
@@ -4212,7 +4211,7 @@
 						<fadetime>100</fadetime>
 					</control>
 					<control type="image">
-						<right>0</right>
+						<right>30</right>
 						<bottom>350</bottom>
 						<width>500</width>
 						<height>281</height>
@@ -4936,7 +4935,7 @@
 				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 			</control>
 			<control type="image">
-				<right>0</right>
+				<right>30</right>
 				<bottom>180</bottom>
 				<width>400</width>
 				<height>225</height>
