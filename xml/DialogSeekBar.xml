@@ -37,10 +37,10 @@
 				<control type="textbox">
 					<left>5</left>
 					<right>5</right>
-					<top>2</top>
-					<bottom>2</bottom>
+					<top>12</top>
+					<bottom>12</bottom>
 					<font>font14</font>
-					<scroll>true</scroll>
+					<autoscroll delay="2000" time="3000" repeat="20000">Skin.HasSetting(autoscroll)</autoscroll>
 					<label>[B]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,, - ]$INFO[VideoPlayer.Title][/B]</label>
 					<align>center</align>
 					<aligny>center</aligny>

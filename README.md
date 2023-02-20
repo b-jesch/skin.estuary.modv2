@@ -39,6 +39,7 @@ supports animated poster only.
 ### 4.1.1+nexus ###
 - .2
   * remove doubled episode title on PVR timer widget
+  * remove overlapping between title and plot in list view
 
 
 - .1

@@ -52,7 +52,7 @@
 						<width>537</width>
 						<aligny>center</aligny>
 						<align>center</align>
-						<height>60</height>
+						<height>100</height>
 						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]</label>
 						<wrapmultiline>true</wrapmultiline>
@@ -65,7 +65,7 @@
 						<width>537</width>
 						<aligny>center</aligny>
 						<align>center</align>
-						<height>60</height>
+						<height>100</height>
 						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
 						<wrapmultiline>true</wrapmultiline>
@@ -85,7 +85,7 @@
 					</control>
 					<control type="textbox">
 						<left>30</left>
-						<top>240</top>
+						<top>280</top>
 						<width>537</width>
 						<bottom>100</bottom>
 						<align>justify</align>
@@ -98,7 +98,7 @@
 					</control>
 					<control type="textbox">
 						<left>30</left>
-						<top>240</top>
+						<top>280</top>
 						<width>537</width>
 						<bottom>225</bottom>
 						<align>justify</align>
@@ -111,7 +111,7 @@
 					</control>
 					<control type="textbox">
 						<left>30</left>
-						<top>240</top>
+						<top>280</top>
 						<width>537</width>
 						<bottom>110</bottom>
 						<align>justify</align>
@@ -124,7 +124,7 @@
 					</control>
 					<control type="textbox">
 						<left>30</left>
-						<top>240</top>
+						<top>280</top>
 						<width>537</width>
 						<bottom>232</bottom>
 						<align>justify</align>
@@ -157,27 +157,15 @@
 					</control>
 					<control type="label">
 						<left>30</left>
-						<bottom>80</bottom>
+						<bottom>75</bottom>
 						<width>537</width>
 						<height>25</height>
 						<align>center</align>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>font12</font>
+						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: ,]</label>
+						<font>font25_title</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<scroll>true</scroll>
 						<visible>!ListItem.IsCollection</visible>
-					</control>
-					<control type="label">
-						<left>30</left>
-						<bottom>80</bottom>
-						<width>537</width>
-						<height>25</height>
-						<align>center</align>
-						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
-						<font>font12</font>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>ListItem.IsCollection</visible>
 					</control>
 					<control type="group">
 						<left>20</left>
