@@ -529,13 +529,12 @@
 						<visible>Container.Content(favourites)</visible>
 					</control>
 					<control type="label">
-						<left>0</left>
-						<bottom>80</bottom>
+						<bottom>75</bottom>
 						<width>537</width>
 						<height>25</height>
 						<align>center</align>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>font12</font>
+						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: ,]</label>
+						<font>font25_title</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<scroll>true</scroll>
 						<visible>String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)</visible>
