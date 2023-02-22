@@ -391,7 +391,7 @@
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<visible>Control.IsVisible(510)</visible>
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
+			<visible>Container.Content(movies) | Container.Content(sets) |Container.Content(tvshows) | Container.Content(musicvideos)</visible>
 			<include>Visible_Right</include>
 			<left>-8</left>
 			<right>0</right>
