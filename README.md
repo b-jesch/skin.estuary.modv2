@@ -40,6 +40,7 @@ supports animated poster only.
 - .2
   * remove doubled episode title on PVR timer widget
   * remove overlapping between title and plot in list view
+  * smaller fixes
 
 
 - .1
