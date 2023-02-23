@@ -233,7 +233,7 @@
 				<left>40</left>
 				<width max="537">auto</width>
 				<height>120</height>
-				<aspectratio align="bottom" aligny="center">keep</aspectratio>
+				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture>$INFO[ListItem.Art(clearlogo)]</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
@@ -287,13 +287,12 @@
 				<include>OpenClose_Left</include>
 				<left>50</left>
 				<top>185</top>
+				<visible>!Player.HasVideo + !String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
 				<control type="grouplist">
 					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
-					<visible>![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(AudioLanguage.2)) + String.IsEmpty(ListItem.Property(AudioLanguage.3)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.3))]</visible>
-					<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 					<top>53</top>
 					<height>70</height>
-					<width>820</width>
+					<width>1100</width>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
 					<align>left</align>
@@ -308,9 +307,37 @@
 					<include content="MediaFlagsRatings">
 						<param name="infolabel_prefix"/>
 					</include>
+					<control type="group">
+						<width>5</width>
+						<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
+						<include content="MediaFlag">
+							<param name="width" value="0" />
+						</include>
+					</control>
+					<control type="group">
+						<width>250</width>
+						<top>5</top>
+						<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
+						<include content="MediaFlag">
+							<param name="texture" value="flags/lastseen.png" />
+							<param name="width" value="250" />
+						</include>
+						<control type="label">
+							<width>192</width>
+							<top>-1</top>
+							<height>50</height>
+							<posx>54</posx>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font_flag</font>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.LastPlayed]</label>
+							<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+						</control>
+					</control>
 				</control>
 				<control type="list" id="51000">
-					<visible>ListItem.IsCollection + ![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
+					<visible>ListItem.IsCollection</visible>
 					<top>8</top>
 					<width>980</width>
 					<height>102</height>
@@ -343,28 +370,34 @@
 					</itemlayout>
 					<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
 				</control>
-				<control type="textbox">
-					<top>125</top>
-					<width>1100</width>
-					<height>165</height>
-					<font>fontplot2</font>
-					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>!ListItem.IsParentFolder</visible>
-				</control>
+			</control>
+			<control type="textbox">
+				<include>OpenClose_Left</include>
+				<include content="ItemTop" condition="String.StartsWith(Container.FolderPath,plugin://)">
+					<param name="top">235</param>
+				</include>
+				<include content="ItemTop" condition="!String.StartsWith(Container.FolderPath,plugin://)">
+					<param name="top">310</param>
+				</include>
+				<left>50</left>
+				<width>1100</width>
+				<bottom>605</bottom>
+				<font>fontplot2</font>
+				<label>$INFO[ListItem.Plot]</label>
+				<autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<visible>Control.IsVisible(510)</visible>
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
+			<visible>Container.Content(movies) | Container.Content(sets) |Container.Content(tvshows) | Container.Content(musicvideos)</visible>
 			<include>Visible_Right</include>
 			<left>-8</left>
 			<right>0</right>
 			<top>405</top>
 			<animation effect="slide" end=",-10" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)">Conditional</animation>
 			<control type="panel" id="510">
-				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
 				<top>80</top>
 				<width>100%</width>
 				<height>650</height>
@@ -379,6 +412,7 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>8</preloaditems>
+				<visible>!Container.Content() + !Container.Content(genres) + !Container.Content(tags) + !Container.Content(years) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(roles) + !Container.Content(countries) + !Container.Content(studios) + !Container.Content(files) + !Container.Content(playlists)</visible>
 				<itemlayout height="255" width="440">
 					<control type="group">
 						<top>20</top>
