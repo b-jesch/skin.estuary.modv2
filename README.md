@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .4
+  * improved music OSD
+  * changed cond visibility of metadata editor (video/music info)  
+
 - .3
   * fix wrong behaviour of seekbar in music OSD
   

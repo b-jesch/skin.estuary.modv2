@@ -4105,18 +4105,6 @@
 					<bottom>5</bottom>
 					<width>440</width>
 					<height>440</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" colordiffuse="FF1E1E1E">colors/white.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
-				</control>
-				<control type="image">
-					<depth>DepthOSD+</depth>
-					<left>10</left>
-					<bottom>5</bottom>
-					<width>440</width>
-					<height>440</height>
 					<aspectratio aligny="bottom" align="center">keep</aspectratio>
 					<texture background="true" fallback="DefaultAudio.png">$VAR[MusicPlayerCover]</texture>
 					<bordersize>20</bordersize>
@@ -4265,6 +4253,7 @@
 							<right>0</right>
 							<width>151</width>
 							<height>151</height>
+							<aspectratio aligny="bottom">keep</aspectratio>
 							<texture background="true" border="2" fallback="DefaultAudio.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
 							<bordertexture>dialogs/back.png</bordertexture>
 							<bordersize>2</bordersize>
