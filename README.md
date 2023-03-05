@@ -40,6 +40,8 @@ supports animated poster only.
 - .4
   * improved music OSD
   * changed cond visibility of metadata editor (video/music info)  
+  * improved Flix View for movie sets
+
 
 - .3
   * fix wrong behaviour of seekbar in music OSD

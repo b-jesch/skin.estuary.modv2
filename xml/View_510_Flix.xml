@@ -206,7 +206,29 @@
 		<control type="group">
 			<visible>Control.IsVisible(510)</visible>
 			<control type="group">
-				<visible>!Player.HasVideo</visible>
+				<visible>!Player.HasVideo + Integer.IsLessOrEqual(Container(510).NumItems,4)</visible>
+				<right>0</right>
+				<top>0</top>
+				<height>75%</height>
+				<width>75%</width>
+				<depth>DepthContentPopout</depth>
+				<control type="multiimage">
+					<fadetime>300</fadetime>
+					<imagepath fallback="special://skin/extras/home-images/movies.jpg" background="true" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</imagepath>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<timeperimage>3000</timeperimage>
+					<randomize>true</randomize>
+					<visible>!ListItem.IsCollection</visible>
+				</control>
+				<control type="image">
+					<aspectratio>scale</aspectratio>
+					<fadetime>300</fadetime>
+					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[WidgetThumbViewVar]</texture>
+					<visible>ListItem.IsCollection</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!Player.HasVideo + Integer.IsGreater(Container(510).NumItems,4)</visible>
 				<right>0</right>
 				<top>0</top>
 				<height>50%</height>
@@ -408,7 +430,7 @@
 				<ondown>5199</ondown>
 				<viewtype label="$LOCALIZE[31620]">biginfo</viewtype>
 				<pagecontrol>5199</pagecontrol>
-                 <focusposition></focusposition>
+                <focusposition/>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>8</preloaditems>

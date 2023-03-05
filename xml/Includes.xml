@@ -3659,6 +3659,11 @@
 			<height>$PARAM[height]</height>
 		</definition>
 	</include>
+	<include name="ItemWidth">
+		<definition>
+			<width>$PARAM[width]</width>
+		</definition>
+	</include>
 	<include name="ItemLeft">
 		<definition>
 			<left>$PARAM[left]</left>
