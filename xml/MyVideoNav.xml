@@ -594,6 +594,13 @@
 						<onclick>Skin.ToggleSetting(greyedout_watched)</onclick>
 						<selected>Skin.HasSetting(greyedout_watched)</selected>
 					</control>
+					<control type="radiobutton" id="628">
+						<include>MediaMenuItemsCommonRadio</include>
+						<label>$LOCALIZE[31643]</label>
+						<onclick>Skin.ToggleSetting(use_posters)</onclick>
+						<selected>Skin.HasSetting(use_posters)</selected>
+						<visible>Control.IsVisible(506) | Control.IsVisible(507)</visible>
+					</control>
 					<control type="label" id="203">
 						<include>MediaMenuLabelCommon</include>
 						<label>$LOCALIZE[31020]</label>

@@ -26,7 +26,7 @@
 				<orientation>vertical</orientation>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://)</visible>
-				<itemlayout height="225" width="376" condition="Container.Content(images) | String.StartsWith(Container.FolderPath,plugin://plugin.video)">
+				<itemlayout height="225" width="376" condition="Container.Content(images) | [String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Skin.HasSetting(use_posters)]">
 					<control type="group">
 						<top>85</top>
 						<left>5</left>
@@ -73,7 +73,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="225" width="376" condition="Container.Content(images) | String.StartsWith(Container.FolderPath,plugin://plugin.video)">
+				<focusedlayout height="225" width="376" condition="Container.Content(images) | [String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Skin.HasSetting(use_posters)]">
 					<control type="group">
 						<top>85</top>
 						<left>5</left>
@@ -232,7 +232,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
+				<itemlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(use_posters)]">
 					<control type="group">
 						<top>88</top>
 						<control type="image">
@@ -302,7 +302,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
+				<focusedlayout height="300" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(use_posters)]">
 				<control type="group">
 					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
             			<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />

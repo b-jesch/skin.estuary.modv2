@@ -41,6 +41,7 @@ supports animated poster only.
   * improved music OSD
   * changed cond visibility of metadata editor (video/music info)  
   * improved Flix View for movie sets
+  * add option to switch between poster/fanart in Mosaic views (video plugins) 
 
 
 - .3
