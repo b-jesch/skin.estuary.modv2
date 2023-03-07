@@ -277,7 +277,7 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true" fallback="DefaultVideo.png">$VAR[IconWallPosterVar]</texture>
-					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DbType,artist) + !String.IsEqual(ListItem.DbType,album) + !String.IsEqual(ListItem.DbType,song) + !Container.Content(games) + !Container.Content(addons) + !Container.Content(years) + !Container.Content(genres) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(tags) + !Container.Content(roles) + !Container.Content(playlists) + !Container.Content(files)</visible>
+					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DbType,artist) + !String.IsEqual(ListItem.DbType,album) + !String.IsEqual(ListItem.DbType,song) + !Container.Content(games) + !Container.Content(addons) + !$EXP[subCategories]</visible>
 				</control>
 				<control type="image">
 					<left>30</left>
@@ -667,7 +667,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 						<visible>!Integer.IsGreater(Container(42000).NumItems,0) + !Integer.IsGreater(Container(43000).NumItems,0)</visible>
 						<visible>!Container.Content() | !String.isEmpty(ListItem.Plot)</visible>
-						<visible>!Container.Content(games) + !Container.Content(years) + !Container.Content(genres) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(tags) + !Container.Content(roles) + !Container.Content(playlists) + !Container.Content(files)</visible>
+						<visible>!Container.Content(games) + !$EXP[subCategories]</visible>
 					</control>
 					<control type="group">
 						<left>20</left>
