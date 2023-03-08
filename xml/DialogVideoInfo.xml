@@ -21,7 +21,7 @@
 				<control type="image">
 					<top>-20</top>
 					<left>-20</left>
-					<width>293</width>
+					<width>280</width>
 					<height>400</height>
 					<texture>colors/black.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -31,7 +31,7 @@
 					<depth>DepthContentPopout</depth>
 					<left>0</left>
 					<top>0</top>
-					<width>253</width>
+					<width>240</width>
 					<height>360</height>
 					<aspectratio>scale</aspectratio>
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
@@ -956,6 +956,7 @@
 		<control type="group">
 			<visible>Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
 			<visible>!Skin.HasSetting(TrailerFullscreen)</visible>
+			<!--
 			<control type="multiimage">
 				<include>FullScreenDimensions</include>
 				<aspectratio>scale</aspectratio>
@@ -965,6 +966,7 @@
 				<timeperimage>3000</timeperimage>
 				<randomize>true</randomize>
 			</control>
+			-->
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>

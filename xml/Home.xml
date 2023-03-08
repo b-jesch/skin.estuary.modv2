@@ -31,7 +31,7 @@
 			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
 			<timeperimage>3000</timeperimage>
 			<randomize>true</randomize>
-			<visible>Skin.HasSetting(show_fanart) + [Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)] + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+			<visible>Skin.HasSetting(show_fanart) + [$EXP[hasFocusCatWidget] | Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)] + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
 		</control>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>

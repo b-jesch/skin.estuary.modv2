@@ -39,7 +39,7 @@
 				<control type="image">
 					<top>-20</top>
 					<left>-20</left>
-					<width>340</width>
+					<width>225</width>
 					<height>467</height>
 					<texture>colors/black.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -49,9 +49,9 @@
 					<depth>DepthContentPopout</depth>
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>285</width>
 					<height>427</height>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPlayerPosterVar]</texture>
 				</control>
 			</control>
