@@ -1239,14 +1239,14 @@
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster)) + VideoPlayer.Content(livetv)">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
 		<value condition="!String.IsEmpty(PVR.EpgEventIcon) + VideoPlayer.Content(livetv)">$INFO[PVR.EpgEventIcon]</value>
 		<value condition="String.IsEmpty(Player.Art(thumb)) + VideoPlayer.Content(livetv)">DefaultTVSquare.png</value>
-		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
+		<!--<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>-->
 		<value>$INFO[Player.Icon]</value>
 	</variable>
 	<variable name="NowPlayingLandscapeVar">
 		<value condition="!String.IsEmpty(Player.Art(tvshow.landscape))">$INFO[Player.Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(Player.Art(landscape))">$INFO[Player.Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 		<value condition="String.IsEmpty(Player.Art(thumb)) + VideoPlayer.Content(livetv)">DefaultTVShows.png</value>
-		<!--<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>-->
 		<value>$INFO[Player.Icon]</value>
 	</variable>
 	<variable name="ShiftThumbVar">
