@@ -68,7 +68,7 @@
 	<!-- Expression not media, all types except movies, videos, tvshows, sets, seasons, epsiodes, music, musicvidoes -->
 	<expression name="subCategories">Container.Content() | Container.Content(genres) | Container.Content(tags) | Container.Content(years) | Container.Content(directors) | Container.Content(actors) | Container.Content(artists) | Container.Content(roles) | Container.Content(countries) | Container.Content(studios) | Container.Content(files) | Container.Content(playlists)</expression>
 	<!-- Expression Categories Widget has Focus -->
-	<expression name="hasFocusCatWidget">Control.HasFocus(4900) | Control.HasFocus(49001) | Control.HasFocus(5900) | Control.HasFocus(59001) | Control.HasFocus(6900) | Control.HasFocus(69001) | Control.HasFocus(7900) | Control.HasFocus(79001) | Control.HasFocus(8900) | Control.HasFocus(89001) | Control.HasFocus(11900) | Control.HasFocus(119001) | Control.HasFocus(12900) | Control.HasFocus(129001) | Control.HasFocus(13900) | Control.HasFocus(139001) | Control.HasFocus(16900) | Control.HasFocus(169001)</expression>
+	<expression name="widgetHasFocus">Control.HasFocus(4900) | Control.HasFocus(49001) | Control.HasFocus(5900) | Control.HasFocus(59001) | Control.HasFocus(6900) | Control.HasFocus(69001) | Control.HasFocus(7900) | Control.HasFocus(79001) | Control.HasFocus(8900) | Control.HasFocus(89001) | Control.HasFocus(11900) | Control.HasFocus(119001) | Control.HasFocus(12900) | Control.HasFocus(129001) | Control.HasFocus(13900) | Control.HasFocus(139001) | Control.HasFocus(16900) | Control.HasFocus(169001)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>

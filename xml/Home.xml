@@ -31,8 +31,9 @@
 			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
 			<timeperimage>3000</timeperimage>
 			<randomize>true</randomize>
-			<visible>Skin.HasSetting(show_fanart) + [$EXP[hasFocusCatWidget] | Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)] + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + [$EXP[widgetHasFocus] | Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)]</visible>
 		</control>
+		<!-->
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
@@ -48,6 +49,7 @@
 			<visible>[[Control.HasFocus(9000) + !String.IsEmpty(Container(9000).ListItem.Property(background))] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + !String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + !String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + !String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]]</visible>
 			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
 		</control>
+		-->
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>

@@ -1785,8 +1785,9 @@
 		<value condition="Control.HasFocus(802) + String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)">special://skin/extras/home-images/settings.jpg</value>
 		<value condition="Control.HasFocus(801) + !String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)">$INFO[Skin.String(search_background)]</value>
 		<value condition="Control.HasFocus(801) + String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)">special://skin/extras/home-images/search.jpg</value>
-		<value condition="Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)">$INFO[Skin.String(global-background)]</value>
-		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
+		<!--<value condition="Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)">$INFO[Skin.String(global-background)]</value>-->
+		<value condition="Skin.HasSetting(show_fanart) + !String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
+		<value condition="!Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))">$INFO[Skin.String(global-background)]</value>
 	</variable>
 	<!--
 	<variable name="MediaFanartVar">
