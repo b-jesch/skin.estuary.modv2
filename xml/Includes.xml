@@ -3062,20 +3062,6 @@
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
-					<!--
-					<control type="multiimage" id="32111">
-						<include>FullScreenDimensions</include>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<animation effect="fade" time="400">VisibleChange</animation>
-						<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[MediaFanartVar]</imagepath>
-						<timeperimage>3000</timeperimage>
-						<randomize>true</randomize>
-						<animation effect="slide" end="-10000,-10000" time="0" condition="[Control.IsVisible(502) | Control.IsVisible(510)] + !$EXP[infodialog_active]">Conditional</animation>
-						<visible>!Window.IsVisible(Home.xml) + Skin.HasSetting(show_fanart)</visible>
-						<visible>!Control.IsVisible(52) + !Control.IsVisible(55)</visible>
-					</control>
-					-->
 					<control type="multiimage" id="32112">
 						<include>FullScreenDimensions</include>
 						<aspectratio>scale</aspectratio>

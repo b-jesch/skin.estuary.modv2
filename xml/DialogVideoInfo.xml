@@ -956,17 +956,6 @@
 		<control type="group">
 			<visible>Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
 			<visible>!Skin.HasSetting(TrailerFullscreen)</visible>
-			<!--
-			<control type="multiimage">
-				<include>FullScreenDimensions</include>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">VisibleChange</animation>
-				<imagepath background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</imagepath>
-				<timeperimage>3000</timeperimage>
-				<randomize>true</randomize>
-			</control>
-			-->
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>

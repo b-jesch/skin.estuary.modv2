@@ -230,10 +230,6 @@
                 </focusedlayout>
                 <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
                 <onclick condition="String.IsEqual(Skin.String(widget_action_pvr),31590) + [Control.HasFocus(12200) | Control.HasFocus(12300) | Control.HasFocus(12400)]">Info</onclick>
-               <!--
-                <onclick condition="String.IsEqual($PARAM[onclick],31624)">ActivateWindow(pvrtimersetting)</onclick>
-                <onclick condition="String.IsEqual($PARAM[onclick],31625)">ActivateWindow(pvrguideinfo)</onclick>
-                -->
             </control>
         </definition>
     </include>
