@@ -44,6 +44,7 @@ supports animated poster only.
   * add option to switch between poster/fanart in Mosaic views (video plugins)
   * conditions for displaying background images optimized/simplified 
   * fix slightly wrong aspect ratio for posters in views/info/OSD
+  * fix unsupported background opacity by replacing multiimage controls with image controls
 
 
 - .3
