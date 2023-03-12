@@ -3034,19 +3034,8 @@
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
-				<visible>Player.HasVideo</visible>
-				<visible>!Slideshow.IsActive</visible>
-				<visible>!Skin.HasSetting(background_showvideo) + ![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
-			</control>
-			<control type="videowindow">
-				<depth>DepthBackground</depth>
-				<left>-400</left>
-				<top>0</top>
-				<width>320</width>
-				<height>240</height>
-				<visible>Player.HasVideo</visible>
-				<visible>!Slideshow.IsActive</visible>
-				<visible>Skin.HasSetting(background_showvideo)</visible>
+				<animation effect="slide" end="3840,0" time="0" condition="Skin.HasSetting(background_showvideo)">Conditional</animation>
+				<visible>Player.HasVideo + !Slideshow.IsActive + !String.IsEqual(Window(Home).Property(TrailerPlaying),439)</visible>
 			</control>
 			<control type="group">
 				<include>FullScreenDimensions</include>
@@ -4029,7 +4018,7 @@
 				<visible>![VideoPlayer.HasMenu + System.HasMediaDVD]</visible>
 				<control type="image">
 					<left>50</left>
-					<bottom>465</bottom>
+					<bottom>415</bottom>
 					<width>360</width>
 					<height>360</height>
 					<aligny>top</aligny>
