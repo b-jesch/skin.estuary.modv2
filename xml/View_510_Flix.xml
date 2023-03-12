@@ -213,18 +213,16 @@
 				<height>75%</height>
 				<width>75%</width>
 				<depth>DepthContentPopout</depth>
-				<control type="multiimage">
+				<control type="image">
 					<fadetime>300</fadetime>
-					<imagepath fallback="special://skin/extras/home-images/movies.jpg" background="true" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</imagepath>
+					<texture fallback="special://skin/extras/home-images/movies.jpg" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
-					<timeperimage>3000</timeperimage>
-					<randomize>true</randomize>
 					<visible>!ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
 					<aspectratio>scale</aspectratio>
 					<fadetime>300</fadetime>
-					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[WidgetThumbViewVar]</texture>
+					<texture fallback="special://skin/extras/home-images/movies.jpg" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[WidgetThumbViewVar]</texture>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 			</control>
@@ -235,12 +233,10 @@
 				<height>50%</height>
 				<width>50%</width>
 				<depth>DepthContentPopout</depth>
-				<control type="multiimage">
-					<fadetime>300</fadetime>
-					<imagepath fallback="special://skin/extras/home-images/movies.jpg" background="true" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</imagepath>
+				<control type="image">
+					<fadetime>600</fadetime>
+					<texture fallback="special://skin/extras/home-images/movies.jpg" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
-					<timeperimage>3000</timeperimage>
-					<randomize>true</randomize>
 					<visible>!ListItem.IsCollection</visible>
 				</control>
 				<control type="image">

@@ -19,7 +19,7 @@
 		</control>
 		<include>DefaultBackground</include>
 		<include>GlobalAnimatedBackground</include>
-		<control type="multiimage">
+		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
@@ -28,12 +28,12 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
+			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</texture>
 			<timeperimage>3000</timeperimage>
 			<randomize>true</randomize>
 			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + [$EXP[widgetHasFocus] | Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)]</visible>
 		</control>
-		<control type="multiimage">
+		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
@@ -42,7 +42,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[WeatherFanartVar]</imagepath>
+			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[WeatherFanartVar]</texture>
 			<visible>!Control.HasFocus(9000) + String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget) + !String.IsEmpty(Container(9000).ListItem.Property(background)) + Skin.HasSetting(show_fanart) + !Player.HasMedia</visible>
 		</control>
 		<control type="image">

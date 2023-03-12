@@ -26,7 +26,7 @@
 		<!-- background -->
 		<include>DefaultBackground</include>
 		<include>GlobalAnimatedBackground</include>
-		<control type="multiimage">
+		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
@@ -35,9 +35,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Container(10051).ListItem.Art(fanart)]</imagepath>
-			<timeperimage>3000</timeperimage>
-			<randomize>true</randomize>
+			<texture colordiffuse="$VAR[Background_Opacity]">$INFO[Container(10051).ListItem.Art(fanart)]</texture>
 			<visible>Skin.HasSetting(show_fanart) + !Control.HasFocus(10053) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
 		</control>
 		<!-- infos -->

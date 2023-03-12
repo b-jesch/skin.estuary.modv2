@@ -26,16 +26,14 @@
 					<param name="top" value="-20" />
 					<param name="flipx" value="true" />
 				</include>
-				<control type="multiimage">
+				<control type="image">
 					<left>38</left>
 					<right>36</right>
 					<top>115</top>
 					<height>644</height>
-					<fadetime>300</fadetime>
-					<imagepath border="2" fallback="special://skin/extras/home-images/movies.jpg" background="true">$VAR[FanartAnimated]</imagepath>
+					<fadetime>400</fadetime>
+					<texture border="2" fallback="special://skin/extras/home-images/movies.jpg">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
-					<timeperimage>3000</timeperimage>
-					<randomize>true</randomize>
 				</control>
 				<control type="image">
 					<left>48</left>

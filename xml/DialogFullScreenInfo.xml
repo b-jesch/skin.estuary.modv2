@@ -19,14 +19,14 @@
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="400">VisibleChange</animation>
-				<control type="multiimage" id="32111">
+				<include content="DefaultBackground" condition="!Skin.HasSetting(background_showvideo)" />
+				<control type="image" id="32111">
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
 					<animation effect="fade" time="400">VisibleChange</animation>
-					<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[VideoInfoPlayerFanartVar]</imagepath>
-					<timeperimage>3000</timeperimage>
-					<randomize>true</randomize>
+					<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[VideoInfoPlayerFanartVar]</texture>
+					<visible>Skin.HasSetting(background_showvideo)</visible>
 				</control>
 			</control>
 		</control>

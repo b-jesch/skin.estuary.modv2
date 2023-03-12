@@ -102,17 +102,15 @@
                 <height>100%</height>
                 <texture>dialogs/back.png</texture>
             </control>
-            <control type="multiimage">
+            <control type="image">
                 <left>10</left>
                 <right>10</right>
                 <top>10</top>
                 <bottom>10</bottom>
                 <fadetime>200</fadetime>
                 <aspectratio>stretch</aspectratio>
-                <imagepath background="true" fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar]</imagepath>
+                <texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar]</texture>
                 <fadetime>300</fadetime>
-                <timeperimage>3000</timeperimage>
-                <randomize>true</randomize>
                 <visible>!Container.Content(episodes)</visible>
             </control>
             <control type="image">

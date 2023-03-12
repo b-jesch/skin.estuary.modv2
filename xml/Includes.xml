@@ -2816,6 +2816,7 @@
 							<width>660</width>
 							<itemgap>5</itemgap>
 							<usecontrolcoords>true</usecontrolcoords>
+							<!-- animated Equalizer Icon -->
 							<control type="multiimage">
 								<top>7</top>
 								<imagepath colordiffuse="$VAR[SkinColorVar]">icons/equalizer</imagepath>
@@ -3051,14 +3052,12 @@
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
-					<control type="multiimage" id="32112">
+					<control type="image" id="32112">
 						<include>FullScreenDimensions</include>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</imagepath>
-						<timeperimage>3000</timeperimage>
-						<randomize>true</randomize>
+						<texture background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</texture>
 						<visible>!Window.IsVisible(Home.xml) + !Skin.HasSetting(show_fanart) + !Control.IsVisible(502) + !Control.IsVisible(510) + !$EXP[infodialog_active]</visible>
 						<visible>!Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
 					</control>

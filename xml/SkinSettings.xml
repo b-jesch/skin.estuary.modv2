@@ -771,7 +771,7 @@
 				<include content="DefaultColorSettingButton">
 					<param name="enable">!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</param>
 					<param name="id">803</param>
-					<param name="label">  ∟$LOCALIZE[31220]</param>
+					<param name="label">$LOCALIZE[31220]</param>
 					<param name="label2">$VAR[Label_SkinSetting_SkinColor]</param>
 					<param name="header">31220</param>
 					<param name="setting">SkinColor</param>

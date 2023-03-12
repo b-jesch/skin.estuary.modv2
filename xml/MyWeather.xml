@@ -35,7 +35,7 @@
 			<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(FullscreenGame) | Window.Previous(startup)">WindowOpen</animation>
 			<include>ColoredBackgroundImages</include>
 		</control>
-		<control type="multiimage">
+		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
@@ -44,7 +44,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="bg_overlay">$VAR[WeatherFanartVar]</imagepath>
+			<texture colordiffuse="bg_overlay">$VAR[WeatherFanartVar]</texture>
 			<visible>!Player.HasMedia</visible>
 		</control>
 		<control type="grouplist" id="2000">

@@ -10,18 +10,16 @@
 			<visible>Player.HasAudio</visible>
 			<visible>Skin.HasSetting(enable_visualisation) + Skin.HasSetting(show_visualisationbehind)</visible>
 		</control>
-		<control type="multiimage">
+		<control type="image">
 			<left>0</left>
 			<top>0</top>
 			<width>100%</width>
 			<height>100%</height>
 			<aspectratio>keep</aspectratio>
 			<fadetime>400</fadetime>
-			<timeperimage>5000</timeperimage>
-			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<imagepath background="true" colordiffuse="$VAR[PlayerFanartOpacityVar]">$VAR[PlayerFanartVar]</imagepath>
+            <texture colordiffuse="$VAR[PlayerFanartOpacityVar]">$VAR[PlayerFanartVar]</texture>
 			<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animate_artistslideshow)">Conditional</animation>
 			<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animate_artistslideshow)">Conditional</animation>
 			<visible>!Skin.HasSetting(hide_background_fanart)</visible>
