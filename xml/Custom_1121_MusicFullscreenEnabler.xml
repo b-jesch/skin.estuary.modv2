@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<window type="dialog" id="1121">
-    <allowoverlay>no</allowoverlay>
-    <onload condition="!Window.IsActive(visualisation) + !Window.IsActive(videos)">FullScreen</onload>
-    <visible>Player.HasAudio + Skin.HasSetting(show_musicvisualisation) + String.IsEmpty(Window(10025).Property(TvTunesIsAlive))</visible>
-    <visible>![VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio]</visible>
-    <controls></controls>
-</window> 

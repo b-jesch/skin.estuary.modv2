@@ -168,12 +168,6 @@
 				<ondown>200</ondown>
 				<pagecontrol>60</pagecontrol>
 				<visible>Container(9000).HasFocus(9)</visible>
-				<control type="radiobutton" id="201">
-					<label>$LOCALIZE[31280]</label>
-					<include>DefaultSettingButton</include>
-					<selected>Skin.HasSetting(show_musicvisualisation)</selected>
-					<onclick>Skin.ToggleSetting(show_musicvisualisation)</onclick>
-				</control>
 				<control type="radiobutton" id="202">
 					<label>$LOCALIZE[31163]</label>
 					<include>DefaultSettingButton</include>

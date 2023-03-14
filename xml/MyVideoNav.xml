@@ -599,7 +599,7 @@
 						<label>$LOCALIZE[31643]</label>
 						<onclick>Skin.ToggleSetting(use_posters)</onclick>
 						<selected>Skin.HasSetting(use_posters)</selected>
-						<visible>Control.IsVisible(506) | Control.IsVisible(507)</visible>
+						<visible>String.StartsWith(Container.FolderPath,plugin://plugin.video) + [Control.IsVisible(506) | Control.IsVisible(507)]</visible>
 					</control>
 					<control type="label" id="203">
 						<include>MediaMenuLabelCommon</include>
