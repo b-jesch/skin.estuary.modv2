@@ -248,6 +248,7 @@
 					<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 					<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">Close</onclick>
 					<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
+					<visible>System.AddonIsEnabled(script.cu.lrclyrics)</visible>
 				</control>
 				<control type="radiobutton" id="5000">
 					<include content="OSDButton">
