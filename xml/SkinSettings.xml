@@ -255,6 +255,8 @@
 					<label>$LOCALIZE[31637]</label>
 					<include>DefaultSettingButton</include>
 					<onclick condition="System.HasAddon(script.cu.lrclyrics)">Skin.ToggleSetting(enable_lyrics)</onclick>
+					<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(special://skin/scripts/toggle_lrclyrics_activation.py,true)</onclick>
+					<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics)">RunScript(special://skin/scripts/toggle_lrclyrics_activation.py,false)</onclick>
 					<onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
 					<selected>!Skin.HasSetting(enable_lyrics)</selected>
 				</control>
@@ -310,7 +312,6 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_scrollingtext)</onclick>
 					<selected>!Skin.HasSetting(enable_scrollingtext)</selected>
-					<visible>Skin.HasSetting(enable_lyrics)</visible>
 				</control>
 				<control type="radiobutton" id="221">
 					<label>$LOCALIZE[31286]</label>
