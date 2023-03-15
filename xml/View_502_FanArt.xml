@@ -31,8 +31,8 @@
 					<right>36</right>
 					<top>115</top>
 					<height>644</height>
-					<fadetime>400</fadetime>
-					<texture border="2" fallback="special://skin/extras/home-images/movies.jpg">$VAR[FanartAnimated]</texture>
+					<fadetime>800</fadetime>
+					<texture border="2">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 				</control>
 				<control type="image">

@@ -214,7 +214,7 @@
 				<width>75%</width>
 				<depth>DepthContentPopout</depth>
 				<control type="image">
-					<fadetime>400</fadetime>
+					<fadetime>800</fadetime>
 					<texture fallback="special://skin/extras/home-images/movies.jpg" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>!ListItem.IsCollection</visible>
@@ -234,7 +234,7 @@
 				<width>50%</width>
 				<depth>DepthContentPopout</depth>
 				<control type="image">
-					<fadetime>400</fadetime>
+					<fadetime>800</fadetime>
 					<texture fallback="special://skin/extras/home-images/movies.jpg" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>!ListItem.IsCollection</visible>

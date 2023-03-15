@@ -40,6 +40,7 @@ supports animated poster only.
 - .5
   * fix missing thumb/icon on extended list view for some plugins
   * disable/enable addon 'CU LrcLyrics' (song text) via script
+  * improved Music OSD settings
 
 
 - .4

@@ -45,13 +45,6 @@
 						<selected>!Skin.HasSetting(show_disc)</selected>
 						<onclick>Skin.ToggleSetting(show_disc)</onclick>
 					</control>
-					<control type="radiobutton" id="50014">
-						<width>800</width>
-						<include>DialogSettingButton</include>
-						<label>$LOCALIZE[31431]</label>
-						<onclick>Skin.ToggleSetting(enable_scrollingtext)</onclick>
-						<selected>!Skin.HasSetting(enable_scrollingtext)</selected>
-					</control>
 					<control type="button" id="5004">
 						<width>800</width>
 						<include>DialogSettingButton</include>
@@ -73,12 +66,15 @@
 						<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 						<visible>Visualisation.HasPresets</visible>
 					</control>
-					<control type="button" id="5007">
+					<control type="radiobutton" id="5007">
 						<width>800</width>
 						<include>DialogSettingButton</include>
-						<label>$LOCALIZE[31082]</label>
-						<label2>[B]$INFO[Skin.String(LyricScript_Path)][/B]</label2>
-						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+						<label>$LOCALIZE[31637]</label>
+						<onclick condition="System.HasAddon(script.cu.lrclyrics)">Skin.ToggleSetting(enable_lyrics)</onclick>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(special://skin/scripts/toggle_addon_activation.py,script.cu.lrclyrics,true)</onclick>
+						<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics)">RunScript(special://skin/scripts/toggle_addon_activation.py,script.cu.lrclyrics,false)</onclick>
+						<selected>!Skin.HasSetting(enable_lyrics)</selected>
 					</control>
 					<control type="radiobutton" id="50013">
 						<width>800</width>
@@ -102,6 +98,13 @@
 						<label>  ∟$LOCALIZE[31083]</label>
 						<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
 						<visible>!String.IsEmpty(Skin.String(LyricScript_Path))</visible>
+					</control>
+					<control type="radiobutton" id="50014">
+						<width>800</width>
+						<include>DialogSettingButton</include>
+						<label>$LOCALIZE[31431]</label>
+						<onclick>Skin.ToggleSetting(enable_scrollingtext)</onclick>
+						<selected>!Skin.HasSetting(enable_scrollingtext)</selected>
 					</control>
 				</control>
 			</control>
