@@ -73,7 +73,8 @@
 						<onclick condition="System.HasAddon(script.cu.lrclyrics)">Skin.ToggleSetting(enable_lyrics)</onclick>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(special://skin/scripts/toggle_addon_activation.py,script.cu.lrclyrics,true)</onclick>
-						<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics)">RunScript(special://skin/scripts/toggle_addon_activation.py,script.cu.lrclyrics,false)</onclick>
+						<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics) + !Window.IsActive(script-cu-lrclyrics-main.xml)">RunScript(special://skin/scripts/toggle_addon_activation.py,script.cu.lrclyrics,false)</onclick>
+						<enable>!Window.IsActive(script-cu-lrclyrics-main.xml)</enable>
 						<selected>!Skin.HasSetting(enable_lyrics)</selected>
 					</control>
 					<control type="radiobutton" id="50013">
