@@ -277,7 +277,7 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true" fallback="DefaultVideo.png">$VAR[IconWallPosterVar]</texture>
-					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DbType,artist) + !String.IsEqual(ListItem.DbType,album) + !String.IsEqual(ListItem.DbType,song) + !Container.Content(games) + !Container.Content(addons) + !$EXP[subCategories]</visible>
+					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DbType,artist) + !String.IsEqual(ListItem.DbType,album) + !String.IsEqual(ListItem.DbType,song) + !Container.Content(games) + !Container.Content(addons) + [!$EXP[subCategories] | Container.Content(artists)]</visible>
 				</control>
 				<control type="image">
 					<left>30</left>
