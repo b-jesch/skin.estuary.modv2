@@ -7675,7 +7675,6 @@
 				<preloaditems>2</preloaditems>
 				<orientation>horizontal</orientation>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<visible>!String.IsEqual(ListItem.DBType,musicvideo)</visible>
 				<visible>!String.IsEmpty(ListItem.DBID)</visible>
 				<onfocus>$PARAM[onfocus]</onfocus>
 				<visible>$PARAM[visible]</visible>

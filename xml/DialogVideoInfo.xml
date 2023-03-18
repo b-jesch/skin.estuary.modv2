@@ -407,7 +407,7 @@
 			<visible>!Control.HasFocus(5002)</visible>
 			<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 			<animation effect="fade" time="100">VisibleChange</animation>
-			<include content="WidgetListCastInfo" condition="String.IsEqual(ListItem.DBTYPE,movie)">
+			<include content="WidgetListCastInfo" condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,musicvideo)">
 				<param name="list_id" value="50"/>
 				<param name="alt_focus" value="9004"/>
 				<param name="onfocus" value="SetFocus(9004)"/>

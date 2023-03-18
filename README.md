@@ -41,7 +41,8 @@ supports animated poster only.
   * fix missing thumb/icon on extended list view for some plugins
   * disable/enable addon 'CU LrcLyrics' (song text) via script
   * improved Music OSD settings
-  * fix missing actor pictures on actors category for musicvideos
+  * fix missing artists pictures on actors category for musicvideos
+  * add artist pictures to video info dialog
 
 
 - .4
