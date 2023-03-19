@@ -285,14 +285,14 @@
 				<top>185</top>
 				<left>50</left>
 				<right>20</right>
-				<label>[B]$VAR[VideoInfoSubLabelVar][/B]</label>
-				<font>fontplot2</font>
+				<label>$VAR[VideoInfoSubLabelVar]</label>
+				<font>font30_title</font>
 				<shadowcolor>text_shadow</shadowcolor>
 				<height>65</height>
 				<align>left</align>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<scroll>true</scroll>
-				<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
 			<control type="label">
 				<left>50</left>
