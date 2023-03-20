@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .6
+  * fix overlapping genre/plotline in Flix View
+  
+
 - .5
   * fix missing thumb/icon on extended list view for some plugins
   * disable/enable addon 'CU LrcLyrics' (song text) via script
