@@ -49,7 +49,7 @@
 							<control type="label">
 								<left>30</left>
 								<top>53</top>
-								<width>680</width>
+								<width>540</width>
 								<height>30</height>
 								<font>font12</font>
 								<aligny>top</aligny>
@@ -70,7 +70,7 @@
 							<control type="label">
 								<right>20</right>
 								<top>53</top>
-								<width>900</width>
+								<width>470</width>
 								<height>75</height>
 								<font>font12</font>
 								<align>right</align>
@@ -123,12 +123,13 @@
 							<control type="label">
 								<left>30</left>
 								<top>53</top>
-								<width>680</width>
+								<width>540</width>
 								<height>100</height>
 								<font>font12</font>
 								<aligny>top</aligny>
 								<label>$VAR[TimersSubLabel]</label>
 								<shadowcolor>text_shadow</shadowcolor>
+								<scroll>auto</scroll>
 							</control>
 							<control type="label">
 								<right>20</right>
@@ -144,7 +145,7 @@
 							<control type="label">
 								<right>20</right>
 								<top>53</top>
-								<width>900</width>
+								<width>470</width>
 								<height>75</height>
 								<font>font12</font>
 								<align>right</align>

@@ -972,7 +972,7 @@
 				<control type="button" id="912">
 					<include>DefaultSettingButton</include>
 					<description>forced view episodes</description>
-					<onclick>Skin.SelectBool(31355, 31348|episodes.0, 535|episodes.50, 31107|episodes.55, 31101|episodes.54, 31102|episodes.500, 20445|episodes.502, 31205|episodes.503)</onclick>
+					<onclick>Skin.SelectBool(31355, 31348|episodes.0, 535|episodes.50, 31107|episodes.55, 31101|episodes.54, 31102|episodes.500, 20445|episodes.502, 31620|episodes.510, 31205|episodes.503)</onclick>
 					<visible>Library.HasContent(tvshows) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31355]</label>
 					<label2>$VAR[SettingsForcedViewsEpisodesVar]</label2>

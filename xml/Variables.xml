@@ -135,6 +135,7 @@
 			<value condition="Skin.HasSetting(episodes.500)">$LOCALIZE[31102]</value>
 			<value condition="Skin.HasSetting(episodes.502)">$LOCALIZE[20445]</value>
 			<value condition="Skin.HasSetting(episodes.503)">$LOCALIZE[31205]</value>
+			<value condition="Skin.HasSetting(episodes.510)">$LOCALIZE[31620]</value>
 			<value>$LOCALIZE[31348]</value>
 	</variable>
 	<variable name="SettingsForcedViewsArtistsVar">
@@ -660,6 +661,9 @@
 		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Art(set.fanart))">$INFO[ListItem.Art(set.fanart)]</value>
 		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Art(setfanart))">$INFO[ListItem.Art(setfanart)]</value>
 		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Art(set.landscape))">$INFO[ListItem.Art(set.landscape)]</value>
+		<value condition="String.IsEqual(listitem.dbtype,episode) + Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="String.IsEqual(listitem.dbtype,episode) + String.IsEmpty(ListItem.Art(thumb)) + Integer.IsLess(ListItem.Playcount,1)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="String.IsEqual(listitem.dbtype,episode) + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(season.landscape))">$INFO[ListItem.Art(season.landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(season.fanart))">$INFO[ListItem.Art(season.fanart)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.landscape))">$INFO[ListItem.Art(tvshow.landscape)]</value>
@@ -814,7 +818,7 @@
 	</variable>
 	<variable name="ContentBackgroundVar">
 		<value condition="Container.Content(movies)">special://skin/extras/home-images/movies.jpg</value>
-		<value condition="Container.Content(tvshows)">special://skin/extras/home-images/tvshows.jpg</value>
+		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">special://skin/extras/home-images/tvshows.jpg</value>
 		<value condition="Container.Content(livetv)">special://skin/extras/home-images/livetv.jpg</value>
 		<value condition="Container.Content(music)">special://skin/extras/home-images/music.jpg</value>
 		<value condition="Container.Content(musicvideos)">special://skin/extras/home-images/musicvideos.jpg</value>

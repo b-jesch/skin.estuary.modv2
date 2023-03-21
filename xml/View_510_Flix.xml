@@ -214,7 +214,7 @@
 				<width>75%</width>
 				<depth>DepthContentPopout</depth>
 				<control type="image">
-					<fadetime>600</fadetime>
+					<animation effect="fade" time="300">VisibleChange</animation>
 					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[ContentBackgroundVar]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>[ListItem.IsCollection + String.IsEmpty(Control.GetLabel(51002))] | [!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(51001))]</visible>
@@ -240,7 +240,7 @@
 				<width>50%</width>
 				<depth>DepthContentPopout</depth>
 				<control type="image">
-					<fadetime>600</fadetime>
+					<animation effect="fade" time="300">VisibleChange</animation>
 					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[ContentBackgroundVar]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>[ListItem.IsCollection + String.IsEmpty(Control.GetLabel(51004))] | [!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(51003))]</visible>
@@ -278,7 +278,7 @@
 				<height>65</height>
 				<align>left</align>
 				<scroll>true</scroll>
-				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets) | Container.Content(seasons) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
 			<control type="label">
 				<top>135</top>
@@ -291,7 +291,7 @@
 				<align>left</align>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<scroll>true</scroll>
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
 			<control type="label">
 				<top>185</top>
@@ -304,7 +304,7 @@
 				<align>left</align>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<scroll>true</scroll>
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
 			<control type="group">
 				<include>OpenClose_Left</include>
@@ -413,12 +413,12 @@
 		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<visible>Control.IsVisible(510) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://)]</visible>
+			<visible>Control.IsVisible(510) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://)]</visible>
 			<include>Visible_Right</include>
 			<left>-8</left>
 			<right>0</right>
 			<top>405</top>
-			<animation effect="slide" end=",-10" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)">Conditional</animation>
+			<animation effect="slide" end=",-10" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)">Conditional</animation>
 			<control type="panel" id="510">
 				<top>80</top>
 				<width>100%</width>

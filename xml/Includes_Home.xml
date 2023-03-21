@@ -2494,7 +2494,7 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
-				<onclick condition="String.IsEqual(Skin.String(widget_action),31590) + [Control.HasFocus(5100) | Control.HasFocus(5200) | Control.HasFocus(5300) | Control.HasFocus(5400)]">Info</onclick>
+				<onclick condition="String.IsEqual(Skin.String(widget_action),31590) + [Control.HasFocus(5100) | Control.HasFocus(5200) | Control.HasFocus(5300) | Control.HasFocus(5400) | Control.HasFocus(16300) | Control.HasFocus(16400)] | Control.HasFocus(16500)">Info</onclick>
 			</control>
 		</definition>
 	</include>
