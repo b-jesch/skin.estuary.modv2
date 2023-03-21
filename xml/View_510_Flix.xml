@@ -214,15 +214,21 @@
 				<width>75%</width>
 				<depth>DepthContentPopout</depth>
 				<control type="image">
-					<fadetime>800</fadetime>
-					<texture fallback="special://skin/extras/home-images/movies.jpg" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</texture>
+					<fadetime>600</fadetime>
+					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[ContentBackgroundVar]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>[ListItem.IsCollection + String.IsEmpty(Control.GetLabel(51002))] | [!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(51001))]</visible>
+				</control>
+				<control type="image" id="51001">
+					<fadetime>600</fadetime>
+					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>!ListItem.IsCollection</visible>
 				</control>
-				<control type="image">
+				<control type="image" id="51002">
 					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
-					<texture fallback="special://skin/extras/home-images/movies.jpg" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[WidgetThumbViewVar]</texture>
+					<fadetime>600</fadetime>
+					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[WidgetThumbViewVar]</texture>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 			</control>
@@ -234,14 +240,20 @@
 				<width>50%</width>
 				<depth>DepthContentPopout</depth>
 				<control type="image">
-					<fadetime>800</fadetime>
-					<texture fallback="special://skin/extras/home-images/movies.jpg" colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</texture>
+					<fadetime>600</fadetime>
+					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[ContentBackgroundVar]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>[ListItem.IsCollection + String.IsEmpty(Control.GetLabel(51004))] | [!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(51003))]</visible>
+				</control>
+				<control type="image" id="51003">
+					<fadetime>600</fadetime>
+					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>!ListItem.IsCollection</visible>
 				</control>
-				<control type="image">
+				<control type="image" id="51004">
 					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
+					<fadetime>600</fadetime>
 					<texture colordiffuse="$VAR[Background_Opacity]" diffuse="overlays/flix_2.png">$VAR[WidgetThumbViewVar]</texture>
 					<visible>ListItem.IsCollection</visible>
 				</control>

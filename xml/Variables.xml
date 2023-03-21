@@ -812,6 +812,17 @@
         <value condition="!String.IsEqual(Window.Property(Type),movie) + !String.IsEmpty(Window.Property(characterart))">$INFO[Window.Property(characterart)]</value>
 		<value condition="!String.IsEqual(Window.Property(Type),movie) + !String.IsEmpty(Window.Property(tvshow.characterart))">$INFO[Window.Property(tvshow.characterart)]</value>
 	</variable>
+	<variable name="ContentBackgroundVar">
+		<value condition="Container.Content(movies)">special://skin/extras/home-images/movies.jpg</value>
+		<value condition="Container.Content(tvshows)">special://skin/extras/home-images/tvshows.jpg</value>
+		<value condition="Container.Content(livetv)">special://skin/extras/home-images/livetv.jpg</value>
+		<value condition="Container.Content(music)">special://skin/extras/home-images/music.jpg</value>
+		<value condition="Container.Content(musicvideos)">special://skin/extras/home-images/musicvideos.jpg</value>
+		<value condition="Container.Content(addons)">special://skin/extras/home-images/addons.jpg</value>
+		<value condition="Container.Content(favorites)">special://skin/extras/home-images/favorites.jpg</value>
+		<value condition="Container.Content(radio)">special://skin/extras/home-images/radio.jpg</value>
+		<value>special://skin/extras/home-images/movies.jpg</value>
+	</variable>
 	<variable name="DialogInfoVideoArtVar">
 		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
         <value condition="[Container.Content(movies) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Art(album.discart))">$INFO[ListItem.Art(album.discart)]</value>
