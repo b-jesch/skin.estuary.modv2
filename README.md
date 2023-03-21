@@ -39,7 +39,8 @@ supports animated poster only.
 ### 4.1.1+nexus ###
 - .6
   * fix overlapping genre/plotline in Flix View
-  * extend option play/info for home widgets to music video widgets 
+  * extend option play/info for home widgets to music video widgets
+  * add dependencies for estuary helper/info to widget selection menu entries (tvshows)
   
 
 - .5

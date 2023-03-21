@@ -51,6 +51,7 @@
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_nextepisodes)</selected>
 						<onclick>Skin.ToggleSetting(hide_nextepisodes)</onclick>
+						<enable>System.AddonIsEnabled(script.embuary.helper)</enable>
 					</control>
 					<control type="radiobutton" id="11115">
 						<label>$LOCALIZE[31297] : $LOCALIZE[626]</label>
@@ -69,6 +70,7 @@
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_nextaired)</selected>
 						<onclick>Skin.ToggleSetting(hide_nextaired)</onclick>
+						<enable>System.AddonIsEnabled(script.embuary.info)</enable>
 					</control>
 					<control type="radiobutton" id="11118">
 						<label>$LOCALIZE[31297] : $LOCALIZE[135]</label>
