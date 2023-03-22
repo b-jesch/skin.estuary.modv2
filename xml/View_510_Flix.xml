@@ -278,7 +278,7 @@
 				<height>65</height>
 				<align>left</align>
 				<scroll>true</scroll>
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets) | Container.Content(seasons) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets) | Container.Content(seasons) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)] + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
 			<control type="label">
 				<top>135</top>

@@ -69,6 +69,8 @@
 	<expression name="subCategories">Container.Content(genres) | Container.Content(tags) | Container.Content(years) | Container.Content(directors) | Container.Content(actors) | Container.Content(artists) | Container.Content(roles) | Container.Content(countries) | Container.Content(studios) | Container.Content(files) | Container.Content(playlists)</expression>
 	<!-- Expression Categories Widget has Focus -->
 	<expression name="widgetHasFocus">Control.HasFocus(4900) | Control.HasFocus(49001) | Control.HasFocus(5900) | Control.HasFocus(59001) | Control.HasFocus(6900) | Control.HasFocus(69001) | Control.HasFocus(7900) | Control.HasFocus(79001) | Control.HasFocus(8900) | Control.HasFocus(89001) | Control.HasFocus(11900) | Control.HasFocus(119001) | Control.HasFocus(12900) | Control.HasFocus(129001) | Control.HasFocus(13900) | Control.HasFocus(139001) | Control.HasFocus(16900) | Control.HasFocus(169001)</expression>
+	<!-- Expression showing Jump to Letter -->
+	<expression name="showJumpToLetter">System.AddonIsEnabled(script.embuary.helper) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -85,8 +87,8 @@
 					<bottom>0</bottom>
 					<width>13</width>
 					<onleft>50</onleft>
-					<onright condition="[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]">SetFocus(8000)</onright>
-					<onright condition="![[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]]">50</onright>
+					<onright condition="$EXP[showJumpToLetter]">SetFocus(8000)</onright>
+					<onright condition="!$EXP[showJumpToLetter]">50</onright>
 					<orientation>vertical</orientation>
 					<texturesliderbackground />
 					<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
@@ -3130,7 +3132,7 @@
 						<onclick>SetFocus(8000)</onclick>
 						<visible>!Control.IsVisible(6160) + !Window.IsVisible(script-globalsearch.xml)</visible>
 						<visible>[Control.HasFocus(531) | Control.HasFocus(5199) | Control.HasFocus(50600) | Control.HasFocus(502600)] + ![Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506) | Control.IsVisible(510)]</visible>
-						<visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</visible>
+						<visible>$EXP[showJumpToLetter]</visible>
 						<animation effect="slide" end="-186,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 					</control>
 					<control type="button">
@@ -3144,7 +3146,7 @@
 						<onclick>SetFocus(8000)</onclick>
 						<visible>!Control.IsVisible(6160)</visible>
 						<visible>[Control.HasFocus(531) | Control.HasFocus(5199)] + [Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506) | Control.IsVisible(510)]</visible>
-						<visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</visible>
+						<visible>$EXP[showJumpToLetter]</visible>
 						<animation effect="slide" end="-184,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 					</control>
 					<control type="button" id="6160">
@@ -3185,8 +3187,7 @@
 						<texturenofocus />
 						<visible>Control.HasFocus(531) | Control.HasFocus(5199) | Control.HasFocus(50600) | Control.HasFocus(502600)</visible>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</visible>
-						<visible>!Window.IsVisible(script-globalsearch.xml)</visible>
+						<visible>$EXP[showJumpToLetter] + !Window.IsVisible(script-globalsearch.xml)</visible>
 						<animation effect="slide" end="-186,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 					</control>
 				</control>

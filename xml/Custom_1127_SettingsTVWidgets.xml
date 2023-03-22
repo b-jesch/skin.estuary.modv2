@@ -47,11 +47,11 @@
 						<onclick>Skin.ToggleSetting(hide_tvcategories)</onclick>
 					</control>
 					<control type="radiobutton" id="11114">
-						<visible>System.AddonIsEnabled(script.service.gto)</visible>
 						<label>$LOCALIZE[31297] : $LOCALIZE[31551]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_gtowidget)</selected>
 						<onclick>Skin.ToggleSetting(hide_gtowidget)</onclick>
+						<enable>System.AddonIsEnabled(script.service.gto)</enable>
 					</control>
 					<control type="radiobutton" id="11115">
 						<label>$LOCALIZE[31297] : $LOCALIZE[31016]</label>
