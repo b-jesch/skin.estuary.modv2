@@ -41,7 +41,8 @@ supports animated poster only.
   * fix overlapping genre/plotline in Flix View
   * extend option play/info for home widgets to music video widgets
   * add dependencies for estuary helper/info to widget selection menu entries (tvshows)
-  * introducing Arial Unicode MS as a new font style supporting more languages
+  * smaller improvements and updates on several files
+  * introducing 'Arial Unicode MS' as a new font style supporting more languages (mainly asian region)
   
 
 - .5
