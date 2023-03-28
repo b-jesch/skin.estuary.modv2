@@ -24,7 +24,7 @@ if __name__ == '__main__':
             '''
             unit = 0
             fs = xbmcvfs.File(sys.argv[2]).size()
-            if fs < 0: fs = 0
+            fs = 0 if fs < 0 else fs
 
             while fs > 1024 and unit < 5:
                 fs /= 1024
