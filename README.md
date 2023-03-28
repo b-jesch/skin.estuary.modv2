@@ -37,6 +37,9 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .7
+  * calculate (and display) size of a file object by helper script
+  
 - .6
   * fix overlapping genre/plotline in Flix View
   * extend option play/info for home widgets to music video widgets
