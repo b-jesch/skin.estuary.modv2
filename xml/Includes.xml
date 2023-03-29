@@ -4802,11 +4802,11 @@
 						<texture>flags/cadre_small.png</texture>
 					</control>
 					<control type="image">
-						<left>11</left>
-						<top>0</top>
-						<width>40</width>
-						<height>40</height>
-						<aspectratio>keep</aspectratio>
+						<left>6</left>
+						<top>5</top>
+						<width>50</width>
+						<height>30</height>
+						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="$VAR[SkinColorVar]">flags/nas_2.png</texture>
 					</control>
 				</control>
