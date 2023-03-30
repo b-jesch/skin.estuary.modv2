@@ -10,7 +10,7 @@
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
 				<description>Guide Timeline</description>
-				<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
+				<visible>Control.IsVisible(50)</visible>
 				<include>OpenClose_Right</include>
 				<include>Visible_Right</include>
 				<control type="group">
@@ -31,14 +31,6 @@
 						<bottom>343</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 						<visible>!Skin.HasSetting(ShowPVRGroups) + Control.IsVisible(50)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>44</top>
-						<width>100%</width>
-						<bottom>358</bottom>
-						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
-						<visible>!Skin.HasSetting(ShowPVRGroups) + Control.IsVisible(51)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -72,10 +64,8 @@
 						<right>40</right>
 						<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
 						<onright>noop</onright>
-						<onup condition="Control.IsVisible(50)">50</onup>
-						<onup condition="Control.IsVisible(51)">51</onup>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
-						<ondown condition="Control.IsVisible(51)">51</ondown>
+						<onup>50</onup>
+						<ondown>50</ondown>
 						<orientation>horizontal</orientation>
 						<focusposition>3</focusposition>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -146,7 +136,6 @@
 						<viewtype label="19297">list</viewtype>
 						<progresstexture border="0,60,18,14" colordiffuse="$VAR[SkinColorVar]">windows/pvr/epg_progress.png</progresstexture>
 						<animation effect="slide" end="0,54" time="0" condition="!Skin.HasSetting(ShowPVRGroups) + Control.IsVisible(50)">Conditional</animation>
-						<animation effect="slide" end="0,44" time="0" condition="!Skin.HasSetting(ShowPVRGroups) + Control.IsVisible(51)">Conditional</animation>
 						<rulerlayout height="45" width="390">
 							<control type="label">
 								<top>-5</top>
@@ -350,7 +339,6 @@
 						<orientation>vertical</orientation>
 						<texturesliderbackground colordiffuse="22FFFFFF">colors/white.png</texturesliderbackground>
 						<animation effect="fade" start="100" end="40" time="0" condition="!system.getbool(input.enablemouse)">Conditional</animation>
-						<visible>Control.IsVisible(50)</visible>
 						<animation effect="slide" end="0,54" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
 					</control>
 				</control>
@@ -365,9 +353,9 @@
 					<include content="MediaFlagsInfoDialogRight">
 						<param name="align" value="right" />
 						<param name="pvr" value="true" />
-						<param name="visible" value="!Window.IsVisible(DialogPVRGuideControls.XML)"/>
+						<param name="visible" value="!Window.IsVisible(DialogPVRGuideControls.xml)"/>
 					</include>
-					<animation effect="fade" start="0" end="100" time="200" condition="!Window.IsVisible(DialogPVRGuideControls.XML)">Conditional</animation>
+					<animation effect="fade" start="0" end="100" time="200" condition="!Window.IsVisible(DialogPVRGuideControls.xml)">Conditional</animation>
 				</control>
 			</control>
 			<include>PVRChannelNumberInput</include>
