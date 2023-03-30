@@ -170,7 +170,7 @@
 							<control type="image">
 								<left>7</left>
 								<top>3</top>
-								<width>74</width>
+								<width>80</width>
 								<height>56</height>
 								<texture fallback="DefaultTVShows2.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -178,24 +178,24 @@
 							</control>
 							<control type="label">
 								<left>7</left>
-								<top>3</top>
-								<width>74</width>
+								<top>13</top>
+								<width>80</width>
 								<height>56</height>
 								<align>center</align>
-								<aligny>center</aligny>
-								<font>font32_title</font>
+								<aligny>bottom</aligny>
+								<font>font28_title</font>
 								<label>$INFO[ListItem.ChannelNumberLabel]</label>
 								<shadowcolor>text_shadow</shadowcolor>
 								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label" id="1">
-								<left>78</left>
-								<top>0</top>
-								<width>316</width>
+								<left>84</left>
+								<top>10</top>
+								<width>308</width>
 								<height>62</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<aligny>center</aligny>
+								<aligny>bottom</aligny>
 								<textoffsetx>10</textoffsetx>
 							</control>
 						</channellayout>
@@ -210,7 +210,7 @@
 							<control type="image">
 								<left>7</left>
 								<top>3</top>
-								<width>74</width>
+								<width>80</width>
 								<height>56</height>
 								<texture fallback="DefaultTVShows2.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -218,24 +218,24 @@
 							</control>
 							<control type="label">
 								<left>7</left>
-								<top>3</top>
-								<width>74</width>
+								<top>13</top>
+								<width>80</width>
 								<height>56</height>
 								<align>center</align>
-								<aligny>center</aligny>
-								<font>font32_title</font>
+								<aligny>bottom</aligny>
+								<font>font28_title</font>
 								<label>$INFO[ListItem.ChannelNumberLabel]</label>
 								<shadowcolor>text_shadow</shadowcolor>
 								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label" id="1">
-								<left>78</left>
-								<top>0</top>
-								<width>316</width>
+								<left>84</left>
+								<top>10</top>
+								<width>308</width>
 								<height>60</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<aligny>center</aligny>
+								<aligny>bottom</aligny>
 								<textoffsetx>10</textoffsetx>
 								<scroll>true</scroll>
 							</control>
@@ -339,191 +339,6 @@
 								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>
 						</focusedlayout>
-					</control>
-					<control type="epggrid" id="51">
-						<left>0</left>
-						<top>0</top>
-						<right>15</right>
-						<bottom>405</bottom>
-						<orientation>horizontal</orientation>
-						<pagecontrol>60</pagecontrol>
-						<scrolltime tween="quadratic" easing="out">300</scrolltime>
-						<timeblocks>30</timeblocks>
-						<rulerunit>3</rulerunit>
-						<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
-						<onright>60</onright>
-						<onup condition="Skin.HasSetting(ShowPVRGroups)">51</onup>
-						<onup condition="!Skin.HasSetting(ShowPVRGroups)">11</onup>
-						<ondown condition="Skin.HasSetting(ShowPVRGroups)">51</ondown>
-						<ondown condition="!Skin.HasSetting(ShowPVRGroups)">11</ondown>
-						<onback condition="!Skin.HasSetting(ShowPVRGroups)">11</onback>
-						<viewtype label="19298">list</viewtype>
-						<progresstexture border="5,10,5,10" colordiffuse="$VAR[SkinColorVar]">windows/pvr/epg_progress_horizontal.png</progresstexture>
-						<animation effect="slide" end="0,44" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
-						<rulerdatelayout height="45" width="1920">
-							<control type="label">
-								<top>0</top>
-								<left>10</left>
-								<right>0</right>
-								<height>45</height>
-								<font>font13</font>
-								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[SkinColorVar]</textcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-							</control>
-						</rulerdatelayout>
-						<rulerlayout height="70" width="100">
-							<control type="label">
-								<top>-25</top>
-								<width>100</width>
-								<height>70</height>
-								<font>font13</font>
-								<label>$INFO[ListItem.Label]</label>
-								<textoffsetx>10</textoffsetx>
-								<textcolor>$VAR[SkinColorVar]</textcolor>
-							</control>
-						</rulerlayout>
-						<channellayout height="58" width="363">
-							<control type="image" id="121212">
-								<left>2</left>
-								<top>3</top>
-								<width>85</width>
-								<height>50</height>
-								<texture fallback="fallback.png">$INFO[ListItem.Icon]</texture>
-								<aspectratio align="center" aligny="center">keep</aspectratio>
-							</control>
-							<control type="label">
-								<left>2</left>
-								<top>-2</top>
-								<width>85</width>
-								<height>60</height>
-								<font>font24_title</font>
-								<label>$INFO[ListItem.ChannelNumber]</label>
-								<align>center</align>
-								<aligny>center</aligny>
-								<visible>String.IsEqual(Control.GetLabel(121212),fallback.png)</visible>
-							</control>
-							<control type="label" id="1">
-								<left>90</left>
-								<top>-2</top>
-								<width>271</width>
-								<height>60</height>
-								<font>font13</font>
-								<label>$INFO[ListItem.ChannelName]</label>
-								<aligny>center</aligny>
-								<textoffsetx>10</textoffsetx>
-							</control>
-						</channellayout>
-						<focusedchannellayout height="58" width="363">
-							<control type="image" id="121213">
-								<left>2</left>
-								<top>3</top>
-								<width>85</width>
-								<height>50</height>
-								<texture fallback="fallback.png">$INFO[ListItem.Icon]</texture>
-								<aspectratio align="center" aligny="center">keep</aspectratio>
-							</control>
-							<control type="label">
-								<left>2</left>
-								<top>-2</top>
-								<width>85</width>
-								<height>60</height>
-								<font>font24_title</font>
-								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>$VAR[SkinColorVar]</textcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-								<visible>String.IsEqual(Control.GetLabel(121213),fallback.png)</visible>
-							</control>
-							<control type="label" id="1">
-								<left>90</left>
-								<top>-2</top>
-								<width>271</width>
-								<height>60</height>
-								<font>font13</font>
-								<label>$INFO[ListItem.ChannelName]</label>
-								<scroll>true</scroll>
-								<textcolor>$VAR[SkinColorVar]</textcolor>
-								<aligny>center</aligny>
-								<textoffsetx>10</textoffsetx>
-							</control>
-						</focusedchannellayout>
-						<itemlayout height="58" width="60">
-							<control type="image" id="2">
-								<width>58</width>
-								<height>58</height>
-								<texture border="3" fallback="windows/pvr/epg-genres/0.png">$VAR[PVRGenresVar]</texture>
-							</control>
-							<control type="label" id="1">
-								<left>7</left>
-								<top>0</top>
-								<width>50</width>
-								<height>36</height>
-								<aligny>center</aligny>
-								<font>font12</font>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-							<control type="image">
-								<left>6</left>
-								<top>33</top>
-								<width>24</width>
-								<height>24</height>
-								<texture>$VAR[PVRStatusImageVar]</texture>
-							</control>
-						</itemlayout>
-						<focusedlayout height="58" width="60">
-							<control type="image" id="2">
-								<top>2</top>
-								<left>2</left>
-								<width>54</width>
-								<height>54</height>
-								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
-								<visible>Control.HasFocus(51)</visible>
-							</control>
-							<control type="image" id="2">
-								<width>58</width>
-								<height>58</height>
-								<texture border="8" colordiffuse="$VAR[SkinColorVar]">buttons/thumbnail_focused.png</texture>
-							</control>
-							<control type="image" id="2">
-								<width>58</width>
-								<height>58</height>
-								<top>0</top>
-								<texture border="3" fallback="windows/pvr/epg-genres/0.png">$VAR[PVRGenresVar]</texture>
-								<visible>!Control.HasFocus(51)</visible>
-							</control>
-							<control type="label" id="1">
-								<left>7</left>
-								<top>0</top>
-								<width>50</width>
-								<height>36</height>
-								<aligny>center</aligny>
-								<font>font12</font>
-								<label>$INFO[ListItem.Label]</label>
-								<scroll>true</scroll>
-							</control>
-							<control type="image">
-								<left>6</left>
-								<top>33</top>
-								<width>24</width>
-								<height>24</height>
-								<texture>$VAR[PVRStatusImageVar]</texture>
-							</control>
-						</focusedlayout>
-					</control>
-					<control type="scrollbar" id="60">
-						<right>0</right>
-						<top>103</top>
-						<width>12</width>
-						<bottom>403</bottom>
-						<onleft>50</onleft>
-						<onright>50</onright>
-						<orientation>vertical</orientation>
-						<texturesliderbackground colordiffuse="22FFFFFF">colors/white.png</texturesliderbackground>
-						<animation effect="fade" start="100" end="40" time="0" condition="!system.getbool(input.enablemouse)">Conditional</animation>
-						<visible>Control.IsVisible(51)</visible>
-						<animation effect="slide" end="0,44" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
 					</control>
 					<control type="scrollbar" id="60">
 						<right>0</right>

@@ -39,6 +39,8 @@ supports animated poster only.
 ### 4.1.1+nexus ###
 - .7
   * calculate (and display) size of a file object by helper script
+  * remove horizontal EPG grid layout
+  * smaller changes
   
 - .6
   * fix overlapping genre/plotline in Flix View

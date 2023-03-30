@@ -141,7 +141,7 @@
  					<label>$LOCALIZE[31023]</label>
  					<label2>[B]$INFO[Container.Viewmode][/B]</label2>
  					<onclick>Container.NextViewMode</onclick>
- 					<visible>Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml)</visible>
+ 					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
  				</control>
 				<control type="button" id="6054">
 					<include>MediaMenuItemsCommon</include>
