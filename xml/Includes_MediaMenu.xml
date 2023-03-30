@@ -232,6 +232,18 @@
 					<label>$LOCALIZE[19077]</label>
 					<visible>Window.IsActive(MyPVRTimers.xml)</visible>
 				</control>
+				<control type="label" id="203">
+					<include>MediaMenuLabelCommon</include>
+					<label>$LOCALIZE[31020]</label>
+					<visible>Window.IsActive(MyPVRGuide.xml)</visible>
+				</control>
+				<control type="button" id="6059">
+					<include>MediaMenuItemsCommon</include>
+					<label>$LOCALIZE[31645]</label>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>ActivateWindow(pvrguidecontrols)</onclick>
+					<visible>Window.IsActive(MyPVRGuide.xml)</visible>
+				</control>
 				<control type="group" id="141000">
 					<control type="grouplist" id="14100">
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
