@@ -350,6 +350,7 @@
             <height>100</height>
             <texture>dialogs/logo.png</texture>
             <animation effect="slide" end="0,-70" time="0" condition="Window.Isvisible(AddonBrowser.xml)">Conditional</animation>
+			<visible>!Player.HasMedia</visible>
         </control>
 		<control type="button" id="3">
 			<description>Viewtype Toggle</description>
