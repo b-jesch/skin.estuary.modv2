@@ -232,13 +232,15 @@
 						<itemlayout height="60" width="60">
 							<control type="image" id="2">
 								<top>1</top>
-								<width>58</width>
+								<width>60</width>
 								<height>60</height>
 								<texture border="3" fallback="windows/pvr/epg-genres/0.png">$VAR[PVRGenresVar]</texture>
 							</control>
 							<control type="image">
+								<left>1</left>
+								<top>1</top>
 								<width>60</width>
-								<height>61</height>
+								<height>60</height>
 								<texture>overlays/overlay-bg.png</texture>
 								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>
@@ -273,28 +275,30 @@
 						<focusedlayout height="60" width="60">
 							<control type="image" id="2">
 								<top>3</top>
-								<left>2</left>
+								<left>3</left>
 								<width>54</width>
-								<height>56</height>
+								<height>54</height>
 								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
 							<control type="image" id="2">
-								<top>1</top>
-								<width>58</width>
-								<height>60</height>
+								<top>3</top>
+								<left>2</left>
+								<width>56</width>
+								<height>56</height>
 								<texture border="8" colordiffuse="$VAR[SkinColorVar]">buttons/thumbnail_focused.png</texture>
 							</control>
 							<control type="image" id="2">
 								<top>1</top>
-								<width>58</width>
+								<width>60</width>
 								<height>60</height>
 								<texture border="3" fallback="windows/pvr/epg-genres/0.png">$VAR[PVRGenresVar]</texture>
 								<visible>!Control.HasFocus(50)</visible>
 							</control>
 							<control type="image">
+								<left>3</left>
 								<width>60</width>
-								<height>61</height>
+								<height>59</height>
 								<texture>overlays/overlay-bg.png</texture>
 								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>
