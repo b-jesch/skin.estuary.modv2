@@ -38,7 +38,7 @@ supports animated poster only.
 
 ### 4.1.1+nexus ###
 - .8
-  * quick fix if the helper script (cause kodi to crash when filepath is a plugin call)
+  * quick fix of helper script (cause kodi to crash when file path is a plugin call)
 
 
 - .7
