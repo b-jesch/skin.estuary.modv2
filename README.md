@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .8
+  * quick fix if the helper script (cause kodi to crash when filepath is a plugin call)
+
+
 - .7
   * calculate/display size of a file object by helper script
   * remove horizontal EPG grid layout

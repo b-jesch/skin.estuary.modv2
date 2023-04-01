@@ -7,7 +7,7 @@
 	<onload condition="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.Rating(tomatometerallaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallaudience)] * 10)"',prop=rotten)</onload>
 	<onload condition="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.Rating(tomatometeravgaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometeravgaudience)] * 10)"',prop=rotten)</onload>
 	<onload condition="!String.IsEmpty(ListItem.Rating(metacritic))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(metacritic)] * 10)"',prop=metacritic)</onload>
-	<onload condition="!String.IsEmpty(ListItem.Size)">RunScript(special://skin/scripts/helpers.py,getFileSize,$ESCINFO[ListItem.FileNameAndPath])</onload>
+	<onload condition="!String.StartsWith(ListItem.FileNameAndPath,'plugin://') + [String.IsEmpty(ListItem.Size) | String.StartsWith(ListItem.Size,0.00)]">RunScript(special://skin/scripts/helpers.py,getFileSize,$ESCINFO[ListItem.FileNameAndPath])</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<onunload>ClearProperty(rotten,home)</onunload>
 	<onunload>ClearProperty(metacritic,home)</onunload>
@@ -707,7 +707,14 @@
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="170" />
 					<param name="label" value="$LOCALIZE[21802] : [COLOR white]$INFO[Window(10000).Property(size)][/COLOR]" />
-					<param name="visible" value="!String.StartsWith(Window(10000).Property(size),0.00)" />
+					<param name="visible" value="!String.StartsWith(ListItem.FileNameAndPath,'plugin://') + ![String.StartsWith(Window(10000).Property(size),0.00) | String.IsEmpty(Window(10000).Property(size))]" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="font12" />
+				</include>
+				<include content="InfoDialogMetadata">
+					<param name="control_id" value="170" />
+					<param name="label" value="$LOCALIZE[21802] : [COLOR white]$INFO[ListItem.Size][/COLOR]" />
+					<param name="visible" value="![String.StartsWith(ListItem.Size,0.00) | String.IsEmpty(ListItem.Size)]" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="font12" />
 				</include>
