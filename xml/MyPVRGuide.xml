@@ -296,9 +296,9 @@
 								<visible>!Control.HasFocus(50)</visible>
 							</control>
 							<control type="image">
-								<left>3</left>
+								<left>5</left>
 								<width>60</width>
-								<height>59</height>
+								<height>57</height>
 								<texture>overlays/overlay-bg.png</texture>
 								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
 							</control>

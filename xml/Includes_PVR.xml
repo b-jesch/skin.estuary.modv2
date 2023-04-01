@@ -149,10 +149,10 @@
 							<texture flipy="true">overlays/overlay-bg.png</texture>
 						</control>
 					<control type="image">
-						<left>3</left>
-						<top>3</top>
-						<width>66</width>
-						<height>40</height>
+						<left>10</left>
+						<top>10</top>
+						<width>50</width>
+						<height>30</height>
 						<texture colordiffuse="DDFFFFFF" fallback="defaultnas.png">flags/nas_2.png</texture>
 					</control>
 				</control>

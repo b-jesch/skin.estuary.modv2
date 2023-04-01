@@ -40,7 +40,8 @@ supports animated poster only.
 - .7
   * calculate/display size of a file object by helper script
   * remove horizontal EPG grid layout
-  * Add EPG navigation entry to side blade (PVR EPG only)
+  * add EPG navigation entry to side blade (PVR EPG only)
+  * add progress indicator to recording widget (PVR) 
   * smaller modifications on several views
   
 - .6
