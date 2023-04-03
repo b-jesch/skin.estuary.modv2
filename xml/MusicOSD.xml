@@ -169,6 +169,13 @@
 					<onclick>Info</onclick>
 					<visible>MusicPlayer.Content(LiveTV)</visible>
 				</control>
+				<control type="radiobutton" id="608">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/dim.png"/>
+					</include>
+					<onclick>Skin.ToggleSetting(dim_screen)</onclick>
+					<onclick>Dialog.Close(musicosd)</onclick>
+				</control>
 				<control type="radiobutton" id="620">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/rating.png"/>

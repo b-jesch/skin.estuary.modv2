@@ -1706,6 +1706,8 @@
 		<value condition="Control.HasFocus(606) + PVR.IsRecordingPlayingChannel">$LOCALIZE[19059]</value>
 		<value condition="Control.HasFocus(606)">$LOCALIZE[264]</value>
 		<value condition="Control.HasFocus(6051)">$LOCALIZE[209]</value>
+		<value condition="Control.HasFocus(608) + Skin.HasSetting(dim_screen)">$LOCALIZE[31646]</value>
+		<value condition="Control.HasFocus(608) + !Skin.HasSetting(dim_screen)">$LOCALIZE[31647]</value>
 		<value condition="Control.HasFocus(620)">$LOCALIZE[31033]$INFO[MusicPlayer.UserRating, : ]</value>
 		<value condition="Control.HasFocus(621)">$LOCALIZE[559]</value>
 		<value condition="Control.HasFocus(704)">$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</value>

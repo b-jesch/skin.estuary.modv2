@@ -39,6 +39,8 @@ supports animated poster only.
 ### 4.1.1+nexus ###
 - .9
   * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
+  * fix addon activation of lrclyrics in Music OSD settings
+  * add a "Black Screen" button to music OSD: show a black screen while playing music
 
 
 - .8

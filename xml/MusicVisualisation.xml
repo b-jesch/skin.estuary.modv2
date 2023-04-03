@@ -89,5 +89,11 @@
                 <visible>Pvr.IsPlayingRadio</visible>
             </control>
         </control>
+		<control type="image">
+            <include>FullScreenDimensions</include>
+			<animation effect="fade" time="300">VisibleChange</animation>
+            <texture>colors/black.png</texture>
+			<visible>Skin.HasSetting(dim_screen)</visible>
+		</control>
 	</controls>
 </window>
