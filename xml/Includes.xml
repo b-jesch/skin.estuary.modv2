@@ -71,6 +71,8 @@
 	<expression name="widgetHasFocus">Control.HasFocus(4900) | Control.HasFocus(49001) | Control.HasFocus(5900) | Control.HasFocus(59001) | Control.HasFocus(6900) | Control.HasFocus(69001) | Control.HasFocus(7900) | Control.HasFocus(79001) | Control.HasFocus(8900) | Control.HasFocus(89001) | Control.HasFocus(11900) | Control.HasFocus(119001) | Control.HasFocus(12900) | Control.HasFocus(129001) | Control.HasFocus(13900) | Control.HasFocus(139001) | Control.HasFocus(16900) | Control.HasFocus(169001)</expression>
 	<!-- Expression showing Jump to Letter -->
 	<expression name="isJump2Letter">System.AddonIsEnabled(script.embuary.helper) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[20376])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</expression>
+	<!-- Expression showing Status icon on EPG timelime -->
+	<expression name="hasPvrStatus">ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimerSchedule | ListItem.HasTimer | ListItem.HasArchive | ListItem.IsPlaying | ListItem.IsLive | ListItem.IsPremiere | ListItem.IsNew | ListItem.IsFinale</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>

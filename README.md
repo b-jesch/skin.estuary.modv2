@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .9
+  * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
+
+
 - .8
   * quick fix of helper script (cause kodi to crash when file path is a plugin call)
 

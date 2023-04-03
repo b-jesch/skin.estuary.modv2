@@ -242,34 +242,34 @@
 								<width>60</width>
 								<height>60</height>
 								<texture>overlays/overlay-bg.png</texture>
-								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
+								<visible>$EXP[hasPvrStatus]</visible>
 							</control>
 							<control type="image">
-								<left>5</left>
+								<left>7</left>
 								<top>15</top>
 								<width>36</width>
 								<height>36</height>
 								<texture>$VAR[PVRStatusImageVar]</texture>
 							</control>
 							<control type="label" id="1">
-								<left>5</left>
+								<left>7</left>
 								<top>5</top>
-								<width>48</width>
+								<width>44</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>![ListItem.HasTimer | ListItem.HasReminder]</visible>
+								<visible>!$EXP[hasPvrStatus]</visible>
 							</control>
 							<control type="label" id="1">
-								<left>43</left>
+								<left>45</left>
 								<top>5</top>
 								<width>5</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
+								<visible>$EXP[hasPvrStatus]</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout height="60" width="60">
@@ -300,28 +300,28 @@
 								<width>60</width>
 								<height>57</height>
 								<texture>overlays/overlay-bg.png</texture>
-								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
+								<visible>$EXP[hasPvrStatus]</visible>
 							</control>
 							<control type="image">
-								<left>5</left>
+								<left>7</left>
 								<top>15</top>
 								<width>36</width>
 								<height>36</height>
-								<texture fallback="fallback.png">$VAR[PVRStatusImageVar]</texture>
+								<texture>$VAR[PVRStatusImageVar]</texture>
 							</control>
 							<control type="label" id="1">
-								<left>5</left>
+								<left>7</left>
 								<top>5</top>
-								<width>48</width>
+								<width>46</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
 								<scroll>true</scroll>
-								<visible>![ListItem.HasTimer | ListItem.HasReminder]</visible>
+								<visible>!$EXP[hasPvrStatus]</visible>
 							</control>
 							<control type="label" id="1">
-								<left>43</left>
+								<left>45</left>
 								<top>5</top>
 								<width>5</width>
 								<height>50</height>
@@ -329,7 +329,7 @@
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
 								<scroll>true</scroll>
-								<visible>ListItem.HasTimer | ListItem.HasReminder</visible>
+								<visible>$EXP[hasPvrStatus]</visible>
 							</control>
 						</focusedlayout>
 					</control>
