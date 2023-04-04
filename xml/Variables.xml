@@ -278,7 +278,7 @@
 		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 	</variable>
 	<variable name="RadioPlayerCover">
-		<value/>
+		<value condition="!String.IsEmpty(Player.Icon)">$INFO[Player.Icon]</value>
     </variable>
 	<variable name="DialogMusicInfoThumbBackVar">
 		<value condition="!String.IsEmpty(ListItem.Art(back))">$LOCALIZE[31369]</value>

@@ -120,6 +120,7 @@
 				<control type="image">
 					<texture colordiffuse="dialog_tint">colors/white.png</texture>
 					<fadetime>200</fadetime>
+					<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
 				</control>
 				<control type="image">
 					<left>5</left>
@@ -1248,6 +1249,7 @@
 				<height>262</height>
 				<control type="image">
 					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+					<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
 				</control>
 				<control type="videowindow">
 					<left>5</left>
@@ -1384,6 +1386,7 @@
 				<height>245</height>
 				<control type="image">
 					<texture colordiffuse="dialog_tint">colors/white.png</texture>
+					<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
 				</control>
 				<control type="image">
 					<depth>DepthContentPopout</depth>

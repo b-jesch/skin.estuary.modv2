@@ -4142,20 +4142,8 @@
 						<width>440</width>
 						<height>440</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture background="true">$VAR[RadioPlayerCover]</texture>
+						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
 						<bordersize>20</bordersize>
-						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-					</control>
-					<control type="image">
-						<depth>DepthOSD+</depth>
-						<left>14</left>
-						<bottom>9</bottom>
-						<width>432</width>
-						<height>432</height>
-						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture background="true" fallback="DefaultAudio.png">$INFO[Player.Art(thumb)]</texture>
-						<bordersize>20</bordersize>
-						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb))</visible>
 						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
 					</control>
 					<include content="BusyPvrArtworkSpinner">
