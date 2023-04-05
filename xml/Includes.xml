@@ -4125,10 +4125,10 @@
 					<control type="image">
 						<description>Cover Live TV, RDS Radio, Stream (Addon)</description>
 						<depth>DepthOSD+</depth>
-						<left>10</left>
-						<bottom>5</bottom>
-						<width>440</width>
-						<height>440</height>
+						<left>8</left>
+						<bottom>3</bottom>
+						<width>444</width>
+						<height>444</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 						<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>

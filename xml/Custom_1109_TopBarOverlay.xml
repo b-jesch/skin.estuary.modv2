@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1109">
 	<visible>[Window.IsActive(fullscreenvideo) + !Player.HasGame] | Window.IsActive(visualisation)</visible>
-	<visible>Window.IsActive(seekbar) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide) | Window.IsActive(Custom_1135_PVROverlay.xml)</visible>
+	<visible>Window.IsActive(seekbar) | Window.IsActive(1135) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide)</visible>
 	<depth>DepthOSD</depth>
 	<include>Animation_TopSlide</include>
 	<zorder>0</zorder>
