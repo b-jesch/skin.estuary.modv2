@@ -24,7 +24,7 @@
 			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
 			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
 			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
-			<visible>!Window.IsVisible(sliderdialog)</visible>
+			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(1135)</visible>
 			<control type="label">
 				<right>30</right>
 				<bottom>24</bottom>

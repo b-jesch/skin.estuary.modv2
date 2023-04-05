@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1135">
-	<visible>Player.ShowInfo + VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo)</visible>
+	<visible>Player.ShowInfo + VideoPlayer.Content(LiveTV) + Window.IsVisible(VideoFullScreen.xml)</visible>
 	<depth>DepthOSD</depth>
 	<controls>
 		<control type="group">
-			<include>Animation_BottomSlide</include>
+			<include>Animation_BottomFadeInOut</include>
 			<bottom>-140</bottom>
 			<height>380</height>
 			<control type="image">

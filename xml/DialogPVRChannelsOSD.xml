@@ -4,10 +4,9 @@
 	<controls>
 		<include>PVRChannelNumberInput</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<include>Animation_BottomFadeIn</include>
 			<control type="group">
 				<depth>DepthOSD</depth>
-				<include>Animation_BottomSlide</include>
 				<include content="ContentPanel" condition="Skin.HasSetting(use_fullOsdList)">
 					<param name="width" value="945" />
 					<param name="height" value="1120" />
