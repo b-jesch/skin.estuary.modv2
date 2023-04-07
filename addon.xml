@@ -18,6 +18,7 @@
 		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
 	</extension>
 	<extension point="xbmc.service" library="scripts/services.py" visible="!String.IsEmpty(Window(home).Property(CurrentSkin))" />
+	<extension point="xbmc.python.script" library="scripts/helpers.py" />
 	<extension point="kodi.context.item">
       	<menu id="kodi.core.main">
       		<item library="scripts/context_menu_jumptoletter.py">

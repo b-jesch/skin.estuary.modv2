@@ -7,7 +7,7 @@
 	<onload condition="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.Rating(tomatometerallaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallaudience)] * 10)"',prop=rotten)</onload>
 	<onload condition="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.Rating(tomatometeravgaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometeravgaudience)] * 10)"',prop=rotten)</onload>
 	<onload condition="!String.IsEmpty(ListItem.Rating(metacritic))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(metacritic)] * 10)"',prop=metacritic)</onload>
-	<onload condition="!String.StartsWith(ListItem.FileNameAndPath,'plugin://') + [String.IsEmpty(ListItem.Size) | String.StartsWith(ListItem.Size,0.00)]">RunScript(special://skin/scripts/helpers.py,getFileSize,$ESCINFO[ListItem.FileNameAndPath])</onload>
+	<onload condition="!String.StartsWith(ListItem.FileNameAndPath,'plugin://') + [String.IsEmpty(ListItem.Size) | String.StartsWith(ListItem.Size,0.00)]">RunScript(skin.estuary.modv2,getFileSize,$ESCINFO[ListItem.FileNameAndPath])</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<onunload>ClearProperty(rotten,home)</onunload>
 	<onunload>ClearProperty(metacritic,home)</onunload>
