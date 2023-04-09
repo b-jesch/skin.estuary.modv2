@@ -37,6 +37,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .10
+  * fix "switch to last channel" in video OSD
+  * some icons added
+
+ 
 - .9
   * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
   * fix addon activation of lrclyrics in Music OSD settings
