@@ -2714,7 +2714,7 @@
 					<top>0</top>
 					<width>110%</width>
 					<height>180</height>
-					<texture colordiffuse="$VAR[Bars_Opacity]">frame/InfoBar.png</texture>
+					<texture colordiffuse="$VAR[Bars_Opacity]">frame/osdfade.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 					<visible>$PARAM[visible]</visible>
 				</control>
@@ -3101,7 +3101,7 @@
 					<bottom>0</bottom>
 					<width>110%</width>
 					<height>135</height>
-					<texture flipy="true" colordiffuse="$VAR[Bars_Opacity]">frame/InfoBar.png</texture>
+					<texture flipy="true" colordiffuse="$VAR[Bars_Opacity]">frame/osdfade.png</texture>
 				</control>
 				<control type="group">
 					<visible>$PARAM[info_visible]</visible>

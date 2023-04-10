@@ -40,6 +40,7 @@ supports animated poster only.
 - .10
   * fix "switch to last channel" in video OSD
   * some icons added
+  * enable flix view for tvshow seasons
 
  
 - .9

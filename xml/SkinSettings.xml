@@ -964,7 +964,7 @@
 				<control type="button" id="911">
 					<include>DefaultSettingButton</include>
 					<description>forced view seasons</description>
-					<onclick>Skin.SelectBool(31354, 31348|seasons.0, 535|seasons.50, 31107|seasons.55, 20021|seasons.51, 31100|seasons.53, 31101|seasons.54, 31216|seasons.505, 31102|seasons.500, 31215|seasons.504, 20445|seasons.502, 31217|seasons.506, 31346|seasons.507, 31412|seasons.508)</onclick>
+					<onclick>Skin.SelectBool(31354, 31348|seasons.0, 535|seasons.50, 31107|seasons.55, 20021|seasons.51, 31100|seasons.53, 31101|seasons.54, 31216|seasons.505, 31102|seasons.500, 31215|seasons.504, 20445|seasons.502, 31620|seasons.510, 31217|seasons.506, 31346|seasons.507, 31412|seasons.508)</onclick>
 					<visible>Library.HasContent(tvshows) + Skin.HasSetting(ForcedViews.Enabled)</visible>
 					<label>  ∟$LOCALIZE[31354]</label>
 					<label2>$VAR[SettingsForcedViewsSeasonsVar]</label2>

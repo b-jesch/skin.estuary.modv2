@@ -78,7 +78,7 @@
 				<top>180</top>
 				<width>382</width>
 				<height>45</height>
-				<texture flipy="true" colordiffuse="$VAR[Bars_Opacity]">frame/infobar.png</texture>
+				<texture flipy="true" colordiffuse="$VAR[Bars_Opacity]">frame/osdfade.png</texture>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 			</control>
 			<control type="image">
@@ -413,7 +413,7 @@
 		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<visible>Control.IsVisible(510) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://)]</visible>
+			<visible>Control.IsVisible(510) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://)]</visible>
 			<include>Visible_Right</include>
 			<left>-8</left>
 			<right>0</right>
