@@ -41,6 +41,7 @@ supports animated poster only.
   * fix "switch to last channel" in video OSD
   * some icons added
   * enable flix view for tvshow seasons
+  * music OSD settings menu optimized
 
  
 - .9

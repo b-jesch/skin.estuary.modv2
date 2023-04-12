@@ -84,6 +84,7 @@
 						<onclick>Skin.ToggleSetting(enable_animatedlyrics)</onclick>
 						<selected>!Skin.HasSetting(enable_animatedlyrics)</selected>
 						<visible>!String.IsEmpty(Skin.String(LyricScript_Path))</visible>
+						<enable>System.AddonIsEnabled(script.cu.lrclyrics)</enable>
 					</control>
 					<control type="radiobutton" id="50010">
 						<width>800</width>
@@ -92,6 +93,7 @@
 						<onclick>Skin.ToggleSetting(Alt_color.lyrics)</onclick>
 						<selected>Skin.HasSetting(Alt_color.lyrics)</selected>
 						<visible>!String.IsEmpty(Skin.String(LyricScript_Path)) + !Skin.HasSetting(enable_animatedlyrics)</visible>
+						<enable>System.AddonIsEnabled(script.cu.lrclyrics)</enable>
 					</control>
 					<control type="button" id="5008">
 						<width>800</width>
@@ -99,6 +101,7 @@
 						<label>  ∟$LOCALIZE[31083]</label>
 						<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
 						<visible>!String.IsEmpty(Skin.String(LyricScript_Path))</visible>
+						<enable>System.AddonIsEnabled(script.cu.lrclyrics)</enable>
 					</control>
 					<control type="radiobutton" id="50014">
 						<width>800</width>
