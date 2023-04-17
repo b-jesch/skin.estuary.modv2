@@ -42,6 +42,7 @@ supports animated poster only.
   * some icons added
   * enable flix view for tvshow seasons
   * music OSD settings menu optimized
+  * introduce Radio RDS info 
 
  
 - .9

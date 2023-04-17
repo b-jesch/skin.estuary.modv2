@@ -164,10 +164,11 @@
 				</control>
 				<control type="radiobutton" id="62043">
 					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/rds.png"/>
+						<param name="texture" value="osd/fullscreen/buttons/rds_small.png"/>
 					</include>
-					<onclick>Info</onclick>
-					<visible>MusicPlayer.Content(LiveTV)</visible>
+					<onclick>Dialog.Close(MusicOSD)</onclick>
+					<onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
+					<visible>RDS.HasRds</visible>
 				</control>
 				<control type="radiobutton" id="608">
 					<include content="OSDButton">
