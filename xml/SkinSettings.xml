@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<!-- determine startup action, that has to perform -->
+	<onload>RunScript(script.embuary.helper,action=getkodisetting,setting=lookandfeel.startupaction)</onload>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onunload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
@@ -707,7 +709,8 @@
 					<label>$LOCALIZE[31051]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(EnableSplashScreen)</onclick>
-					<selected>!Skin.HasSetting(EnableSplashScreen)</selected>
+					<selected>!Skin.HasSetting(EnableSplashScreen) + String.IsEqual(Window(home).property(lookandfeel.startupaction),0)</selected>
+					<enable>String.IsEqual(Window(home).property(lookandfeel.startupaction),0)</enable>
 				</control>
 				<control type="radiobutton" id="504">
                     <label>$LOCALIZE[31640]</label>
@@ -715,6 +718,7 @@
 					<selected>!Skin.HasSetting(enable_splash_background)</selected>
 					<onclick>Skin.ToggleSetting(enable_splash_background)</onclick>
 					<visible>!Skin.HasSetting(EnableSplashScreen)</visible>
+					<enable>String.IsEqual(Window(home).property(lookandfeel.startupaction),0)</enable>
                 </control>
 				<control type="button" id="505">
                     <label>  ∟$LOCALIZE[31344]</label>
@@ -723,6 +727,7 @@
                      <onclick condition="!Skin.String(splash_background)">Skin.SetImage(splash_background)</onclick>
                     <onclick condition="Skin.String(splash_background)">Skin.Reset(splash_background)</onclick>
                     <visible>!Skin.HasSetting(EnableSplashScreen) + !Skin.HasSetting(enable_splash_background)</visible>
+					<enable>String.IsEqual(Window(home).property(lookandfeel.startupaction),0)</enable>
                 </control>
 				<control type="radiobutton" id="506">
 					<label>$LOCALIZE[31459]</label>
