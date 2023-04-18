@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<onload condition="Skin.HasSetting(EnableSplashScreen)">ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<controls>
 		<control type="group">
 			<visible>!Skin.HasSetting(EnableSplashScreen)</visible>

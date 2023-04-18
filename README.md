@@ -37,6 +37,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .11
+  * fix startup behaviour if startup window and startup action is set (Interface, Startup)
+
+
 - .10
   * fix "switch to last channel" in video OSD
   * some icons added
