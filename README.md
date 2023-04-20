@@ -13,9 +13,10 @@ and install it. After that you can install the skin directly from the repository
 
 ## Installation from Git ##
 
-For receiving the latest version from Git (before this has added to Kodinerds Repo) just download the Addon from here 
-https://github.com/b-jesch/skin.estuary.modv2/tree/Nexus (green Code button), rename the root folder inside the ZIP 
-from ```skin.estuary.modv2-Nexus``` to ```skin.estuary.modv2``` and choose 'install from zip' inside Kodi. Renaming the root folder inside the ZIP needs unpacking/packing the zip in some cases.
+If you want to install the latest version from Git (before this has added to Kodinerds Repo) just download the Addon from here 
+https://github.com/b-jesch/skin.estuary.modv2/tree/Nexus (green Code button), **rename the root folder inside the ZIP** 
+from ```skin.estuary.modv2-Nexus``` to ```skin.estuary.modv2``` and choose 'install from zip' inside Kodi. **Renaming 
+the root folder inside the ZIP needs unpacking/packing the zip in some cases.**
 
 ### File name flagging ###
 If you want to use special flags like HDR or Dolby Vision or special 3D formats you have to name your files with proper tags, 
