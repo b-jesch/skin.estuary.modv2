@@ -49,7 +49,7 @@ supports animated poster only.
   * add Embuary Helper to skin dependencies 
   * avoid showing PVR Nextup if EPG isn't available
   * fix overlapping labels in video OSD
-
+  * more compact main menu
 
 - .10
   * fix "switch to last channel" in video OSD
