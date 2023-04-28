@@ -1567,16 +1567,16 @@
 				<control type="fixedlist" id="9000">
 					<left>0</left>
 					<include condition="!Skin.HasSetting(MinimizeMainMenu) | [Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(MinimizeOptionsMenu)]" content="ItemTop">
-						<param name="top">240</param>
+						<param name="top">220</param>
 					</include>
 					<include condition="!Skin.HasSetting(MinimizeMainMenu) | [Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(MinimizeOptionsMenu)]" content="ItemMovement">
-						<param name="movement">7</param>
+						<param name="movement">8</param>
 					</include>
 					<include condition="Skin.HasSetting(MinimizeMainMenu) + !Skin.HasSetting(MinimizeOptionsMenu)" content="ItemTop">
-						<param name="top">410</param>
+						<param name="top">390</param>
 					</include>
 					<include condition="Skin.HasSetting(MinimizeMainMenu) + !Skin.HasSetting(MinimizeOptionsMenu)" content="ItemMovement">
-						<param name="movement">5</param>
+						<param name="movement">6</param>
 					</include>
 					<width>462</width>
 					<bottom>-10</bottom>
@@ -1601,13 +1601,13 @@
 					<onup>700</onup>
 					<ondown>700</ondown>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<focusedlayout height="95">
+					<focusedlayout height="85">
 						<control type="group">
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
 								<width>462</width>
-								<height>95</height>
+								<height>85</height>
 								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
 								<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
@@ -1617,7 +1617,7 @@
 								<left>0</left>
 								<top>0</top>
 								<width>462</width>
-								<height>95</height>
+								<height>85</height>
 								<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
 								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
 								<visible>!Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor)</visible>
@@ -1627,7 +1627,7 @@
 								<left>0</left>
 								<top>0</top>
 								<width>95</width>
-								<height>95</height>
+								<height>85</height>
 								<texture colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texture>
 								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
 								<visible>Skin.HasSetting(MinimizeMainMenu)</visible>
@@ -1637,7 +1637,7 @@
 								<left>0</left>
 								<top>0</top>
 								<width>95</width>
-								<height>95</height>
+								<height>85</height>
 								<texture colordiffuse="$VAR[GradientColorVar]">lists/focus-gradient.png</texture>
 								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
 								<visible>Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(EnableGradientColor)</visible>
@@ -1647,7 +1647,7 @@
 								<left>0</left>
 								<top>0</top>
 								<width>95</width>
-								<height>95</height>
+								<height>85</height>
 								<texture colordiffuse="51FFFFFF">colors/black.png</texture>
 								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000) | System.HasActiveModalDialog">Conditional</animation>
 								<visible>!Skin.HasSetting(MinimizeMainMenu) + !Skin.HasSetting(EnableGradientColor)</visible>
@@ -1658,7 +1658,8 @@
 							<left>0</left>
 							<top>0</top>
 							<width>95</width>
-							<height>95</height>
+							<height>85</height>
+							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<include>Animation_FocusBounce_Home</include>
 							<visible>!ControlGroup(700).HasFocus</visible>
@@ -1667,7 +1668,8 @@
 							<left>0</left>
 							<top>0</top>
 							<width>95</width>
-							<height>95</height>
+							<height>85</height>
+							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
 							<include>Animation_FocusBounce_Home</include>
 							<visible>ControlGroup(700).HasFocus</visible>
@@ -1675,7 +1677,7 @@
 						<control type="label">
 							<left>104</left>
 							<top>0</top>
-							<height>95</height>
+							<height>85</height>
 							<width>348</width>
 							<aligny>center</aligny>
 							<font>font37</font>
@@ -1685,18 +1687,19 @@
 							<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 						</control>
 					</focusedlayout>
-					<itemlayout height="95">
+					<itemlayout height="85">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
 							<width>95</width>
-							<height>95</height>
+							<height>85</height>
+							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<left>104</left>
 							<top>0</top>
-							<height>95</height>
+							<height>85</height>
 							<width>358</width>
 							<aligny>center</aligny>
 							<font>font37</font>
@@ -1805,10 +1808,10 @@
 				</control>
 				<control type="image">
 					<include condition="Skin.HasSetting(MinimizeMainmenu) + !Skin.HasSetting(MinimizeOptionsMenu)" content="ItemTop">
-						<param name="top">390</param>
+						<param name="top">370</param>
 					</include>
 					<include condition="Skin.HasSetting(MinimizeMainmenu) + Skin.HasSetting(MinimizeOptionsMenu)" content="ItemTop">
-						<param name="top">220</param>
+						<param name="top">205</param>
 					</include>
 					<left>17</left>
 					<width>61</width>
@@ -1849,7 +1852,7 @@
 					<visible>Skin.HasSetting(MinimizeMainMenu) + Skin.HasSetting(MinimizeOptionsMenu)</visible>
 					<control type="image">
 						<left>7</left>
-						<top>214</top>
+						<top>199</top>
 						<width>14</width>
 						<height>14</height>
 						<texture flipx="true" colordiffuse="$VAR[SkinColorVar]">overlays/arrowright.png</texture>
@@ -1860,7 +1863,7 @@
 					</control>
 					<control type="image">
 						<left>74</left>
-						<top>214</top>
+						<top>199</top>
 						<width>14</width>
 						<height>14</height>
 						<texture colordiffuse="$VAR[SkinColorVar]">overlays/arrowright.png</texture>
@@ -1874,9 +1877,9 @@
 					<orientation>vertical</orientation>
 					<left>10</left>
 					<width>95</width>
-					<height>270</height>
+					<height>250</height>
 					<top>100</top>
-					<itemgap>15</itemgap>
+					<itemgap>10</itemgap>
 					<onup>SetFocus(9000,99,absolute)</onup>
 					<ondown>SetFocus(9000,0,absolute)</ondown>
 					<visible>Skin.HasSetting(MinimizeMainMenu) + !Skin.HasSetting(MinimizeOptionsMenu)</visible>
