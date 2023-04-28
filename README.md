@@ -47,6 +47,8 @@ supports animated poster only.
 - .11
   * fix wrong startup behaviour (Issue #120) if startup window and startup action is set (Interface, Startup)
   * add Embuary Helper to skin dependencies 
+  * avoid showing PVR Nextup if EPG isn't available
+  * fix overlapping labels in video OSD
 
 
 - .10
