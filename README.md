@@ -44,8 +44,12 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .12
+  * add support for Android Super Partition (issue #122)
+
+
 - .11
-  * fix wrong startup behaviour (Issue #120) if startup window and startup action is set (Interface, Startup)
+  * fix wrong startup behaviour (issue #120) if startup window and startup action is set (Interface, Startup)
   * add Embuary Helper to skin dependencies 
   * avoid showing PVR Nextup if EPG isn't available
   * fix overlapping labels in video OSD
