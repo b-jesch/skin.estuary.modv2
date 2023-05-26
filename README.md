@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.1.1+nexus ###
 - .12
   * add support for Android Super Partition (issue #122)
+  * add title info to Mosaic view (vertical)
 
 
 - .11
