@@ -496,6 +496,7 @@
 					<animation effect="slide" end=",-5" time="0" condition="String.IsEqual(ListItem.Art(clearlogo))">Conditional</animation>
 					<animation effect="slide" end="0,-120" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				</control>
+				<!--
 				<control type="image">
 					<top>5</top>
 					<width>222</width>
@@ -507,6 +508,7 @@
 					<visible>!Container.Scrolling + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted] + !ListItem.IsParentFolder</visible>
 					<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				</control>
+				-->
 				<control type="group">
 					<include>OpenClose_Left</include>
 					<visible>!ListItem.IsParentFolder</visible>

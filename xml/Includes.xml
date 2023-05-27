@@ -2728,7 +2728,7 @@
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
 					<visible>Skin.HasSetting(show_breadcrumbs)</visible>
-					<visible>[Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505) | Control.IsVisible(507) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]]</visible>
+					<visible>[Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505) | Control.IsVisible(506) | Control.IsVisible(507) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]]</visible>
 					<visible>!Container.Content(addons) + [Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyFavourites.xml)]</visible>
 					<control type="grouplist">
 						<orientation>horizontal</orientation>
@@ -2736,7 +2736,9 @@
 						<visible>Skin.HasSetting(show_breadcrumbs) + !Skin.HasSetting(show_breadcrumbs_countonly)</visible>
 						<control type="label">
 							<label>$PARAM[breadcrumbs_label]</label>
-							<include>BreadcrumbsLabel</include>
+							<include content="BreadcrumbsLabel">
+								<param name="textcolor" value="$VAR[SkinColorVar]"/>
+							</include>
 							<visible>$PARAM[visible]</visible>
 						</control>
 						<control type="label">
@@ -2745,8 +2747,10 @@
 							<visible>!String.IsEmpty(Container.ShowTitle) + !String.IsEqual(Container.ShowTitle,Container.FolderName)</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Container.FolderName, / ,]</label>
-							<include>BreadcrumbsLabel</include>
+							<label>$INFO[Container.FolderName, / , : ]</label>
+							<include content="BreadcrumbsLabel">
+								<param name="textcolor" value="$VAR[SkinColorVar]"/>
+							</include>
 							<visible>![Container.Content() + Window.IsActive(videos)]</visible>
 							<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
 						</control>
@@ -2766,12 +2770,12 @@
 							<visible>Container.Filtered</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Container.CurrentItem,[B] : , / ]$INFO[Container.NumItems][/B]</label>
+							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
 							<include>BreadcrumbsLabel</include>
 						</control>
 						<control type="label">
-							<visible>Control.IsVisible(507) + !Skin.HasSetting(show_breadcrumbs_countonly)</visible>
-							<label>$INFO[ListItem.Label,[B] - ,[/B]]</label>
+							<visible>[Control.IsVisible(506) | Control.IsVisible(507)] + !Skin.HasSetting(show_breadcrumbs_countonly)</visible>
+							<label>$INFO[ListItem.Label, - ,]</label>
 							<include>BreadcrumbsLabel</include>
 						</control>
 					</control>
@@ -2785,7 +2789,7 @@
 							<align>right</align>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
-							<label>$INFO[Container.CurrentItem,[B], / ]$INFO[Container.NumItems,,[/B]]</label>
+							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
 						</control>
 					</control>
 				</control>
@@ -2975,10 +2979,15 @@
 		</definition>
 	</include>
 	<include name="BreadcrumbsLabel">
-		<font>font12</font>
-		<shadowcolor>text_shadow</shadowcolor>
-		<height>30</height>
-		<width min="1" max="900">auto</width>
+		<param name="font">font12_bold</param>
+		<param name="textcolor">white</param>
+		<definition>
+			<font>$PARAM[font]</font>
+			<textcolor>$PARAM[textcolor]</textcolor>
+			<shadowcolor>text_shadow</shadowcolor>
+			<height>30</height>
+			<width min="1" max="900">auto</width>
+		</definition>
 	</include>
 	<include name="ColoredBackgroundImages">
 		<control type="image">

@@ -7,11 +7,11 @@
 			<include>Visible_Right</include>
 			<left>-20</left>
 			<right>0</right>
-			<top>85</top>
+			<top>45</top>
 			<animation effect="slide" end=",-10" time="0" condition="Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | String.StartsWith(Container.FolderPath,plugin://)">Conditional</animation>
 			<control type="panel" id="506">
 				<width>100%</width>
-				<height>950</height>
+				<height>990</height>
 				<oninfo condition="String.IsEqual(ListItem.DBType,set)">ActivateWindow(1132)</oninfo>
 				<onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
 				<onright>506</onright>
