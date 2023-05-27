@@ -46,7 +46,8 @@ supports animated poster only.
 ### 4.1.1+nexus ###
 - .13
   * fix missing font definitions
-  * fix mistakenly displayed chaptercount in music player 
+  * fix mistakenly displayed chaptercount in music player
+  * smaller fixes
 
 
 - .12

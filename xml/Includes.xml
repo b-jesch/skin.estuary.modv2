@@ -2755,7 +2755,7 @@
 							<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Container.PluginCategory, / ,]</label>
+							<label>$INFO[Container.PluginCategory,, : ]</label>
 							<include>BreadcrumbsLabel</include>
 							<visible>!String.IsEmpty(Container.PluginCategory)</visible>
 						</control>
@@ -2782,7 +2782,7 @@
 					<control type="grouplist">
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>Skin.HasSetting(show_breadcrumbs) + Skin.HasSetting(show_breadcrumbs_countonly) + !Control.IsVisible(507)</visible>
+						<visible>Skin.HasSetting(show_breadcrumbs) + Skin.HasSetting(show_breadcrumbs_countonly) + !Control.IsVisible(506) + !Control.IsVisible(507)</visible>
 						<control type="label">
 							<font>font12</font>
 							<width>540</width>
