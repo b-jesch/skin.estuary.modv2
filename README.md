@@ -45,7 +45,7 @@ supports animated poster only.
 
 ### 4.1.1+nexus ###
 - .14
-  * extended info (Embuary) view modified
+  * extended info views (Embuary) modified
 
 
 - .13
