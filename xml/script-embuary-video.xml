@@ -38,6 +38,7 @@
 			<texture colordiffuse="$VAR[Background_Opacity]">$INFO[Container(10051).ListItem.Art(fanart)]</texture>
 			<visible>Skin.HasSetting(show_fanart) + !Control.HasFocus(10053) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
 		</control>
+
 		<!-- infos -->
 		<control type="grouplist" id="50">
 			<animation type="WindowOpen">
@@ -52,18 +53,19 @@
 				<effect type="fade" start="100" end="0" time="0" tween="sine" easing="out" />
 			</animation>
 			<width>1920</width>
-			<height>1080</height>
+			<top>110</top>
+			<bottom>0</bottom>
 			<orientation>vertical</orientation>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
-			<itemgap>-210</itemgap>
 			<usecontrolcoords>true</usecontrolcoords>
+
 			<!-- Meta -->
 			<control type="group">
-				<top>110</top>
-				<height>900</height>
-				<!-- poster -->
+				<top>30</top>
+				<height>730</height>
 				<control type="group">
-					<left>103</left>
+					<description>poster</description>
+					<left>80</left>
 					<width>480</width>
 					<height>720</height>
 					<control type="image">
@@ -128,52 +130,29 @@
 				<!-- meta -->
 				<control type="group">
 					<include>OpenClose_Right</include>
-					<left>620</left>
+					<left>570</left>
 					<top>-30</top>
 					<control type="group" id="140">
 					<top>10</top>
 					<control type="image">
-						<height>628</height>
-						<width>631</width>
+						<height>630</height>
+						<width>690</width>
 						<texture border="21">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="textbox">
 						<left>35</left>
 						<top>23</top>
-						<width>562</width>
+						<width>625</width>
 						<height>582</height>
 						<align>justify</align>
 						<font>fontplot</font>
-						<label fallback="19055">$INFO[Container(10051).ListItem.Tagline,[B],[/B][CR][CR]]$INFO[Container(10051).ListItem.Plot]</label>
+						<label fallback="19055">$INFO[Container(10051).ListItem.Plot]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>!String.IsEqual(Container(10051).ListItem.DBType,season)</visible>
-					</control>
-					<control type="textbox">
-						<left>35</left>
-						<top>23</top>
-						<width>562</width>
-						<height>582</height>
-						<align>justify</align>
-						<font>fontplot</font>
-						<label fallback="19055">$INFO[Container(10051).ListItem.Season,[B]$LOCALIZE[20373] ,[/B][CR][CR]]$INFO[Container(10051).ListItem.Plot]</label>
-						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>String.IsEqual(Container(10051).ListItem.DBType,season) + !String.IsEmpty(Container(10051).ListItem.Plot)</visible>
-					</control>
-					<control type="textbox">
-						<left>35</left>
-						<top>23</top>
-						<width>562</width>
-						<height>582</height>
-						<align>justify</align>
-						<font>fontplot</font>
-						<label fallback="19055">$INFO[Container(10051).ListItem.Season,[B]$LOCALIZE[20373] ,[/B][CR][CR]]$LOCALIZE[19055]</label>
-						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>String.IsEqual(Container(10051).ListItem.DBType,season) + String.IsEmpty(Container(10051).ListItem.Plot)</visible>
 					</control>
 					<control type="group">
-						<left>615</left>
+						<left>680</left>
 						<width>631</width>
-						<height>628</height>
+						<height>630</height>
 						<control type="image">
 							<aligny>bottom</aligny>
 							<texture border="21">dialogs/dialog-bg.png</texture>
@@ -357,8 +336,7 @@
 			<!-- cast -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10052).NumItems,0) | Container(10052).IsUpdating</visible>
-				<top>35</top>
-				<height>685</height>
+				<height>510</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10052"/>
@@ -366,7 +344,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Label2, $LOCALIZE[31125] ]"/>
 					</include>
 					<control type="group">
-						<top>125</top>
+						<top>120</top>
 						<include content="ExtendedInfoCastList">
 							<param name="list_id" value="10052"/>
 							<param name="label" value="$INFO[ListItem.Label]"/>
@@ -381,7 +359,7 @@
 			<!-- crew -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10056).NumItems,0) | Container(10056).IsUpdating</visible>
-				<height>685</height>
+				<height>510</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10056"/>
@@ -396,7 +374,7 @@
 						<param name="visible" value="String.IsEqual(Container(10051).ListItem.DBType,season)"/>
 					</include>
 					<control type="group">
-						<top>125</top>
+						<top>120</top>
 						<include content="ExtendedInfoCastList">
 							<param name="list_id" value="10056"/>
 							<param name="label" value="$INFO[ListItem.Label]"/>
@@ -411,14 +389,14 @@
 			<!-- collection -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10057).NumItems,0) | Container(10057).IsUpdating</visible>
-				<height>685</height>
+				<height>510</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10057"/>
 						<param name="label" value="$ADDON[script.embuary.info 32037]$INFO[Container(10051).ListItem.Property(collection), | ]"/>
 					</include>
 					<control type="group">
-						<top>125</top>
+						<top>120</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10057"/>
 							<param name="ondown" value="10058"/>
@@ -431,7 +409,7 @@
 			<!-- seasons -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10058).NumItems,0) | Container(10058).IsUpdating</visible>
-				<height>685</height>
+				<height>510</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10058"/>
@@ -439,7 +417,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 					</include>
 					<control type="group">
-						<top>125</top>
+						<top>120</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10058"/>
 							<param name="ondown" value="10053"/>
@@ -452,7 +430,7 @@
 			<!-- similar -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10053).NumItems,0) | Container(10053).IsUpdating</visible>
-				<height>685</height>
+				<height>510</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10053"/>
@@ -460,7 +438,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Year, (,)]"/>
 					</include>
 					<control type="group">
-						<top>125</top>
+						<top>120</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10053"/>
 							<param name="ondown" value="10054"/>
@@ -473,7 +451,7 @@
 			<!-- videos -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10054).NumItems,0) | Container(10054).IsUpdating</visible>
-				<height>685</height>
+				<height>510</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10054"/>
@@ -481,7 +459,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 					</include>
 					<control type="group">
-						<top>125</top>
+						<top>120</top>
 						<include content="ExtendedInfoThumbList">
 							<param name="list_id" value="10054"/>
 							<param name="visible_play" value="true"/>
@@ -497,7 +475,7 @@
 			<!-- images -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10055).NumItems,0) | Container(10055).IsUpdating</visible>
-				<height>685</height>
+				<height>510</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10055"/>
@@ -506,7 +484,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 					</include>
 					<control type="group">
-						<top>125</top>
+						<top>120</top>
 						<include content="ExtendedInfoThumbList">
 							<param name="list_id" value="10055"/>
 							<param name="ondown" value="10059"/>
@@ -519,7 +497,7 @@
 			<!-- posters -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10059).NumItems,0) | Container(10059).IsUpdating</visible>
-				<height>685</height>
+				<height>510</height>
 				<control type="group">
 					<include content="CategoryLabel">
 						<param name="list_id" value="10059"/>
@@ -528,7 +506,7 @@
 						<param name="label_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 					</include>
 					<control type="group">
-						<top>125</top>
+						<top>120</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10059"/>
 							<param name="ondown" value="100"/>
@@ -541,27 +519,48 @@
 
 		<!-- title -->
 		<control type="group">
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>110%</width>
-				<height>170</height>
-				<texture>frame/InfoBar.png</texture>
-			</control>
 			<control type="group">
-				<left>35</left>
+				<left>50</left>
 				<right>35</right>
 				<height>100</height>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">WindowClose</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="!String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">WindowClose</animation>
 				<control type="label">
-					<left>0</left>
-					<right>150</right>
-					<label>$INFO[Container(10051).ListItem.Label]$INFO[Container(10051).ListItem.Year, ([COLOR FFA0A0A0],[/COLOR])]</label>
-					<font>font45</font>
-					<shadowcolor>50000000</shadowcolor>
-					<height>100</height>
+					<left>20</left>
+					<right>200</right>
+					<label>$INFO[Container(10051).ListItem.Label]$INFO[Container(10051).ListItem.Year, (,)]</label>
+					<font>font52_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<height>65</height>
+					<align>left</align>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<top>60</top>
+					<left>20</left>
+					<right>200</right>
+					<label>$INFO[Container(10051).ListItem.Tagline,[B],[/B]]</label>
+					<font>fontplot2</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<height>65</height>
+					<align>left</align>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<scroll>true</scroll>
+					<visible>!String.IsEqual(Container(10051).ListItem.DBType,season)</visible>
+				</control>
+				<control type="label">
+					<top>60</top>
+					<left>20</left>
+					<right>200</right>
+					<label fallback="19055">$INFO[Container(10051).ListItem.Season,[B]$LOCALIZE[20373] ,[/B]]</label>
+					<font>fontplot2</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<height>65</height>
+					<align>left</align>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<scroll>true</scroll>
+					<visible>String.IsEqual(Container(10051).ListItem.DBType,season)</visible>
 				</control>
 				<control type="image">
 					<top>10</top>

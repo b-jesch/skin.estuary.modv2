@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.1+nexus ###
+- .14
+  * extended info (Embuary) view modified
+
+
 - .13
   * fix missing font definitions
   * fix mistakenly displayed chaptercount in music player
