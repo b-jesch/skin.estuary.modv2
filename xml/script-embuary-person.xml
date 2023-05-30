@@ -52,7 +52,7 @@
 				<effect type="fade" start="100" end="0" time="0" tween="sine" easing="out" />
 			</animation>
 			<width>1920</width>
-			<top>110</top>
+			<top>145</top>
 			<bottom>0</bottom>
 			<orientation>vertical</orientation>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -60,8 +60,7 @@
 
 			<!-- Meta -->
 			<control type="group">
-				<top>30</top>
-				<height>730</height>
+				<height>700</height>
 				<control type="group">
 					<description>poster</description>
 					<left>80</left>
@@ -89,27 +88,28 @@
 					<left>570</left>
 					<top>-30</top>
 					<control type="group" id="140">
-					<top>10</top>
-					<control type="image">
-						<height>630</height>
-						<width>690</width>
-						<texture border="21">dialogs/dialog-bg.png</texture>
-					</control>
-					<control type="textbox">
-						<left>35</left>
-						<top>23</top>
-						<width>625</width>
-						<height>580</height>
-						<align>justify</align>
-						<font>fontplot</font>
-						<label fallback="19055">$INFO[Container(10051).ListItem.Property(biography)]</label>
-						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>!String.IsEqual(Container(10051).ListItem.DBType,season)</visible>
+						<top>10</top>
+						<control type="image">
+							<height>630</height>
+							<width>690</width>
+							<texture border="21">dialogs/dialog-bg.png</texture>
+						</control>
+						<control type="textbox">
+							<left>35</left>
+							<top>23</top>
+							<width>625</width>
+							<height>582</height>
+							<align>justify</align>
+							<font>fontplot</font>
+							<label fallback="19055">$INFO[Container(10051).ListItem.Property(biography)]</label>
+							<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<visible>!String.IsEqual(Container(10051).ListItem.DBType,season)</visible>
+						</control>
 					</control>
 					<control type="group">
 						<left>680</left>
 						<width>631</width>
-						<height>630</height>
+						<height>640</height>
 						<control type="image">
 							<aligny>bottom</aligny>
 							<texture border="21">dialogs/dialog-bg.png</texture>
@@ -117,8 +117,8 @@
 						<control type="grouplist" id="150">
 							<orientation>vertical</orientation>
 							<left>25</left>
-							<top>21</top>
-							<height>569</height>
+							<top>30</top>
+							<height>560</height>
 							<width>605</width>
 							<itemgap>5</itemgap>
 							<usecontrolcoords>true</usecontrolcoords>
@@ -177,7 +177,7 @@
 
 					<!-- buttons -->
 					<control type="grouplist" id="100">
-						<top>620</top>
+						<top>627</top>
 						<height>130</height>
 						<width>100%</width>
 						<orientation>horizontal</orientation>
@@ -202,7 +202,7 @@
 					</control>
 				</control>
 			</control>
-			</control>
+
 
 			<!-- movies -->
 			<control type="group">
@@ -276,7 +276,8 @@
 			<control type="group">
 				<left>50</left>
 				<right>35</right>
-				<height>100</height>
+				<top>20</top>
+				<height>80</height>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">WindowClose</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="!String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">WindowClose</animation>
@@ -286,12 +287,12 @@
 					<label>$INFO[Container(10051).ListItem.Label]</label>
 					<font>font52_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
-					<height>65</height>
+					<height>60</height>
 					<align>left</align>
 					<scroll>true</scroll>
 				</control>
 				<control type="image">
-					<top>10</top>
+					<top>20</top>
 					<right>0</right>
 					<texture>icons/extendedinfo/moviedb2.png</texture>
 					<height>80</height>
