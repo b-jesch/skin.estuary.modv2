@@ -528,8 +528,8 @@
 			<control type="group">
 				<left>50</left>
 				<right>35</right>
-				<top>20</top>
-				<height>80</height>
+				<top>15</top>
+				<height>85</height>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">WindowClose</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="!String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">WindowClose</animation>
@@ -544,7 +544,7 @@
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
-					<top>60</top>
+					<top>65</top>
 					<left>20</left>
 					<right>200</right>
 					<label>$INFO[Container(10051).ListItem.Tagline,[B][I],[/I][/B]]</label>
