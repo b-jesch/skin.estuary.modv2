@@ -39,100 +39,98 @@
 			<visible>Skin.HasSetting(show_fanart) + !Control.HasFocus(10053) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
 		</control>
 
-		<!-- infos -->
-		<control type="group">
+		<control type="grouplist" id="50">
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="320" end="0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowCLose" condition="String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0" end="320" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowCLose" condition="!String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">
+				<effect type="fade" start="100" end="0" time="0" tween="sine" easing="out" />
+			</animation>
 			<top>145</top>
 			<bottom>0</bottom>
-			<control type="grouplist" id="50">
-				<animation type="WindowOpen">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-					<effect type="slide" start="320" end="0" time="400" tween="cubic" easing="out" />
-				</animation>
-				<animation type="WindowCLose" condition="String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="slide" start="0" end="320" time="300" tween="cubic" easing="out" />
-				</animation>
-				<animation type="WindowCLose" condition="!String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">
-					<effect type="fade" start="100" end="0" time="0" tween="sine" easing="out" />
-				</animation>
-				<width>1920</width>
-				<orientation>vertical</orientation>
-				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<usecontrolcoords>true</usecontrolcoords>
+			<width>1920</width>
+			<orientation>vertical</orientation>
+			<scrolltime tween="cubic" easing="out">500</scrolltime>
+			<usecontrolcoords>true</usecontrolcoords>
 
-				<!-- Meta -->
+			<!-- Poster, meta and buttons -->
+			<control type="group">
+				<height>700</height>
 				<control type="group">
-					<height>700</height>
-					<control type="group">
-						<description>poster</description>
-						<left>80</left>
+					<description>poster</description>
+					<left>80</left>
+					<width>480</width>
+					<height>720</height>
+					<control type="image">
+						<left>-20</left>
+						<top>-20</top>
+						<width>520</width>
+						<height>760</height>
+						<texture>dialogs/dialog-bg-nobo.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+					</control>
+					<control type="image">
 						<width>480</width>
 						<height>720</height>
+						<texture fallback="DefaultVideo.png" background="true">$INFO[Container(10051).ListItem.Art(thumb)]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="group">
+						<visible>Integer.IsGreater(Container(10051).ListItem.Playcount,0) | Container(10051).ListItem.IsResumable</visible>
 						<control type="image">
-							<left>-20</left>
-							<top>-20</top>
-							<width>520</width>
-							<height>760</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
+							<left>0</left>
+							<bottom>0</bottom>
+							<width>80</width>
+							<height>80</height>
+							<texture>overlays/overlay-bg.png</texture>
 						</control>
 						<control type="image">
-							<width>480</width>
-							<height>720</height>
-							<texture fallback="DefaultVideo.png" background="true">$INFO[Container(10051).ListItem.Art(thumb)]</texture>
-							<aspectratio>scale</aspectratio>
+							<left>5</left>
+							<bottom>5</bottom>
+							<width>32</width>
+							<height>32</height>
+							<texture>icons/extendedinfo/OverlayWatched.png</texture>
+							<visible>Integer.IsGreater(Container(10051).ListItem.Playcount,0)</visible>
 						</control>
-						<control type="group">
-							<visible>Integer.IsGreater(Container(10051).ListItem.Playcount,0) | Container(10051).ListItem.IsResumable</visible>
-							<control type="image">
-								<left>0</left>
-								<bottom>0</bottom>
-								<width>80</width>
-								<height>80</height>
-								<texture>overlays/overlay-bg.png</texture>
-							</control>
-							<control type="image">
-								<left>5</left>
-								<bottom>5</bottom>
-								<width>32</width>
-								<height>32</height>
-								<texture>icons/extendedinfo/OverlayWatched.png</texture>
-								<visible>Integer.IsGreater(Container(10051).ListItem.Playcount,0)</visible>
-							</control>
-							<control type="image">
-								<left>5</left>
-								<bottom>5</bottom>
-								<width>32</width>
-								<height>32</height>
-								<texture>overlays/watched/resume.png</texture>
-								<visible>Container(10051).ListItem.IsResumable</visible>
-							</control>
-						</control>
-						<control type="group">
-							<visible>!String.IsEmpty(Container(10051).ListItem.DBID)</visible>
-							<control type="image">
-								<right>0</right>
-								<bottom>0</bottom>
-								<width>80</width>
-								<height>80</height>
-								<texture flipx="true">overlays/overlay-bg.png</texture>
-							</control>
-							<control type="image">
-								<right>5</right>
-								<bottom>5</bottom>
-								<width>32</width>
-								<height>32</height>
-								<texture>icons/extendedinfo/OverlayLocal.png</texture>
-							</control>
+						<control type="image">
+							<left>5</left>
+							<bottom>5</bottom>
+							<width>32</width>
+							<height>32</height>
+							<texture>overlays/watched/resume.png</texture>
+							<visible>Container(10051).ListItem.IsResumable</visible>
 						</control>
 					</control>
-					<!-- meta -->
 					<control type="group">
-						<include>OpenClose_Right</include>
-						<left>570</left>
-						<top>-30</top>
-						<control type="group" id="140">
+						<visible>!String.IsEmpty(Container(10051).ListItem.DBID)</visible>
+						<control type="image">
+							<right>0</right>
+							<bottom>0</bottom>
+							<width>80</width>
+							<height>80</height>
+							<texture flipx="true">overlays/overlay-bg.png</texture>
+						</control>
+						<control type="image">
+							<right>5</right>
+							<bottom>5</bottom>
+							<width>32</width>
+							<height>32</height>
+							<texture>icons/extendedinfo/OverlayLocal.png</texture>
+						</control>
+					</control>
+				</control>
+
+				<control type="group">
+					<include>OpenClose_Right</include>
+					<left>570</left>
+					<top>-30</top>
+					<control type="group" id="140">
 						<top>10</top>
 						<control type="image">
 							<height>630</height>
@@ -287,7 +285,7 @@
 							</control>
 						</control>
 					</control>
-					<!-- buttons -->
+
 					<control type="grouplist" id="100">
 						<top>627</top>
 						<height>130</height>
@@ -516,7 +514,14 @@
 				</control>
 			</control>
 		</control>
-	</control>
+
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>110%</width>
+			<height>180</height>
+			<texture colordiffuse="$VAR[Bars_Opacity]">frame/osdfade.png</texture>
+		</control>
 
 		<!-- title -->
 		<control type="group">

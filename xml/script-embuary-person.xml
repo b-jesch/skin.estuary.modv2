@@ -271,6 +271,14 @@
 			</control>
 		</control>
 
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>110%</width>
+			<height>180</height>
+			<texture colordiffuse="$VAR[Bars_Opacity]">frame/osdfade.png</texture>
+		</control>
+
 		<!-- title -->
 		<control type="group">
 			<control type="group">
