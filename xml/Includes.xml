@@ -4804,12 +4804,12 @@
 						<texture>flags/cadre_small.png</texture>
 					</control>
 					<control type="image">
-						<left>6</left>
-						<top>5</top>
-						<width>50</width>
-						<height>30</height>
+						<left>12</left>
+						<top>2</top>
+						<width>36</width>
+						<height>36</height>
 						<aspectratio>scale</aspectratio>
-						<texture colordiffuse="$VAR[SkinColorVar]">flags/nas_2.png</texture>
+						<texture colordiffuse="$VAR[SkinColorVar]">icons/extendedinfo/OverlayLocal.png</texture>
 					</control>
 				</control>
 				<control type="group">

@@ -59,7 +59,7 @@
 					<bottom>260</bottom>
 					<right>30</right>
 					<height>30</height>
-					<label>[B]$INFO[VideoPlayer.ChannelName,, : ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode,,.]$INFO[VideoPlayer.EpisodeName, ][/B]</label>
+					<label>[B]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title, : ,]$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode,,.]$INFO[VideoPlayer.EpisodeName, ][/B]</label>
 					<scroll>true</scroll>
 					<font>font37</font>
 					<scroll>true</scroll>
@@ -136,6 +136,21 @@
 					<font>fontplot</font>
 					<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
 					<autoscroll delay="9000" time="5000" repeat="8000">true</autoscroll>
+				</control>
+				<control type="label">
+					<include content="ItemLeft" condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.StartsWith(Player.Filenameandpath,http)">
+						<param name="left" value="239"/>
+					</include>
+					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
+						<param name="left" value="315"/>
+					</include>
+					<top>310</top>
+					<right>30</right>
+					<height>190</height>
+					<align>center</align>
+					<font>fontplot</font>
+					<label>[B]$LOCALIZE[19055][/B]</label>
+					<visible>String.IsEmpty(VideoPlayer.Tagline) + String.IsEmpty(VideoPlayer.Plot)</visible>
 				</control>
 				<control type="image">
 					<depth>DepthOSD+</depth>

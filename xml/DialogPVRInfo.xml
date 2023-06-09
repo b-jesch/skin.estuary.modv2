@@ -93,19 +93,20 @@
 					<param name="left" value="200" />
 				</include>
 				<control type="group">
-					<left>4</left>
 					<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
 					<control type="image">
-							<width>160</width>
-							<height>160</height>
-							<texture flipy="true">overlays/overlay-bg.png</texture>
-						</control>
+						<left>4</left>
+						<top>5</top>
+						<width>64</width>
+						<height>64</height>
+						<texture flipy="true" colordiffuse="$VAR[SkinColorVar]">overlays/overlay-edge.png</texture>
+					</control>
 					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>30</height>
-						<texture colordiffuse="DDFFFFFF" fallback="defaultnas.png">flags/nas_2.png</texture>
+						<left>6</left>
+						<top>8</top>
+						<width>32</width>
+						<height>32</height>
+						<texture>icons/extendedinfo/OverlayLocal.png</texture>
 					</control>
 				</control>
 			</control>

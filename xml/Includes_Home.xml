@@ -8234,13 +8234,13 @@
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
-								<width>80</width>
-								<height>80</height>
-								<texture flipy="true">overlays/overlay-bg.png</texture>
+								<width>64</width>
+								<height>64</height>
+								<texture flipy="true" colordiffuse="$VAR[SkinColorVar]">overlays/overlay-edge.png</texture>
 							</control>
 							<control type="image">
-								<left>5</left>
-								<top>5</top>
+								<left>2</left>
+								<top>2</top>
 								<width>32</width>
 								<height>32</height>
 								<texture>icons/extendedinfo/OverlayLocal.png</texture>
@@ -8330,13 +8330,13 @@
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
-								<width>80</width>
-								<height>80</height>
-								<texture flipy="true">overlays/overlay-bg.png</texture>
+								<width>64</width>
+								<height>64</height>
+								<texture flipy="true" colordiffuse="$VAR[SkinColorVar]">overlays/overlay-edge.png</texture>
 							</control>
 							<control type="image">
-								<left>5</left>
-								<top>5</top>
+								<left>2</left>
+								<top>2</top>
 								<width>32</width>
 								<height>32</height>
 								<texture>icons/extendedinfo/OverlayLocal.png</texture>
