@@ -79,7 +79,7 @@
 				<width>382</width>
 				<height>45</height>
 				<texture flipy="true" colordiffuse="$VAR[Bars_Opacity]">frame/osdfade.png</texture>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			</control>
 			<control type="image">
 				<right>35</right>
@@ -87,7 +87,7 @@
 				<width>28</width>
 				<height>28</height>
 				<texture>lists/played-total.png</texture>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 			</control>
 			<control type="label">
 				<right>73</right>
@@ -98,6 +98,17 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$VAR[BannerLabel2Var]</label>
+			</control>
+			<control type="label">
+				<right>35</right>
+				<top>187</top>
+				<width>120</width>
+				<height>43</height>
+				<font>font20_title</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
+				<visible>Container.Content(episodes)</visible>
 			</control>
 			<control type="image">
 				<left>38</left>
