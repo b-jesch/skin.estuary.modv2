@@ -4456,7 +4456,7 @@
 						<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]$INFO[Player.ChapterName, : ]</label>
 						<font>font12</font>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>IntegerIsGreater(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
+						<visible>Integer.IsGreater(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
 						<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1138) + !Window.IsVisible(1139)</visible>
 						<visible>![Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]</visible>
 					</control>
@@ -4470,7 +4470,7 @@
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>IntegerIsGreater(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
+						<visible>Integer.IsGreater(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
 						<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1139)</visible>
 						<visible>[Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)] | Window.IsVisible(1138)</visible>
 					</control>
