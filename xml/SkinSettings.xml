@@ -1049,6 +1049,20 @@
 					<onclick condition="String.IsEqual(Skin.String(autoclose_osd),31578)">Skin.SetString(autoclose_osd,31580)</onclick>
 					<onclick condition="!String.IsEmpty(Skin.String(autoclose_osd)) + !String.IsEqual(Skin.String(autoclose_osd),31578) + !String.IsEqual(Skin.String(autoclose_osd),31580) + !String.IsEqual(Skin.String(autoclose_osd),31581) + !String.IsEqual(Skin.String(autoclose_osd),31582) + !String.IsEqual(Skin.String(autoclose_osd),31583) + !String.IsEqual(Skin.String(autoclose_osd),31584)">Skin.SetString(autoclose_osd,31578)</onclick>
 				</control>
+				<control type="button" id="721">
+					<label>$LOCALIZE[31648]</label>
+					<label2>$VAR[AutostopOsdVar]</label2>
+					<include>DefaultSettingButton</include>
+					<description>autostop OSD menu</description>
+					<onclick condition="String.IsEmpty(Skin.String(autostop_osd))">Skin.SetString(autostop_osd,31578)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autostop_osd),31653)">Skin.SetString(autostop_osd,31578)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autostop_osd),31652)">Skin.SetString(autostop_osd,31653)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autostop_osd),31651)">Skin.SetString(autostop_osd,31652)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autostop_osd),31650)">Skin.SetString(autostop_osd,31651)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autostop_osd),31649)">Skin.SetString(autostop_osd,31650)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(autostop_osd),31578)">Skin.SetString(autostop_osd,31649)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(autostop_osd)) + !String.IsEqual(Skin.String(autostop_osd),31578) + !String.IsEqual(Skin.String(autostop_osd),31649) + !String.IsEqual(Skin.String(autostop_osd),31650) + !String.IsEqual(Skin.String(autostop_osd),31651) + !String.IsEqual(Skin.String(autostop_osd),31652) + !String.IsEqual(Skin.String(autostop_osd),31653)">Skin.SetString(autostop_osd,31578)</onclick>
+				</control>				
 				<control type="label" id="30017">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>

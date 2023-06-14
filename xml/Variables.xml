@@ -1140,6 +1140,15 @@
 		<value condition="String.IsEqual(Skin.String(autoclose_osd),31584)">$LOCALIZE[31584]</value>
 		<value>$LOCALIZE[31334]</value>
 	</variable>
+	<variable name="AutostopOsdVar">
+		<value condition="String.IsEqual(Skin.String(autostop_osd),31578)">$LOCALIZE[31578]</value>
+		<value condition="String.IsEqual(Skin.String(autostop_osd),31649)">$LOCALIZE[31649]</value>
+		<value condition="String.IsEqual(Skin.String(autostop_osd),31650)">$LOCALIZE[31650]</value>
+		<value condition="String.IsEqual(Skin.String(autostop_osd),31651)">$LOCALIZE[31651]</value>
+		<value condition="String.IsEqual(Skin.String(autostop_osd),31652)">$LOCALIZE[31652]</value>
+		<value condition="String.IsEqual(Skin.String(autostop_osd),31653)">$LOCALIZE[31653]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
 	<variable name="SeekBarOpacityVar">
 		<value condition="Skin.HasSetting(SeekbarOpacity)">3FFFFFFF</value>
 		<value>FFFFFFFF</value>

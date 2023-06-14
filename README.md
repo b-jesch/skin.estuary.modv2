@@ -43,6 +43,11 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 
+### 4.1.2+nexus ###
+- .0
+  * introducing auto stop timer (stop player after an amount of time when player is paused, configurable)
+
+
 ### 4.1.1+nexus ###
 - .14
   * improving extended info views (Embuary)
