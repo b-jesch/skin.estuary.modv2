@@ -90,6 +90,17 @@
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 			</control>
 			<control type="label">
+				<left>45</left>
+				<top>187</top>
+				<width>210</width>
+				<height>43</height>
+				<font>font20_title</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
+				<visible>Container.Content(seasons)</visible>
+			</control>
+			<control type="label">
 				<right>73</right>
 				<top>187</top>
 				<width>120</width>

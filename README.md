@@ -46,6 +46,8 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .0
   * introducing auto stop timer (stop player after an amount of time when player is paused, configurable)
+  * fix condition (issue #123)
+  * add season label to flix view items (tv show season view) 
 
 
 ### 4.1.1+nexus ###
