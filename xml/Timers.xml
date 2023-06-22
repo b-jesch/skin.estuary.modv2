@@ -12,6 +12,7 @@
 		<description>Stop player after an amount of time when media is paused</description>
 		<start reset="true">Player.Paused + [String.IsEqual(Skin.String(autostop_osd),31649) | String.IsEqual(Skin.String(autostop_osd),31650) | String.IsEqual(Skin.String(autostop_osd),31651) | String.IsEqual(Skin.String(autostop_osd),31652) | String.IsEqual(Skin.String(autostop_osd),31653)]</start>
 		<stop>Player.Paused + [Integer.IsGreater(Skin.TimerElapsedSecs(delayedstoptimer),60) + String.IsEqual(Skin.String(autostop_osd),31649)] | [Integer.IsGreater(Skin.TimerElapsedSecs(delayedstoptimer),120) + String.IsEqual(Skin.String(autostop_osd),31650)] | [Integer.IsGreater(Skin.TimerElapsedSecs(delayedstoptimer),180) + String.IsEqual(Skin.String(autostop_osd),31651)] | [Integer.IsGreater(Skin.TimerElapsedSecs(delayedstoptimer),240) + String.IsEqual(Skin.String(autostop_osd),31652)] | [Integer.IsGreater(Skin.TimerElapsedSecs(delayedstoptimer),300) + String.IsEqual(Skin.String(autostop_osd),31653)]</stop>
+		<reset>Player.Playing | Pvr.IsPlayingTV | Pvr.IsPlayingRecording</reset>
 		<onstop>PlayerControl(Stop)</onstop>
 	</timer>
 </timers>

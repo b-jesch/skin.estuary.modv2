@@ -90,6 +90,17 @@
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 			</control>
 			<control type="label">
+				<left>80</left>
+				<top>187</top>
+				<width>210</width>
+				<height>43</height>
+				<font>font20_title</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
+				<visible>Container.Content(seasons) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+			</control>
+			<control type="label">
 				<left>45</left>
 				<top>187</top>
 				<width>210</width>
@@ -98,7 +109,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
-				<visible>Container.Content(seasons)</visible>
+				<visible>Container.Content(seasons) + !Integer.IsGreater(ListItem.Playcount,0)</visible>
 			</control>
 			<control type="label">
 				<right>73</right>
@@ -123,7 +134,7 @@
 			</control>
 			<control type="image">
 				<left>38</left>
-				<top>190</top>
+				<top>192</top>
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>

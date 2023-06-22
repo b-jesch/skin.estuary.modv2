@@ -6,7 +6,7 @@
 		<control type="group">
 			<bottom>0</bottom>
 			<height>550</height>
-			<visible>!Window.IsActive(1138) + !Window.IsVisible(videoosd) + Player.Playing</visible>
+			<visible>!Window.IsActive(1138) + !Window.IsVisible(videoosd) + [Pvr.IsPlayingTV | Pvr.IsPlayingRecording | Player.Playing]</visible>
 			<animation effect="slide" end="0,-140" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Conditional</animation>
 			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
 			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>

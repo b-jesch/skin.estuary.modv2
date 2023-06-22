@@ -49,6 +49,7 @@ supports animated poster only.
   * fix condition (issue #123)
   * add season label to flix view items (tv show season view)
   * convert all home images to baseline JPEG format specification
+  * fix pause bug on PVR related OSD Info, remove pause on info for LiveTV/Recordings
 
 
 ### 4.1.1+nexus ###

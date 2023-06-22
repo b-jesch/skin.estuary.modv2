@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">5000</defaultcontrol>
-	<onload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + Player.Playing + !VideoPlayer.Content(livetv)">PlayerControl(Play)</onload>
-	<onunload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + !VideoPlayer.Content(livetv)">PlayerControl(Play)</onunload>
-	<onload condition="Skin.HasSetting(ExtendedOSDInfo) | VideoPlayer.Content(livetv) | VideoPlayer.Content(musicvideos) | Pvr.IsPlayingRecording">ActivateWindow(1143)</onload>
+	<onload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + Player.Playing + !Pvr.IsPlayingTV + !Pvr.IsPlayingRecording">PlayerControl(Play)</onload>
+	<onunload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + !Pvr.IsPlayingTV + !Pvr.IsPlayingRecording">PlayerControl(Play)</onunload>
+	<onload condition="!Window.IsVisible(videoosd) + [Skin.HasSetting(ExtendedOSDInfo) | VideoPlayer.Content(musicvideos) | Pvr.IsPlayingTV | Pvr.IsPlayingRecording]">ActivateWindow(1143)</onload>
 	<controls>
 		<control type="group">
 			<visible>[VideoPlayer.content(movies) | VideoPlayer.Content(episodes)] + !Skin.HasSetting(ExtendedOSDInfo)</visible>

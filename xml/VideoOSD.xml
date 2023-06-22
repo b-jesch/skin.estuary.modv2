@@ -175,8 +175,8 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
 					</include>
-					<onclick condition="VideoPlayer.Content(livetv) | Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(1138)</onclick>
-					<onclick condition="!VideoPlayer.Content(livetv) + !Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(fullscreeninfo)</onclick>
+					<onclick condition="[Pvr.IsPlayingTV | Pvr.IsPlayingRecording] | [Player.Playing + Skin.HasSetting(ExtendedOSDInfo)]">ActivateWindow(1138)</onclick>
+					<onclick condition="!Pvr.IsPlayingTV + !Pvr.IsPlayingRecording + !Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(fullscreeninfo)</onclick>
 					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
