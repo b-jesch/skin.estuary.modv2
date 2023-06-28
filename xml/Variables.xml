@@ -201,7 +201,7 @@
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart)) + Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart))">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
-		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value condition="!String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PVRArtworksVarOSD">
@@ -209,14 +209,14 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PVRArtworksVarInfo">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart))">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart))">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PVRNextupVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Nextup.fanart))">$INFO[Window(Home).Property(PVR.Nextup.fanart)]</value>
-		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Nextup.poster))">$INFO[Window(Home).Property(PVR.Nextup.poster)]</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Nextup.fanart))">$INFO[Window(Home).Property(PVR.Nextup.fanart)]</value>
+		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Nextup.poster))">$INFO[Window(Home).Property(PVR.Nextup.poster)]</value>
 		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 	</variable>
 	<variable name="PVRMetadataCastandroleVar">

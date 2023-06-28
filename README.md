@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.2+nexus ###
+- .1
+  * minor adjustments
+
+
 - .0
   * introducing auto stop timer (stop player after an amount of time when player is paused, configurable)
   * fix condition (issue #123)

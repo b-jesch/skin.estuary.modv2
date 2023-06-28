@@ -151,8 +151,8 @@
 							<control type="image">
 								<left>5</left>
 								<top>1</top>
-								<height>56</height>
-								<width>78</width>
+								<height>60</height>
+								<width>84</width>
 								<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
 								<visible>Skin.HasSetting(ShowPVRChannelNumbers) + Skin.HasSetting(EnablePvrIconBG)</visible>
 							</control>
@@ -178,9 +178,9 @@
 								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label" id="1">
-								<left>84</left>
+								<left>88</left>
 								<top>10</top>
-								<width>308</width>
+								<width>304</width>
 								<height>62</height>
 								<font>font13</font>
 								<label>$INFO[ListItem.ChannelName]</label>

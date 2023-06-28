@@ -138,7 +138,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
-				<visible>!String.StartsWith(Container.FolderPath,plugin://) + !Container.Content(artists)</visible>
+				<visible>!String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Container.Content(artists)</visible>
 			</control>
 			<control type="image">
 				<left>35</left>
@@ -429,10 +429,10 @@
 			</control>
 			<control type="textbox">
 				<include>OpenClose_Left</include>
-				<include content="ItemTop" condition="String.StartsWith(Container.FolderPath,plugin://)">
+				<include content="ItemTop" condition="String.StartsWith(Container.FolderPath,plugin://plugin.video)">
 					<param name="top">235</param>
 				</include>
-				<include content="ItemTop" condition="!String.StartsWith(Container.FolderPath,plugin://)">
+				<include content="ItemTop" condition="!String.StartsWith(Container.FolderPath,plugin://plugin.video)">
 					<param name="top">310</param>
 				</include>
 				<left>50</left>
@@ -446,7 +446,7 @@
 		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<visible>Control.IsVisible(510) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://)]</visible>
+			<visible>Control.IsVisible(510) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)]</visible>
 			<include>Visible_Right</include>
 			<left>-8</left>
 			<right>0</right>
@@ -467,7 +467,7 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>8</preloaditems>
-				<visible>![$EXP[subCategories] | String.IsEmpty(Container.Content)] + !String.StartsWith(Container.FolderPath,plugin://)</visible>
+				<visible>![$EXP[subCategories] | String.IsEmpty(Container.Content)] | String.StartsWith(Container.FolderPath,plugin://plugin.video)</visible>
 				<itemlayout height="255" width="440">
 					<control type="group">
 						<top>20</top>
