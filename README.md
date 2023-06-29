@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .1
   * minor adjustments
+  * fix player plot display on info if small Video OSD is selected
 
 
 - .0
