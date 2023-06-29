@@ -1231,9 +1231,9 @@
 	</include>
 	<include name="PVRPanelViewInfoPanel">
 		<control type="group">
-			<bottom>0</bottom>
+			<bottom>-55</bottom>
 			<height>370</height>
-			<animation effect="slide" end="0,55" time="0" condition="!Skin.HasSetting(ShowPVRGroups)">Conditional</animation>
+			<animation effect="slide" end="0,-55" time="0" condition="Skin.HasSetting(ShowPVRGroups) + Window.IsVisible(tvguide)">Conditional</animation>
 			<control type="image">
 				<texture colordiffuse="99FFFFFF">lists/panel.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
