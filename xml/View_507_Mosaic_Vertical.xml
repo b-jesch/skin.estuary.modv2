@@ -284,7 +284,7 @@
 						<left>30</left>
 						<top>30</top>
 						<width>200</width>
-						<height>285</height>
+						<height>300</height>
 						<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
@@ -293,7 +293,7 @@
 						<left>28</left>
 						<top>28</top>
 						<width>204</width>
-						<height>284</height>
+						<height>304</height>
 						<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>

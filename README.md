@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .2
   * fix wrong plot position on PVR Icon Wall when "show channel groups" on EPG grid is selected
+  * adjustments on mosaic views
 
 
 - .1
