@@ -21,6 +21,16 @@
 		</animation>
 		<depth>DepthDialog</depth>
 	</include>
+	<include name="Animation_DialogPVRNextUp">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" delay="1000" end="100" time="340" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="zoom" start="100" end="50" easing="in" tween="back" time="440" />
+			<effect type="fade" start="100" end="0" time="340" />
+		</animation>
+		<depth>DepthDialog</depth>
+	</include>
 	<include name="Animation_DialogPopupVisible">
 		<animation type="Visible" reversible="false">
 			<effect type="zoom" start="80" end="100" center="50%,50%" delay="160" tween="back" time="240" />
