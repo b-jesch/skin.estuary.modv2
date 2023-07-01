@@ -3,6 +3,7 @@
 	<onload condition="System.AddonIsEnabled(script.module.pvr.artwork)">RunScript(script.module.pvr.artwork,get_artwork,prefix=PVR.Nextup&amp;title=$INFO[VideoPlayer.NextTitle]&amp;genre=$INFO[VideoPlayer.NextGenre]&amp;channel=$INFO[VideoPlayer.ChannelName])</onload>
 	<onunload condition="System.AddonIsEnabled(script.module.pvr.artwork)">RunScript(script.module.pvr.artwork,clear_artwork,prefix=PVR.Nextup)</onunload>
 	<visible>$EXP[PvrNextUpTimeSlot] + VideoPlayer.HasEpg + Window.IsActive(fullscreenvideo) + VideoPlayer.Content(livetv) + !Window.IsVisible(videoosd) + !Window.IsVisible(seekbar) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(tvguide) + !Window.IsVisible(Custom_1135_PVROverlay.xml) + !Window.IsVisible(Custom_1143_VideoInfo.xml)</visible>
+	<include>Animation_DialogPVRNextUp</include>
 	<controls>
 		<control type="group">
 			<right>64</right>

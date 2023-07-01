@@ -46,6 +46,7 @@ supports animated poster only.
 ### 1.0.0+omega ###
 - .0
   * initial commit
+  * add animation to PVR NextUp
 
  
 ### Screenshots ###
