@@ -48,6 +48,7 @@ supports animated poster only.
   * fix wrong plot position on PVR Icon Wall when "show channel groups" on EPG grid is selected
   * adjustments on mosaic views
   * add animation to PVR NextUp
+  * reverted image type back to multiimage for weather widget
 
 
 - .1

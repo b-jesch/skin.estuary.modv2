@@ -33,16 +33,16 @@
 			<randomize>true</randomize>
 			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + [$EXP[widgetHasFocus] | Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)]</visible>
 		</control>
-		<control type="image">
-			<depth>DepthBackground</depth>
+		<control type="multiimage">
 			<include>FullScreenDimensions</include>
+			<depth>DepthBackground</depth>
 			<aspectratio>scale</aspectratio>
-			<fadetime>400</fadetime>
+			<fadetime>600</fadetime>
 			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[WeatherFanartVar]</texture>
+			<imagepath background="true" colordiffuse="99FFFFFF">$VAR[WeatherFanartVar]</imagepath>
 			<visible>!Control.HasFocus(9000) + String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget) + !String.IsEmpty(Container(9000).ListItem.Property(background)) + Skin.HasSetting(show_fanart) + !Player.HasMedia</visible>
 		</control>
 		<control type="image">
