@@ -47,6 +47,7 @@ supports animated poster only.
 - .0
   * initial commit
   * add animation to PVR NextUp
+  * reverted image type back to multiimage for weather widget
 
  
 ### Screenshots ###
