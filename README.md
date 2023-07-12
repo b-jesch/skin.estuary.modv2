@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.2+nexus ###
+- .3
+  * reverted image type back to multiimage for weather widget pt.2
+  
+
 - .2
   * fix wrong plot position on PVR Icon Wall when "show channel groups" on EPG grid is selected
   * adjustments on mosaic views
