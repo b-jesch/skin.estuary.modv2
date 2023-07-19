@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .3
   * reverted image type back to multiimage for weather widget pt.2
+  * Introducing battery level display/symbol on Top Bar in Home screen for mobile devices
   
 
 - .2
