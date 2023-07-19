@@ -2949,7 +2949,7 @@
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="group">
-						<top>18</top>
+						<top>16</top>
 						<width>70</width>
 						<height>22</height>
 						<visible>Skin.HasSetting(show_battery)</visible>
