@@ -3,6 +3,11 @@
 	<fontset id="Default" idloc="15109">
 		<!-- Normal Fonts -->
 		<font>
+			<name>font05</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>12</size>
+		</font>
+		<font>
 			<name>font09</name>
 			<filename>NotoSans-Regular.ttf</filename>
 			<size>20</size>
@@ -589,6 +594,12 @@
 	<fontset id="Arial" idloc="31053">
 		<!-- Arial Font better for non English -->
 		<font>
+			<name>font05</name>
+			<filename>arial.ttf</filename>
+			<size>12</size>
+			<style>lighten</style>
+		</font>
+		<font>
 			<name>font09</name>
 			<filename>arial.ttf</filename>
 			<size>17</size>
@@ -1157,6 +1168,12 @@
 	</fontset>
 	<fontset id="Arial Unicode MS" idloc="31644">
 		<!-- Normal Fonts -->
+		<font>
+			<name>font05</name>
+			<filename>ArialUnicodeMS.ttf</filename>
+			<size>12</size>
+			<style>lighten</style>
+		</font>
 		<font>
 			<name>font09</name>
 			<filename>ArialUnicodeMS.ttf</filename>
@@ -1753,6 +1770,12 @@
 	</fontset>
 	<fontset id="Economica" idloc="31619">
 		<!-- Normal Fonts -->
+		<font>
+			<name>font05</name>
+			<filename>Economica-Regular.ttf</filename>
+			<size>12</size>
+			<style>lighten</style>
+		</font>
 		<font>
 			<name>font09</name>
 			<filename>Economica-Regular.ttf</filename>

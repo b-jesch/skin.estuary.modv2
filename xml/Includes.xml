@@ -2978,6 +2978,14 @@
 							<info>System.BatteryLevel</info>
 							<visible>Integer.IsLessOrEqual(System.BatteryLevel,9)</visible>
 						</control>
+						<control type="label">
+							<top>2</top>
+							<left>20</left>
+							<width>30</width>
+							<font>font05</font>
+							<align>center</align>
+							<label>$INFO[System.BatteryLevel]</label>
+						</control>
 					</control>
 					<control type="image">
 						<top>8</top>
