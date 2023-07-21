@@ -2997,31 +2997,32 @@
 				<visible>Skin.HasSetting(show_battery)</visible>
 				<control type="image">
 					<width>100</width>
+					<height>26</height>
 					<texture>flags/battery_load.png</texture>
 				</control>
 				<control type="progress">
-					<top>6</top>
+					<top>8</top>
 					<left>11</left>
-					<width>32</width>
-					<height>14</height>
-					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<width>25</width>
+					<height>10</height>
+					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
 					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
 					<info>System.BatteryLevel</info>
 					<visible>Integer.IsGreater(System.BatteryLevel,9)</visible>
 				</control>
 				<control type="progress">
-					<top>6</top>
+					<top>8</top>
 					<left>11</left>
-					<width>32</width>
-					<height>14</height>
-					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<width>25</width>
+					<height>10</height>
+					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
 					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
 					<info>System.BatteryLevel</info>
 					<visible>Integer.IsLessOrEqual(System.BatteryLevel,9)</visible>
 				</control>
 				<control type="label">
 					<top>-2</top>
-					<left>50</left>
+					<left>45</left>
 					<width>50</width>
 					<font>font09</font>
 					<align>center</align>
