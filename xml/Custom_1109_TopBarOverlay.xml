@@ -66,45 +66,11 @@
 						<width>auto</width>
 						<visible>VideoPlayer.HasEpg</visible>
  					</control>
-					<control type="group">
-						<top>12</top>
-						<width>60</width>
-						<height>22</height>
-						<visible>Skin.HasSetting(show_battery)</visible>
-						<control type="image">
-							<left>14</left>
-							<width>44</width>
-							<texture>flags/battery_load.png</texture>
-						</control>
-						<control type="progress">
-							<top>4</top>
-							<left>22</left>
-							<width>32</width>
-							<height>14</height>
-							<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-							<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
-							<info>System.BatteryLevel</info>
-							<visible>Integer.IsGreater(System.BatteryLevel,9)</visible>
-						</control>
-						<control type="progress">
-							<top>4</top>
-							<left>22</left>
-							<width>32</width>
-							<height>14</height>
-							<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-							<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
-							<info>System.BatteryLevel</info>
-							<visible>Integer.IsLessOrEqual(System.BatteryLevel,9)</visible>
-						</control>
-						<control type="label">
-							<top>2</top>
-							<left>20</left>
-							<width>30</width>
-							<font>font05</font>
-							<align>center</align>
-							<label>$INFO[System.BatteryLevel]</label>
-						</control>
-					</control>
+					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
+						<param name="left">18</param>
+						<param name="top">12</param>
+						<param name="width">106</param>
+					</include>
 					<control type="image">
 						<top>2</top>
 						<left>0</left>

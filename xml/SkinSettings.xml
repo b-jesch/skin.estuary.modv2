@@ -1092,6 +1092,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(show_battery)</onclick>
 					<selected>Skin.HasSetting(show_battery)</selected>
+					<visible>!String.IsEmpty(System.BatteryLevel)</visible>
 				</control>
 				<control type="radiobutton" id="717">
 					<label>$LOCALIZE[31592]</label>
