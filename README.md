@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 1.0.0+omega ###
+- .1
+  * Introducing battery level indicator
+
+
 - .0
   * initial commit
   * add animation to PVR NextUp

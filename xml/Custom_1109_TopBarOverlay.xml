@@ -66,6 +66,11 @@
 						<width>auto</width>
 						<visible>VideoPlayer.HasEpg</visible>
  					</control>
+					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
+						<param name="left">18</param>
+						<param name="top">12</param>
+						<param name="width">106</param>
+					</include>
 					<control type="image">
 						<top>2</top>
 						<left>0</left>
