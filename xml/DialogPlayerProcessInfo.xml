@@ -199,24 +199,17 @@
 				</control>
 				<control type="label">
 					<height>35</height>
+					<width>700</width>
+					<aligny>bottom</aligny>
+					<label>$LOCALIZE[22012] : [COLOR white]$INFO[system.memory(used),, / ]$INFO[system.memory(total),,  -  ]$INFO[system.memory(used.percent),,] [/COLOR]</label>
+					<font>font12</font>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<visible>!System.Platform.Android</visible>
+				</control>
+				<control type="label">
+					<height>35</height>
 					<aligny>bottom</aligny>
 					<label>$LOCALIZE[460] : [COLOR white]$INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]$INFO[VideoPlayer.AudioBitrate,$COMMA , kb/s][/COLOR]</label>
-					<font>font12</font>
-					<textcolor>$VAR[SkinColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<height>35</height>
-					<width>700</width>
-					<aligny>bottom</aligny>
-					<label>$INFO[System.Memory(used.percent),$LOCALIZE[31030] : [COLOR white],[/COLOR]]</label>
-					<font>font12</font>
-					<textcolor>$VAR[SkinColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<height>35</height>
-					<width>700</width>
-					<aligny>bottom</aligny>
-					<label/>
 					<font>font12</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 				</control>
@@ -227,14 +220,74 @@
 					<label>$INFO[System.CpuUsage,$LOCALIZE[13271] [COLOR white],[/COLOR]]</label>
 					<font>font12</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<visible>!System.Platform.Android</visible>
+				</control>
+				<control type="label">
+					<width>700</width>
+					<height>35</height>
+					<aligny>bottom</aligny>
+					<label>$INFO[System.CpuFrequency,$LOCALIZE[13284] [COLOR white],[/COLOR]]</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+				    <visible>System.Platform.Android</visible>
+				</control>
+				<control type="label">
+					<height>35</height>
+					<right>30</right>
+					<aligny>bottom</aligny>
+					<label>$LOCALIZE[22012] : [COLOR white]$INFO[system.memory(used),, / ]$INFO[system.memory(total),,  -  ]$INFO[system.memory(used.percent),,] [/COLOR]</label>
+					<font>font12</font>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<visible>System.Platform.Android</visible>
+				</control>
+				<control type="label">
+					<height>10</height>
+					<width>1100</width>
+					<aligny>bottom</aligny>
+					<label></label>
+					<font>font8</font>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+				</control>
+				<control type="progress">
+				    <visible>!Skin.HasSetting(SmallOSDVideo)</visible>
+					<description>CPU BAR</description>
+					<width>1430</width>
+					<height>14</height>
+					<info>System.CPUUsage</info>
+					<visible>!System.Platform.Android</visible>
+				</control>
+			    <control type="progress">
+				    <visible>Skin.HasSetting(SmallOSDVideo)</visible>
+					<description>CPU BAR</description>
+					<width>1860</width>
+					<height>14</height>
+					<info>System.CPUUsage</info>
+					<visible>!System.Platform.Android</visible>
+				</control>
+				<control type="progress">
+				    <visible>!Skin.HasSetting(SmallOSDVideo)</visible>
+					<description>Ram BAR</description>
+					<width>1430</width>
+					<height>14</height>
+					<info>system.memory(used)</info>
+					<visible>System.Platform.Android</visible>
+				</control>
+				<control type="progress">
+				    <visible>Skin.HasSetting(SmallOSDVideo)</visible>
+					<description>Ram BAR</description>
+					<width>1860</width>
+					<height>14</height>
+					<info>system.memory(used)</info>
+					<visible>System.Platform.Android</visible>
 				</control>
 			</control>
 			<control type="grouplist">
 				<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-					<param name="left" value="1340"/>
+					<param name="left" value="1470"/>
 				</include>
 				<include content="ItemLeft" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
-					<param name="left" value="1010"/>
+					<param name="left" value="1470"/>
 				</include>
 				<right>30</right>
 				<bottom>138</bottom>
@@ -277,19 +330,11 @@
 					<width>700</width>
 					<height>35</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.Memory(total),$LOCALIZE[22012] : [COLOR white],[/COLOR]]</label>
-					<font>font12</font>
-					<shadowcolor>black</shadowcolor>
-					<textcolor>$VAR[SkinColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<width>700</width>
-					<height>35</height>
-					<aligny>bottom</aligny>
 					<label>$INFO[System.CpuFrequency,$LOCALIZE[13284] [COLOR white],[/COLOR]]</label>
 					<font>font12</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
+				    <visible>!System.Platform.Android</visible>
 				</control>
 				<control type="label">
 					<width>700</width>
@@ -299,15 +344,7 @@
 					<font>font12</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<width>700</width>
-					<height>35</height>
-					<aligny>bottom</aligny>
-					<label>$INFO[System.GpuTemperature,$LOCALIZE[22010] [COLOR white],[/COLOR]]</label>
-					<font>font12</font>
-					<shadowcolor>black</shadowcolor>
-					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<visible>System.HasAddon(service.coreelec.settings)</visible>
 				</control>
 			</control>
 			<control type="button" id="800">

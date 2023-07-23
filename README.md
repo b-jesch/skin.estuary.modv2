@@ -46,6 +46,8 @@ supports animated poster only.
 ### 1.0.0+omega ###
 - .1
   * Introducing battery level indicator
+  * Update Player Process Info (again thanks to frodo19)
+  * Move Chapter/Cutmarkers to seekbar
 
 
 - .0
