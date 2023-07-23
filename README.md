@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .4
   * Update Player Process Info (again thanks to frodo19)
+  * Move Chapter/Cutmarkers to seekbar
   * improved battery level graphics
 
 
