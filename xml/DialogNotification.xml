@@ -9,7 +9,7 @@
 			<width>660</width>
 			<include>OpenClose_Right</include>
 			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
-			<visible>!Window.IsVisible(Startup.xml) + ![[Window.IsActive(fullscreenvideo) | Window.IsActive(FullscreenGame) | Window.IsActive(fullscreeninfo) | Window.IsVisible(MusicVisualisation.xml)] + Skin.HasSetting(hide_popup)]</visible>
+			<visible>!Window.IsVisible(Startup.xml)</visible>
 			<visible>![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 			<control type="image">
 				<left>0</left>

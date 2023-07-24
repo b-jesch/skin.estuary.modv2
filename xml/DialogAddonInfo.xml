@@ -223,7 +223,7 @@
 						<top>24</top>
 						<width>500</width>
 						<height>500</height>
-						<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+						<texture colordiffuse="BBFFFFFF">colors/black.png</texture>
 					</control>
 					<control type="textbox">
 						<left>34</left>
@@ -232,7 +232,7 @@
 						<height>500</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.AddonLifecycleType][CR]$INFO[ListItem.LifecycleDesc]</label>
+						<label>$INFO[ListItem.AddonLifecycleType][CR]$INFO[ListItem.AddonLifecycleDesc]</label>
 						<font>font36_title</font>
 					</control>
 				</control>

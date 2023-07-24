@@ -25,7 +25,7 @@
 				<control type="label" id="900011">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31627]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -95,7 +95,7 @@
 				<control type="label" id="900012">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[19033]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -125,7 +125,7 @@
 				<control type="label" id="900013">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31628]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -246,7 +246,7 @@
 				<control type="label" id="30020">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[24013]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -337,7 +337,7 @@
 				<control type="label" id="30011">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[24011]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -370,7 +370,7 @@
 				<control type="label" id="30013">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31418]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -414,7 +414,7 @@
 				<control type="label" id="30015">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31419]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -578,7 +578,7 @@
 				<control type="label" id="30016">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31555]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -918,7 +918,7 @@
 				<control type="label" id="30014">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31560]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -1029,12 +1029,6 @@
 					<selected>Skin.HasSetting(no_animations)</selected>
 					<onclick>Skin.ToggleSetting(no_animations)</onclick>
 				</control>
-				<control type="radiobutton" id="703">
-					<label>$LOCALIZE[31277]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(hide_popup)</onclick>
-					<selected>Skin.HasSetting(hide_popup)</selected>
-				</control>
 				<control type="button" id="719">
 					<label>$LOCALIZE[31577]</label>
 					<label2>$VAR[AutocloseOsdVar]</label2>
@@ -1066,7 +1060,7 @@
 				<control type="label" id="30017">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31564]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -1110,7 +1104,7 @@
 				<control type="label" id="30018">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31565]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -1141,7 +1135,7 @@
 				<control type="label" id="30019">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31566]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -1316,7 +1310,7 @@
 				<control type="label" id="100011">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>$LOCALIZE[31200]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -1424,7 +1418,7 @@
 				<control type="label" id="100013">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
-					<height>70</height>
+					<height>80</height>
 					<label>Widgets</label>
 					<align>center</align>
 					<aligny>center</aligny>
