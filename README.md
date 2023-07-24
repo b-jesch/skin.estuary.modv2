@@ -48,6 +48,7 @@ supports animated poster only.
   * Update Player Process Info (again thanks to frodo19)
   * Move Chapter/Cutmarkers to seekbar
   * improved battery level graphics
+  * Option "Hide notifications while Playback" removed
 
 
 - .3
