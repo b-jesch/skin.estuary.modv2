@@ -50,6 +50,7 @@ supports animated poster only.
   * improved battery level graphics
   * Option "Hide notifications while Playback" removed
   * Fix missing video genre fanart even if fanart pack is installed
+  * add runtime (duration) to PVR search results, minor improvements
 
 
 - .3
