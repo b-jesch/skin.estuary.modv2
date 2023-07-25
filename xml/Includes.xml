@@ -3126,9 +3126,8 @@
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</texture>
-						<visible>!Window.IsVisible(Home.xml) + !Skin.HasSetting(show_fanart) + !Control.IsVisible(502) + !Control.IsVisible(510) + !$EXP[infodialog_active]</visible>
-						<visible>!Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
+						<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[MediaFanartVar]</texture>
+						<visible>Skin.HasSetting(show_fanart) + !Window.IsVisible(Home.xml) + !Control.IsVisible(502) + !Control.IsVisible(510) + !$EXP[infodialog_active]</visible>
 					</control>
 					<control type="image">
 						<left>-3</left>

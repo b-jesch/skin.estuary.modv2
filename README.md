@@ -49,6 +49,7 @@ supports animated poster only.
   * Move Chapter/Cutmarkers to seekbar
   * improved battery level graphics
   * Option "Hide notifications while Playback" removed
+  * Fix missing video genre fanart even if fanart pack is installed
 
 
 - .3
