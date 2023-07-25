@@ -49,6 +49,7 @@ supports animated poster only.
   * Update Player Process Info (again thanks to frodo19)
   * Move Chapter/Cutmarkers to seekbar
   * Option "Hide notifications while Playback" removed
+  * Fix missing video genre fanart even if fanart pack is installed
 
 
 - .0
