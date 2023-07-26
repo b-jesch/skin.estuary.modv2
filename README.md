@@ -51,6 +51,7 @@ supports animated poster only.
   * Option "Hide notifications while Playback" removed
   * Fix missing video genre fanart even if fanart pack is installed
   * add runtime (duration) to PVR search results, minor improvements
+  * add a resume button to video info (DialogVideoInfo.xml)
 
 
 - .0

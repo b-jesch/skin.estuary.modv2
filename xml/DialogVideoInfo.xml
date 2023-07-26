@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
+	<onload condition="Integer.IsGreater(ListItem.PercentPlayed,0)">SetFocus(446)</onload>
 	<onload condition="Skin.HasSetting(tomatometerallcritics) + !String.IsEmpty(ListItem.Rating(tomatometerallcritics))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallcritics)] * 10)"',prop=rotten)</onload>
 	<onload condition="Skin.HasSetting(tomatometeravgcritics) + !String.IsEmpty(ListItem.Rating(tomatometeravgcritics))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometeravgcritics)] * 10)"',prop=rotten)</onload>
 	<onload condition="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.Rating(tomatometerallaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallaudience)] * 10)"',prop=rotten)</onload>
@@ -199,6 +200,13 @@
 						<param name="icon" value="icons/filemanager.png" />
 						<param name="label" value="$LOCALIZE[1024]" />
 					</include>
+					<include content="InfoDialogSmallButton" condition="Integer.IsGreater(ListItem.PercentPlayed,0) + !String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season)">
+						<param name="id" value="446" />
+						<param name="icon" value="icons/infodialogs/resume.png" />
+						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
+						<param name="onclick_2" value="SendClick(9)" />
+						<param name="label" value="$LOCALIZE[13362]" />
+					</include>
 					<include content="InfoDialogSmallButton" condition="!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]">
 						<param name="id" value="439" />
 						<param name="icon" value="icons/infodialogs/trailer.png" />
@@ -299,7 +307,7 @@
 			</control>
 			<control type="label">
 				<right>50</right>
-				<top>604</top>
+				<top>600</top>
 				<align>right</align>
 				<width>1400</width>
 				<height>44</height>
@@ -317,7 +325,7 @@
 			</control>
 			<control type="label">
 				<right>50</right>
-				<top>604</top>
+				<top>600</top>
 				<align>right</align>
 				<width>1400</width>
 				<height>44</height>
