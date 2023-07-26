@@ -162,7 +162,7 @@
 					<label>$LOCALIZE[31585]</label>
 					<selected>!Skin.HasSetting(ShowPVRChannelNumbers)</selected>
 					<onclick>Skin.ToggleSetting(ShowPVRChannelNumbers)</onclick>
-					<visible>Window.IsActive(MyPVRGuide.xml) | [Window.IsActive(MyPVRChannels.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31099]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31108])]]</visible>
+					<visible>Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRSearch.xml) | [Window.IsActive(MyPVRChannels.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31099]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31108])]]</visible>
 				</control>
 				<control type="radiobutton" id="6058">
 					<include>MediaMenuItemsCommonRadio</include>
