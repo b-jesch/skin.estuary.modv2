@@ -68,7 +68,7 @@
  					</control>
 					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
 						<param name="left">18</param>
-						<param name="top">12</param>
+						<param name="top">8</param>
 						<param name="width">106</param>
 					</include>
 					<control type="image">
