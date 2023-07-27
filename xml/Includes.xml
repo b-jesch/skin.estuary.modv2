@@ -2950,7 +2950,7 @@
 					</control>
 					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
 						<param name="width">120</param>
-						<param name="top">14</param>
+						<param name="top">12</param>
 					</include>
 					<control type="image">
 						<top>8</top>
@@ -2985,7 +2985,7 @@
 		</definition>
 	</include>
 	<include name="BatteryIndicator">
-		<param name="top">14</param>
+		<param name="top">12</param>
 		<param name="left">10</param>
 		<param name="width">120</param>
 		<definition>
@@ -2997,14 +2997,14 @@
 				<visible>Skin.HasSetting(show_battery)</visible>
 				<control type="image">
 					<width>100</width>
-					<height>26</height>
+					<height>28</height>
 					<texture>flags/battery_load.png</texture>
 				</control>
 				<control type="progress">
 					<top>8</top>
 					<left>10</left>
-					<width>26</width>
-					<height>10</height>
+					<width>27</width>
+					<height>12</height>
 					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
 					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
 					<info>System.BatteryLevel</info>
@@ -3013,15 +3013,15 @@
 				<control type="progress">
 					<top>8</top>
 					<left>10</left>
-					<width>26</width>
-					<height>10</height>
+					<width>27</width>
+					<height>12</height>
 					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
 					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
 					<info>System.BatteryLevel</info>
 					<visible>Integer.IsLessOrEqual(System.BatteryLevel,9)</visible>
 				</control>
 				<control type="label">
-					<top>-2</top>
+					<top>-1</top>
 					<left>45</left>
 					<width>50</width>
 					<font>font09</font>
