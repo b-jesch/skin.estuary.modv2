@@ -2950,7 +2950,7 @@
 					</control>
 					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
 						<param name="width">120</param>
-						<param name="top">16</param>
+						<param name="top">14</param>
 					</include>
 					<control type="image">
 						<top>8</top>
@@ -2985,7 +2985,7 @@
 		</definition>
 	</include>
 	<include name="BatteryIndicator">
-		<param name="top">16</param>
+		<param name="top">14</param>
 		<param name="left">10</param>
 		<param name="width">120</param>
 		<definition>
@@ -2993,7 +2993,7 @@
 				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
 				<left>$PARAM[left]</left>
-				<height>26</height>
+				<height>28</height>
 				<visible>Skin.HasSetting(show_battery)</visible>
 				<control type="image">
 					<width>100</width>
@@ -3002,8 +3002,8 @@
 				</control>
 				<control type="progress">
 					<top>8</top>
-					<left>11</left>
-					<width>25</width>
+					<left>10</left>
+					<width>26</width>
 					<height>10</height>
 					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
 					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
@@ -3012,8 +3012,8 @@
 				</control>
 				<control type="progress">
 					<top>8</top>
-					<left>11</left>
-					<width>25</width>
+					<left>10</left>
+					<width>26</width>
 					<height>10</height>
 					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
 					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
