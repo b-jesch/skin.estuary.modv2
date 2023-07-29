@@ -482,7 +482,7 @@
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
 					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
 					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(script.input.adsp)">InstallAddon(script.preshowexperience)</onclick>
+					<onclick condition="!System.HasAddon(script.preshowexperience)">InstallAddon(script.preshowexperience)</onclick>
 					<selected>System.HasAddon(script.preshowexperience)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
