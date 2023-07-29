@@ -215,11 +215,11 @@
 						<param name="onclick_3" value="PlayMedia($ESCINFO[ListItem.Trailer],false,1)" />
 						<param name="label" value="$LOCALIZE[20410]" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">
+					<include content="InfoDialogSmallButton" condition="System.HasAddon(script.preshowexperience) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">
 						<param name="id" value="441" />
-						<param name="icon" value="icons/infodialogs/cinema.png" />
+						<param name="icon" value="icons/infodialogs/preshowexp.png" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
-						<param name="onclick_2" value="RunScript(script.cinemavision,experience)" />
+						<param name="onclick_2" value="RunScript(script.preshowexperience,experience)" />
 						<param name="label" value="$LOCALIZE[31003]" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="System.AddonIsEnabled(script.embuary.info) + !StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">

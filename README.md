@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 1.0.0+omega ###
+- .2
+  * add support for PreShowExperience
+
+
 - .1
   * Introducing battery level indicator
   * Update Player Process Info (again thanks to frodo19)
