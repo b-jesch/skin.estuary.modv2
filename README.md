@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.2+nexus ###
+- .5
+  * add support for PreShow Experience
+
+
 - .4
   * Update Player Process Info (again thanks to frodo19)
   * Move Chapter/Cutmarkers to seekbar

@@ -8,7 +8,7 @@
 			<right>-20</right>
 			<width>660</width>
 			<include>OpenClose_Right</include>
-			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
+			<visible>String.IsEmpty(Window(Home).Property(script.preshowexperience.running))</visible>
 			<visible>!Window.IsVisible(Startup.xml)</visible>
 			<visible>![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 			<control type="image">
