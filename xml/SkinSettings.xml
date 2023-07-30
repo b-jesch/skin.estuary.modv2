@@ -476,6 +476,16 @@
 					<selected>System.HasAddon(script.input.adsp)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
+				<control type="radiobutton" id="323">
+					<label>PreShow Experience $INFO[System.AddonVersion(script.preshowexperience),(,)]</label>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(script.preshowexperience)">InstallAddon(script.preshowexperience)</onclick>
+					<selected>System.HasAddon(script.preshowexperience)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
 				<control type="radiobutton" id="310">
 					<label>Sleepy Watchdog $INFO[System.AddonVersion(service.sleepy.watchdog),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
