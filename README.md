@@ -46,7 +46,7 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .5
   * add support for PreShow Experience
-
+  * add TV Show count/seen/unseen to settings shortcut widget
 
 - .4
   * Update Player Process Info (again thanks to frodo19)
