@@ -46,7 +46,7 @@ supports animated poster only.
 ### 1.0.0+omega ###
 - .2
   * add support for PreShowExperience
-
+  * add TV Show count/seen/unseen to settings shortcut widget
 
 - .1
   * Introducing battery level indicator

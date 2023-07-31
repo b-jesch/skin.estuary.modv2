@@ -1353,6 +1353,23 @@
 								</control>
 								<control type="label">
 									<top>80</top>
+									<label>[B]$INFO[Window(Home).Property(Tvshows.Count),, $LOCALIZE[20343]][CR]$INFO[Window(Home).Property(Tvshows.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Tvshows.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+									<font>font12</font>
+									<align>center</align>
+									<scroll>true</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<width>300</width>
+								<visible>Library.HasContent(tvshows)</visible>
+								<control type="image">
+									<centerleft>50%</centerleft>
+									<width>100</width>
+									<height>100</height>
+									<texture>DefaultTVShows.png</texture>
+								</control>
+								<control type="label">
+									<top>80</top>
 									<label>[B]$INFO[Window(Home).Property(Episodes.Count),, $LOCALIZE[20453]][CR]$INFO[Window(Home).Property(Episodes.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Episodes.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
 									<font>font12</font>
 									<align>center</align>
