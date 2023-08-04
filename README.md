@@ -47,6 +47,7 @@ supports animated poster only.
 - .5
   * add support for PreShow Experience
   * add TV Show count/seen/unseen to settings shortcut widget
+  * improved actors list in video info
 
 - .4
   * Update Player Process Info (again thanks to frodo19)
