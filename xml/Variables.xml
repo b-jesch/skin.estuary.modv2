@@ -2011,8 +2011,9 @@
  		<value condition="Control.HasFocus(60)">$LOCALIZE[31490]$INFO[Container(60).ListItem.Title, | ]$INFO[Container(60).ListItem.Year, (,)]</value>
 		<value condition="Control.HasFocus(50) + Window.IsVisible(DialogMusicInfo.xml) + String.IsEqual(ListItem.DBTYPE,artist)">$LOCALIZE[31501]$INFO[Container(50).ListItem.Label, | ]$INFO[Container(50).ListItem.Year, (,)]</value>
 		<value condition="Control.HasFocus(50) + Window.IsVisible(DialogMusicInfo.xml) + String.IsEqual(ListItem.DBTYPE,album)">$LOCALIZE[134]$INFO[Container(50).ListItem.TrackNumber, | ,. ]$INFO[Container(50).ListItem.Label]</value>
- 		<value condition="Control.HasFocus(50)">$LOCALIZE[206]$INFO[Container(50).ListItem.Label, | ]$INFO[Container(50).ListItem.Label2, $LOCALIZE[31125] ,]</value>
- 		<value condition="Control.HasFocus(9004)">$LOCALIZE[206]$INFO[Container(50).ListItem.Label, | ]$INFO[Container(50).ListItem.Label2, $LOCALIZE[31125] ,]</value>
+ 		<value condition="Control.HasFocus(50) + !Skin.HasSetting(HideWidgetLabels)">$LOCALIZE[206]$INFO[Container(50).ListItem.Label, | ]$INFO[Container(50).ListItem.Label2, $LOCALIZE[31125] ,]</value>
+ 		<value condition="Control.HasFocus(50) + Skin.HasSetting(HideWidgetLabels)">$LOCALIZE[206]</value>
+		<value condition="Control.HasFocus(9004)">$LOCALIZE[206]$INFO[Container(50).ListItem.Label, | ]$INFO[Container(50).ListItem.Label2, $LOCALIZE[31125] ,]</value>
  		<value condition="Control.HasFocus(5100) + Window.IsVisible(DialogMusicInfo.xml)">$LOCALIZE[31502]$INFO[Container(5100).ListItem.Label, | ]$INFO[Container(5100).ListItem.Year, (,)]</value>
  		<value condition="Control.HasFocus(5100)">$LOCALIZE[206]$INFO[Container(5100).ListItem.Label, | ]$INFO[Container(5100).ListItem.Label2, $LOCALIZE[31125] ,]</value>
  		<value condition="Control.HasFocus(5200)">$LOCALIZE[206]$INFO[Container(5200).ListItem.Label, | ]$INFO[Container(5200).ListItem.Label2, $LOCALIZE[31125] ,]</value>

@@ -47,6 +47,7 @@ supports animated poster only.
 - .2
   * add support for PreShowExperience
   * add TV Show count/seen/unseen to settings shortcut widget
+  * improved actors list in video info
 
 - .1
   * Introducing battery level indicator
