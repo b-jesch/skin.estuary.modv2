@@ -50,7 +50,7 @@
 						<control type="group">
 							<left>-220</left>
 							<top>19</top>
-							<include>InfoWallMovieLayout</include>
+							<include>PostersMovieLayout</include>
 						</control>
 					</itemlayout>
 					<focusedlayout width="490">
@@ -61,7 +61,7 @@
 								<visible>Container.OnScrollPrevious</visible>
 								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-								<include>InfoWallMovieLayout</include>
+								<include>PostersMovieLayout</include>
 							</control>
 							<control type="group">
 								<left>-40</left>
@@ -69,7 +69,7 @@
 								<visible>Container.OnScrollNext</visible>
 								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-								<include>InfoWallMovieLayout</include>
+								<include>PostersMovieLayout</include>
 							</control>
 						</control>
 					</focusedlayout>

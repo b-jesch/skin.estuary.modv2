@@ -1214,6 +1214,12 @@
 					<onclick>Skin.ToggleSetting(background_showvisualisation)</onclick>
 					<selected>!Skin.HasSetting(background_showvisualisation)</selected>
 				</control>
+				<control type="radiobutton" id="723">
+					<label>$LOCALIZE[31656]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(wallview_labels)</onclick>
+          <selected>!Skin.HasSetting(wallview_labels)</selected>
+				</control>
 			</control>
 			<control type="grouplist" id="600">
 				<top>168</top>
