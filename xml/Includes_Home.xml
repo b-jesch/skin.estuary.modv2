@@ -7676,7 +7676,6 @@
 				<orientation>horizontal</orientation>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<visible>!String.IsEmpty(ListItem.DBID)</visible>
-				<!--<onfocus>$PARAM[onfocus]</onfocus>-->
 				<visible>$PARAM[visible]</visible>
 				<itemlayout width="314" height="430">
 					<control type="group">
