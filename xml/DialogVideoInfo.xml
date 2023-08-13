@@ -185,7 +185,7 @@
 					<ondown condition="Control.IsVisible(50)">SetFocus(50)</ondown>
 					<ondown condition="!Control.IsVisible(50) + !Control.IsVisible(5100) + !Control.IsVisible(5200) + !Control.IsVisible(5300) + !Control.IsVisible(5400) + !Control.IsVisible(5500) + !Control.IsVisible(5600) + !Control.IsVisible(5700) + !Control.IsVisible(5800) + !Control.IsVisible(5900) + !Control.IsVisible(6000) + !Control.IsVisible(63000)">SetFocus(5002)</ondown>
 					<align>left</align>
-					<itemgap>-16</itemgap>
+					<itemgap>-20</itemgap>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic">200</scrolltime>
 					<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
@@ -419,14 +419,10 @@
 			<animation effect="fade" time="100">VisibleChange</animation>
 			<include content="WidgetListCastInfo" condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,musicvideo)">
 				<param name="list_id" value="50"/>
-				<param name="alt_focus" value="9004"/>
-				<param name="onfocus" value="SetFocus(9004)"/>
 				<param name="visible" value="!Skin.HasSetting(VideoInfo_MovieCastList)"/>
 			</include>
 			<include content="WidgetListCastInfo" condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">
 				<param name="list_id" value="50"/>
-				<param name="alt_focus" value="9004"/>
-				<param name="onfocus" value="SetFocus(9004)"/>
 				<param name="visible" value="!Skin.HasSetting(VideoInfo_TVShowsCastList)"/>
 			</include>
 			<include content="WidgetListThumbInfo" condition="!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,musicvideo)">
