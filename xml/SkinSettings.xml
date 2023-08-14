@@ -888,6 +888,12 @@
 					<onclick>Skin.ToggleSetting(hide_pubyear)</onclick>
 					<selected>Skin.HasSetting(hide_pubyear)</selected>
 				</control>
+				<control type="radiobutton" id="921">
+					<label>$LOCALIZE[31656]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_wallviewlabels)</onclick>
+					<selected>Skin.HasSetting(show_wallviewlabels)</selected>
+				</control>
 				<control type="radiobutton" id="917">
 					<label>$LOCALIZE[31364]</label>
 					<include>DefaultSettingButton</include>
