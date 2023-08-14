@@ -5,8 +5,8 @@
 			<include>OpenClose_Right</include>
 			<visible>Control.IsVisible(507)</visible>
 			<include>Visible_Right</include>
-			<left>-10</left>
-			<right>0</right>
+			<left>-15</left>
+			<right>20</right>
 			<top>-10</top>
 			<animation effect="slide" end="5,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]">Conditional</animation>
 			<animation effect="slide" end="-17.5,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9) + [Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)]">Conditional</animation>

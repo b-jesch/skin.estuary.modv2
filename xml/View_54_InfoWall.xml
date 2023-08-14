@@ -1271,8 +1271,37 @@
 			</control>
 		</definition>
 	</include>
+	<include name="WallViewLabels">
+		<param name="left">35</param>
+		<param name="top">382</param>
+		<param name="top_2">404</param>
+		<param name="width">250</param>
+		<definition>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>25</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Label]</label>
+				<font>font20_title</font>
+				<scroll>$PARAM[focused]</scroll>
+			</control>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top_2]</top>
+				<width>$PARAM[width]</width>
+				<height>22</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Year]</label>
+				<visible>!Listitem.IsCollection</visible>
+				<font>font09</font>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoWallMovieLayout">
 		<param name="focused">false</param>
+		<param name="infolabels">false</param>
 		<definition>
 			<control type="group">
 				<visible>[String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(animatedposter))]</visible>
@@ -1554,6 +1583,10 @@
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircleGreyed</include>
 			</control>
 			<include>InfoWallProgressLayout</include>
+			<include content="WallViewLabels" condition="Skin.HasSetting(show_wallviewlabels) + !Window.IsVisible(Home) + $PARAM[infolabels]">
+				<param name="left">35</param>
+				<param name="width">250</param>
+			</include>
 			<control type="group">
 				<top>195</top>
 				<visible>[Skin.HasSetting(enable_LibraryDiscArt) + !Window.IsVisible(Home)] | [Skin.HasSetting(enable_HomeDiscArt) + Window.IsVisible(Home)]</visible>
@@ -2085,11 +2118,13 @@
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos) | Container.Content(games) | Container.Content(favourites)</visible>
-				<itemlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
+				<itemlayout height="460" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
 					<control type="group">
 						<left>30</left>
 						<top>120</top>
-						<include>InfoWallMovieLayout</include>
+						<include content="InfoWallMovieLayout">
+							<param name="infolabels" value="false" />
+						</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
@@ -2103,6 +2138,7 @@
 						<top>120</top>
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />
+							<param name="infolabels" value="false" />
 						</include>
 					</control>
 				</focusedlayout>

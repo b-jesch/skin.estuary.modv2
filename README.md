@@ -44,6 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 1.0.0+omega ###
+- .3
+  * improved scrollbars
+  * add title and year info to wall view items
+
+
 - .2
   * add support for PreShowExperience
   * add TV Show count/seen/unseen to settings shortcut widget
