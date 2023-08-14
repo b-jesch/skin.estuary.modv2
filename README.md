@@ -44,6 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.2+nexus ###
+- .6
+  * improved scrollbars
+  * add title and year info to wall view items
+
+
 - .5
   * add support for PreShow Experience
   * add TV Show count/seen/unseen to settings shortcut widget

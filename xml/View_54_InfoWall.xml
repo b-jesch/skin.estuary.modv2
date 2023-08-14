@@ -1294,7 +1294,7 @@
 				<height>22</height>
 				<align>center</align>
 				<label>$INFO[ListItem.Year]</label>
-				<label>test</label>
+				<visible>!Listitem.IsCollection</visible>
 				<font>font09</font>
 			</control>
 		</definition>

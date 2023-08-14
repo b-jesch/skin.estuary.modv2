@@ -10,7 +10,7 @@
 			<control type="panel" id="500">
 				<left>0</left>
 				<top>0</top>
-				<width>98%</width>
+				<right>20</right>
 				<height>100%</height>
 				<oninfo condition="String.IsEqual(ListItem.DBType,set)">ActivateWindow(1132)</oninfo>
 				<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
