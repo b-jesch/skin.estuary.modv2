@@ -746,13 +746,13 @@
 				</control>
 				<!-- Maybe later (WIP)
 				<control type="button" id="502">
-                    <label>$LOCALIZE[31587]</label>
-                    <label2>$VAR[Label_SkinSetting_PictureSource]</label2>
-                    <include>DefaultSettingButton</include>
-                     <onclick condition="!Skin.String(picture_source)">Skin.SetPath(picture_source)</onclick>
-                    <onclick condition="Skin.String(picture_source)">Skin.Reset(picture_source)</onclick>
-                </control>
-                -->
+				    <label>$LOCALIZE[31587]</label>
+				    <label2>$VAR[Label_SkinSetting_PictureSource]</label2>
+				    <include>DefaultSettingButton</include>
+				     <onclick condition="!Skin.String(picture_source)">Skin.SetPath(picture_source)</onclick>
+				    <onclick condition="Skin.String(picture_source)">Skin.Reset(picture_source)</onclick>
+				</control>
+				-->
 				<control type="radiobutton" id="507">
 					<label>$LOCALIZE[31158]</label>
 					<include>DefaultSettingButton</include>
