@@ -47,6 +47,8 @@ supports animated poster only.
 - .3
   * improved scrollbars
   * add title and year info to wall view items
+  * disable autoclose OSD when touchmode is selected
+  * improved background image handling (issue #128) 
 
 
 - .2

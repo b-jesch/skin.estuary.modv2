@@ -3113,6 +3113,7 @@
 					<include>ColoredBackgroundImages</include>
 				</control>
 				<control type="group" id="31111">
+					<visible>Skin.HasSetting(show_fanart) + !Window.IsVisible(Home.xml) + !$EXP[infodialog_active]</visible>
 					<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -3120,11 +3121,12 @@
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<control type="image" id="32112">
 						<include>FullScreenDimensions</include>
-						<aspectratio>scale</aspectratio>
+						<aspectratio aligny="center">scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[MediaFanartVar]</texture>
-						<visible>Skin.HasSetting(show_fanart) + !Window.IsVisible(Home.xml) + !Control.IsVisible(502) + !Control.IsVisible(510) + !$EXP[infodialog_active]</visible>					</control>
+						<visible>!Control.IsVisible(502) + !Control.IsVisible(510)</visible>
+					</control>
 					<control type="image">
 						<left>-3</left>
 						<top>0</top>
@@ -3135,7 +3137,16 @@
 						<include>OpenClose_Left</include>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[PosterVar]</texture>
-						<visible>Control.IsVisible(502) + !$EXP[infodialog_active]</visible>
+						<visible>Control.IsVisible(502)</visible>
+					</control>
+					<control type="image">
+						<include>FullScreenDimensions</include>
+						<aspectratio aligny="center">scale</aspectratio>
+						<fadetime>400</fadetime>
+						<include>OpenClose_Left</include>
+						<animation effect="fade" time="400">VisibleChange</animation>
+						<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[AddonsFanartVar]</texture>
+						<visible>Window.IsActive(addoninformation) | Window.IsActive(addonbrowser) | Window.IsActive(1100)</visible>
 					</control>
 				</control>
 			</control>
