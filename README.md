@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .7
   * revert back extra info on cast list
+  * fix wrong actors list showing on movies with same titles but different year   
   
 
 - .6
