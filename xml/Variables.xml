@@ -2,10 +2,11 @@
 <includes>
 	<variable name="OSDCastVar">
 			<value condition="!String.IsEmpty(Window(home).Property(NextUpNotification.NowPlaying.Type)) + String.IsEqual(Window(home).Property(NextUpNotification.NowPlaying.Type),movie) + Integer.IsGreater(Window(home).Property(NextUpNotification.NowPlaying.DBID),-1)">plugin://script.embuary.helper?info=getcast&amp;dbid=$INFO[Window(home).Property(NextUpNotification.NowPlaying.DBID)]</value>
-			<value condition="!String.IsEmpty(Window(home).Property(NextUpNotification.NowPlaying.Type)) + String.IsEqual(Window(home).Property(NextUpNotification.NowPlaying.Type),episode) + Integer.IsGreater(Window(home).Property(NextUpNotification.NowPlaying.DBID),-1)">plugin://script.embuary.helper?info=getcast&amp;dbid=$INFO[Window(home).Property(NextUpNotification.NowPlaying.DBID)]</value>
+			<value condition="!String.IsEmpty(Window(home).Property(NextUpNotification.NowPlaying.Type)) + String.IsEqual(Window(home).Property(NextUpNotification.NowPlaying.Type),episode) + Integer.IsGreater(Window(home).Property(NextUpNotification.NowPlaying.DBID),-1)">plugin://script.embuary.helper?info=getcast&amp;dbid=$INFO[Window(home).Property(NextUpNotification.NowPlaying.DBID)]&amp;idtype=episode</value>
 			<value condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;dbid=$INFO[VideoPlayer.DBID]</value>
 			<value condition="VideoPlayer.Content(movies) + String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title=$INFO[VideoPlayer.Title]</value>
-			<value condition="VideoPlayer.Content(episodes)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title=$INFO[VideoPlayer.TvShowTitle]</value>
+			<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;dbid=$INFO[VideoPlayer.DBID]&amp;idtype=episode</value>
+			<value condition="VideoPlayer.Content(episodes) + String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title=$INFO[VideoPlayer.TvShowTitle]</value>
 			<value condition="VideoPlayer.Content(livetv)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title=$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="FanartAnimated">
