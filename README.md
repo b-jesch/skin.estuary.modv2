@@ -46,7 +46,9 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .7
   * revert back extra info on cast list
-  * fix wrong actors list showing on movies with same titles but different year   
+  * fix wrong actors list showing on movies with same titles but different year
+  * add Internet Connection Status to Home screen
+  * Merge PR #130 (disappearing side panel on busy spinner)
   
 
 - .6
