@@ -7677,6 +7677,7 @@
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<visible>!String.IsEmpty(ListItem.DBID)</visible>
 				<visible>$PARAM[visible]</visible>
+				<onfocus>$PARAM[onfocus]</onfocus>
 				<itemlayout width="314" height="430">
 					<control type="group">
 						<left>68</left>
@@ -7757,7 +7758,7 @@
 							<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>Control.HasFocus($PARAM[list_id])</visible>
+							<visible>Control.HasFocus($PARAM[list_id]) | Control.HasFocus($PARAM[alt_focus])</visible>
 						</control>
 						<control type="image">
 							<left>9</left>
@@ -7767,7 +7768,7 @@
 							<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 							<bordersize>20</bordersize>
 							<visible>Skin.HasSetting(EnableGradientColor)</visible>
-							<visible>Control.HasFocus($PARAM[list_id])</visible>
+							<visible>Control.HasFocus($PARAM[list_id]) | Control.HasFocus($PARAM[alt_focus])</visible>
 						</control>
 						<control type="image">
 							<left>13</left>
@@ -7779,7 +7780,7 @@
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 							<visible>Skin.HasSetting(show_borders)</visible>
-							<visible>!Control.HasFocus($PARAM[list_id])</visible>
+							<visible>!Control.HasFocus($PARAM[list_id]) + !Control.HasFocus($PARAM[alt_focus])</visible>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -7791,7 +7792,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="group">
-							<visible>Skin.HasSetting(HideWidgetLabels)</visible>
+							<visible>!Control.HasFocus($PARAM[list_id]) + Skin.HasSetting(HideWidgetLabels)</visible>
 							<control type="image">
 								<left>35</left>
 								<bottom>50</bottom>

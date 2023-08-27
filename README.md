@@ -44,6 +44,13 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 1.0.0+omega ###
+- .4
+  * revert back extra info on cast list
+  * fix wrong actors list showing on movies with same titles but different year   
+  * add Internet Connection Status to Home screen
+  * Merge PR #130 (disappearing side panel on busy spinner)
+
+
 - .3
   * improved scrollbars
   * add title and year info to wall view items

@@ -30,7 +30,7 @@
 				<visible>[!Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(enable_playerclearlogo) + ![[Window.IsActive(DialogPVRChannelsOSD.xml) | Window.IsActive(DialogPVRChannelGuide.xml)] + Skin.HasSetting(use_fullOsdList)]] | [Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_artistclearlogo)]</visible>
 			</control>
 			<control type="group">
-				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 				<animation effect="fade" time="150">VisibleChange</animation>
 				<control type="label">
 					<font>font_clock</font>
@@ -66,6 +66,29 @@
 						<width>auto</width>
 						<visible>VideoPlayer.HasEpg</visible>
  					</control>
+					<control type="label">
+						<height>36</height>
+						<width>auto</width>
+						<aligny>center</aligny>
+						<label>| </label>
+						<visible>Skin.HasSetting(show_inet)</visible>
+					</control>
+					<control type="image">
+						<top>11</top>
+						<width>30</width>
+						<height>24</height>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture>icons/inet_ok.png</texture>
+						<visible>Skin.HasSetting(show_inet) + [System.InternetState | System.HasNetwork]</visible>
+					</control>
+					<control type="image">
+						<top>11</top>
+						<width>30</width>
+						<height>24</height>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture>icons/inet_nok.png</texture>
+						<visible>Skin.HasSetting(show_inet) + !System.InternetState + !System.HasNetwork]</visible>
+					</control>
 					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
 						<param name="left">18</param>
 						<param name="top">8</param>
