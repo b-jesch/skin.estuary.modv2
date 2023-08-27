@@ -38,7 +38,6 @@
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(505) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9)]</visible>
-				<visible>!Window.IsActive(DialogBusy.xml)</visible>
 				<include>Visible_Left</include>
 				<top>40</top>
 				<include content="ContentPanel">
