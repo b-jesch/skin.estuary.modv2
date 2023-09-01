@@ -1110,6 +1110,13 @@
 					<selected>Skin.HasSetting(show_battery)</selected>
 					<visible>!String.IsEmpty(System.BatteryLevel)</visible>
 				</control>
+				<control type="radiobutton" id="724">
+					<label>  ∟$LOCALIZE[31658]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_battery_colors)</onclick>
+					<selected>Skin.HasSetting(show_battery_colors)</selected>
+					<visible>!String.IsEmpty(System.BatteryLevel) + Skin.HasSetting(show_battery)</visible>
+				</control>
 				<control type="radiobutton" id="717">
 					<label>$LOCALIZE[31592]</label>
 					<include>DefaultSettingButton</include>

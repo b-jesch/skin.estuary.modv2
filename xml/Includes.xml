@@ -3026,19 +3026,8 @@
 					<width>27</width>
 					<height>12</height>
 					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
-					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+					<midtexture colordiffuse="$VAR[BatteryLevelVar]">colors/white.png</midtexture>
 					<info>System.BatteryLevel</info>
-					<visible>Integer.IsGreater(System.BatteryLevel,9)</visible>
-				</control>
-				<control type="progress">
-					<top>8</top>
-					<left>10</left>
-					<width>27</width>
-					<height>12</height>
-					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
-					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
-					<info>System.BatteryLevel</info>
-					<visible>Integer.IsLessOrEqual(System.BatteryLevel,9)</visible>
 				</control>
 				<control type="label">
 					<top>-1</top>

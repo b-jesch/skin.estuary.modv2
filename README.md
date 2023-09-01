@@ -44,6 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.2+nexus ###
+- .8
+  * add some icons to extras/icons (thanks NeoCortex)
+  * add custom colors to battery level indicator (selectable via skin settings)
+
+
 - .7
   * revert back extra info on cast list
   * fix wrong actors list showing on movies with same titles but different year
