@@ -1098,7 +1098,7 @@
 	</variable>
 	<variable name="ShadowColorVar">
 		<value condition="!String.IsEmpty(Skin.String(ShadowColor))">$INFO[Skin.String(ShadowColor)]</value>
-		<value>$VAR[ShadowColorVar]</value>
+		<value>text_shadow</value>
 	</variable>
 	<variable name="Background_Opacity">
 		<value condition="Skin.HasSetting(opacity_0)">00FFFFFF</value>
