@@ -47,7 +47,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$VAR[PlaylistLabelVar]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="list_item_height">
@@ -57,7 +57,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$VAR[PlaylistLabelVar]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 
 					</itemlayout>

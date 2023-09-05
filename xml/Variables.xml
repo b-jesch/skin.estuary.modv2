@@ -1003,6 +1003,10 @@
 		<value condition="!String.IsEmpty(Skin.String(PatternColor))">$INFO[Skin.String(PatternColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
+	<variable name="Label_SkinSetting_ShadowColor">
+		<value condition="!String.IsEmpty(Skin.String(ShadowColor))">$INFO[Skin.String(ShadowColor)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
 	<variable name="Label_SkinSetting_PvrIconBG">
 		<value condition="!String.IsEmpty(Skin.String(PvrIconBG))">$INFO[Skin.String(PvrIconBG)]</value>
 		<value>$LOCALIZE[15109]</value>
@@ -1091,6 +1095,10 @@
 	<variable name="PatternColorVar">
 		<value condition="!String.IsEmpty(Skin.String(PatternColor))">$INFO[Skin.String(PatternColor)]</value>
 		<value>00000000</value>
+	</variable>
+	<variable name="ShadowColorVar">
+		<value condition="!String.IsEmpty(Skin.String(ShadowColor))">$INFO[Skin.String(ShadowColor)]</value>
+		<value>$VAR[ShadowColorVar]</value>
 	</variable>
 	<variable name="Background_Opacity">
 		<value condition="Skin.HasSetting(opacity_0)">00FFFFFF</value>

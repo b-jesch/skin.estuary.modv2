@@ -52,7 +52,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -62,7 +62,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(games) | Container.Content(favourites)">
@@ -88,7 +88,7 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -98,7 +98,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 					</control>
 					<control type="label">
@@ -109,7 +109,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -119,9 +119,9 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 					</control>
 				</itemlayout>
@@ -156,7 +156,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -166,7 +166,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(files)">
@@ -184,7 +184,7 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -194,7 +194,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="list_item_height" condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)">
@@ -228,7 +228,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -238,7 +238,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)">
@@ -257,7 +257,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -267,7 +267,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="list_item_height" condition="Container.Content(playlists) | Container.Content()">
@@ -302,7 +302,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(playlists) | Container.Content()">
@@ -321,7 +321,7 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 				<include condition="Window.IsActive(music)">SongsListLayout</include>
@@ -353,7 +353,7 @@
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.Label]</label>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 			</control>
 			<control type="label">
 				<left>35</left>
@@ -362,7 +362,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label2]</label>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 			</control>
 		</focusedlayout>
 		<itemlayout height="80" condition="Container.Content(songs)">
@@ -372,7 +372,7 @@
 				<right>40</right>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 			</control>
 			<control type="label">
 				<left>35</left>
@@ -382,7 +382,7 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label2]</label>
 				<textcolor>grey</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 			</control>
 		</itemlayout>
 	</include>
@@ -458,7 +458,7 @@
 					<font>font27</font>
 					<label>$VAR[AddonsLabel2Var]</label>
 					<textcolor>grey</textcolor>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				</control>
 			</control>
 		</itemlayout>

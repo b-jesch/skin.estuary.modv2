@@ -188,7 +188,7 @@
 					<width>260</width>
 					<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 					<font>font20_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<align>right</align>
 					<visible>String.IsEmpty(ListItem.Art(poster.0)) + String.IsEqual(listitem.dbtype,episode)</visible>
 					<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -482,7 +482,7 @@
 				<height>90</height>
 				<label>$LOCALIZE[31148]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<visible>Skin.HasSetting(HideWidgetLabels)</visible>
 			</control>
 			<control type="label">
@@ -492,7 +492,7 @@
 				<height>90</height>
 				<label>$LOCALIZE[31148]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<visible>!Control.HasFocus(22900) + !Skin.HasSetting(HideWidgetLabels)</visible>
 			</control>
 			<control type="label">
@@ -502,7 +502,7 @@
 				<height>90</height>
 				<label>$LOCALIZE[31148]$INFO[Container(22900).ListItem.Label, | ]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<visible>Control.HasFocus(22900) + !Skin.HasSetting(HideWidgetLabels)</visible>
 			</control>
 		</control>
@@ -563,7 +563,7 @@
 						<height>68</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
@@ -617,7 +617,7 @@
 						<height>68</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
@@ -651,7 +651,7 @@
 				<height>90</height>
 				<label>$LOCALIZE[31148]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<visible>Skin.HasSetting(HideWidgetLabels)</visible>
 			</control>
 			<control type="label">
@@ -661,7 +661,7 @@
 				<height>90</height>
 				<label>$LOCALIZE[31148]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<visible>!Control.HasFocus(23900) + !Skin.HasSetting(HideWidgetLabels)</visible>
 			</control>
 			<control type="label">
@@ -671,7 +671,7 @@
 				<height>90</height>
 				<label>$LOCALIZE[31148]$INFO[Container(23900).ListItem.Label, | ]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<visible>Control.HasFocus(23900) + !Skin.HasSetting(HideWidgetLabels)</visible>
 			</control>
 		</control>
@@ -732,7 +732,7 @@
 						<height>68</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
@@ -785,7 +785,7 @@
 						<height>68</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
@@ -819,7 +819,7 @@
 				<height>90</height>
 				<label>$VAR[LabelCategoriesSmallVar]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 			</control>
 		</control>
 		<control type="group" id="229001599">
@@ -944,7 +944,7 @@
 				<height>90</height>
 				<label>$VAR[LabelCategoriesSmallVar]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 			</control>
 		</control>
 		<control type="group" id="239001599">
@@ -1098,7 +1098,7 @@
 					<height>90</height>
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Skin.HasSetting(HideWidgetLabels)</visible>
 				</control>
 				<control type="label">
@@ -1108,7 +1108,7 @@
 					<height>90</height>
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>!Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)</visible>
 				</control>
 				<control type="label">
@@ -1118,7 +1118,7 @@
 					<height>90</height>
 					<label>$PARAM[label]$PARAM[label_focus]</label>
 					<font>font25_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Control.HasFocus($PARAM[list_id]) + [!Skin.HasSetting(HideWidgetLabels) | $PARAM[extend_label]]</visible>
 				</control>
 			</control>
@@ -2017,7 +2017,7 @@
 							<height>30</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 							<visible>String.IsEqual(listitem.dbtype,genre)</visible>
 							<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -2029,7 +2029,7 @@
 							<height>30</height>
 							<label>$INFO[ListItem.TVShowTitle,, - ]$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>left</align>
 							<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
 							<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -2058,7 +2058,7 @@
 							<width>260</width>
 							<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 							<font>font20_title</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>right</align>
 							<visible>String.IsEqual(listitem.dbtype,episode)</visible>
 							<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -2255,7 +2255,7 @@
 							<height>30</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 							<visible>String.IsEqual(listitem.dbtype,genre)</visible>
 							<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -2267,7 +2267,7 @@
 							<height>30</height>
 							<label>$INFO[ListItem.TVShowTitle,, - ]$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>left</align>
 							<scroll>true</scroll>
 							<visible>!String.IsEqual(listitem.dbtype,genre)</visible>
@@ -2316,7 +2316,7 @@
 							<width>260</width>
 							<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 							<font>font20_title</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>right</align>
 							<visible>String.IsEqual(listitem.dbtype,episode)</visible>
 							<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -2725,7 +2725,7 @@
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
@@ -2768,7 +2768,7 @@
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -2778,7 +2778,7 @@
 					<width>260</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -3071,7 +3071,7 @@
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<animation effect="slide" end="74,56" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
@@ -3115,7 +3115,7 @@
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -3125,7 +3125,7 @@
 					<width>260</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -3527,7 +3527,7 @@
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
@@ -3572,7 +3572,7 @@
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -3582,7 +3582,7 @@
 					<width>260</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -4026,7 +4026,7 @@
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<animation effect="slide" end="74,56" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
@@ -4072,7 +4072,7 @@
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -4082,7 +4082,7 @@
 					<width>260</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -4407,7 +4407,7 @@
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
@@ -4449,7 +4449,7 @@
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -4459,7 +4459,7 @@
 					<width>260</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -4676,7 +4676,7 @@
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<animation effect="slide" end="74,56" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
 			</control>
@@ -4719,7 +4719,7 @@
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -4729,7 +4729,7 @@
 					<width>260</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -5722,7 +5722,7 @@
 							<height>68</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -5778,7 +5778,7 @@
 							<height>68</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
@@ -5959,7 +5959,7 @@
 						<height>30</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>center</align>
 						<visible>String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -5971,7 +5971,7 @@
 						<height>30</height>
 						<label>$INFO[ListItem.TVShowTitle,, - ]$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>left</align>
 						<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -6000,7 +6000,7 @@
 						<width>260</width>
 						<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 						<font>font20_title</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>right</align>
 						<visible>String.IsEqual(listitem.dbtype,episode)</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -6229,7 +6229,7 @@
 						<height>30</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>center</align>
 						<visible>String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -6241,7 +6241,7 @@
 						<height>30</height>
 						<label>$INFO[ListItem.TVShowTitle,, - ]$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>left</align>
 						<visible>!String.IsEqual(listitem.dbtype,genre)-</visible>
 						<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -6289,7 +6289,7 @@
 						<width>260</width>
 						<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 						<font>font20_title</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>right</align>
 						<visible>String.IsEqual(listitem.dbtype,episode)</visible>
 						<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
@@ -6385,7 +6385,7 @@
 						<height>68</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
@@ -6439,7 +6439,7 @@
 						<height>68</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font25_narrow</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>

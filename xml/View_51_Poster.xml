@@ -90,7 +90,7 @@
 						<height>40</height>
 						<label>$INFO[ListItem.Label]$VAR[ListSubLabelVar]</label>
 						<font>font45_title</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="textbox">
@@ -101,7 +101,7 @@
 						<align>justify</align>
 						<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[PlotSpoilerVar]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>!ListItem.IsCollection</visible>
 						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
@@ -114,7 +114,7 @@
 						<align>justify</align>
 						<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[PlotSpoilerVar]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>!ListItem.IsCollection</visible>
 						<visible>String.IsEqual(Skin.Font, Arial)</visible>

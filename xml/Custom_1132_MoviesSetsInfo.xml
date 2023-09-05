@@ -51,7 +51,7 @@
 					<right>20</right>
 					<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
 					<font>font52_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<scroll>true</scroll>
@@ -62,7 +62,7 @@
 					<right>20</right>
 					<label>[B]$VAR[SubLabelMoviesSetsInfoVar][/B]</label>
 					<font>fontplot2</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -134,7 +134,7 @@
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$LOCALIZE[31491]</label>
 				<visible>Control.HasFocus(60)</visible>
@@ -151,7 +151,7 @@
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$LOCALIZE[31126]</label>
 				<visible>Control.HasFocus(138)</visible>

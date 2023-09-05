@@ -45,7 +45,7 @@
 						<font>font14</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<label>[B]$INFO[ListItem.ChannelName, $LOCALIZE[19069] : [COLOR white],[/COLOR]][/B]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">

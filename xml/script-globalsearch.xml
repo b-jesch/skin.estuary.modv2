@@ -64,7 +64,7 @@
 						<height>95</height>
 						<aligny>center</aligny>
 						<font>font37</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<label>$LOCALIZE[31001]</label>
 						<visible>!Control.IsVisible(991)</visible>
 					</control>
@@ -76,7 +76,7 @@
 						<aligny>center</aligny>
 						<font>font37</font>
 						<label>$LOCALIZE[194]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Control.IsVisible(991)</visible>
 					</control>
 					<control type="label" id="991">
@@ -87,7 +87,7 @@
 						<aligny>center</aligny>
 						<font>font37</font>
 						<label></label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="button" id="990">
 						<left>50</left>
@@ -98,7 +98,7 @@
 						<font>font37</font>
 						<label>32299</label>
 						<align>left</align>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
 						<onleft>Addon.OpenSettings(script.globalsearch)</onleft>
@@ -134,7 +134,7 @@
 							<aligny>center</aligny>
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout height="95">
@@ -194,7 +194,7 @@
 							<aligny>center</aligny>
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 				</control>

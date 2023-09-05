@@ -279,7 +279,7 @@
 					<width>266</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -289,7 +289,7 @@
 					<width>266</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -309,7 +309,7 @@
 				<width>266</width>
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<visible>String.IsEqual(listitem.dbtype,episode)</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]]]</visible>
@@ -713,7 +713,7 @@
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<visible>![String.IsEqual(listitem.dbtype,episode) + [Control.IsVisible(500) | Control.IsVisible(54)]] + ![String.IsEqual(listitem.dbtype,episode) + Window.IsVisible(MyVideoNav.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31101])]]</visible>
 				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]">Conditional</animation>
@@ -771,7 +771,7 @@
 					<width>266</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -781,7 +781,7 @@
 					<width>266</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -1072,7 +1072,7 @@
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
 				<visible>![String.IsEqual(listitem.dbtype,episode) + [Control.IsVisible(500) | Control.IsVisible(54)]]</visible>
 				<animation effect="slide" end="74,56" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
@@ -1116,7 +1116,7 @@
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -1126,7 +1126,7 @@
 					<width>260</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
@@ -1503,7 +1503,7 @@
 					<width>244</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 					<font>font20_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<align>right</align>
 				</control>
 				<control type="image">
@@ -1752,7 +1752,7 @@
 					<width>244</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 					<font>font20_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<align>right</align>
 				</control>
 				<control type="image">

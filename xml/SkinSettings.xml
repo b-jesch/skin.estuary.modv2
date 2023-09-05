@@ -833,12 +833,19 @@
 					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
 				</control>
 				<include content="DefaultColorSettingButton">
-					<param name="visible">Skin.HasSetting(show_borders)</param>
+					<param name="visible">!String.IsEqual(Skin.String(background_overlay),0)</param>
 					<param name="id">805</param>
 					<param name="label">  ∟$LOCALIZE[31235]</param>
 					<param name="label2">$VAR[Label_SkinSetting_PatternColor]</param>
 					<param name="header">31235</param>
 					<param name="setting">PatternColor</param>
+				</include>
+				<include content="DefaultColorSettingButton">
+					<param name="id">806</param>
+					<param name="label">$LOCALIZE[31659]</param>
+					<param name="label2">$VAR[Label_SkinSetting_ShadowColor]</param>
+					<param name="header">31659</param>
+					<param name="setting">ShadowColor</param>
 				</include>
 				<control type="button" id="807">
 					<label>$LOCALIZE[31237]</label>

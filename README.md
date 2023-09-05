@@ -47,6 +47,7 @@ supports animated poster only.
 - .8
   * add some icons to extras/icons (thanks NeoCortex)
   * add custom colors to battery level indicator (selectable via skin settings)
+  * customize text shadow color in skin settings
 
 
 - .7

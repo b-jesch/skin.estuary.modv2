@@ -125,7 +125,7 @@
 							<aligny>center</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="95" width="462">
@@ -136,7 +136,7 @@
 							<aligny>center</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="image">
 							<left>-3</left>
@@ -302,7 +302,7 @@
 					<align>center</align>
 					<font>font32_title</font>
 					<label>$INFO[System.AddonUpdateCount]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				</control>
 			</control>
 			<control type="group">
@@ -342,7 +342,7 @@
 						<align>center</align>
 						<font>font32_title</font>
 						<label>$VAR[AddonCountLabel]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Control.HasFocus(802)</visible>
 					</control>
 					<control type="image">

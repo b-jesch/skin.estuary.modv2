@@ -626,7 +626,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<font>$PARAM[font]</font>
 						<textcolor>$PARAM[textcolor]</textcolor>
 					</control>
@@ -638,7 +638,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<font>$PARAM[font]</font>
 						<textcolor>$PARAM[textcolor]</textcolor>
 					</control>
@@ -2293,7 +2293,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -2304,7 +2304,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height">
@@ -2323,7 +2323,7 @@
 						<right>20</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -2335,7 +2335,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 			</control>
@@ -2429,7 +2429,7 @@
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
 					<left>85</left>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>30</height>
 					<width>1400</width>
 				</control>
@@ -2437,7 +2437,7 @@
 					<width>1400</width>
 					<label>$PARAM[main_label]</label>
 					<font>font30_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>35</height>
 					<scroll>true</scroll>
 					<animation effect="slide" start="0,0" end="0,15" time="0" condition="String.IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
@@ -2466,7 +2466,7 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font52_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>center</align>
 					<scroll>true</scroll>
@@ -2476,7 +2476,7 @@
 				<control type="label" id="$PARAM[id]">
 					<label>[B]$PARAM[sub_label][/B]</label>
 					<left>85</left>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<align>center</align>
 					<height>100</height>
 					<width>100%</width>
@@ -2787,7 +2787,7 @@
 							<width>540</width>
 							<align>right</align>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
 						</control>
 					</control>
@@ -2856,7 +2856,7 @@
 							<control type="label">
 								<label>$INFO[Player.Title]</label>
 								<font>font27</font>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<height>35</height>
 								<width min="1" max="555">auto</width>
 								<scroll>true</scroll>
@@ -2868,7 +2868,7 @@
 							<top>48</top>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<height>25</height>
 							<width>580</width>
 							<align>right</align>
@@ -2880,7 +2880,7 @@
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<animation effect="slide" end="0,-10" time="0" condition="String.IsEqual(Skin.Font,Arial)">Conditional</animation>
 						<font>font_clock</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<height>200</height>
 						<width>auto</width>
 						<align>right</align>
@@ -3046,7 +3046,7 @@
 		<definition>
 			<font>$PARAM[font]</font>
 			<textcolor>$PARAM[textcolor]</textcolor>
-			<shadowcolor>text_shadow</shadowcolor>
+			<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 			<height>30</height>
 			<width min="1" max="900">auto</width>
 		</definition>
@@ -3297,7 +3297,7 @@
 					<height>48</height>
 					<aligny>center</aligny>
 					<align>right</align>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<label>$INFO[Container($PARAM[right_container_id]).CurrentItem,, / ]$INFO[Container($PARAM[right_container_id]).NumItems]</label>
 				</control>
 				<control type="image">
@@ -3325,7 +3325,7 @@
 					<height>48</height>
 					<aligny>center</aligny>
 					<align>right</align>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<label>$INFO[Container($PARAM[left_container_id]).CurrentItem,, / ]$INFO[Container($PARAM[left_container_id]).NumItems]</label>
 				</control>
 			</control>

@@ -33,7 +33,7 @@
 							<aligny>center</aligny>
 							<visible>String.IsEmpty(ListItem.Date)</visible>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -44,7 +44,7 @@
 								<height>30</height>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.ChannelName][COLOR grey]$INFO[ListItem.Label, - ][/COLOR]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>30</left>
@@ -54,7 +54,7 @@
 								<font>font12</font>
 								<aligny>top</aligny>
 								<label>$VAR[TimersSubLabel]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<right>20</right>
@@ -65,7 +65,7 @@
 								<align>right</align>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.Comment]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<right>20</right>
@@ -76,7 +76,7 @@
 								<align>right</align>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.Date]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 						</control>
 					</itemlayout>
@@ -107,7 +107,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>String.IsEmpty(ListItem.Date)</visible>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -118,7 +118,7 @@
 								<height>100</height>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.ChannelName]$INFO[ListItem.Label, - ]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>30</left>
@@ -128,7 +128,7 @@
 								<font>font12</font>
 								<aligny>top</aligny>
 								<label>$VAR[TimersSubLabel]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<scroll>auto</scroll>
 							</control>
 							<control type="label">
@@ -140,7 +140,7 @@
 								<align>right</align>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.Comment]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<right>20</right>
@@ -151,7 +151,7 @@
 								<align>right</align>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.Date]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 						</control>
 					</focusedlayout>
