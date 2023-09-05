@@ -79,7 +79,7 @@
 								<font>font12</font>
 								<label>$INFO[ListItem.Label] :</label>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<top>35</top>
@@ -90,7 +90,7 @@
 								<font>font12</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label2]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<scroll>true</scroll>
 							</control>
 						</focusedlayout>
@@ -103,7 +103,7 @@
 								<label>$INFO[ListItem.Label] :</label>
 								<font>font12</font>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<top>35</top>
@@ -114,7 +114,7 @@
 								<font>font12</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label2]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<scroll>true</scroll>
 							</control>
 						</itemlayout>

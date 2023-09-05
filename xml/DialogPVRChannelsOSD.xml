@@ -178,7 +178,7 @@
 								<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font14</font>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>60</left>
@@ -188,7 +188,7 @@
 								<font>font12</font>
 								<label>$INFO[ListItem.Title]</label>
 								<scroll>true</scroll>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 						</control>
 						<control type="group">
@@ -202,7 +202,7 @@
 								<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font14</font>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>60</left>
@@ -212,7 +212,7 @@
 								<font>font12</font>
 								<label>$INFO[ListItem.Title]</label>
 								<scroll>true</scroll>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 						</control>
 						<control type="label">
@@ -224,7 +224,7 @@
 							<aligny>center</aligny>
 							<font>font32_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="90" width="881">
@@ -272,7 +272,7 @@
 								<font>font14</font>
 								<label>$INFO[ListItem.Label]</label>
 								<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>60</left>
@@ -281,7 +281,7 @@
 								<aligny>top</aligny>
 								<font>font12</font>
 								<label>$INFO[ListItem.Title]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
 							</control>
 						</control>
@@ -296,7 +296,7 @@
 								<font>font14</font>
 								<label>$INFO[ListItem.Label]</label>
 								<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>60</left>
@@ -305,7 +305,7 @@
 								<aligny>top</aligny>
 								<font>font12</font>
 								<label>$INFO[ListItem.Title]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
 							</control>
 						</control>
@@ -319,7 +319,7 @@
 							<font>font32_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 				</control>

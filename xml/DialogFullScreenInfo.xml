@@ -72,7 +72,7 @@
 					<right>20</right>
 					<label>$VAR[VideoInfoPlayerMainLabelVar]</label>
 					<font>font52_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<scroll>true</scroll>
@@ -83,7 +83,7 @@
 					<right>20</right>
 					<label>[B]$VAR[VideoInfoPlayerSubLabelVar][/B]</label>
 					<font>fontplot2</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -177,7 +177,7 @@
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$LOCALIZE[31126]</label>
 				<visible>Control.HasFocus(138)</visible>
@@ -269,7 +269,7 @@
 				<height>90</height>
 				<label>$VAR[DialogInfoButtonsVar]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<scroll>true</scroll>
 			</control>
 		</control>

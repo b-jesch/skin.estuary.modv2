@@ -174,7 +174,7 @@
 								<aligny>bottom</aligny>
 								<font>font28_title</font>
 								<label>$INFO[ListItem.ChannelNumberLabel]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label" id="1">
@@ -214,7 +214,7 @@
 								<aligny>bottom</aligny>
 								<font>font28_title</font>
 								<label>$INFO[ListItem.ChannelNumberLabel]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label" id="1">

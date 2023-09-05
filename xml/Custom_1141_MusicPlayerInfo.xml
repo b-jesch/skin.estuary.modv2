@@ -80,7 +80,7 @@
 					<right>20</right>
 					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, (,)]</label>
 					<font>font52_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<scroll>true</scroll>
@@ -91,7 +91,7 @@
 					<right>20</right>
 					<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
 					<font>fontplot2</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -183,7 +183,7 @@
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$VAR[DialogMusicInfoThumbBackVar]</label>
 				<visible>Control.HasFocus(138)</visible>
@@ -200,7 +200,7 @@
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$LOCALIZE[31504]</label>
 				<visible>Control.HasFocus(1300)</visible>
@@ -237,7 +237,7 @@
 				<height>90</height>
 				<label>$VAR[DialogInfoButtonsVar]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<scroll>true</scroll>
 			</control>
 		</control>

@@ -49,6 +49,8 @@ supports animated poster only.
   * fix wrong actors list showing on movies with same titles but different year   
   * add Internet Connection Status to Home screen
   * Merge PR #130 (disappearing side panel on busy spinner)
+  * add custom colors to battery level indicator (selectable via skin settings)
+  * customize text shadow color in skin settings
 
 
 - .3

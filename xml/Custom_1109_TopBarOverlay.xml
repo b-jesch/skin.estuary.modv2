@@ -34,7 +34,7 @@
 				<animation effect="fade" time="150">VisibleChange</animation>
 				<control type="label">
 					<font>font_clock</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<top>0</top>
 					<right>20</right>
 					<height>200</height>
@@ -53,7 +53,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<control type="label">
 						<label>$INFO[Player.FinishTime,$LOCALIZE[31080] ]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<height>100</height>
 						<width>auto</width>
 						<visible>!String.IsEmpty(Player.Duration)</visible>
@@ -61,7 +61,7 @@
 					</control>
 					<control type="label">
 						<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31080] ]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<height>100</height>
 						<width>auto</width>
 						<visible>VideoPlayer.HasEpg</visible>

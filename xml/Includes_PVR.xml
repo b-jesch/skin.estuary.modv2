@@ -375,7 +375,7 @@
 							<width>830</width>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Date,[COLOR grey],[/COLOR][CR]]$INFO[ListItem.Label] $VAR[SeasonEpisodeLabel]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="100" width="780">
@@ -385,7 +385,7 @@
 							<width>830</width>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Date,[COLOR grey],[/COLOR][CR]]$INFO[ListItem.Label] $VAR[SeasonEpisodeLabel]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 					<content sortby="date" sortorder="$PARAM[folder_sortorder]">$INFO[ListItem.FilenameAndPath]</content>
@@ -486,7 +486,7 @@
 					<right>90</right>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				</control>
 				<control type="label">
 					<left>320</left>
@@ -496,7 +496,7 @@
 					<aligny>center</aligny>
 					<align>right</align>
 					<label>$INFO[ListItem.Title]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				</control>
 				<control type="label">
 					<left>12</left>
@@ -507,7 +507,7 @@
 					<aligny>center</aligny>
 					<font>font36_title</font>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				</control>
 			</focusedlayout>
 			<itemlayout height="70">
@@ -547,7 +547,7 @@
 					<right>90</right>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				</control>
 				<control type="label">
 					<left>320</left>
@@ -557,7 +557,7 @@
 					<aligny>center</aligny>
 					<align>right</align>
 					<label>$INFO[ListItem.Title]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<textcolor>grey</textcolor>
 				</control>
 				<control type="label">
@@ -570,7 +570,7 @@
 					<font>font36_title</font>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>grey</textcolor>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				</control>
 			</itemlayout>
 		</control>
@@ -646,7 +646,7 @@
 						<font>font14</font>
 						<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>165</left>
@@ -656,7 +656,7 @@
 						<aligny>top</aligny>
 						<font>font12</font>
 						<label>$INFO[ListItem.Title]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
 					<control type="label">
@@ -667,7 +667,7 @@
 						<aligny>top</aligny>
 						<font>font12</font>
 						<label>$INFO[ListItem.Title]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
 					<control type="label">
@@ -679,7 +679,7 @@
 						<aligny>center</aligny>
 						<font>font32_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</control>
 			</focusedlayout>
@@ -728,7 +728,7 @@
 						<font>font14</font>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>165</left>
@@ -738,7 +738,7 @@
 						<aligny>top</aligny>
 						<font>font12</font>
 						<label>$INFO[ListItem.Title]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
@@ -750,7 +750,7 @@
 						<aligny>top</aligny>
 						<font>font12</font>
 						<label>$INFO[ListItem.Title]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
@@ -764,7 +764,7 @@
 						<font>font32_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</control>
 			</itemlayout>
@@ -825,7 +825,7 @@
 						<aligny>center</aligny>
 						<font>font45_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="group">
@@ -847,7 +847,7 @@
 							<aligny>top</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 					<control type="label">
@@ -859,7 +859,7 @@
 						<aligny>top</aligny>
 						<font>font14</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(ShowPVRStatus)</visible>
 					</control>
 					<control type="progress">
@@ -877,7 +877,7 @@
 						<top>45</top>
 						<font>font25_title</font>
 						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<scroll>true</scroll>
 						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -920,7 +920,7 @@
 						<font>font45_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="group">
@@ -942,7 +942,7 @@
 							<aligny>top</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 					<control type="label">
@@ -955,7 +955,7 @@
 						<aligny>top</aligny>
 						<font>font14</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="progress">
 						<left>160</left>
@@ -973,7 +973,7 @@
 						<font>font25_title</font>
 						<label>$INFO[ListItem.EndTime,$LOCALIZE[19160] , : ]$INFO[ListItem.Title]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
@@ -1039,7 +1039,7 @@
 						<aligny>center</aligny>
 						<font>font12</font>
 						<label>$INFO[ListItem.ChannelNumberLabel,[B], : ]$INFO[ListItem.ChannelName,[COLOR grey],[/COLOR][/B]]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="label">
@@ -1151,7 +1151,7 @@
 						<font>font12</font>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.ChannelNumberLabel,[B], : ]$INFO[ListItem.ChannelName,,[/B]]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="label">

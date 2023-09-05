@@ -47,7 +47,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font13</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="60" width="510">
@@ -59,7 +59,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font13</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 					<content limit="5" sortby="lastplayed" sortorder="descending">pvr://channels/tv/*?view=lastplayed</content>

@@ -36,7 +36,7 @@
 							<font>font32_title</font>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -58,7 +58,7 @@
 								<aligny>center</aligny>
 								<font>font32_title</font>
 								<label>$INFO[ListItem.ChannelNumberLabel]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label">
@@ -68,7 +68,7 @@
 								<height>100</height>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.ChannelName][COLOR grey]$INFO[ListItem.Label, - ][/COLOR]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>120</left>
@@ -78,7 +78,7 @@
 								<font>font12</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Date]$INFO[ListItem.Duration(hh:mm), ($LOCALIZE[2050] ,)]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 						</control>
 					</itemlayout>
@@ -109,7 +109,7 @@
 							<font>font32_title</font>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -131,7 +131,7 @@
 								<aligny>center</aligny>
 								<font>font32_title</font>
 								<label>$INFO[ListItem.ChannelNumberLabel]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 								<visible>!Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 							</control>
 							<control type="label">
@@ -141,7 +141,7 @@
 								<height>100</height>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.ChannelName]$INFO[ListItem.Label, - ]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>120</left>
@@ -151,7 +151,7 @@
 								<font>font12</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Date]$INFO[ListItem.Duration(hh:mm), ($LOCALIZE[2050] ,)]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							</control>
 						</control>
 					</focusedlayout>

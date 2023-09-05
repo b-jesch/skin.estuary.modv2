@@ -161,7 +161,7 @@
 						<scroll>true</scroll>
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<top>0</top>
@@ -173,7 +173,7 @@
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="image">
 						<left>21</left>
@@ -203,7 +203,7 @@
 						<aligny>center</aligny>
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>70</left>
@@ -214,7 +214,7 @@
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 					</control>
 					<control type="label">
@@ -226,7 +226,7 @@
 						<aligny>center</aligny>
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -238,7 +238,7 @@
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 					</control>
 					<control type="image">

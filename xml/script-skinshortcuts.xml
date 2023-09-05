@@ -64,7 +64,7 @@
 						<aligny>center</aligny>
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<scroll>true</scroll>
 						<visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
@@ -76,7 +76,7 @@
 						<aligny>center</aligny>
 						<font>font37</font>
 						<label>$INFO[ListItem.Label] ($LOCALIZE[1223])</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<scroll>true</scroll>
 						<visible>String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
@@ -97,7 +97,7 @@
 						<aligny>center</aligny>
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 			</control>

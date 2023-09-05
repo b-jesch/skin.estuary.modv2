@@ -538,7 +538,7 @@
 					<right>200</right>
 					<label>$INFO[Container(10051).ListItem.Label]$INFO[Container(10051).ListItem.Year, (,)]</label>
 					<font>font52_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>60</height>
 					<align>left</align>
 					<scroll>true</scroll>
@@ -549,7 +549,7 @@
 					<right>200</right>
 					<label>$INFO[Container(10051).ListItem.Tagline,[B][I],[/I][/B]]</label>
 					<font>fontplot2</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -562,7 +562,7 @@
 					<right>200</right>
 					<label fallback="19055">$INFO[Container(10051).ListItem.Season,[B][I]$LOCALIZE[20373] ,[/I][/B]]</label>
 					<font>fontplot2</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<textcolor>$VAR[SkinColorVar]</textcolor>

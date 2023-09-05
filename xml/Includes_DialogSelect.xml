@@ -256,7 +256,7 @@
 							<height>80</height>
 							<label>[B]$INFO[ListItem.Label][/B][CR]$INFO[ListItem.Label2]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 					</control>
@@ -305,7 +305,7 @@
 							<label>[B]$INFO[ListItem.Label][/B][CR][COLOR white]$INFO[ListItem.Label2][/COLOR]</label>
 							<font>font12</font>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 					</control>
@@ -319,7 +319,7 @@
 				<height>85</height>
 				<font>font13</font>
 				<align>center</align>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 		</control>
@@ -392,7 +392,7 @@
 							<height>40</height>
 							<label>[B]$INFO[ListItem.Label][/B][CR]$INFO[ListItem.Label2]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 					</control>
@@ -441,7 +441,7 @@
 							<label>[B]$INFO[ListItem.Label][/B][CR][COLOR white]$INFO[ListItem.Label2][/COLOR]</label>
 							<font>font12</font>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 					</control>

@@ -127,7 +127,7 @@
 							<height>20</height>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 						<control type="label">
@@ -137,7 +137,7 @@
 							<height>20</height>
 							<label>$INFO[ListItem.Premiered]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 					</control>
@@ -179,7 +179,7 @@
 							<height>20</height>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 							<visible>!Control.HasFocus(11)</visible>
 						</control>
@@ -191,7 +191,7 @@
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 							<font>font12</font>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 							<visible>Control.HasFocus(11)</visible>
 						</control>
@@ -202,7 +202,7 @@
 							<height>20</height>
 							<label>$INFO[ListItem.Premiered]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 					</control>

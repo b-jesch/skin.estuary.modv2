@@ -307,7 +307,7 @@
 				<right>20</right>
 				<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
 				<font>font52_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<height>65</height>
 				<align>left</align>
 				<scroll>true</scroll>
@@ -319,7 +319,7 @@
 				<right>20</right>
 				<label>[B]$VAR[VideoInfoSubLabelVar][/B]</label>
 				<font>fontplot2</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<height>65</height>
 				<align>left</align>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -332,7 +332,7 @@
 				<right>20</right>
 				<label>$VAR[VideoInfoSubLabelVar]</label>
 				<font>font30_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<height>65</height>
 				<align>left</align>
 				<textcolor>$VAR[SkinColorVar]</textcolor>

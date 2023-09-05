@@ -375,7 +375,7 @@
 					<align>justify</align>
 					<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 				</control>
@@ -387,7 +387,7 @@
 					<align>justify</align>
 					<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
 				</control>
@@ -399,7 +399,7 @@
 					<align>justify</align>
 					<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 				</control>
@@ -411,7 +411,7 @@
 					<align>justify</align>
 					<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
 				</control>

@@ -51,6 +51,7 @@
 	</include>
 	<include name="InfoDialogMetadata">
 		<param name="textcolor">white</param>
+		<param name="shadowcolor">$VAR[ShadowColorVar]</param>
 		<param name="font">font12</param>
 		<definition>
 			<control type="label" id="$PARAM[control_id]">
@@ -61,6 +62,7 @@
 				<font>$PARAM[font]</font>
 				<label>$PARAM[label]</label>
 				<textcolor>$PARAM[textcolor]</textcolor>
+				<shadowcolor>$PARAM[shadowcolor]</shadowcolor>
 				<visible>$PARAM[visible]</visible>
 				<scroll>true</scroll>
 				<visible>String.IsEqual(Control.GetLabel(3335),fallback.png) | Container.Content(favourites)</visible>
@@ -73,6 +75,7 @@
 				<font>$PARAM[font]</font>
 				<label>$PARAM[label]</label>
 				<textcolor>$PARAM[textcolor]</textcolor>
+				<shadowcolor>$PARAM[shadowcolor]</shadowcolor>
 				<visible>$PARAM[visible]</visible>
 				<scroll>true</scroll>
 				<visible>!String.IsEqual(Control.GetLabel(3335),fallback.png) + !Container.Content(favourites)</visible>

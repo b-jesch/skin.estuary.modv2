@@ -127,7 +127,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 							<visible>Container.Content(artists) | Container.Content(sets)</visible>
 							<animation effect="slide" end="-5,0" time="0" condition="Container.Content(sets)">Conditional</animation>
@@ -139,7 +139,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.TvShowTitle,[B], / [/B]]$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 							<visible>Container.Content(albums) | Container.Content(seasons)</visible>
 							<animation effect="slide" end="-5,0" time="0" condition="Container.Content(seasons)">Conditional</animation>
@@ -151,7 +151,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.AlbumArtist]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 							<visible>Container.Content(albums)</visible>
 						</control>
@@ -162,7 +162,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$VAR[EpisodeNumberViewVar]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[31064] : ,)]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 							<visible>Container.Content(seasons)</visible>
 						</control>
@@ -174,7 +174,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Style), / ,]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(albums) | Container.Content(seasons)</visible>
 							<animation effect="slide" end="-40,0" time="0" condition="Container.Content(seasons)">Conditional</animation>
 						</control>
@@ -272,7 +272,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(artists) | Container.Content(sets)</visible>
 							<animation effect="slide" end="-5,0" time="0" condition="Container.Content(sets)">Conditional</animation>
 						</control>
@@ -284,7 +284,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(sets)</visible>
 							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 							<animation effect="slide" end="-5,0" time="0" condition="Container.Content(sets)">Conditional</animation>
@@ -296,7 +296,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.TvShowTitle,[B], / [/B]]$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(albums) | Container.Content(seasons)</visible>
 							<animation effect="slide" end="-5,0" time="0" condition="Container.Content(seasons)">Conditional</animation>
 						</control>
@@ -308,7 +308,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.TvShowTitle,[B], / [/B]]$INFO[ListItem.Label,[B],[/B]]</label>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(seasons)</visible>
 							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 							<animation effect="slide" end="-5,0" time="0" condition="Container.Content(seasons)">Conditional</animation>
@@ -321,7 +321,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.AlbumArtist]</label>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(albums)</visible>
 						</control>
 						<control type="label">
@@ -332,7 +332,7 @@
 							<aligny>center</aligny>
 							<label>$VAR[EpisodeNumberViewVar]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[31064] : ,)]</label>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(seasons)</visible>
 						</control>
 						<control type="label">
@@ -344,7 +344,7 @@
 							<label>$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Style), / ,]</label>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(albums) | Container.Content(seasons)</visible>
 							<animation effect="slide" end="-40,0" time="0" condition="Container.Content(seasons)">Conditional</animation>
 						</control>
@@ -400,7 +400,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<label>$INFO[ListItem.TrackNumber,[B],[/B] - ]$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -409,7 +409,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Duration]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 				</focusedlayout>
@@ -422,7 +422,7 @@
 							<right>80</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.TrackNumber,[B],[/B] - ]$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -432,7 +432,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Duration]</label>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 				</itemlayout>
@@ -498,7 +498,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -508,7 +508,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.AlbumArtist]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -519,7 +519,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Style), / ,]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 				</focusedlayout>
@@ -543,7 +543,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>190</left>
@@ -553,7 +553,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.AlbumArtist]</label>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>190</left>
@@ -564,7 +564,7 @@
 							<label>$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Style), / ,]</label>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 				</itemlayout>
@@ -635,7 +635,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -645,7 +645,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Genre]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -656,7 +656,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Year]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 				</focusedlayout>
@@ -695,7 +695,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>185</left>
@@ -705,7 +705,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 						</control>
 						<control type="label">
@@ -716,7 +716,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Genre]</label>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>150</left>
@@ -726,7 +726,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Genre]</label>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 						</control>
 						<control type="label">
@@ -738,7 +738,7 @@
 							<label>$INFO[ListItem.Year]</label>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 				</itemlayout>
@@ -809,7 +809,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -819,7 +819,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.TVShowTitle]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -830,7 +830,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Premiered]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 				</focusedlayout>
@@ -869,7 +869,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>215</left>
@@ -879,7 +879,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label,[B],[/B]]</label>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 						</control>
 						<control type="label">
@@ -890,7 +890,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.TVShowTitle]</label>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>180</left>
@@ -901,7 +901,7 @@
 							<label>$INFO[ListItem.Premiered]</label>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</control>
 				</itemlayout>

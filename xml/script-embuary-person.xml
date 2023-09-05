@@ -294,7 +294,7 @@
 					<right>200</right>
 					<label>$INFO[Container(10051).ListItem.Label]</label>
 					<font>font52_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>60</height>
 					<align>left</align>
 					<scroll>true</scroll>

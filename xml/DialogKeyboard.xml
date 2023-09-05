@@ -623,7 +623,7 @@
 						<height>50</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font12</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<aligny>center</aligny>
 					</control>
 				</itemlayout>
@@ -650,7 +650,7 @@
 							<height>50</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<aligny>center</aligny>
 						</control>
 					</control>
@@ -663,7 +663,7 @@
 				<width>1480</width>
 				<height>90</height>
 				<font>font37</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<aligny>center</aligny>
 			</control>
 			<control type="group">
@@ -688,7 +688,7 @@
 					<width>1480</width>
 					<height>90</height>
 					<font>font37</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<aligny>center</aligny>
 				</control>
 			</control>

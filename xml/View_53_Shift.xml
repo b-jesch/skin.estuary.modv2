@@ -365,7 +365,7 @@
 				<height>168</height>
 				<align>justify</align>
 				<label>$PARAM[textbox_content]</label>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>!String.IsEqual(Skin.Font, Arial)</visible>

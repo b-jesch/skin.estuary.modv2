@@ -57,7 +57,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<label>$INFO[ListItem.Label] $VAR[SeasonEpisodeLabel]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -67,7 +67,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="80">
@@ -85,7 +85,7 @@
 							<right>30</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label] $VAR[SeasonEpisodeLabel]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -96,7 +96,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
 							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 				</control>

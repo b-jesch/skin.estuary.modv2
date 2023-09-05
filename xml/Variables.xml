@@ -193,6 +193,13 @@
 	<variable name="OscarsVar">
 		<value/>
 	</variable>
+	<variable name="BatteryLevelVar">
+		<value condition="Integer.IsGreater(System.BatteryLevel,40) + Skin.HasSetting(show_battery_colors)">FF1CAC78</value>
+		<value condition="Integer.IsGreater(System.BatteryLevel,40) + !Skin.HasSetting(show_battery_colors)">$VAR[SkinColorVar]</value>
+		<value condition="Integer.IsGraeter(System.BatteryLevel,10) + Skin.HasSetting(show_battery_colors)">FFF79015</value>
+		<value condition="Integer.IsGreater(System.BatteryLevel,10) + !Skin.HasSetting(show_battery_colors)">$VAR[SkinColorVar]</value>
+		<value>FFFF0000</value>
+	</variable>
 	<variable name="OsdMediaTimeVar">
 		<value condition="String.IsEqual(Skin.String(OsdMediaTime),0)">$LOCALIZE[31614]</value>
 		<value condition="String.IsEqual(Skin.String(OsdMediaTime),1)">$LOCALIZE[31615]</value>
@@ -996,6 +1003,10 @@
 		<value condition="!String.IsEmpty(Skin.String(PatternColor))">$INFO[Skin.String(PatternColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
+	<variable name="Label_SkinSetting_ShadowColor">
+		<value condition="!String.IsEmpty(Skin.String(ShadowColor))">$INFO[Skin.String(ShadowColor)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
 	<variable name="Label_SkinSetting_PvrIconBG">
 		<value condition="!String.IsEmpty(Skin.String(PvrIconBG))">$INFO[Skin.String(PvrIconBG)]</value>
 		<value>$LOCALIZE[15109]</value>
@@ -1084,6 +1095,10 @@
 	<variable name="PatternColorVar">
 		<value condition="!String.IsEmpty(Skin.String(PatternColor))">$INFO[Skin.String(PatternColor)]</value>
 		<value>00000000</value>
+	</variable>
+	<variable name="ShadowColorVar">
+		<value condition="!String.IsEmpty(Skin.String(ShadowColor))">$INFO[Skin.String(ShadowColor)]</value>
+		<value>$VAR[ShadowColorVar]</value>
 	</variable>
 	<variable name="Background_Opacity">
 		<value condition="Skin.HasSetting(opacity_0)">00FFFFFF</value>
