@@ -22,22 +22,6 @@
 			<itemlayout/>
 			<focusedlayout/>
 		</control>
-		<!-- background -->
-		<include>DefaultBackground</include>
-		<include>GlobalAnimatedBackground</include>
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<fadetime>400</fadetime>
-			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<animation effect="fade" time="400">VisibleChange</animation>
-			<texture colordiffuse="$VAR[Background_Opacity]">$INFO[Container(10051).ListItem.Art(thumb)]</texture>
-			<visible>Skin.HasSetting(show_fanart) + !Control.HasFocus(10052) + !Control.HasFocus(10053) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
-		</control>
-
 		<!-- infos -->
 		<control type="grouplist" id="50">
 			<animation type="WindowOpen">
@@ -57,7 +41,6 @@
 			<orientation>vertical</orientation>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
 			<usecontrolcoords>true</usecontrolcoords>
-
 			<!-- Meta -->
 			<control type="group">
 				<height>700</height>

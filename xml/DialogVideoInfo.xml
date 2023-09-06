@@ -892,7 +892,7 @@
 							<onleft>SetFocus(9004)</onleft>
 							<onright>SetFocus(9004)</onright>
 							<onback>9004</onback>
-							<onclick>SetFocus(9004)</onclick>
+							<onclick>Dialog.Close(MovieInformation)</onclick>
 							<onclick condition="!System.HasAddon(script.embuary.info)">InstallAddon(script.embuary.info)</onclick>
 							<onclick>RunScript(script.embuary.info,call=person,query=$INFO[Container(50).ListItem.Label])</onclick>
 						</control>
