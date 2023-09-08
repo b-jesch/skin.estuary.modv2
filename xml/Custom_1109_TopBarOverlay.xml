@@ -87,7 +87,7 @@
 						<height>24</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<texture>icons/inet_nok.png</texture>
-						<visible>Skin.HasSetting(show_inet) + !System.InternetState</visible>
+						<visible>Skin.HasSetting(show_inet) + !System.InternetState + !String.IsEmpty(System.InternetState)</visible>
 					</control>
 					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
 						<param name="left">18</param>
