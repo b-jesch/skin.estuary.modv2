@@ -1109,6 +1109,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(show_inet)</onclick>
 					<selected>Skin.HasSetting(show_inet)</selected>
+					<visible>!String.IsEmpty(System.InternetState)</visible>
 				</control>
 				<control type="radiobutton" id="722">
 					<label>$LOCALIZE[31655]</label>
