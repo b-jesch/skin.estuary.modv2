@@ -2958,7 +2958,7 @@
 						<height>24</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<texture>icons/inet_ok.png</texture>
-						<visible>Skin.HasSetting(show_inet) + [System.InternetState | System.HasNetwork]</visible>
+						<visible>Skin.HasSetting(show_inet) + System.InternetState</visible>
 					</control>
 					<control type="image">
 						<top>15</top>
@@ -2966,7 +2966,7 @@
 						<height>24</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<texture>icons/inet_nok.png</texture>
-						<visible>Skin.HasSetting(show_inet) + !System.InternetState + !System.HasNetwork</visible>
+						<visible>Skin.HasSetting(show_inet) + !System.InternetState</visible>
 					</control>
 					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
 						<param name="width">120</param>
