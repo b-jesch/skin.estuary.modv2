@@ -71,7 +71,7 @@
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>| </label>
-						<visible>Skin.HasSetting(show_inet)</visible>
+						<visible>Skin.HasSetting(show_inet) + !String.IsEmpty(System.InternetState)</visible>
 					</control>
 					<control type="image">
 						<top>11</top>
