@@ -171,6 +171,15 @@
 				<ondown>200</ondown>
 				<pagecontrol>60</pagecontrol>
 				<visible>Container(9000).HasFocus(9)</visible>
+				<control type="button" id="201">
+					<label>$LOCALIZE[31613]</label>
+					<include>DefaultSettingButton</include>
+					<label2>$VAR[OsdMusicMediaTimeVar]</label2>
+					<description>display media time on osd</description>
+					<onclick condition="String.IsEmpty(Skin.String(OsdMusicMediaTime))">Skin.SetString(OsdMusicMediaTime,1)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),0)">Skin.SetString(OsdMusicMediaTime,1)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),1)">Skin.SetString(OsdMusicMediaTime,0)</onclick>
+				</control>
 				<control type="radiobutton" id="202">
 					<label>$LOCALIZE[31163]</label>
 					<include>DefaultSettingButton</include>
@@ -1109,6 +1118,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(show_inet)</onclick>
 					<selected>Skin.HasSetting(show_inet)</selected>
+					<visible>!String.IsEmpty(System.InternetState)</visible>
 				</control>
 				<control type="radiobutton" id="722">
 					<label>$LOCALIZE[31655]</label>

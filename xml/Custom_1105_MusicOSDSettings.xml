@@ -24,7 +24,16 @@
 					<onup>5000</onup>
 					<ondown>5000</ondown>
 					<orientation>vertical</orientation>
-					<control type="radiobutton" id="5001">
+					<control type="button" id="5001">
+						<label>$LOCALIZE[31613]</label>
+						<include>DefaultSettingButton</include>
+						<label2>$VAR[OsdMusicMediaTimeVar]</label2>
+						<description>display media time on osd</description>
+						<onclick condition="String.IsEmpty(Skin.String(OsdMusicMediaTime))">Skin.SetString(OsdMusicMediaTime,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),0)">Skin.SetString(OsdMusicMediaTime,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),1)">Skin.SetString(OsdMusicMediaTime,0)</onclick>
+					</control>
+					<control type="radiobutton" id="5002">
 						<width>800</width>
 						<include>DialogSettingButton</include>
 						<label>$LOCALIZE[31163]</label>

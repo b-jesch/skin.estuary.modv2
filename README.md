@@ -52,6 +52,7 @@ supports animated poster only.
   * add custom colors to battery level indicator (selectable via skin settings)
   * customize text shadow color in skin settings
   * improvements in embuary dialogs
+  * introducing time display selection on music OSD/Skin settings
 
 
 - .3

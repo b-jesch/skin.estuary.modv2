@@ -139,14 +139,14 @@
  					<visible>PVR.CanRecordPlayingChannel</visible>
  					<visible>MusicPlayer.Content(LiveTV)</visible>
  				</control>
-                <control type="radiobutton" id="62040">
+                		<control type="radiobutton" id="62040">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/plot.png"/>
 					</include>
 					<onclick>ActivateWindow(1138)</onclick>
 					<visible>MusicPlayer.Content(LiveTV)</visible>
 				</control>
-                <control type="radiobutton" id="62041">
+                		<control type="radiobutton" id="62041">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/channels.png"/>
 					</include>
