@@ -4015,7 +4015,15 @@
 						<label>$VAR[OsdMusicMediaTimeVar]$INFO[Player.TimeRemaining, : ]</label>
 						<font>font12</font>
 						<align>right</align>
-						<visible>String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
+						<visible>!String.IsEmpty(Player.TimeRemaining) + String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
+					</control>
+					<control type="label">
+						<bottom>105</bottom>
+						<height>30</height>
+						<label>$INFO[Player.SeekTime,$LOCALIZE[31660] : ]</label>
+						<font>font12</font>
+						<align>right</align>
+						<visible>String.IsEmpty(Player.TimeRemaining) + String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
 					</control>
 				</control>
 				<control type="group">
