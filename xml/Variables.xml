@@ -205,6 +205,11 @@
 		<value condition="String.IsEqual(Skin.String(OsdMediaTime),1)">$LOCALIZE[31615]</value>
 		<value>$LOCALIZE[31614]</value>
 	</variable>
+	<variable name="OsdMusicMediaTimeVar">
+		<value condition="String.IsEqual(Skin.String(OsdMusicMediaTime),0)">$LOCALIZE[31614]</value>
+		<value condition="String.IsEqual(Skin.String(OsdMusicMediaTime),1)">$LOCALIZE[31615]</value>
+		<value>$LOCALIZE[31614]</value>
+	</variable>
 	<variable name="PVRArtworksVar">
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.poster)) + !Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart)) + Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>

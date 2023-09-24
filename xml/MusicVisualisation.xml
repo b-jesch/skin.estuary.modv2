@@ -19,7 +19,7 @@
 			<fadetime>400</fadetime>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-            <texture colordiffuse="$VAR[PlayerFanartOpacityVar]">$VAR[PlayerFanartVar]</texture>
+                        <texture colordiffuse="$VAR[PlayerFanartOpacityVar]">$VAR[PlayerFanartVar]</texture>
 			<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animate_artistslideshow)">Conditional</animation>
 			<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animate_artistslideshow)">Conditional</animation>
 			<visible>!Skin.HasSetting(hide_background_fanart)</visible>

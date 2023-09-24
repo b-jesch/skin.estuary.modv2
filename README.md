@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.1.2+nexus ###
+- .9
+  * introducing time display selection on music OSD/Skin settings
+
+
 - .8
   * add some icons to extras/icons (thanks NeoCortex)
   * add custom colors to battery level indicator (selectable via skin settings)
