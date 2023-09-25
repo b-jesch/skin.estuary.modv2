@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.1.2+nexus ###
 - .9
   * introducing time display selection on music OSD/Skin settings
+  * fix navigation issues on several OSD dialogs
 
 
 - .8
