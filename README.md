@@ -53,6 +53,7 @@ supports animated poster only.
   * customize text shadow color in skin settings
   * improvements in embuary dialogs
   * introducing time display selection on music OSD/Skin settings
+  * fix navigation issues on several OSD dialogs
 
 
 - .3
