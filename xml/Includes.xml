@@ -3954,7 +3954,7 @@
 					<label>$VAR[SeekTimeLabelVar]</label>
 					<font>font12</font>
 					<align>center</align>
-					<visible>[!Player.ChannelPreviewActive + !Window.IsVisible(MusicVisualisation.xml) + !Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
+					<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
 				</control>
 				<control type="group">
 					<visible>Skin.HasSetting(SmallOSDVideo) + !Window.IsVisible(visualisation)</visible>
@@ -3964,7 +3964,7 @@
 						<label>$VAR[OsdMediaTimeVar]$INFO[Player.SeekTime, : ]$INFO[Player.Duration, / ]</label>
 						<font>font12</font>
 						<align>right</align>
-						<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + !VideoPlayer.HasEpg + !Player.IsInternetStream</visible>
+						<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + !VideoPlayer.HasEpg</visible>
 					</control>
 					<control type="label">
 						<bottom>105</bottom>
@@ -3972,7 +3972,7 @@
 						<label>$VAR[OsdMediaTimeVar]$INFO[Player.TimeRemaining, : ]</label>
 						<font>font12</font>
 						<align>right</align>
-						<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + !VideoPlayer.HasEpg + !Player.IsInternetStream</visible>
+						<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + !VideoPlayer.HasEpg</visible>
 					</control>
 					<control type="label">
 						<bottom>105</bottom>
@@ -4034,7 +4034,7 @@
 						<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
 						<font>font12</font>
 						<align>right</align>
-						<visible>!VideoPlayer.HasEpg + !Player.IsInternetStream</visible>
+						<visible>!VideoPlayer.HasEpg</visible>
 					</control>
 					<control type="label">
 						<bottom>105</bottom>
@@ -4042,7 +4042,7 @@
 						<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
 						<font>font12</font>
 						<align>right</align>
-						<visible>VideoPlayer.HasEpg + !Player.IsInternetStream</visible>
+						<visible>VideoPlayer.HasEpg</visible>
 					</control>
 				</control>
 			</control>

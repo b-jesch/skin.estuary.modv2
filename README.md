@@ -43,7 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 
-### 4.1.2+nexus ###
+- .10
+  * revert partial code of time display selection in video OSD
+
+
 - .9
   * introducing time display selection on music OSD/Skin settings
   * fix navigation issues on several OSD dialogs
