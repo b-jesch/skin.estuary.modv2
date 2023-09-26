@@ -54,6 +54,7 @@ supports animated poster only.
   * improvements in embuary dialogs
   * introducing time display selection on music OSD/Skin settings
   * fix navigation issues on several OSD dialogs
+  * introducing new dynamic default CD cover (music OSD)
 
 
 - .3

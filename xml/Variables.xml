@@ -290,6 +290,7 @@
 	</variable>
 	<variable name="MusicPlayerCover">
 		<value condition="[Control.HasFocus(1300) | Control.HasFocus(9003)] + !String.IsEmpty(Player.Art(album.back))">$INFO[Player.Art(album.back)]</value>
+		<value condition="String.IsEmpty(Player.Art(thumb)) | String.IsEqual(Player.Art(thumb),defaultalbumcover.png)">dialogs/defaultcdcover.png</value>
 		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 	</variable>
 	<variable name="RadioPlayerCover">
