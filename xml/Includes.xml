@@ -49,9 +49,6 @@
 	<!-- Christmas Time from 1. Advent to 2. Christmas Date, fix end date (26.12.) -->
 	<expression name="ChristmasTime">System.Date(12-03,12-27) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="ChristmasTheme">$EXP[ChristmasTime] + $EXP[EnableTheme]</expression>
-	<!-- Halloween, fix date (31.10) -->
-	<expression name="HalloweenTime">System.Date(10-31,11-01) + !Skin.HasSetting(DisableThemes)</expression>
-	<expression name="HalloweenTheme">$EXP[HalloweenTime] + $EXP[EnableTheme]</expression>
 	<!-- Palm Sunday to Maundy Thursday, variable date -->
 	<expression name="PreEasterTime">System.Date(04-03,04-07) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="PreEasterTheme">$EXP[PreEasterTime] + $EXP[EnableTheme]</expression>
@@ -61,6 +58,9 @@
 	<!-- Valentines Day, fix date (14.02) -->
 	<expression name="ValentineTime">System.Date(02-14,02-15) + !Skin.HasSetting(DisableThemes)</expression>
 	<expression name="ValentineTheme">$EXP[ValentineTime] + $EXP[EnableTheme]</expression>
+	<!-- Halloween, fix date (31.10) -->
+	<expression name="HalloweenTime">System.Date(10-31,11-01) + !Skin.HasSetting(DisableThemes)</expression>
+	<expression name="HalloweenTheme">$EXP[HalloweenTime] + $EXP[EnableTheme]</expression>
 	<!-- Expression lossless audio -->
 	<expression name="isLossless">String.isEqual(Videoplayer.AudioCodec,cdda) | String.IsEqual(VideoPlayer.AudioCodec,wavpack) | String.IsEqual(Videoplayer.AudioCodec,flac) | String.IsEqual(Videoplayer.AudioCodec,pcm_bluray) | String.IsEqual(Videoplayer.AudioCodec,wav) | String.IsEqual(Videoplayer.AudioCodec,pcm) | String.IsEqual(Videoplayer.AudioCodec,pcm_s16le) | String.IsEqual(Videoplayer.AudioCodec,alac) | String.IsEqual(Videoplayer.AudioCodec,pcm_s24le) | String.IsEqual(Videoplayer.AudioCodec,ape) | String.IsEqual(Videoplayer.AudioCodec,sacd)</expression>
 	<!-- Expression Seek, Skip Forwarding and Rewinding -->
@@ -4156,7 +4156,7 @@
 						<aligny>top</aligny>
 						<aspectratio align="left">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture background="true" diffuse="overlays/cdart_mask.png" fallback="osd/cd.png">$VAR[PlayerInfoDiscArtVar]</texture>
+						<texture background="true" colordiffuse="$VAR[Label_SkinSetting_BackgroundColor]" diffuse="overlays/cdart_mask.png" fallback="osd/cd.png">$VAR[PlayerInfoDiscArtVar]</texture>
 					</control>
 					<control type="label">
 						<left>70</left>
@@ -4197,16 +4197,29 @@
 					<bordersize>20</bordersize>
 					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] + !String.StartsWith(Player.Filenameandpath,http)</visible>
 				</control>
-				<control type="image">
+				<control type="group">
+					<description>audio disc cover</description>
 					<depth>DepthOSD+</depth>
 					<left>10</left>
 					<bottom>5</bottom>
 					<width>440</width>
 					<height>440</height>
-					<aspectratio aligny="bottom" align="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultAudio.png">$VAR[MusicPlayerCover]</texture>
-					<bordersize>20</bordersize>
-					<visible>Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+					<control type="image" id="4397">
+						<aspectratio aligny="bottom" align="center">keep</aspectratio>
+						<texture background="true" fallback="dialogs/defaultcdcover.png">$VAR[MusicPlayerCover]</texture>
+						<bordersize>20</bordersize>
+						<visible>Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<right>30</right>
+						<align>center</align>
+						<top>240</top>
+						<font>Font-Disc</font>
+						<textcolor>grey</textcolor>
+						<label>$VAR[MusicPlayerDiscAlbumVar]</label>
+						<visible>String.IsEmpty(Player.Art(thumb)) | String.IsEqual(Player.Art(thumb),defaultalbumcover.png)</visible>
+					</control>
 				</control>
 				<control type="image">
 					<depth>DepthOSD+</depth>

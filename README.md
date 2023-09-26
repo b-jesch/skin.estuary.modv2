@@ -45,6 +45,7 @@ supports animated poster only.
 
 - .10
   * revert partial code of time display selection in video OSD
+  * introducing new dynamic default CD cover (music OSD)
 
 
 - .9
