@@ -55,6 +55,7 @@ supports animated poster only.
   * introducing time display selection on music OSD/Skin settings
   * fix navigation issues on several OSD dialogs
   * introducing new dynamic default CD cover (music OSD)
+  * introducing speed in-/decrease buttons in video OSD
 
 
 - .3

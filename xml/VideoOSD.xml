@@ -41,7 +41,7 @@
 				<bottom>5</bottom>
 				<width>100%</width>
 				<height>60</height>
-				<itemgap>12</itemgap>
+				<itemgap>11</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
 				<onup>87</onup>
@@ -108,6 +108,20 @@
 						<param name="texture" value="osd/fullscreen/buttons/stop.png"/>
 					</include>
 					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="radiobutton" id="609">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/speeddown.png"/>
+					</include>
+					<onclick>PlayerControl(TempoDown)</onclick>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + Player.TempoEnabled</visible>
+				</control>
+				<control type="radiobutton" id="610">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/speedup.png"/>
+					</include>
+					<onclick>PlayerControl(TempoUp)</onclick>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + Player.TempoEnabled</visible>
 				</control>
 				<control type="radiobutton" id="608">
 					<include content="OSDButton">
@@ -316,7 +330,6 @@
 					<onclick>SetProperty(settingslist_content,osd,home)</onclick>
 					<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
 					<onclick>ActivateWindow(1101)</onclick>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 			</control>
 			<control type="group">
