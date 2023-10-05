@@ -3,7 +3,9 @@
 	<defaultcontrol always="true">5000</defaultcontrol>
 	<onload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + Player.Playing + !Pvr.IsPlayingTV + !Pvr.IsPlayingRecording">PlayerControl(Play)</onload>
 	<onunload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + !Pvr.IsPlayingTV + !Pvr.IsPlayingRecording">PlayerControl(Play)</onunload>
+	<onunload>ClearProperty(size,home)</onunload>
 	<onload condition="!Window.IsVisible(videoosd) + [Skin.HasSetting(ExtendedOSDInfo) | VideoPlayer.Content(musicvideos) | Pvr.IsPlayingTV | Pvr.IsPlayingRecording]">ActivateWindow(1143)</onload>
+	<onload condition="!String.StartsWith(Player.FileNameAndPath,'plugin://')">RunScript(skin.estuary.modv2,getFileSize,$ESCINFO[Player.FileNameAndPath])</onload>
 	<controls>
 		<control type="group">
 			<visible>[VideoPlayer.content(movies) | VideoPlayer.Content(episodes)] + !Skin.HasSetting(ExtendedOSDInfo)</visible>
@@ -433,6 +435,13 @@
 					<param name="visible" value="!String.IsEmpty(Player.FileNameAndPath)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata">
+					<param name="control_id" value="170" />
+					<param name="label" value="$LOCALIZE[21802] : [COLOR white]$INFO[Window(10000).Property(size)][/COLOR]" />
+					<param name="visible" value="!String.StartsWith(Player.FileNameAndPath,'plugin://') + ![String.StartsWith(Window(10000).Property(size),0.00) | String.IsEmpty(Window(10000).Property(size))]" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="font12" />
 				</include>
 			</control>
 		</control>
