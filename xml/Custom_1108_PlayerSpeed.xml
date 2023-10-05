@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1108">
-	<defaultcontrol always="true">15000</defaultcontrol>
+	<defaultcontrol always="true">11</defaultcontrol>
 	<include>Animation_DialogPopupOpenClose</include>
+	<depth>DepthOSD</depth>
 	<controls>
 		<control type="group">
+			<top>20</top>
 			<centerleft>50%</centerleft>
-			<height>570</height>
-			<centertop>50%</centertop>
-			<width>700</width>
-			<visible>!Window.IsActive(DialogSettings.xml) + !Window.IsActive(DialogSlider.xml) + !Window.IsActive(GameVideoFilter) + !Window.IsActive(GameStretchMode) + !Window.IsActive(GameControllers) + !Window.IsActive(GameVideoRotation)</visible>
-			<animation effect="fade" time="200">VisibleChange</animation>
-			<include content="DialogBackgroundCommons">
-				<param name="width" value="700" />
-				<param name="height" value="80" />
-				<param name="header_label" value="$LOCALIZE[31142] : $INFO[Player.PlaySpeed]" />
-				<param name="header_id" value="1" />
-			</include>
-			<control type="group" id="15000">
-				<left>0</left>
-				<top>80</top>
-				<control type="grouplist" id="15100">
-					<visible>String.IsEqual(window(home).Property(settingslist_content),osd)</visible>
-					<width>700</width>
-					<height>490</height>
-					<itemgap>0</itemgap>
-					<onup>11500</onup>
-					<ondown>11500</ondown>
-					<orientation>vertical</orientation>
-					<control type="button" id="15101">
-						<width>700</width>
-						<include>DialogSettingButton</include>
-						<label>$LOCALIZE[31661]</label>
-						<onclick>PlayerControl(TempoDown)</onclick>
-					</control>
-					<control type="button" id="15102">
-						<width>700</width>
-						<include>DialogSettingButton</include>
-						<label>$LOCALIZE[31662]</label>
-						<onclick>PlayerControl(TempoUp)</onclick>
-					</control>
-				</control>
+			<width>840</width>
+			<control type="image">
+				<left>-20</left>
+				<top>-30</top>
+				<width>840</width>
+				<height>110</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="label">
+				<description>Dialog header</description>
+				<left>40</left>
+				<top>15</top>
+				<width>600</width>
+				<height>20</height>
+				<aligny>center</aligny>
+				<font>font14</font>
+				<label>$LOCALIZE[31142]$INFO[Player.PlaySpeed, : ]</label>
+			</control>
+			<control type="radiobutton" id="11">
+				<left>670</left>
+				<top>-3</top>
+				<include content="OSDButton">
+					<param name="texture" value="osd/fullscreen/buttons/play.png"/>
+				</include>
+				<onleft>12</onleft>
+				<onright>12</onright>
+				<onclick>PlayerControl(TempoDown)</onclick>
+				<animation effect="rotate" start="0" end="-90" center="auto" condition="true">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="12">
+				<left>730</left>
+				<top>-3</top>
+				<include content="OSDButton">
+					<param name="texture" value="osd/fullscreen/buttons/play.png"/>
+				</include>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<onclick>PlayerControl(TempoUp)</onclick>
+				<animation effect="rotate" start="0" end="90" center="auto" condition="true">Conditional</animation>
 			</control>
 		</control>
 	</controls>
