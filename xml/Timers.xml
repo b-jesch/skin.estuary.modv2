@@ -15,4 +15,12 @@
 		<reset>Player.Playing | Pvr.IsPlayingTV | Pvr.IsPlayingRecording</reset>
 		<onstop>PlayerControl(Stop)</onstop>
 	</timer>
+	<timer>
+		<name>dialogtempotimer</name>
+		<description>Close tempo menu after an amount of time</description>
+		<start reset="true">Window.IsVisible(1108)</start>
+		<stop>Window.IsVisible(1108) + Integer.IsGreater(Skin.TimerElapsedSecs(dialogtempotimer),10)</stop>
+		<reset>!Window.isVisible(1108)</reset>
+		<onstop>Dialog.close(all)</onstop>
+	</timer>
 </timers>
