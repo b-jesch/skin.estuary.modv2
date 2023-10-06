@@ -4214,9 +4214,10 @@
 						<left>40</left>
 						<right>30</right>
 						<align>center</align>
-						<top>240</top>
+						<top>245</top>
 						<font>Font-Disc</font>
 						<textcolor>grey</textcolor>
+						<wrapmultiline>true</wrapmultiline>
 						<label>$VAR[MusicPlayerDiscAlbumVar]</label>
 						<visible>String.IsEmpty(Player.Art(thumb)) | String.IsEqual(Player.Art(thumb),defaultalbumcover.png)</visible>
 					</control>
