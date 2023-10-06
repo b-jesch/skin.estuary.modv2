@@ -13,8 +13,7 @@
 				<top>-30</top>
 				<width>840</width>
 				<height>110</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<texture colordiffuse="$VAR[SkinColorVar]">dialogs/osdepgguide.png</texture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="label">
