@@ -3841,7 +3841,7 @@
 					<visible>$PARAM[bg_visibility] + Pvr.IsTimeShift</visible>
 				</control>
 				<control type="group" id="6000">
-					<top>-5</top>
+					<top>-3</top>
 					<visible>PVR.IsTimeShift + !Player.ChannelPreviewActive</visible>
 					<animation effect="fade" time="300">VisibleChange</animation>
 					<control type="label">
@@ -3862,11 +3862,11 @@
 						<height>30</height>
 						<font>font12</font>
 						<align>center</align>
-						<label>[B]$LOCALIZE[31026][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
+						<label>$LOCALIZE[31026]$INFO[PVR.TimeshiftCur, : ,]$INFO[PVR.TimeshiftOffset, (-,)]</label>
 					</control>
 					<control type="progress">
 						<top>-52</top>
-						<height>10</height>
+						<height>8</height>
 						<info>PVR.timeshiftprogress</info>
 						<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 						<midtexture>colors/white50.png</midtexture>
@@ -3874,21 +3874,21 @@
 					</control>
 				</control>
 				<control type="progress">
-					<height>10</height>
+					<height>8</height>
 					<info>PVR.EpgEventProgress</info>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
 					<visible>VideoPlayer.HasEpg</visible>
 				</control>
 				<control type="progress">
-					<height>10</height>
+					<height>8</height>
 					<info>Player.ProgressCache</info>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture>colors/white50.png</midtexture>
 					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="progress">
-					<height>10</height>
+					<height>8</height>
 					<info>Player.Progress</info>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
@@ -3904,8 +3904,8 @@
 					<info>Player.Cutlist</info>
 				</control>
 				<control type="ranges">
-					<top>4</top>
-					<height>6</height>
+					<top>3</top>
+					<height>5</height>
 					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
 					<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
 					<righttexture>colors/white.png</righttexture>
@@ -3931,118 +3931,96 @@
 					<visible>Player.SeekEnabled + VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
 				</control>
 				<include content="SeekBarProgress" condition="![Window.IsVisible(videoosd) | Window.IsVisible(musicosd)]"/>
-				<control type="label">
-					<bottom>105</bottom>
-					<height>30</height>
-					<label>$VAR[SeekLabel]</label>
-					<font>font12</font>
-					<visible>![Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)] | Player.HasVideo</visible>
-				</control>
-				<control type="label">
-					<bottom>105</bottom>
-					<right>30</right>
-					<height>30</height>
-					<label>$VAR[SeekLabel] - [COLOR white]$INFO[Playlist.Position, $LOCALIZE[554] ]$INFO[Playlist.Length,/][/COLOR]</label>
-					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<font>font12</font>
-					<visible>Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0) + !Player.HasVideo</visible>
-				</control>
-				<control type="label">
-					<bottom>105</bottom>
-					<right>30</right>
-					<height>30</height>
-					<label>$VAR[SeekTimeLabelVar]</label>
-					<font>font12</font>
-					<align>center</align>
-					<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
-				</control>
 				<control type="group">
-					<visible>Skin.HasSetting(SmallOSDVideo) + !Window.IsVisible(visualisation)</visible>
+					<bottom>100</bottom>
+					<height>30</height>
 					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$VAR[OsdMediaTimeVar]$INFO[Player.SeekTime, : ]$INFO[Player.Duration, / ]</label>
+						<label>$VAR[SeekLabel]</label>
 						<font>font12</font>
-						<align>right</align>
-						<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + !VideoPlayer.HasEpg</visible>
+						<visible>![Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)] | Player.HasVideo</visible>
 					</control>
 					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$VAR[OsdMediaTimeVar]$INFO[Player.TimeRemaining, : ]</label>
+						<right>30</right>
+						<label>$VAR[SeekLabel] - [COLOR white]$INFO[Playlist.Position, $LOCALIZE[554] ]$INFO[Playlist.Length,/][/COLOR]</label>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<font>font12</font>
-						<align>right</align>
-						<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + !VideoPlayer.HasEpg</visible>
+						<visible>Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0) + !Player.HasVideo</visible>
 					</control>
 					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$VAR[OsdMediaTimeVar]$INFO[PVR.EpgEventSeekTime, : ]$INFO[PVR.EpgEventDuration, / ]</label>
+						<right>30</right>
+						<label>$VAR[SeekTimeLabelVar]</label>
 						<font>font12</font>
-						<align>right</align>
-						<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + VideoPlayer.HasEpg</visible>
+						<align>center</align>
+						<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
 					</control>
-					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$VAR[OsdMediaTimeVar]$INFO[PVR.EpgEventRemainingTime, : ]</label>
-						<font>font12</font>
-						<align>right</align>
-						<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + VideoPlayer.HasEpg</visible>
+					<control type="group">
+						<visible>Skin.HasSetting(SmallOSDVideo) + !Window.IsVisible(visualisation)</visible>
+						<control type="label">
+							<label>$VAR[OsdMediaTimeVar]$INFO[Player.SeekTime, : ]$INFO[Player.Duration, / ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + !VideoPlayer.HasEpg</visible>
+						</control>
+						<control type="label">
+							<label>$VAR[OsdMediaTimeVar]$INFO[Player.TimeRemaining, : ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + !VideoPlayer.HasEpg</visible>
+						</control>
+						<control type="label">
+							<label>$VAR[OsdMediaTimeVar]$INFO[PVR.EpgEventSeekTime, : ]$INFO[PVR.EpgEventDuration, / ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>[String.IsEqual(Skin.String(OsdMediaTime),0) | String.IsEmpty(Skin.String(OsdMediaTime))] + VideoPlayer.HasEpg</visible>
+						</control>
+						<control type="label">
+							<label>$VAR[OsdMediaTimeVar]$INFO[PVR.EpgEventRemainingTime, : ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + VideoPlayer.HasEpg</visible>
+						</control>
 					</control>
-				</control>
-				<control type="group">
-					<visible>Window.IsVisible(visualisation)</visible>
-					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$VAR[OsdMusicMediaTimeVar]$INFO[Player.SeekTime, : ]$INFO[Player.Duration, / ]</label>
-						<font>font12</font>
-						<align>right</align>
-						<visible>!String.IsEmpty(Player.Duration) + [String.IsEqual(Skin.String(OsdMusicMediaTime),0) | String.IsEmpty(Skin.String(OsdMusicMediaTime))]</visible>
+					<control type="group">
+						<visible>Window.IsVisible(visualisation)</visible>
+						<control type="label">
+							<label>$VAR[OsdMusicMediaTimeVar]$INFO[Player.SeekTime, : ]$INFO[Player.Duration, / ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>!String.IsEmpty(Player.Duration) + [String.IsEqual(Skin.String(OsdMusicMediaTime),0) | String.IsEmpty(Skin.String(OsdMusicMediaTime))]</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[Player.SeekTime,$LOCALIZE[31660] : ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>String.IsEmpty(Player.Duration) + [String.IsEqual(Skin.String(OsdMusicMediaTime),0) | String.IsEmpty(Skin.String(OsdMusicMediaTime))]</visible>
+						</control>
+						<control type="label">
+							<label>$VAR[OsdMusicMediaTimeVar]$INFO[Player.TimeRemaining, : ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>!String.IsEmpty(Player.TimeRemaining) + String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[Player.SeekTime,$LOCALIZE[31660] : ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>String.IsEmpty(Player.TimeRemaining) + String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
+						</control>
 					</control>
-					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$INFO[Player.SeekTime,$LOCALIZE[31660] : ]</label>
-						<font>font12</font>
-						<align>right</align>
-						<visible>String.IsEmpty(Player.Duration) + [String.IsEqual(Skin.String(OsdMusicMediaTime),0) | String.IsEmpty(Skin.String(OsdMusicMediaTime))]</visible>
-					</control>
-					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$VAR[OsdMusicMediaTimeVar]$INFO[Player.TimeRemaining, : ]</label>
-						<font>font12</font>
-						<align>right</align>
-						<visible>!String.IsEmpty(Player.TimeRemaining) + String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
-					</control>
-					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$INFO[Player.SeekTime,$LOCALIZE[31660] : ]</label>
-						<font>font12</font>
-						<align>right</align>
-						<visible>String.IsEmpty(Player.TimeRemaining) + String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>!Skin.HasSetting(SmallOSDVideo) + !Window.IsVisible(visualisation)</visible>
-					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
-						<font>font12</font>
-						<align>right</align>
-						<visible>!VideoPlayer.HasEpg</visible>
-					</control>
-					<control type="label">
-						<bottom>105</bottom>
-						<height>30</height>
-						<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
-						<font>font12</font>
-						<align>right</align>
-						<visible>VideoPlayer.HasEpg</visible>
+					<control type="group">
+						<visible>!Skin.HasSetting(SmallOSDVideo) + !Window.IsVisible(visualisation)</visible>
+						<control type="label">
+							<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>!VideoPlayer.HasEpg</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[PVR.EpgEventRemainingTime,$LOCALIZE[31134] : ]</label>
+							<font>font12</font>
+							<align>right</align>
+							<visible>VideoPlayer.HasEpg</visible>
+						</control>
 					</control>
 				</control>
 			</control>
@@ -4472,6 +4450,7 @@
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 					</control>
+					<!--
 					<control type="label">
 						<left>460</left>
 						<bottom>210</bottom>
@@ -4482,6 +4461,7 @@
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<visible>Player.IsInternetStream + Window.IsVisible(MusicVisualisation.xml) + [String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album) + String.IsEmpty(MusicPlayer.Year)]</visible>
 					</control>
+					-->
 					<control type="label">
 						<left>460</left>
 						<bottom>210</bottom>
@@ -5012,7 +4992,7 @@
 			<height>190</height>
 			<control type="image">
 				<left>0</left>
-				<bottom>-410</bottom>
+				<bottom>-440</bottom>
 				<width>100%</width>
 				<height>590</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>

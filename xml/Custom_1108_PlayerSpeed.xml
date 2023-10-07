@@ -7,28 +7,28 @@
 		<control type="group">
 			<top>20</top>
 			<centerleft>50%</centerleft>
-			<width>840</width>
+			<width>700</width>
 			<control type="image">
 				<left>-20</left>
-				<top>-30</top>
-				<width>840</width>
-				<height>110</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
+				<top>-10</top>
+				<width>700</width>
+				<height>70</height>
+				<texture colordiffuse="$VAR[SkinColorVar]">dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture infill="false" border="5">dialogs/osdepgguide.png</bordertexture>
+				<bordersize>5</bordersize>
 			</control>
 			<control type="label">
 				<description>Dialog header</description>
-				<left>40</left>
+				<left>15</left>
 				<top>15</top>
-				<width>600</width>
+				<width>500</width>
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>font14</font>
 				<label>$LOCALIZE[31142]$INFO[Player.PlaySpeed, : ]</label>
 			</control>
 			<control type="radiobutton" id="11">
-				<left>670</left>
+				<left>540</left>
 				<top>-3</top>
 				<include content="OSDButton">
 					<param name="texture" value="osd/fullscreen/buttons/play.png"/>
@@ -39,7 +39,7 @@
 				<animation effect="rotate" start="0" end="-90" center="auto" condition="true">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="12">
-				<left>730</left>
+				<left>600</left>
 				<top>-3</top>
 				<include content="OSDButton">
 					<param name="texture" value="osd/fullscreen/buttons/play.png"/>
