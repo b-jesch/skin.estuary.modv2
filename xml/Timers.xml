@@ -2,8 +2,8 @@
 <timers>
 	<timer>
 		<name>splashtimer</name>
-        <description>Timer for displaying the splash screen while skin starts up</description>
-        <start reset="true">Window.IsActive(startup) + !Skin.HasSetting(EnableSplashScreen)</start>
+		<description>Timer for displaying the splash screen while skin starts up</description>
+		<start reset="true">Window.IsActive(startup) + !Skin.HasSetting(EnableSplashScreen)</start>
 		<stop>!Window.IsActive(startup) | Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(splashtimer),3)</stop>
 		<onstop>ReplaceWindow($INFO[System.StartupWindow])</onstop>
 	</timer>
@@ -19,7 +19,7 @@
 		<name>dialogtempotimer</name>
 		<description>Close tempo menu after an amount of time</description>
 		<start reset="true">Window.IsVisible(1108)</start>
-		<stop>Window.IsVisible(1108) + Integer.IsGreater(Skin.TimerElapsedSecs(dialogtempotimer),10)</stop>
+		<stop>Window.IsVisible(1108) + Integer.IsGreater(Skin.TimerElapsedSecs(dialogtempotimer),8) + System.IdleTime(8)</stop>
 		<reset>!Window.isVisible(1108)</reset>
 		<onstop>Dialog.close(all)</onstop>
 	</timer>

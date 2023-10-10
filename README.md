@@ -42,12 +42,12 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+### 4.1.3+nexus ###
+- .0
+  * introducing speed in-/decrease buttons in video OSD
+  * control adjustments in several views
 
 ### 4.1.2+nexus ###
-- .11
-  * introducing speed in-/decrease buttons in video OSD
-
-
 - .10
   * revert partial code of time display selection in video OSD
   * introducing new dynamic default CD cover (music OSD)
