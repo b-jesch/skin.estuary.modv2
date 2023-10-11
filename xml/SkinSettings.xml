@@ -325,12 +325,6 @@
 					<onclick>Skin.ToggleSetting(enable_scrollingtext)</onclick>
 					<selected>!Skin.HasSetting(enable_scrollingtext)</selected>
 				</control>
-				<control type="radiobutton" id="221">
-					<label>$LOCALIZE[31286]</label>
-					<include>DefaultSettingButton</include>
-					<selected>Skin.HasSetting(SkinHelper.DisableScreenSaverOnFullScreenMusic)</selected>
-					<onclick>Skin.ToggleSetting(SkinHelper.DisableScreenSaverOnFullScreenMusic)</onclick>
-				</control>
 			</control>
 			<control type="grouplist" id="300">
 				<top>168</top>

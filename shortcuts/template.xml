@@ -328,7 +328,6 @@
 		</controls>
 		<variables>
 			<variable name="WidgetLabelFocus22100$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(22100$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(22100$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22100$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22100$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
@@ -339,7 +338,6 @@
 				<value condition="!String.IsEmpty(Container(22100$SKINSHORTCUTS[id]).ListItem.Label)">$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Label, | ]</value>
 			</variable>
 			<variable name="WidgetLabelFocus22200$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(22200$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(22200$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22200$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22200$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
@@ -350,7 +348,6 @@
 				<value condition="!String.IsEmpty(Container(22200$SKINSHORTCUTS[id]).ListItem.Label)">$INFO[Container(22200$SKINSHORTCUTS[id]).ListItem.Label, | ]</value>
 			</variable>
 			<variable name="WidgetLabelFocus22300$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(22300$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(22300$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22300$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22300$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
@@ -361,7 +358,6 @@
 				<value condition="!String.IsEmpty(Container(22300$SKINSHORTCUTS[id]).ListItem.Label)">$INFO[Container(22300$SKINSHORTCUTS[id]).ListItem.Label, | ]</value>
 			</variable>
 			<variable name="WidgetLabelFocus22400$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(22400$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(22400$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22400$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22400$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
@@ -372,7 +368,6 @@
 				<value condition="!String.IsEmpty(Container(22400$SKINSHORTCUTS[id]).ListItem.Label)">$INFO[Container(22400$SKINSHORTCUTS[id]).ListItem.Label, | ]</value>
 			</variable>
 			<variable name="WidgetLabelFocus22500$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(22500$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(22500$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22500$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22500$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
@@ -383,7 +378,6 @@
 				<value condition="!String.IsEmpty(Container(22500$SKINSHORTCUTS[id]).ListItem.Label)">$INFO[Container(22500$SKINSHORTCUTS[id]).ListItem.Label, | ]</value>
 			</variable>
 			<variable name="WidgetLabelFocus22600$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(22600$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(22600$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22600$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22600$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
@@ -394,7 +388,6 @@
 				<value condition="!String.IsEmpty(Container(22600$SKINSHORTCUTS[id]).ListItem.Label)">$INFO[Container(22600$SKINSHORTCUTS[id]).ListItem.Label, | ]</value>
 			</variable>
 			<variable name="WidgetLabelFocus22700$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(22700$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(22700$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22700$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22700$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
@@ -405,7 +398,6 @@
 				<value condition="!String.IsEmpty(Container(22700$SKINSHORTCUTS[id]).ListItem.Label)">$INFO[Container(22700$SKINSHORTCUTS[id]).ListItem.Label, | ]</value>
 			</variable>
 			<variable name="WidgetLabelFocus22800$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(22800$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(22800$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22800$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(22800$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
@@ -416,7 +408,6 @@
 				<value condition="!String.IsEmpty(Container(22800$SKINSHORTCUTS[id]).ListItem.Label)">$INFO[Container(22800$SKINSHORTCUTS[id]).ListItem.Label, | ]</value>
 			</variable>
 			<variable name="WidgetLabelFocus23100$SKINSHORTCUTS[id]">
-				<value condition="String.IsEqual(Container(23100$SKINSHORTCUTS[id]).ListItem.dbtype,set)">$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container(23100$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(23100$SKINSHORTCUTS[id]).ListItem.dbtype,episode)">$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.TVShowTitle, | , - ]$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Season,,x]$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Episode,,. ]$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Title]$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
 				<value condition="String.IsEqual(Container(23100$SKINSHORTCUTS[id]).ListItem.dbtype,tvshow)">$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Title, | ]$INFO[Container(23100$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>

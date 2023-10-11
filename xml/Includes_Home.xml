@@ -160,7 +160,7 @@
 					<visible>String.IsEmpty(ListItem.Art(poster.0))</visible>
 					<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
 					<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
-					<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
+					<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 				</control>
 				<control type="image">
 					<left>2</left>
@@ -428,7 +428,6 @@
 				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<onright/>
-				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="415" height="270">
@@ -1199,7 +1198,6 @@
 				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<onright/>
-				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="310" height="430">
@@ -1261,7 +1259,6 @@
 				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<onright/>
-				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="340" height="290" condition="![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
@@ -1358,7 +1355,6 @@
 				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<onright/>
-				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="340" height="340" condition="![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
@@ -1454,7 +1450,6 @@
 				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<onright/>
-				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="340" height="410" condition="Skin.HasSetting(HideWidgetLabels)">
@@ -1541,7 +1536,6 @@
 				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<onright/>
-				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout height="210" width="680">
@@ -1904,7 +1898,6 @@
 				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<onright/>
-				<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<itemlayout width="320" height="215">
@@ -3498,7 +3491,7 @@
 				<visible>!Container.Content(videos)</visible>
 				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
-				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
+				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 			</control>
 			<control type="image">
 				<left>22</left>
@@ -4380,7 +4373,7 @@
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
-				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
+				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 			</control>
 			<control type="image">
 				<left>22</left>
@@ -6993,7 +6986,6 @@
 		<onleft>9000</onleft>
 		<onback>9000</onback>
 		<onright/>
-		<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
 		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
 		<preloaditems>2</preloaditems>
 	</include>

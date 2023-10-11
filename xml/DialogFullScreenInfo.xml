@@ -367,27 +367,6 @@
 					<param name="font" value="fontplot" />
 				</include>
 				<include content="InfoDialogMetadata">
-					<param name="control_id" value="154" />
-					<param name="label" value="$INFO[SkinHelper.Player.Rating.IMDB,$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[SkinHelper.ListItem.Votes.IMDB,[COLOR white] (,$LOCALIZE[31227])[/COLOR]]$INFO[Window(Home).Property(SkinHelper.Player.IMDB.Top250), [COLOR white]-[/COLOR] Top 250 : [COLOR white]#,[/COLOR]]" />
-					<param name="visible" value="!String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250)) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
-					<param name="textcolor" value="$VAR[SkinColorVar]" />
-					<param name="font" value="fontplot" />
-				</include>
-				<include content="InfoDialogMetadata">
-					<param name="control_id" value="155" />
-					<param name="label" value="$INFO[SkinHelper.Player.Rating.IMDB,$LOCALIZE[563] IMDb : [COLOR white],[/COLOR]]$INFO[SkinHelper.ListItem.Votes.IMDB,[COLOR white] (,$LOCALIZE[31227])[/COLOR]]" />
-					<param name="visible" value="!String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250))" />
-					<param name="textcolor" value="$VAR[SkinColorVar]" />
-					<param name="font" value="fontplot" />
-				</include>
-				<include content="InfoDialogMetadata">
-					<param name="control_id" value="156" />
-					<param name="label" value="$INFO[Window(Home).Property(SkinHelper.Player.IMDB.Top250),[COLOR white][/COLOR]Top 250 : [COLOR white]#,[/COLOR]]" />
-					<param name="visible" value="String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250)) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
-					<param name="textcolor" value="$VAR[SkinColorVar]" />
-					<param name="font" value="fontplot" />
-				</include>
-				<include content="InfoDialogMetadata">
 					<param name="control_id" value="157" />
 					<param name="label" value="$INFO[VideoPlayer.RatingAndVotes(themoviedb),$LOCALIZE[563] TheMovieDb : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.RatingAndVotes(themoviedb)) + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
@@ -405,13 +384,6 @@
 					<param name="control_id" value="159" />
 					<param name="label" value="$INFO[VideoPlayer.RatingAndVotes,$LOCALIZE[563] : [COLOR white],[/COLOR]]" />
 					<param name="visible" value="[String.IsEmpty(VideoPlayer.RatingAndVotes(imdb)) + String.IsEmpty(VideoPlayer.RatingAndVotes(themoviedb)) + !String.IsEmpty(VideoPlayer.RatingAndVotes)] + !VideoPlayer.Content(tvshows) + !VideoPlayer.Content(seasons) + !VideoPlayer.Content(episodes)" />
-					<param name="textcolor" value="$VAR[SkinColorVar]" />
-					<param name="font" value="fontplot" />
-				</include>
-				<include content="InfoDialogMetadata">
-					<param name="control_id" value="160" />
-					<param name="label" value="$LOCALIZE[31436] : [COLOR white]$INFO[Window(Home).Property(SkinHelper.Player.Awards)][/COLOR]" />
-					<param name="visible" value="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),Oscar)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="fontplot" />
 				</include>
@@ -520,26 +492,6 @@
 					<param name="width" value="0" />
 					<param name="top" value="5" />
 				</include>
-				<control type="group">
-					<top>5</top>
-					<width>130</width>
-					<visible>!String.IsEmpty(SkinHelper.Player.Rating.IMDB) + !VideoPlayer.Content(episodes)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/imdb.png" />
-						<param name="width" value="130" />
-					</include>
-					<control type="label">
-						<top>-1</top>
-						<left>51</left>
-						<width>76</width>
-						<height>50</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[SkinHelper.Player.Rating.IMDB]</label>
-						<font>font_flag</font>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
 				<control type="group">
 					<top>5</top>
 					<width>130</width>

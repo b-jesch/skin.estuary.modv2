@@ -444,7 +444,7 @@
 				<visible>Control.HasFocus(5002) | [!Control.IsVisible(50) + !Control.IsVisible(5100) + !Control.IsVisible(63000)]</visible>
 				<include>OpenClose_Right</include>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<animation effect="slide" end="0,149" time="0" condition="String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt))">Conditional</animation>
+				<animation effect="slide" end="0,149" time="0" condition="String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))">Conditional</animation>
 			</control>
 			<control type="grouplist" id="6100">
 				<top>0</top>

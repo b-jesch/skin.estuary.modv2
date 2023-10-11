@@ -246,17 +246,6 @@
 						<left>0</left>
 						<top>10</top>
 						<right>45</right>
-						<bottom>95</bottom>
-						<align>justify</align>
-						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
-						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="textbox">
-						<left>0</left>
-						<top>10</top>
-						<right>45</right>
 						<bottom>75</bottom>
 						<align>justify</align>
 						<label>[B]$VAR[CollectionNumberVar][/B]: [COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
@@ -268,24 +257,13 @@
 						<left>0</left>
 						<top>10</top>
 						<right>45</right>
-						<bottom>75</bottom>
-						<align>justify</align>
-						<label>[B]$VAR[CollectionNumberVar][/B]: [COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
-						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="textbox">
-						<left>0</left>
-						<top>10</top>
-						<right>45</right>
 						<bottom>95</bottom>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font27</font>
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
-						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
+						<visible>String.IsEmpty(ListItem.Plot)</visible>
 					</control>
 				</control>
 			</control>

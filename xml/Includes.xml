@@ -4452,18 +4452,6 @@
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 					</control>
-					<!--
-					<control type="label">
-						<left>460</left>
-						<bottom>210</bottom>
-						<right>755</right>
-						<height>30</height>
-						<label>$INFO[Window(Home).Property(SkinHelper.Player.Album),$LOCALIZE[558] : ]</label>
-						<font>font12</font>
-						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>Player.IsInternetStream + Window.IsVisible(MusicVisualisation.xml) + [String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album) + String.IsEmpty(MusicPlayer.Year)]</visible>
-					</control>
-					-->
 					<control type="label">
 						<left>460</left>
 						<bottom>210</bottom>
