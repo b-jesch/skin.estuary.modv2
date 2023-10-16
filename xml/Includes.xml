@@ -4006,21 +4006,37 @@
 					<visible>!VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
 				</control>
 				<control type="ranges">
-					<height>8</height>
-					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+					<height>4</height>
+					<colordiffuse>$VAR[BackgroundColorVar]</colordiffuse>
 					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
 					<lefttexture>colors/white.png</lefttexture>
 					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
 					<righttexture>colors/white.png</righttexture>
-					<info>Player.Cutlist</info>
+					<info>Player.Cuts</info>
 				</control>
 				<control type="ranges">
-					<top>3</top>
-					<height>5</height>
+					<top>4</top>
+					<height>4</height>
 					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
 					<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
 					<righttexture>colors/white.png</righttexture>
 					<info>Player.Chapters</info>
+				</control>
+				<control type="ranges">
+					<top>4</top>
+					<height>4</height>
+					<colordiffuse>$VAR[BackgroundColorVar]</colordiffuse>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
+					<righttexture>colors/white.png</righttexture>
+					<info>Player.EditList</info>
+				</control>
+				<control type="ranges">
+					<top>4</top>
+					<height>4</height>
+					<colordiffuse>$VAR[BackgroundColorVar]</colordiffuse>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
+					<righttexture>colors/white.png</righttexture>
+					<info>Player.SceneMarkers</info>
 				</control>
 				<control type="slider" id="401">
 					<left>5</left>
