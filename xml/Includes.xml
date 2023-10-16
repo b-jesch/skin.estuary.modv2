@@ -4928,7 +4928,7 @@
 							</control>
 							<include content="MediaFlagPvrOsd">
 								<param name="bottom" value="145"/>
-								<param name="visible" value="!Player.ChannelPreviewActive"/>
+								<param name="visible" value="!Player.ChannelPreviewActive + !Window.IsVisible(visualisation)"/>
 							</include>
 						</control>
 					</control>
