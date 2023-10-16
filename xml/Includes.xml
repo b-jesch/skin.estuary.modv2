@@ -43,8 +43,8 @@
 	<constant name="dialogbuttons_itemgap">-20</constant>
 	<constant name="list_y_offset">0</constant>
 	<constant name="list_item_height">80</constant>
-	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-image.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)</expression>
-	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | ControlGroup(8000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131) | Window.IsActive(MyPlaylist.xml)</expression>
+	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-image.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(1132)</expression>
+	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | ControlGroup(8000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131) | Window.IsActive(videoplaylist)</expression>
 	<expression name="EnableTheme">![VideoPlayer.IsFullscreen | Window.IsActive(fullscreeninfo) | Window.IsVisible(visualisation) | Window.IsVisible(1104)]</expression>
 	<!-- Christmas Time from 1. Advent to 2. Christmas Date, fix end date (26.12.) -->
 	<expression name="ChristmasTime">System.Date(12-03,12-27) + !Skin.HasSetting(DisableThemes)</expression>
@@ -296,7 +296,7 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<texture colordiffuse="$VAR[Background_Opacity]">$VAR[FanartAnimated]</texture>
-			<visible>Skin.HasSetting(show_fanart) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Control.IsVisible(502) + !Control.IsVisible(510) | [Window.IsVisible(DialogVideoInfo.xml) + !Player.HasVideo]</visible>
+			<visible>Skin.HasSetting(show_fanart) + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Control.IsVisible(502) + !Control.IsVisible(510) | [Window.IsVisible(movieinformation) + !Player.HasVideo]</visible>
 		</control>
 	</include>
 	<include name="BusyPvrArtworkSpinner">
@@ -970,7 +970,7 @@
 				<control type="group">
 					<width>130</width>
 					<visible>[String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5094)] | [String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !Control.HasFocus(5084)] | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,movie) | Control.HasFocus(6600) | Control.HasFocus(66001)</visible>
-					<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)</visible>
+					<visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(1132)</visible>
 					<visible>!Skin.HasSetting(show_mediastudioflag)</visible>
 					<include content="MediaFlagStudio">
 						<param name="texture" value="$INFO[Skin.String(studiologos.path)]$INFO[$PARAM[infolabel_prefix]ListItem.Studio,,.png]" />
@@ -1811,18 +1811,18 @@
 					<param name="texture" value="$VAR[VideoPlayerAudioCodecFlagVar]" />
 					<param name="fallback" value="flags/audiocodec/fallback.png" />
 					<param name="top" value="5" />
-					<param name="visible" value="Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)" />
+					<param name="visible" value="Window.IsVisible(1141)" />
 				</include>
 				<include content="MediaFlagOSD">
 					<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
 					<param name="fallback" value="flags/audiochannel/fallback.png" />
 					<param name="top" value="5" />
-					<param name="visible" value="Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)" />
+					<param name="visible" value="Window.IsVisible(1141)" />
 				</include>
 				<control type="group">
 					<width>205</width>
 					<height>50</height>
-					<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
+					<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(1141)</visible>
 					<control type="image">
 						<top>5</top>
 						<width>205</width>
@@ -1844,7 +1844,7 @@
 				<control type="group">
 					<width>205</width>
 					<height>50</height>
-					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
+					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(1141)</visible>
 					<control type="image">
 						<top>5</top>
 						<width>205</width>
@@ -1866,7 +1866,7 @@
 				<control type="group">
 					<width>205</width>
 					<height>50</height>
-					<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
+					<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(1141)</visible>
 					<control type="image">
 						<top>5</top>
 						<width>205</width>
@@ -1888,7 +1888,7 @@
 				<control type="group">
 					<width>204</width>
 					<height>40</height>
-					<visible>!String.IsEmpty(MusicPlayer.UserRating) + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
+					<visible>!String.IsEmpty(MusicPlayer.UserRating) + Window.IsVisible(1141)</visible>
 					<control type="image">
 						<top>5</top>
 						<width>204</width>
@@ -2839,7 +2839,7 @@
 					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
 					<visible>Skin.HasSetting(show_breadcrumbs)</visible>
 					<visible>[Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505) | Control.IsVisible(506) | Control.IsVisible(507) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]]</visible>
-					<visible>!Container.Content(addons) + [Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyFavourites.xml)]</visible>
+					<visible>!Container.Content(addons) + [Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(pictures) | Window.IsVisible(favouritesbrowser)]</visible>
 					<control type="grouplist">
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
@@ -2862,7 +2862,7 @@
 								<param name="textcolor" value="$VAR[SkinColorVar]"/>
 							</include>
 							<visible>![Container.Content() + Window.IsActive(videos)]</visible>
-							<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
+							<visible>![Window.IsActive(tvchannels) | Window.IsActive(tvtimers) | Window.IsActive(tvrecordings) | Window.IsActive(tvsearch)]</visible>
 						</control>
 						<control type="label">
 							<label>$INFO[Container.PluginCategory,, : ]</label>
@@ -2926,7 +2926,7 @@
 					<control type="group">
 						<width>600</width>
 						<visible>Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
-						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)]</visible>
+						<visible>![Window.IsVisible(videos) + !Container.Content(addons)] + ![Window.IsVisible(music) + !Container.Content(addons)] + ![Window.IsVisible(pictures) + !Container.Content(addons)]</visible>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<control type="grouplist">
 							<left>-75</left>
@@ -2987,7 +2987,7 @@
 						</control>
 					</control>
 					<control type="label">
-						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyFavourites.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
+						<visible>![Window.IsVisible(videos) + !Container.Content(addons)] + ![Window.IsVisible(music) + !Container.Content(addons)] + ![Window.IsVisible(pictures) + !Container.Content(addons)] + ![Window.IsVisible(favouritesbrowser) + !Container.Content(addons)] + ![Window.IsVisible(shutdownmenu) + Skin.HasSetting(powermenu_list)]</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<animation effect="slide" end="0,-10" time="0" condition="String.IsEqual(Skin.Font,Arial)">Conditional</animation>
 						<font>font_clock</font>
@@ -3007,7 +3007,7 @@
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyFavourites.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
+					<visible>![Window.IsVisible(videos) + !Container.Content(addons)] + ![Window.IsVisible(music) + !Container.Content(addons)] + ![Window.IsVisible(pictures) + !Container.Content(addons)] + ![Window.IsVisible(favouritesbrowser) + !Container.Content(addons)] + ![Window.IsVisible(shutdownmenu) + Skin.HasSetting(powermenu_list)]</visible>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
@@ -3092,8 +3092,8 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>dialogs/volume/mute.png</texture>
 						<visible>Player.Muted</visible>
-						<animation effect="slide" end="-3,-58" time="0" condition="Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml)">Conditional</animation>
-						<visible>![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
+						<animation effect="slide" end="-3,-58" time="0" condition="Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(pictures)">Conditional</animation>
+						<visible>![Window.IsVisible(shutdownmenu) + Skin.HasSetting(powermenu_list)]</visible>
 					</control>
 				</control>
 				<control type="label" id="23000">
@@ -3175,7 +3175,7 @@
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">special://skin/extras/patterns/pattern13.png</texture>
-			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
+			<visible>!Window.IsVisible(visualisation)</visible>
 			<visible>$EXP[ChristmasTheme]</visible>
 		</control>
 		<control type="image">
@@ -3183,7 +3183,7 @@
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">special://skin/extras/patterns/pattern14.png</texture>
-			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
+			<visible>!Window.IsVisible(visualisation)</visible>
 			<visible>$EXP[HalloweenTheme]</visible>
 		</control>
 		<control type="image">
@@ -3191,7 +3191,7 @@
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">special://skin/extras/patterns/pattern17.png</texture>
-			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
+			<visible>!Window.IsVisible(visualisation)</visible>
 			<visible>$EXP[PreEasterTheme]</visible>
 		</control>
 		<control type="image">
@@ -3199,7 +3199,7 @@
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">special://skin/extras/patterns/pattern15.png</texture>
-			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
+			<visible>!Window.IsVisible(visualisation)</visible>
 			<visible>$EXP[EasterTheme]</visible>
 		</control>
 		<control type="image">
@@ -3207,7 +3207,7 @@
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">special://skin/extras/patterns/pattern16.png</texture>
-			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
+			<visible>!Window.IsVisible(visualisation)</visible>
 			<visible>$EXP[ValentineTheme]</visible>
 		</control>
 		<control type="image">
@@ -3215,7 +3215,7 @@
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">$INFO[Skin.String(background_overlay),special://skin/extras/patterns/pattern,.png]</texture>
-			<visible>!Window.IsVisible(MusicVisualisation.xml) + !Window.IsVisible(DialogPVRRadioRDSInfo.xml)</visible>
+			<visible>!Window.IsVisible(visualisation) + !Window.IsVisible(pvrradiordsinfo)</visible>
 			<visible>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</visible>
 		</control>
 	</include>
@@ -3236,7 +3236,7 @@
 					<include>ColoredBackgroundImages</include>
 				</control>
 				<control type="group" id="31111">
-					<visible>Skin.HasSetting(show_fanart) + !Window.IsVisible(Home.xml) + !$EXP[infodialog_active]</visible>
+					<visible>Skin.HasSetting(show_fanart) + !Window.IsVisible(home) + !$EXP[infodialog_active]</visible>
 					<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -3309,7 +3309,7 @@
 						<left>12</left>
 						<width>36</width>
 						<height>36</height>
-						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="[Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506) | Control.IsVisible(510)] + !Window.IsActive(MyPVRGuide.xml) + !Window.IsActive(MyPVRChannels.xml)">Conditional</animation>
+						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="[Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(503) | Control.IsVisible(506) | Control.IsVisible(510)] + !Window.IsActive(tvguide) + !Window.IsActive(tvchannels)">Conditional</animation>
 						<texturefocus colordiffuse="$VAR[SkinColorVar]">frame/menu-nofo.png</texturefocus>
 						<texturenofocus>frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
@@ -3354,7 +3354,7 @@
 						<texturenofocus>frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
-						<visible>Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRChannels.xml)</visible>
+						<visible>Window.IsActive(tvguide) | Window.IsActive(tvchannels)</visible>
 						<visible>!Skin.HasSetting(KioskMode)</visible>
 					</control>
 					<control type="button">
@@ -4062,7 +4062,7 @@
 						<label>$VAR[SeekTimeLabelVar]</label>
 						<font>font12</font>
 						<align>center</align>
-						<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
+						<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(visualisation) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
 					</control>
 					<control type="group">
 						<visible>Skin.HasSetting(SmallOSDVideo) + !Window.IsVisible(visualisation)</visible>
@@ -4152,7 +4152,7 @@
 				<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
 				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
 				<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
-				<animation effect="slide" end="0,35" time="0" condition="[[VideoPlayer.Content(files) + !String.StartsWith(Player.Filenameandpath,http)] | String.Contains(Player.Art(thumb),ytimg)] + ![Window.IsVisible(playerprocessinfo) | Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | Window.IsVisible(MusicVisualisation.xml) | VideoPlayer.HasEpg | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]]">Conditional</animation>
+				<animation effect="slide" end="0,35" time="0" condition="[[VideoPlayer.Content(files) + !String.StartsWith(Player.Filenameandpath,http)] | String.Contains(Player.Art(thumb),ytimg)] + ![Window.IsVisible(playerprocessinfo) | Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | Window.IsVisible(visualisation) | VideoPlayer.HasEpg | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]]">Conditional</animation>
 				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 			</control>
 			<control type="image">
@@ -4165,7 +4165,7 @@
 				<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
 				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
 				<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
-				<animation effect="slide" end="0,35" time="0" condition="[[VideoPlayer.Content(files) + !String.StartsWith(Player.Filenameandpath,http)] | String.Contains(Player.Art(thumb),ytimg)] + ![Window.IsVisible(playerprocessinfo) | Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | Window.IsVisible(MusicVisualisation.xml) | VideoPlayer.HasEpg | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]]">Conditional</animation>
+				<animation effect="slide" end="0,35" time="0" condition="[[VideoPlayer.Content(files) + !String.StartsWith(Player.Filenameandpath,http)] | String.Contains(Player.Art(thumb),ytimg)] + ![Window.IsVisible(playerprocessinfo) | Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | Window.IsVisible(visualisation) | VideoPlayer.HasEpg | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]]">Conditional</animation>
 				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 			</control>
 			<control type="image">
@@ -4227,7 +4227,7 @@
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
 					<texture background="true" diffuse="overlays/cdart_mask.png">$VAR[PlayerInfoDiscArtVar]</texture>
-					<visible>!Skin.HasSetting(show_discart) + !Window.IsVisible(MusicVisualisation.xml)</visible>
+					<visible>!Skin.HasSetting(show_discart) + !Window.IsVisible(visualisation)</visible>
 					<visible>!VideoPlayer.Content(musicvideos)</visible>
 				</control>
 				<control type="group">
@@ -4235,7 +4235,7 @@
 					<bottom>245</bottom>
 					<width>360</width>
 					<height>360</height>
-					<visible>Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_disc)</visible>
+					<visible>Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc)</visible>
 					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
 					<control type="image" id="88888">
 						<left>0</left>
@@ -4297,7 +4297,7 @@
 						<aspectratio aligny="bottom" align="center">keep</aspectratio>
 						<texture background="true" fallback="dialogs/defaultcdcover.png">$VAR[MusicPlayerCover]</texture>
 						<bordersize>20</bordersize>
-						<visible>Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+						<visible>Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -4321,7 +4321,7 @@
 					<texture background="true" fallback="DefaultVideoFanart.png">$VAR[NowPlayingLandscapeVar]</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>![VideoPlayer.HasMenu + System.HasMediaDVD] + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(musicvideos) + !String.StartsWith(Player.Filenameandpath,http)] + !VideoPlayer.Content(LiveTV) + !Window.IsVisible(MusicVisualisation.xml)</visible>
+					<visible>![VideoPlayer.HasMenu + System.HasMediaDVD] + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(musicvideos) + !String.StartsWith(Player.Filenameandpath,http)] + !VideoPlayer.Content(LiveTV) + !Window.IsVisible(visualisation)</visible>
 				</control>
 				<control type="group">
 					<control type="image">
@@ -4346,7 +4346,7 @@
 						<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border) + [[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]]</visible>
+						<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border) + [[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(visualisation) + Player.IsInternetStream]]</visible>
 					</control>
 					<control type="image">
 						<depth>DepthOSD+</depth>
@@ -4357,7 +4357,7 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
 						<bordersize>20</bordersize>
-						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
+						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(visualisation) + Player.IsInternetStream]</visible>
 					</control>
 					<include content="BusyPvrArtworkSpinner">
 						<param name="top" value="80" />
@@ -4375,28 +4375,28 @@
 					<visible>![VideoPlayer.HasMenu + System.HasMediaDVD]</visible>
 					<control type="image">
 						<right>30</right>
-						<bottom>310</bottom>
+						<bottom>230</bottom>
 						<width>500</width>
 						<height>281</height>
 						<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<visible>!Window.IsVisible(playerprocessinfo) + !Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio]</visible>
-						<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
-						<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
+						<visible>!Window.IsVisible(playerprocessinfo) + !Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
+						<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="!Window.IsActive(fullscreeninfo)">Conditional</animation>
+						<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 						<fadetime>100</fadetime>
 					</control>
 					<control type="image">
 						<right>30</right>
-						<bottom>350</bottom>
+						<bottom>270</bottom>
 						<width>500</width>
 						<height>281</height>
 						<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<visible>Window.IsVisible(playerprocessinfo) + !Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio]</visible>
-						<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
-						<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
+						<visible>Window.IsVisible(playerprocessinfo) + !Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
+						<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="!Window.IsActive(fullscreeninfo)">Conditional</animation>
+						<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 						<fadetime>100</fadetime>
@@ -4408,7 +4408,7 @@
 						<height>281</height>
 						<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<visible>!Skin.HasSetting(enable_artistclearart) + [Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio]</visible>
+						<visible>!Skin.HasSetting(enable_artistclearart) + [Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
 					</control>
 					<control type="image">
 						<bottom>294</bottom>
@@ -4419,7 +4419,7 @@
 						<texture background="true">$VAR[BannerPlayerArtVar]</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio] + [String.IsEmpty(Player.Art(clearart)) + Skin.HasSetting(enable_artistclearart)]</visible>
+						<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(visualisation) | Pvr.IsPlayingRadio] + [String.IsEmpty(Player.Art(clearart)) + Skin.HasSetting(enable_artistclearart)]</visible>
 					</control>
 					<control type="image">
 						<bottom>294</bottom>
@@ -4430,13 +4430,13 @@
 						<texture background="true">$VAR[BannerPlayerArtVar]</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(MusicVisualisation.xml) | Pvr.IsPlayingRadio] + [!String.IsEmpty(Player.Art(clearart)) | !Skin.HasSetting(enable_artistclearart)]</visible>
+						<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(visualisation) | Pvr.IsPlayingRadio] + [!String.IsEmpty(Player.Art(clearart)) | !Skin.HasSetting(enable_artistclearart)]</visible>
 					</control>
 					<control type="group">
 						<height>151</height>
 						<right>30</right>
 						<bottom>157</bottom>
-						<visible>Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio</visible>
+						<visible>Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio</visible>
 						<control type="image">
 							<top>8</top>
 							<right>0</right>
@@ -4519,7 +4519,7 @@
 						<font>font37_bold</font>
 						<scroll>true</scroll>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>Window.IsVisible(MusicVisualisation.xml) + String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+						<visible>Window.IsVisible(visualisation) + String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 					</control>
 					<control type="label">
 						<left>460</left>
@@ -4531,7 +4531,7 @@
 						<font>font37_bold</font>
 						<scroll>true</scroll>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>Window.IsVisible(MusicVisualisation.xml) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+						<visible>Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 					</control>
 					<control type="group">
@@ -4662,54 +4662,54 @@
 								<include content="MediaFlagOSD">
 									<param name="texture" value="flags/hdtv.png" />
 									<param name="width" value="58" />
-									<param name="visible" value="[String.Contains(Player.Filenameandpath,HDTV) | String.Contains(Player.Filenameandpath,PDTV) | String.Contains(Player.Filenameandpath,HDTVRIP) | String.Contains(Player.Filenameandpath,TVRIP) | String.Contains(Player..Filenameandpath,hdtv) | String.Contains(Player.Filenameandpath,pdtv) | String.Contains(Player.Filenameandpath,hdtvrip) | String.Contains(Player.Filenameandpath,tvrip)] + !Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="[String.Contains(Player.Filenameandpath,HDTV) | String.Contains(Player.Filenameandpath,PDTV) | String.Contains(Player.Filenameandpath,HDTVRIP) | String.Contains(Player.Filenameandpath,TVRIP) | String.Contains(Player..Filenameandpath,hdtv) | String.Contains(Player.Filenameandpath,pdtv) | String.Contains(Player.Filenameandpath,hdtvrip) | String.Contains(Player.Filenameandpath,tvrip)] + !Window.IsVisible(visualisation)" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="flags/vhs.png" />
 									<param name="width" value="58" />
-									<param name="visible" value="[String.Contains(Player.Filenameandpath,VHS) | String.Contains(Player.Filenameandpath,VHSRIP) | String.Contains(Player.Filenameandpath,vhs) | String.Contains(Player.Filenameandpath,vhsrip)] + !Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="[String.Contains(Player.Filenameandpath,VHS) | String.Contains(Player.Filenameandpath,VHSRIP) | String.Contains(Player.Filenameandpath,vhs) | String.Contains(Player.Filenameandpath,vhsrip)] + !Window.IsVisible(visualisation)" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="flags/hddvd.png" />
 									<param name="width" value="58" />
-									<param name="visible" value="[String.Contains(Player.Filenameandpath,HDDVD) | String.Contains(Player.Filenameandpath,hddvd)] + !Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="[String.Contains(Player.Filenameandpath,HDDVD) | String.Contains(Player.Filenameandpath,hddvd)] + !Window.IsVisible(visualisation)" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="flags/webdl.png" />
 									<param name="width" value="58" />
-									<param name="visible" value="[String.Contains(Player.Filenameandpath,WEB-DL) | String.Contains(Player.Filenameandpath,WEBDL) | String.Contains(Player.Filenameandpath,web-dl) | String.Contains(Player.Filenameandpath,webdl)] + !Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="[String.Contains(Player.Filenameandpath,WEB-DL) | String.Contains(Player.Filenameandpath,WEBDL) | String.Contains(Player.Filenameandpath,web-dl) | String.Contains(Player.Filenameandpath,webdl)] + !Window.IsVisible(visualisation)" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="flags/dvd.png" />
 									<param name="width" value="58" />
-									<param name="visible" value="[String.Contains(Player.Filenameandpath,DVD) | String.Contains(Player.Filenameandpath,dvd)] + !Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="[String.Contains(Player.Filenameandpath,DVD) | String.Contains(Player.Filenameandpath,dvd)] + !Window.IsVisible(visualisation)" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="flags/bluray.png" />
 									<param name="width" value="58" />
-									<param name="visible" value="[String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip) | String.Contains(Player.Filenameandpath,BLURAY) | String.Contains(Player.Filenameandpath,BLU-RAY) | String.Contains(Player.Filenameandpath,BDRIP)] + !Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="[String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip) | String.Contains(Player.Filenameandpath,BLURAY) | String.Contains(Player.Filenameandpath,BLU-RAY) | String.Contains(Player.Filenameandpath,BDRIP)] + !Window.IsVisible(visualisation)" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
 									<param name="fallback" value="flags/videoresolution/fallback.png" />
 									<param name="width" value="58" />
-									<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="!Window.IsVisible(visualisation)" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
 									<param name="fallback" value="flags/videocodec/fallback.png" />
 									<param name="width" value="104" />
-									<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="!Window.IsVisible(visualisation)" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="$VAR[VideoPlayerHdrTypeVar]" />
-									<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(visualisation)" />
 									<param name="width" value="58" />
 									<param name="top" value="5" />
 								</include>
 								<include content="MediaFlagOSD">
 									<param name="texture" value="$VAR[VideoPlayerHdrTypeVar]" />
-									<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(visualisation)" />
 									<param name="width" value="94" />
 									<param name="top" value="5" />
 								</include>
@@ -4717,7 +4717,7 @@
 									<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
 									<param name="fallback" value="flags/aspectratio/fallback.png" />
 									<param name="width" value="86" />
-									<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
+									<param name="visible" value="!Window.IsVisible(visualisation)" />
 								</include>
 								<control type="group">
 									<width>155</width>
@@ -4753,7 +4753,7 @@
 								<control type="group">
 									<width>155</width>
 									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(MusicVisualisation.xml) + !Integer.IsGreater(MusicPlayer.SampleRate,10000)</visible>
+									<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation) + !Integer.IsGreater(MusicPlayer.SampleRate,10000)</visible>
 									<control type="image">
 										<top>5</top>
 										<width>155</width>
@@ -4773,7 +4773,7 @@
 								<control type="group">
 									<width>200</width>
 									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(MusicVisualisation.xml) + Integer.IsGreater(MusicPlayer.SampleRate,9999)</visible>
+									<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.SampleRate,9999)</visible>
 									<control type="image">
 										<top>5</top>
 										<width>200</width>
@@ -4793,7 +4793,7 @@
 								<control type="group">
 									<width>155</width>
 									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(MusicVisualisation.xml) + !Integer.IsGreater(MusicPlayer.BitRate,10000)</visible>
+									<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(visualisation) + !Integer.IsGreater(MusicPlayer.BitRate,10000)</visible>
 									<control type="image">
 										<top>5</top>
 										<width>155</width>
@@ -4813,7 +4813,7 @@
 								<control type="group">
 									<width>200</width>
 									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(MusicVisualisation.xml) + Integer.IsGreater(MusicPlayer.BitRate,9999)</visible>
+									<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.BitRate,9999)</visible>
 									<control type="image">
 										<top>5</top>
 										<width>200</width>
@@ -4833,7 +4833,7 @@
 								<control type="group">
 									<width>155</width>
 									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(MusicVisualisation.xml)</visible>
+									<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(visualisation)</visible>
 									<control type="image">
 										<top>5</top>
 										<width>155</width>
@@ -4873,7 +4873,7 @@
 								<control type="group">
 									<width>163</width>
 									<height>40</height>
-									<visible>Window.IsVisible(MusicVisualisation.xml) + !String.IsEmpty(MusicPlayer.UserRating)</visible>
+									<visible>Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.UserRating)</visible>
 									<control type="image">
 										<top>5</top>
 										<width>163</width>
@@ -4941,7 +4941,7 @@
 						<label>$INFO[MusicPlayer.Artist,[COLOR white][B],[/B][/COLOR]]$INFO[MusicPlayer.Album,[B] - [/B][COLOR white],[/COLOR]]$INFO[MusicPlayer.Year, [COLOR white](,)[/COLOR]]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>Window.IsVisible(MusicVisualisation.xml) + String.IsEmpty(MusicPlayer.Offset(1).Title) + !Pvr.IsPlayingRadio</visible>
+						<visible>Window.IsVisible(visualisation) + String.IsEmpty(MusicPlayer.Offset(1).Title) + !Pvr.IsPlayingRadio</visible>
 					</control>
 					<control type="label">
 						<left>460</left>
@@ -4953,7 +4953,7 @@
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<scroll>true</scroll>
-						<visible>Window.IsVisible(MusicVisualisation.xml) + !String.IsEmpty(MusicPlayer.Offset(1).Title) + !Pvr.IsPlayingRadio</visible>
+						<visible>Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.Offset(1).Title) + !Pvr.IsPlayingRadio</visible>
 					</control>
 				</control>
 			</control>
