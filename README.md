@@ -46,6 +46,8 @@ supports animated poster only.
 - .0
   * introducing speed in-/decrease buttons in video OSD
   * control adjustments in several views
+  * last artifacts of skinhelper code removed
+
 
 ### 4.1.2+nexus ###
 - .10

@@ -123,7 +123,7 @@
 				<top>170</top>
 				<right>30</right>
 				<left>530</left>
-				<height>50</height>
+				<height>60</height>
 				<align>right</align>
 				<orientation>horizontal</orientation>
 				<itemgap>5</itemgap>
@@ -188,64 +188,7 @@
 				<include content="MediaFlagOSD">
 					<param name="width" value="5" />
 				</include>
-				<control type="group">
-					<width>120</width>
-					<visible>System.GetBool(pvrplayback.signalquality)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/pvr.png" />
-						<param name="width" value="120"/>
-					</include>
-					<control type="label">
-						<top>5</top>
-						<width>60</width>
-						<height>40</height>
-						<align>center</align>
-						<label>SIG</label>
-						<font>Font-Flag-Small3</font>
-					</control>
-					<control type="progress">
-						<left>64</left>
-						<width>50</width>
-						<top>11</top>
-						<height>28</height>
-						<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-						<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
-						<info>PVR.ActStreamProgrSignal</info>
-					</control>
-				</control>
-				<control type="group">
-					<width>120</width>
-					<visible>System.GetBool(pvrplayback.signalquality)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/pvr.png" />
-						<param name="width" value="120"/>
-					</include>
-					<control type="label">
-						<top>5</top>
-						<width>60</width>
-						<height>40</height>
-						<align>center</align>
-						<label>SNR</label>
-						<font>Font-Flag-Small3</font>
-					</control>
-					<control type="progress">
-						<left>64</left>
-						<width>50</width>
-						<top>11</top>
-						<height>28</height>
-						<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-						<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
-						<info>PVR.ActStreamProgrSNR</info>
-					</control>
-				</control>
-				<control type="group">
-					<width>60</width>
-					<visible>Pvr.ActStreamIsEncrypted</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/encrypt.png" />
-						<param name="width" value="60"/>
-					</include>
-				</control>
+				<include>MediaFlagPVR</include>
 			</control>
 		</control>
 	</controls>
