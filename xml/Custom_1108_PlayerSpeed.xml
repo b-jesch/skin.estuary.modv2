@@ -14,7 +14,7 @@
 				<width>700</width>
 				<height>70</height>
 				<texture colordiffuse="$VAR[SkinColorVar]">dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture infill="false" border="5">dialogs/osdepgguide.png</bordertexture>
+				<bordertexture colordiffuse="$VAR[SkinColorVar]" infill="false" border="5">dialogs/osdepgguide.png</bordertexture>
 				<bordersize>5</bordersize>
 			</control>
 			<control type="label">
