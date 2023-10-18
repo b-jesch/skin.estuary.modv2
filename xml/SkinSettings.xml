@@ -55,7 +55,7 @@
 					<label>$LOCALIZE[31425]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(SmallOSDVideo)</selected>
-                    <onclick>Skin.ToggleSetting(SmallOSDVideo)</onclick>
+					<onclick>Skin.ToggleSetting(SmallOSDVideo)</onclick>
 				</control>
 				<control type="button" id="111">
 					<label>  ∟$LOCALIZE[31613]</label>
@@ -71,26 +71,26 @@
 					<label>$LOCALIZE[31607]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(SimplyfiedOSDVideo)</selected>
-                    <onclick>Skin.ToggleSetting(SimplyfiedOSDVideo)</onclick>
+					<onclick>Skin.ToggleSetting(SimplyfiedOSDVideo)</onclick>
 				</control>
 				<control type="radiobutton" id="103">
 					<label>$LOCALIZE[31630]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(ShowSeekBar)</selected>
-                    <onclick>Skin.ToggleSetting(ShowSeekBar)</onclick>
+					<onclick>Skin.ToggleSetting(ShowSeekBar)</onclick>
 				</control>
 				<control type="radiobutton" id="104">
 					<label>  ∟$LOCALIZE[31642]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(SeekbarOpacity)</selected>
-                    <onclick>Skin.ToggleSetting(SeekbarOpacity)</onclick>
+					<onclick>Skin.ToggleSetting(SeekbarOpacity)</onclick>
 					<visible>Skin.HasSetting(ShowSeekbar)</visible>
 				</control>
 				<control type="radiobutton" id="105">
 					<label>$LOCALIZE[31430]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(Hide_OSDInfo)</selected>
-                    <onclick>Skin.ToggleSetting(Hide_OSDInfo)</onclick>
+					<onclick>Skin.ToggleSetting(Hide_OSDInfo)</onclick>
 				</control>
 				<control type="label" id="900012">
 					<textoffsetx>45</textoffsetx>
@@ -107,15 +107,15 @@
 					<label>$LOCALIZE[31359]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(ExtendedOSDInfo)</selected>
-                    <onclick>Skin.ToggleSetting(ExtendedOSDInfo)</onclick>
+					<onclick>Skin.ToggleSetting(ExtendedOSDInfo)</onclick>
 				</control>
 				<control type="radiobutton" id="106">
 					<label>  ∟$LOCALIZE[31441]</label>
-                    <include>DefaultSettingButton</include>
-                    <selected>!Skin.HasSetting(disable_PauseOnExtraInfos)</selected>
-                    <onclick>Skin.ToggleSetting(disable_PauseOnExtraInfos)</onclick>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(disable_PauseOnExtraInfos)</selected>
+					<onclick>Skin.ToggleSetting(disable_PauseOnExtraInfos)</onclick>
 					<visible>!Skin.HasSetting(ExtendedOSDInfo)</visible>
-                </control>
+				</control>
 				<control type="radiobutton" id="115">
 					<label>$LOCALIZE[31493]</label>
 					<include>DefaultSettingButton</include>
@@ -133,7 +133,7 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-                <control type="radiobutton" id="108">
+				<control type="radiobutton" id="108">
 					<label>$LOCALIZE[31288]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(enable_playerclearlogo)</selected>
@@ -727,20 +727,20 @@
 					<enable>String.IsEqual(Window(home).property(lookandfeel.startupaction),0)</enable>
 				</control>
 				<control type="radiobutton" id="504">
-                    <label>$LOCALIZE[31640]</label>
+					<label>$LOCALIZE[31640]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(enable_splash_background)</selected>
 					<onclick>Skin.ToggleSetting(enable_splash_background)</onclick>
 					<visible>!Skin.HasSetting(EnableSplashScreen)</visible>
-                </control>
+				</control>
 				<control type="button" id="505">
-                    <label>  ∟$LOCALIZE[31344]</label>
-                    <label2>$VAR[Label_SkinSetting_SplashFanart]</label2>
-                    <include>DefaultSettingButton</include>
-                     <onclick condition="!Skin.String(splash_background)">Skin.SetImage(splash_background)</onclick>
-                    <onclick condition="Skin.String(splash_background)">Skin.Reset(splash_background)</onclick>
-                    <visible>!Skin.HasSetting(EnableSplashScreen) + !Skin.HasSetting(enable_splash_background)</visible>
-                </control>
+					<label>  ∟$LOCALIZE[31344]</label>
+					<label2>$VAR[Label_SkinSetting_SplashFanart]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!Skin.String(splash_background)">Skin.SetImage(splash_background)</onclick>
+					<onclick condition="Skin.String(splash_background)">Skin.Reset(splash_background)</onclick>
+					<visible>!Skin.HasSetting(EnableSplashScreen) + !Skin.HasSetting(enable_splash_background)</visible>
+				</control>
 				<control type="radiobutton" id="506">
 					<label>$LOCALIZE[31459]</label>
 					<include>DefaultSettingButton</include>
@@ -749,11 +749,11 @@
 				</control>
 				<!-- Maybe later (WIP)
 				<control type="button" id="502">
-				    <label>$LOCALIZE[31587]</label>
-				    <label2>$VAR[Label_SkinSetting_PictureSource]</label2>
-				    <include>DefaultSettingButton</include>
-				     <onclick condition="!Skin.String(picture_source)">Skin.SetPath(picture_source)</onclick>
-				    <onclick condition="Skin.String(picture_source)">Skin.Reset(picture_source)</onclick>
+					<label>$LOCALIZE[31587]</label>
+					<label2>$VAR[Label_SkinSetting_PictureSource]</label2>
+					<include>DefaultSettingButton</include>
+					 <onclick condition="!Skin.String(picture_source)">Skin.SetPath(picture_source)</onclick>
+					<onclick condition="Skin.String(picture_source)">Skin.Reset(picture_source)</onclick>
 				</control>
 				-->
 				<control type="radiobutton" id="507">
@@ -1082,7 +1082,7 @@
 					<onclick condition="String.IsEqual(Skin.String(autostop_osd),31649)">Skin.SetString(autostop_osd,31650)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(autostop_osd),31578)">Skin.SetString(autostop_osd,31649)</onclick>
 					<onclick condition="!String.IsEmpty(Skin.String(autostop_osd)) + !String.IsEqual(Skin.String(autostop_osd),31578) + !String.IsEqual(Skin.String(autostop_osd),31649) + !String.IsEqual(Skin.String(autostop_osd),31650) + !String.IsEqual(Skin.String(autostop_osd),31651) + !String.IsEqual(Skin.String(autostop_osd),31652) + !String.IsEqual(Skin.String(autostop_osd),31653)">Skin.SetString(autostop_osd,31578)</onclick>
-				</control>				
+				</control>
 				<control type="label" id="30017">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
@@ -1263,13 +1263,13 @@
 					<selected>Skin.HasSetting(show_fanart)</selected>
 				</control>
 				<control type="button" id="614">
-                    <label>  ∟$LOCALIZE[31465]</label>
-                    <label2>$VAR[Label_SkinSetting_GlobalBackground]</label2>
-                    <include>DefaultSettingButton</include>
-                    <onclick condition="String.IsEmpty(Skin.String(global-background))">Skin.SetImage(global-background)</onclick>
-                    <onclick condition="!String.IsEmpty(Skin.String(global-background))">Skin.Reset(global-background)</onclick>
-                    <visible>!Skin.HasSetting(show_fanart)</visible>
-                </control>
+					<label>  ∟$LOCALIZE[31465]</label>
+					<label2>$VAR[Label_SkinSetting_GlobalBackground]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="String.IsEmpty(Skin.String(global-background))">Skin.SetImage(global-background)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(global-background))">Skin.Reset(global-background)</onclick>
+					<visible>!Skin.HasSetting(show_fanart)</visible>
+				</control>
 				<control type="radiobutton" id="602">
 					<label>$LOCALIZE[31259]</label>
 					<include>DefaultSettingButton</include>
@@ -1285,13 +1285,13 @@
 					<selected>Skin.HasSetting(Skin_EnableAnimatedPosters)</selected>
 				</control>
 				<control type="button" id="612">
-                    <label>  ∟$LOCALIZE[31598]</label>
-                    <label2>$VAR[Label_SkinSetting_APSource]</label2>
-                    <include>DefaultSettingButton</include>
-                    <onclick condition="!Skin.String(ap_source)">Skin.SetPath(ap_source)</onclick>
-                    <onclick condition="Skin.String(ap_source)">Skin.Reset(ap_source)</onclick>
+					<label>  ∟$LOCALIZE[31598]</label>
+					<label2>$VAR[Label_SkinSetting_APSource]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!Skin.String(ap_source)">Skin.SetPath(ap_source)</onclick>
+					<onclick condition="Skin.String(ap_source)">Skin.Reset(ap_source)</onclick>
 					<visible>Skin.HasSetting(Skin_EnableAnimatedPosters)</visible>
-                </control>
+				</control>
 				<control type="button" id="606">
 					<label>$LOCALIZE[31149]</label>
 					<label2>$VAR[Label_SkinSetting_MovieGenreFanart]</label2>
@@ -1415,47 +1415,47 @@
 					<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 				</control>
 				<control type="radiobutton" id="10006">
-                    <label>$LOCALIZE[31341]</label>
+					<label>$LOCALIZE[31341]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(enable_power_background)</selected>
 					<onclick>Skin.ToggleSetting(enable_power_background)</onclick>
-                </control>
+				</control>
 				<control type="button" id="10007">
-                    <label>  ∟$LOCALIZE[31344]</label>
-                    <label2>$VAR[Label_SkinSetting_PowerFanart]</label2>
-                    <include>DefaultSettingButton</include>
-                     <onclick condition="!Skin.String(power_background)">Skin.SetImage(power_background)</onclick>
-                    <onclick condition="Skin.String(power_background)">Skin.Reset(power_background)</onclick>
-                    <visible>!Skin.HasSetting(enable_power_background)</visible>
-                </control>
-                <control type="radiobutton" id="10008">
-                    <label>$LOCALIZE[31342]</label>
+					<label>  ∟$LOCALIZE[31344]</label>
+					<label2>$VAR[Label_SkinSetting_PowerFanart]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!Skin.String(power_background)">Skin.SetImage(power_background)</onclick>
+					<onclick condition="Skin.String(power_background)">Skin.Reset(power_background)</onclick>
+					<visible>!Skin.HasSetting(enable_power_background)</visible>
+				</control>
+				<control type="radiobutton" id="10008">
+					<label>$LOCALIZE[31342]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(enable_settings_background)</selected>
 					<onclick>Skin.ToggleSetting(enable_settings_background)</onclick>
-                </control>
-                <control type="button" id="10009">
-                    <label>  ∟$LOCALIZE[31344]</label>
-                    <label2>$VAR[Label_SkinSetting_SettingsFanart]</label2>
-                    <include>DefaultSettingButton</include>
-                    <onclick condition="!Skin.String(settings_background)">Skin.SetImage(settings_background)</onclick>
-                    <onclick condition="Skin.String(settings_background)">Skin.Reset(settings_background)</onclick>
-                    <visible>!Skin.HasSetting(enable_settings_background)</visible>
-                </control>
-                <control type="radiobutton" id="10010">
-                    <label>$LOCALIZE[31343]</label>
+				</control>
+				<control type="button" id="10009">
+					<label>  ∟$LOCALIZE[31344]</label>
+					<label2>$VAR[Label_SkinSetting_SettingsFanart]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!Skin.String(settings_background)">Skin.SetImage(settings_background)</onclick>
+					<onclick condition="Skin.String(settings_background)">Skin.Reset(settings_background)</onclick>
+					<visible>!Skin.HasSetting(enable_settings_background)</visible>
+				</control>
+				<control type="radiobutton" id="10010">
+					<label>$LOCALIZE[31343]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(enable_search_background)</selected>
 					<onclick>Skin.ToggleSetting(enable_search_background)</onclick>
-                </control>
-                <control type="button" id="10011">
-                    <label>  ∟$LOCALIZE[31344]</label>
-                    <label2>$VAR[Label_SkinSetting_SearchFanart]</label2>
-                    <include>DefaultSettingButton</include>
-                    <onclick condition="!Skin.String(search_background)">Skin.SetImage(search_background)</onclick>
-                    <onclick condition="Skin.String(search_background)">Skin.Reset(search_background)</onclick>
-                    <visible>!Skin.HasSetting(enable_search_background)</visible>
-                </control>
+				</control>
+				<control type="button" id="10011">
+					<label>  ∟$LOCALIZE[31344]</label>
+					<label2>$VAR[Label_SkinSetting_SearchFanart]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!Skin.String(search_background)">Skin.SetImage(search_background)</onclick>
+					<onclick condition="Skin.String(search_background)">Skin.Reset(search_background)</onclick>
+					<visible>!Skin.HasSetting(enable_search_background)</visible>
+				</control>
 				<control type="label" id="100013">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>

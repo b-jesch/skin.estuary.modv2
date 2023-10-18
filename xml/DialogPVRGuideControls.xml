@@ -25,8 +25,9 @@
 				<control type="image">
 					<width>100%</width>
 					<height>100%</height>
-					<texture colordiffuse="$VAR[SkinColorVar]">dialogs/osdepgguide.png</texture>
-					<border>2</border>
+					<texture colordiffuse="$VAR[SkinColorVar]">dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture colordiffuse="$VAR[SkinColorVar]" infill="false" border="5">dialogs/osdepgguide.png</bordertexture>
+					<bordersize>5</bordersize>
 				</control>
 				<control type="group">
 					<control type="grouplist" id="201">
