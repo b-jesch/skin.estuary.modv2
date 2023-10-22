@@ -4787,18 +4787,18 @@
 									<param name="width" value="104" />
 								</include>
 								<control type="group">
-									<width>155</width>
+									<width>180</width>
 									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation) + !Integer.IsGreater(MusicPlayer.SampleRate,10000)</visible>
+									<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation)</visible>
 									<control type="image">
 										<top>5</top>
-										<width>155</width>
+										<width>180</width>
 										<height>40</height>
-										<texture>flags/cadre.png</texture>
+										<texture>flags/cadre3.png</texture>
 										<aspectratio>keep</aspectratio>
 									</control>
 									<control type="label">
-										<width>155</width>
+										<width>180</width>
 										<height>40</height>
 										<align>center</align>
 										<top>2</top>
@@ -4807,58 +4807,18 @@
 									</control>
 								</control>
 								<control type="group">
-									<width>200</width>
+									<width>180</width>
 									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.SampleRate,9999)</visible>
+									<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(visualisation)</visible>
 									<control type="image">
 										<top>5</top>
-										<width>200</width>
+										<width>180</width>
 										<height>40</height>
 										<texture>flags/cadre3.png</texture>
 										<aspectratio>keep</aspectratio>
 									</control>
 									<control type="label">
-										<width>200</width>
-										<height>40</height>
-										<align>center</align>
-										<top>2</top>
-										<label>$INFO[MusicPlayer.SampleRate,, kHz]</label>
-										<font>Font-Flag-Small</font>
-									</control>
-								</control>
-								<control type="group">
-									<width>155</width>
-									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(visualisation) + !Integer.IsGreater(MusicPlayer.BitRate,10000)</visible>
-									<control type="image">
-										<top>5</top>
-										<width>155</width>
-										<height>40</height>
-										<texture>flags/cadre.png</texture>
-										<aspectratio>keep</aspectratio>
-									</control>
-									<control type="label">
-										<width>155</width>
-										<height>40</height>
-										<align>center</align>
-										<top>2</top>
-										<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
-										<font>Font-Flag-Small</font>
-									</control>
-								</control>
-								<control type="group">
-									<width>200</width>
-									<height>40</height>
-									<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.BitRate,9999)</visible>
-									<control type="image">
-										<top>5</top>
-										<width>200</width>
-										<height>40</height>
-										<texture>flags/cadre3.png</texture>
-										<aspectratio>keep</aspectratio>
-									</control>
-									<control type="label">
-										<width>200</width>
+										<width>180</width>
 										<height>40</height>
 										<align>center</align>
 										<top>2</top>
