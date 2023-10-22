@@ -43,6 +43,12 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.1.3+nexus ###
+- .1
+  * added several busy spinners
+  * update deprecated player info
+  * improved OSD code grouping, replace filenames with window names
+
+
 - .0
   * introducing speed in-/decrease buttons in video OSD
   * control adjustments in several views
