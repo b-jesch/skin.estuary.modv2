@@ -27,6 +27,7 @@
 					<aspectratio>keep</aspectratio>
 					<animation effect="rotate" end="-45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="String.IsEmpty(Skin.String(spinner_type)) | String.IsEqual(Skin.String(spinner_type),1)">Conditional</animation>
 					<animation effect="rotate" end="-360" center="auto" time="1000" delay="0" loop="true" reversible="false" condition="String.IsEqual(Skin.String(spinner_type),2)">Conditional</animation>
+					<animation effect="rotate" end="-360" center="auto" time="1500" delay="0" loop="true" reversible="false" condition="String.IsEqual(Skin.String(spinner_type),3)">Conditional</animation>
 					<texture colordiffuse="$VAR[SkinColorVar]">$VAR[SpinnerTypePictureVar]</texture>
 				</control>
 				<control type="image">
@@ -38,6 +39,7 @@
 					<animation effect="rotate" end="45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="String.IsEmpty(Skin.String(spinner_type)) | String.IsEqual(Skin.String(spinner_type),1)">Conditional</animation>
 					<animation effect="rotate" end="360" center="auto" time="1000" delay="0" loop="true" reversible="false" condition="String.IsEqual(Skin.String(spinner_type),2)">Conditional</animation>
 					<texture flipx="true" colordiffuse="$VAR[SkinColorVar]">$VAR[SpinnerTypePictureVar]</texture>
+					<visible>!String.IsEqual(Skin.String(spinner_type),3)</visible>
 				</control>
 				<control type="image">
 					<centerleft>50%</centerleft>

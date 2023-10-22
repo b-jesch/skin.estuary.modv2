@@ -25,7 +25,7 @@ preferably before the file extension:
 | 3D with <br> stereoscopic detection |           MVC codec            |          Side by Side          |         Top and Bottom         |            HDR+ Files            |
 |:-----------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:--------------------------------:|
 |     ![](resources/flags/3d.png)     | ![](resources/flags/3dmvc.png) | ![](resources/flags/3dsbs.png) | ![](resources/flags/3dtab.png) | ![](resources/flags/hdrplus.png) | 
-|             no tagging              |             3d.mvc             |             3d.sbs             |             3d.tab             |         hdrplus., .12bit.        |
+|             no tagging              |             3d.mvc             |             3d.sbs             |             3d.tab             |        hdrplus., .12bit.         |
 
 
 The HDR type recognition by filename for HDR/HLG/Dolby Vision has been removed.
@@ -44,6 +44,12 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 1.0.0+omega ###
+- .5
+  * added several busy spinners
+  * update deprecated player info
+  * improved OSD code grouping, replace filenames with window names
+
+
 - .4
   * revert back extra info on cast list
   * fix wrong actors list showing on movies with same titles but different year   
