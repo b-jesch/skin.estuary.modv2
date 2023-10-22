@@ -2001,6 +2001,14 @@
 		<value condition="String.IsEqual(Skin.String(background_overlay),0)">$LOCALIZE[231]</value>
 		<value>$INFO[Skin.String(background_overlay),$LOCALIZE[467] ]</value>
 	</variable>
+	<variable name="SpinnerTypeVar">
+		<value condition="String.IsEmpty(Skin.String(spinner_type))">$LOCALIZE[467] 1</value>
+		<value>$INFO[Skin.String(spinner_type),$LOCALIZE[467] ]</value>
+	</variable>
+	<variable name="SpinnerTypePictureVar">
+		<value condition="String.IsEmpty(Skin.String(spinner_type))">spinner_1.png</value>
+		<value>$INFO[Skin.String(spinner_type),spinner_,.png]</value>
+	</variable>
 	<variable name="MasterModeLabel">
  		<value condition="!System.IsMaster">$LOCALIZE[20045]</value>
  		<value>$LOCALIZE[20046]</value>
