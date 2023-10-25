@@ -1985,7 +1985,7 @@
 					<top>5</top>
 					<visible>$PARAM[pvr]</visible>
 					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))</visible>
-					<visible>!String.Contains(ListItem.mpaa,PG-13) + !String.Contains(Container(60).ListItem.mpaa,PG-13) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) + !String.Contains(ListItem.mpaa,NC-17) + !String.Contains(Container(60).ListItem.mpaa,NC-17) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
+					<visible>!String.Contains(ListItem.mpaa,PG-13) + !String.Contains(ListItem.ParentalRatingCode,PG-13) + !String.Contains(Container(60).ListItem.mpaa,PG-13) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) + !String.Contains(ListItem.mpaa,NC-17) + !String.Contains(ListItem.ParentalRatingCode,NC-17) + !String.Contains(Container(60).ListItem.mpaa,NC-17) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="$VAR[MPAAImageVar]" />
 						<param name="width" value="120" />
@@ -2007,7 +2007,7 @@
 					<top>5</top>
 					<visible>$PARAM[pvr]</visible>
 					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))</visible>
-					<visible>String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
+					<visible>String.Contains(ListItem.mpaa,PG-13) | String.Contains(ListItem.ParentalRatingCode,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(ListItem.ParentalRatingCode,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="$VAR[MPAAImageVar]" />
 						<param name="width" value="180" />

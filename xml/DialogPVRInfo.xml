@@ -204,7 +204,7 @@
 							<param name="control_id" value="153" />
 							<param name="label" value="$LOCALIZE[20074]: " />
 							<param name="content" value="$VAR[PVRMetadataMpaaVar]" />
-							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa)) | !String.IsEmpty(ListItem.Mpaa)" />
+							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa)) | !String.IsEmpty(ListItem.Mpaa) | !String.IsEmpty(ListItem.ParentalRatingCode)" />
 						</include>
 						<include content="InfoDialogPvrMetadata">
 							<param name="control_id" value="159" />
