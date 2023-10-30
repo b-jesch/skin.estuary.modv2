@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.1.3+nexus ###
+- .2
+  * show PVR SIG and SNR flags only when LiveTV or Radio is playing
+
+
 - .1
   * added several busy spinners
   * update deprecated player info
