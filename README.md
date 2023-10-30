@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 1.0.0+omega ###
+- .6
+  * show PVR SIG and SNR flags only when LiveTV or Radio is playing
+
+
 - .5
   * added several busy spinners
   * update deprecated player info
