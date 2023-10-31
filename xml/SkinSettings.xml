@@ -673,7 +673,7 @@
 					<param name="header">31233</param>
 					<param name="setting">PvrIconBG</param>
 				</include>
-				<!-- # not working yet
+				<!-- # not working yet (content path not supported)
 				<control type="button" id="407">
 					<label>$LOCALIZE[31623]</label>
 					<label2>$VAR[TimerWidgetActionVar]</label2>
