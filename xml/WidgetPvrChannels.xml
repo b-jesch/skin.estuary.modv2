@@ -2,6 +2,7 @@
 <includes>
     <include name="WidgetListChannels">
         <param name="item_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
+        <param name="browse">always</param>
         <param name="icon">$INFO[ListItem.Icon]</param>
         <param name="label">$INFO[ListItem.Label]</param>
         <param name="label2">$INFO[ListItem.Title]</param>
@@ -248,7 +249,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
+                <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]" browse="$PARAM[browse]">$PARAM[content_path]</content>
                 <onclick condition="String.IsEqual(Skin.String(widget_action_pvr),31590) + [Control.HasFocus(12200) | Control.HasFocus(12300) | Control.HasFocus(12400)]">Info</onclick>
             </control>
         </definition>

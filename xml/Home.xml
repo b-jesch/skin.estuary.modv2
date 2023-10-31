@@ -513,6 +513,7 @@
 							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Datetime, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
+							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="onclick" value="Skin.String(timerwidget_action)"/>
@@ -525,6 +526,7 @@
 							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Datetime(hh:mm), | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
+							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Datetime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="onclick" value="Skin.String(timerwidget_action)"/>
@@ -567,7 +569,7 @@
 							<param name="widget_header_focus" value="$INFO[Container(12400).ListItem.Label, | ]$INFO[Container(12400).ListItem.Label2, - ,]"/>
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12400"/>
-							<param name="item_limit" value="2000"/>
+							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
 							<param name="label2" value="$INFO[ListItem.Title] $VAR[SeasonEpisodeLabel]"/>
 						</include>
@@ -577,7 +579,7 @@
 							<param name="widget_header_focus" value="$INFO[Container(12600).ListItem.Label, | ]$INFO[Container(12600).ListItem.Label2, - ,]"/>
 							<param name="widget_target" value="tvguide"/>
 							<param name="list_id" value="12600"/>
-							<param name="item_limit" value="2000"/>
+							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_searches)">
 							<param name="content_path" value="pvr://search/tv/savedsearches"/>
