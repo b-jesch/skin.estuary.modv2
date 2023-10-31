@@ -2,7 +2,7 @@
 <includes>
     <include name="WidgetListChannels">
         <param name="item_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
-        <param name="browse">always</param>
+        <param name="browse">auto</param>
         <param name="icon">$INFO[ListItem.Icon]</param>
         <param name="label">$INFO[ListItem.Label]</param>
         <param name="label2">$INFO[ListItem.Title]</param>

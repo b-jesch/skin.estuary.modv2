@@ -2416,7 +2416,7 @@
 	<include name="WidgetListPoster">
 		<param name="visible">true</param>
 		<param name="fallback_icon">DefaultVideo</param>
-		<param name="browse">always</param>
+		<param name="browse">auto</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>

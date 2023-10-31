@@ -98,6 +98,7 @@
 							<param name="widget_header" value="$LOCALIZE[20386]"/>
 							<param name="widget_header_focus" value="$INFO[Container(5100).ListItem.Title, | ]$INFO[Container(5100).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
+							<param name="browse" value="never"/>
 							<param name="list_id" value="5100"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_inprogressmovies)">
@@ -105,6 +106,7 @@
 							<param name="widget_header" value="$LOCALIZE[31010]"/>
 							<param name="widget_header_focus" value="$INFO[Container(5200).ListItem.Title, | ]$INFO[Container(5200).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
+							<param name="browse" value="never"/>
 							<param name="list_id" value="5200"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_unwatchedmovies)">
@@ -112,6 +114,7 @@
 							<param name="widget_header" value="$LOCALIZE[31007]"/>
 							<param name="widget_header_focus" value="$INFO[Container(5300).ListItem.Title, | ]$INFO[Container(5300).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
+							<param name="browse" value="never"/>
 							<param name="list_id" value="5300"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_randommovies)">
@@ -119,6 +122,7 @@
 							<param name="widget_header" value="$LOCALIZE[31006]"/>
 							<param name="widget_header_focus" value="$INFO[Container(5400).ListItem.Title, | ]$INFO[Container(5400).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
+							<param name="browse" value="never"/>
 							<param name="list_id" value="5400"/>
 						</include>
 						<include content="WidgetListSquare" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_genremovies)">
@@ -516,7 +520,7 @@
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
-							<param name="onclick" value="Skin.String(timerwidget_action)"/>
+							<param name="onclick" value="Info"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + [PVR.HasNonRecordingTVTimer | PVR.IsRecordingTV] + !Skin.HasSetting(hide_recordingtimers) + !Skin.HasSetting(hide_disabledtimers)">
 							<param name="content_path" value="pvr://timers/tv/timers/"/>
@@ -529,7 +533,7 @@
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Datetime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
-							<param name="onclick" value="Skin.String(timerwidget_action)"/>
+							<param name="onclick" value="Info"/>
 						</include>
 						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + System.AddonIsEnabled(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
 							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
@@ -537,7 +541,7 @@
 							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Property(StartDate), | ]$INFO[Container(12500).ListItem.Label, - ]$INFO[Container(12500).ListItem.Label2, - ,]"/>
 							<param name="list_id" value="12500"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
-    						<param name="label" value="$INFO[ListItem.Label]"/>
+    							<param name="label" value="$INFO[ListItem.Label]"/>
 							<param name="onclick" value="RunPlugin(plugin://script.service.gto/?action=info&amp;item=$INFO[ListItem.Property(item)])"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_lastplayedchannels)">
@@ -546,7 +550,7 @@
 							<param name="sortorder" value="descending"/>
 							<param name="widget_header" value="$LOCALIZE[31016]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12200).ListItem.Label, | ]$INFO[Container(12200).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]"/>
-							<param name="widget_target" value="pvr"/>
+							<param name="widget_target" value="tvchannels"/>
 							<param name="list_id" value="12200"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
@@ -558,7 +562,7 @@
 							<param name="sortorder" value="descending"/>
 							<param name="widget_header" value="$LOCALIZE[31015]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12300).ListItem.ChannelName, | ]$INFO[Container(12300).ListItem.Label, - ,]$INFO[Container(12300).ListItem.Label2, - ,] $VAR[SeasonEpisodeLabel]"/>
-							<param name="widget_target" value="pvr"/>
+							<param name="widget_target" value="tvrecordings"/>
 							<param name="list_id" value="12300"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
 							<param name="label2" value="$INFO[ListItem.Title] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2, - ,]"/>
@@ -567,7 +571,7 @@
 							<param name="content_path" value="pvr://channels/tv/*"/>
 							<param name="widget_header" value="$LOCALIZE[31361]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12400).ListItem.Label, | ]$INFO[Container(12400).ListItem.Label2, - ,]"/>
-							<param name="widget_target" value="pvr"/>
+							<param name="widget_target" value="tvchannels"/>
 							<param name="list_id" value="12400"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>

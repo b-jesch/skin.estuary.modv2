@@ -47,6 +47,7 @@ supports animated poster only.
 - .6
   * show PVR SIG and SNR flags only when LiveTV or Radio is playing
   * add "More" folder for dynamic content containers (home screen)
+  * fix pvr targets in home screen widgets
 
 
 - .5
