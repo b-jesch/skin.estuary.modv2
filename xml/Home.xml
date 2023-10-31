@@ -515,7 +515,8 @@
 							<param name="list_id" value="12700"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
-							<param name="onclick" value="Skin.String(timerwidget_action)"/>
+							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31624)" value="ActivateWindow(pvrtimersetting)"/>
+							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31625)" value="ActivateWindow(pvrguideinfo)"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + [PVR.HasNonRecordingTVTimer | PVR.IsRecordingTV] + !Skin.HasSetting(hide_recordingtimers) + !Skin.HasSetting(hide_disabledtimers)">
 							<param name="content_path" value="pvr://timers/tv/timers/"/>
@@ -527,7 +528,8 @@
 							<param name="list_id" value="12700"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Datetime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
-							<param name="onclick" value="Skin.String(timerwidget_action)"/>
+							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31624)" value="ActivateWindow(pvrtimersetting)"/>
+							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31625)" value="ActivateWindow(pvrguideinfo)"/>
 						</include>
 						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + System.AddonIsEnabled(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
 							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
