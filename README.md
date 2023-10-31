@@ -45,6 +45,8 @@ supports animated poster only.
 ### 4.1.3+nexus ###
 - .2
   * show PVR SIG and SNR flags only when LiveTV or Radio is playing
+  * fix content paths of pvr widgets (home screen)
+  * remove obsolete DialogFavourites.xml
 
 
 - .1
