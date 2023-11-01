@@ -3851,6 +3851,39 @@
 			</control>
 		</definition>
 	</include>
+	<include name="BusySpinner">
+		<param name="outerSize">80</param>
+		<param name="innerSize">50</param>
+		<param name="outerSpeed">1000</param>
+		<param name="innerSpeed">1000</param>
+		<param name="outerMovement">-360</param>
+		<param name="innerMovement">360</param>
+		<param name="delay">0</param>
+		<param name="innervisibility">true</param>
+		<definition>
+			<control type="group">
+				<control type="image">
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<width>$PARAM[outerSize]</width>
+					<height>$PARAM[outerSize]</height>
+					<aspectratio>keep</aspectratio>
+					<animation effect="rotate" end="$PARAM[outerMovement]" center="auto" time="$PARAM[outerSpeed]" delay="$PARAM[delay]" loop="true" reversible="false" condition="true">Conditional</animation>
+					<texture colordiffuse="$VAR[SkinColorVar]">$VAR[SpinnerTypePictureVar]</texture>
+				</control>
+				<control type="image">
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<width>$PARAM[innerSize]</width>
+					<height>$PARAM[innerSize]</height>
+					<aspectratio>keep</aspectratio>
+					<animation effect="rotate" end="$PARAM[innerMovement]" center="auto" time="$PARAM[innerSpeed]" delay="$PARAM[delay]" loop="true" reversible="false" condition="true">Conditional</animation>
+					<texture colordiffuse="$VAR[SkinColorVar]">$VAR[SpinnerTypePictureVar]</texture>
+					<visible>$PARAM[innerVisibility]</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
 	<include name="ItemHeight">
 		<definition>
 			<height>$PARAM[height]</height>

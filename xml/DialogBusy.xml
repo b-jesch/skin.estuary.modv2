@@ -17,30 +17,32 @@
 				<depth>DepthMax</depth>
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
-				<width>80</width>
-				<height>80</height>
-				<control type="image">
-					<centerleft>50%</centerleft>
-					<centertop>50%</centertop>
-					<width>80</width>
-					<height>80</height>
-					<aspectratio>keep</aspectratio>
-					<animation effect="rotate" end="-45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="String.IsEmpty(Skin.String(spinner_type)) | String.IsEqual(Skin.String(spinner_type),1)">Conditional</animation>
-					<animation effect="rotate" end="-360" center="auto" time="1000" delay="0" loop="true" reversible="false" condition="String.IsEqual(Skin.String(spinner_type),2)">Conditional</animation>
-					<animation effect="rotate" end="-360" center="auto" time="1500" delay="0" loop="true" reversible="false" condition="String.IsEqual(Skin.String(spinner_type),3)">Conditional</animation>
-					<texture colordiffuse="$VAR[SkinColorVar]">$VAR[SpinnerTypePictureVar]</texture>
-				</control>
-				<control type="image">
-					<centerleft>50%</centerleft>
-					<centertop>50%</centertop>
-					<width>50</width>
-					<height>50</height>
-					<aspectratio>keep</aspectratio>
-					<animation effect="rotate" end="45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="String.IsEmpty(Skin.String(spinner_type)) | String.IsEqual(Skin.String(spinner_type),1)">Conditional</animation>
-					<animation effect="rotate" end="360" center="auto" time="1000" delay="0" loop="true" reversible="false" condition="String.IsEqual(Skin.String(spinner_type),2)">Conditional</animation>
-					<texture flipx="true" colordiffuse="$VAR[SkinColorVar]">$VAR[SpinnerTypePictureVar]</texture>
-					<visible>!String.IsEqual(Skin.String(spinner_type),3)</visible>
-				</control>
+				<include condition="String.IsEmpty(Skin.String(spinner_type)) | String.IsEqual(Skin.String(spinner_type),1)" content="BusySpinner">
+					<param name="outerSpeed" value="200" />
+					<param name="innerSpeed" value="200" />
+					<param name="outerMovement" value="-45" />
+					<param name="innerMovement" value="45" />
+					<param name="delay" value="600" />
+				</include>
+				<include condition="String.IsEqual(Skin.String(spinner_type),2)" content="BusySpinner">
+					<param name="outerMovement" value="-360" />
+					<param name="innerMovement" value="360" />
+				</include>
+				<include condition="String.IsEqual(Skin.String(spinner_type),3)" content="BusySpinner">
+					<param name="outerSpeed" value="1500" />
+					<param name="outerMovement" value="-360" />
+					<param name="innerVisibility" value="false" />
+				</include>
+				<include condition="String.IsEqual(Skin.String(spinner_type),4)" content="BusySpinner">
+					<param name="outerSize" value="100" />
+					<param name="innerSize" value="60" />
+				</include>
+				<include condition="String.IsEqual(Skin.String(spinner_type),5)" content="BusySpinner">
+					<param name="outerSize" value="100" />
+					<param name="innerSize" value="60" />
+					<param name="innerMovement" value="-360" />
+					<param name="outerSpeed" value="2000" />
+				</include>
 				<control type="image">
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
