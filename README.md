@@ -46,7 +46,9 @@ supports animated poster only.
 ### 21.0.0+omega ###
 - .7
   * remove obsolete DialogFavourites.xml
-
+  * fade out extended progress bar when music visualisation is active
+  * some seasonal backgrounds changed
+  
 
 - .6
   * show PVR SIG and SNR flags only when LiveTV or Radio is playing
