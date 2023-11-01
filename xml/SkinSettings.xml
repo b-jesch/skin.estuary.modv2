@@ -754,7 +754,9 @@
 					<onclick condition="String.IsEmpty(Skin.String(spinner_type))">Skin.SetString(spinner_type,2)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(Spinner_type),1)">Skin.SetString(spinner_type,2)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(Spinner_type),2)">Skin.SetString(spinner_type,3)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(Spinner_type),3)">Skin.SetString(spinner_type,1)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(Spinner_type),3)">Skin.SetString(spinner_type,4)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(Spinner_type),4)">Skin.SetString(spinner_type,5)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(Spinner_type),5)">Skin.SetString(spinner_type,1)</onclick>
 				</control>
 				<!-- Maybe later (WIP)
 				<control type="button" id="502">

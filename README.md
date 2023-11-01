@@ -48,6 +48,7 @@ supports animated poster only.
   * remove obsolete DialogFavourites.xml
   * fade out extended progress bar when music visualisation is active
   * some seasonal backgrounds changed
+  * add more busy spinners
   
 
 - .6
