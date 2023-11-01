@@ -47,6 +47,8 @@ supports animated poster only.
   * show PVR SIG and SNR flags only when LiveTV or Radio is playing
   * fix content paths of pvr widgets (home screen)
   * remove obsolete DialogFavourites.xml
+  * fade out extended progress bar when music visualisation is active
+  * some seasonal backgrounds changed
 
 
 - .1

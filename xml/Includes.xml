@@ -2957,8 +2957,8 @@
 							<width>660</width>
 							<itemgap>5</itemgap>
 							<usecontrolcoords>true</usecontrolcoords>
-							<!-- animated Equalizer Icon -->
 							<control type="multiimage">
+								<description>animated Equalizer Icon</description>
 								<top>7</top>
 								<imagepath colordiffuse="$VAR[SkinColorVar]">icons/equalizer</imagepath>
 								<width>40</width>
