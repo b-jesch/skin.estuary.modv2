@@ -49,6 +49,7 @@ supports animated poster only.
   * fade out extended progress bar when music visualisation is active
   * some seasonal backgrounds changed
   * add more busy spinners
+  * add missing font definition
   
 
 - .6
