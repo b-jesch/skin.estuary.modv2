@@ -2070,8 +2070,8 @@
 				<control type="rss">
 					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 					<left>0</left>
-					<bottom>0</bottom>
-					<height>39</height>
+					<bottom>5</bottom>
+					<height>35</height>
 					<width>100%</width>
 					<font>font12</font>
 					<urlset>1</urlset>

@@ -35,7 +35,7 @@
 				</include>
 				<include condition="String.IsEqual(Skin.String(spinner_type),4)" content="BusySpinner">
 					<param name="outerSize" value="100" />
-					<param name="innerSize" value="60" />
+					<param name="innerSize" value="55" />
 				</include>
 				<include condition="String.IsEqual(Skin.String(spinner_type),5)" content="BusySpinner">
 					<param name="outerSize" value="100" />
