@@ -3904,6 +3904,11 @@
 			<top>$PARAM[top]</top>
 		</definition>
 	</include>
+	<include name="ItemBottom">
+		<definition>
+			<bottom>$PARAM[bottom]</bottom>
+		</definition>
+	</include>
 	<include name="ItemMovement">
 		<definition>
 			<movement>$PARAM[movement]</movement>
@@ -4995,8 +5000,8 @@
 			<height>190</height>
 			<control type="group">
 				<animation effect="slide" end="0,-290" time="0" condition="Window.IsVisible(1138)">Conditional</animation>
-				<animation effect="slide" end="0,-350" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1139)">Conditional</animation>
-				<animation effect="slide" end="0,-250" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
+				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1139)">Conditional</animation>
+				<animation effect="slide" end="0,-280" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
 				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				<control type="image">
 					<left>0</left>
@@ -5014,11 +5019,11 @@
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<visible>!Skin.HasSetting(enable_playerclearart)</visible>
 				</control>
-				<include content="SeekBar">
-					<param name="left">30</param>
-					<param name="bg_visibility">false</param>
-				</include>
 			</control>
+			<include content="SeekBar">
+				<param name="left">30</param>
+				<param name="bg_visibility">false</param>
+			</include>
 		</control>
 	</include>
 </includes>

@@ -166,7 +166,12 @@
 			<control type="grouplist" id="9001">
 				<orientation>horizontal</orientation>
 				<left>440</left>
-				<bottom>480</bottom>
+				<include content="ItemBottom" condition="Skin.HasSetting(SmallOSDVideo)">
+					<param name="bottom" value="450" />
+				</include>
+				<include content="ItemBottom" condition="!Skin.HasSetting(SmallOSDVideo)">
+					<param name="bottom" value="480" />
+				</include>
 				<width>1000</width>
 				<height>100</height>
 				<align>left</align>
