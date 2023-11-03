@@ -45,7 +45,8 @@ supports animated poster only.
 
 ### 21.0.0+omega ###
 - .8
-  * fix some position adjustments on small Video OSD
+  * fix several position adjustments on small Video OSD
+  * add PVR device number flag if PVR stream device has numbered (#x) labels
   
 
 - .7

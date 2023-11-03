@@ -75,6 +75,8 @@
 	<expression name="hasPvrStatus">ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimerSchedule | ListItem.HasTimer | ListItem.HasArchive | ListItem.IsPlaying | ListItem.IsLive | ListItem.IsPremiere | ListItem.IsNew | ListItem.IsFinale</expression>
 	<!-- Expression for showing pvr nextup window time slot -->
 	<expression name="PvrNextUpTimeSlot">[!Skin.HasSetting(disable_PVRNextUp) + Integer.IsEqual(PVR.EpgEventRemainingTime(hh),0) + Integer.IsEqual(PVR.EpgEventRemainingTime(mm),0) + Integer.IsLess(PVR.EpgEventRemainingTime(ss),36) + Integer.IsGreater(PVR.EpgEventRemainingTime(ss),4)]</expression>
+	<!-- Expression if PVR frontend has numbered Devices (#0 ... #8) -->
+	<expression name="PvrHasNumberedDevices">String.Contains(PVR.ActStreamDevice,#0) | String.Contains(PVR.ActStreamDevice,#1) | String.Contains(PVR.ActStreamDevice,#2) | String.Contains(PVR.ActStreamDevice,#3) | String.Contains(PVR.ActStreamDevice,#4) | String.Contains(PVR.ActStreamDevice,#5) | String.Contains(PVR.ActStreamDevice,#6) | String.Contains(PVR.ActStreamDevice,#7) | String.Contains(PVR.ActStreamDevice,#8)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -2276,6 +2278,31 @@
 		</control>
 		<control type="group">
 			<width>120</width>
+			<visible>System.GetBool(pvrplayback.signalquality) + $EXP[PvrHasNumberedDevices]</visible>
+			<include content="MediaFlag">
+				<param name="texture" value="flags/pvr.png" />
+				<param name="width" value="120"/>
+			</include>
+			<control type="label">
+				<top>5</top>
+				<width>60</width>
+				<height>40</height>
+				<align>center</align>
+				<label>TUN</label>
+				<font>Font-Flag-Small3</font>
+			</control>
+			<control type="label">
+				<top>5</top>
+				<left>64</left>
+				<width>50</width>
+				<height>40</height>
+				<align>center</align>
+				<label>$VAR[PVRDeviceNumberVar]</label>
+				<font>Font-Flag-Small3</font>
+			</control>
+		</control>
+		<control type="group">
+			<width>120</width>
 			<visible>System.GetBool(pvrplayback.signalquality)</visible>
 			<include content="MediaFlag">
 				<param name="texture" value="flags/pvr.png" />
@@ -2338,7 +2365,7 @@
 		<param name="bottom">140</param>
 		<definition>
 			<control type="grouplist">
-				<left>1430</left>
+				<left>1300</left>
 				<bottom>$PARAM[bottom]</bottom>
 				<right>30</right>
 				<height>50</height>
