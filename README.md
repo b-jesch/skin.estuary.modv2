@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.1.3+nexus ###
+- .3
+  * fix some position adjustments on small Video OSD
+  
+
 - .2
   * show PVR SIG and SNR flags only when LiveTV or Radio is playing
   * fix content paths of pvr widgets (home screen)
