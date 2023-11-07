@@ -46,6 +46,7 @@ supports animated poster only.
 - .3
   * fix several position adjustments on small Video OSD
   * add PVR device number flag if PVR stream device has numbered (#x) labels
+  * some icons added (Samsung TV, Pluto TV, Telekom)
   
 
 - .2
