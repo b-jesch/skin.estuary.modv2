@@ -47,6 +47,7 @@ supports animated poster only.
 - .9
   * some icons added
   * improved info video OSD
+  * remove switching channel options (PVR)
 
 
 - .8

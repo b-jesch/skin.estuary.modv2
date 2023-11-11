@@ -1203,11 +1203,6 @@
 		<value condition="String.IsEqual(Skin.String(timerwidget_action),31625)">$LOCALIZE[31625]</value>
 		<value>$LOCALIZE[31624]</value>
 	</variable>
-	<variable name="ChannelSwitchVar">
-		<value condition="String.IsEqual(Skin.String(channelswitch_action),31632)">$LOCALIZE[31632]</value>
-		<value condition="String.IsEqual(Skin.String(channelswitch_action),31633)">$LOCALIZE[31633]</value>
-		<value>$LOCALIZE[31334]</value>
-	</variable>
 	<variable name="Bars_Opacity">
 		<value condition="Skin.HasSetting(opacitybars_0)">00FFFFFF</value>
 		<value condition="Skin.HasSetting(opacitybars_5)">0DFFFFFF</value>
@@ -1716,8 +1711,7 @@
 		<value condition="Control.HasFocus(606) + PVR.IsRecordingPlayingChannel">$LOCALIZE[19059]</value>
 		<value condition="Control.HasFocus(606)">$LOCALIZE[264]</value>
 		<value condition="Control.HasFocus(607)">$LOCALIZE[19033]</value>
-		<value condition="Control.HasFocus(608) + String.IsEqual(Skin.String(channelswitch_action),31632)">$LOCALIZE[31608]</value>
-		<value condition="Control.HasFocus(608) + String.IsEqual(Skin.String(channelswitch_action),31633)">$LOCALIZE[31016]</value>
+		<value condition="Control.HasFocus(608)">$LOCALIZE[31016]</value>
 		<value condition="Control.HasFocus(609) | Control.HasFocus(610)">$LOCALIZE[31142]</value>
 		<value condition="Control.HasFocus(6021)">$LOCALIZE[208]</value>
 		<value condition="Control.HasFocus(70011)">$LOCALIZE[31138]</value>
