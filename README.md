@@ -44,6 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 21.0.0+omega ###
+- .9
+  * some icons added
+  * improved info video OSD
+
+
 - .8
   * fix several position adjustments on small Video OSD
   * add PVR device number flag if PVR stream device has numbered (#x) labels
