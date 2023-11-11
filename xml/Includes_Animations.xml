@@ -101,8 +101,8 @@
 			<effect type="slide" start="0,200" end="0,0" time="300" tween="cubic" easing="out" delay="300" />
 		</animation>
 		<animation type="WindowClose" reversible="False">
-			<effect type="fade" start="100" end="0" time="300"/>
-			<effect type="slide" start="0,0" end="0,200" time="300" tween="cubic" easing="out" />
+			<effect type="fade" start="100" end="0" time="100"/>
+			<!--<effect type="slide" start="0,0" end="0,200" time="300" tween="cubic" easing="out" />-->
 		</animation>
 	</include>
 	<include name="Animation_BottomFadeInOut">

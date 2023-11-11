@@ -127,8 +127,9 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/channelswitch.png"/>
 					</include>
+					<onclick condition="!String.IsEqual(Skin.String(channelswitch_action),31633)">action(number0)</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(1133)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(channelswitch_action),31633)">ActivateWindow(1133)</onclick>
 					<visible>VideoPlayer.Content(livetv) + !Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="604">
