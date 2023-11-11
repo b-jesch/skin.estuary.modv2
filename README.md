@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.1.3+nexus ###
+- .4
+  * Improvements on full video OSD
+
+
 - .3
   * fix several position adjustments on small Video OSD
   * add PVR device number flag if PVR stream device has numbered (#x) labels
