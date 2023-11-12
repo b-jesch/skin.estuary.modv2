@@ -849,6 +849,37 @@
 			</control>
 		</definition>
 	</include>
+	<include name="MediaFlagOsdWithLabel">
+		<param name="top">5</param>>
+		<param name="height">40</param>
+		<param name="width" />
+		<param name="label_width" />
+		<param name="label_left" />
+		<param name="visible">true</param>
+		<definition>
+			<control type="group">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<visible>$PARAM[visible]</visible>
+				<control type="image">
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture>$PARAM[texture]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>$PARAM[label_left]</left>
+					<width>$PARAM[label_width]</width>
+					<height>$PARAM[height]</height>
+					<align>center</align>
+					<top>2</top>
+					<label>$PARAM[label]</label>
+					<font>Font-Flag-Small2</font>
+				</control>
+			</control>
+		</definition>
+	</include>
 	<include name="MediaFlags">
 		<param name="infolabel_prefix"></param>
 		<param name="resolution_var">$VAR[3DFlagVar]</param>
@@ -2246,7 +2277,7 @@
 		<control type="group">
 			<width>60</width>
 			<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
-			<include content="MediaFlag">
+			<include content="MediaFlagOSD">
 				<param name="texture" value="flags/cadre_small.png" />
 				<param name="width" value="60"/>
 			</include>
@@ -2262,7 +2293,7 @@
 		<control type="group">
 			<width>60</width>
 			<visible>PVR.IsRecording</visible>
-			<include content="MediaFlag">
+			<include content="MediaFlagOSD">
 				<param name="texture" value="flags/cadre_small.png" />
 				<param name="width" value="60"/>
 			</include>
@@ -2279,7 +2310,7 @@
 		<control type="group">
 			<width>120</width>
 			<visible>System.GetBool(pvrplayback.signalquality) + $EXP[PvrHasNumberedDevices]</visible>
-			<include content="MediaFlag">
+			<include content="MediaFlagOSD">
 				<param name="texture" value="flags/pvr.png" />
 				<param name="width" value="120"/>
 			</include>
@@ -2304,7 +2335,7 @@
 		<control type="group">
 			<width>120</width>
 			<visible>System.GetBool(pvrplayback.signalquality)</visible>
-			<include content="MediaFlag">
+			<include content="MediaFlagOSD">
 				<param name="texture" value="flags/pvr.png" />
 				<param name="width" value="120"/>
 			</include>
@@ -2329,7 +2360,7 @@
 		<control type="group">
 			<width>120</width>
 			<visible>System.GetBool(pvrplayback.signalquality)</visible>
-			<include content="MediaFlag">
+			<include content="MediaFlagOSD">
 				<param name="texture" value="flags/pvr.png" />
 				<param name="width" value="120"/>
 			</include>
@@ -4704,27 +4735,14 @@
 								<param name="width" value="86" />
 								<param name="visible" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<control type="group">
-								<width>155</width>
-								<height>40</height>
-								<visible>!String.IsEmpty(Player.Process(VideoFPS)) + Integer.IsGreater(Player.Process(VideoFPS),0)</visible>
-								<control type="image">
-									<top>5</top>
-									<width>155</width>
-									<height>40</height>
-									<texture>flags/fps.png</texture>
-									<aspectratio>keep</aspectratio>
-								</control>
-								<control type="label">
-									<left>2</left>
-									<width>104</width>
-									<height>40</height>
-									<align>center</align>
-									<top>2</top>
-									<label>$INFO[Player.Process(VideoFPS)]</label>
-									<font>Font-Flag-Small2</font>
-								</control>
-							</control>
+							<include content="MediaFlagOsdWithLabel">
+								<param name="width" value="155" />
+								<param name="label_width" value="100" />
+								<param name="label_left" value="2" />
+								<param name="label" value="$INFO[Player.Process(VideoFPS)]" />
+								<param name="texture" value="flags/fps.png" />
+								<param name="visible" value="!String.IsEmpty(Player.Process(VideoFPS)) + Integer.IsGreater(Player.Process(VideoFPS),0)" />
+							</include>
 							<include content="MediaFlagOSD">
 								<param name="texture" value="$VAR[VideoPlayerAudioCodecFlagVar]" />
 								<param name="fallback" value="flags/audiocodec/fallback.png" />
@@ -4735,86 +4753,38 @@
 								<param name="fallback" value="flags/audiochannel/fallback.png" />
 								<param name="width" value="104" />
 							</include>
-							<control type="group">
-								<width>180</width>
-								<height>40</height>
-								<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation)</visible>
-								<control type="image">
-									<top>5</top>
-									<width>180</width>
-									<height>40</height>
-									<texture>flags/cadre3.png</texture>
-									<aspectratio>keep</aspectratio>
-								</control>
-								<control type="label">
-									<width>180</width>
-									<height>40</height>
-									<align>center</align>
-									<top>2</top>
-									<label>$INFO[MusicPlayer.SampleRate,, kHz]</label>
-									<font>Font-Flag-Small</font>
-								</control>
-							</control>
-							<control type="group">
-								<width>180</width>
-								<height>40</height>
-								<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(visualisation)</visible>
-								<control type="image">
-									<top>5</top>
-									<width>180</width>
-									<height>40</height>
-									<texture>flags/cadre3.png</texture>
-									<aspectratio>keep</aspectratio>
-								</control>
-								<control type="label">
-									<width>180</width>
-									<height>40</height>
-									<align>center</align>
-									<top>2</top>
-									<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
-									<font>Font-Flag-Small</font>
-								</control>
-							</control>
-							<control type="group">
-								<width>155</width>
-								<height>40</height>
-								<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(visualisation)</visible>
-								<control type="image">
-									<top>5</top>
-									<width>155</width>
-									<height>40</height>
-									<texture>flags/cadre.png</texture>
-									<aspectratio>keep</aspectratio>
-								</control>
-								<control type="label">
-									<width>155</width>
-									<height>40</height>
-									<align>center</align>
-									<top>2</top>
-									<label>$INFO[MusicPlayer.BitsPerSample,, bits]</label>
-									<font>Font-Flag-Small</font>
-								</control>
-							</control>
-							<control type="group">
-								<width>155</width>
-								<height>40</height>
-								<visible>!String.IsEmpty(RDS.HasRDS)</visible>
-								<control type="image">
-									<top>5</top>
-									<width>155</width>
-									<height>40</height>
-									<texture>flags/cadre.png</texture>
-									<aspectratio>keep</aspectratio>
-								</control>
-								<control type="label">
-									<width>155</width>
-									<height>40</height>
-									<align>center</align>
-									<top>2</top>
-									<label>RDS</label>
-									<font>Font-Flag-Small</font>
-								</control>
-							</control>
+							<include content="MediaFlagOsdWithLabel">
+								<param name="width" value="180" />
+								<param name="label_width" value="176" />
+								<param name="label_left" value="2" />
+								<param name="label" value="$INFO[MusicPlayer.SampleRate,, kHz]" />
+								<param name="texture" value="flags/cadre3.png" />
+								<param name="visible" value="!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation)" />
+							</include>
+							<include content="MediaFlagOsdWithLabel">
+								<param name="width" value="180" />
+								<param name="label_width" value="176" />
+								<param name="label_left" value="2" />
+								<param name="label" value="$INFO[MusicPlayer.BitRate,, kbps]" />
+								<param name="texture" value="flags/cadre3.png" />
+								<param name="visible" value="!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation)" />
+							</include>
+							<include content="MediaFlagOsdWithLabel">
+								<param name="width" value="155" />
+								<param name="label_width" value="151" />
+								<param name="label_left" value="2" />
+								<param name="label" value="$INFO[MusicPlayer.BitsPerSample,, bits]" />
+								<param name="texture" value="flags/cadre.png" />
+								<param name="visible" value="!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(visualisation)" />
+							</include>
+							<include content="MediaFlagOsdWithLabel">
+								<param name="width" value="155" />
+								<param name="label_width" value="151" />
+								<param name="label_left" value="2" />
+								<param name="label" value="RDS" />
+								<param name="texture" value="flags/cadre.png" />
+								<param name="visible" value="!String.IsEmpty(RDS.HasRDS)" />
+							</include>
 							<control type="group">
 								<width>163</width>
 								<height>40</height>
@@ -4830,46 +4800,22 @@
 							<include content="MediaFlagOSD">
 								<param name="width" value="5" />
 							</include>
-							<control type="group">
-								<width>104</width>
-								<height>40</height>
-								<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-								<control type="image">
-									<top>5</top>
-									<width>104</width>
-									<height>40</height>
-									<aspectratio>keep</aspectratio>
-									<texture>flags/language.png</texture>
-								</control>
-								<control type="label">
-									<width>64</width>
-									<left>40</left>
-									<height>40</height>
-									<align>center</align>
-									<label>$INFO[VideoPlayer.AudioLanguage]</label>
-									<font>Font-Flag-Small2</font>
-								</control>
-							</control>
-							<control type="group">
-								<width>104</width>
-								<height>40</height>
-								<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled</visible>
-								<control type="image">
-									<top>5</top>
-									<width>104</width>
-									<height>40</height>
-									<aspectratio>keep</aspectratio>
-									<texture>flags/st_language.png</texture>
-								</control>
-								<control type="label">
-									<width>64</width>
-									<left>40</left>
-									<height>40</height>
-									<align>center</align>
-									<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
-									<font>Font-Flag-Small2</font>
-								</control>
-							</control>
+							<include content="MediaFlagOsdWithLabel">
+								<param name="width" value="104" />
+								<param name="label_width" value="64" />
+								<param name="label_left" value="40" />
+								<param name="label" value="$INFO[VideoPlayer.AudioLanguage]" />
+								<param name="texture" value="flags/language.png" />
+								<param name="visible" value="!String.IsEmpty(VideoPlayer.AudioLanguage)" />
+							</include>
+							<include content="MediaFlagOsdWithLabel">
+								<param name="width" value="104" />
+								<param name="label_width" value="64" />
+								<param name="label_left" value="40" />
+								<param name="label" value="$INFO[VideoPlayer.SubtitlesLanguage]" />
+								<param name="texture" value="flags/st_language.png" />
+								<param name="visible" value="!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled" />
+							</include>
 						</control>
 						<include content="MediaFlagPvrOsd">
 							<param name="bottom" value="145"/>

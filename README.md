@@ -46,7 +46,8 @@ supports animated poster only.
 ### 21.0.0+omega ###
 - .9
   * some icons added
-  * improved info video OSD
+  * Code Improvements on full video OSD
+  * OSD media flags fixed/improved
   * remove switching channel options (PVR)
 
 
