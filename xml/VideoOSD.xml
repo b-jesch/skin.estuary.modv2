@@ -297,7 +297,6 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/processinfo.png"/>
 					</include>
-					<onclick>Action(Close)</onclick>
 					<onclick>ActivateWindow(playerprocessinfo)</onclick>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>

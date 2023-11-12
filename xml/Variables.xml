@@ -839,9 +839,24 @@
 		<value condition="[Skin.HasSetting(hide_plotforspoiler) + String.IsEqual(ListItem.DBType,episode)] + Integer.IsLess(ListItem.Playcount,1) + !String.StartsWith(Container.FolderPath,plugin://)">[COLOR white]$LOCALIZE[31230][/COLOR]</value>
 		<value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 	</variable>
+	<variable name="OsdMainLabelVar">
+		<value condition="!VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</value>
+		<value condition="VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode,,.]$INFO[VideoPlayer.EpisodeName, ]</value>
+	</variable>
+	<variable name="OsdGenreLabelVar">
+		<value condition="!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(files) + !Window.IsVisible(1138) + ![Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">$INFO[VideoPlayer.Genre]</value>
+		<value condition="!VideoPlayer.Content(LiveTV) + [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)] | Window.IsVisible(1138)">$INFO[VideoPlayer.Genre]</value>
+		<value condition="VideoPlayer.Content(LiveTV) + !Window.IsVisible(1138) + ![Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">$INFO[VideoPlayer.ChannelNumberLabel,[B][COLOR white],[/COLOR]. [/B]]$INFO[VideoPlayer.ChannelName,[COLOR white][B],[/B][/COLOR]]$INFO[VideoPlayer.Genre, [B]-[/B] [COLOR white],[/COLOR]]</value>
+		<value condition="VideoPlayer.Content(LiveTV) + [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">$INFO[VideoPlayer.ChannelNumberLabel,[B],[COLOR white].[/B] [/COLOR]]$INFO[VideoPlayer.ChannelName,[B],[/B]]$INFO[VideoPlayer.Genre,[COLOR white] [B]-[/B] [/COLOR]]</value>
+	</variable>
+	<variable name="OsdMixedLabelVar">
+		<value condition="Integer.IsGreater(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText + ![Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]$INFO[Player.ChapterName, : ]</value>
+		<value condition="VideoPlayer.HasEpg + !RDS.HasRadioText">$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031] : [COLOR white]][COLOR white]$INFO[VideoPlayer.NextStartTime, (]$INFO[VideoPlayer.NextEndTime, - ,)][/COLOR]</value>
+		<value condition="RDS.HasRadioText">$LOCALIZE[14304][COLOR white] : $INFO[RDS.GetLine(0)][/COLOR]</value>
+	</variable>
 	<variable name="ExtendedInfoVideoArtVar">
 		<value condition="String.IsEqual(Window.Property(Type),movie) + !String.IsEmpty(Window.Property(discart))">$INFO[Window.Property(discart)]</value>
-        <value condition="!String.IsEqual(Window.Property(Type),movie) + !String.IsEmpty(Window.Property(characterart))">$INFO[Window.Property(characterart)]</value>
+	        <value condition="!String.IsEqual(Window.Property(Type),movie) + !String.IsEmpty(Window.Property(characterart))">$INFO[Window.Property(characterart)]</value>
 		<value condition="!String.IsEqual(Window.Property(Type),movie) + !String.IsEmpty(Window.Property(tvshow.characterart))">$INFO[Window.Property(tvshow.characterart)]</value>
 	</variable>
 	<variable name="ContentBackgroundVar">
