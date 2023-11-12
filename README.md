@@ -45,7 +45,8 @@ supports animated poster only.
 ### 4.1.3+nexus ###
 - .4
   * some icons added (Samsung TV, Pluto TV, Telekom)
-  * Improvements on full video OSD 
+  * Code Improvements on full video OSD
+  * OSD media flags fixed/improved
 
 
 - .3
