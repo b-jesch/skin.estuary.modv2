@@ -242,7 +242,7 @@
 								<width>60</width>
 								<height>60</height>
 								<texture>overlays/overlay-bg.png</texture>
-								<visible>$EXP[hasPvrStatus]</visible>
+								<visible>$EXP[hasPvrStatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
 							</control>
 							<control type="image">
 								<left>7</left>
@@ -250,6 +250,7 @@
 								<width>36</width>
 								<height>36</height>
 								<texture>$VAR[PVRStatusImageVar]</texture>
+								<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 							</control>
 							<control type="label" id="1">
 								<left>7</left>
@@ -259,7 +260,7 @@
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>!$EXP[hasPvrStatus]</visible>
+								<visible>!$EXP[hasPvrStatus] | Skin.HasSetting(ShowPVRStatus)</visible>
 							</control>
 							<control type="label" id="1">
 								<left>45</left>
@@ -269,7 +270,7 @@
 								<aligny>center</aligny>
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>$EXP[hasPvrStatus]</visible>
+								<visible>$EXP[hasPvrStatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout height="60" width="60">
@@ -300,7 +301,7 @@
 								<width>60</width>
 								<height>57</height>
 								<texture>overlays/overlay-bg.png</texture>
-								<visible>$EXP[hasPvrStatus]</visible>
+								<visible>$EXP[hasPvrStatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
 							</control>
 							<control type="image">
 								<left>7</left>
@@ -308,6 +309,7 @@
 								<width>36</width>
 								<height>36</height>
 								<texture>$VAR[PVRStatusImageVar]</texture>
+								<visible>!Skin.HasSetting(ShowPVRStatus)</visible>
 							</control>
 							<control type="label" id="1">
 								<left>7</left>
@@ -318,7 +320,7 @@
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
 								<scroll>true</scroll>
-								<visible>!$EXP[hasPvrStatus]</visible>
+								<visible>!$EXP[hasPvrStatus] | Skin.HasSetting(ShowPVRStatus)</visible>
 							</control>
 							<control type="label" id="1">
 								<left>45</left>
@@ -329,7 +331,7 @@
 								<font>font13</font>
 								<label>$INFO[ListItem.Label]</label>
 								<scroll>true</scroll>
-								<visible>$EXP[hasPvrStatus]</visible>
+								<visible>$EXP[hasPvrStatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
 							</control>
 						</focusedlayout>
 					</control>
