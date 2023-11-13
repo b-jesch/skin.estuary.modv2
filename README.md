@@ -47,6 +47,7 @@ supports animated poster only.
   * some icons added (Samsung TV, Pluto TV, Telekom)
   * Code Improvements on full video OSD
   * OSD media flags fixed/improved
+  * OSD hide sound button if there are only a single audio stream (thanks biegleux)
 
 
 - .3
