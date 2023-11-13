@@ -278,6 +278,7 @@
 					</include>
 					<onclick condition="!Skin.HasSetting(SimplyfiedOSDVideo)">AudioNextLanguage</onclick>
 					<onclick condition="Skin.HasSetting(SimplyfiedOSDVideo)">ActivateWindow(osdaudiosettings)</onclick>
+					<visible>Skin.HasSetting(SimplyfiedOSDVideo) | Integer.IsGreater(VideoPlayer.AudioStreamCount,1)</visible>
 				</control>
 				<control type="radiobutton" id="706">
 					<include content="OSDButton">
