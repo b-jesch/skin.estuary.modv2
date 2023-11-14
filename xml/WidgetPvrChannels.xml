@@ -94,6 +94,7 @@
                             <width>32</width>
                             <height>32</height>
                             <texture>$VAR[PVRStatusImageVar]</texture>
+                            <visible>!Skin.HasSetting(ShowPVRStatus)</visible>
                         </control>
                         <control type="image">
                             <left>20</left>
@@ -218,6 +219,7 @@
                             <width>32</width>
                             <height>32</height>
                             <texture>$VAR[PVRStatusImageVar]</texture>
+                            <visible>!Skin.HasSetting(ShowPVRStatus)</visible>
                         </control>
                         <control type="image">
                             <left>20</left>
