@@ -2303,7 +2303,7 @@
 				<top>5</top>
 				<align>center</align>
 				<textcolor>FFFF0000</textcolor>
-				<label>REC</label>
+				<label>$LOCALIZE[31667]</label>
 				<font>Font-Flag-Small3</font>
 			</control>
 		</control>
@@ -2334,7 +2334,7 @@
 		</control>
 		<control type="group">
 			<width>120</width>
-			<visible>System.GetBool(pvrplayback.signalquality)</visible>
+			<visible>System.GetBool(pvrplayback.signalquality) + [Integer.IsGreater(PVR.ActStreamProgrSignal,0) | !Skin.HasSetting(disable_pvr_zerovalues)]</visible>
 			<include content="MediaFlagOSD">
 				<param name="texture" value="flags/pvr.png" />
 				<param name="width" value="120"/>
@@ -2359,7 +2359,7 @@
 		</control>
 		<control type="group">
 			<width>120</width>
-			<visible>System.GetBool(pvrplayback.signalquality)</visible>
+			<visible>System.GetBool(pvrplayback.signalquality) + [Integer.IsGreater(PVR.ActStreamProgrSNR,0) | !Skin.HasSetting(disable_pvr_zerovalues)]</visible>
 			<include content="MediaFlagOSD">
 				<param name="texture" value="flags/pvr.png" />
 				<param name="width" value="120"/>
@@ -2383,11 +2383,11 @@
 			</control>
 		</control>
 		<control type="group">
-			<width>60</width>
+			<width>62</width>
 			<visible>Pvr.ActStreamIsEncrypted</visible>
 			<include content="MediaFlagOSD">
 				<param name="texture" value="flags/encrypt.png" />
-				<param name="width" value="60"/>
+				<param name="width" value="62"/>
 			</include>
 		</control>
 	</include>

@@ -695,6 +695,13 @@
 					<onclick condition="String.IsEqual(Skin.String(channelswitch_action),31632)">Skin.SetString(channelswitch_action,31633)</onclick>
 					<onclick condition="!String.IsEmpty(Skin.String(channelswitch_action)) + !String.IsEqual(Skin.String(channelswitch_action),31632) + !String.IsEqual(Skin.String(channelswitch_action),31633)">Skin.SetString(channelswitch_action,31632)</onclick>
 				</control>
+				<control type="radiobutton" id="409">
+					<label>$LOCALIZE[31668]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(disable_pvr_zerovalues)</onclick>
+					<selected>Skin.HasSetting(disable_pvr_zerovalues)</selected>
+					<enable>System.GetBool(pvrplayback.signalquality)</enable>
+				</control>
 			</control>
 			<control type="grouplist" id="500">
 				<top>168</top>

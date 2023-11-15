@@ -48,6 +48,7 @@ supports animated poster only.
   * Code Improvements on full video OSD
   * OSD media flags fixed/improved
   * OSD hide sound button if there are only a single audio stream (thanks biegleux)
+  * Option added for hiding SIG/SNR flags if not provided by Backend Driver (returns always zero)
 
 
 - .3
