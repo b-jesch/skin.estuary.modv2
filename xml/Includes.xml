@@ -398,6 +398,9 @@
 		<param name="animation">False</param>
 		<definition>
 			<control type="group">
+				<left>205</left>
+				<bottom>0</bottom>
+				<height>44</height>
 				<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
 				<include content="UserRatingContent" condition="Skin.HasSetting(circle_userrating)">
 					<param name="infolabel" value="VideoPlayer.UserRating" />
@@ -4366,24 +4369,20 @@
 						<visible>String.IsEqual(Control.GetLabel(88888),osd/cd.png)</visible>
 					</control>
 				</control>
-				<control type="image">
+				<control type="group">
 					<depth>DepthOSD+</depth>
 					<left>10</left>
-					<bottom>5</bottom>
-					<width>440</width>
-					<height>660</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true" fallback="DefaultVideoCover.png">$VAR[NowPlayingPosterVar]</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] + !String.StartsWith(Player.Filenameandpath,http)</visible>
-				</control>
-				<control type="group">
-					<left>205</left>
-					<bottom>0</bottom>
-					<height>44</height>
-					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">VideoPlayerRatingCircle</include>
-					<visible>!String.StartsWith(Player.FolderPath,http)</visible>
+					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos) | Player.IsInternetStream | [VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio]</visible>
+					<control type="image">
+						<width>440</width>
+						<height>660</height>
+						<bottom>5</bottom>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<texture background="true" fallback="DefaultVideoCover.png">$VAR[NowPlayingPosterVar]</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+					</control>
+					<include condition="!Player.IsInternetStream + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)]">VideoPlayerRatingCircle</include>
 				</control>
 				<control type="group">
 					<description>audio disc cover</description>
@@ -4392,11 +4391,11 @@
 					<bottom>5</bottom>
 					<width>440</width>
 					<height>440</height>
+					<visible>Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 					<control type="image" id="4397">
 						<aspectratio aligny="bottom" align="center">keep</aspectratio>
 						<texture background="true" fallback="dialogs/defaultcdcover.png">$VAR[MusicPlayerCover]</texture>
 						<bordersize>20</bordersize>
-						<visible>Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -4410,30 +4409,8 @@
 						<visible>String.IsEmpty(Player.Art(thumb)) | String.IsEqual(Player.Art(thumb),defaultalbumcover.png)</visible>
 					</control>
 				</control>
-				<control type="image">
-					<depth>DepthOSD+</depth>
-					<left>10</left>
-					<bottom>5</bottom>
-					<width>440</width>
-					<height>660</height>
-					<aspectratio aligny="bottom" align="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultVideoFanart.png">$VAR[NowPlayingLandscapeVar]</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(musicvideos) + !String.StartsWith(Player.Filenameandpath,http)] + !VideoPlayer.Content(LiveTV) + !Window.IsVisible(visualisation)</visible>
-				</control>
 				<control type="group">
-					<control type="image">
-						<depth>DepthOSD+</depth>
-						<left>10</left>
-						<bottom>5</bottom>
-						<width>440</width>
-						<height>660</height>
-						<aspectratio aligny="bottom" align="center">keep</aspectratio>
-						<texture background="true" fallback="DefaultTVSquare.png">$VAR[NowPlayingPosterVar]</texture>
-						<bordersize>20</bordersize>
-						<visible>VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio</visible>
-					</control>
+					<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(visualisation) + Player.IsInternetStream]</visible>
 					<control type="image">
 						<description>Cover Live TV, RDS Radio, Stream (Addon)</description>
 						<depth>DepthOSD+</depth>
@@ -4445,7 +4422,7 @@
 						<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border) + [[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(visualisation) + Player.IsInternetStream]]</visible>
+						<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border)</visible>
 					</control>
 					<control type="image">
 						<depth>DepthOSD+</depth>
@@ -4456,7 +4433,6 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
 						<bordersize>20</bordersize>
-						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(visualisation) + Player.IsInternetStream]</visible>
 					</control>
 					<include content="BusyPvrArtworkSpinner">
 						<param name="top" value="80" />
@@ -4465,12 +4441,17 @@
 				</control>
 				<control type="image">
 					<right>30</right>
-					<bottom>230</bottom>
+					<include content="ItemBottom" condition="!Window.IsVisible(playerprocessinfo)">
+						<param name="bottom" value="230" />
+					</include>
+					<include content="ItemBottom" condition="Window.IsVisible(playerprocessinfo)">
+						<param name="bottom" value="350" />
+					</include>
 					<width>500</width>
 					<height>281</height>
 					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<visible>!Window.IsVisible(playerprocessinfo) + !Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
+					<visible>!Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
 					<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="!Window.IsActive(fullscreeninfo)">Conditional</animation>
 					<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
 					<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
@@ -4479,20 +4460,6 @@
 				</control>
 				<control type="image">
 					<right>30</right>
-					<bottom>350</bottom>
-					<width>500</width>
-					<height>281</height>
-					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<visible>Window.IsVisible(playerprocessinfo) + !Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
-					<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="!Window.IsActive(fullscreeninfo)">Conditional</animation>
-					<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
-					<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
-					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
-					<fadetime>100</fadetime>
-				</control>
-				<control type="image">
-					<right>0</right>
 					<bottom>310</bottom>
 					<width>500</width>
 					<height>281</height>

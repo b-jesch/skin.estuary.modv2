@@ -148,7 +148,7 @@
 					<width>255</width>
 					<height>255</height>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultVideo.png">$VAR[NowPlayingLandscapeVar]</texture>
+					<texture background="true" fallback="DefaultVideo.png">$VAR[NowPlayingPosterVar]</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<visible>![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)] + !VideoPlayer.Content(LiveTV)</visible>
 				</control>
