@@ -685,6 +685,13 @@
 					<onclick condition="!String.IsEmpty(Skin.String(timerwidget_action)) + !String.IsEqual(Skin.String(timerwidget_action),31624) + !String.IsEqual(Skin.String(timerwidget_action),31625)">Skin.SetString(timerwidget_action,31624)</onclick>
 				</control>
 				-->
+				<control type="radiobutton" id="409">
+					<label>$LOCALIZE[31668]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(disable_pvr_zerovalues)</onclick>
+					<selected>Skin.HasSetting(disable_pvr_zerovalues)</selected>
+					<enable>System.GetBool(pvrplayback.signalquality)</enable>
+				</control>
 			</control>
 			<control type="grouplist" id="500">
 				<top>168</top>

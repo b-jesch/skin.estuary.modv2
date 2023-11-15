@@ -49,6 +49,7 @@ supports animated poster only.
   * Code Improvements on full video OSD
   * OSD media flags fixed/improved
   * remove switching channel options (PVR)
+  * Option added for hiding SIG/SNR flags if not provided by Backend Driver (returns always zero)
 
 
 - .8
