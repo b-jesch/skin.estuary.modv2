@@ -43,6 +43,12 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.1.3+nexus ###
+- .5
+  * missing poster in OSD while playing files fixed
+  * Slovakian language strings added
+  * Netherland language strings updated
+
+
 - .4
   * some icons added (Samsung TV, Pluto TV, Telekom)
   * Code Improvements on full video OSD
