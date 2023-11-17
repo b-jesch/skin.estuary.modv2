@@ -4,944 +4,917 @@
 # Addon Provider: Guilouz, PvD
 msgid ""
 msgstr ""
-"Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-09-24 12:26+0000\n"
-"Last-Translator: C4Wiz <c4wiz@live.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/skin-estuary-modv2/"
-"glossary/nl/>\n"
-"Language: nl_nl\n"
+"Project-Id-Version: Skin Estuary MOD V2 for KODI 20 Nexus KN Edition\n"
+"Report-Msgid-Bugs-To: https://github.com/b-jesch/skin.estuary.modv2\n"
+"POT-Creation-Date: 2023-11-15 23:32+2\n"
+"PO-Revision-Date: 2023-11-16 23:15+2\n"
+"Last-Translator: biegleux\n"
+"Language-Team: Slovak\n"
+"Language: sk_sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #: /xml/Home.xml /xml/DialogSeekBar.xml
 msgctxt "#31000"
 msgid "Now playing"
-msgstr "Nu afspelend"
+msgstr "Prehráva sa"
 
 #: /xml/Home.xml
 msgctxt "#31001"
 msgid "Search..."
-msgstr "Zoeken..."
+msgstr "Hľadať..."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31002"
 msgid "Show media fanart as background"
-msgstr "Toon mediafanart als achtergrond"
+msgstr "Zobraziť fanart médií ako pozadie"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31003"
 msgid "Cinema mode"
-msgstr "Bioscoopmodus"
+msgstr "Režim kina"
 
 #: /xml/VideoOSD.xml
 msgctxt "#31004"
 msgid "Change mode"
-msgstr "Verander modus"
+msgstr "Zmeniť režim"
 
 #: /xml/VideoOSD.xml
 msgctxt "#31005"
 msgid "Watch as 2D"
-msgstr "Bekijk als 2D"
+msgstr "Pozerať ako 2D"
 
 #: /xml/Home.xml
 msgctxt "#31006"
 msgid "Random movies"
-msgstr "Willekeurige films"
+msgstr "Náhodné filmy"
 
 #: /xml/Home.xml
 msgctxt "#31007"
 msgid "Unwatched movies"
-msgstr "Niet-bekeken films"
+msgstr "Nepozreté filmy"
 
-msgctxt "#31008"
-msgid "Enable category widgets"
-msgstr "Activeer categoriewidgets"
+#: Missing string 31108
 
 #: /xml/MyVideoNav.xml
 msgctxt "#31009"
 msgid "Download icons"
-msgstr "Download pictogrammen"
+msgstr "Prevziať ikony"
 
 #: /xml/Home.xml
 msgctxt "#31010"
 msgid "In progress movies"
-msgstr "Deels bekeken films"
+msgstr "Rozpozerané filmy"
 
 #: /xml/Home.xml
 msgctxt "#31011"
 msgid "Most played albums"
-msgstr "Meest afgespeelde albums"
+msgstr "Najprehrávanejšie albumy"
 
 #: /xml/Home.xml
 msgctxt "#31012"
 msgid "Random albums"
-msgstr "Willekeurige albums"
+msgstr "Náhodné albumy"
 
 #: /xml/Home.xml
 msgctxt "#31013"
 msgid "Random artists"
-msgstr "Willekeurige artiesten"
+msgstr "Náhodní umelci"
 
 #: /xml/Home.xml
 msgctxt "#31014"
 msgid "Unplayed albums"
-msgstr "Niet-afgespeelde albums"
+msgstr "Neprehraté albumy"
 
 #. home screen recordings widget: recent tv / radio recordings
 #: /xml/Home.xml
 msgctxt "#31015"
 msgid "Recent recordings"
-msgstr "Recente opnames"
+msgstr "Nedávne nahrávky"
 
 #. home screen channel widget: recently played tv channels. (please note that in some non-english languages #31018 and #31016 might not be equal)
 #: /xml/Home.xml
 msgctxt "#31016"
 msgid "Recently played channels"
-msgstr "Onlangs afgespeelde kanalen"
+msgstr "Nedávno pozerané kanály"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31017"
 msgid "Rated"
-msgstr "Waardering"
+msgstr "Prístupnosť"
 
 #. home screen channel widget: recently played radio channels. (please note that in some non-english languages #31018 and #31016 might not be equal)
 #: /xml/Home.xml
 msgctxt "#31018"
 msgid "Recently played channels"
-msgstr "Onlangs afgespeelde kanalen"
+msgstr "Nedávno prehrávané kanály"
 
 #: /xml/Home.xml /xml/MyWeather.xml
 msgctxt "#31019"
 msgid "Forecast"
-msgstr "Voorspelling"
+msgstr "Predpoveď"
 
 #: /xml/MyMusicNav.xml /xml/MyPics.xml /xml/MyVideoNav.xml
 msgctxt "#31020"
 msgid "Actions"
-msgstr "Acties"
+msgstr "Akcie"
 
-#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml
-#: /xml/Includes_MediaMenu.xml /xml/EventLog.xml
+#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml /xml/Includes_MediaMenu.xml /xml/EventLog.xml
 msgctxt "#31021"
 msgid "Misc options"
-msgstr "Overige opties"
+msgstr "Ďalšie možnosti"
 
 #: /xml/Includes_MediaMenu.xml /xml/Includes.xml
 msgctxt "#31022"
 msgid "Sort by"
-msgstr "Sorteer op"
+msgstr "Zoradiť podľa"
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31023"
 msgid "Viewtype"
-msgstr "Viewtype"
+msgstr "Typ zobrazenia"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31024"
 msgid "Choose rating to display for media items"
-msgstr "Kies waardering voor mediabestanden"
+msgstr "Zvoľte si typ hodnotenia, ktorý sa zobrazí pre položky médií"
 
 #: /xml/DialogFavourites.xml
 msgctxt "#31025"
-msgid ""
-"No favourites found. You can add any item from media views to this list by "
-"using the context menu."
-msgstr ""
-"Geen favorieten gevonden. Je kunt elk item uit media-weergaven toevoegen aan "
-"deze lijst met het contextmenu."
+msgid "No favourites found. You can add any item from media views to this list by using the context menu."
+msgstr "Nenašli sa žiadne obľúbené položky. Akúkoľvek položku z prehľadov médií môžete pridať do tohto zoznamu použitím kontextovej ponuky."
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31026"
 msgid "Timeshift"
-msgstr "Timeshift"
+msgstr "Časový posun"
 
 #: /xml/DialogAlbumInfo.xml /xml/DialogVideoInfo.xml
 msgctxt "#31028"
 msgid "Show fanart"
-msgstr "Toon fanart"
+msgstr "Zobraziť fanart"
 
 #: /xml/SettingsProfile.xml
 msgctxt "#31029"
 msgid "Last logged in"
-msgstr "Laatst ingelogd op"
+msgstr "Posledné prihlásenie"
 
 #: /xml/SettingsSystemInfo.xml
 msgctxt "#31030"
 msgid "System memory usage"
-msgstr "Systeemgeheugengebruik"
+msgstr "Využitie systémovej pamäte"
 
 #: /xml/SettingsSystemInfo.xml
 msgctxt "#31031"
 msgid "Version info"
-msgstr "Versie-info"
+msgstr "Informácie o verzii"
 
 #: /xml/EventLog.xml /xml/Includes_MediaMenu.xml /xml/SmartPlaylistEditor.xml
 msgctxt "#31032"
 msgid "Order"
-msgstr "Volgorde"
+msgstr "Poradie"
 
 #: /xml/DialogVideoInfo.xml /xml/DialogSongInfo.xml
 msgctxt "#31033"
-msgid "Your rating"
-msgstr "Uw beoordeling"
+msgid "My rating"
+msgstr "Moje hodnotenie"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31034"
 msgid "Extended info"
-msgstr "Uitgebreide info"
+msgstr "Rozšírené informácie"
 
-#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml
-#: /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
+#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
 msgctxt "#31035"
 msgid "Pages"
-msgstr "Pagina's"
+msgstr "Stránky"
 
 #: /xml/FileBrowser.xml /xml/Variables.xml /xml/MyPVRRecordings.xml
 msgctxt "#31036"
 msgid "items"
-msgstr "items"
+msgstr "položky"
+
+msgctxt "#31037"
+msgid "item"
+msgstr "položka"
 
 #: /xml/Variables.xml
 msgctxt "#31038"
 msgid "Rewind"
-msgstr "Terugspoelen"
+msgstr "Pretočiť dozadu"
 
 #: /xml/Variables.xml
 msgctxt "#31039"
 msgid "Fast forward"
-msgstr "Vooruitspoelen"
+msgstr "Pretočiť dopredu"
 
 #: /xml/Variables.xml /xml/MyPics.xml
 msgctxt "#31041"
 msgid "Camera manufacturer"
-msgstr "Camerafabrikant"
+msgstr "Výrobca fotoaparátu"
 
 #: /xml/SmartPlaylistEditor.xml
 msgctxt "#31042"
 msgid "Playlist options"
-msgstr "Afspeellijstopties"
+msgstr "Možnosti zoznamu skladieb"
 
 #: /xml/SmartPlaylistEditor.xml
 msgctxt "#31043"
-msgid ""
-"Set the type and add rules to create a smart playlist. These playlists are "
-"dynamic and include all media items from your database which apply to your "
-"chosen rules."
-msgstr ""
-"Stel het type in en voeg regels toe om een slimme afspeellijst te maken. "
-"Deze afspeellijsten zijn dynamisch en bevatten alle media-items vanuit je "
-"database die voldoen aan de gekozen regels."
+msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
+msgstr "Nastavte typ a pridajte pravidlá pre vytvorenie inteligentného zoznamu skladieb. Tieto zoznamy skladieb sú dynamické a zahŕňajú všetky položky médií z vašej databázy, ktoré zodpovedajú zvoleným pravidlám."
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31044"
 msgid "Add group"
-msgstr "Voeg groep toe"
+msgstr "Pridať skupinu"
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31045"
 msgid "Rename group"
-msgstr "Hernoem groep"
+msgstr "Premenovať skupinu"
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31046"
 msgid "Delete group"
-msgstr "Verwijder groep"
+msgstr "Odstrániť skupinu"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31048"
 msgid "Available"
-msgstr "Beschikbaar"
+msgstr "K dispozícii"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31049"
+msgid "Show content"
+msgstr "Zobraziť obsah"
+
+#: /xml/Variables.xml
+msgctxt "#31050"
+msgid "Show plot"
+msgstr "Zobraziť dej"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31051"
-msgid "Enable Splash screen"
-msgstr "Splash screen activeren"
+msgid "Enable Splash Screen (disabled if 'perform on startup' is set)"
+msgstr "Povoliť úvodnú obrazovku (deaktivované, ak je nastavené „vykonať pri spustení“)"
 
 #: /xml/Includes.xml
 msgctxt "#31052"
 msgid "filtered"
-msgstr "gefilterd"
+msgstr "filtrované"
 
 #: /xml/Font.xml
 msgctxt "#31053"
 msgid "Arial based"
-msgstr "Gebaseerd op Arial"
+msgstr "Založené na Arial"
+
+#: /xml/Variables.xml
+msgctxt "#31054"
+msgid "Forward jumping"
+msgstr "Preskočenie vpred"
+
+#: /xml/Variables.xml
+msgctxt "#31055"
+msgid "Backward jumping"
+msgstr "Preskočenie vzad"
 
 #: /xml/MyMusicNav.xml /xml/MyVideoNav.xml
 msgctxt "#31056"
 msgid "Go to playlist"
-msgstr "Ga naar afspeellijst"
+msgstr "Prejsť na zoznam skladieb"
 
 #: /xml/SettingsProfile.xml
 msgctxt "#31057"
 msgid "Show login screen on startup"
-msgstr "Toon inlogscherm bij het opstarten"
+msgstr "Zobraziť prihlasovaciu obrazovku pri spustení"
 
 #: /xml/SettingsProfile.xml
 msgctxt "#31058"
 msgid "Automatic Login on startup"
-msgstr "Automatisch inloggen tijdens het opstarten"
+msgstr "Automatické prihlásenie pri spustení"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31061"
 msgid "Main menu items"
-msgstr "Hoofdmenu-items"
+msgstr "Položky hlavnej ponuky"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Kies weer fanartpakket"
+msgid "Weather fanarts pack"
+msgstr "Fanart balík pre počasie"
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31063"
 msgid "Sections"
-msgstr "Secties"
+msgstr "Sekcie"
+
+#: /xml/Variables.xml
+msgctxt "#31064"
+msgid "unwatched"
+msgstr "nepozreté"
 
 #: /xml/MyVideoPlaylist.xml
 msgctxt "#31065"
 msgid "Video playlist"
-msgstr "Videoafspeellijst"
+msgstr "Zoznam videí"
 
 #: /xml/MyMusicPlaylist.xml
 msgctxt "#31066"
 msgid "Music playlist"
-msgstr "Muziekafspeellijst"
+msgstr "Hudobný zoznam skladieb"
 
 #: /xml/EventLog.xml
 msgctxt "#31067"
 msgid "Event log"
-msgstr "Gebeurtenisregistratie"
+msgstr "Denník udalostí"
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31068"
 msgid "Choose presets"
-msgstr "Kies voorinstellingen"
+msgstr "Vybrať predvoľby"
 
 #: /xml/AddonBrowser.xml
 msgctxt "#31069"
 msgid "Last Updated"
-msgstr "Laatst bijgewerkt"
+msgstr "Naposledy aktualizované"
 
 #: /xml/DialogAddonInfo.xml
 msgctxt "#31071"
 msgid "by"
-msgstr "door"
+msgstr "od"
 
 #: /xml/DialogButtonMenu.xml /xml/LoginScreen.xml
 msgctxt "#31072"
 msgid "Power Options"
-msgstr "Energiebeheer"
-
-msgctxt "#31073"
-msgid "Total length"
-msgstr "Totale lengte"
-
-msgctxt "#31074"
-msgid "Total duration"
-msgstr "Totale duur"
+msgstr "Možnosti napájania"
 
 #: /xml/Home.xml
 msgctxt "#31075"
 msgid "Movie sets"
-msgstr "Filmsets"
+msgstr "Filmové kolekcie"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31079"
 msgid "Cast not available"
-msgstr "Uitzending niet beschikbaar"
+msgstr "Obsadenie nie je k dispozícii"
 
 #: /xml/VideoOSD.xml
 msgctxt "#31080"
 msgid "Ends at"
-msgstr "Eindigt om"
+msgstr "Končí o"
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31082"
 msgid "Lyrics add-on"
-msgstr "Songtekst add-on"
+msgstr "Doplnok textov skladieb"
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31083"
 msgid "Lyrics add-on settings"
-msgstr "Songtekst add-on instellingen"
+msgstr "Nastavenia doplnku textov skladieb"
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31084"
 msgid "Visualisation settings"
-msgstr "Visualisatie-instellingen"
+msgstr "Nastavenia vizualizácií"
 
 #: /xml/DialogPVRGroupManager.xml
 msgctxt "#31089"
 msgid "Available groups"
-msgstr "Beschikbare groepen"
+msgstr "Dostupné skupiny"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31090"
 msgid "Search trailer"
-msgstr "Zoek trailer"
+msgstr "Vyhľadať upútavku"
 
 #: /xml/VideoOSD.xml /xml/Variables.xml
 msgctxt "#31092"
 msgid "Video menu"
-msgstr "Videomenu"
+msgstr "Ponuka videa"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31093"
 msgid "Show weather info"
-msgstr "Toon weerbericht in bovenbalk"
+msgstr "Zobraziť počasie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31095"
 msgid "Use slide animations"
-msgstr "Gebruik schuifanimaties"
+msgstr "Použiť slide animácie"
 
 #: /xml/DialogSubtitles.xml
 msgctxt "#31096"
 msgid "Local subtitle available"
-msgstr "Lokale ondertitel aanwezig"
+msgstr "Miestne titulky sú k dispozícii"
 
 #: /xml/DialogPVRChannelManager.xml
 msgctxt "#31097"
 msgid "Channel options"
-msgstr "Kanaalopties"
+msgstr "Možnosti kanálu"
 
 #: /xml/LoginScreen.xml
 msgctxt "#31098"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Selecteer je Kodi-gebruikersprofiel[CR]om in te loggen en door te gaan"
+msgstr "Zvoľte si profil používateľa Kodi[CR]pre prihlásenie a pokračovanie"
 
 #. viewtype name
 #: /xml/View_52_IconWall.xml
 msgctxt "#31099"
 msgid "IconWall"
-msgstr "iconenmuur"
+msgstr "Stena ikôn"
 
 #. viewtype name
 #: /xml/View_53_Shift.xml
 msgctxt "#31100"
 msgid "Shift"
-msgstr "Scheiden"
+msgstr "Shift"
 
 #. viewtype name
 #: /xml/View_54_InfoWall.xml
 msgctxt "#31101"
-msgid "InfoWall"
-msgstr "Infomuur"
+msgid "InfoWall (posters)"
+msgstr "Info nástenka (plagáty)"
 
 #. viewtype name
 #: /xml/View_500_Wall.xml
 msgctxt "#31102"
-msgid "Wall"
-msgstr "Muur"
+msgid "Wall (posters)"
+msgstr "Nástenka (plagáty)"
 
 #: /xml/SmartPlaylistRule.xml
 msgctxt "#31103"
 msgid "Enter text here..."
-msgstr "Voor hier tekst in..."
+msgstr "Sem zadajte text..."
 
 #: /xml/Home.xml
 msgctxt "#31104"
-msgid ""
-"Your library is currently empty. In order to populate it with your personal "
-"media, enter \"Files\" section, add a media source and configure it. After "
-"the source has been added and indexed you will be able to browse your "
-"library."
-msgstr ""
-"Je bibliotheek is momenteel leeg. Om deze te vullen met je eigen media, ga "
-"naar de \"Bestanden\" sectie, voeg een medialocatie toe en configureer deze. "
-"Nadat de bron is toegevoegd en geïndexeerd, kun je je bibliotheek bekijken."
+msgid "Your video library is currently empty. In order to populate it with your personal media, add a video source and configure it. After the source has been added and indexed you will be able to browse your library."
+msgstr "Vaša knižnica videí je v tejto chvíli prázdna. Aby ste ju zaplnili vašimi osobnými médiami, pridajte zdroj videa a nakonfigurujte ho. Po pridaní zdroja a jeho zindexovaní budete môcť prehľadávať vašu knižnicu."
 
 #: /xml/Home.xml
 msgctxt "#31105"
-msgid ""
-"Add video sources and set the appropriate content type in order to populate "
-"your video libraries."
-msgstr ""
-"Voeg video bronnen toe en stel het juiste contenttype in om je "
-"videobibliotheken te vullen."
+msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
+msgstr "Pridajte zdroje videí a nastavte správny typ obsahu pre naplnenie vašich knižníc videí."
 
 #: /xml/Variables.xml
 msgctxt "#31106"
 msgid "Teletext"
-msgstr "Teletekst"
+msgstr "Teletext"
 
 #. viewtype name
 #: /xml/View_55_WideList.xml
 msgctxt "#31107"
 msgid "WideList"
-msgstr "Brede lijst"
+msgstr "Široký zoznam"
+
+#. viewtype name
+#: /xml/Includes_PVR.xml
+msgctxt "#31108"
+msgid "BigList"
+msgstr "Veľký zoznam"
 
 #: /xml/Home.xml
 msgctxt "#31110"
-msgid "Enter files section"
-msgstr "Ga naar bestandensectie"
+msgid "Your music library is currently empty. In order to populate it with your personal media, add a music source and configure it. After the source has been added and indexed you will be able to browse your library."
+msgstr "Vaša hudbná knižnica je v tejto chvíli prázdna. Aby ste ju zaplnili vašimi osobnými médiami, pridajte zdroj hudby a nakonfigurujte ho. Po pridaní zdroja a jeho zindexovaní budete môcť prehľadávať vašu knižnicu."
 
 #: /xml/Home.xml
 msgctxt "#31111"
-msgid ""
-"View your personal pictures or download one of the many image add-ons from "
-"the official repository."
-msgstr ""
-"Toon je persoonlijke afbeeldingen of download één van de vele afbeeldingsadd-"
-"ons uit de officiële repository."
+msgid "View your personal pictures or download one of the many image add-ons from the official repository."
+msgstr "Zobrazte vaše osobné obrázky alebo si prevezmite jeden z mnohých obrázkových doplnkov z oficiálneho repozitára."
 
 #: /xml/VideoOSD.xml
 msgctxt "#31112"
 msgid "Toggle audio stream"
-msgstr "Verander audiostream"
+msgstr "Prepnúť audio stopu"
 
 #: /xml/Custom_1107_SearchDialog.xml
 msgctxt "#31113"
 msgid "Search local library"
-msgstr "Zoek in lokale bibliotheek"
+msgstr "Hľadať v miestnej knižnici"
 
 #: /xml/Custom_1107_SearchDialog.xml /xml/DialogMusicInfo.xml
 msgctxt "#31114"
 msgid "Search YouTube"
-msgstr "Zoek in YouTube"
+msgstr "Hľadať na YouTube"
 
 #: /xml/Custom_1107_SearchDialog.xml
 msgctxt "#31115"
 msgid "Search TheMovieDB"
-msgstr "Doorzoek TheMovieDB"
+msgstr "Vyhľadať na TheMovieDB"
 
 #: /xml/Home.xml
 msgctxt "#31116"
-msgid "Remove this main menu item"
-msgstr "Verwijder dit hoofdmenu-item"
+msgid "Add games source"
+msgstr "Pridať zdroj hier"
 
 #: /xml/MyVideoNav.xml
 msgctxt "#31117"
 msgid "Edit nodes"
-msgstr "Wijzig nodes"
+msgstr "Upraviť uzly"
 
 #: /xml/Home.xml
 msgctxt "#31118"
 msgid "Enter add-on browser"
-msgstr "Ga naar add-on verkenner"
+msgstr "Vstúpiť do prehliadača doplnkov"
 
 #: /xml/Home.xml
 msgctxt "#31119"
-msgid ""
-"You do not have any add-ons installed yet. Visit our add-on browser to "
-"browse through our collection and improve your Kodi experience."
-msgstr ""
-"Je hebt nog geen add-ons geïnstalleerd. Bezoek onze add-on verkenner om door "
-"onze collectie te browsen en je Kodi-beleving te verbeteren."
+msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
+msgstr "Zatiaľ nemáte nainštalované žiadne doplnky. Navštívte náš prehliadač doplnkov, preskúmajte našu kolekciu a vylepšite si váš zážitok s Kodi."
 
 #: /xml/Home.xml
 msgctxt "#31120"
-msgid ""
-"You did not set up a weather provider yet. In order to view weather "
-"information, choose a weather provider and set up your location."
-msgstr ""
-"Je hebt nog geen weerprovider ingesteld. Om weerberichten te zien, kies een "
-"weerprovider en stel de locatie in."
+msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
+msgstr "Zatiaľ ste nenastavili poskytovateľa dát o počasí. Aby bolo možné zobraziť informácie o počasí, zvoľte si poskytovateľa a vašu polohu."
 
 #: /xml/Home.xml
 msgctxt "#31121"
 msgid "Set weather provider"
-msgstr "Stel weerprovider in"
+msgstr "Nastaviť poskytovateľa počasia"
 
 #: /xml/Home.xml
 msgctxt "#31122"
 msgid "Unwatched TV Shows"
-msgstr "Niet-bekeken TV-series"
+msgstr "Nepozreté TV seriály"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31123"
 msgid "Same director"
-msgstr "Zelfde regisseur"
+msgstr "Rovnaký režisér"
+
+#: /xml/MyPics.xml
+msgctxt "#31124"
+msgid "Show images on map"
+msgstr "Zobraziť obrázky na mape"
 
 #: /xml/Variables.xml
 msgctxt "#31125"
-msgid "Press up for actor info"
-msgstr "Kies 'Omhoog' voor acteursinformatie"
+msgid "is"
+msgstr "je"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31126"
-msgid "Press OK to read plot"
-msgstr "Kies 'OK' om het plot te lezen"
+msgid "Press [B]OK[/B] to show plot"
+msgstr "Stlačte [B]OK[/B] pre zobrazenie zápletky"
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31127"
 msgid "Show icons"
-msgstr "Toon pictogrammen"
+msgstr "Zobraziť ikony"
 
 #: /xml/Variables.xml
 msgctxt "#31128"
 msgid "Contributors"
-msgstr "Bijdragers"
+msgstr "Prispievatelia"
 
 #: /xml/Variables.xml
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
-msgstr ""
-"Algemene instellingen die van toepassing zijn op alle onderdelen van de skin."
+msgstr "Všeobecné nastavenia týkajúce sa všetkých oblastí vzhľadu."
 
 #: /xml/Variables.xml
 msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr ""
-"Hoofdmenu gerelateerde instellingen: Configureer het homescreen naar wens."
+msgstr "Nastavenia týkajúce sa hlavnej ponuky: Nastavte si domovskú obrazovku podľa vašich predstáv."
 
 #: /shortcuts/addons.DATA.xml
 msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Kies skinfanartpakket"
+msgid "Add-ons settings"
+msgstr "Nastavenia doplnkov"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31132"
-msgid "Select Program"
-msgstr "Selecteer programma"
+msgid "Hide 'Categories' widget"
+msgstr "Skryť widget „Kategórie“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31133"
-msgid "Select Resolution"
-msgstr "Kies resolutie"
+msgid "Show banners on episodes/thumbs widgets"
+msgstr ""
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31134"
 msgid "Remaining"
-msgstr "Resterend"
+msgstr "Zostáva"
 
 #: /xml/DialogAddonInfo.xml
 msgctxt "#31136"
 msgid "Click here to see latest changes..."
-msgstr "Klik hier om de laatste veranderingen te zien..."
+msgstr "Kliknite sem, aby ste videli najnovšie zmeny..."
 
 #: /xml/DialogPlayerProcessInfo.xml
 msgctxt "#31137"
 msgid "PVR info"
-msgstr "PVR info"
+msgstr "Informácie o PVR"
 
 #: /xml/DialogPlayerProcessInfo.xml
 msgctxt "#31138"
 msgid "Player process info"
-msgstr "Voortgangsinfo speler"
+msgstr "Informácie o procese prehrávača"
 
 #: /xml/DialogPlayerProcessInfo.xml
 msgctxt "#31139"
 msgid "Video decoder"
-msgstr "Videodecoder"
+msgstr "Dekodér videa"
 
 #: /xml/DialogPlayerProcessInfo.xml
 msgctxt "#31140"
 msgid "Pixel format"
-msgstr "Pixelformaat"
+msgstr "Formát pixelu"
 
 #: /xml/DialogAddonInfo.xml
 msgctxt "#31141"
 msgid "Changes for version"
-msgstr "Veranderingen in versie"
+msgstr "Zmeny pre verziu"
 
 #: /xml/Variables.xml
 msgctxt "#31142"
 msgid "Play speed"
-msgstr "Afspeelsnelheid"
+msgstr "Rýchlosť prehrávania"
 
 #: /xml/Home.xml
 msgctxt "#31143"
-msgid ""
-"You did not set up PVR yet. In order to use PVR, choose a PVR client addon "
-"and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr ""
-"Je hebt nog geen PVR ingesteld. Om gebruik te kunnen maken van PVR, kies een "
-"PVR-cliënt addon en configureer deze. Bezoek https://kodi.wiki/view/PVR om "
-"meer te weten tekomen."
+msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "Nenastavili ste PVR. Aby ste mohli používať PVR, vyberte si doplnok PVR klienta a nakonfigurujte ho. Navštívte http://kodi.wiki/view/PVR pre viac informácií."
 
 #: /xml/Home.xml
 msgctxt "#31144"
 msgid "Enter add-on browser"
-msgstr "Ga naar add-on verkenner"
+msgstr "Vstúpiť do prehliadača doplnkov"
 
 #: /xml/Custom_1107_SearchDialog.xml
 msgctxt "#31145"
 msgid "Search add-ons"
-msgstr "Zoek add-ons"
+msgstr "Prehľadávať doplnky"
 
 #: /xml/Home.xml
 msgctxt "#31148"
 msgid "Categories"
-msgstr "Categoriëen"
+msgstr "Kategórie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Selecteer genre fanartpakket"
+msgid "Video genres fanarts pack"
+msgstr "Balík fanartov pre žánre"
 
 #: /xml/DialogAddonInfo.xml
 msgctxt "#31150"
 msgid "Repository"
-msgstr "Repository"
+msgstr "Repozitár"
 
 #: /xml/Home.xml
 msgctxt "#31151"
 msgid "Unwatched music videos"
-msgstr "Niet-bekeken muziekvideo's"
+msgstr "Nepozreté hudobné videá"
 
 #: /xml/Home.xml
 msgctxt "#31152"
 msgid "Random music videos"
-msgstr "Willekeurige muziekvideo's"
+msgstr "Náhodné hudobné videá"
 
 #: /xml/Includes.xml
 msgctxt "#31153"
-msgid ""
-"You do not have any add-ons of this type installed. Enter the add-on browser "
-"to download add-ons created by our community."
-msgstr ""
-"Je hebt nog geen enkele add-on van dit type geïnstalleerd. Bezoek de add-"
-"onverkenner om add-ons te downloaden gecreëerd door onze community."
+msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
+msgstr "Nemáte nainštalované žiadne doplnky tohoto typu. Vstúpte do prehliadača doplnkov a nainštalujte si doplnky vytvorené našou komunitou."
 
 #: /xml/MyWeather.xml
 msgctxt "#31154"
-msgid "Press OK to switch between locations"
-msgstr "Druk OK om de schakelen tussen locaties"
+msgid "Press [B]OK[/B] to switch between locations"
+msgstr "Stlačte [B]OK[/B] pre prepnutie medzi lokáciami"
 
 #: /xml/VideoOSDBookmarks.xml
 msgctxt "#31155"
 msgid "No bookmarks created yet."
-msgstr "Nog geen bladwijzer gecreëerd "
+msgstr "Neboli vytvorené žiadne záložky."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31156"
 msgid "Choose background pattern"
-msgstr "Kies achtergrondpatroon"
+msgstr "Vyberte vzor pozadia"
 
 #: /xml/SettingsSystemInfo.xml
 msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Aanpassen categoriëen "
+msgid "Library info"
+msgstr "Informácie o knižici"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31158"
 msgid "Touch mode"
-msgstr "Aanraakmodus"
+msgstr "Dotykový mód"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31159"
-msgid "Artwork"
-msgstr "Artwork"
+msgid "Artworks"
+msgstr "Artworky"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31160"
 msgid "Show media flags"
-msgstr "Toon media-informatie"
+msgstr "Zobraziť indikátory medií"
 
 #: /xml/DialogNumeric.xml
 msgctxt "#31161"
 msgid "Numeric pad"
-msgstr "Numeriek pad"
+msgstr "Numerická klávesnica"
 
 #: /xml/Home.xml
 msgctxt "#31162"
-msgid ""
-"Play your personal games or download one of the many game add-ons from the "
-"official repository."
-msgstr ""
-"Speel je persoonlijke spellen, of download één van de vele speladd-ons uit "
-"de officiële repository."
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Zahrajte si hry alebo si prevezmite jeden z mnohých herných doplnkov z oficiálneho repozitára."
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31163"
 msgid "Show Fanart background"
-msgstr "Toon fanart achtergrond"
+msgstr "Zobraziť Fanart pozadie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31200"
 msgid "Main menu"
-msgstr "Hoofdmenu"
+msgstr "Hlavné menu"
 
 #: /xml/Custom_1120_SourcesDialog.xml
 msgctxt "#31201"
 msgid "Add media sources"
-msgstr "Voeg media bronnen toe"
+msgstr "Pridať zdroje médií"
 
 #: /xml/Custom_1120_SourcesDialog.xml
 msgctxt "#31202"
-msgid ""
-"Shortcuts to the \"Files\" sections of each media type. Go there to add "
-"additional sources for your databases."
+msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
 msgstr ""
-"Snelkoppelingen naar de secties \"Bestanden\" van elk mediatype. Ga daarheen "
-"om extra bronnen voor uw databases toe te voegen."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31203"
 msgid "Home menu"
-msgstr "Hoofdmenu"
+msgstr "Domovské menu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31204"
 msgid "Hide main menu when selecting widgets"
-msgstr "Verberg hoofdmenu indien widgets zijn geselecteerd"
+msgstr "Skryť hlavné menu pri výbere widgetu"
 
 #: /xml/View_503_Gallery.xml
 msgctxt "#31205"
 msgid "Gallery"
-msgstr "Gallerij"
+msgstr "Galéria"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31206"
 msgid "Reset main menu settings"
-msgstr "Hoofdmenu instellingen resetten"
+msgstr "Obnoviť nastavenia hlavného menu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31207"
-msgid ""
-"Are you sure you want to reset display of all menu items back to default ?"
-msgstr "Hoofdmenu instellingen terugzetten? Weet u dit zeker?"
+msgid "Are you sure you want to reset display of all menu items back to default ?"
+msgstr "Naozaj chcete obnoviť zobrazenie všetkých položiek hlavného menu na predvolené hodnoty?"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31208"
 msgid "Changes of version"
-msgstr "Versiewijzigingen"
+msgstr "Zmeny vo verzii"
 
 #: /xml/Variables.xml
 msgctxt "#31209"
 msgid "Update video library"
-msgstr "Videobibliotheek bijwerken"
+msgstr "Aktualizovať knižnicu videí"
 
 #: /xml/Variables.xml
 msgctxt "#31210"
 msgid "Update music library"
-msgstr "Muziekbibliotheek bijwerken"
+msgstr "Aktualizovať hudobnú knižnicu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31211"
 msgid "Show smaller icons for 'Categories' widgets"
-msgstr "Kleinere icons tonen voor categoriewidgets"
+msgstr "Zobraziť menšie ikony pre widget „Kategórie“"
 
 #: /xml/Home.xml
 msgctxt "#31212"
 msgid "Next episodes to watch"
-msgstr "Volgende aflevering bekijken"
+msgstr "Ďalšie epizódy na pozretie"
 
 #: /xml/Variables.xml
 msgctxt "#31213"
 msgid "Stop scanning video library"
-msgstr "Stop scanning videobibliotheek"
+msgstr "Zastaviť skenovanie knižnice videí"
 
 #: /xml/Variables.xml
 msgctxt "#31214"
 msgid "Stop scanning music library"
-msgstr "Stop scanning muziekbibliotheek"
+msgstr "Zastavit skenovanie hudobnej knižnice"
 
 #: /xml/View_504_ThumbsWall.xml
 msgctxt "#31215"
 msgid "Wall (thumbnails)"
-msgstr "Muur (thumbnails) "
+msgstr ""
 
 #: /xml/View_505_ThumbsInfoWall.xml
 msgctxt "#31216"
 msgid "InfoWall (thumbnails)"
-msgstr "Info muur (thumbnails)"
+msgstr ""
 
 #: /xml/View_506_Mosaic.xml
 msgctxt "#31217"
 msgid "Mosaic (horizontal)"
-msgstr "Mozaik (horizontaal)"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31218"
 msgid "Hide watched items"
-msgstr "Verberg bekeken items"
+msgstr "Skryť pozreté položky"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31219"
 msgid "Colors"
-msgstr "Kleuren"
+msgstr "Farby"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31220"
 msgid "Main color"
-msgstr "Hoofdkleur"
+msgstr "Hlavná farba"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31221"
 msgid "Border color"
-msgstr "Randkleur"
+msgstr "Farba okraja"
 
 #: /xml/script-skin_helper_service-ColorPicker.xml
 msgctxt "#31222"
 msgid "Color selection"
-msgstr "Kleurselectie"
+msgstr "Výber farby"
 
 #: /xml/script-skin_helper_service-ColorPicker.xml
 msgctxt "#31223"
 msgid "Color"
-msgstr "Kleur"
+msgstr "Farba"
 
 #: /xml/DialogContextMenu.xml
 msgctxt "#31224"
 msgid "Context menu"
-msgstr "Contextmenu"
+msgstr "Kontextová ponuka"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31225"
 msgid "Next aired"
-msgstr "Volgende aflevering"
+msgstr ""
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31226"
 msgid "Last aired"
-msgstr "Laatste aflevering"
+msgstr ""
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31227"
 msgid "votes"
-msgstr "stemmen"
+msgstr "hlasov"
 
 #: /xml/Variables.xml
 msgctxt "#31228"
 msgid "hardware decoding"
-msgstr "hardware-decoding"
+msgstr "hardvérové dekódovanie"
 
 #: /xml/Variables.xml
 msgctxt "#31229"
 msgid "software decoding"
-msgstr "software-decoding"
+msgstr "softvérové dekódovanie"
 
 #: /xml/Variables.xml
 msgctxt "#31230"
 msgid "Plot masked to avoid spoilers."
-msgstr "Samenvatting verbergen om het spannend te houden"
+msgstr "Dej je skrytý kvôli spoilerom."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31231"
 msgid "Hide episodes plots to avoid spoilers"
-msgstr "Samenvatting afleveringen verbergen om het spannend te houden"
+msgstr "Skryť dej epizód kvôli spoilerom"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31233"
 msgid "Background color"
-msgstr "Achtergrondkleur"
+msgstr "Farba pozadia"
 
 #: /xml/Variables.xml
 msgctxt "#31234"
 msgid "Next chapter"
-msgstr "Volgende hoofdstuk"
+msgstr "Ďalšia kapitola"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31235"
 msgid "Background pattern color"
-msgstr "Achtergrondkleur"
+msgstr "Farba vzoru pozadia"
 
 #: /xml/Variables.xml
 msgctxt "#31236"
 msgid "Previous chapter"
-msgstr "Vorig hoofdstuk"
+msgstr "Predchádzajúca kapitola"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31237"
 msgid "Opacity for fanart as background"
-msgstr "Doorzichtigheid voor achtergrond fanart"
+msgstr "Priesvitnosť fanartu na pozadí"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31238"
@@ -1051,97 +1024,97 @@ msgstr "100%"
 #: /xml/SkinSettings.xml
 msgctxt "#31259"
 msgid "Show ExtraFanarts"
-msgstr "Extra fanart laten zien"
+msgstr "Zobraziť extra fanarty"
 
 #: /xml/Variables.xml
 msgctxt "#31260"
 msgid "Pause"
-msgstr "Pauze"
+msgstr "Pauza"
 
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31261"
 msgid "Press [B]OK[/B] to read description"
-msgstr "Klik op OK om beschrijving te lezen"
+msgstr "Stlačte [B]OK[/B] pre prečítanie popisu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31262"
 msgid "Weather icons pack"
-msgstr "Iconpakket voor het weer"
+msgstr "Balík ikon počasia"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31263"
 msgid "Kiosk Mode"
-msgstr "Kioskmode"
+msgstr "Kiosk mód"
 
 #: /xml/Variables.xml
 msgctxt "#31264"
 msgid "None"
-msgstr "Geen"
+msgstr "Žiadny"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31265"
 msgid "Splash screen (photo, video or music)"
-msgstr "Splash venster (foto, video of muziek)"
+msgstr "Úvodná obrazovka (fotka, video alebo hudba)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31266"
 msgid "Extras"
-msgstr "Extras"
+msgstr "Extra"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31267"
 msgid "Number of items to display on widgets"
-msgstr "Hoeveel items laten zien bij widgets"
+msgstr "Počet položiek zobrazených vo widgetoch"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31268"
 msgid "Show media clearlogos"
-msgstr "Laat media-clearlogos zien"
+msgstr "Zobraziť Clearlogo médií"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31269"
 msgid "Backup / Restore"
-msgstr "Backup/Herstel"
+msgstr "Záloha / Obnovenie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31270"
 msgid "Backup skin settings"
-msgstr "Backup skin-instellingen"
+msgstr "Zálohovať nastavenia vzhľadu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31271"
 msgid "Restore skin settings"
-msgstr "Herstel skin-instellingen"
+msgstr "Obnoviť nastavenia vzhľadu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31272"
 msgid "Set location of backup file"
-msgstr "Selecteer lokatie voor backupbestand"
+msgstr "Nastaviť umiestnenie záložného súboru"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31273"
 msgid "Necessary add-ons"
-msgstr "Benodigde addons"
+msgstr "Nevyhnutné doplnky"
 
 #: /xml/script-nextup-notification-PostPlayInfo.xml
 msgctxt "#31274"
 msgid "Hide Spoilers"
-msgstr "Verberg spoilers"
+msgstr "Skryť spoilery"
 
 #: /xml/script-nextup-notification-NextUpInfo.xml
 msgctxt "#31275"
 msgid "Next episode"
-msgstr "Volgende aflevering"
+msgstr "Ďalšia epizóda"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31276"
 msgid "Disable zoom effect"
-msgstr "Zet zoomeffect uit"
+msgstr "Zakázať zoom efekt"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31278"
 msgid "Music OSD"
-msgstr "Muziek OSD"
+msgstr "Music OSD"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31279"
@@ -1151,940 +1124,969 @@ msgstr "Video OSD"
 #: /xml/SkinSettings.xml
 msgctxt "#31280"
 msgid "Show music visualisation screen when playing song"
-msgstr "Muziekvisualisatie laten zien tijdens afspelen"
+msgstr "Zobraziť obrazovku vizualizácie hudby pri prehrávaní skladby"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31281"
 msgid "Enable ExtraFanarts for background"
-msgstr "Extra fanart laten zien voor achtergrond"
+msgstr "Povoliť extra fanarty pre pozadie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31282"
 msgid "Animate background"
-msgstr "Achtergrondanimatie"
+msgstr "Animovať pozadie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31283"
 msgid "Show visualisation effects"
-msgstr "Muziek visualisatie-effects laten zien"
+msgstr "Zobraziť efekty vizualizácie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31284"
 msgid "Show music visualisation effects on background"
-msgstr "Muziek visualisatie-effects laten zien op achtergrond"
+msgstr "Zobraziť efekty vizualizácie hudby na pozadí"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31285"
 msgid "Show video on background"
-msgstr "Video op achtergrond laten zien"
+msgstr "Zobraziť video na pozadí"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31286"
 msgid "Disable Kodi screensaver"
-msgstr "Kodi screensaver uitzetten"
+msgstr "Zakázať šetrič obrazovky Kodi"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31287"
 msgid "Show album CDArt"
-msgstr "Album CDArt laten zien"
+msgstr "Zobraziť CDArt albumu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31288"
 msgid "Show Clearlogo on video info"
-msgstr "Clearlogo laten zien bij video info"
+msgstr "Zobraziť Clearlogo v informáciách o videu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31289"
 msgid "Show artist Clearlogo"
-msgstr "Clearlogo laten zien bij artiest"
+msgstr "Zobraziť Clearlogo umelca"
 
 #: /xml/MusicVisualisation.xml
 msgctxt "#31290"
 msgid "Next tracks"
-msgstr "Volgende nummers"
+msgstr "Ďalšie stopy"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31291"
 msgid "Show artist banner"
-msgstr "Banner van artiest laten zien"
+msgstr "Zobraziť banner umelca"
 
 #: /xml/script-cu-lrclyrics-main.xml
 msgctxt "#31292"
 msgid "Lyrics source"
-msgstr "Lyricsbron"
+msgstr "Zdroj textu skladby"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31293"
 msgid "Media flags color"
-msgstr "Kleur van mediavlaggen"
+msgstr "Farba indikátorov médií"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31294"
 msgid "Show ClearArt on video info"
-msgstr "ClearArt bij video-info"
+msgstr "Zobraziť ClearArt v informáciách o videu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31295"
 msgid "Show CDArt on video OSD"
-msgstr "CDArt bij video OSD"
+msgstr "Zobraziť CDArt na Video OSD"
 
 #: /xml/VideoOSD.xml
 msgctxt "#31296"
 msgid "Actors list"
-msgstr "Acteurslijst"
+msgstr "Zoznam hercov"
 
 #: /xml/Custom_1123_SettingsMoviesWidgets.xml
 msgctxt "#31297"
 msgid "Hide widget"
-msgstr "Verberg widget"
+msgstr "Skryť widget"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31298"
 msgid "Manage items from 'Movies' widget"
-msgstr "Filmwidgets bewerken"
+msgstr "Spravovať položky widgetu „Filmy“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31299"
 msgid "Manage items from 'TV shows' widget"
-msgstr "TV-seriewidgets bewerken"
+msgstr "Spravovať položky widgetu „Seriály“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31300"
 msgid "Manage items from 'Music' widget"
-msgstr "Muziekwidgets bewerken"
+msgstr "Spravovať položky widgetu „Hudba“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31301"
 msgid "Manage items from 'Music videos' widget"
-msgstr "Muziekvideowidgets bewerken"
+msgstr "Spravovať položky widgetu „Videoklipy“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31302"
 msgid "Manage items from 'TV' widget"
-msgstr "TV-widgets bewerken"
+msgstr "Spravovať položky widgetu „Televízia“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31303"
 msgid "Manage items from 'Radio' widget"
-msgstr "Radio widgets bewerken"
+msgstr "Spravovať položky widgetu „Rádio“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31304"
 msgid "Manage items from 'Add-ons' widget"
-msgstr "Addons widgets bewerken"
+msgstr "Spravovať položky widgetu „Doplnky“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31305"
 msgid "Manage items from 'Videos' widget"
-msgstr "Video's widgets bewerken"
+msgstr "Spravovať položky widgetu „Videá“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31306"
 msgid "Customize main menu"
-msgstr "Hoofmenu bewerken"
+msgstr "Prispôsobiť hlavné menu..."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31307"
 msgid "Next airing episodes"
-msgstr "Volgende afleveringen"
+msgstr "Ďalšie odvysielané epizódy"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31308"
 msgid "Studios icons pack"
-msgstr "Studios iconspakket"
+msgstr "Balík ikon filmových štúdií"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31309"
 msgid "Records labels icons pack"
-msgstr "Platen iconspakket"
+msgstr "Balík ikon hudobných vydavateľstiev"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31310"
 msgid "Video genres icons pack"
-msgstr "Videogenres iconspakket"
+msgstr "Balík ikon pre video žánre"
 
 #: /xml/Variables.xml
 msgctxt "#31311"
 msgid "Settings applying to library."
-msgstr "Instellingen voor bibliotheek"
+msgstr "Nastavenia týkajúce sa knižnice."
 
 #: /xml/Variables.xml
 msgctxt "#31312"
 msgid "Display of Artworks related settings."
-msgstr "Instellingen voor artwork"
+msgstr "Nastavenia súvisiace s Artwork (umeleckou grafikou)."
 
 #: /xml/Variables.xml
 msgctxt "#31313"
 msgid "Visualization of the music screen related settings."
-msgstr "Instellingen voor muziekgenres"
+msgstr "Nastavenia súvisiace s vizualizáciou obrazovky hudby."
 
 #: /xml/Variables.xml
 msgctxt "#31314"
 msgid "Visualization of the video screen related settings."
-msgstr "Instellingen voor videobeeld"
+msgstr "Nastavenia súvisiace s vizualizáciou obrazovky videa."
 
 #: /xml/Variables.xml
 msgctxt "#31315"
 msgid "Skin colors related settings."
-msgstr "Instellingen voor skinkleuren"
+msgstr "Nastavenia súvisiace s farbami vzhľadu."
 
 #: /xml/Variables.xml
 msgctxt "#31316"
 msgid "Necessary addons for good performance."
-msgstr "Benodigde addons voor beste prestatie"
+msgstr "Nevyhnutné doplnky pre dobrý výkon."
 
 #: /xml/Variables.xml
 msgctxt "#31317"
 msgid "Backup and restore skin settings."
-msgstr "backup en herstel skin instellingen"
+msgstr "Zálohovanie a obnovenie nastavenia vzhľadu."
 
 #: /xml/Variables.xml
 msgctxt "#31318"
 msgid "Additional settings."
-msgstr "Extra instellingen"
+msgstr "Ďalšie nastavenia."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31319"
 msgid "Show, add and remove animated posters"
-msgstr "Geanimeerde posters weergeven, toevoegen en verwijderen"
+msgstr "Zobraziť, pridať a odstrániť animované plagáty"
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#31320"
 msgid "Next aired episode"
-msgstr "Volgende aflevering"
+msgstr "Ďalšia odvysielaná epizóda"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31321"
 msgid "Thumbs with banners"
-msgstr "Thumbs met banners"
+msgstr ""
 
 #: /xml/Home.xml
 msgctxt "#31322"
 msgid "Hardware info"
-msgstr "Hardware-informatie"
+msgstr "Informácie o hardvéri"
 
 #: /xml/Home.xml
 msgctxt "#31323"
 msgid "Hard disk usage:"
-msgstr "Schijfgebruik"
+msgstr "Využitie pevného disku:"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31324"
 msgid "Opacity for top and bottom bars"
-msgstr "Doorzichtigheid boven en onder balken"
+msgstr "Priesvitnosť pre hornú a spodnú lištu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31325"
 msgid "Power menu style"
-msgstr "Stijl van Powermenu"
+msgstr "Štýl pre Power menu"
 
 #: /xml/Custom_1124_SettingsTVShowsWidgets.xml
 msgctxt "#31326"
 msgid "Hide thumbs episodes to avoid spoilers"
-msgstr "Thumbs verbergen voor komende afleveringen"
+msgstr "Skryť náhľady epizód kvôli spoilerom"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31327"
 msgid "Preconfigured widgets"
-msgstr "Vooringestelde widgets"
+msgstr "Prednastavené widgety"
 
 #: /xml/Variables.xml
 msgctxt "#31328"
 msgid "Go up item"
-msgstr "Item omhoog"
+msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#31329"
 msgid "Go down item"
-msgstr "Item omlaag"
+msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#31330"
 msgid "Add item"
-msgstr "Item toevoegen"
+msgstr "Pridať položku"
 
 #: /xml/Variables.xml
 msgctxt "#31331"
 msgid "Delete item"
-msgstr "Verwijder item"
+msgstr "Odstrániť položku"
 
 #: /xml/Variables.xml
 msgctxt "#31332"
 msgid "Disable item"
-msgstr "Item uitzetten"
+msgstr "Zakázať položku"
 
 #: /xml/Variables.xml
 msgctxt "#31333"
 msgid "Enable item"
-msgstr "Item aanzetten"
+msgstr "Povoliť položku"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31334"
 msgid "Not defined"
-msgstr "Niet omschreven"
+msgstr "Nedefinované"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31335"
 msgid "Skin Helper Service Widgets"
-msgstr "Skinhelper servicewidgets"
+msgstr "Skin Helper Service Widgets"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31336"
 msgid "Set type of widgets"
-msgstr "Widgettype aangeven"
+msgstr "Nastaviť typ widgetov"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31337"
 msgid "Widget appearence"
-msgstr "Widgetlook aangeven"
+msgstr "Vzhľad widgetu"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31338"
 msgid "Posters"
-msgstr "Posters"
+msgstr "Plagáty"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31339"
 msgid "Thumbs without banners"
-msgstr "Thumbs zonder banners"
+msgstr "Náhľady bez banerov"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31340"
 msgid "Squares"
-msgstr "Vierkanten"
+msgstr "Štvorce"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31341"
 msgid "Enable background of 'Power options' shortcut"
-msgstr "Achtergrond poweropties snelkoppeling aanzetten"
+msgstr "Povoliť pozadie skratky „Možnosti napájania“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31342"
 msgid "Enable background of 'Settings' shortcut"
-msgstr "Achtergrondinstellingen opties snelkoppeling aanzetten"
+msgstr "Povoliť pozadie skratky „Nastavenia“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31343"
 msgid "Enable background of 'Search...' shortcut"
-msgstr "Achtergrond Zoek-optie snelkoppeling aanzetten"
+msgstr "Povoliť pozadie skratky „Vyhľadávanie...“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31344"
 msgid "Background"
-msgstr "Achtergrond"
+msgstr "Pozadie"
 
 #: /shortcuts/musicvideos.DATA.xml
 msgctxt "#31345"
 msgid "Music videos - Library"
-msgstr "Muziekvideo's - Bibliotheek"
+msgstr "Videoklipy - Knižnica"
 
 #: /xml/View_507_Mosaic_Vertical.xml
 msgctxt "#31346"
 msgid "Mosaic (vertical)"
-msgstr "Mozaik (verticaal)"
+msgstr ""
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31347"
 msgid "View"
-msgstr "Lijstweergave"
+msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#31348"
 msgid "None"
-msgstr "Geen"
+msgstr "Žiadny"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31349"
 msgid "Enable forced views"
-msgstr "Geforceerde lijstweergave aanzetten"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31350"
 msgid "Forced view for movies"
-msgstr "Geforceerde lijstweergave voor films"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31351"
 msgid "Forced view for movie sets"
-msgstr "Geforceerde lijstweergave voor film sets"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31352"
 msgid "Forced view for movies inside set"
-msgstr "Geforceerde lijstweergave voor film sets"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31353"
 msgid "Forced view for tv shows"
-msgstr "Geforceerde lijstweergave voor TV series"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31354"
 msgid "Forced view for seasons"
-msgstr "Geforceerde lijstweergave voor seizoenen"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31355"
 msgid "Forced view for episodes"
-msgstr "Geforceerde lijstweergave voor afleveringen"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31356"
 msgid "Forced view for artists"
-msgstr "Geforceerde lijstweergave voor artiesten"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31357"
 msgid "Forced view for albums"
-msgstr "Geforceerde lijstweergave voor albums"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31358"
 msgid "Forced view for music videos"
-msgstr "Geforceerde lijstweergave voor muziek video's"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31359"
 msgid "Show fullscreen video info for movies and TV shows"
-msgstr "Volledig scherm voor film en TV serie informatie"
+msgstr "Zobraziť informácie na celú obrazovku pre filmy a seriály"
 
 #: /xml/Variables.xml
 msgctxt "#31360"
 msgid "Power menu-related settings: Configure it to your likings."
-msgstr "Wijzig het Powermenu naar jouw wensen"
+msgstr ""
 
 #: /xml/Home.xml
 msgctxt "#31361"
 msgid "All channels"
-msgstr "Alle kanalen"
+msgstr "Všetky kanály"
 
 #: /xml/Home.xml
 msgctxt "#31362"
 msgid "All radios"
-msgstr "Alle radiostations"
+msgstr "Všetky rádiá"
 
 #: /xml/Custom_1105_MusicOSDSettings.xml
 msgctxt "#31363"
 msgid "Fixed lyrics colors"
-msgstr "Lyricskleuren vastzetten"
+msgstr "Fixné farby textov"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31364"
 msgid "Greyed out watched items"
-msgstr "Bekeken items weggummen"
+msgstr "Stmaviť pozreté položky"
 
 #: /xml/Includes.xml
 msgctxt "#31365"
 msgid "Jump to letter"
-msgstr "Ga naar letter"
+msgstr "Skočiť na písmeno"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31366"
 msgid "Lists (up to 8 items)"
-msgstr "Lijsten (8 items maximaal)"
+msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31367"
 msgid "Sort method of widget"
-msgstr "Widgetsorteermethode"
+msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31368"
 msgid "Sort direction of widget"
-msgstr "Widgetvolgorde"
+msgstr ""
 
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31369"
 msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
-msgstr "Klik op OK om beschrijving te lezen of ga stap terug met linkerpijl"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31370"
 msgid "Show CDArt on movies widgets"
-msgstr "Laat CDArt zien bij film widgets"
+msgstr "Zobraziť CDArt vo widgetoch filmov"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31371"
 msgid "Show movies CDArt"
-msgstr "Laat CDArt zien bij films"
+msgstr "Zobraziť CDArt pre filmy"
 
 #: /xml/Home.xml
 msgctxt "#31372"
 msgid "Games sources"
-msgstr "Spelbronnen"
+msgstr "Zdroje hier"
 
 #: /xml/Home.xml
 msgctxt "#31373"
-msgid ""
-"Your games library is currently empty. In order to populate it with your "
-"personal games, add a games source. After the source has been added you will "
-"be able to browse your games list. You will also need to install necessary "
-"add-ons for games."
-msgstr "Spelbibliotheek is leeg"
+msgid "Your games library is currently empty. In order to populate it with your personal games, add a games source. After the source has been added you will be able to browse your games list. You will also need to install necessary add-ons for games."
+msgstr "Vaša herná knižnica je v tejto chvíli prázdna. Aby ste ju zaplnili vašimi hrami, pridajte zdroj hier. Po pridaní zdroja budete môcť prehľadávať váš zoznam hier. Budete tiež musieť nainštalovať potrebné doplnky pre hry."
 
 #: /xml/Home.xml
 msgctxt "#31374"
-msgid ""
-"Your pictures library is currently empty. In order to populate it with your "
-"personal pictures, add a pictures source. After the source has been added "
-"you will be able to browse your pictures list."
-msgstr ""
-"Uw fotobibliotheek is momenteel leeg. Om het te vullen met uw persoonlijke "
-"foto's, voegt u een fotobron toe. Nadat de bron is toegevoegd, kunt u door "
-"uw lijst met afbeeldingen bladeren."
+msgid "Your pictures library is currently empty. In order to populate it with your personal pictures, add a pictures source. After the source has been added you will be able to browse your pictures list."
+msgstr "Vaša knižnica obrázkov je v tejto chvíli prázdna. Aby ste ju zaplnili vašimi obrázkami, pridajte zdroj obrázkov. Po pridaní zdroja budete môcť prehľadávať váš zoznam obrázkov."
 
 #: /xml/Home.xml
 msgctxt "#31375"
 msgid "Pictures sources"
-msgstr "Bron voor afbeeldingen"
+msgstr "Zdroje obrázkov"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31376"
 msgid "Show colored outline"
-msgstr "Gekleurde buitenlijn laten zien"
+msgstr "Zobraziť farebný okraj"
 
 #: /xml/MyMusicPlaylistEditor.xml
 msgctxt "#31377"
 msgid "Music files"
-msgstr "Muziekbestanden"
+msgstr "Hudobné súbory"
 
 #: /xml/MyMusicPlaylistEditor.xml
 msgctxt "#31378"
 msgid "Current playlist"
-msgstr "Huidige speellijst"
+msgstr "Aktuálny playlist"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31379"
-msgid "Show animated lyrics"
-msgstr "Laat bewegende lyrics zien"
+msgid "animate lyrics"
+msgstr "Animovať texty"
 
 #: /xml/Custom_1132_MoviesSetsInfo.xml
 msgctxt "#31380"
 msgid "Press [B]Up[/B] for extended info"
-msgstr "Klik op Omhoog voor meer info"
+msgstr "Stlačte [B]Hore[/B] pre rozšírené informácie"
 
 #: /xml/addon.xml
 msgctxt "#31381"
 msgid "Movies set information"
-msgstr "Informatie over filmsets"
+msgstr "Informácie o kolekcii filmov"
 
 #: /xml/addon.xml
 msgctxt "#31382"
 msgid "Extended information"
-msgstr "uitgebreide informatie"
+msgstr "Rozšírené informácie"
+
+#: /xml/Variables.xml
+msgctxt "#31383"
+msgid "Correct password ! This menu is now available for"
+msgstr "Správne heslo! Toto menu je teraz dostupné pre"
+
+#: /xml/Variables.xml
+msgctxt "#31384"
+msgid "minute(s)"
+msgstr "minút/y"
+
+#: /xml/Variables.xml
+msgctxt "#31385"
+msgid "Incorrect password ! Please Retry."
+msgstr "Nesprávne heslo! Skúste to znova."
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31386"
+msgid "Password protection"
+msgstr "Ochrana heslom"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31387"
+msgid "Parental control"
+msgstr "Rodičovská kontrola"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31388"
+msgid "Set password protection for menu items"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31389"
+msgid "Password has been successfully set !"
+msgstr "Heslo bolo úspešne nastavené!"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31390"
+msgid "Accessibility duration for menu items"
+msgstr ""
+
+#: /xml/Custom_1133_ParentalControl.xml
+msgctxt "#31391"
+msgid "Password-protected content.[CR]Press [B]Enter[/B] and please enter password."
+msgstr "Obsah chránený heslom.[CR]Stlačte [B]Enter[/B] a zadajte heslo."
 
 #: /xml/DialogKeyboard.xml
 msgctxt "#31392"
 msgid "Please enter password"
-msgstr "Vul wachtwoord in"
+msgstr "Zadajte heslo"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31395"
 msgid "Enable Next Up popup for Live TV"
-msgstr "Volgende popup activeren voor Live TV"
+msgstr "Povoliť Next Up okno pre živé vysielanie"
 
 #: /xml/Custom_1134_PVRNextUp.xml
 msgctxt "#31396"
 msgid "Next up"
-msgstr "Volgende"
+msgstr "Nasleduje"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31397"
 msgid "Show 'Settings' shortcut widget"
-msgstr "Instellingen laten zien voor snelkoppelingen widgets"
+msgstr "Zobrazit widget „Nastavenia“"
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31398"
-msgid ""
-"It's necessary to reboot Kodi and '[B]Reset main menu and power menu "
-"settings[/B]' in skin settings after installation of this version."
-msgstr ""
-"Kodi dient opnieuw te worden opgestart. Herstel hoofdmenu en powermenu-"
-"instellingen binnen de skin-instellingen"
+msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
+msgstr "Po inštalácii tejto verzie je potrebné reštartovať Kodi a '[B]obnoviť nastavenia hlavného menu a power menu[/B]' v nastaveniach vzhľadu."
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31399"
 msgid "Warning!"
-msgstr "Waarschuwing!"
+msgstr "Upozornenie!"
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31400"
 msgid "Do not display anymore"
-msgstr "Niet meer laten zien"
+msgstr "Už nezobrazovať"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31401"
 msgid "Rating text color"
-msgstr "Tekstkleur"
+msgstr "Farba textu hodnotenia"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31402"
 msgid "Show visualisation effects behind background"
-msgstr "Visualisatie op achtergrond laten zien"
+msgstr "Zobraziť efekty vizualizácie za pozadím"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31403"
 msgid "Posters panel"
-msgstr "Posterpaneel"
+msgstr "Panel plagátov"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31404"
 msgid "Widgets to personalize"
-msgstr "Widgets die bijgewerkt moeten worden"
+msgstr "Widgety na prispôsobenie"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31405"
 msgid "Vertical panel (1 item)"
-msgstr "Verticaal paneel (1 item)"
+msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31406"
 msgid "Thumbs without banners panel"
-msgstr "Thumbs zonder banners paneel"
+msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31407"
 msgid "Thumbs with banners panel"
-msgstr "Thumbs met bannerspaneel"
+msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31408"
 msgid "Squares panel"
-msgstr "Vierkant paneel"
+msgstr "Panel štvorcov"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31409"
 msgid "Banners panel"
-msgstr "Bannerpaneel"
+msgstr "Panel bannerov"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31410"
 msgid "Miniatures"
-msgstr "Miniaturen"
+msgstr "Miniatúry"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31411"
 msgid "Miniatures panel"
-msgstr "Miniaturenpaneel"
+msgstr "Panel miniatúr"
 
 #. viewtype name
 #: /xml/View_508_DoubleLists.xml
 msgctxt "#31412"
 msgid "Double lists"
-msgstr "Dubbele lijsten"
+msgstr ""
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31413"
 msgid "Show Skin Helper Service widgets settings"
-msgstr "Instellingen Skin Helper Service widgets laten zien "
+msgstr "Zobraziť nastavenia Skin Helper Service widgets"
 
 #. viewtype name
 #: /xml/View_509_TripleLists.xml
 msgctxt "#31414"
 msgid "Triple lists"
-msgstr "Drie-dubbele lijsten"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31415"
 msgid "Show clearlogos at the top of menu"
-msgstr "Clearlogo boven aan het menu"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31416"
 msgid "Minimize main menu"
-msgstr "Minimaliseer hoofdmenu"
+msgstr "Minimalizovať hlavné menu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31417"
 msgid "Show item label on top"
-msgstr "Item label bovenaan"
+msgstr "Zobraziť názov položky navrchu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31418"
 msgid "Required add-ons"
-msgstr "Benodigde addons"
+msgstr "Povinné doplnky"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31419"
 msgid "Optional add-ons"
-msgstr "Optionele addons"
+msgstr "Voliteľné doplnky"
 
 #: /xml/Variables.xml
 msgctxt "#31420"
 msgid "Directed by"
-msgstr "Directed door"
+msgstr "Režia"
 
 #: /xml/Variables.xml
 msgctxt "#31421"
 msgid "Similar to"
-msgstr "Vergelijkbaar met"
+msgstr "Podobné"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31422"
 msgid "Play trailers in full screen"
-msgstr "Trailers in volledig scherm laten zien"
+msgstr "Prehrávať upútavky na celej obrazovke"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31423"
 msgid "Enable gradient colors"
-msgstr "Gradient-kleuren activeren"
+msgstr "Povoliť gradient"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31424"
 msgid "Secondary color"
-msgstr "Tweede kleur"
+msgstr "Sekundárna farba"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31425"
-msgid "Use small OSD"
-msgstr "Kleinere OSD gebruiken"
+msgid "Use small Video OSD"
+msgstr "Použiť malé Video OSD"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31426"
 msgid "Personalize 'Categories' widget"
-msgstr "Personaliseer 'Categorie'-widget"
+msgstr "Prispôsobiť widget „Kategórie“"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31427"
 msgid "Classic list"
-msgstr "Klassieke lijst"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31428"
 msgid "Icons list"
-msgstr "Iconslijst"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31429"
 msgid "Configure personal API keys"
-msgstr "Persoonlijke API-sleutels bewerken"
+msgstr "Konfigurovať osobné API kľúče"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31430"
 msgid "Hide video info when video is paused"
-msgstr "Verberg video wanneer deze op pauze staat"
+msgstr "Skryť informácie o videu pri pauze"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31431"
 msgid "Show scrolling text"
-msgstr "Laat de tekst rollen"
+msgstr "Zobraziť skrolujúci text"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31432"
 msgid "Scrapers ratings"
-msgstr "Scraperbeoordelingen"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31433"
 msgid "My ratings"
-msgstr "Mijn waarderingen"
+msgstr "Moje hodnotenia"
 
 #: /xml/Variables.xml
 msgctxt "#31434"
 msgid "win"
-msgstr "win"
+msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#31435"
 msgid "wins"
-msgstr "wint"
+msgstr ""
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31436"
 msgid "Oscars"
-msgstr "Oscars"
+msgstr "Oskary"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31437"
 msgid "Hide fanart opacity in fullscreen mode"
-msgstr "Verberg fanart als deze op volledigscherm-instelling staat"
+msgstr "Skryť priesvitnosť fanartu v režime celej obrazovky"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31438"
 msgid "Show a border for media"
-msgstr "Een rand laten zien voor media"
+msgstr "Zobraziť okraj pre médiá"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31439"
 msgid "Get all Artworks"
-msgstr "Alle artwork verkrijgen"
+msgstr "Získať všetky Artworky"
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31440"
 msgid "Standard colors for genres"
-msgstr "Standaardkleuren voor genres"
+msgstr "Štandardné farby pre žánre"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31441"
 msgid "Pause video during access to info"
-msgstr "Pauzeer video tijdens info bekijken"
+msgstr "Pri zobrazení informací pozastaviť video"
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#31442"
 msgid "Last aired episode"
-msgstr "Laatste aflevering"
+msgstr "Posledná odvysielaná epizóda"
 
 #: /xml/script-NextAired-TVGuide.xml
 msgctxt "#31443"
 msgid "Airs"
-msgstr "Uitgezonden"
+msgstr "Vysiela"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31444"
 msgid "Configure media flags"
-msgstr "Configureer mediavlaggen"
+msgstr "Konfigurovať indikátory medií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31445"
 msgid "Show media source"
-msgstr "Laat mediabron zien"
+msgstr "Zobraziť zdroj médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31446"
 msgid "Show media resolution"
-msgstr "Laat mediaresolutie zien"
+msgstr "Zobraziť rozlíšenie médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31447"
 msgid "Show media video codec"
-msgstr "Laat media videocodecs zien"
+msgstr "Zobraziť video kodek médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31448"
 msgid "Show media aspect ratio"
-msgstr "Laat media aspectratio's zien"
+msgstr "Zobraziť pomer strán médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31449"
 msgid "Show media audio codec"
-msgstr "Laat media audiocodecs zien"
+msgstr "Zobraziť audio kodek médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31450"
 msgid "Show media audio channels"
-msgstr "Laat media audiokanalen zien"
+msgstr "Zobraziť zvukové kanály médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31451"
 msgid "Show media duration"
-msgstr "Laat medialooptijd zien"
+msgstr "Zobrazit dĺžku médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31452"
 msgid "Show media finish time"
-msgstr "Laat media-eindtijd zien"
+msgstr "Zobraziť čas ukončenia médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31453"
 msgid "Show media studio logo"
-msgstr "Laat media studiologo's zien"
+msgstr "Zobraziť logo študia médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31454"
 msgid "Show media record label logo"
-msgstr "Laat media platenlogo's zien"
+msgstr "Zobraziť logo hudobného vydavateľstva médií"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31455"
 msgid "Show movies of saga"
-msgstr "Films uit bepaalde serie laten zien"
+msgstr "Zobraziť filmy zo ságy"
 
 #: /xml/Custom_1137_SettingsFlags.xml
 msgctxt "#31456"
 msgid "Show albums of artist"
-msgstr "Laat alle albums zien van artiest"
+msgstr "Zobraziť albumy umelca"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31457"
 msgid "Show artist ClearArt"
-msgstr "Laat Clearart van artiest zien"
+msgstr "Zobraziť ClearArt umelca"
 
 #: /xml/Custom_1101_SettingsList.xml
 msgctxt "#31458"
 msgid "Select Program"
-msgstr "Selecteer programma"
+msgstr "Vyberať program"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31459"
 msgid "Enable themes (Valentine's Day, Easter, Halloween & Christmas)"
-msgstr "Thema's activeren (Valentijnsdag, Pasen, Halloween en Kerstmis)"
+msgstr "Povoliť motívy (Valentín, Veľká noc, Halloween a Vianoce)"
 
 #: /xml/Home.xml
 msgctxt "#31460"
-msgid ""
-"Your library is currently empty.[CR]In order to populate it with your "
-"personal media, add  sources and configure them."
-msgstr "Bibliotheek is op het moment leeg"
+msgid "Your library is currently empty.[CR]In order to populate it with your personal media, add  sources and configure them."
+msgstr "Vaša knižnica je v tejto chvíli prázdna.[CR]Aby ste ju zaplnili vašimi osobnými médiami, pridajte zdroje a nakonfigurujte ich."
 
 #: /xml/Variables.xml
 msgctxt "#31461"
 msgid "Recommended Youtube videos"
-msgstr "Voorgestelde Youtube-video's"
+msgstr "Odporúčané Youtube videá"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31462"
 msgid "Video countries icons pack"
-msgstr "Icon pakketlanden"
+msgstr "Balíček ikon krajín pre videá"
 
 #: /xml/Includes.xml
 msgctxt "#31463"
 msgid "No broadcast this day"
-msgstr "Vandaag geen uitzending"
+msgstr "Dnes žiadne vysielanie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31464"
 msgid "Automatically show music video info at beginning and end of playing"
-msgstr "Automatisch muziekvideoinformatie laten zien aan het begin en einde "
+msgstr "Automaticky zobraziť informácie o videoklipe na začiatku a konci prehrávánia"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31465"
 msgid "Background replacement"
-msgstr "Achtergrondvervanging"
+msgstr "Náhrada pozadia"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31466"
 msgid "Genres panel"
-msgstr "Genres paneel"
+msgstr "Panel žánrov"
 
 #: /xml/Home.xml
 msgctxt "#31467"
 msgid "Most played music videos"
-msgstr "Meest afgespeelde muziekvideo's"
+msgstr "Najhranejšie videoklipy"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31468"
 msgid "Show media names with widgets names"
-msgstr "Laat media namen met widgetnamen zien"
+msgstr "Zobraziť názvy médií spolu s názvami widgetov"
 
 #: /xml/Variables.xml
 msgctxt "#31469"
 msgid "Christmas Theme"
-msgstr "Kerstmisthema"
+msgstr "Vianočný motív"
 
 #: /xml/Variables.xml
 msgctxt "#31470"
 msgid "Halloween Theme"
-msgstr "Halloweenthema"
+msgstr "Halloweensky motív"
 
 #: /xml/Variables.xml
 msgctxt "#31471"
 msgid "Easter Theme"
-msgstr "Pasenthema"
+msgstr "Veľkonočný motív"
 
 #: /xml/Variables.xml
 msgctxt "#31472"
 msgid "Valentine's Day Theme"
-msgstr "Valentijnsdag thema"
+msgstr "Valentínsky motív"
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31473"
 msgid "Show channel groups"
-msgstr "Kanaalgroepen tonen"
+msgstr "Zobraziť skupiny kanálov"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31474"
 msgid "Scope mode for constant image height (CIH) setup"
-msgstr "Scope-modus voor instelling van constante beeldhoogte (CIH)"
+msgstr "Režim pre nastavenie konštantnej výšky obrazu (CIH)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31475"
@@ -2114,244 +2116,254 @@ msgstr "2:37:1 (1920x810)"
 #: /xml/Variables.xml
 msgctxt "#31480"
 msgid "Scope mode"
-msgstr "Scopemodus"
+msgstr "Režim náhľadu"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31481"
 msgid "My ratings and scrapers ratings"
-msgstr "Mijn beoordelingen van scrapers"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31482"
 msgid "Scrapers ratings text color"
-msgstr "Tekstkleur scraper beoordeling"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31483"
 msgid "My ratings text color"
-msgstr "Tekstkleur scraper beoordeling"
+msgstr "Farba textu mojich hodnotení"
 
 #: /xml/Includes.xml
 msgctxt "#31484"
 msgid "Loading..."
-msgstr "Laden..."
+msgstr "Načítavam..."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31485"
 msgid "Parental control related settings."
-msgstr "Instellingen ouderlijk toezicht"
+msgstr "Nastavenia súvisiace s rodičovskou kontrolou."
 
 #: /xml/Custom_1101_SettingsList.xml
 msgctxt "#31486"
 msgid "Select Resolution"
-msgstr "Selecteer resolutie"
+msgstr "Vyberte rozlíšenie"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31487"
 msgid "Date added"
-msgstr "Toegevoegd op"
+msgstr "Dátum pridania"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31488"
 msgid "Show extended info"
-msgstr "Laat uitgebreide info zien (Extended info)"
+msgstr "Zobraziť rozšírené informácie"
 
 #: /xml/Variables.xml
 msgctxt "#31489"
 msgid "By"
-msgstr "Door"
+msgstr "od"
 
 #: /xml/Variables.xml
 msgctxt "#31490"
 msgid "Movies from movie set"
-msgstr "Films uit set"
+msgstr "Filmy z kolekcie filmov"
 
 #: /xml/Custom_1132_MoviesSetsInfo.xml
 msgctxt "#31491"
 msgid "Press [B]DOWN[/B] to show info from selected movie"
-msgstr "Klik op [B]DOWN[/B] om informatie te zien over film"
+msgstr "Stlačte [B]DOWN[/B] pre zobrazenie informácií o označenom filme"
 
 #: /xml/Variables.xml
 msgctxt "#31492"
 msgid "Lists settings"
-msgstr "Instellingen lijsten"
+msgstr "Nastavenia zoznamov"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31493"
+msgid "Show Actors list"
+msgstr "Zobraziť zoznam hercov"
 
 #: /xml/script-script.extendedinfo-DialogVideoInfo.xml
 msgctxt "#31494"
 msgid "Episode count"
-msgstr "Afleveringen tellen"
+msgstr "Počet epizód"
 
 #: /xml/Custom_1104_InfoDialogList.xml
 msgctxt "#31495"
 msgid "Movies from director"
-msgstr "Films van director"
+msgstr "Filmy od režiséra"
 
 #: /xml/Custom_1104_InfoDialogList.xml
 msgctxt "#31496"
 msgid "Similar movies"
-msgstr "Soortgelijke films"
+msgstr "Podobné filmy"
 
 #: /xml/Custom_1104_InfoDialogList.xml
 msgctxt "#31497"
 msgid "Movies from studio"
-msgstr "Films uit bepaalde studio"
+msgstr "Filmy od štúdia"
 
 #: /xml/Custom_1104_InfoDialogList.xml
 msgctxt "#31498"
 msgid "Next Up episodes"
-msgstr "Next Up afleveringen"
+msgstr ""
 
 #: /xml/Custom_1104_InfoDialogList.xml
 msgctxt "#31499"
 msgid "Similar TV shows"
-msgstr "Soortgelijke TV series"
+msgstr "Podobné seriály"
 
 #: /xml/Custom_1104_InfoDialogList.xml
 msgctxt "#31500"
 msgid "Fanarts list"
-msgstr "Fanartslijst"
+msgstr "Zoznam fanartov"
 
 #: /xml/Variables.xml
 msgctxt "#31501"
 msgid "Albums from library"
-msgstr "Albums uit bibliotheek"
+msgstr "Albumy z knižnice"
 
 #: /xml/Variables.xml
 msgctxt "#31502"
 msgid "Complete discography"
-msgstr "Complete discography"
+msgstr "Kompletná diskografia"
 
 #: /xml/Variables.xml
 msgctxt "#31503"
 msgid "Songs from album"
-msgstr "Liedjes van album"
+msgstr "Pesničky z albumu"
 
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31504"
 msgid "Press [B]OK[/B] to show back thumb"
-msgstr "Klik op [B]OK[/B] om terug thumb te zien"
+msgstr ""
 
 #: /xml/script-script.extendedinfo-DialogVideoInfo.xml
 msgctxt "#31505"
 msgid "Episode of the season"
-msgstr "Aflevering van seizoen"
+msgstr "Epizóda zo sezóny"
 
 #: /xml/Variables.xml
 msgctxt "#31506"
 msgid "Posters"
-msgstr "Posters"
+msgstr "Plagáty"
 
 #: /xml/Variables.xml
 msgctxt "#31507"
 msgid "Fanarts"
-msgstr "Fanarts"
+msgstr "Fanarty"
 
 #: /xml/Variables.xml
 msgctxt "#31508"
 msgid "Resume playback at"
-msgstr "Terugkijken op"
+msgstr "Pokračovať v prehrávání od"
 
 #: /xml/script-script.extendedinfo-DialogInfo.xml
 msgctxt "#31509"
 msgid "Press [B]OK[/B] to show biography"
-msgstr "Klik op [B]OK[/B] om biography te zien"
+msgstr "Stlačte [B]OK[/B] pre zobrazenie životopisu"
 
 #: /xml/script-script.extendedinfo-DialogInfo.xml
 msgctxt "#31510"
 msgid "Website"
-msgstr "Website"
+msgstr "Webstránka"
 
 #: /xml/Variables.xml
 msgctxt "#31511"
 msgid "Role in movie"
-msgstr "Rol in film"
+msgstr "Rola vo filme"
 
 #: /xml/Variables.xml
 msgctxt "#31512"
 msgid "Crew member in movie"
-msgstr "Cast in film"
+msgstr "Člen štábu vo filme"
 
 #: /xml/Variables.xml
 msgctxt "#31513"
 msgid "Role in TV show"
-msgstr "Rol in TV serie"
+msgstr "Rola v seriáli"
 
 #: /xml/Variables.xml
 msgctxt "#31514"
 msgid "Crew member in TV show"
-msgstr "Cast in TV serie"
+msgstr "Člen štábu v seriáli"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31515"
+msgid "Palm Week"
+msgstr "Palmový týždeň"
 
 msgctxt "#31550"
 msgid "Channel groups"
-msgstr "Kanaal groepen"
+msgstr "Skupiny kanálov"
 
 msgctxt "#31551"
 msgid "German Telecast Offers"
-msgstr "Duitse Telecast aanbiedingen"
+msgstr "Televízne ponuky"
 
 msgctxt "#31552"
 msgid "Also apply to radio and internet station logos"
-msgstr "Ook toevoegen aan radio en internetstationlogo's"
+msgstr "Použiť tiež aj pre logá rádií a internetových staníc"
 
 msgctxt "#31553"
 msgid "Use poster view for music video widgets"
-msgstr "Gebruik posters voor muziek video widgets"
+msgstr "Použiť zobrazenie Plagát pre widgety videoklipov"
 
 msgctxt "#31554"
 msgid "Show year of publication in title"
-msgstr "Laat jaar van publicatie zien in titel"
+msgstr "Zobraziť v názve rok vydania"
 
 msgctxt "#31555"
 msgid "Optional icons and fanart packs"
-msgstr "Optionele icon en fanart verzameling"
+msgstr "Voliteľné balíčky ikon a fanartov"
 
 msgctxt "#31556"
 msgid "Reboot from NAND (Android)"
-msgstr "Herstart vanaf NAND (Android)"
+msgstr "Reštartovať z NAND (Android)"
 
 msgctxt "#31557"
 msgid "Restart Kodi"
-msgstr "Herstart Kodi"
+msgstr "Reštartovať Kodi"
 
 msgctxt "#31558"
 msgid "Addon-ID"
-msgstr "Addon ID"
+msgstr "Addon-ID"
 
 msgctxt "#31559"
 msgid "Platform"
-msgstr "Platform"
+msgstr "Platforma"
 
 msgctxt "#31560"
 msgid "Forced Views"
-msgstr "Geforceerde lijst"
+msgstr ""
 
 msgctxt "#31561"
 msgid "Show PVR related Artworks"
-msgstr "Laat PVR-gerelateerde content zien"
+msgstr "Zobraziť Artworky súvisice s PVR"
 
 msgctxt "#31562"
 msgid "PVR Artwork Configuration"
-msgstr "PVR-content configuratie "
+msgstr "Konfigurácia PVR Artwork"
 
 msgctxt "#31563"
 msgid "Show date"
-msgstr "Datum laten zien"
+msgstr "Zobraziť dátum"
 
 msgctxt "#31564"
 msgid "Top Bar"
-msgstr "Bovenste regel"
+msgstr "Horná lišta"
 
 msgctxt "#31565"
 msgid "Bottom Bar"
-msgstr "Onderste regel"
+msgstr "Spodná lišta"
 
 msgctxt "#31566"
 msgid "Media"
-msgstr "Media"
+msgstr "Média"
 
 msgctxt "#31567"
 msgid "Kodi/Distribution Logo"
-msgstr "Kodi/Distributielogo"
+msgstr "Logo Kodi/Distribution"
 
 msgctxt "#31568"
 msgid "LibreELEC"
@@ -2363,171 +2375,172 @@ msgstr "CoreELEC"
 
 msgctxt "#31570"
 msgid "Show extended Power Menu"
-msgstr "Laat uitgebreid powermenu zien"
+msgstr "Zobraziť rozšírené Power Menu"
 
 msgctxt "#31571"
 msgid "Prefer Fanart in EPG preview window if available"
-msgstr "Laat fanart in EPG-voorvertoning zien indien beschikbaar"
+msgstr "Preferovať Fanart v okne náhľadu EPG, ak je k dispozícii"
 
 msgctxt "#31572"
 msgid "Upcoming episodes"
-msgstr "Aankomende afleveringen"
+msgstr "Nadchádzajúce epizódy"
 
 msgctxt "#31573"
 msgid "Show MPAA rating"
-msgstr "Laat MPAA-beoordeling zien"
+msgstr "Zobraziť hodnotenie MPAA"
 
 msgctxt "#31574"
 msgid "(until "
-msgstr "tot"
+msgstr "(pokým"
 
 msgctxt "#31575"
 msgid "Show Color Depth"
-msgstr "Laat kleurdiepte zien"
+msgstr "Zobraziť farebnú hĺbku"
 
 msgctxt "#31576"
 msgid "Show additional Infos within the PVR widgets"
-msgstr "Meer informatie binnen de PVR-widgets"
+msgstr "Zobraziť ďalšie informácie v PVR widgetoch"
 
 msgctxt "#31577"
 msgid "Close Video OSD automatically after"
-msgstr "Sluit OSD-menu automatisch na"
+msgstr "Automaticky zatvoriť Video OSD po"
 
 msgctxt "#31578"
 msgid "disabled"
-msgstr "Uitgezet"
+msgstr "zakázané"
 
 msgctxt "#31580"
 msgid "3 seconds"
-msgstr "3 seconden"
+msgstr "3 sekúnd"
 
 msgctxt "#31581"
 msgid "5 seconds"
-msgstr "5 seconden"
+msgstr "5 sekúnd"
 
 msgctxt "#31582"
 msgid "7 seconds"
-msgstr "7 seconden"
+msgstr "7 sekúnd"
 
 msgctxt "#31583"
 msgid "10 seconds"
-msgstr "10 seconden"
+msgstr "10 sekúnd"
 
 msgctxt "#31584"
 msgid "15 seconds"
-msgstr "15 seconden"
+msgstr "15 sekúnd"
 
 msgctxt "#31585"
 msgid "Show Channel Numbers"
-msgstr "Laat kanaalnummers zien"
+msgstr "Zobraziť čísla kanálov"
 
 msgctxt "#31586"
 msgid "Show Date of First aired"
-msgstr "Voor het eerst verschenen"
+msgstr ""
 
 msgctxt "#31587"
 msgid "Item Path of Picture Widgets"
-msgstr "Pad naar fotowidgets"
+msgstr ""
 
 msgctxt "#31588"
 msgid "Default Action on 'Movie' and 'TV-Show' Widgets"
-msgstr "Standaardactie bij films- en seriewidgets"
+msgstr "Predvolená akcia na widgetoch „Film“ a „Seriály“"
 
 msgctxt "#31589"
 msgid "Play Item"
-msgstr "Afspelen"
+msgstr "Prehrať položku"
 
 msgctxt "#31590"
 msgid "Show Info"
-msgstr "Informatie laten zien"
+msgstr "Zobraziť informácie"
 
 msgctxt "#31591"
 msgid "Sort Order"
-msgstr "Volgorde van sorteren"
+msgstr "Poradie triedenia"
 
 msgctxt "#31592"
 msgid "Show Path Navigation (Breadcrumbs) in List Views"
-msgstr "Toon navigatiepad in lijstopties"
+msgstr "Zobraziť navigáciu po ceste (Breadcrumbs) v zobrazeniach zoznamu"
 
 msgctxt "#31593"
 msgid "Show only 'current item / item count' Information"
-msgstr "Alleen 'huidige item laten zien / optelsom' Informatie"
+msgstr "Zobraziť iba informáciu „aktuálna položka / počet položiek“"
 
 msgctxt "#31594"
 msgid "Set Animated Poster"
-msgstr "Stel bewegende posters in"
+msgstr "Nastaviť animovaný plagát"
 
 msgctxt "#31595"
 msgid "Remove Animated Poster"
-msgstr "Verwijder bewegende posters"
+msgstr "Odstrániť animovaný plagát"
 
 msgctxt "#31596"
 msgid "Animated Poster removed"
-msgstr "Bewegende posters verwijderd"
+msgstr "Animovaný plagát odstránený"
 
 msgctxt "#31597"
 msgid "Animated Poster added"
-msgstr "Bewegende posters toegevoegd"
+msgstr "Animovaný plagát pridaný"
 
 msgctxt "#31598"
 msgid "Local Path to animated Poster Folder"
-msgstr "In welke map staan de bewegende posters"
+msgstr "Miestna cesta priečinku animovaného plagátu"
 
 msgctxt "#31599"
-msgid ""
-"The folder of the animated Poster Collection was not defined yet. Define a "
-"Folder on the local File System containing animated Posters within the Skin "
-"Settings."
-msgstr ""
-"Folder voor bewegende posters nog niet aangemaakt. Deze dus aanmaken waar de "
-"posters in zitten."
+msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
+msgstr "Priečinok zbierky animovaných plagátov ešte nebol definovaný. Definujte priečinok na lokálnom systéme súborov obsahujúcom animované plagáty v nastaveniach vzhľadu."
 
 msgctxt "#31600"
 msgid "Could not assign animated Poster"
-msgstr "Niet mogelijk een bewegende poster toe te wijzen"
+msgstr "Nepodarilo sa priradiť animovaný plagát"
 
 msgctxt "#31601"
 msgid "Hit Probability: "
-msgstr "Kans dat deze gevonden wordt"
+msgstr ""
 
+#: SkinSettings.xml
 msgctxt "#31602"
 msgid "'Rotten Tomatoes' Rating Category"
-msgstr "Rotten Tomatoes beoordelingscategorie"
+msgstr "Kategória hodnotenia „Rotten Tomatoes“"
 
+#: SkinSettings.xml
 msgctxt "#31603"
 msgid "Tomatometer all Critics"
-msgstr "Tomatometer alle beoordelingen"
+msgstr "Tomatometer all Critics"
 
+#: SkinSettings.xml
 msgctxt "#31604"
 msgid "Tomatometer average Critics"
-msgstr "Tomatometer gemiddelde beoordelingen "
+msgstr "Tomatometer average Critics"
 
+#: SkinSettings.xml
 msgctxt "#31605"
 msgid "Tomatometer all Audience"
-msgstr "Tomatometer alle publieke beoordelingen"
+msgstr "Tomatometer all Audience"
 
+#: SkinSettings.xml
 msgctxt "#31606"
 msgid "Tomatometer average Audience"
-msgstr "Tomatometer gemiddelde publieke beoordelingen"
+msgstr "Tomatometer average Audience"
 
 #: SkinSettings.xml
 msgctxt "#31607"
 msgid "Use simplified Video OSD Navigation"
-msgstr "Gebruik simpele Video-OSD navigatie"
+msgstr "Použiť zjednodušenú Video OSD navigáciu"
 
 msgctxt "#31608"
 msgid "Previous seen Channel"
-msgstr "Vorig bekeken kanaal"
+msgstr "Naposledy sledovaný kanál"
 
 #: Includes_MediaMenu.xml
 msgctxt "#31609"
 msgid "Show PVR Channel Status"
-msgstr "Toon PVR-kanaalstatus"
+msgstr "Zobraziť stav kanála PVR"
 
 #: DialogPlayerProcessInfo
+
 msgctxt "#31610"
 msgid "Display Mode"
-msgstr "Display-modus"
+msgstr "Zobrazovací mód"
 
 msgctxt "#31611"
 msgid "Eoft & Gamut"
@@ -2535,225 +2548,234 @@ msgstr "Eoft & Gamut"
 
 msgctxt "#31612"
 msgid "Color Depth"
-msgstr "Kleurdiepte"
+msgstr "Farebná hĺbka"
 
 #: SkinSettings.xml
+
 msgctxt "#31613"
 msgid "Display Media Time"
-msgstr "Toon mediatijd"
+msgstr "Zobrazenie času média"
 
 msgctxt "#31614"
 msgid "current Time / total Time"
-msgstr "huidige tijd / totale tijd"
+msgstr "aktuálny čas / celkový čas"
 
 msgctxt "#31615"
 msgid "Remaining Time"
-msgstr "Resterende tijd"
+msgstr "Zostávajúci čas"
 
 #: SkinSettings.xml
+
 msgctxt "#31616"
 msgid "Use Background for PVR Channel Icons"
-msgstr "Gebruik achtergrond voor PVR-kanaaliconen"
+msgstr "Použiť pozadie pre ikony kanálov PVR"
 
 #: Custom_1127_settingsTVWidgets.xml
+
 msgctxt "#31617"
 msgid "Saved Search Results"
-msgstr "Opgeslagen zoekresultaten"
+msgstr "Uložené výsledky vyhľadávania"
 
 #: SkinSettings.xml
+
 msgctxt "#31618"
 msgid "Use full Height for Channel and Program OSD"
-msgstr "Gebruik de volledige hoogte voor kanaal- en programma-OSD"
+msgstr "Použiť plnú výšku pre Channel a Program OSD"
 
 #: Font.xml
+
 msgctxt "#31619"
 msgid "Economica based"
-msgstr "Gebaseerd op Economica"
+msgstr ""
 
 #. viewtype name
 #: /xml/View_510_Flix.xml
+
 msgctxt "#31620"
 msgid "Flix Landscape"
-msgstr "Flix Landschap"
+msgstr ""
 
 #: Variables.xml (SkinSettings.xml)
+
 msgctxt "#31621"
 msgid "Visualization of the PVR and TV screen related settings."
-msgstr "Visualisatie van de PVR- en tv-schermgerelateerde instellingen."
+msgstr "Nastavenia súvisiace s vizualizáciou PVR a TV obrazovky."
 
 #: /xml/SkinSettings.xml
 
 msgctxt "#31622"
 msgid "Disabled timers"
-msgstr "Timers welke uit staan"
+msgstr "Deaktivované časovače"
 
 #: SkinSettings.xml
 
 msgctxt "#31623"
 msgid "Default Action on 'Timer' Widgets"
-msgstr "Standaard actie bij 'Timer' Widgets "
+msgstr "Predvolená akcia na widgete „Časovač“"
 
 msgctxt "#31624"
 msgid "Show Timer Settings"
-msgstr "Timer instellingen"
+msgstr "Zobraziť nastavenia časovača"
 
 msgctxt "#31625"
 msgid "Show Broadcast Information"
-msgstr "Uitzend informatie"
+msgstr "Zobraziť informácie o vysielaní"
 
 msgctxt "#31627"
 msgid "Video and Audio OSD"
-msgstr "Video en audio OSD"
+msgstr "Video a Audio OSD"
 
 msgctxt "#31628"
 msgid "OSD Artwork"
-msgstr "OSD afbeeldingen"
+msgstr "OSD Artwork"
 
 msgctxt "#31630"
 msgid "Use simple Seekbar on Chapter and Time Seeking"
-msgstr "Gebruik simpele zoekactie bij hoofdstuk en op tijd zoeken"
+msgstr "Použiť zjednodušený Seekbar na posúvanie času a kapitol"
 
 msgctxt "#31631"
 msgid "Action on 'last channel switch' OSD Button"
-msgstr ""
+msgstr "Akcia na OSD tlačidle „prepnutie posledného kanála“"
 
 msgctxt "#31632"
 msgid "Switch to last Channel directly"
-msgstr "Ga rechtstreeks naar kanaal wisseling"
+msgstr "Prepnúť na posledný kanál"
 
 msgctxt "#31633"
 msgid "Show last five Channels"
-msgstr "Laat 5 laatste kanalen zien"
+msgstr "Zobraziť posledných päť kanálov"
 
 msgctxt "#31634"
 msgid "Last watched"
-msgstr "Laatst bekeken"
+msgstr ""
 
 #: DialogContextMenu.xml
 
 msgctxt "#31635"
 msgid "Play Trailer"
-msgstr "Speel trailer af"
+msgstr "Prehrať upútavku"
 
 msgctxt "#31636"
 msgid "Show 'Play Trailer' in Context Menu"
-msgstr "Laat trailer afspelen zien binnen context menu"
+msgstr "Zobraziť „Prehrať upútavku“ v kontextovej ponuke"
 
 #: Skinsettings.xml
 
 msgctxt "#31637"
-msgid "Show Lyrics"
-msgstr "Teksten van liedjes laten zien"
+msgid "Activate Lyrics"
+msgstr "Aktivovať texty pesničiek"
 
 msgctxt "#31638"
 msgid "Minimized Options Menu"
-msgstr "Minimaliseer opties menu"
+msgstr "Minimalizovať Options Menu"
 
 msgctxt "#31639"
 msgid "Default Action on 'PVR' Widgets"
-msgstr "Standaard actie bij PVR widgets"
+msgstr "Predvolená akcia na widgetoch „PVR“"
+
+#: /xml/SkinSettings.xml
 
 msgctxt "#31640"
 msgid "Enable background for splash screen"
-msgstr "Achtergrond activeren voor splash beeld"
+msgstr "Povoliť pozadie pre úvodnú obrazovku"
 
 msgctxt "#31641"
 msgid "Prefer Album Fanart over Artist Fanart"
-msgstr "Album fanart kiezen in plaats van artiesten fanart"
+msgstr "Preferovať fanart albumu pred fanartom umelca"
 
 msgctxt "#31642"
 msgid "High Transparency of Seekbar Background"
-msgstr "Hogere transparantie in zoekvak achtergrond"
+msgstr ""
 
 #: /xml/MyVideoNav
 
 msgctxt "#31643"
 msgid "Use Poster View"
-msgstr "Gebruik poster view"
+msgstr "Použiť zobrazenie Plagát"
 
 msgctxt "#31644"
 msgid "Arial Unicode based"
-msgstr "Arial unicode gebasseerd"
+msgstr "Založené na Arial Unicode"
 
 #: /xml/Includes_MediaMenu.xml
 
 msgctxt "#31645"
 msgid "Quick Navigation"
-msgstr "Snelle navigatie"
+msgstr "Rýchla navigácia"
 
 #: /xml/MusicOSD.xml
 
 msgctxt "#31646"
 msgid "Black Screen : off"
-msgstr "Zwart beeld : uit"
+msgstr ""
 
 msgctxt "#31647"
 msgid "Black Screen : on"
-msgstr "Zwart beeld : aan"
+msgstr ""
 
 #: /xml/Skinsettings.xml
 
 msgctxt "#31648"
 msgid "Stop Player if Video/Audio is paused longer than"
-msgstr "Player stoppen, indien Video/Audio langer gepauzeerd heeft als"
+msgstr "Zastaviť prehrávač, ak je Video/Audio pozastavené dlhšie ako"
 
 msgctxt "#31649"
 msgid "1 Minute"
-msgstr "1 Minuut"
+msgstr "1 minúta"
 
 msgctxt "#31650"
 msgid "2 Minutes"
-msgstr "2 Minuten"
+msgstr "2 minúty"
 
 msgctxt "#31651"
 msgid "3 Minutes"
-msgstr "3 Minuten"
+msgstr "3 minúty"
 
 msgctxt "#31652"
 msgid "4 Minutes"
-msgstr "4 Minuten"
+msgstr "4 minúty"
 
 msgctxt "#31653"
 msgid "5 Minutes"
-msgstr "5 Minuten"
+msgstr "5 minút"
 
 msgctxt "#31655"
 msgid "Show Battery Level"
-msgstr "Batterij level tonen"
+msgstr "Zobraziť stav batérie"
 
 msgctxt "#31656"
 msgid "Show Title and Year on Poster Wall View"
-msgstr "Titel en jaartal tonen op poster view"
+msgstr "Zobraziť názov a rok v zobrazení Poster Wall"
 
 msgctxt "#31657"
 msgid "Show Internet Status"
-msgstr "Internet status tonen"
+msgstr "Zobraziť stav internetu"
 
 msgctxt "#31658"
 msgid "Show own Level Colors"
-msgstr "Eigen kleuren tonen"
+msgstr ""
 
 msgctxt "#31659"
 msgid "Color of Text Shadow"
-msgstr "Kleuren van schaduw tekst"
+msgstr "Farba tieňa textu"
 
 msgctxt "#31660"
 msgid "current Time"
-msgstr "huidige tijd"
+msgstr "aktuálny čas"
 
 msgctxt "#31661"
 msgid "Decrease Play speed"
-msgstr "Verminder afspeel snelheid"
+msgstr "Znížiť rýchlosť prehrávania"
 
 msgctxt "#31662"
 msgid "Increase Play speed"
-msgstr "Verhoog afspeel snelheid"
+msgstr "Zvýšiť rýchlosť prehrávania"
 
 #: SkinSettings.xml
 
 msgctxt "#31663"
 msgid "Busy Spinner"
-msgstr "Bezig spinner"
+msgstr "Busy Spinner"
 
 #: Video OSD
 
@@ -2775,4 +2797,4 @@ msgstr "REC"
 
 msgctxt "#31668"
 msgid "Hide SIG/SNR flags if not provided by Backend Driver"
-msgstr "Verberg SIG/SNR indien niet ondersteund"
+msgstr "Skryť SIG/SNR, ak ich Backend Driver neposkytuje"
