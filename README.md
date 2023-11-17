@@ -44,6 +44,12 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 21.0.0+omega ###
+- .10
+    * missing poster in OSD while playing files fixed
+    * Slovakian language strings added
+    * Netherland language strings updated
+
+
 - .9
   * some icons added
   * Code Improvements on full video OSD
