@@ -4372,7 +4372,7 @@
 				<control type="group">
 					<depth>DepthOSD+</depth>
 					<left>10</left>
-					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos) | Player.IsInternetStream | [VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio]</visible>
+					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files) | Player.IsInternetStream | [VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio]</visible>
 					<control type="image">
 						<width>440</width>
 						<height>660</height>
