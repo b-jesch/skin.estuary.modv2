@@ -349,7 +349,7 @@
 					<top>53</top>
 					<height>70</height>
 					<width>1100</width>
-					<itemgap>5</itemgap>
+					<itemgap>3</itemgap>
 					<orientation>horizontal</orientation>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -358,39 +358,22 @@
 					</include>
 					<include content="MediaFlag">
 						<param name="width" value="5" />
-						<param name="top" value="5" />
 					</include>
 					<include content="MediaFlagsRatings">
 						<param name="infolabel_prefix"/>
 					</include>
-					<control type="group">
-						<width>5</width>
-						<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
-						<include content="MediaFlag">
-							<param name="width" value="0" />
-						</include>
-					</control>
-					<control type="group">
-						<width>250</width>
-						<top>5</top>
-						<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
-						<include content="MediaFlag">
-							<param name="texture" value="flags/lastseen.png" />
-							<param name="width" value="250" />
-						</include>
-						<control type="label">
-							<width>192</width>
-							<top>-1</top>
-							<height>50</height>
-							<posx>54</posx>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font_flag</font>
-							<scroll>true</scroll>
-							<label>$INFO[ListItem.LastPlayed]</label>
-							<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						</control>
-					</control>
+					<include content="MediaFlag">
+						<param name="width" value="0" />
+						<param name="visible" value="!String.IsEmpty(ListItem.LastPlayed)" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/lastseen.png" />
+						<param name="width" value="200" />
+						<param name="label_width" value="146" />
+						<param name="label_left" value="50" />
+						<param name="label" value="$INFO[ListItem.LastPlayed]" />
+						<param name="visible" value="!String.IsEmpty(ListItem.LastPlayed)" />
+					</include>
 				</control>
 				<control type="list" id="51000">
 					<visible>ListItem.IsCollection</visible>

@@ -42,6 +42,12 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+
+### 4.2.0+nexus ###
+- .0
+  * Media flags completely revised (uniform size and improved common code basis)
+
+
 ### 4.1.3+nexus ###
 - .5
   * missing poster in OSD while playing files fixed

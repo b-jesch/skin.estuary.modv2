@@ -41,10 +41,10 @@
 				</control>
 			</control>
 			<control type="image" id="3336">
-				<top>140</top>
+				<top>120</top>
 				<right>50</right>
-				<width>310</width>
-				<height>190</height>
+				<width>342</width>
+				<height>210</height>
 				<aspectratio align="right" aligny="bottom">keep</aspectratio>
 				<texture background="true" fallback="fallback.png">$VAR[ClearArtVar]</texture>
 				<include>OpenClose_Right</include>
@@ -110,7 +110,7 @@
 					<top>80</top>
 					<control type="button" id="138">
 						<left>-8</left>
-						<right>315</right>
+						<right>350</right>
 						<height>211</height>
 						<aligny>bottom</aligny>
 						<label/>
@@ -126,7 +126,7 @@
 					</control>
 					<control type="button" id="138">
 						<left>-8</left>
-						<right>-5</right>
+						<right>10</right>
 						<height>211</height>
 						<aligny>bottom</aligny>
 						<label/>
@@ -143,7 +143,7 @@
 					<control type="textbox">
 						<left>16</left>
 						<top>23</top>
-						<right>340</right>
+						<right>360</right>
 						<height>160</height>
 						<align>left</align>
 						<font>fontplot2</font>
@@ -369,7 +369,7 @@
 			<include>OpenClose_Right</include>
 			<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 			<right>50</right>
-			<top>360</top>
+			<top>370</top>
 			<height>70</height>
 			<width>820</width>
 			<height>142</height>
