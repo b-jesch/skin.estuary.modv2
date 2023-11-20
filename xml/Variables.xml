@@ -1447,6 +1447,9 @@
 		<value condition="!String.IsEmpty(Player.Art(tvshow.banner))">$INFO[Player.Art(tvshow.banner)]</value>
 		<value condition="!String.IsEmpty(Player.Art(artist.banner))">$INFO[Player.Art(artist.banner)]</value>
 	</variable>
+	<variable name="CoverPlayerArtVar">
+		<value condition="!String.IsEmpty(MusicPlayer.offset(1).Cover)">$INFO[MusicPlayer.offset(1).Cover]</value>
+	</variable>
 	<variable name="FanartImageVar">
 		<value condition="ListItem.IsParentFolder">special://skin/extras/home-images/movies.jpg</value>
 		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>

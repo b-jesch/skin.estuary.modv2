@@ -3865,7 +3865,7 @@
 						<width>151</width>
 						<height>151</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
-						<texture background="true" border="2" fallback="DefaultAudio.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
+						<texture background="true" border="2" fallback="DefaultAudio.png">$VAR[CoverPlayerArtVar]</texture>
 						<bordertexture>dialogs/back.png</bordertexture>
 						<bordersize>2</bordersize>
 						<visible>!String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
@@ -3897,7 +3897,7 @@
 						<width>526</width>
 						<align>right</align>
 						<height>38</height>
-						<label>[COLOR white]$INFO[MusicPlayer.Offset(1).TrackNumber,,. ]$INFO[MusicPlayer.Offset(1).Title]$INFO[MusicPlayer.Offset(1).Artist, - [B],[/B]][/COLOR]</label>
+						<label>[COLOR white]$INFO[MusicPlayer.Offset(1).TrackNumber,,. ]$INFO[MusicPlayer.Offset(1).Title][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<font>font12</font>
 						<aligny>center</aligny>
@@ -3910,7 +3910,7 @@
 						<width>526</width>
 						<align>right</align>
 						<height>38</height>
-						<label>[COLOR white]$INFO[MusicPlayer.Offset(2).TrackNumber,,. ]$INFO[MusicPlayer.Offset(2).Title]$INFO[MusicPlayer.Offset(2).Artist, - [B],[/B]][/COLOR]</label>
+						<label>[COLOR white]$INFO[MusicPlayer.Offset(2).TrackNumber,,. ]$INFO[MusicPlayer.Offset(2).Title][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<font>font12</font>
 						<aligny>center</aligny>
@@ -3920,10 +3920,10 @@
 					<control type="label">
 						<top>120</top>
 						<right>177</right>
-						<width>526</width>
+						<width>340</width>
 						<align>right</align>
 						<height>38</height>
-						<label>[COLOR white]$INFO[MusicPlayer.Offset(3).TrackNumber,,. ]$INFO[MusicPlayer.Offset(3).Title]$INFO[MusicPlayer.Offset(3).Artist, - [B],[/B]][/COLOR]</label>
+						<label>[COLOR white]$INFO[MusicPlayer.Offset(3).TrackNumber,,. ]$INFO[MusicPlayer.Offset(3).Title][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<font>font12</font>
 						<aligny>center</aligny>
@@ -4122,18 +4122,11 @@
 								<param name="texture" value="flags/cadre.png" />
 								<param name="visible" value="!String.IsEmpty(RDS.HasRDS)" />
 							</include>
-							<control type="group">
-								<width>163</width>
-								<height>40</height>
-								<visible>Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.UserRating)</visible>
-								<control type="image">
-									<top>5</top>
-									<width>163</width>
-									<height>40</height>
-									<texture>$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
-									<aspectratio>keep</aspectratio>
-								</control>
-							</control>
+							<include content="MediaFlag">
+								<param name="width" value="163" />
+								<param name="texture" value="$INFO[MusicPlayer.UserRating,flags/starrating/,.png]" />
+								<param name="visible" value="Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.UserRating)" />
+							</include>
 							<include content="MediaFlag">
 								<param name="width" value="5" />
 							</include>
