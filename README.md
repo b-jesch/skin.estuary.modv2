@@ -44,11 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 ### 21.1.0+omega ###
 - .0
-  * 
-### 21.0.0+omega ###
-- .9 Media flags completely revised (uniform size and improved common code basis)
-  
+  * Media flags completely revised (uniform size and improved common code basis)
 
+
+### 21.0.0+omega ###
+- .9 
   * some icons added
   * Code Improvements on full video OSD
   * OSD media flags fixed/improved
