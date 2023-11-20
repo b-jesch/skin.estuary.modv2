@@ -42,9 +42,13 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
-
+### 21.1.0+omega ###
+- .0
+  * 
 ### 21.0.0+omega ###
-- .9
+- .9 Media flags completely revised (uniform size and improved common code basis)
+  
+
   * some icons added
   * Code Improvements on full video OSD
   * OSD media flags fixed/improved

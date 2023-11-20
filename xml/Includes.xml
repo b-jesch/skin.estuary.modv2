@@ -791,94 +791,49 @@
 	</include>
 	<include name="MediaFlag">
 		<param name="top">0</param>
-		<param name="width">130</param>
-		<param name="height">50</param>
-		<param name="visible">true</param>
-		<param name="visible2">true</param>
-		<param name="colordiffuse">$VAR[MediaFlagsColorVar]</param>
-		<param name="fallback"></param>
-		<definition>
-			<control type="image">
-				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<fadetime>0</fadetime>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<texture colordiffuse="$PARAM[colordiffuse]" fallback="$PARAM[fallback]">$PARAM[texture]</texture>
-				<bordertexture colordiffuse="80FFFFFF">dialogs/back.png</bordertexture>
-				<bordersize>-1</bordersize>
-				<visible>$PARAM[visible]</visible>
-				<visible>$PARAM[visible2]</visible>
-			</control>
-		</definition>
-	</include>
-	<include name="MediaFlagStudio">
-		<param name="top">0</param>
-		<param name="width">130</param>
-		<param name="height">50</param>
-		<param name="visible">true</param>
-		<param name="visible2">true</param>
-		<param name="colordiffuse">$VAR[MediaFlagsColorVar]</param>
-		<definition>
-			<control type="image">
-				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<fadetime>0</fadetime>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<texture colordiffuse="$PARAM[colordiffuse]">$PARAM[texture]</texture>
-				<visible>$PARAM[visible]</visible>
-				<visible>$PARAM[visible2]</visible>
-			</control>
-		</definition>
-	</include>
-	<include name="MediaFlagOSD">
-		<param name="top">0</param>
-		<param name="width">130</param>
-		<param name="height">50</param>
-		<param name="visible">true</param>
-		<param name="visible2">true</param>
-		<param name="fallback"></param>
-		<definition>
-			<control type="image">
-				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<fadetime>0</fadetime>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<texture fallback="$PARAM[fallback]">$PARAM[texture]</texture>
-				<visible>$PARAM[visible]</visible>
-				<visible>$PARAM[visible2]</visible>
-			</control>
-		</definition>
-	</include>
-	<include name="MediaFlagOsdWithLabel">
-		<param name="top">5</param>>
+		<param name="width">104</param>
 		<param name="height">40</param>
-		<param name="width" />
-		<param name="label_width" />
-		<param name="label_left" />
+		<param name="label_width">50</param>
+		<param name="label_left">52</param>
 		<param name="visible">true</param>
+		<param name="visible2">true</param>
+		<param name="colordiffuse">$VAR[MediaFlagsColorVar]</param>
+		<param name="has_background">true</param>
+		<param name="fallback" />
 		<definition>
 			<control type="group">
 				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<visible>$PARAM[visible]</visible>
+				<visible>$PARAM[visible] + $PARAM[visible2]</visible>
 				<control type="image">
 					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture>$PARAM[texture]</texture>
-					<aspectratio>keep</aspectratio>
+					<fadetime>0</fadetime>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<texture colordiffuse="$PARAM[colordiffuse]" fallback="$PARAM[fallback]">$PARAM[texture]</texture>
+					<bordertexture colordiffuse="80FFFFFF">dialogs/back.png</bordertexture>
+					<bordersize>1</bordersize>
+					<visible>$PARAM[has_background]</visible>
+				</control>
+				<control type="image">
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<fadetime>0</fadetime>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<texture colordiffuse="$PARAM[colordiffuse]" fallback="$PARAM[fallback]">$PARAM[texture]</texture>
+					<bordersize>1</bordersize>
+					<visible>!$PARAM[has_background]</visible>
 				</control>
 				<control type="label">
 					<left>$PARAM[label_left]</left>
 					<width>$PARAM[label_width]</width>
 					<height>$PARAM[height]</height>
 					<align>center</align>
-					<top>2</top>
+					<top>$PARAM[top]</top>
 					<label>$PARAM[label]</label>
-					<font>Font-Flag-Small2</font>
+					<font>Font-Flag-Small3</font>
+					<textcolor>$PARAM[colordiffuse]</textcolor>
 				</control>
 			</control>
 		</definition>
@@ -994,328 +949,202 @@
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
 				<right>20</right>
-				<top>5</top>
-				<height>70</height>
+				<height>50</height>
 				<align>$PARAM[align]</align>
-				<itemgap>5</itemgap>
+				<itemgap>3</itemgap>
 				<width>1800</width>
 				<usecontrolcoords>true</usecontrolcoords>
 				<scrolltime tween="sine" easing="out">200</scrolltime>
 				<autoscroll>true</autoscroll>
 				<visible>$PARAM[visible] + !Control.IsVisible(40165)</visible>
 				<control type="group">
-					<width>130</width>
+					<width>104</width>
 					<visible>[String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5094)] | [String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !Control.HasFocus(5084)] | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,movie) | Control.HasFocus(6600) | Control.HasFocus(66001)</visible>
 					<visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(1132)</visible>
 					<visible>!Skin.HasSetting(show_mediastudioflag)</visible>
-					<include content="MediaFlagStudio">
+					<include content="MediaFlag">
 						<param name="texture" value="$INFO[Skin.String(studiologos.path)]$INFO[$PARAM[infolabel_prefix]ListItem.Studio,,.png]" />
 						<param name="colordiffuse" value="$VAR[MediaFlagsColorVar]" />
-						<param name="height" value="60" />
+						<param name="has_background" value="false" />
+						<param name="height" value="50" />
 						<param name="visible" value="[String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.white/) + System.HasAddon(resource.images.studios.white)] | [String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.estuarymod/) + System.HasAddon(resource.images.studios.estuarymod)]" />
 					</include>
-					<include content="MediaFlagStudio">
+					<include content="MediaFlag">
 						<param name="texture" value="$INFO[Skin.String(studiologos.path)]$INFO[$PARAM[infolabel_prefix]ListItem.Studio,,.png]" />
 						<param name="colordiffuse" value="" />
-						<param name="height" value="60" />
+						<param name="has_background" value="false" />
+						<param name="height" value="50" />
 						<param name="visible" value="String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.coloured/) + System.HasAddon(resource.images.studios.coloured)" />
 					</include>
-					<control type="group">
-						<top>6</top>
-						<include content="MediaFlagStudio">
-							<param name="texture" value="$INFO[Skin.String(studiologos.path)]$INFO[$PARAM[infolabel_prefix]ListItem.Studio,,.jpg]" />
-							<param name="colordiffuse" value="" />
-							<param name="height" value="48" />
-							<param name="visible" value="String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.squarehd/) + System.HasAddon(resource.images.studios.squarehd)" />
-						</include>
-					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[Skin.String(studiologos.path)]$INFO[$PARAM[infolabel_prefix]ListItem.Studio,,.jpg]" />
+						<param name="colordiffuse" value="" />
+						<param name="has_background" value="false" />
+						<param name="height" value="50" />
+						<param name="visible" value="String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.squarehd/) + System.HasAddon(resource.images.studios.squarehd)" />
+					</include>
 				</control>
 				<control type="group">
-					<width>150</width>
+					<width>125</width>
 					<visible>!String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,movie) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)</visible>
 					<visible>!Skin.HasSetting(show_mediarecordlabelflag) + System.HasAddon(resource.images.recordlabels.white)</visible>
-					<include content="MediaFlagStudio">
+					<include content="MediaFlag">
 						<param name="texture" value="$INFO[Skin.String(recordlabels.path)]$INFO[$PARAM[infolabel_prefix]ListItem.Property(Album_Label),,.png]" />
 						<param name="colordiffuse" value="$VAR[MediaFlagsColorVar]" />
-						<param name="height" value="60" />
+						<param name="has_background" value="false" />
+						<param name="height" value="50" />
 					</include>
 				</control>
-				<control type="group">
-					<width>71</width>
-					<visible>!Control.HasFocus(11100) + !Skin.HasSetting(show_mediasourceflag) + !String.IsEmpty(Control.GetLabel(4395))</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[MediaSourceFlagVar]" />
-						<param name="width" value="71" />
-						<param name="top" value="5" />
-					</include>
-				</control>
-				<control type="group">
-					<width>71</width>
-					<visible>!Skin.HasSetting(show_mediaresolutionflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$PARAM[resolution_var]" />
-						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)" />
-						<param name="width" value="71" />
-						<param name="top" value="5" />
-					</include>
-				</control>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[MediaSourceFlagVar]" />
+					<param name="width" value="58" />
+					<param name="visible" value="!Control.HasFocus(11100) + !String.IsEmpty(Control.GetLabel(4395))" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediasourceflag)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$PARAM[resolution_var]" />
+					<param name="width" value="58" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediaresolutionflag)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoCodec,flags/videocodec/,.png]" />
+					<param name="width" value="104" />
+					<param name="fallback" value="flags/videocodec/fallback.png" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoCodec)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediavideocodecflag)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[HdrTypeVar]" />
+					<param name="width" value="58" />
+					<param name="visible" value="String.Contains(Control.GetLabel(4396),hdr) | String.Contains(Control.GetLabel(4396),hlg)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[HdrTypeVar]" />
+					<param name="width" value="92" />
+					<param name="visible" value="String.Contains(Control.GetLabel(4396),dolbyvision)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
+					<param name="fallback" value="flags/aspectratio/fallback.png" />
+					<param name="width" value="86" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediaaspectratioflag)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$PARAM[audiocodec_var]" />
+					<param name="width" value="104" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediaaudiocodecflag)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
+					<param name="width" value="104" />
+					<param name="fallback" value="flags/audiochannel/fallback.png" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)" />
+					<param name="visible2" value="Skin.HasSetting(show_mediaaudiochannelsflag)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="width" value="5" />
+					<param name="visible" value="![Skin.HasSetting(show_mediadurationflag) + Skin.HasSetting(show_mediaendtimeflag)]" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/time.png" />
+					<param name="width" value="141" />
+					<param name="label_width" value="98" />
+					<param name="label_left" value="41" />
+					<param name="label" value="$VAR[DurationVar]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediadurationflag)" />
+				</include>
 				<control type="group">
 					<width>130</width>
-					<visible>!Skin.HasSetting(show_mediavideocodecflag) + !String.IsEmpty(ListItem.VideoCodec)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoCodec,flags/videocodec/,.png]" />
-						<param name="fallback" value="flags/videocodec/fallback.png" />
-						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoCodec)" />
-						<param name="top" value="5" />
-					</include>
-				</control>
-				<control type="group">
-					<width>73</width>
-					<visible>!Skin.HasSetting(show_mediacolordepthflag) + String.Contains(Control.GetLabel(4396),hdr) | String.Contains(Control.GetLabel(4396),hlg)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[HdrTypeVar]" />
-						<param name="width" value="73" />
-						<param name="top" value="5" />
-					</include>
-				</control>
-				<control type="group">
-					<width>115</width>
-					<visible>!Skin.HasSetting(show_mediacolordepthflag) + String.Contains(Control.GetLabel(4396),dolbyvision)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[HdrTypeVar]" />
-						<param name="width" value="115" />
-						<param name="top" value="5" />
-					</include>
-				</control>
-				<control type="group">
-					<width>108</width>
-					<visible>!Skin.HasSetting(show_mediaaspectratioflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
-						<param name="fallback" value="flags/aspectratio/fallback.png" />
-						<param name="width" value="108" />
-						<param name="top" value="5" />
-					</include>
-				</control>
-				<control type="group">
-					<width>130</width>
-					<visible>!Skin.HasSetting(show_mediaaudiocodecflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$PARAM[audiocodec_var]" />
-						<param name="top" value="5" />
-					</include>
-				</control>
-				<control type="group">
-					<width>130</width>
-					<visible>!Skin.HasSetting(show_mediaaudiochannelsflag)+ !String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
-						<param name="fallback" value="flags/audiochannel/fallback.png" />
-						<param name="top" value="5" />
-					</include>
-				</control>
-				<control type="group">
-					<width>5</width>
-					<visible>![Skin.HasSetting(show_mediadurationflag) + Skin.HasSetting(show_mediaendtimeflag)]</visible>
-					<include content="MediaFlag">
-						<param name="width" value="0" />
-					</include>
-				</control>
-				<control type="group">
-					<width>176</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)</visible>
-					<visible>!Skin.HasSetting(show_mediadurationflag)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/time.png" />
-						<param name="width" value="176" />
-					</include>
-					<control type="label">
-						<width>119</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[DurationVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>162</width>
-					<top>5</top>
 					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(12500) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !$EXP[subCategories] + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
 					<visible>!String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
 					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/finishtime.png" />
-						<param name="width" value="162" />
+						<param name="width" value="130" />
+						<param name="label_width" value="87" />
+						<param name="label_left" value="43" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]" />
+						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)" />
 					</include>
-					<control type="label">
-						<width>105</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)</visible>
-					</control>
-					<control type="label">
-						<width>105</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)</visible>
-					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/finishtime.png" />
+						<param name="width" value="130" />
+						<param name="label_width" value="87" />
+						<param name="label_left" value="43" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]" />
+						<param name="visible" value="String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)" />
+					</include>
 				</control>
 				<control type="group">
-					<width>222</width>
-					<top>5</top>
+					<width>178</width>
 					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(12500) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !$EXP[subCategories] + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
 					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
 					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/finishtime_long.png" />
-						<param name="width" value="222" />
+						<param name="width" value="178" />
+						<param name="label_width" value="135" />
+						<param name="label_left" value="43" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]" />
+						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)" />
 					</include>
-					<control type="label">
-						<width>165</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)</visible>
-					</control>
-					<control type="label">
-						<width>165</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<width>5</width>
-					<visible>!Skin.HasSetting(show_dateairedflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered)</visible>
 					<include content="MediaFlag">
-						<param name="width" value="0" />
+						<param name="texture" value="flags/finishtime_long.png" />
+						<param name="width" value="178" />
+						<param name="label_width" value="135" />
+						<param name="label_left" value="43" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]" />
+						<param name="visible" value="String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)" />
 					</include>
 				</control>
-				<control type="group">
-					<width>250</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + !String.IsEqual(ListItem.Premiered,ListItem.Year)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/premiered.png" />
-						<param name="width" value="250" />
-					</include>
-					<control type="label">
-						<width>192</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<scroll>true</scroll>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>150</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + String.IsEqual(ListItem.Premiered,ListItem.Year)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/premiered_short.png" />
-						<param name="width" value="150" />
-					</include>
-					<control type="label">
-						<width>92</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<scroll>true</scroll>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>5</width>
-					<visible>!Skin.HasSetting(show_mpaaflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa)</visible>
-					<include content="MediaFlag">
-						<param name="width" value="0" />
-					</include>
-				</control>
-				<control type="group">
-					<width>120</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)</visible>
-					<visible>!String.Contains(ListItem.mpaa,PG-13) + !String.Contains(Container(60).ListItem.mpaa,PG-13) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) + !String.Contains(ListItem.mpaa,NC-17) + !String.Contains(Container(60).ListItem.mpaa,NC-17) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
-					<visible>!Skin.HasSetting(show_mpaaflag)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[MPAAImageVar]" />
-						<param name="width" value="120" />
-					</include>
-					<control type="label">
-						<width>54</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>62</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[MPAAFlagVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>180</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)</visible>
-					<visible>String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
-					<visible>!Skin.HasSetting(show_mpaaflag)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[MPAAImageVar]" />
-						<param name="width" value="180" />
-					</include>
-					<control type="label">
-						<width>114</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>62</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[MPAAFlagVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
+				<include content="MediaFlag">
+					<param name="width" value="5" />
+					<param name="visible" value="!Skin.HasSetting(show_dateairedflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/premiered.png" />
+					<param name="width" value="200" />
+					<param name="label_width" value="155" />
+					<param name="label_left" value="45" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + !String.IsEqual(ListItem.Premiered,ListItem.Year)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/premiered_short.png" />
+					<param name="width" value="120" />
+					<param name="label_width" value="77" />
+					<param name="label_left" value="41" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + String.IsEqual(ListItem.Premiered,ListItem.Year)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="width" value="5" />
+					<param name="visible" value="!Skin.HasSetting(show_mpaaflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[MPAAImageVar]" />
+					<param name="width" value="96" />
+					<param name="label_width" value="46" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$VAR[MPAAFlagVar]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mpaaflag) + !String.Contains(ListItem.mpaa,PG-13) + !String.Contains(Container(60).ListItem.mpaa,PG-13) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) + !String.Contains(ListItem.mpaa,NC-17) + !String.Contains(Container(60).ListItem.mpaa,NC-17) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[MPAAImageVar]" />
+					<param name="width" value="144" />
+					<param name="label_width" value="94" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$VAR[MPAAFlagVar]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mpaaflag) + String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)" />
+				</include>
 			</control>
 		</definition>
 	</include>
@@ -1323,171 +1152,135 @@
 		<param name="infolabel_prefix"/>
 		<definition>
 			<control type="group">
-				<width>130</width>
-				<height>50</height>
+				<width>104</width>
+				<height>40</height>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.1)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.2)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.3))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/language.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="56" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.1)]" />
 				</include>
-				<control type="label">
-					<width>63</width>
-					<left>57</left>
-					<height>50</height>
-					<align>center</align>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.1)]</label>
-					<font>Font-Flag-Small</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<width>205</width>
-				<height>50</height>
+				<width>164</width>
+				<height>40</height>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.1)) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.2)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.3))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/language.2.png" />
-					<param name="width" value="205" />
+					<param name="width" value="164" />
+					<param name="label_width" value="56" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.1)]" />
 				</include>
 				<control type="label">
-					<width>63</width>
-					<left>57</left>
-					<height>50</height>
-					<align>center</align>
-					<label>$INFO[ListItem.Property($PARAM[infolabel_prefix]AudioLanguage.1)]</label>
-					<font>Font-Flag-Small</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<width>63</width>
-					<left>132</left>
-					<height>50</height>
+					<width>58</width>
+					<left>104</left>
+					<height>40</height>
 					<align>center</align>
 					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.2)]</label>
-					<font>Font-Flag-Small</font>
+					<font>Font-Flag-Small3</font>
 					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 				</control>
 			</control>
 			<control type="group">
-				<width>280</width>
-				<height>50</height>
+				<width>224</width>
+				<height>40</height>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.1)) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.2)) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.3))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/language.3.png" />
-					<param name="width" value="280" />
+					<param name="width" value="224" />
+					<param name="label_width" value="56" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.1)]" />
 				</include>
 				<control type="label">
-					<width>63</width>
-					<left>57</left>
-					<height>50</height>
-					<align>center</align>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.1)]</label>
-					<font>Font-Flag-Small</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<width>63</width>
-					<left>132</left>
-					<height>50</height>
+					<width>56</width>
+					<left>106</left>
+					<height>40</height>
 					<align>center</align>
 					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.2)]</label>
-					<font>Font-Flag-Small</font>
+					<font>Font-Flag-Small3</font>
 					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 				</control>
 				<control type="label">
-					<width>63</width>
-					<left>207</left>
-					<height>50</height>
+					<width>56</width>
+					<left>164</left>
+					<height>40</height>
 					<align>center</align>
 					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(AudioLanguage.3)]</label>
-					<font>Font-Flag-Small</font>
+					<font>Font-Flag-Small3</font>
 					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 				</control>
 			</control>
-			<control type="image">
-				<width>10</width>
-				<height>10</height>
-				<aspectratio>keep</aspectratio>
-				<texture/>
+			<control type="group">
+				<width>5</width>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1))</visible>
+				<include content="MediaFlag">
+					<param name="width" value="0" />
+				</include>
 			</control>
 			<control type="group">
-				<width>130</width>
-				<height>50</height>
+				<width>104</width>
+				<height>40</height>
 				<visible>!String.IsEmpty(ListItem.Property($PARAM[infolabel_prefix]SubtitleLanguage.1)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.3))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/st_language.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="56" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)]" />
 				</include>
-				<control type="label">
-					<width>63</width>
-					<left>57</left>
-					<height>50</height>
-					<align>center</align>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)]</label>
-					<font>Font-Flag-Small</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<width>205</width>
-				<height>50</height>
+				<width>164</width>
+				<height>40</height>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property($PARAM[infolabel_prefix]SubtitleLanguage.2)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.3))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/st_language.2.png" />
-					<param name="width" value="205" />
+					<param name="width" value="164" />
+					<param name="label_width" value="56" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)]" />
 				</include>
 				<control type="label">
-					<width>63</width>
-					<left>57</left>
-					<height>50</height>
-					<align>center</align>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)]</label>
-					<font>Font-Flag-Small</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<width>63</width>
-					<left>132</left>
-					<height>50</height>
+					<width>56</width>
+					<left>106</left>
+					<height>40</height>
 					<align>center</align>
 					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.2)]</label>
-					<font>Font-Flag-Small</font>
+					<font>Font-Flag-Small3</font>
 					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 				</control>
 			</control>
 			<control type="group">
-				<width>280</width>
-				<height>50</height>
+				<width>224</width>
+				<height>40</height>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property($PARAM[infolabel_prefix]SubtitleLanguage.2)) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.3))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/st_language.3.png" />
-					<param name="width" value="280" />
+					<param name="width" value="224" />
+					<param name="label_width" value="56" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)]" />
 				</include>
 				<control type="label">
-					<width>63</width>
-					<left>57</left>
-					<height>50</height>
-					<align>center</align>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)]</label>
-					<font>Font-Flag-Small</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<width>63</width>
-					<left>132</left>
-					<height>50</height>
+					<width>56</width>
+					<left>106</left>
+					<height>40</height>
 					<align>center</align>
 					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.2)]</label>
-					<font>Font-Flag-Small</font>
+					<font>Font-Flag-Small3</font>
 					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 				</control>
 				<control type="label">
-					<width>63</width>
-					<left>207</left>
-					<height>50</height>
+					<width>56</width>
+					<left>164</left>
+					<height>40</height>
 					<align>center</align>
 					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.3)]</label>
-					<font>Font-Flag-Small</font>
+					<font>Font-Flag-Small3</font>
 					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 				</control>
 			</control>
@@ -1497,185 +1290,104 @@
 		<param name="infolabel_prefix"/>
 		<definition>
 			<control type="group">
-				<top>5</top>
-				<width>130</width>
+				<width>104</width>
 				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/imdb.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating(imdb)]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>51</left>
-					<width>76</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Rating(imdb)]</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<top>5</top>
-				<width>130</width>
+				<width>104</width>
 				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tmdb))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/tmdb.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating(tmdb)]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>51</left>
-					<width>76</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Rating(tmdb)]</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<top>5</top>
-				<width>130</width>
+				<width>104</width>
 				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(themoviedb))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/tmdb.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating(themoviedb)]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>51</left>
-					<width>76</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Rating(themoviedb)]</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
+
 			</control>
 			<control type="group">
-				<top>5</top>
-				<width>130</width>
+				<width>104</width>
 				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tvdb))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/tvdb.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating(tvdb)]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>51</left>
-					<width>76</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Rating(tvdb)]</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<top>5</top>
-				<width>140</width>
+				<width>112</width>
 				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(Window(Home).Property(rotten))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/rotten.png" />
-					<param name="width" value="140" />
+					<param name="width" value="112" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="52" />
+					<param name="label" value="$INFO[Window(Home).Property(rotten),,%]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>52</left>
-					<width>86</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<visible>!String.IsEmpty(Window(Home).Property(rotten))</visible>
-					<label>$INFO[Window(Home).Property(rotten)]%</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<top>5</top>
-				<width>130</width>
+				<width>104</width>
 				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(Window(Home).Property(metacritic))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/metacritic.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$INFO[Window(Home).Property(metacritic)]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>51</left>
-					<width>76</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[Window(Home).Property(metacritic)]</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<top>5</top>
-				<width>130</width>
+				<width>104</width>
 				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(trakt))</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/trakt.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating(trakt)]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>51</left>
-					<width>76</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Rating(trakt)]</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<top>5</top>
-				<width>130</width>
+				<width>104</width>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating) + [Container.Content(albums) | Container.Content(songs)]</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/rating.png" />
-					<param name="width" value="130" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>51</left>
-					<width>76</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Rating]</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 			<control type="group">
-				<top>5</top>
-				<width>103</width>
+				<width>82</width>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.UserRating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/myrating.png" />
-					<param name="width" value="103" />
+					<param name="width" value="82" />
+					<param name="label_width" value="41" />
+					<param name="label_left" value="39" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.UserRating]" />
 				</include>
-				<control type="label">
-					<top>-1</top>
-					<left>51</left>
-					<width>49</width>
-					<height>50</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[$PARAM[infolabel_prefix]ListItem.UserRating]</label>
-					<font>font_flag</font>
-					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-				</control>
 			</control>
 		</definition>
 	</include>
@@ -1693,269 +1405,164 @@
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
 				<left>50</left>
-				<top>5</top>
+				<top>20</top>
 				<height>70</height>
 				<align>$PARAM[align]</align>
-				<itemgap>5</itemgap>
-				<width>1900</width>
+				<itemgap>3</itemgap>
+				<width>1200</width>
 				<usecontrolcoords>true</usecontrolcoords>
 				<visible>$PARAM[visible]</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/hdtv.png" />
-					<param name="width" value="71" />
+					<param name="width" value="58" />
 					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdtv) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,pdtv) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdtvrip) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,tvrip)" />
-					<param name="top" value="5" />
+					<param name="visible2" value="" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/vhs.png" />
-					<param name="width" value="71" />
+					<param name="width" value="58" />
 					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,vhs) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,vhsrip)" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/hddvd.png" />
-					<param name="width" value="71" />
+					<param name="width" value="58" />
 					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hddvd)" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/webdl.png" />
-					<param name="width" value="71" />
+					<param name="width" value="58" />
 					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web-dl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,webdl)" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/dvd.png" />
-					<param name="width" value="71" />
+					<param name="width" value="58" />
 					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,dvd)" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/bluray.png" />
-					<param name="width" value="71" />
+					<param name="width" value="58" />
 					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,bluray) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,blu-ray) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,bdrip)" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/iso.png" />
-					<param name="width" value="71" />
+					<param name="width" value="58" />
 					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,.iso)" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$PARAM[resolution_var]" />
+					<param name="width" value="58" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)" />
-					<param name="width" value="71" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoCodec,flags/videocodec/,.png]" />
 					<param name="fallback" value="flags/videocodec/fallback.png" />
+					<param name="width" value="104" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoCodec)" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[HdrTypeVar]" />
-					<param name="visible" value="String.Contains(Control.GetLabel(4394),hdr) | String.Contains(Control.GetLabel(4394),hlg)" />
-					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
-					<param name="width" value="71" />
-					<param name="top" value="5" />
+					<param name="width" value="58" />
+					<param name="visible" value="[String.Contains(Control.GetLabel(4394),hdr) | String.Contains(Control.GetLabel(4394),hlg)] + !Skin.HasSetting(show_mediacolordepthflag)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[HdrTypeVar]" />
-					<param name="visible" value="String.Contains(Control.GetLabel(4394),dolbyvision)" />
-					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
-					<param name="width" value="115" />
-					<param name="top" value="5" />
+					<param name="width" value="92" />
+					<param name="visible" value="String.Contains(Control.GetLabel(4394),dolbyvision) + !Skin.HasSetting(show_mediacolordepthflag)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
 					<param name="fallback" value="flags/aspectratio/fallback.png" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
-					<param name="width" value="108" />
-					<param name="top" value="5" />
+					<param name="width" value="86" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)<" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$PARAM[audiocodec_var]" />
+					<param name="fallback" value="flags/audiocodec/fallback.png" />
+					<param name="width" value="104" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
 					<param name="fallback" value="flags/audiochannel/fallback.png" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)" />
-					<param name="top" value="5" />
+					<param name="width" value="104" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)<" />
 				</include>
 				<include content="MediaFlag">
-					<param name="width" value="0" />
-					<param name="top" value="5" />
+					<param name="width" value="5" />
 					<param name="visible" value="!Container.Content(tvshows) + !Container.Content(albums) + !Container.Content(songs)" />
 				</include>
-				<control type="group">
-					<width>176</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/time.png" />
-						<param name="width" value="176" />
-					</include>
-					<control type="label">
-						<width>119</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[ListItem.Duration]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/time.png" />
+					<param name="width" value="141" />
+					<param name="label_width" value="98" />
+					<param name="label_left" value="41" />
+					<param name="label" value="$INFO[ListItem.Duration]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song)" />
+				</include>
 				<include content="MediaFlagsRatings">
 					<param name="infolabel_prefix"/>
 				</include>
 				<include content="MediaFlag">
-					<param name="width" value="0" />
-					<param name="top" value="5" />
-					<param name="visible" value="!Skin.HasSetting(show_mpaaflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa)" />
+					<param name="width" value="5" />
+					<param name="visible" value="!Container.Content(tvshows) + !Container.Content(albums) + !Container.Content(songs)" />
 				</include>
-				<control type="group">
-					<width>120</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)</visible>
-					<visible>!String.Contains(ListItem.mpaa,PG-13) + !String.Contains(Container(60).ListItem.mpaa,PG-13) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) + !String.Contains(ListItem.mpaa,NC-17) + !String.Contains(Container(60).ListItem.mpaa,NC-17) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
-					<visible>!Skin.HasSetting(show_mpaaflag)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[MPAAImageVar]" />
-						<param name="width" value="120" />
-					</include>
-					<control type="label">
-						<width>54</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>62</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[MPAAFlagVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>180</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)</visible>
-					<visible>String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
-					<visible>!Skin.HasSetting(show_mpaaflag)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[MPAAImageVar]" />
-						<param name="width" value="180" />
-					</include>
-					<control type="label">
-						<width>114</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>62</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[MPAAFlagVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<include content="MediaFlagOSD">
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[MPAAImageVar]" />
+					<param name="width" value="96" />
+					<param name="label_width" value="46" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$VAR[MPAAFlagVar]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mpaaflag) + !String.Contains(ListItem.mpaa,PG-13) + !String.Contains(Container(60).ListItem.mpaa,PG-13) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) + !String.Contains(ListItem.mpaa,NC-17) + !String.Contains(Container(60).ListItem.mpaa,NC-17) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[MPAAImageVar]" />
+					<param name="width" value="144" />
+					<param name="label_width" value="94" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$VAR[MPAAFlagVar]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mpaaflag) + [String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)]" />
+				</include>
+				<include content="MediaFlag">
 					<param name="texture" value="$VAR[VideoPlayerAudioCodecFlagVar]" />
+					<param name="width" value="104" />
 					<param name="fallback" value="flags/audiocodec/fallback.png" />
-					<param name="top" value="5" />
 					<param name="visible" value="Window.IsVisible(1141)" />
 				</include>
-				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
-					<param name="fallback" value="flags/audiochannel/fallback.png" />
-					<param name="top" value="5" />
-					<param name="visible" value="Window.IsVisible(1141)" />
+				<include content="MediaFlag">
+					<param name="texture" value="flags/cadre2.png" />
+					<param name="width" value="164" />
+					<param name="label_width" value="158" />
+					<param name="label_left" value="3" />
+					<param name="label" value="$INFO[MusicPlayer.SampleRate,, kHz]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(1141)" />
 				</include>
-				<control type="group">
-					<width>205</width>
-					<height>50</height>
-					<visible>!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(1141)</visible>
-					<control type="image">
-						<top>5</top>
-						<width>205</width>
-						<height>50</height>
-						<texture>flags/cadre2.png</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label">
-						<top>4</top>
-						<left>3</left>
-						<width>199</width>
-						<height>50</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[MusicPlayer.SampleRate,, kHz]</label>
-						<font>font_flag</font>
-					</control>
-				</control>
-				<control type="group">
-					<width>205</width>
-					<height>50</height>
-					<visible>!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(1141)</visible>
-					<control type="image">
-						<top>5</top>
-						<width>205</width>
-						<height>50</height>
-						<texture>flags/cadre2.png</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label">
-						<top>4</top>
-						<left>3</left>
-						<width>199</width>
-						<height>50</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
-						<font>font_flag</font>
-					</control>
-				</control>
-				<control type="group">
-					<width>205</width>
-					<height>50</height>
-					<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(1141)</visible>
-					<control type="image">
-						<top>5</top>
-						<width>205</width>
-						<height>50</height>
-						<texture>flags/cadre2.png</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label">
-						<top>4</top>
-						<left>3</left>
-						<width>199</width>
-						<height>50</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[MusicPlayer.BitsPerSample,, bits]</label>
-						<font>font_flag</font>
-					</control>
-				</control>
-				<control type="group">
-					<width>204</width>
-					<height>40</height>
-					<visible>!String.IsEmpty(MusicPlayer.UserRating) + Window.IsVisible(1141)</visible>
-					<control type="image">
-						<top>5</top>
-						<width>204</width>
-						<height>50</height>
-						<texture>$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-				</control>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/cadre2.png" />
+					<param name="width" value="164" />
+					<param name="label_width" value="158" />
+					<param name="label_left" value="3" />
+					<param name="label" value="$INFO[MusicPlayer.BitRate,, kbps]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Bitrate) + !$EXP[isLossless] + Window.IsVisible(1141)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/cadre2.png" />
+					<param name="width" value="164" />
+					<param name="label_width" value="158" />
+					<param name="label_left" value="3" />
+					<param name="label" value="$INFO[MusicPlayer.BitsPerSample,, bits]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(1141)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[MusicPlayer.UserRating,flags/starrating/,.png]" />
+					<param name="width" value="163" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.UserRating) + Window.IsVisible(1141)" />
+				</include>
 			</control>
 		</definition>
 	</include>
+
 	<include name="MediaFlagsInfoDialogRight">
 		<param name="infolabel_prefix" />
 		<param name="pvr">false</param>
@@ -1967,393 +1574,164 @@
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
 				<right>50</right>
-				<top>5</top>
+				<top>20</top>
 				<height>70</height>
 				<align>$PARAM[align]</align>
-				<itemgap>5</itemgap>
+				<itemgap>3</itemgap>
 				<width>1900</width>
 				<usecontrolcoords>true</usecontrolcoords>
 				<visible>$PARAM[visible]</visible>
+				<include content="MediaFlag" condition="$PARAM[pvr]">
+					<param name="texture" value="flags/tmdb.png" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$VAR[PVRMetadataRatingTmdbVar]" />
+					<param name="visible" value="[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tmdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.tmdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.themoviedb))]" />
+				</include>
+				<include content="MediaFlag" condition="$PARAM[pvr]">
+					<param name="texture" value="flags/imdb.png" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$VAR[PVRMetadataRatingImdbVar]" />
+					<param name="visible" value="[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.imdb))]" />
+				</include>
+				<include content="MediaFlag" condition="$PARAM[pvr] + !Skin.HasSetting(show_mpaaflag)">
+					<param name="texture" value="$VAR[MPAAImageVar]" />
+					<param name="width" value="96" />
+					<param name="label_width" value="46" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$VAR[MPAAFlagVar]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))" />
+					<param name="visible2" value="!String.Contains(ListItem.mpaa,PG-13) + !String.Contains(Container(60).ListItem.mpaa,PG-13) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) + !String.Contains(ListItem.mpaa,NC-17) + !String.Contains(Container(60).ListItem.mpaa,NC-17) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)" />
+				</include>
+				<include content="MediaFlag" condition="$PARAM[pvr] + !Skin.HasSetting(show_mpaaflag)">
+					<param name="texture" value="$VAR[MPAAImageVar]" />
+					<param name="width" value="144" />
+					<param name="label_width" value="94" />
+					<param name="label_left" value="48" />
+					<param name="label" value="$VAR[MPAAFlagVar]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))" />
+					<param name="visible2" value="String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/time.png" />
+					<param name="width" value="141" />
+					<param name="label_width" value="98" />
+					<param name="label_left" value="41" />
+					<param name="label" value="$VAR[DurationVar]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song) + !Control.HasFocus(6600)  + !Control.HasFocus(66001)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediadurationflag)" />
+				</include>
 				<control type="group">
-					<top>5</top>
 					<width>130</width>
-					<visible>$PARAM[pvr]</visible>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tmdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.tmdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.themoviedb))</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/tmdb.png" />
-						<param name="width" value="130" />
-					</include>
-					<control type="label">
-						<top>-1</top>
-						<left>51</left>
-						<width>76</width>
-						<height>50</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$VAR[PVRMetadataRatingTmdbVar]</label>
-						<font>font_flag</font>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<top>5</top>
-					<width>130</width>
-					<visible>$PARAM[pvr]</visible>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.ratings.imdb))</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/imdb.png" />
-						<param name="width" value="130" />
-					</include>
-					<control type="label">
-						<top>-1</top>
-						<left>51</left>
-						<width>76</width>
-						<height>50</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$VAR[PVRMetadataRatingImdbVar]</label>
-						<font>font_flag</font>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>120</width>
-					<top>5</top>
-					<visible>$PARAM[pvr]</visible>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))</visible>
-					<visible>!String.Contains(ListItem.mpaa,PG-13) + !String.Contains(ListItem.ParentalRatingCode,PG-13) + !String.Contains(Container(60).ListItem.mpaa,PG-13) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) + !String.Contains(ListItem.mpaa,NC-17) + !String.Contains(ListItem.ParentalRatingCode,NC-17) + !String.Contains(Container(60).ListItem.mpaa,NC-17) + !String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[MPAAImageVar]" />
-						<param name="width" value="120" />
-					</include>
-					<control type="label">
-						<width>54</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>62</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[MPAAFlagVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>180</width>
-					<top>5</top>
-					<visible>$PARAM[pvr]</visible>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.mpaa))</visible>
-					<visible>String.Contains(ListItem.mpaa,PG-13) | String.Contains(ListItem.ParentalRatingCode,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(ListItem.ParentalRatingCode,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[MPAAImageVar]" />
-						<param name="width" value="180" />
-					</include>
-					<control type="label">
-						<width>114</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>62</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[MPAAFlagVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>176</width>
-					<top>5</top>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/time.png" />
-						<param name="width" value="176" />
-					</include>
-					<control type="label">
-						<width>119</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[DurationVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<width>162</width>
-					<top>5</top>
-					<visible>![String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTime,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTime,PM)] + [!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)</visible>
+					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(12500) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !$EXP[subCategories] + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
+					<visible>!String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
+					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/finishtime.png" />
-						<param name="width" value="162" />
+						<param name="width" value="130" />
+						<param name="label_width" value="87" />
+						<param name="label_left" value="43" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]" />
+						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)" />
 					</include>
-					<control type="label">
-						<width>105</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)</visible>
-					</control>
-					<control type="label">
-						<width>105</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)</visible>
-					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/finishtime.png" />
+						<param name="width" value="130" />
+						<param name="label_width" value="87" />
+						<param name="label_left" value="43" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]" />
+						<param name="visible" value="String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)" />
+					</include>
 				</control>
 				<control type="group">
-					<width>222</width>
-					<top>5</top>
-					<visible>[String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTime,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTime,PM)] + [!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)</visible>
+					<width>178</width>
+					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(12500) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !$EXP[subCategories] + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
+					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
+					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/finishtime_long.png" />
-						<param name="width" value="222" />
+						<param name="width" value="178" />
+						<param name="label_width" value="135" />
+						<param name="label_left" value="43" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]" />
+						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)" />
 					</include>
-					<control type="label">
-						<width>165</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTimeResume]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume)</visible>
-					</control>
-					<control type="label">
-						<width>165</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						<scroll>true</scroll>
-						<visible>String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)</visible>
-					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/finishtime_long.png" />
+						<param name="width" value="178" />
+						<param name="label_width" value="135" />
+						<param name="label_left" value="43" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.EndTime]" />
+						<param name="visible" value="String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)" />
+					</include>
 				</control>
 			</control>
 		</definition>
 	</include>
-	<include name="MediaFlagsExtendedInfoLeft">
-		<param name="visible">true</param>
-		<param name="align">left</param>
-		<definition>
-			<control type="grouplist">
-				<orientation>horizontal</orientation>
-				<left>400</left>
-				<top>5</top>
-				<height>70</height>
-				<align>$PARAM[align]</align>
-				<itemgap>5</itemgap>
-				<width>1900</width>
-				<usecontrolcoords>true</usecontrolcoords>
-				<visible>$PARAM[visible]</visible>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[Window.Property(VideoResolution),flags/videoresolution/,.png]" />
-					<param name="visible" value="!String.IsEmpty(Window.Property(VideoResolution))" />
-					<param name="width" value="71" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[Window.Property(VideoCodec),flags/videocodec/,.png]" />
-					<param name="visible" value="!String.IsEmpty(Window.Property(VideoCodec))" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[Window.Property(VideoAspect),flags/aspectratio/,.png]" />
-					<param name="fallback" value="flags/aspectratio/fallback.png" />
-					<param name="visible" value="!String.IsEmpty(Window.Property(VideoAspect))" />
-					<param name="width" value="108" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[Window.Property(AudioCodec),flags/audiocodec/,.png]" />
-					<param name="visible" value="!String.IsEmpty(Window.Property(AudioCodec))" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[Window.Property(AudioChannels),flags/audiochannel/,.png]" />
-					<param name="fallback" value="flags/audiochannel/fallback.png" />
-					<param name="visible" value="!String.IsEmpty(Window.Property(AudioChannels))" />
-					<param name="top" value="5" />
-				</include>
-				<control type="group">
-					<top>5</top>
-					<width>130</width>
-					<visible>!String.IsEmpty(Window.Property(Rating))</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/rating.png" />
-						<param name="width" value="130" />
-					</include>
-					<control type="label">
-						<top>-1</top>
-						<left>51</left>
-						<width>76</width>
-						<height>50</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Rating)]</label>
-						<font>font_flag</font>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<top>5</top>
-					<width>103</width>
-					<visible>!String.IsEmpty(Window.Property(Rated))</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/myrating.png" />
-						<param name="width" value="103" />
-					</include>
-					<control type="label">
-						<top>-1</top>
-						<left>51</left>
-						<width>49</width>
-						<height>50</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Rated)]</label>
-						<font>font_flag</font>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-			</control>
-		</definition>
-	</include>
-	<include name="MediaFlagsExtendedInfoRight">
-		<param name="visible">true</param>
-		<param name="align">right</param>
-		<definition>
-			<control type="grouplist">
-				<orientation>horizontal</orientation>
-				<right>50</right>
-				<top>5</top>
-				<height>70</height>
-				<align>$PARAM[align]</align>
-				<itemgap>5</itemgap>
-				<width>1900</width>
-				<usecontrolcoords>true</usecontrolcoords>
-				<visible>$PARAM[visible]</visible>
-				<control type="group">
-					<width>176</width>
-					<top>5</top>
-					<visible>!String.IsEmpty(Window.Property(Duration)) + !String.IsEqual(Window.Property(type),tvshow)</visible>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/time.png" />
-						<param name="width" value="176" />
-					</include>
-					<control type="label">
-						<width>119</width>
-						<top>-1</top>
-						<height>50</height>
-						<posx>54</posx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font_flag</font>
-						<label>$VAR[ExtendedInfoDurationVar]</label>
-						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-					</control>
-				</control>
-			</control>
-		</definition>
-	</include>
+
 	<include name="MediaFlagPVR">
 		<control type="group">
-			<width>60</width>
+			<width>61</width>
 			<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
-			<include content="MediaFlagOSD">
+			<include content="MediaFlag">
 				<param name="texture" value="flags/cadre_small.png" />
-				<param name="width" value="60"/>
+				<param name="width" value="61"/>
 			</include>
 			<control type="image">
 				<left>12</left>
-				<top>7</top>
+				<top>2</top>
 				<width>36</width>
 				<height>36</height>
 				<aspectratio>scale</aspectratio>
 				<texture colordiffuse="$VAR[SkinColorVar]">icons/extendedinfo/OverlayLocal.png</texture>
 			</control>
 		</control>
-		<control type="group">
-			<width>60</width>
-			<visible>PVR.IsRecording</visible>
-			<include content="MediaFlagOSD">
-				<param name="texture" value="flags/cadre_small.png" />
-				<param name="width" value="60"/>
-			</include>
-			<control type="label">
-				<width>60</width>
-				<height>40</height>
-				<top>5</top>
-				<align>center</align>
-				<textcolor>FFFF0000</textcolor>
-				<label>$LOCALIZE[31667]</label>
-				<font>Font-Flag-Small3</font>
-			</control>
-		</control>
+		<include content="MediaFlag">
+			<param name="texture" value="flags/cadre_small.png" />
+			<param name="width" value="61" />
+			<param name="colordiffuse" value="FFFF0000" />
+			<param name="label_width" value="57" />
+			<param name="label_left" value="2" />
+			<param name="label" value="$LOCALIZE[31667]" />
+			<param name="visible" value="PVR.IsRecording" />
+		</include>
 		<control type="group">
 			<width>120</width>
 			<visible>System.GetBool(pvrplayback.signalquality) + $EXP[PvrHasNumberedDevices]</visible>
-			<include content="MediaFlagOSD">
+			<include content="MediaFlag">
 				<param name="texture" value="flags/pvr.png" />
 				<param name="width" value="120"/>
+				<param name="label_width" value="54" />
+				<param name="label_left" value="6" />
+				<param name="label" value="$LOCALIZE[31664]" />
 			</include>
 			<control type="label">
-				<top>5</top>
-				<width>60</width>
-				<height>40</height>
-				<align>center</align>
-				<label>$LOCALIZE[31664]</label>
-				<font>Font-Flag-Small3</font>
-			</control>
-			<control type="label">
-				<top>5</top>
 				<left>64</left>
 				<width>50</width>
 				<height>40</height>
 				<align>center</align>
 				<label>$VAR[PVRDeviceNumberVar]</label>
 				<font>Font-Flag-Small3</font>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 			</control>
 		</control>
 		<control type="group">
 			<width>120</width>
 			<visible>System.GetBool(pvrplayback.signalquality) + [Integer.IsGreater(PVR.ActStreamProgrSignal,0) | !Skin.HasSetting(disable_pvr_zerovalues)]</visible>
-			<include content="MediaFlagOSD">
+			<include content="MediaFlag">
 				<param name="texture" value="flags/pvr.png" />
 				<param name="width" value="120"/>
+				<param name="label_width" value="54" />
+				<param name="label_left" value="6" />
+				<param name="label" value="$LOCALIZE[31665]" />
 			</include>
-			<control type="label">
-				<top>5</top>
-				<width>60</width>
-				<height>40</height>
-				<align>center</align>
-				<label>$LOCALIZE[31665]</label>
-				<font>Font-Flag-Small3</font>
-			</control>
 			<control type="progress">
 				<left>64</left>
 				<width>50</width>
-				<top>11</top>
+				<top>6</top>
 				<height>28</height>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
@@ -2363,36 +1741,28 @@
 		<control type="group">
 			<width>120</width>
 			<visible>System.GetBool(pvrplayback.signalquality) + [Integer.IsGreater(PVR.ActStreamProgrSNR,0) | !Skin.HasSetting(disable_pvr_zerovalues)]</visible>
-			<include content="MediaFlagOSD">
+			<include content="MediaFlag">
 				<param name="texture" value="flags/pvr.png" />
 				<param name="width" value="120"/>
+				<param name="label_width" value="54" />
+				<param name="label_left" value="6" />
+				<param name="label" value="$LOCALIZE[31666]" />
 			</include>
-			<control type="label">
-				<top>5</top>
-				<width>60</width>
-				<height>40</height>
-				<align>center</align>
-				<label>$LOCALIZE[31666]</label>
-				<font>Font-Flag-Small3</font>
-			</control>
 			<control type="progress">
 				<left>64</left>
 				<width>50</width>
-				<top>11</top>
+				<top>6</top>
 				<height>28</height>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 				<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
 				<info>PVR.ActStreamProgrSNR</info>
 			</control>
 		</control>
-		<control type="group">
-			<width>62</width>
-			<visible>Pvr.ActStreamIsEncrypted</visible>
-			<include content="MediaFlag">
-				<param name="texture" value="flags/encrypt.png" />
-				<param name="width" value="62"/>
-			</include>
-		</control>
+		<include content="MediaFlag">
+			<param name="texture" value="flags/encrypt.png" />
+			<param name="width" value="62"/>
+			<param name="visible" value="Pvr.ActStreamIsEncrypted" />
+		</include>
 	</include>
 	<include name="MediaFlagPvrOsd">
 		<param name="visible">true</param>
@@ -2405,7 +1775,7 @@
 				<height>50</height>
 				<align>right</align>
 				<orientation>horizontal</orientation>
-				<itemgap>5</itemgap>
+				<itemgap>3</itemgap>
 				<orientation>horizontal</orientation>
 				<visible>$PARAM[visible]</visible>
 				<include condition="$PARAM[visible]" content="MediaFlagPVR" />
@@ -4330,7 +3700,7 @@
 					<bottom>245</bottom>
 					<width>360</width>
 					<height>360</height>
-					<visible>Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc)</visible>
+					<visible>Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
 					<control type="image" id="88888">
 						<left>0</left>
@@ -4430,7 +3800,7 @@
 						<bottom>5</bottom>
 						<width>440</width>
 						<height>440</height>
-						<aspectratio aligny="center" align="center">keep</aspectratio>
+						<aspectratio aligny="bottom" align="center">keep</aspectratio>
 						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
 						<bordersize>20</bordersize>
 					</control>
@@ -4641,86 +4011,93 @@
 							<height>50</height>
 							<align>left</align>
 							<orientation>horizontal</orientation>
-							<itemgap>5</itemgap>
-							<include content="MediaFlagOSD">
+							<itemgap>3</itemgap>
+							<include content="MediaFlag">
 								<param name="texture" value="flags/hdtv.png" />
 								<param name="width" value="58" />
-								<param name="visible" value="[String.Contains(Player.Filenameandpath,HDTV) | String.Contains(Player.Filenameandpath,PDTV) | String.Contains(Player.Filenameandpath,HDTVRIP) | String.Contains(Player.Filenameandpath,TVRIP) | String.Contains(Player..Filenameandpath,hdtv) | String.Contains(Player.Filenameandpath,pdtv) | String.Contains(Player.Filenameandpath,hdtvrip) | String.Contains(Player.Filenameandpath,tvrip)] + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="String.Contains(Player.Filenameandpath,hdtv) | String.Contains(Player.Filenameandpath,pdtv) | String.Contains(Player.Filenameandpath,hdtvrip) | String.Contains(Player.Filenameandpath,tvrip)" />
+								<param name="visible2" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="flags/vhs.png" />
 								<param name="width" value="58" />
-								<param name="visible" value="[String.Contains(Player.Filenameandpath,VHS) | String.Contains(Player.Filenameandpath,VHSRIP) | String.Contains(Player.Filenameandpath,vhs) | String.Contains(Player.Filenameandpath,vhsrip)] + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="String.Contains(Player.Filenameandpath,vhs) | String.Contains(Player.Filenameandpath,vhsrip)" />
+								<param name="visible2" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="flags/hddvd.png" />
 								<param name="width" value="58" />
-								<param name="visible" value="[String.Contains(Player.Filenameandpath,HDDVD) | String.Contains(Player.Filenameandpath,hddvd)] + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="String.Contains(Player.Filenameandpath,hddvd)" />
+								<param name="visible2" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="flags/webdl.png" />
 								<param name="width" value="58" />
-								<param name="visible" value="[String.Contains(Player.Filenameandpath,WEB-DL) | String.Contains(Player.Filenameandpath,WEBDL) | String.Contains(Player.Filenameandpath,web-dl) | String.Contains(Player.Filenameandpath,webdl)] + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="String.Contains(Player.Filenameandpath,web-dl) | String.Contains(Player.Filenameandpath,webdl)" />
+								<param name="visible2" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="flags/dvd.png" />
 								<param name="width" value="58" />
-								<param name="visible" value="[String.Contains(Player.Filenameandpath,DVD) | String.Contains(Player.Filenameandpath,dvd)] + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="String.Contains(Player.Filenameandpath,dvd)" />
+								<param name="visible2" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="flags/bluray.png" />
 								<param name="width" value="58" />
-								<param name="visible" value="[String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip) | String.Contains(Player.Filenameandpath,BLURAY) | String.Contains(Player.Filenameandpath,BLU-RAY) | String.Contains(Player.Filenameandpath,BDRIP)] + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip)" />
+								<param name="visible2" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
 								<param name="fallback" value="flags/videoresolution/fallback.png" />
 								<param name="width" value="58" />
 								<param name="visible" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
 								<param name="fallback" value="flags/videocodec/fallback.png" />
 								<param name="width" value="104" />
 								<param name="visible" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="$VAR[VideoPlayerHdrTypeVar]" />
 								<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(visualisation)" />
 								<param name="width" value="58" />
 								<param name="top" value="5" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="$VAR[VideoPlayerHdrTypeVar]" />
 								<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(visualisation)" />
 								<param name="width" value="94" />
 								<param name="top" value="5" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
 								<param name="fallback" value="flags/aspectratio/fallback.png" />
 								<param name="width" value="86" />
 								<param name="visible" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOsdWithLabel">
+							<include content="MediaFlag">
 								<param name="width" value="155" />
 								<param name="label_width" value="100" />
 								<param name="label_left" value="2" />
 								<param name="label" value="$INFO[Player.Process(VideoFPS)]" />
 								<param name="texture" value="flags/fps.png" />
 								<param name="visible" value="!String.IsEmpty(Player.Process(VideoFPS)) + Integer.IsGreater(Player.Process(VideoFPS),0)" />
+								<param name="visible2" value="!Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="$VAR[VideoPlayerAudioCodecFlagVar]" />
 								<param name="fallback" value="flags/audiocodec/fallback.png" />
 								<param name="width" value="104" />
 							</include>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
 								<param name="fallback" value="flags/audiochannel/fallback.png" />
 								<param name="width" value="104" />
 							</include>
-							<include content="MediaFlagOsdWithLabel">
+							<include content="MediaFlag">
 								<param name="width" value="180" />
 								<param name="label_width" value="176" />
 								<param name="label_left" value="2" />
@@ -4728,7 +4105,7 @@
 								<param name="texture" value="flags/cadre3.png" />
 								<param name="visible" value="!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOsdWithLabel">
+							<include content="MediaFlag">
 								<param name="width" value="180" />
 								<param name="label_width" value="176" />
 								<param name="label_left" value="2" />
@@ -4736,7 +4113,7 @@
 								<param name="texture" value="flags/cadre3.png" />
 								<param name="visible" value="!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOsdWithLabel">
+							<include content="MediaFlag">
 								<param name="width" value="155" />
 								<param name="label_width" value="151" />
 								<param name="label_left" value="2" />
@@ -4744,7 +4121,7 @@
 								<param name="texture" value="flags/cadre.png" />
 								<param name="visible" value="!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(visualisation)" />
 							</include>
-							<include content="MediaFlagOsdWithLabel">
+							<include content="MediaFlag">
 								<param name="width" value="155" />
 								<param name="label_width" value="151" />
 								<param name="label_left" value="2" />
@@ -4764,10 +4141,10 @@
 									<aspectratio>keep</aspectratio>
 								</control>
 							</control>
-							<include content="MediaFlagOSD">
+							<include content="MediaFlag">
 								<param name="width" value="5" />
 							</include>
-							<include content="MediaFlagOsdWithLabel">
+							<include content="MediaFlag">
 								<param name="width" value="104" />
 								<param name="label_width" value="64" />
 								<param name="label_left" value="40" />
@@ -4775,7 +4152,7 @@
 								<param name="texture" value="flags/language.png" />
 								<param name="visible" value="!String.IsEmpty(VideoPlayer.AudioLanguage)" />
 							</include>
-							<include content="MediaFlagOsdWithLabel">
+							<include content="MediaFlag">
 								<param name="width" value="104" />
 								<param name="label_width" value="64" />
 								<param name="label_left" value="40" />

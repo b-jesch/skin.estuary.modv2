@@ -126,52 +126,76 @@
 				<height>60</height>
 				<align>right</align>
 				<orientation>horizontal</orientation>
-				<itemgap>5</itemgap>
+				<itemgap>3</itemgap>
 				<visible>!Player.ChannelPreviewActive</visible>
-				<include content="MediaFlagOSD">
-					<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
-					<param name="fallback" value="flags/videoresolution/fallback.png" />
-					<param name="width" value="58" />
-				</include>
-				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
-					<param name="fallback" value="flags/videocodec/fallback.png" />
-					<param name="width" value="104" />
-				</include>
-				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
-					<param name="fallback" value="flags/aspectratio/fallback.png" />
-					<param name="width" value="86" />
-				</include>
-				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
-					<param name="fallback" value="flags/audiocodec/fallback.png" />
-					<param name="width" value="104" />
-				</include>
-				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
-					<param name="fallback" value="flags/audiochannel/fallback.png" />
-					<param name="width" value="104" />
-				</include>
-				<include content="MediaFlagOsdWithLabel">
-					<param name="width" value="104" />
-					<param name="label_width" value="64" />
-					<param name="label_left" value="40" />
-					<param name="label" value="$INFO[VideoPlayer.AudioLanguage]" />
-					<param name="texture" value="flags/language.png" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.AudioLanguage)" />
-				</include>
-				<include content="MediaFlagOsdWithLabel">
-					<param name="width" value="104" />
-					<param name="label_width" value="64" />
-					<param name="label_left" value="40" />
-					<param name="label" value="$INFO[VideoPlayer.SubtitlesLanguage]" />
-					<param name="texture" value="flags/st_language.png" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled" />
-				</include>
-				<include content="MediaFlagOSD">
-					<param name="width" value="5" />
-				</include>
+				<control type="group">
+					<width>58</width>
+					<include content="MediaFlag">
+						<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
+						<param name="fallback" value="flags/videoresolution/fallback.png" />
+						<param name="width" value="58" />
+					</include>
+				</control>
+				<control type="group">
+					<width>104</width>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
+						<param name="fallback" value="flags/videocodec/fallback.png" />
+						<param name="width" value="104" />
+					</include>
+				</control>
+				<control type="group">
+					<width>86</width>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
+						<param name="fallback" value="flags/aspectratio/fallback.png" />
+						<param name="width" value="86" />
+					</include>
+				</control>
+				<control type="group">
+					<width>104</width>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
+						<param name="fallback" value="flags/audiocodec/fallback.png" />
+						<param name="width" value="104" />
+					</include>
+				</control>
+				<control type="group">
+					<width>104</width>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
+						<param name="fallback" value="flags/audiochannel/fallback.png" />
+						<param name="width" value="104" />
+					</include>
+				</control>
+				<control type="group">
+					<width>104</width>
+					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+					<include content="MediaFlag">
+						<param name="width" value="104" />
+						<param name="label_width" value="64" />
+						<param name="label_left" value="40" />
+						<param name="label" value="$INFO[VideoPlayer.AudioLanguage]" />
+						<param name="texture" value="flags/language.png" />
+					</include>
+				</control>
+				<control type="group">
+					<width>104</width>
+					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled</visible>
+					<include content="MediaFlag">
+						<param name="width" value="104" />
+						<param name="label_width" value="64" />
+						<param name="label_left" value="40" />
+						<param name="label" value="$INFO[VideoPlayer.SubtitlesLanguage]" />
+						<param name="texture" value="flags/st_language.png" />
+					</include>
+				</control>
+				<control type="group">
+					<width>5</width>
+					<include content="MediaFlag">
+						<param name="width" value="0" />
+					</include>
+				</control>
 				<include>MediaFlagPVR</include>
 			</control>
 		</control>
