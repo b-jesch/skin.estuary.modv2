@@ -1416,7 +1416,6 @@
 					<param name="texture" value="flags/hdtv.png" />
 					<param name="width" value="58" />
 					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdtv) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,pdtv) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,hdtvrip) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,tvrip)" />
-					<param name="visible2" value="" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/vhs.png" />
