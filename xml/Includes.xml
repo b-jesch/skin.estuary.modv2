@@ -790,7 +790,6 @@
 		</control>
 	</include>
 	<include name="MediaFlag">
-		<param name="top">0</param>
 		<param name="width">104</param>
 		<param name="height">40</param>
 		<param name="label_width">50</param>
@@ -805,7 +804,6 @@
 				<width>$PARAM[width]</width>
 				<visible>$PARAM[visible] + $PARAM[visible2]</visible>
 				<control type="image">
-					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
 					<fadetime>0</fadetime>
@@ -816,7 +814,6 @@
 					<visible>$PARAM[has_background]</visible>
 				</control>
 				<control type="image">
-					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
 					<fadetime>0</fadetime>
@@ -830,7 +827,6 @@
 					<width>$PARAM[label_width]</width>
 					<height>$PARAM[height]</height>
 					<align>center</align>
-					<top>$PARAM[top]</top>
 					<label>$PARAM[label]</label>
 					<font>Font-Flag-Small3</font>
 					<textcolor>$PARAM[colordiffuse]</textcolor>
@@ -839,7 +835,7 @@
 		</definition>
 	</include>
 	<include name="MediaFlags">
-		<param name="infolabel_prefix"></param>
+		<param name="infolabel_prefix" />
 		<param name="resolution_var">$VAR[3DFlagVar]</param>
 		<param name="audiocodec_var">$VAR[AudioCodecFlagVar]</param>
 		<param name="visible">true</param>
@@ -4063,13 +4059,11 @@
 								<param name="texture" value="$VAR[VideoPlayerHdrTypeVar]" />
 								<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(visualisation)" />
 								<param name="width" value="58" />
-								<param name="top" value="5" />
 							</include>
 							<include content="MediaFlag">
 								<param name="texture" value="$VAR[VideoPlayerHdrTypeVar]" />
 								<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(visualisation)" />
 								<param name="width" value="94" />
-								<param name="top" value="5" />
 							</include>
 							<include content="MediaFlag">
 								<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
