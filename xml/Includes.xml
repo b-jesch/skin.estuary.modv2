@@ -4100,27 +4100,27 @@
 								<param name="visible" value="!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation)" />
 							</include>
 							<include content="MediaFlag">
-								<param name="width" value="180" />
-								<param name="label_width" value="176" />
+								<param name="width" value="155" />
+								<param name="label_width" value="151" />
 								<param name="label_left" value="2" />
 								<param name="label" value="$INFO[MusicPlayer.BitRate,, kbps]" />
-								<param name="texture" value="flags/cadre3.png" />
+								<param name="texture" value="flags/cadre.png" />
 								<param name="visible" value="!String.IsEmpty(MusicPlayer.Samplerate) + $EXP[isLossless] + Window.IsVisible(visualisation)" />
 							</include>
 							<include content="MediaFlag">
-								<param name="width" value="155" />
-								<param name="label_width" value="151" />
+								<param name="width" value="120" />
+								<param name="label_width" value="116" />
 								<param name="label_left" value="2" />
 								<param name="label" value="$INFO[MusicPlayer.BitsPerSample,, bits]" />
-								<param name="texture" value="flags/cadre.png" />
+								<param name="texture" value="flags/cadre4.png" />
 								<param name="visible" value="!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(visualisation)" />
 							</include>
 							<include content="MediaFlag">
-								<param name="width" value="155" />
-								<param name="label_width" value="151" />
+								<param name="width" value="120" />
+								<param name="label_width" value="116" />
 								<param name="label_left" value="2" />
 								<param name="label" value="RDS" />
-								<param name="texture" value="flags/cadre.png" />
+								<param name="texture" value="flags/cadre4.png" />
 								<param name="visible" value="!String.IsEmpty(RDS.HasRDS)" />
 							</include>
 							<include content="MediaFlag">
