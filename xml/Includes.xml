@@ -3704,7 +3704,6 @@
 						<height>360</height>
 						<aligny>top</aligny>
 						<aspectratio align="left">keep</aspectratio>
-						<fadetime>300</fadetime>
 						<texture background="true" colordiffuse="$VAR[Label_SkinSetting_BackgroundColor]" diffuse="overlays/cdart_mask.png" fallback="osd/cd.png">$VAR[PlayerInfoDiscArtVar]</texture>
 					</control>
 					<control type="label">
@@ -3737,7 +3736,7 @@
 				<control type="group">
 					<depth>DepthOSD+</depth>
 					<left>10</left>
-					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files) | Player.IsInternetStream | [VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRadio]</visible>
+					<visible>!Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 					<control type="image">
 						<width>440</width>
 						<height>660</height>
@@ -3779,14 +3778,14 @@
 					<control type="image">
 						<description>Cover Live TV, RDS Radio, Stream (Addon)</description>
 						<depth>DepthOSD+</depth>
-						<left>8</left>
-						<bottom>3</bottom>
-						<width>444</width>
-						<height>444</height>
-						<aspectratio aligny="bottom">stretch</aspectratio>
-						<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
+						<left>28</left>
+						<bottom>23</bottom>
+						<width>404</width>
+						<height>404</height>
+						<aspectratio aligny="bottom" align="center">keep</aspectratio>
+						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
+						<bordertexture border="2" colordiffuse="$VAR[BorderColorVar]">colors/white.png</bordertexture>
+						<bordersize>2</bordersize>
 						<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border)</visible>
 					</control>
 					<control type="image">
@@ -3797,7 +3796,9 @@
 						<height>440</height>
 						<aspectratio aligny="bottom" align="center">keep</aspectratio>
 						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
+						<bordertexture border="20">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
+						<visible>![Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border)]</visible>
 					</control>
 					<include content="BusyPvrArtworkSpinner">
 						<param name="top" value="80" />
@@ -4074,7 +4075,7 @@
 							<include content="MediaFlag">
 								<param name="width" value="155" />
 								<param name="label_width" value="100" />
-								<param name="label_left" value="2" />
+								<param name="label_left" value="7" />
 								<param name="label" value="$INFO[Player.Process(VideoFPS)]" />
 								<param name="texture" value="flags/fps.png" />
 								<param name="visible" value="!String.IsEmpty(Player.Process(VideoFPS)) + Integer.IsGreater(Player.Process(VideoFPS),0)" />

@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.2.0+nexus ###
 - .0
   * Media flags completely revised (uniform size and improved common code basis)
+  * missing music info on radio broadcasts fixed 
 
 
 ### 4.1.3+nexus ###
