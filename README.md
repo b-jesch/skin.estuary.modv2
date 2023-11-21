@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.1.0+omega ###
 - .0
   * Media flags completely revised (uniform size and improved common code basis)
+  * missing music info on radio broadcasts fixed
 
 
 ### 21.0.0+omega ###
