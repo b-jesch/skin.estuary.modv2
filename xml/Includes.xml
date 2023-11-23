@@ -3807,18 +3807,14 @@
 				</control>
 				<control type="image">
 					<right>30</right>
-					<include content="ItemBottom" condition="!Window.IsVisible(playerprocessinfo)">
-						<param name="bottom" value="230" />
-					</include>
-					<include content="ItemBottom" condition="Window.IsVisible(playerprocessinfo)">
-						<param name="bottom" value="350" />
-					</include>
+					<bottom>230</bottom>
 					<width>500</width>
 					<height>281</height>
 					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<visible>!Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
 					<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="!Window.IsActive(fullscreeninfo)">Conditional</animation>
+					<animation effect="slide" end="0,-120" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
 					<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
 					<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
