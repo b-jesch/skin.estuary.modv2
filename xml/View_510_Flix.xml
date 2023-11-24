@@ -132,13 +132,22 @@
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<visible>Container.Content(episodes)</visible>
 			</control>
-			<control type="image">
-				<left>38</left>
-				<top>192</top>
-				<width>32</width>
-				<height>32</height>
-				<texture>$VAR[WallWatchedIconVar]</texture>
-				<visible>!String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Container.Content(artists)</visible>
+			<control type="group">
+				<left>35</left>
+				<top>155</top>
+				<visible>!String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Container.Content(artists) + [ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.IsPlaying | ListItem.IsResumable | Integer.IsGreater(ListItem.Playcount,0) | ListItem.HasArchive]</visible>
+				<control type="image">
+					<width>70</width>
+					<height>70</height>
+					<texture>overlays/overlay-bg.png</texture>
+				</control>
+				<control type="image">
+					<left>3</left>
+					<top>37</top>
+					<width>32</width>
+					<height>32</height>
+					<texture>$VAR[WallWatchedIconVar]</texture>
+				</control>
 			</control>
 			<control type="image">
 				<left>35</left>
