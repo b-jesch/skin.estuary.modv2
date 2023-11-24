@@ -1058,7 +1058,7 @@
 				<control type="group">
 					<width>130</width>
 					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(12500) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !$EXP[subCategories] + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
-					<visible>!String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
+					<visible>!String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTime,AM) + !String.Contains($PARAM[infolabel_prefix]ListItem.EndTime,PM)</visible>
 					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/finishtime.png" />
@@ -1080,7 +1080,7 @@
 				<control type="group">
 					<width>178</width>
 					<visible>[!String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTimeResume) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.EndTime)] + !$PARAM[infolabel_prefix]ListItem.IsFolder + !$PARAM[infolabel_prefix]ListItem.IsCollection + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !Control.HasFocus(5500) + !Control.HasFocus(6400) + !Control.HasFocus(6500) + !Control.HasFocus(6600) + !Control.HasFocus(66001) + !Control.HasFocus(12500) + !Control.HasFocus(16200) + !Control.HasFocus(16600) + !$EXP[subCategories] + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,season) + !String.StartsWith(Container.FolderPath,plugin://) + ![String.IsEqual($PARAM[infolabel_prefix]ListItem.dbtype,genre) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]]</visible>
-					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM)</visible>
+					<visible>String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTimeResume,PM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTime,AM) | String.Contains($PARAM[infolabel_prefix]ListItem.EndTime,PM)</visible>
 					<visible>!Skin.HasSetting(show_mediaendtimeflag)</visible>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/finishtime_long.png" />
