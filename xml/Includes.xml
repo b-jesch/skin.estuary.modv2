@@ -1101,7 +1101,7 @@
 				</control>
 				<include content="MediaFlag">
 					<param name="width" value="5" />
-					<param name="visible" value="!Skin.HasSetting(show_dateairedflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered)" />
+					<param name="visible" value="!Skin.HasSetting(show_dateairedflag) + !Skin.HasSetting(show_dateaddedflag) + [!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) | !String.IsEmpty($PARAM[infolabel_prefix]ListItem.DateAdded)]" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/premiered.png" />
@@ -1118,6 +1118,14 @@
 					<param name="label_left" value="41" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered) + !Skin.HasSetting(show_dateairedflag) + !Control.IsVisible(12000) + String.IsEqual(ListItem.Premiered,ListItem.Year)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/added.png" />
+					<param name="width" value="200" />
+					<param name="label_width" value="155" />
+					<param name="label_left" value="45" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.DateAdded]" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.DateAdded) + !Skin.HasSetting(show_dateaddedflag) + !Control.IsVisible(12000)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="width" value="5" />
@@ -3736,7 +3744,7 @@
 				<control type="group">
 					<depth>DepthOSD+</depth>
 					<left>10</left>
-					<visible>!Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+					<visible>!Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio</visible>
 					<control type="image">
 						<width>440</width>
 						<height>660</height>
