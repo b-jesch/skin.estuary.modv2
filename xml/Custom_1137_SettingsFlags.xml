@@ -74,7 +74,13 @@
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(show_dateairedflag)</selected>
 						<onclick>Skin.ToggleSetting(show_dateairedflag)</onclick>
-					</control>					
+					</control>
+					<control type="radiobutton" id="11126">
+						<label>$LOCALIZE[31669]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_dateaddedflag)</selected>
+						<onclick>Skin.ToggleSetting(show_dateaddedflag)</onclick>
+					</control>
 					<control type="radiobutton" id="11117">
 						<label>$LOCALIZE[31451]</label>
 						<include>DefaultSettingButton</include>

@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .1
+  * Flag added to library added
+
+
 - .0
   * Media flags completely revised (uniform size and improved common code basis)
   * missing music info on radio broadcasts fixed 
