@@ -43,6 +43,12 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.1.0+omega ###
+- .1
+  * Flag "added to library" added
+  * Bug in video OSD fixed
+  * smaller code changes
+ 
+
 - .0
   * Media flags completely revised (uniform size and improved common code basis)
   * missing music info on radio broadcasts fixed
