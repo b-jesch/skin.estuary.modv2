@@ -45,7 +45,9 @@ supports animated poster only.
 
 ### 4.2.0+nexus ###
 - .1
-  * Flag added to library added
+  * Flag "added to library" added
+  * Bug in video OSD fixed
+  * smaller code changes
 
 
 - .0

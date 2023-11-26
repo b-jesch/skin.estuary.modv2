@@ -3647,24 +3647,19 @@
 	</include>
 	<include name="OSDWithInfo">
 		<control type="group">
-			<visible>!Player.HasGame</visible>
+			<visible>!Player.HasGame + !Window.IsVisible(1135)</visible>
 			<bottom>0</bottom>
-			<include content="ItemHeight" condition="!Window.IsVisible(playerprocessinfo)">
-				<param name="height" value="310" />
-			</include>
-			<include content="ItemHeight" condition="Window.IsVisible(playerprocessinfo)">
-				<param name="height" value="360" />
-			</include>
+			<height>310</height>
 			<control type="image">
 				<left>0</left>
 				<height>550</height>
 				<width>100%</width>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<animation effect="slide" end="0,-120" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + !Window.IsActive(fullscreeninfo)">Conditional</animation>
-				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) + Window.IsActive(fullscreeninfo)">Conditional</animation>
+				<animation effect="slide" end="0,-120" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
+				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
 				<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
-				<animation effect="slide" end="0,35" time="0" condition="[[VideoPlayer.Content(files) + !String.StartsWith(Player.Filenameandpath,http)] | String.Contains(Player.Art(thumb),ytimg)] + ![Window.IsVisible(playerprocessinfo) | Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | Window.IsVisible(visualisation) | VideoPlayer.HasEpg | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]]">Conditional</animation>
 				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+				<fadetime>100</fadetime>
 			</control>
 			<control type="textbox">
 				<left>460</left>
