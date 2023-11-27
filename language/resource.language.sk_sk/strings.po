@@ -7,14 +7,17 @@ msgstr ""
 "Project-Id-Version: Skin Estuary MOD V2 for KODI 20 Nexus KN Edition\n"
 "Report-Msgid-Bugs-To: https://github.com/b-jesch/skin.estuary.modv2\n"
 "POT-Creation-Date: 2023-11-15 23:32+2\n"
-"PO-Revision-Date: 2023-11-16 23:15+2\n"
-"Last-Translator: biegleux\n"
-"Language-Team: Slovak\n"
+"PO-Revision-Date: 2023-11-26 20:47+0000\n"
+"Last-Translator: Weblate Admin <weblate@example.com>\n"
+"Language-Team: Slovak <http://weblate.localhost/projects/"
+"skin-estuary-mod-v2-related/skin-estuary-modv2/sk/>\n"
 "Language: sk_sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
+">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+"X-Generator: Weblate 5.2.1\n"
 
 #: /xml/Home.xml /xml/DialogSeekBar.xml
 msgctxt "#31000"
@@ -57,7 +60,6 @@ msgid "Unwatched movies"
 msgstr "Nepozreté filmy"
 
 #: Missing string 31108
-
 #: /xml/MyVideoNav.xml
 msgctxt "#31009"
 msgid "Download icons"
@@ -98,7 +100,7 @@ msgstr "Nedávne nahrávky"
 #: /xml/Home.xml
 msgctxt "#31016"
 msgid "Recently played channels"
-msgstr "Nedávno pozerané kanály"
+msgstr "Nedávno prehrávané kanály"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31017"
@@ -268,7 +270,7 @@ msgstr "filtrované"
 #: /xml/Font.xml
 msgctxt "#31053"
 msgid "Arial based"
-msgstr "Založené na Arial"
+msgstr "Písmo založené na Arial"
 
 #: /xml/Variables.xml
 msgctxt "#31054"
@@ -403,7 +405,7 @@ msgstr "Zobraziť počasie"
 #: /xml/SkinSettings.xml
 msgctxt "#31095"
 msgid "Use slide animations"
-msgstr "Použiť slide animácie"
+msgstr "Použiť animácie kĺzania"
 
 #: /xml/DialogSubtitles.xml
 msgctxt "#31096"
@@ -424,13 +426,13 @@ msgstr "Zvoľte si profil používateľa Kodi[CR]pre prihlásenie a pokračovani
 #: /xml/View_52_IconWall.xml
 msgctxt "#31099"
 msgid "IconWall"
-msgstr "Stena ikôn"
+msgstr "Stena ikon"
 
 #. viewtype name
 #: /xml/View_53_Shift.xml
 msgctxt "#31100"
 msgid "Shift"
-msgstr "Shift"
+msgstr "Posun"
 
 #. viewtype name
 #: /xml/View_54_InfoWall.xml
@@ -559,7 +561,7 @@ msgstr "je"
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31126"
 msgid "Press [B]OK[/B] to show plot"
-msgstr "Stlačte [B]OK[/B] pre zobrazenie zápletky"
+msgstr "Stlačte [B]OK[/B] pre zobrazenie deja"
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31127"
@@ -594,7 +596,7 @@ msgstr "Skryť widget „Kategórie“"
 #: /xml/SkinSettings.xml
 msgctxt "#31133"
 msgid "Show banners on episodes/thumbs widgets"
-msgstr ""
+msgstr "Zobraziť transparent seriálu nad náhľadmi epizód"
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31134"
@@ -659,7 +661,7 @@ msgstr "Kategórie"
 #: /xml/SkinSettings.xml
 msgctxt "#31149"
 msgid "Video genres fanarts pack"
-msgstr "Balík fanartov pre žánre"
+msgstr "Balík fanartov pre žánre videa"
 
 #: /xml/DialogAddonInfo.xml
 msgctxt "#31150"
@@ -734,7 +736,7 @@ msgstr "Zobraziť Fanart pozadie"
 #: /xml/SkinSettings.xml
 msgctxt "#31200"
 msgid "Main menu"
-msgstr "Hlavné menu"
+msgstr "Hlavná ponuka"
 
 #: /xml/Custom_1120_SourcesDialog.xml
 msgctxt "#31201"
@@ -745,6 +747,8 @@ msgstr "Pridať zdroje médií"
 msgctxt "#31202"
 msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
 msgstr ""
+"Skratky do sekcií „Súbory“ jednotlivých typov médií. Prejdite tam pre "
+"pridanie ďalších zdrojov do vašej databázy."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31203"
@@ -754,7 +758,7 @@ msgstr "Domovské menu"
 #: /xml/SkinSettings.xml
 msgctxt "#31204"
 msgid "Hide main menu when selecting widgets"
-msgstr "Skryť hlavné menu pri výbere widgetu"
+msgstr "Skryť hlavnú ponuku pri výbere widgetu"
 
 #: /xml/View_503_Gallery.xml
 msgctxt "#31205"
@@ -764,7 +768,7 @@ msgstr "Galéria"
 #: /xml/SkinSettings.xml
 msgctxt "#31206"
 msgid "Reset main menu settings"
-msgstr "Obnoviť nastavenia hlavného menu"
+msgstr "Obnoviť nastavenia hlavnej ponuky"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31207"
@@ -804,22 +808,22 @@ msgstr "Zastaviť skenovanie knižnice videí"
 #: /xml/Variables.xml
 msgctxt "#31214"
 msgid "Stop scanning music library"
-msgstr "Zastavit skenovanie hudobnej knižnice"
+msgstr "Zastaviť skenovanie hudobnej knižnice"
 
 #: /xml/View_504_ThumbsWall.xml
 msgctxt "#31215"
 msgid "Wall (thumbnails)"
-msgstr ""
+msgstr "Stena (náhľady)"
 
 #: /xml/View_505_ThumbsInfoWall.xml
 msgctxt "#31216"
 msgid "InfoWall (thumbnails)"
-msgstr ""
+msgstr "Infostena (náhľady)"
 
 #: /xml/View_506_Mosaic.xml
 msgctxt "#31217"
 msgid "Mosaic (horizontal)"
-msgstr ""
+msgstr "Mozaika (horizontálna)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31218"
@@ -859,12 +863,12 @@ msgstr "Kontextová ponuka"
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31225"
 msgid "Next aired"
-msgstr ""
+msgstr "Nasledujúce vysielanie"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31226"
 msgid "Last aired"
-msgstr ""
+msgstr "Naposledy odvysielané"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31227"
@@ -1049,7 +1053,7 @@ msgstr "Kiosk mód"
 #: /xml/Variables.xml
 msgctxt "#31264"
 msgid "None"
-msgstr "Žiadny"
+msgstr "Žiadne"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31265"
@@ -1109,12 +1113,12 @@ msgstr "Ďalšia epizóda"
 #: /xml/SkinSettings.xml
 msgctxt "#31276"
 msgid "Disable zoom effect"
-msgstr "Zakázať zoom efekt"
+msgstr "Zakázať efekt zväčšenia"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31278"
 msgid "Music OSD"
-msgstr "Music OSD"
+msgstr "Hudobný OSD"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31279"
@@ -1179,7 +1183,7 @@ msgstr "Ďalšie stopy"
 #: /xml/SkinSettings.xml
 msgctxt "#31291"
 msgid "Show artist banner"
-msgstr "Zobraziť banner umelca"
+msgstr "Zobraziť transparent umelca"
 
 #: /xml/script-cu-lrclyrics-main.xml
 msgctxt "#31292"
@@ -1254,7 +1258,7 @@ msgstr "Spravovať položky widgetu „Videá“"
 #: /xml/SkinSettings.xml
 msgctxt "#31306"
 msgid "Customize main menu"
-msgstr "Prispôsobiť hlavné menu..."
+msgstr "Prispôsobiť hlavnú ponuku..."
 
 #: /xml/SkinSettings.xml
 msgctxt "#31307"
@@ -1329,7 +1333,7 @@ msgstr "Ďalšia odvysielaná epizóda"
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31321"
 msgid "Thumbs with banners"
-msgstr ""
+msgstr "Náhľady s transparentmi"
 
 #: /xml/Home.xml
 msgctxt "#31322"
@@ -1349,7 +1353,7 @@ msgstr "Priesvitnosť pre hornú a spodnú lištu"
 #: /xml/SkinSettings.xml
 msgctxt "#31325"
 msgid "Power menu style"
-msgstr "Štýl pre Power menu"
+msgstr "Štýl ponuky napájania"
 
 #: /xml/Custom_1124_SettingsTVShowsWidgets.xml
 msgctxt "#31326"
@@ -1364,12 +1368,12 @@ msgstr "Prednastavené widgety"
 #: /xml/Variables.xml
 msgctxt "#31328"
 msgid "Go up item"
-msgstr ""
+msgstr "Posunúť položku nahor"
 
 #: /xml/Variables.xml
 msgctxt "#31329"
 msgid "Go down item"
-msgstr ""
+msgstr "Posunúť položku nadol"
 
 #: /xml/Variables.xml
 msgctxt "#31330"
@@ -1419,7 +1423,7 @@ msgstr "Plagáty"
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31339"
 msgid "Thumbs without banners"
-msgstr "Náhľady bez banerov"
+msgstr "Náhľady bez transparentov"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31340"
@@ -1454,67 +1458,67 @@ msgstr "Videoklipy - Knižnica"
 #: /xml/View_507_Mosaic_Vertical.xml
 msgctxt "#31346"
 msgid "Mosaic (vertical)"
-msgstr ""
+msgstr "Mozaika (vertikálna)"
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31347"
 msgid "View"
-msgstr ""
+msgstr "Zobrazenie"
 
 #: /xml/Variables.xml
 msgctxt "#31348"
 msgid "None"
-msgstr "Žiadny"
+msgstr "Žiadne"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31349"
 msgid "Enable forced views"
-msgstr ""
+msgstr "Povoliť vynútené zobrazenia"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31350"
 msgid "Forced view for movies"
-msgstr ""
+msgstr "Vynútené zobrazenie pre filmy"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31351"
 msgid "Forced view for movie sets"
-msgstr ""
+msgstr "Vynútené zobrazenie pre filmové kolekcie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31352"
 msgid "Forced view for movies inside set"
-msgstr ""
+msgstr "Vynútené zobrazenie pre filmy v kolekcii"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31353"
 msgid "Forced view for tv shows"
-msgstr ""
+msgstr "Vynútené zobrazenie pre seriály"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31354"
 msgid "Forced view for seasons"
-msgstr ""
+msgstr "Vynútené zobrazenie pre série"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31355"
 msgid "Forced view for episodes"
-msgstr ""
+msgstr "Vynútené zobrazenie pre epizódy"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31356"
 msgid "Forced view for artists"
-msgstr ""
+msgstr "Vynútené zobrazenie pre umelcov"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31357"
 msgid "Forced view for albums"
-msgstr ""
+msgstr "Vynútené zobrazenie pre albumy"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31358"
 msgid "Forced view for music videos"
-msgstr ""
+msgstr "Vynútené zobrazenie pre videoklipy"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31359"
@@ -1525,6 +1529,8 @@ msgstr "Zobraziť informácie na celú obrazovku pre filmy a seriály"
 msgctxt "#31360"
 msgid "Power menu-related settings: Configure it to your likings."
 msgstr ""
+"Nastavenia týkajúce sa ponuky napájania: Nastavte si ju podľa vašich "
+"predstáv."
 
 #: /xml/Home.xml
 msgctxt "#31361"
@@ -1554,22 +1560,24 @@ msgstr "Skočiť na písmeno"
 #: /shortcuts/overrides.xml
 msgctxt "#31366"
 msgid "Lists (up to 8 items)"
-msgstr ""
+msgstr "Zoznamy (do 8 položiek)"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31367"
 msgid "Sort method of widget"
-msgstr ""
+msgstr "Spôsob zoradenia widgetu"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31368"
 msgid "Sort direction of widget"
-msgstr ""
+msgstr "Smer zoradenia widgetu"
 
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31369"
 msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
 msgstr ""
+"Stlačte [B]OK[/B] pre prečítanie popisu alebo [B]Vľavo[/B] pre zobrazenie "
+"náhľadu zadnej strany"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31370"
@@ -1644,7 +1652,7 @@ msgstr "Správne heslo! Toto menu je teraz dostupné pre"
 #: /xml/Variables.xml
 msgctxt "#31384"
 msgid "minute(s)"
-msgstr "minút/y"
+msgstr "minút(y)"
 
 #: /xml/Variables.xml
 msgctxt "#31385"
@@ -1664,7 +1672,7 @@ msgstr "Rodičovská kontrola"
 #: /xml/SkinSettings.xml
 msgctxt "#31388"
 msgid "Set password protection for menu items"
-msgstr ""
+msgstr "Nastaviť ochranu heslom pre položky ponuky"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31389"
@@ -1704,7 +1712,9 @@ msgstr "Zobrazit widget „Nastavenia“"
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31398"
 msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
-msgstr "Po inštalácii tejto verzie je potrebné reštartovať Kodi a '[B]obnoviť nastavenia hlavného menu a power menu[/B]' v nastaveniach vzhľadu."
+msgstr ""
+"Po inštalácii tejto verzie je potrebné reštartovať Kodi a „[B]obnoviť "
+"nastavenia hlavnej ponuky a ponuky napájania[/B]“ v nastaveniach vzhľadu."
 
 #: /xml/Custom_1136_WarningPopUp.xml
 msgctxt "#31399"
@@ -1739,17 +1749,17 @@ msgstr "Widgety na prispôsobenie"
 #: /shortcuts/overrides.xml
 msgctxt "#31405"
 msgid "Vertical panel (1 item)"
-msgstr ""
+msgstr "Vertikálny panel (1 položka)"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31406"
 msgid "Thumbs without banners panel"
-msgstr ""
+msgstr "Náhľady bez panela transparentov"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31407"
 msgid "Thumbs with banners panel"
-msgstr ""
+msgstr "Náhľady s panelom transparentov"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31408"
@@ -1759,7 +1769,7 @@ msgstr "Panel štvorcov"
 #: /shortcuts/overrides.xml
 msgctxt "#31409"
 msgid "Banners panel"
-msgstr "Panel bannerov"
+msgstr "Panel transparentov"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31410"
@@ -1775,7 +1785,7 @@ msgstr "Panel miniatúr"
 #: /xml/View_508_DoubleLists.xml
 msgctxt "#31412"
 msgid "Double lists"
-msgstr ""
+msgstr "Dvojité zoznamy"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31413"
@@ -1786,17 +1796,17 @@ msgstr "Zobraziť nastavenia Skin Helper Service widgets"
 #: /xml/View_509_TripleLists.xml
 msgctxt "#31414"
 msgid "Triple lists"
-msgstr ""
+msgstr "Trojité zoznamy"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31415"
 msgid "Show clearlogos at the top of menu"
-msgstr ""
+msgstr "Zobraziť clearlogá v hornej časti ponuky"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31416"
 msgid "Minimize main menu"
-msgstr "Minimalizovať hlavné menu"
+msgstr "Minimalizovať hlavnú ponuku"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31417"
@@ -1851,12 +1861,12 @@ msgstr "Prispôsobiť widget „Kategórie“"
 #: /xml/SkinSettings.xml
 msgctxt "#31427"
 msgid "Classic list"
-msgstr ""
+msgstr "Klasický zoznam"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31428"
 msgid "Icons list"
-msgstr ""
+msgstr "Zoznam ikon"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31429"
@@ -1876,7 +1886,7 @@ msgstr "Zobraziť skrolujúci text"
 #: /xml/SkinSettings.xml
 msgctxt "#31432"
 msgid "Scrapers ratings"
-msgstr ""
+msgstr "Hodnotenia scraperov"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31433"
@@ -2121,12 +2131,12 @@ msgstr "Režim náhľadu"
 #: /xml/SkinSettings.xml
 msgctxt "#31481"
 msgid "My ratings and scrapers ratings"
-msgstr ""
+msgstr "Moje hodnotenia a hodnotenia scraperov"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31482"
 msgid "Scrapers ratings text color"
-msgstr ""
+msgstr "Farba textu hodnotenia scraperov"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31483"
@@ -2171,7 +2181,7 @@ msgstr "Filmy z kolekcie filmov"
 #: /xml/Custom_1132_MoviesSetsInfo.xml
 msgctxt "#31491"
 msgid "Press [B]DOWN[/B] to show info from selected movie"
-msgstr "Stlačte [B]DOWN[/B] pre zobrazenie informácií o označenom filme"
+msgstr "Stlačte [B]DOLE[/B] pre zobrazenie informácií o označenom filme"
 
 #: /xml/Variables.xml
 msgctxt "#31492"
@@ -2206,7 +2216,7 @@ msgstr "Filmy od štúdia"
 #: /xml/Custom_1104_InfoDialogList.xml
 msgctxt "#31498"
 msgid "Next Up episodes"
-msgstr ""
+msgstr "Nadchádzajúce epizódy"
 
 #: /xml/Custom_1104_InfoDialogList.xml
 msgctxt "#31499"
@@ -2231,12 +2241,12 @@ msgstr "Kompletná diskografia"
 #: /xml/Variables.xml
 msgctxt "#31503"
 msgid "Songs from album"
-msgstr "Pesničky z albumu"
+msgstr "Skladby z albumu"
 
 #: /xml/DialogMusicInfo.xml
 msgctxt "#31504"
 msgid "Press [B]OK[/B] to show back thumb"
-msgstr ""
+msgstr "Stlačte [B]OK[/B] pre zobrazenie náhľadu zadnej strany"
 
 #: /xml/script-script.extendedinfo-DialogVideoInfo.xml
 msgctxt "#31505"
@@ -2335,7 +2345,7 @@ msgstr "Platforma"
 
 msgctxt "#31560"
 msgid "Forced Views"
-msgstr ""
+msgstr "Vynútené zobrazenia"
 
 msgctxt "#31561"
 msgid "Show PVR related Artworks"
@@ -2375,7 +2385,7 @@ msgstr "CoreELEC"
 
 msgctxt "#31570"
 msgid "Show extended Power Menu"
-msgstr "Zobraziť rozšírené Power Menu"
+msgstr "Zobraziť rozšírenú ponuku napájania"
 
 msgctxt "#31571"
 msgid "Prefer Fanart in EPG preview window if available"
@@ -2391,7 +2401,7 @@ msgstr "Zobraziť hodnotenie MPAA"
 
 msgctxt "#31574"
 msgid "(until "
-msgstr "(pokým"
+msgstr "(pokým "
 
 msgctxt "#31575"
 msgid "Show Color Depth"
@@ -2435,11 +2445,11 @@ msgstr "Zobraziť čísla kanálov"
 
 msgctxt "#31586"
 msgid "Show Date of First aired"
-msgstr ""
+msgstr "Zobraziť dátum premiéry"
 
 msgctxt "#31587"
 msgid "Item Path of Picture Widgets"
-msgstr ""
+msgstr "Cesta pre widgety obrázkov"
 
 msgctxt "#31588"
 msgid "Default Action on 'Movie' and 'TV-Show' Widgets"
@@ -2537,7 +2547,6 @@ msgid "Show PVR Channel Status"
 msgstr "Zobraziť stav kanála PVR"
 
 #: DialogPlayerProcessInfo
-
 msgctxt "#31610"
 msgid "Display Mode"
 msgstr "Zobrazovací mód"
@@ -2551,7 +2560,6 @@ msgid "Color Depth"
 msgstr "Farebná hĺbka"
 
 #: SkinSettings.xml
-
 msgctxt "#31613"
 msgid "Display Media Time"
 msgstr "Zobrazenie času média"
@@ -2565,50 +2573,42 @@ msgid "Remaining Time"
 msgstr "Zostávajúci čas"
 
 #: SkinSettings.xml
-
 msgctxt "#31616"
 msgid "Use Background for PVR Channel Icons"
 msgstr "Použiť pozadie pre ikony kanálov PVR"
 
 #: Custom_1127_settingsTVWidgets.xml
-
 msgctxt "#31617"
 msgid "Saved Search Results"
 msgstr "Uložené výsledky vyhľadávania"
 
 #: SkinSettings.xml
-
 msgctxt "#31618"
 msgid "Use full Height for Channel and Program OSD"
 msgstr "Použiť plnú výšku pre Channel a Program OSD"
 
 #: Font.xml
-
 msgctxt "#31619"
 msgid "Economica based"
-msgstr ""
+msgstr "Písmo založené na Economica"
 
 #. viewtype name
 #: /xml/View_510_Flix.xml
-
 msgctxt "#31620"
 msgid "Flix Landscape"
-msgstr ""
+msgstr "Flix Landscape"
 
 #: Variables.xml (SkinSettings.xml)
-
 msgctxt "#31621"
 msgid "Visualization of the PVR and TV screen related settings."
 msgstr "Nastavenia súvisiace s vizualizáciou PVR a TV obrazovky."
 
 #: /xml/SkinSettings.xml
-
 msgctxt "#31622"
 msgid "Disabled timers"
 msgstr "Deaktivované časovače"
 
 #: SkinSettings.xml
-
 msgctxt "#31623"
 msgid "Default Action on 'Timer' Widgets"
 msgstr "Predvolená akcia na widgete „Časovač“"
@@ -2631,7 +2631,8 @@ msgstr "OSD Artwork"
 
 msgctxt "#31630"
 msgid "Use simple Seekbar on Chapter and Time Seeking"
-msgstr "Použiť zjednodušený Seekbar na posúvanie času a kapitol"
+msgstr ""
+"Použiť zjednodušenú lištu posuvníka priebehu na posúvanie času a kapitol"
 
 msgctxt "#31631"
 msgid "Action on 'last channel switch' OSD Button"
@@ -2647,10 +2648,9 @@ msgstr "Zobraziť posledných päť kanálov"
 
 msgctxt "#31634"
 msgid "Last watched"
-msgstr ""
+msgstr "Naposledy videné"
 
 #: DialogContextMenu.xml
-
 msgctxt "#31635"
 msgid "Play Trailer"
 msgstr "Prehrať upútavku"
@@ -2660,10 +2660,9 @@ msgid "Show 'Play Trailer' in Context Menu"
 msgstr "Zobraziť „Prehrať upútavku“ v kontextovej ponuke"
 
 #: Skinsettings.xml
-
 msgctxt "#31637"
 msgid "Activate Lyrics"
-msgstr "Aktivovať texty pesničiek"
+msgstr "Aktivovať texty skladieb"
 
 msgctxt "#31638"
 msgid "Minimized Options Menu"
@@ -2674,7 +2673,6 @@ msgid "Default Action on 'PVR' Widgets"
 msgstr "Predvolená akcia na widgetoch „PVR“"
 
 #: /xml/SkinSettings.xml
-
 msgctxt "#31640"
 msgid "Enable background for splash screen"
 msgstr "Povoliť pozadie pre úvodnú obrazovku"
@@ -2685,36 +2683,32 @@ msgstr "Preferovať fanart albumu pred fanartom umelca"
 
 msgctxt "#31642"
 msgid "High Transparency of Seekbar Background"
-msgstr ""
+msgstr "Vysoká priehľadnosť pozadia lišty posuvníka priebehu"
 
 #: /xml/MyVideoNav
-
 msgctxt "#31643"
 msgid "Use Poster View"
 msgstr "Použiť zobrazenie Plagát"
 
 msgctxt "#31644"
 msgid "Arial Unicode based"
-msgstr "Založené na Arial Unicode"
+msgstr "Písmo založené na Arial Unicode"
 
 #: /xml/Includes_MediaMenu.xml
-
 msgctxt "#31645"
 msgid "Quick Navigation"
 msgstr "Rýchla navigácia"
 
 #: /xml/MusicOSD.xml
-
 msgctxt "#31646"
 msgid "Black Screen : off"
-msgstr ""
+msgstr "Čierna obrazovka: vypnutá"
 
 msgctxt "#31647"
 msgid "Black Screen : on"
-msgstr ""
+msgstr "Čierna obrazovka: zapnutá"
 
 #: /xml/Skinsettings.xml
-
 msgctxt "#31648"
 msgid "Stop Player if Video/Audio is paused longer than"
 msgstr "Zastaviť prehrávač, ak je Video/Audio pozastavené dlhšie ako"
@@ -2772,13 +2766,11 @@ msgid "Increase Play speed"
 msgstr "Zvýšiť rýchlosť prehrávania"
 
 #: SkinSettings.xml
-
 msgctxt "#31663"
 msgid "Busy Spinner"
 msgstr "Busy Spinner"
 
 #: Video OSD
-
 msgctxt "#31664"
 msgid "TUN"
 msgstr "TUN"
