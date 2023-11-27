@@ -422,12 +422,7 @@
 			</control>
 			<control type="textbox">
 				<include>OpenClose_Left</include>
-				<include content="ItemTop" condition="String.StartsWith(Container.FolderPath,plugin://plugin.video)">
-					<param name="top">235</param>
-				</include>
-				<include content="ItemTop" condition="!String.StartsWith(Container.FolderPath,plugin://plugin.video)">
-					<param name="top">310</param>
-				</include>
+				<top>310</top>
 				<left>50</left>
 				<width>1100</width>
 				<bottom>605</bottom>
