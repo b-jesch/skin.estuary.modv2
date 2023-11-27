@@ -96,14 +96,14 @@
 					<visible>!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.is_db))</visible>
 					<control type="image">
 						<left>4</left>
-						<top>5</top>
+						<top>4</top>
 						<width>64</width>
 						<height>64</height>
 						<texture flipy="true" colordiffuse="$VAR[SkinColorVar]">overlays/overlay-edge.png</texture>
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>8</top>
+						<top>7</top>
 						<width>32</width>
 						<height>32</height>
 						<texture>icons/extendedinfo/OverlayLocal.png</texture>
