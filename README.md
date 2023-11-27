@@ -48,6 +48,7 @@ supports animated poster only.
   * Flag "added to library" added
   * Bug in video OSD fixed
   * smaller code changes
+  * slovakian language strings updated
 
 
 - .0
