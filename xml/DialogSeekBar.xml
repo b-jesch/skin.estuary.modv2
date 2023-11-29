@@ -47,11 +47,14 @@
 					<aligny>center</aligny>
 				</control>
 			</control>
+			<!--
 			<include condition="Player.HasAudio + !Player.HasVideo">OSDWithInfo</include>
 			<include condition="!$EXP[isSeeking] + !Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithInfo</include>
 			<include condition="!Skin.HasSetting(ShowSeekBar) + !Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithInfo</include>
 			<include condition="!$EXP[isSeeking] + Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithoutInfo</include>
 			<include condition="!Skin.HasSetting(ShowSeekBar) + Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithoutInfo</include>
+			-->
+			<include condition="[!$EXP[isSeeking] | !Skin.HasSetting(ShowSeekBar)] + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDPanel</include>
 		</control>
 	</controls>
 </window>

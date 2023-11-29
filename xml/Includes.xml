@@ -4191,6 +4191,44 @@
 			<visible>[VideoPlayer.HasMenu + System.HasMediadvd]</visible>
 		</control>
 	</include>
+	<include name="OSDPanel">
+		<control type="group">
+			<visible>!Player.HasGame</visible>
+			<bottom>0</bottom>
+			<height>190</height>
+			<control type="group">
+				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
+				<animation effect="slide" end="0,-280" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) | Window.IsVisible(1138)">Conditional</animation>
+				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1139)">Conditional</animation>
+				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+				<control type="image">
+					<left>0</left>
+					<bottom>-440</bottom>
+					<width>100%</width>
+					<height>590</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+				</control>
+				<control type="image">
+					<right>30</right>
+					<bottom>150</bottom>
+					<width>400</width>
+					<height>225</height>
+					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<visible>!Skin.HasSetting(enable_playerclearart)</visible>
+				</control>
+			</control>
+			<include content="SeekBar" condition="Skin.HasSetting(SmallOSDVideo)">
+				<param name="left">30</param>
+				<param name="bg_visibility">false</param>
+			</include>
+			<include content="SeekBar" condition="!Skin.HasSetting(SmallOSDVideo)">
+				<param name="left">440</param>
+				<param name="bg_visibility">false</param>
+			</include>
+
+		</control>
+	</include>
 	<include name="OSDWithoutInfo">
 		<control type="group">
 			<visible>!Player.HasGame</visible>
