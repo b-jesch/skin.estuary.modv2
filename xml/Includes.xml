@@ -4198,6 +4198,7 @@
 			<height>190</height>
 			<control type="group">
 				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
+				<animation effect="slide" end="0,-120" time="50" tween="sine" easing="out" condition="!Skin.HasSetting(SmallOSDVideo)">Conditional</animation>
 				<animation effect="slide" end="0,-280" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo) | Window.IsVisible(1138)">Conditional</animation>
 				<animation effect="slide" end="0,-340" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1139)">Conditional</animation>
 				<animation effect="slide" end="0,-50" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
@@ -4226,6 +4227,11 @@
 				<param name="left">440</param>
 				<param name="bg_visibility">false</param>
 			</include>
+			<control type="group">
+				<description>left side cover and disc</description>
+				<visible>!Skin.HasSetting(SmallOSDVideo)</visible>
+
+			</control>
 
 		</control>
 	</include>
