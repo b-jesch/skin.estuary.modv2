@@ -173,7 +173,7 @@
 				<control type="radiobutton" id="608">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/dim.png"/>
-						<param name="color" value="FFAA0000" />
+						<param name="color_on" value="FFAA0000" />
 					</include>
 					<onclick>Skin.ToggleSetting(dim_screen)</onclick>
 					<onclick>Dialog.Close(musicosd)</onclick>

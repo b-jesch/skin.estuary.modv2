@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="OSDButton">
-		<param name="color" value="white" />
+		<param name="color_on" value="white" />
+		<param name="color_off" value="white" />
 		<definition>
-			<textureradioonfocus colordiffuse="white">$PARAM[texture]</textureradioonfocus>
-			<textureradioonnofocus>$PARAM[texture]</textureradioonnofocus>
-			<textureradioofffocus colordiffuse="$PARAM[color]">$PARAM[texture]</textureradioofffocus>
-			<textureradiooffnofocus colordiffuse="$PARAM[color]">$PARAM[texture]</textureradiooffnofocus>
+			<textureradioonfocus colordiffuse="$PARAM[color_on]">$PARAM[texture]</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="$PARAM[color_on]">$PARAM[texture]</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$PARAM[color_off]">$PARAM[texture]</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="$PARAM[color_off]">$PARAM[texture]</textureradiooffnofocus>
 			<textureradioondisabled colordiffuse="disabled">$PARAM[texture]</textureradioondisabled>
 			<textureradiooffdisabled colordiffuse="disabled">$PARAM[texture]</textureradiooffdisabled>
 			<texturefocus colordiffuse="$VAR[SkinColorVar]">osd/fullscreen/buttons/button-fo-76.png</texturefocus>
@@ -18,7 +19,7 @@
 			<height>56</height>
 			<radiowidth>54</radiowidth>
 			<radioheight>54</radioheight>
-			<font></font>
+			<font />
 			<texturenofocus />
 			<radioposx>1</radioposx>
 			<radioposy>0</radioposy>
