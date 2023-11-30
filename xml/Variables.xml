@@ -744,13 +744,14 @@
 	<variable name="PlayerInfoClearArtVar">
 		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.clearart))">$INFO[Window(Home).Property(PVR.Artwork.clearart)]</value>
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
-        <value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
-        <value condition="!String.IsEmpty(Player.Art(artist.clearart))">$INFO[Player.Art(artist.clearart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(artist.clearart))">$INFO[Player.Art(artist.clearart)]</value>
 	</variable>
 	<variable name="PlayerInfoDiscArtVar">
-        <value condition="!String.IsEmpty(Player.Art(discart))">$INFO[Player.Art(discart)]</value>
-        <value condition="!String.IsEmpty(Player.Art(album.discart))">$INFO[Player.Art(album.discart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(discart))">$INFO[Player.Art(discart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(album.discart))">$INFO[Player.Art(album.discart)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.discart))">$INFO[Window(Home).Property(PVR.Artwork.discart)]</value>
+		<value condition="!Player.HasVideo">osd/cd.png</value>
 	</variable>
 	<variable name="PlayerClearArtVar">
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
