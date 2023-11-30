@@ -3688,7 +3688,7 @@
 					<include content="ItemBottom" condition="!Window.IsVisible(visualisation) + !Skin.HasSetting(show_discart)">
 						<param name="bottom" value="415" />
 					</include>
-					<include content="ItemBottom" condition="Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc) + !Pvr.IsPlayingRadio + !Player.IsInternetStream">
+					<include content="ItemBottom" condition="Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc) + Player.HasAudio">
 						<param name="bottom" value="245" />
 					</include>
 					<control type="group">
@@ -3763,7 +3763,7 @@
 						<textcolor>grey</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 						<label>$VAR[MusicPlayerDiscAlbumVar]</label>
-						<visible>String.IsEmpty(Player.Art(thumb)) | String.IsEqual(Player.Art(thumb),defaultalbumcover.png)</visible>
+						<visible>String.IsEqual(Control.GetLabel(4397),dialogs/defaultcdcover.png)</visible>
 					</control>
 				</control>
 				<control type="group">
