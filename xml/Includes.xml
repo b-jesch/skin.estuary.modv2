@@ -3680,60 +3680,50 @@
 			</include>
 			<control type="group">
 				<visible>![VideoPlayer.HasMenu + System.HasMediadvd]</visible>
-				<control type="image">
-					<left>50</left>
-					<bottom>415</bottom>
-					<width>360</width>
-					<height>360</height>
-					<aligny>top</aligny>
-					<aspectratio align="left">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
-					<texture background="true" diffuse="overlays/cdart_mask.png">$VAR[PlayerInfoDiscArtVar]</texture>
-					<visible>!Skin.HasSetting(show_discart) + !Window.IsVisible(visualisation)</visible>
-					<visible>!VideoPlayer.Content(musicvideos)</visible>
-				</control>
 				<control type="group">
+					<description>RotatingCD/DVD/BluRay for all media</description>
 					<left>50</left>
-					<bottom>245</bottom>
 					<width>360</width>
 					<height>360</height>
-					<visible>Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
-					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
-					<control type="image" id="88888">
-						<left>0</left>
-						<bottom>0</bottom>
-						<width>360</width>
-						<height>360</height>
-						<aligny>top</aligny>
-						<aspectratio align="left">keep</aspectratio>
-						<texture background="true" colordiffuse="$VAR[Label_SkinSetting_BackgroundColor]" diffuse="overlays/cdart_mask.png" fallback="osd/cd.png">$VAR[PlayerInfoDiscArtVar]</texture>
-					</control>
-					<control type="label">
-						<left>70</left>
-						<bottom>247</bottom>
-						<width>218</width>
-						<height>73</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font-Disc</font>
-						<label>$VAR[MusicPlayerDiscTitleVar]</label>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>String.IsEqual(Control.GetLabel(88888),osd/cd.png)</visible>
-					</control>
-					<control type="label">
-						<left>70</left>
-						<bottom>41</bottom>
-						<width>218</width>
-						<height>73</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font-Disc2</font>
-						<label>$VAR[MusicPlayerDiscAlbumVar]</label>
-						<textcolor>black</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>String.IsEqual(Control.GetLabel(88888),osd/cd.png)</visible>
+					<include content="ItemBottom" condition="!Window.IsVisible(visualisation) + !Skin.HasSetting(show_discart)">
+						<param name="bottom" value="415" />
+					</include>
+					<include content="ItemBottom" condition="Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc) + !Pvr.IsPlayingRadio + !Player.IsInternetStream">
+						<param name="bottom" value="245" />
+					</include>
+					<control type="group">
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
+						<control type="image" id="4393">
+							<aligny>top</aligny>
+							<aspectratio align="left">keep</aspectratio>
+							<texture background="true" diffuse="overlays/cdart_mask.png">$VAR[PlayerInfoDiscArtVar]</texture>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<bottom>247</bottom>
+							<width>218</width>
+							<height>73</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font-Disc</font>
+							<label>$VAR[MusicPlayerDiscTitleVar]</label>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>String.IsEqual(Control.GetLabel(4393),osd/cd.png)</visible>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<bottom>41</bottom>
+							<width>218</width>
+							<height>73</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font-Disc2</font>
+							<label>$VAR[MusicPlayerDiscAlbumVar]</label>
+							<textcolor>black</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>String.IsEqual(Control.GetLabel(4393),osd/cd.png)</visible>
+						</control>
 					</control>
 				</control>
 				<control type="group">
