@@ -4224,13 +4224,98 @@
 				<param name="bg_visibility">false</param>
 			</include>
 			<include content="SeekBar" condition="!Skin.HasSetting(SmallOSDVideo)">
-				<param name="left">440</param>
+				<param name="left">460</param>
 				<param name="bg_visibility">false</param>
 			</include>
 			<control type="group">
 				<description>left side cover and disc</description>
 				<visible>!Skin.HasSetting(SmallOSDVideo)</visible>
-
+				<control type="group">
+					<description>RotatingCD/DVD/BluRay for all media</description>
+					<left>50</left>
+					<width>360</width>
+					<height>360</height>
+					<include content="ItemBottom" condition="!Window.IsVisible(visualisation) + !Skin.HasSetting(show_discart)">
+						<param name="bottom" value="415" />
+					</include>
+					<include content="ItemBottom" condition="Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc) + Player.HasAudio">
+						<param name="bottom" value="245" />
+					</include>
+					<control type="group">
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
+						<control type="image" id="4393">
+							<aligny>top</aligny>
+							<aspectratio align="left">keep</aspectratio>
+							<texture background="true" diffuse="overlays/cdart_mask.png">$VAR[PlayerInfoDiscArtVar]</texture>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<bottom>247</bottom>
+							<width>218</width>
+							<height>73</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font-Disc</font>
+							<label>$VAR[MusicPlayerDiscTitleVar]</label>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>String.IsEqual(Control.GetLabel(4393),osd/cd.png)</visible>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<bottom>41</bottom>
+							<width>218</width>
+							<height>73</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font-Disc2</font>
+							<label>$VAR[MusicPlayerDiscAlbumVar]</label>
+							<textcolor>black</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>String.IsEqual(Control.GetLabel(4393),osd/cd.png)</visible>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<depth>DepthOSD+</depth>
+					<left>10</left>
+					<visible>!Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio</visible>
+					<control type="image">
+						<width>440</width>
+						<height>660</height>
+						<bottom>5</bottom>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<texture background="true" fallback="DefaultVideoCover.png">$VAR[NowPlayingPosterVar]</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+					</control>
+					<include condition="!Player.IsInternetStream + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)]">VideoPlayerRatingCircle</include>
+				</control>
+				<control type="group">
+					<description>audio disc cover</description>
+					<depth>DepthOSD+</depth>
+					<left>10</left>
+					<bottom>5</bottom>
+					<width>440</width>
+					<height>440</height>
+					<visible>Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+					<control type="image" id="4397">
+						<aspectratio aligny="bottom" align="center">keep</aspectratio>
+						<texture background="true" fallback="dialogs/defaultcdcover.png">$VAR[MusicPlayerCover]</texture>
+						<bordersize>20</bordersize>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<right>30</right>
+						<align>center</align>
+						<top>245</top>
+						<font>Font-Disc</font>
+						<textcolor>grey</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+						<label>$VAR[MusicPlayerDiscAlbumVar]</label>
+						<visible>String.IsEqual(Control.GetLabel(4397),dialogs/defaultcdcover.png)</visible>
+					</control>
+				</control>
 			</control>
 
 		</control>
