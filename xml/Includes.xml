@@ -3650,16 +3650,40 @@
 			<visible>!Player.HasGame + !Window.IsVisible(1135)</visible>
 			<bottom>0</bottom>
 			<height>310</height>
-			<control type="image">
-				<left>0</left>
-				<height>550</height>
-				<width>100%</width>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
+			<control type="group">
 				<animation effect="slide" end="0,-120" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
 				<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
 				<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
-				<fadetime>100</fadetime>
+				<control type="image">
+					<left>0</left>
+					<height>550</height>
+					<width>100%</width>
+					<bottom>-245</bottom>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<fadetime>100</fadetime>
+				</control>
+				<control type="image">
+					<bottom>294</bottom>
+					<left>440</left>
+					<width>810</width>
+					<height>150</height>
+					<aspectratio align="left" aligny="center">keep</aspectratio>
+					<texture background="true">$VAR[BannerPlayerArtVar]</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>!Skin.HasSetting(show_artistbanner) + Window.IsVisible(visualisation)</visible>
+				</control>
+				<control type="image">
+					<right>30</right>
+					<bottom>305</bottom>
+					<width>500</width>
+					<height>281</height>
+					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<visible>[Player.HasAudio + !Skin.HasSetting(enable_artistclearart)] | [Player.HasVideo + !Skin.HasSetting(enable_playerclearart)]</visible>
+					<fadetime>100</fadetime>
+				</control>
 			</control>
 			<control type="textbox">
 				<left>460</left>
@@ -3797,52 +3821,6 @@
 						<param name="top" value="80" />
 						<param name="left" value="190" />
 					</include>
-				</control>
-				<control type="image">
-					<right>30</right>
-					<bottom>230</bottom>
-					<width>500</width>
-					<height>281</height>
-					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<visible>!Skin.HasSetting(enable_playerclearart) + ![Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
-					<animation effect="slide" end="0,-80" time="50" tween="sine" easing="out" condition="!Window.IsActive(fullscreeninfo)">Conditional</animation>
-					<animation effect="slide" end="0,-120" time="50" tween="sine" easing="out" condition="Window.IsVisible(playerprocessinfo)">Conditional</animation>
-					<animation effect="slide" end="0,100" time="50" tween="sine" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
-					<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(videobookmarks) | Window.IsVisible(1122) | Window.IsVisible(1138) | Window.IsVisible(1139) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
-					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
-					<fadetime>100</fadetime>
-				</control>
-				<control type="image">
-					<right>30</right>
-					<bottom>310</bottom>
-					<width>500</width>
-					<height>281</height>
-					<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<visible>!Skin.HasSetting(enable_artistclearart) + [Window.IsVisible(visualisation) | Pvr.IsPlayingRadio]</visible>
-				</control>
-				<control type="image">
-					<bottom>294</bottom>
-					<right>10</right>
-					<width>640</width>
-					<height>151</height>
-					<aspectratio align="right" aligny="center">keep</aspectratio>
-					<texture background="true">$VAR[BannerPlayerArtVar]</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(visualisation) | Pvr.IsPlayingRadio] + [String.IsEmpty(Player.Art(clearart)) + Skin.HasSetting(enable_artistclearart)]</visible>
-				</control>
-				<control type="image">
-					<bottom>294</bottom>
-					<left>441</left>
-					<width>640</width>
-					<height>151</height>
-					<aspectratio align="right" aligny="center">keep</aspectratio>
-					<texture background="true">$VAR[BannerPlayerArtVar]</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>!Skin.HasSetting(show_artistbanner) + [Window.IsVisible(visualisation) | Pvr.IsPlayingRadio] + [!String.IsEmpty(Player.Art(clearart)) | !Skin.HasSetting(enable_artistclearart)]</visible>
 				</control>
 				<control type="group">
 					<height>151</height>

@@ -5,12 +5,20 @@
 			<animation effect="zoom" end="150" center="auto" condition="!Player.ShowInfo + !Window.IsVisible(musicosd)">Conditional</animation>
 			<animation effect="slide" end="-8,200" condition="!Player.ShowInfo + !Window.IsVisible(musicosd)">Conditional</animation>
 				<control type="image">
+					<!--
 					<top>-1000</top>
 					<bottom>-1000</bottom>
 					<left>-1000</left>
 					<right>-1000</right>
-					<texture colordiffuse="59FFFFFF">colors/black.png</texture>
-					<visible>!Player.ShowInfo + !Window.IsVisible(musicosd)</visible>
+					-->
+					<top>40</top>
+					<width>1000</width>
+					<height>530</height>
+					<centerleft>50%</centerleft>
+					<texture colordiffuse="59808080">colors/black.png</texture>
+					<!--<texture colordiffuse="59FFFFFF">colors/black.png</texture>
+					<visible>!Player.ShowInfo + !Window.IsVisible(musicosd) + </visible>-->
+					<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Window(Home).Property(culrc.hidedialog)) + !Window.IsActive(musicosd) + !Player.ShowInfo">Conditional</animation>
 				</control>
 				<control type="list" id="110">
 					<centerleft>50%</centerleft>
