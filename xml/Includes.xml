@@ -1476,7 +1476,7 @@
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
 					<param name="fallback" value="flags/aspectratio/fallback.png" />
 					<param name="width" value="86" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)<" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$PARAM[audiocodec_var]" />
@@ -1488,7 +1488,7 @@
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
 					<param name="fallback" value="flags/audiochannel/fallback.png" />
 					<param name="width" value="104" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)<" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="width" value="5" />
@@ -3448,20 +3448,20 @@
 					<visible>PVR.IsTimeShift + !Player.ChannelPreviewActive</visible>
 					<animation effect="fade" time="300">VisibleChange</animation>
 					<control type="label">
-						<bottom>155</bottom>
+						<bottom>158</bottom>
 						<height>30</height>
 						<font>font12</font>
 						<align>right</align>
 						<label>$INFO[PVR.TimeshiftProgressEndTime]</label>
 					</control>
 					<control type="label">
-						<bottom>155</bottom>
+						<bottom>158</bottom>
 						<height>30</height>
 						<font>font12</font>
 						<label>$INFO[PVR.TimeshiftProgressStartTime]</label>
 					</control>
 					<control type="label">
-						<bottom>155</bottom>
+						<bottom>158</bottom>
 						<height>30</height>
 						<font>font12</font>
 						<align>center</align>
