@@ -4,95 +4,96 @@
 		<control type="group">
 			<animation effect="zoom" end="150" center="auto" condition="!Player.ShowInfo + !Window.IsVisible(musicosd)">Conditional</animation>
 			<animation effect="slide" end="-8,200" condition="!Player.ShowInfo + !Window.IsVisible(musicosd)">Conditional</animation>
-				<control type="image">
-					<top>-1000</top>
-					<bottom>-1000</bottom>
-					<left>-1000</left>
-					<right>-1000</right>
-					<texture colordiffuse="59FFFFFF">colors/black.png</texture>
-					<visible>!Player.ShowInfo + !Window.IsVisible(musicosd)</visible>
-				</control>
-				<control type="list" id="110">
-					<centerleft>50%</centerleft>
-					<top>48</top>
-					<width>965</width>
-					<height>500</height>
-					<onleft>111</onleft>
-					<onright>111</onright>
-					<onup>110</onup>
-					<ondown>110</ondown>
-					<pagecontrol>111</pagecontrol>
-					<scrolltime>200</scrolltime>
-					<itemlayout height="56">
-						<control type="label">
-							<left>0</left>
-							<top>0</top>
-							<width>975</width>
-							<height>56</height>
-							<font>font14</font>
-							<aligny>center</aligny>
-							<align>center</align>
-							<label fallback="--">$INFO[ListItem.Label]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="56">
-						<control type="label">
-							<left>0</left>
-							<top>0</top>
-							<width>975</width>
-							<height>56</height>
-							<font>font14</font>
-							<aligny>center</aligny>
-							<align>center</align>
-							<label fallback="--">$INFO[ListItem.Label]</label>
-							<visible>!Control.HasFocus(110)</visible>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<top>0</top>
-							<width>975</width>
-							<height>56</height>
-							<font>font14</font>
-							<aligny>center</aligny>
-							<align>center</align>
-							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<label fallback="--">[B]$INFO[ListItem.Label][/B]</label>
-							<scroll>true</scroll>
-							<visible>Control.HasFocus(110)</visible>
-						</control>
-					</focusedlayout>
-				</control>
-			</control>
-	</include>
-	<include name="AnimatedLyrics">
-		<control type="list" id="110">
+			<visible>Skin.HasSetting(enable_animatedlyrics)</visible>
+			<control type="image">
+				<top>-180</top>
+				<width>1280</width>
+				<height>960</height>
 				<centerleft>50%</centerleft>
-				<top>45</top>
-				<width>0</width>
-				<height>450</height>
+				<texture colordiffuse="AA000000" diffuse="overlays/flix.png">colors/black.png</texture>
+				<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Window(Home).Property(culrc.hidedialog)) + !Window.IsActive(musicosd) + !Player.ShowInfo">Conditional</animation>
+			</control>
+			<control type="list" id="110">
+				<centerleft>50%</centerleft>
+				<top>48</top>
+				<width>965</width>
+				<height>500</height>
 				<onleft>111</onleft>
 				<onright>111</onright>
 				<onup>110</onup>
 				<ondown>110</ondown>
-				<pagecontrol>101</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
-				<itemlayout height="50">
+				<pagecontrol>111</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="56">
 					<control type="label">
-						<width>1830</width>
-						<height>50</height>
-						<align>center</align>
-						<info>ListItem.Label</info>
-					</control>
-				</itemlayout>
-				<focusedlayout height="50">
-					<control type="label">
-						<width>1830</width>
-						<height>50</height>
+						<left>0</left>
+						<top>0</top>
+						<width>975</width>
+						<height>56</height>
+						<font>font14</font>
+						<aligny>center</aligny>
 						<align>center</align>
 						<label fallback="--">$INFO[ListItem.Label]</label>
 					</control>
+				</itemlayout>
+				<focusedlayout height="56">
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>975</width>
+						<height>56</height>
+						<font>font14</font>
+						<aligny>center</aligny>
+						<align>center</align>
+						<label fallback="--">$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(110)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>975</width>
+						<height>56</height>
+						<font>font14</font>
+						<aligny>center</aligny>
+						<align>center</align>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<label fallback="--">[B]$INFO[ListItem.Label][/B]</label>
+						<scroll>true</scroll>
+						<visible>Control.HasFocus(110)</visible>
+					</control>
 				</focusedlayout>
 			</control>
+		</control>
+	</include>
+	<include name="AnimatedLyrics">
+		<control type="list" id="110">
+			<centerleft>50%</centerleft>
+			<top>45</top>
+			<width>0</width>
+			<height>450</height>
+			<onleft>111</onleft>
+			<onright>111</onright>
+			<onup>110</onup>
+			<ondown>110</ondown>
+			<pagecontrol>101</pagecontrol>
+			<scrolltime tween="quadratic" easing="out">200</scrolltime>
+			<itemlayout height="50">
+				<control type="label">
+					<width>1830</width>
+					<height>50</height>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50">
+				<control type="label">
+					<width>1830</width>
+					<height>50</height>
+					<align>center</align>
+					<label fallback="--">$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
 	</include>
 	<variable name="Col_lyr1">
 		<value condition="[String.EndsWith(Player.Duration,1) | String.EndsWith(Player.Duration,2) | String.EndsWith(Player.Duration,3) | String.EndsWith(Player.Duration,4) | String.EndsWith(Player.Duration,5) | String.EndsWith(Player.Duration,6) | String.EndsWith(Player.Duration,7) | String.EndsWith(Player.Duration,8) | String.EndsWith(Player.Duration,9)] + Skin.HasSetting(Alt_color.lyrics)">$VAR[LyricsColor1Var]</value>

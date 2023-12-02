@@ -225,27 +225,10 @@
 					</control>
 				</control>
 				<control type="radiobutton" id="607">
-					<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/random-on.png</textureradioonfocus>
-					<textureradioonnofocus>osd/fullscreen/buttons/random-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="white">osd/fullscreen/buttons/random-off.png</textureradioofffocus>
-					<textureradiooffnofocus>osd/fullscreen/buttons/random-off.png</textureradiooffnofocus>
-					<textureradioondisabled colordiffuse="disabled">osd/fullscreen/buttons/random-on.png</textureradioondisabled>
-					<textureradiooffdisabled colordiffuse="disabled">osd/fullscreen/buttons/random-off.png</textureradiooffdisabled>
-					<texturefocus colordiffuse="$VAR[SkinColorVar]">osd/fullscreen/buttons/button-fo-76.png</texturefocus>
-					<width>56</width>
-					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-						<effect type="zoom" end="125" time="75" tween="sine" easing="out" center="auto" />
-						<effect type="zoom" end="80" time="225" tween="sine" delay="100" easing="out" center="auto" />
-					</animation>
-					<height>56</height>
-					<radiowidth>54</radiowidth>
-					<radioheight>54</radioheight>
-					<font></font>
-					<texturenofocus />
-					<radioposx>1</radioposx>
-					<radioposy>0</radioposy>
-					<selected>Playlist.IsRandom</selected>
-					<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream + !MusicPartyMode.Enabled</visible>
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/random-on.png"/>
+						<param name="color_on" value="FFAA0000" />
+					</include>
 					<onclick>PlayerControl(Random)</onclick>
 				</control>
 				<control type="radiobutton" id="703">

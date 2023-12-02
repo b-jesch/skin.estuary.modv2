@@ -45,7 +45,8 @@ supports animated poster only.
 ### 21.1.0+omega ###
 - .2
   * code improvements of rotating media (CD/DVD/BluRay) in Video-/Audio OSD
-  * set dim button to red if dimmed (audio OSD)
+  * add active colors to buttons (dim, random playback) - audio OSD
+  * improved lyrics scrolling text view (cu-lrclyrics) 
 
 
 - .1
