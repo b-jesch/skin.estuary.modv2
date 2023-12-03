@@ -117,28 +117,14 @@
 					<visible>Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="radiobutton" id="606">
- 					<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/record-white.png</textureradioonfocus>
-					<textureradioonnofocus>osd/fullscreen/buttons/record-white.png</textureradioonnofocus>
- 					<textureradioofffocus colordiffuse="white">osd/fullscreen/buttons/record.png</textureradioofffocus>
- 					<textureradiooffnofocus>osd/fullscreen/buttons/record.png</textureradiooffnofocus>
- 					<texturefocus colordiffuse="$VAR[SkinColorVar]">osd/fullscreen/buttons/button-fo.png</texturefocus>
- 					<width>56</width>
- 					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-						<effect type="zoom" end="125" time="75" tween="sine" easing="out" center="auto" />
-						<effect type="zoom" end="80" time="225" tween="sine" delay="100" easing="out" center="auto" />
-					</animation>
- 					<height>56</height>
- 					<radiowidth>54</radiowidth>
- 					<radioheight>54</radioheight>
- 					<font></font>
- 					<texturenofocus />
- 					<radioposx>1</radioposx>
- 					<radioposy>0</radioposy>
- 					<selected>!PVR.IsRecordingPlayingChannel</selected>
- 					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
- 					<visible>PVR.CanRecordPlayingChannel</visible>
- 					<visible>MusicPlayer.Content(LiveTV)</visible>
- 				</control>
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/record-white.png"/>
+						<param name="color_selected" value="FFAA0000" />
+					</include>
+					<selected>PVR.IsRecordingPlayingChannel</selected>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<visible>PVR.CanRecordPlayingChannel + VideoPlayer.Content(livetv)</visible>
+				</control>
                 		<control type="radiobutton" id="62040">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/plot.png"/>
@@ -173,7 +159,7 @@
 				<control type="radiobutton" id="608">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/dim.png"/>
-						<param name="color_on" value="FFAA0000" />
+						<param name="color_selected" value="FFAA0000" />
 					</include>
 					<onclick>Skin.ToggleSetting(dim_screen)</onclick>
 					<onclick>Dialog.Close(musicosd)</onclick>
@@ -227,7 +213,7 @@
 				<control type="radiobutton" id="607">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/random-on.png"/>
-						<param name="color_on" value="FFAA0000" />
+						<param name="color_selected" value="FFAA0000" />
 					</include>
 					<onclick>PlayerControl(Random)</onclick>
 				</control>

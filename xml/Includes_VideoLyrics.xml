@@ -33,6 +33,7 @@
 						<font>font14</font>
 						<aligny>center</aligny>
 						<align>center</align>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<label fallback="--">$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
@@ -57,6 +58,7 @@
 						<aligny>center</aligny>
 						<align>center</align>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<label fallback="--">[B]$INFO[ListItem.Label][/B]</label>
 						<scroll>true</scroll>
 						<visible>Control.HasFocus(110)</visible>
