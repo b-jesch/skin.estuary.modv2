@@ -165,7 +165,7 @@
 				<control type="radiobutton" id="606">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/record-white.png"/>
-						<param name="color_on" value="FFAA0000" />
+						<param name="color_selected" value="FFAA0000" />
 					</include>
 					<selected>PVR.IsRecordingPlayingChannel</selected>
 					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
