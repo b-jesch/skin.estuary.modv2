@@ -219,6 +219,12 @@
 							<param name="visible" value="!String.IsEmpty(Window(Home).Property(PVR.Artwork.ListItem.status)) | !String.IsEmpty(ListItem.Status)" />
 						</include>
 						<include content="InfoDialogPvrMetadata">
+							<param name="control_id" value="160" />
+							<param name="label" value="$LOCALIZE[21802]: " />
+							<param name="content" value="$INFO[ListItem.Size]" />
+							<param name="visible" value="!String.IsEmpty(ListItem.Size)" />
+						</include>
+						<include content="InfoDialogPvrMetadata">
 							<param name="control_id" value="154" />
 							<param name="label" value="$LOCALIZE[19299]: " />
 							<param name="content" value="$INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime]" />
