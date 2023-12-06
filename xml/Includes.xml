@@ -1125,7 +1125,7 @@
 					<param name="label_width" value="155" />
 					<param name="label_left" value="45" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.DateAdded]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.DateAdded) + !Skin.HasSetting(show_dateaddedflag) + !Control.IsVisible(12000)" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.DateAdded) + !Skin.HasSetting(show_dateaddedflag) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,set) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,tvshow) + !Control.IsVisible(12000)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="width" value="5" />
