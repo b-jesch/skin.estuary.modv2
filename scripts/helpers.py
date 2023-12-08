@@ -42,27 +42,24 @@ if __name__ == '__main__':
                 returns result (int) in property Window(Home).getProperty(property)
             '''
             try:
+
                 p1 = float(sys.argv[3])
                 p2 = float(sys.argv[4])
-                operation = sys.argv[2]
+                operator = sys.argv[2]
                 prop = sys.argv[5]
 
-                if operation == 'add':
-                    xbmcgui.Window(10000).setProperty(prop, str(int(p1 + p2)))
-                elif operation == 'sub':
-                    xbmcgui.Window(10000).setProperty(prop, str(int(p1 - p2)))
-                elif operation == 'mul':
-                    xbmcgui.Window(10000).setProperty(prop, str(int(p1 * p2)))
-                elif operation == 'div':
-                    xbmcgui.Window(10000).setProperty(prop, str(int(p1 / p2)))
-                else:
-                    raise ValueError
+                if operator == 'add': xbmcgui.Window(10000).setProperty(prop, str(int(p1 + p2)))
+                elif operator == 'sub': xbmcgui.Window(10000).setProperty(prop, str(int(p1 - p2)))
+                elif operator == 'mul': xbmcgui.Window(10000).setProperty(prop, str(int(p1 * p2)))
+                elif operator == 'div': xbmcgui.Window(10000).setProperty(prop, str(int(p1 / p2)))
+                else: raise ValueError('Operator unknown')
+
                 xbmc.log('Property \'%s\' calculated' % prop, xbmc.LOGINFO)
 
             except IndexError:
                 xbmc.log('not all parameters provided for math operations', xbmc.LOGERROR)
-            except ValueError:
-                xbmc.log('operand not permitted', xbmc.LOGERROR)
+            except ValueError as e:
+                xbmc.log('Value error: %s' % str(e), xbmc.LOGERROR)
         else:
             xbmc.log('unknown parameter', xbmc.LOGERROR)
 
