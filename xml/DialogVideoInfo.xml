@@ -3,11 +3,11 @@
 	<defaultcontrol always="true">8</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onload condition="Integer.IsGreater(ListItem.PercentPlayed,0)">SetFocus(446)</onload>
-	<onload condition="Skin.HasSetting(tomatometerallcritics) + !String.IsEmpty(ListItem.Rating(tomatometerallcritics))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallcritics)] * 10)"',prop=rotten)</onload>
-	<onload condition="Skin.HasSetting(tomatometeravgcritics) + !String.IsEmpty(ListItem.Rating(tomatometeravgcritics))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometeravgcritics)] * 10)"',prop=rotten)</onload>
-	<onload condition="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.Rating(tomatometerallaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallaudience)] * 10)"',prop=rotten)</onload>
-	<onload condition="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.Rating(tomatometeravgaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometeravgaudience)] * 10)"',prop=rotten)</onload>
-	<onload condition="!String.IsEmpty(ListItem.Rating(metacritic))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(metacritic)] * 10)"',prop=metacritic)</onload>
+	<onload condition="Skin.HasSetting(tomatometerallcritics) + !String.IsEmpty(ListItem.Rating(tomatometerallcritics))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometerallcritics)],10,rotten)</onload>
+	<onload condition="Skin.HasSetting(tomatometeravgcritics) + !String.IsEmpty(ListItem.Rating(tomatometeravgcritics))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometeravgcritics)],10,rotten)</onload>
+	<onload condition="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.Rating(tomatometerallaudience))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometerallaudience)],10,rotten)</onload>
+	<onload condition="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.Rating(tomatometeravgaudience))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometeravgaudience)],10,rotten)</onload>
+	<onload condition="!String.IsEmpty(ListItem.Rating(metacritic))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(metacritic)],10,metacritic)</onload>
 	<onload condition="!String.StartsWith(ListItem.FileNameAndPath,'plugin://') + [String.IsEmpty(ListItem.Size) | String.StartsWith(ListItem.Size,0.00)]">RunScript(skin.estuary.modv2,getFileSize,$ESCINFO[ListItem.FileNameAndPath])</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<onunload>ClearProperty(rotten,home)</onunload>
