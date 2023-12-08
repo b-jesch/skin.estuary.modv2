@@ -51,9 +51,9 @@ if __name__ == '__main__':
                     xbmcgui.Window(10000).setProperty(prop, str(int(p1 + p2)))
                 elif operation == 'sub':
                     xbmcgui.Window(10000).setProperty(prop, str(int(p1 - p2)))
-                elif operation == 'multiply':
+                elif operation == 'mul':
                     xbmcgui.Window(10000).setProperty(prop, str(int(p1 * p2)))
-                elif operation == 'divide':
+                elif operation == 'div':
                     xbmcgui.Window(10000).setProperty(prop, str(int(p1 / p2)))
                 else:
                     raise ValueError
