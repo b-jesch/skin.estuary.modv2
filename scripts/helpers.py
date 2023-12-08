@@ -32,6 +32,36 @@ if __name__ == '__main__':
             xbmcgui.Window(10000).setProperty('size', '%s%s' % ('{0:0.2f}'.format(fs), units[unit]))
             xbmc.log('set Property \'size\' to %s%s' % ('{0:0.2f}'.format(fs), units[unit]), xbmc.LOGINFO)
 
+        elif sys.argv[1] == 'calculate':
+            '''
+                calculates two parameters, use integer operations
+                [argv2]: operator (add, sub, div, mul)
+                [argv3]: first operand (float)
+                [argv4]: second operand (float)
+                [argv5]: property
+                returns result (int) in property Window(Home).getProperty(property)
+            '''
+            try:
+                p1 = float(sys.argv[3])
+                p2 = float(sys.argv[4])
+                operation = sys.argv[2]
+                prop = sys.argv[5]
+
+                if operation == 'add':
+                    xbmcgui.Window(10000).setProperty(prop, str(int(p1 + p2)))
+                elif operation == 'sub':
+                    xbmcgui.Window(10000).setProperty(prop, str(int(p1 - p2)))
+                elif operation == 'multiply':
+                    xbmcgui.Window(10000).setProperty(prop, str(int(p1 * p2)))
+                elif operation == 'divide':
+                    xbmcgui.Window(10000).setProperty(prop, str(int(p1 / p2)))
+                else:
+                    raise ValueError
+            except IndexError:
+                xbmc.log('not all parameters provided for math operations', xbmc.LOGERROR)
+            except ValueError:
+                xbmc.log('operand not permitted', xbmc.LOGERROR)
+            xbmc.log('Property \'%s\' calculated' % prop, xbmc.LOGINFO)
         else:
             xbmc.log('unknown parameter', xbmc.LOGERROR)
 
