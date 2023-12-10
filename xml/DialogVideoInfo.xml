@@ -251,6 +251,12 @@
 						<param name="onclick_2" value="RunScript(script.embuary.info,call=tv,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="!String.IsEmpty(ListItem.Set)">
+						<param name="id" value="14" />
+						<param name="icon" value="icons/infodialogs/versions.png" />
+						<param name="label" value="$LOCALIZE[40000]" />
+						<param name="visible" value="String.IsEqual(ListItem.DBType,movie)" />
+					</include>
+					<include content="InfoDialogSmallButton" condition="!String.IsEmpty(ListItem.Set)">
 						<param name="id" value="444" />
 						<param name="icon" value="icons/infodialogs/set.png" />
 						<param name="label" value="$LOCALIZE[20457]" />

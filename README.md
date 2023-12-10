@@ -42,15 +42,16 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
-### 21.1.0+omega ###
-- .2
+### 21.2.0+omega ###
+- .0
   * code improvements of rotating media (CD/DVD/BluRay) in Video-/Audio OSD
   * add active colors to buttons (dim, random playback) - audio OSD
   * improved lyrics scrolling text view (cu-lrclyrics) 
-  * add calculate module in helpers.py
+  * add calculate function to helpers.py
   * improve process info dialog
-  * replace calculate module of embuary helper with own functions in video info dialog.
+  * replace calculate function of embuary helper with own function in video info dialog.
   * remove embuary helper addon from mandatory addons
+  * introducing movie versions management 
 
 
 - .1

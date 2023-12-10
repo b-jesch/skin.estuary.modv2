@@ -371,19 +371,19 @@
 					<include content="MediaFlagsRatings">
 						<param name="infolabel_prefix"/>
 					</include>
+					<include content="MediaFlag">
+						<param name="width" value="0" />
+						<param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/lastseen.png" />
+						<param name="width" value="200" />
+						<param name="label_width" value="146" />
+						<param name="label_left" value="50" />
+						<param name="label" value="$INFO[ListItem.LastPlayed]" />
+						<param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
+					</include>
 				</control>
-				<include content="MediaFlag">
-					<param name="width" value="0" />
-					<param name="visible" value="!String.IsEmpty(ListItem.LastPlayed)" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="flags/lastseen.png" />
-					<param name="width" value="200" />
-					<param name="label_width" value="146" />
-					<param name="label_left" value="50" />
-					<param name="label" value="$INFO[ListItem.LastPlayed]" />
-					<param name="visible" value="!String.IsEmpty(ListItem.LastPlayed)" />
-				</include>
 				<control type="list" id="51000">
 					<visible>ListItem.IsCollection</visible>
 					<top>8</top>
