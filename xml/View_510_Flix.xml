@@ -374,7 +374,7 @@
 					</include>
 					<include content="MediaFlag">
 						<param name="width" value="0" />
-						<param name="visible" value="!String.IsEmpty(ListItem.LastPlayed)" />
+						<param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
 					</include>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/lastseen.png" />
@@ -382,7 +382,7 @@
 						<param name="label_width" value="146" />
 						<param name="label_left" value="50" />
 						<param name="label" value="$INFO[ListItem.LastPlayed]" />
-						<param name="visible" value="!String.IsEmpty(ListItem.LastPlayed)" />
+						<param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
 					</include>
 				</control>
 				<control type="list" id="51000">
