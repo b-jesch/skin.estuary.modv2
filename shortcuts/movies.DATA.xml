@@ -25,6 +25,12 @@
         <action>ActivateWindow(Videos,videodb://movies/sets/,return)</action>
     </shortcut>
     <shortcut>
+        <label>40000</label>
+        <label2>Common Shortcut</label2>
+        <icon>DefaultVersions.png</icon>
+        <action>ActivateWindow(Videos,videodb://movies/videoversions/,return)</action>
+    </shortcut>
+    <shortcut>
         <label>652</label>
         <label2>Common Shortcut</label2>
         <icon>DefaultYear.png</icon>

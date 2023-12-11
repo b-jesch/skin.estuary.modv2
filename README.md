@@ -43,14 +43,18 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .1
+  * Movie version item to movie category widget added
+
+
 - .0
   * code improvements of rotating media (CD/DVD/BluRay) in Video-/Audio OSD
-  * add active colors to buttons (dim, random playback) - audio OSD
+  * active colors to buttons (dim, random playback) added - audio OSD
   * improved lyrics scrolling text view (cu-lrclyrics) 
-  * add calculate function to helpers.py
-  * improve process info dialog
-  * replace calculate function of embuary helper with own function in video info dialog.
-  * remove embuary helper addon from mandatory addons
+  * calculate function to helpers.py added
+  * improved process info dialog
+  * calculate function of embuary helper with own function in video info dialog replaced
+  * embuary helper addon from mandatory addons removed
   * introducing movie versions management 
 
 

@@ -222,7 +222,7 @@
 							<param name="control_id" value="160" />
 							<param name="label" value="$LOCALIZE[21802]: " />
 							<param name="content" value="$INFO[ListItem.Size]" />
-							<param name="visible" value="!String.IsEmpty(ListItem.Size)" />
+							<param name="visible" value="!String.IsEmpty(ListItem.Size) + !String.StartsWith(ListItem.Size,0)" />
 						</include>
 						<include content="InfoDialogPvrMetadata">
 							<param name="control_id" value="154" />
