@@ -26,9 +26,8 @@ if __name__ == '__main__':
                 argv[2]: Addon-Id
                 argv[3]: Enabled (true/false)
             '''
-
-            jsonrpc('{"method": "Addons.SetAddonEnabled", '
-                    '"params": {"addonid": "%s", "enabled": %s}}' % (sys.argv[2], sys.argv[3]))
+            result = jsonrpc({"method": "Addons.SetAddonEnabled",
+                              "params": {"addonid": sys.argv[2], "enabled": bool(sys.argv[3])}})
 
         elif sys.argv[1] == "getKodiSetting":
             '''
