@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- determine startup action, that has to perform -->
-	<onload>RunScript(script.embuary.helper,action=getkodisetting,setting=lookandfeel.startupaction)</onload>
+	<onload>RunScript(skin.estuary.modv2,getKodiSetting,lookandfeel.startupaction)</onload>
 	<!-- build main menu -->
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onunload>
 	<defaultcontrol>9000</defaultcontrol>

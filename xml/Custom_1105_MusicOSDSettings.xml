@@ -84,7 +84,7 @@
 						<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,true)</onclick>
 						<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics) + !Window.IsActive(script-cu-lrclyrics-main.xml)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,false)</onclick>
 						<enable>!Window.IsActive(script-cu-lrclyrics-main.xml)</enable>
-						<selected>!Skin.HasSetting(enable_lyrics)</selected>
+						<selected>!Skin.HasSetting(enable_lyrics) | Window.IsActive(script-cu-lrclyrics-main.xml)</selected>
 					</control>
 					<control type="radiobutton" id="50013">
 						<width>800</width>

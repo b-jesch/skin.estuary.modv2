@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.2.0+omega ###
 - .1
   * Movie version item to movie category widget added
+  * function 'getKodiSetting' to helper added
 
 
 - .0
