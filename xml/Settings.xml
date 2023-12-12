@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>RunScript(script.embuary.helper,action=getkodisetting,setting=lookandfeel.startupaction)</onload>
+	<onload>RunScript(skin.estuary.modv2,getkodisetting,lookandfeel.startupaction)</onload>
 	<onunload condition="!String.IsEmpty(Window(home).property(lookandfeel.startupaction)) + !String.IsEqual(Window(home).property(lookandfeel.startupaction),0)">Skin.SetBool(EnableSplashScreen)</onunload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>

@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .3
+  * function 'getKodiSetting' to helper added
+  
+
 - .2
   * code improvements of rotating media (CD/DVD/BluRay) in Video-/Audio OSD
   * add active colors to buttons (dim, random playback) - audio OSD

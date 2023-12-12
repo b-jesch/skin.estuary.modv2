@@ -2,8 +2,21 @@ import xbmc
 import xbmcvfs
 import xbmcgui
 import sys
+import json
 
 units = [' Bytes', ' kB', ' MB', ' GB', ' TB']
+
+
+def jsonrpc(query):
+    querystring = {"jsonrpc": "2.0", "id": 1}
+    querystring.update(query)
+    try:
+        response = json.loads(xbmc.executeJSONRPC(json.dumps(querystring)))
+        if 'result' in response: return response['result']
+    except TypeError as e:
+        xbmc.log('Error executing JSON RPC: {}'.format(e.args), xbmc.LOGERROR)
+    return None
+
 
 if __name__ == '__main__':
     try:
@@ -13,8 +26,18 @@ if __name__ == '__main__':
                 argv[2]: Addon-Id
                 argv[3]: Enabled (true/false)
             '''
-            jsonrpc = '{"jsonrpc": "2.0", "method": "Addons.SetAddonEnabled", "params": {"addonid": "%s", "enabled": %s}, "id": 1}' % (sys.argv[2], sys.argv[3])
-            xbmc.executeJSONRPC(jsonrpc)
+
+            jsonrpc('{"method": "Addons.SetAddonEnabled", '
+                    '"params": {"addonid": "%s", "enabled": %s}}' % (sys.argv[2], sys.argv[3]))
+
+        elif sys.argv[1] == "getKodiSetting":
+            '''
+                get Kodi setting
+                [argv2]: setting e.g. "lookandfeel.skin" in guisettings.xml 
+            '''
+            result = jsonrpc({"method": "Settings.GetSettingValue", "params": {"setting": sys.argv[2]}})
+            xbmcgui.Window(10000).setProperty(sys.argv[2], str(result['value']))
+            xbmc.log('set Property \'%s\' to %s' % (sys.argv[2], str(result['value'])), xbmc.LOGINFO)
 
         elif sys.argv[1] == 'getFileSize':
             '''
