@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">5000</defaultcontrol>
-	<onload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + Player.Playing + !Pvr.IsPlayingTV + !Pvr.IsPlayingRecording">PlayerControl(Play)</onload>
-	<onunload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + !Pvr.IsPlayingTV + !Pvr.IsPlayingRecording">PlayerControl(Play)</onunload>
+	<onload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + Player.Playing + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTV + !Pvr.IsPlayingRecording + !Player.IsInternetStream">PlayerControl(Play)</onload>
+	<onunload condition="!Skin.HasSetting(ExtendedOSDInfo) + !Skin.HasSetting(disable_PauseOnExtraInfos) + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTV + !Pvr.IsPlayingRecording + !Player.IsInternetStream">PlayerControl(Play)</onunload>
 	<onunload>ClearProperty(size,home)</onunload>
-	<onload condition="!Window.IsVisible(videoosd) + [Skin.HasSetting(ExtendedOSDInfo) | VideoPlayer.Content(musicvideos) | Pvr.IsPlayingTV | Pvr.IsPlayingRecording]">ActivateWindow(1143)</onload>
+	<onload condition="!Window.IsVisible(videoosd) + !Window.IsVisible(1138) + [Skin.HasSetting(ExtendedOSDInfo) | VideoPlayer.Content(musicvideos) | Pvr.IsPlayingTV | Pvr.IsPlayingRecording | Player.IsInternetStream]">ActivateWindow(1143)</onload>
 	<onload condition="!String.StartsWith(Player.FileNameAndPath,'plugin://')">RunScript(skin.estuary.modv2,getFileSize,$ESCINFO[Player.FileNameAndPath])</onload>
 	<controls>
 		<control type="group">

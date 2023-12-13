@@ -39,12 +39,12 @@
 					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
 						<param name="left" value="315"/>
 					</include>
-					<bottom>260</bottom>
+					<bottom>295</bottom>
 					<right>30</right>
 					<height>30</height>
-					<label>[B]$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)][/B]</label>
+					<label>$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</label>
 					<scroll>true</scroll>
-					<font>font37</font>
+					<font>font37_bold</font>
 					<scroll>true</scroll>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>!VideoPlayer.Content(LiveTV) + !Window.IsVisible(MusicVisualisation.xml)</visible>
@@ -56,12 +56,12 @@
 					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
 						<param name="left" value="315"/>
 					</include>
-					<bottom>260</bottom>
+					<bottom>295</bottom>
 					<right>30</right>
 					<height>30</height>
-					<label>[B]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title, : ,]$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode,,.]$INFO[VideoPlayer.EpisodeName, ][/B]</label>
+					<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title, : ,]$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode,,.]$INFO[VideoPlayer.EpisodeName, ]</label>
 					<scroll>true</scroll>
-					<font>font37</font>
+					<font>font37_bold</font>
 					<scroll>true</scroll>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -129,9 +129,9 @@
 					<include content="ItemLeft" condition="![VideoPlayer.HasMenu + System.HasMediaDVD]  + ![VideoPlayer.Content(movies) + !String.StartsWith(Player.Filenameandpath,http)] + ![VideoPlayer.Content(episodes) + !String.StartsWith(Player.Filenameandpath,http)]">
 						<param name="left" value="315"/>
 					</include>
-					<top>310</top>
+					<top>280</top>
 					<right>30</right>
-					<height>190</height>
+					<height>220</height>
 					<align>justify</align>
 					<font>fontplot</font>
 					<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
