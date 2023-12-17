@@ -955,35 +955,35 @@
 			<texturefocus />
 			<texturenofocus />
 			<onclick condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onclick>
-            <onclick condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</onclick>
-            <onclick condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onclick>
-            <onclick>ClearProperty(TrailerPlaying,Home)</onclick>
-            <onleft condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onleft>
-            <onleft condition="String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasMedia">SetFocus(439)</onleft>
-            <onleft condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasMedia">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onleft>
-            <onleft condition="!Player.HasMedia">ClearProperty(TrailerPlaying,Home)</onleft>
-            <onright condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onright>
-            <onright condition="String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasMedia">SetFocus(439)</onright>
-            <onright condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasMedia">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onright>
-            <onright condition="!Player.HasMedia">ClearProperty(TrailerPlaying,Home)</onright>
-            <onup condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onup>
-            <onup condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</onup>
-            <onup condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onup>
-            <onup>ClearProperty(TrailerPlaying,Home)</onup>
-            <ondown condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</ondown>
-            <ondown condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</ondown>
-            <ondown condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</ondown>
-            <ondown>ClearProperty(TrailerPlaying,Home)</ondown>
-            <onback>439</onback>
-            <onback condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onback>
-            <onback condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</onback>
-            <onback condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onback>
-            <onback>ClearProperty(TrailerPlaying,Home)</onback>
-            <oninfo>439</oninfo>
-            <oninfo condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</oninfo>
-            <oninfo condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</oninfo>
-            <oninfo condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</oninfo>
-            <oninfo>ClearProperty(TrailerPlaying,Home)</oninfo>
+			<onclick condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</onclick>
+			<onclick condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onclick>
+			<onclick>ClearProperty(TrailerPlaying,Home)</onclick>
+			<onleft condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onleft>
+			<onleft condition="String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasMedia">SetFocus(439)</onleft>
+			<onleft condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasMedia">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onleft>
+			<onleft condition="!Player.HasMedia">ClearProperty(TrailerPlaying,Home)</onleft>
+			<onright condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onright>
+			<onright condition="String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasMedia">SetFocus(439)</onright>
+			<onright condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasMedia">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onright>
+			<onright condition="!Player.HasMedia">ClearProperty(TrailerPlaying,Home)</onright>
+			<onup condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onup>
+			<onup condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</onup>
+			<onup condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onup>
+			<onup>ClearProperty(TrailerPlaying,Home)</onup>
+			<ondown condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</ondown>
+			<ondown condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</ondown>
+			<ondown condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</ondown>
+			<ondown>ClearProperty(TrailerPlaying,Home)</ondown>
+			<onback>439</onback>
+			<onback condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</onback>
+			<onback condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</onback>
+			<onback condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</onback>
+			<onback>ClearProperty(TrailerPlaying,Home)</onback>
+			<oninfo>439</oninfo>
+			<oninfo condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + Player.HasMedia">Stop</oninfo>
+			<oninfo condition="String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus(439)</oninfo>
+			<oninfo condition="!String.IsEmpty(Window(Home).Property(TrailerPlaying))">SetFocus($INFO[Window(Home).Property(TrailerPlaying)])</oninfo>
+			<oninfo>ClearProperty(TrailerPlaying,Home)</oninfo>
 		</control>
 		<control type="videowindow">
 			<centerleft>50%</centerleft>

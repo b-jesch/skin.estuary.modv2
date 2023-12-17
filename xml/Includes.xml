@@ -3334,6 +3334,11 @@
 			<left>$PARAM[left]</left>
 		</definition>
 	</include>
+	<include name="ItemRight">
+		<definition>
+			<right>$PARAM[right]</right>
+		</definition>
+	</include>
 	<include name="ItemTop">
 		<definition>
 			<top>$PARAM[top]</top>
