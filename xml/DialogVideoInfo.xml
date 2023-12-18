@@ -250,7 +250,7 @@
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="RunScript(script.embuary.info,call=tv,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="!String.IsEmpty(ListItem.Set)">
+					<include content="InfoDialogSmallButton">
 						<param name="id" value="14" />
 						<param name="icon" value="icons/infodialogs/versions.png" />
 						<param name="label" value="$LOCALIZE[40000]" />
