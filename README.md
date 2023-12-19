@@ -46,6 +46,8 @@ supports animated poster only.
 ### 4.2.0+nexus ###
 - .3
   * function 'getKodiSetting' to helper added
+  * some navigation issues in Fullscreen video info fixed
+  * slide animation fixed if custom widgets are used
   
 
 - .2
