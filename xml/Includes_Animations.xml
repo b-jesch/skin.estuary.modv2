@@ -56,8 +56,8 @@
 		</include>
 	</include>
 	<include name="Visible_Right_Delayed_Home">
-		<include condition="Skin.HasSetting(no_slide_animations) + [!Skin.HasSetting(widgetAnimation1) + !Skin.HasSetting(widgetAnimation2) + !Skin.HasSetting(widgetAnimation3) + !Skin.HasSetting(widgetAnimation4) + !Skin.HasSetting(widgetAnimation5) + !Skin.HasSetting(widgetAnimation6) + !Skin.HasSetting(widgetAnimation7) + !Skin.HasSetting(widgetAnimation8)+ !Skin.HasSetting(widgetAnimation9)]">Visible_Fade</include>
-		<include content="Vis_FadeSlide_Right_Delayed_Home" condition="!Skin.HasSetting(no_slide_animations) + [!Skin.HasSetting(widgetAnimation1) + !Skin.HasSetting(widgetAnimation2) + !Skin.HasSetting(widgetAnimation3) + !Skin.HasSetting(widgetAnimation4) + !Skin.HasSetting(widgetAnimation5) + !Skin.HasSetting(widgetAnimation6) + !Skin.HasSetting(widgetAnimation7) + !Skin.HasSetting(widgetAnimation8)+ !Skin.HasSetting(widgetAnimation9)]">
+		<include condition="Skin.HasSetting(no_slide_animations)">Visible_Fade</include>
+		<include content="Vis_FadeSlide_Right_Delayed_Home" condition="!Skin.HasSetting(no_slide_animations)">
 			<param name="id" value="$PARAM[id]" />
 		</include>
 	</include>
