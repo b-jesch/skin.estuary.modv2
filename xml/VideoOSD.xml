@@ -233,7 +233,7 @@
 					</include>
 					<onclick>ActivateWindow(1122)</onclick>
 					<visible>!VideoPlayer.Content(livetv) + ![VideoPlayer.HasMenu + System.HasMediaDVD]  + !VideoPlayer.Content(musicvideos) + !String.Contains(Player.Art(thumb),ytimg) + !VideoPlayer.Content(files)</visible>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + !Skin.HasSetting(VideoInfo_MovieCastList)</visible>
 				</control>
 				<control type="radiobutton" id="703">
 					<include content="OSDButton">
