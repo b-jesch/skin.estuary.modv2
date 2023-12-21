@@ -3721,6 +3721,7 @@
 						<param name="bottom" value="245" />
 					</include>
 					<control type="group">
+						<visible>Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc)</visible>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
 						<control type="image" id="4393">
 							<aligny>top</aligny>
