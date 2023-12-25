@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.2.0+omega ###
 - .2
   * missing condition of showing disc art on visualisations fixed
+  * following improvements of the video versions implementation progress
   
 
 - .1
