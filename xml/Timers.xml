@@ -23,4 +23,12 @@
 		<reset>!Window.isVisible(1108)</reset>
 		<onstop>Dialog.close(all)</onstop>
 	</timer>
+	<timer>
+		<name>fullscreenresolutioninfotimer</name>
+		<description>Shows videoresolution (HDR, HLG, DV) Info on start</description>
+		<start reset="true">Window.IsVisible(1111)</start>
+		<stop>Window.IsVisible(1111) + Integer.IsGreater(Skin.TimerElapsedSecs(fullscreenresolutioninfotimer),8)</stop>
+		<reset>!Window.IsVisible(1111)</reset>
+		<onstop>Dialog.Close(1111)</onstop>
+	</timer>
 </timers>
