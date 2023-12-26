@@ -1553,6 +1553,13 @@
 		<value condition="String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.12bit.)">flags/videoresolution/hdrplus.png</value>
 		<value>$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
 	</variable>
+	<variable name="VideoresolutionFullScreenVar">
+		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR+)">flags/fullscreen/hdrplus_fs.png</value>
+		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR)">flags/fullscreen/hdr_fs.png</value>
+		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),HLG)">flags/fullscreen/hlg_fs.png</value>
+		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),DV)">flags/fullscreen/dv_fs.png</value>
+		<value/>
+	</variable>
 	<variable name="3DFlagVar">
 		<value condition="String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>

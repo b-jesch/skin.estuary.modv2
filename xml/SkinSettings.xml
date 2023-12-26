@@ -754,6 +754,12 @@
 					<onclick>Skin.ToggleSetting(DisableThemes)</onclick>
 					<selected>!Skin.HasSetting(DisableThemes)</selected>
 				</control>
+				<control type="radiobutton" id="510">
+					<label>$LOCALIZE[31670]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(ShowVideoResolution)</onclick>
+					<selected>Skin.HasSetting(ShowVideoResolution)</selected>
+				</control>
 				<control type="button" id="509">
 					<label>$LOCALIZE[31663]</label>
 					<label2>$VAR[SpinnerTypeVar]</label2>
