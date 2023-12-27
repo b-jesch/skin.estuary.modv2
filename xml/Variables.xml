@@ -1546,8 +1546,8 @@
 		<value>$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]</value>
 	</variable>
 	<variable name="VideoresolutionFullScreenVar">
-		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10+)">flags/fullscreen/hdrplus_fs.png</value>
-		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10)">flags/fullscreen/hdr_fs.png</value>
+		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10+ )">flags/fullscreen/hdrplus_fs.png</value>
+		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10 )">flags/fullscreen/hdr_fs.png</value>
 		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),HLG)">flags/fullscreen/hlg_fs.png</value>
 		<value condition="String.StartsWith(Player.Process(amlogic.eoft_gamut),DV)">flags/fullscreen/dv_fs.png</value>
 	</variable>
