@@ -6,7 +6,7 @@
 		<control type="group">
 			<visible>String.IsEmpty(Window(Home).Property(script.preshowexperience.running))</visible>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<visible>!Window.IsActive(startup) + !Player.Caching</visible>
+			<visible>!Window.IsActive(startup) + !Window.IsVisible(1111) + !Player.Caching</visible>
 			<control type="image">
 				<texture>colors/black.png</texture>
 				<include>FullScreenDimensions</include>

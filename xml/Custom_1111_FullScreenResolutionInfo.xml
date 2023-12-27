@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1111">
+	<!--<visible>Window.IsVisible(fullscreenvideo) + [String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10) | String.StartsWith(Player.Process(amlogic.eoft_gamut),HLG) | String.StartsWith(Player.Process(amlogic.eoft_gamut),DV)]</visible>-->
+
 	<controls>
 		<animation effect="slide" end="0,-200" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 		<animation effect="slide" end="0,140" time="0" condition="Window.IsActive(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Conditional</animation>
@@ -8,7 +10,7 @@
 		<animation effect="slide" end="0,21" time="0" condition="Window.IsActive(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
 		<depth>DepthBars</depth>
 		<control type="group">
-			<visible>String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10) | String.StartsWith(Player.Process(amlogic.eoft_gamut),HLG) | String.StartsWith(Player.Process(amlogic.eoft_gamut),DV)</visible>
+			<visible>Window.IsActive(fullscreenvideo)</visible>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
