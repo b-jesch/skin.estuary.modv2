@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.2.0+nexus ###
 - .4
   * missing condition of showing disc art on visualisations fixed
+  * black screen mode while music playing improved (hide OSD independent of OSD info setting)
   
 
 - .3

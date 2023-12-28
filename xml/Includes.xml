@@ -3652,7 +3652,7 @@
 	</include>
 	<include name="OSDWithInfo">
 		<control type="group">
-			<visible>!Player.HasGame + !Window.IsVisible(1135)</visible>
+			<visible>!Player.HasGame + !Window.IsVisible(1135) + ![Window.IsVisible(visualisation) + Skin.HasSetting(dim_screen)]</visible>
 			<bottom>0</bottom>
 			<height>310</height>
 			<control type="group">
