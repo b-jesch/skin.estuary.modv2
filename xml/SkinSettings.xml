@@ -756,6 +756,7 @@
 				</control>
 				<control type="radiobutton" id="510">
 					<label>$LOCALIZE[31670]</label>
+					<visible>System.HasAddon(service.coreelec.settings)</visible>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(ShowVideoResolution)</onclick>
 					<selected>Skin.HasSetting(ShowVideoResolution)</selected>
