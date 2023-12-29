@@ -3,7 +3,7 @@
 	<defaultcontrol></defaultcontrol>
 	<onload>ClearProperty(ThumbSplit1,Home)</onload>
 	<onload>ClearProperty(ThumbSplit2,Home)</onload>
-	<onload condition="Skin.HasSetting(ShowVideoResolution) + !String.IsEmpty(Player.Process(amlogic.eoft_gamut))">ActivateWindow(1111)</onload>
+	<onload condition="Skin.HasSetting(ShowVideoResolution) + [String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10) | String.StartsWith(Player.Process(amlogic.eoft_gamut),HLG) | String.StartsWith(Player.Process(amlogic.eoft_gamut),DV)]">ActivateWindow(1111)</onload>
 	<onload condition="String.Contains(Player.Art(thumb),ytimg)">AlarmClock(setfo,SetFocus(9606),00:01,silent)</onload>
 	<controls>
 	<control type="button" id="9606">
@@ -46,24 +46,24 @@
 			<animation effect="fade" delay="300" time="200">Visible</animation>
 			<animation effect="fade" delay="200" time="150">Hidden</animation>
 			<centerleft>50%</centerleft>
-            <centertop>50%</centertop>
-            <width>350</width>
-            <height>70</height>
+			<centertop>50%</centertop>
+			<width>350</width>
+			<height>70</height>
 			<control type="image" id="1">
-                <centerleft>50%</centerleft>
-                <centertop>50%</centertop>
-                <width>350</width>
-                <height>70</height>
-                <texture>dialogs/back.png</texture>
-            </control>
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>350</width>
+				<height>70</height>
+				<texture>dialogs/back.png</texture>
+			</control>
  			<control type="progress" id="1">
- 			    <centerleft>50%</centerleft>
-                <top>39</top>
-                <width>320</width>
-                <height>16</height>
-                <info>Player.CacheLevel</info>
-            </control>
-            <control type="label" id="1">
+				<centerleft>50%</centerleft>
+				<top>39</top>
+				<width>320</width>
+				<height>16</height>
+				<info>Player.CacheLevel</info>
+			</control>
+			<control type="label" id="1">
  				<label>$INFO[Player.CacheLevel]%</label>
  				<centerleft>50%</centerleft>
  				<top>13</top>
