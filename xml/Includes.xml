@@ -3810,23 +3810,30 @@
 						<bordersize>2</bordersize>
 						<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border)</visible>
 					</control>
+					<control type="image">
+						<depth>DepthOSD</depth>
+						<left>28</left>
+						<bottom>23</bottom>
+						<width>404</width>
+						<height>404</height>
+						<texture colordiffuse="$VAR[PvrIconBGVar]">colors/white.png</texture>
+						<visible>Skin.HasSetting(EnablePvrIconBG)</visible>
+					</control>
 					<control type="image" id="4392">
 						<depth>DepthOSD+</depth>
-						<left>10</left>
-						<bottom>5</bottom>
-						<width>440</width>
-						<height>440</height>
+						<left>30</left>
+						<bottom>25</bottom>
+						<width>400</width>
+						<height>400</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
-						<bordertexture border="20">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
 						<visible>![Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border)]</visible>
 					</control>
-					<include content="BusyPvrArtworkSpinner">
-						<param name="top" value="80" />
-						<param name="left" value="190" />
-					</include>
 				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="80" />
+					<param name="left" value="190" />
+				</include>
 				<control type="group">
 					<height>151</height>
 					<right>30</right>
