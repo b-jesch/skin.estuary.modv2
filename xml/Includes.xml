@@ -3797,36 +3797,36 @@
 				</control>
 				<control type="group">
 					<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(visualisation) + Player.IsInternetStream]</visible>
-					<control type="image">
+					<control type="image" id="4392">
 						<description>Cover Live TV, RDS Radio, Stream (Addon)</description>
 						<depth>DepthOSD+</depth>
 						<left>28</left>
 						<bottom>23</bottom>
 						<width>404</width>
 						<height>404</height>
-						<aspectratio aligny="bottom" align="center">keep</aspectratio>
+						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
 						<bordertexture border="2" colordiffuse="$VAR[BorderColorVar]">colors/white.png</bordertexture>
 						<bordersize>2</bordersize>
 						<visible>Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border)</visible>
 					</control>
-					<control type="image">
+					<control type="image" id="4392">
 						<depth>DepthOSD+</depth>
 						<left>10</left>
 						<bottom>5</bottom>
 						<width>440</width>
 						<height>440</height>
-						<aspectratio aligny="bottom" align="center">keep</aspectratio>
+						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
 						<bordertexture border="20">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 						<visible>![Skin.HasSetting(show_borders) + Skin.HasSetting(stationlogo_border)]</visible>
 					</control>
-					<include content="BusyPvrArtworkSpinner">
-						<param name="top" value="80" />
-						<param name="left" value="190" />
-					</include>
 				</control>
+				<include content="BusyPvrArtworkSpinner">
+					<param name="top" value="80" />
+					<param name="left" value="190" />
+				</include>
 				<control type="group">
 					<height>151</height>
 					<right>30</right>
