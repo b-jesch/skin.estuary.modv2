@@ -1524,6 +1524,14 @@
 		<value condition="ListItem.Property(addon.isinstalled)">OverlayWatched.png</value>
 		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
 	</variable>
+	<variable name="AddonsOriginVar">
+		<value condition="ListItem.Property(Addon.IsFromOfficialRepo) + ListItem.IsAutoUpdateable">icons/addonstatus/official.png</value>
+		<value condition="ListItem.Property(Addon.IsFromOfficialRepo)">icons/addonstatus/official-pinned.png</value>
+		<value condition="String.IsEqual(ListItem.AddonOrigin,$LOCALIZE[25014]) + ListItem.IsAutoUpdateable">icons/addonstatus/manual.png</value>
+		<value condition="String.IsEqual(ListItem.AddonOrigin,$LOCALIZE[25014])">icons/addonstatus/manual-pinned.png</value>
+		<value condition="ListItem.IsAutoUpdateable">icons/addonstatus/install.png</value>
+		<value>icons/addonstatus/install-pinned.png</value>
+	</variable>
 	<!-- special media flags -->
 	<variable name="MediaSourceFlagVar">
 		<value condition="String.Contains(ListItem.Filenameandpath,hdtv) | String.Contains(ListItem.Filenameandpath,pdtv) | String.Contains(ListItem.Filenameandpath,hdtvrip) | String.Contains(ListItem.Filenameandpath,tvrip)">flags/hdtv.png</value>
