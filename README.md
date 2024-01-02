@@ -48,7 +48,8 @@ supports animated poster only.
   * following improvements of the video versions implementation progress
   * black screen mode while music playing improved (hide OSD independent of OSD info setting)
   * Addon status symbols to addon list added 
-  
+  * customizable background to pvr radio stations added
+
 
 - .1
   * Movie version item to movie category widget added
