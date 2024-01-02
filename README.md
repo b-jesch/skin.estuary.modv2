@@ -47,6 +47,7 @@ supports animated poster only.
   * missing condition of showing disc art on visualisations fixed
   * following improvements of the video versions implementation progress
   * black screen mode while music playing improved (hide OSD independent of OSD info setting)
+  * Addon status symbols to addon list added 
   
 
 - .1

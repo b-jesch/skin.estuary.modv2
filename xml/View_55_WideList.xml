@@ -415,7 +415,7 @@
 				<control type="label">
 					<left>75</left>
 					<height>80</height>
-					<right>40</right>
+					<right>75</right>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
 					<label>$INFO[ListItem.Label]</label>
@@ -423,11 +423,19 @@
 				<control type="label">
 					<left>75</left>
 					<height>80</height>
-					<right>40</right>
+					<right>75</right>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font27</font>
 					<label>$VAR[AddonsLabel2Var]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<right>20</right>
+					<top>25</top>
+					<width>32</width>
+					<height>32</height>
+					<texture>$VAR[AddonsOriginVar]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -444,7 +452,7 @@
 				<control type="label">
 					<left>75</left>
 					<height>80</height>
-					<right>40</right>
+					<right>75</right>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
 					<label>$INFO[ListItem.Label]</label>
@@ -452,13 +460,20 @@
 				<control type="label">
 					<left>75</left>
 					<height>80</height>
-					<right>40</right>
+					<right>75</right>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font27</font>
 					<label>$VAR[AddonsLabel2Var]</label>
 					<textcolor>grey</textcolor>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+				</control>
+				<control type="image">
+					<right>20</right>
+					<top>25</top>
+					<width>32</width>
+					<height>32</height>
+					<texture>$VAR[AddonsOriginVar]</texture>
 				</control>
 			</control>
 		</itemlayout>
