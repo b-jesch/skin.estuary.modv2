@@ -3757,31 +3757,28 @@
 				</control>
 				<control type="group">
 					<depth>DepthOSD+</depth>
-					<left>10</left>
+					<left>30</left>
 					<visible>!Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio</visible>
 					<control type="image">
-						<width>440</width>
-						<height>660</height>
-						<bottom>5</bottom>
+						<width>400</width>
+						<height>620</height>
+						<bottom>25</bottom>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$VAR[NowPlayingPosterVar]</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
 					</control>
 					<include condition="!Player.IsInternetStream + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)]">VideoPlayerRatingCircle</include>
 				</control>
 				<control type="group">
 					<description>audio disc cover</description>
 					<depth>DepthOSD+</depth>
-					<left>10</left>
-					<bottom>5</bottom>
-					<width>440</width>
-					<height>440</height>
+					<left>30</left>
+					<bottom>25</bottom>
+					<width>400</width>
+					<height>400</height>
 					<visible>Window.IsVisible(visualisation) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 					<control type="image" id="4397">
 						<aspectratio aligny="bottom" align="center">keep</aspectratio>
 						<texture background="true" fallback="dialogs/defaultcdcover.png">$VAR[MusicPlayerCover]</texture>
-						<bordersize>20</bordersize>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -4160,14 +4157,12 @@
 		</control>
 		<control type="image">
 			<depth>DepthOSD+</depth>
-			<left>10</left>
-			<bottom>5</bottom>
-			<width>440</width>
-			<height>440</height>
+			<left>30</left>
+			<bottom>25</bottom>
+			<width>400</width>
+			<height>400</height>
 			<aspectratio aligny="bottom">keep</aspectratio>
 			<texture background="true">special://skin/extras/home-images/disc.jpg</texture>
-			<bordertexture border="21">overlays/shadow.png</bordertexture>
-			<bordersize>20</bordersize>
 			<visible>[VideoPlayer.HasMenu + System.HasMediadvd]</visible>
 		</control>
 	</include>

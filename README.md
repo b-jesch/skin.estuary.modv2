@@ -47,8 +47,8 @@ supports animated poster only.
 - .4
   * missing condition of showing disc art on visualisations fixed
   * black screen mode while music playing improved (hide OSD independent of OSD info setting)
-  * Addon status symbols to addon list added 
-  * customizable background to pvr radio stations added
+  * Addon status symbols to addon lists added 
+  * customizable background to pvr radio station logos added (OSD)
   
 
 - .3
