@@ -1040,7 +1040,7 @@
 					<param name="width" value="104" />
 					<param name="fallback" value="flags/audiochannel/fallback.png" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)" />
-					<param name="visible2" value="Skin.HasSetting(show_mediaaudiochannelsflag)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediaaudiochannelsflag)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="width" value="5" />
