@@ -49,6 +49,7 @@ supports animated poster only.
   * black screen mode while music playing improved (hide OSD independent of OSD info setting)
   * Addon status symbols to addon lists added 
   * customizable background to pvr radio station logos added (OSD)
+  * visible condition of audio channel count flag reversed
 
 
 - .1
