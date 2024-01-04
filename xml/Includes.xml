@@ -1399,6 +1399,7 @@
 		<param name="infolabel_prefix"/>
 		<param name="resolution_var">$VAR[3DFlagVar]</param>
 		<param name="audiocodec_var">$VAR[AudioCodecFlagVar]</param>
+		<param name="show_ratings">true</param>
 		<param name="visible">true</param>
 		<param name="align">left</param>
 		<definition>
@@ -1502,7 +1503,7 @@
 					<param name="label" value="$INFO[ListItem.Duration]" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song)" />
 				</include>
-				<include content="MediaFlagsRatings">
+				<include content="MediaFlagsRatings" condition="$PARAM[show_ratings]">
 					<param name="infolabel_prefix"/>
 				</include>
 				<include content="MediaFlag">
@@ -1565,7 +1566,6 @@
 			</control>
 		</definition>
 	</include>
-
 	<include name="MediaFlagsInfoDialogRight">
 		<param name="infolabel_prefix" />
 		<param name="pvr">false</param>

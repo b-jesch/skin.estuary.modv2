@@ -358,6 +358,7 @@
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="DurationVar">
+		<value condition="Control.HasFocus(6) + !String.IsEmpty(Container(6).ListItem.Duration)">$INFO[Container(6).ListItem.Duration(h)]h$INFO[Container(6).ListItem.Duration(mm)]</value>
 		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Duration)">$INFO[Container(60).ListItem.Duration(h)]h$INFO[Container(60).ListItem.Duration(mm)]</value>
 		<value condition="Control.HasFocus(5083) + !String.IsEmpty(Container(5083).ListItem.Duration)">$INFO[Container(5083).ListItem.Duration(h)]h$INFO[Container(5083).ListItem.Duration(mm)]</value>
 		<value condition="Control.HasFocus(5084) + !String.IsEmpty(Container(5084).ListItem.Duration)">$INFO[Container(5084).ListItem.Duration(h)]h$INFO[Container(5084).ListItem.Duration(mm)]</value>
@@ -1663,7 +1664,7 @@
 	<variable name="PosterVar">
 		<value condition="ListItem.IsParentFolder + ![Control.IsVisible(55) + Container.Content(files)]">DefaultFolderBackPoster.png</value>
 		<value condition="Container.Content(actors) | Container.Content(directors)">$INFO[Container.ListItem.Art(thumb)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>	
+		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster)) + Container.Content(seasons)">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + !String.IsEqual(listitem.dbtype,season)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Container.Art(tvshow.poster)) + Container.Content(seasons) + Window.IsVisible(movieinformation)">$INFO[Container.Art(tvshow.poster)]</value>
@@ -1901,7 +1902,7 @@
 		<value condition="ListItem.HasReminder">icons/pvr/timers/bell.png</value>
 		<value condition="ListItem.HasTimer">icons/pvr/timers/recording.png</value>
 		<value condition="ListItem.IsCollection">overlays/set.png</value>
-		<value condition="ListItem.HasVideoVersions">overlays/versions.png</value>
+		<value condition="ListItem.HasVideoVersions + !Control.HasFocus(6)">overlays/versions.png</value>
 		<value condition="ListItem.IsPlaying">overlays/watched/OverlayPlaying-List.png</value>
 		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
 		<value condition="Integer.IsGreater(ListItem.Playcount,0) + [Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch.xml)]">OverlayWatched.png</value>

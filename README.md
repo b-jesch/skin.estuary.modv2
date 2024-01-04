@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.2.0+omega ###
 - .3
   * Debug controls to skin settings extras added
+  * Dialog select window of video versions improved
 
 - .2
   * missing condition of showing disc art on visualisations fixed
