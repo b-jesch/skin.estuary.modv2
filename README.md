@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .5
+  * Debug controls to skin settings extras added
+
+
 - .4
   * missing condition of showing disc art on visualisations fixed
   * black screen mode while music playing improved (hide OSD independent of OSD info setting)
