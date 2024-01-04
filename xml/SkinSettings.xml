@@ -234,6 +234,13 @@
 					<selected>!Skin.HasSetting(show_disc)</selected>
 					<onclick>Skin.ToggleSetting(show_disc)</onclick>
 				</control>
+				<control type="radiobutton" id="221">
+					<label>  ∟$LOCALIZE[31672]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(show_replacement)</selected>
+					<onclick>Skin.ToggleSetting(show_replacement)</onclick>
+					<visible>!Skin.HasSetting(show_disc)</visible>
+				</control>
 				<control type="radiobutton" id="210">
 					<label>$LOCALIZE[31289]</label>
 					<include>DefaultSettingButton</include>
