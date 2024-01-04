@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.2.0+nexus ###
 - .5
   * Debug controls to skin settings extras added
+  * added option showing CD replacement when primal CD art is not available 
 
 
 - .4
