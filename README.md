@@ -43,6 +43,9 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .3
+  * Debug controls to skin settings extras added
+
 - .2
   * missing condition of showing disc art on visualisations fixed
   * following improvements of the video versions implementation progress
