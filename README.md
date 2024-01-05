@@ -48,6 +48,7 @@ supports animated poster only.
   * Dialog select window of video versions improved
   * added option showing CD replacement when primal CD art is not available 
   * some visible conditions of tv show widgets (Home) depends on Embuary helper/info implemented
+  * Frame skip (FrameAdvance) implemented
 
 
 - .2

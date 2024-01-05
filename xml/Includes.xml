@@ -3372,7 +3372,8 @@
 				<onup>200</onup>
 				<onunfocus condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onunfocus>
 				<ondown>200</ondown>
-				<onright>StepForward</onright>
+				<onright condition="!Player.Paused">StepForward</onright>
+				<onright condition="Player.Paused">PlayerControl(FrameAdvance(1))</onright>
 				<onleft>StepBack</onleft>
 				<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
 			</control>
