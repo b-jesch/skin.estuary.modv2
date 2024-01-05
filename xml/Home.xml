@@ -185,6 +185,7 @@
 							<param name="list_id" value="61001"/>
 						</include>
 						<include content="WidgetNextWatchEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + Skin.HasSetting(HomeBanner)">
+							<param name="visible" value="System.AddonIsEnabled(script.embuary.helper)" />
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
 							<param name="widget_header" value="$LOCALIZE[31212]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6700).ListItem.TVShowTitle, | , - ]$INFO[Container(6700).ListItem.Season,,x]$INFO[Container(6700).ListItem.Episode,,. ]$INFO[Container(6700).ListItem.Title]$INFO[Container(6700).ListItem.Year, (,)]"/>
@@ -192,6 +193,7 @@
 							<param name="list_id" value="6700"/>
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes) + !Skin.HasSetting(HomeBanner)">
+							<param name="visible" value="System.AddonIsEnabled(script.embuary.helper)" />
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
 							<param name="widget_header" value="$LOCALIZE[31212]"/>
 							<param name="widget_header_focus" value="$INFO[Container(67001).ListItem.TVShowTitle, | , - ]$INFO[Container(67001).ListItem.Season,,x]$INFO[Container(67001).ListItem.Episode,,. ]$INFO[Container(67001).ListItem.Title]$INFO[Container(67001).ListItem.Year, (,)]"/>
@@ -199,6 +201,7 @@
 							<param name="list_id" value="67001"/>
 						</include>
 						<include content="WidgetNextWatchEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + Skin.HasSetting(HomeBanner)">
+							<param name="visible" value="System.AddonIsEnabled(script.embuary.info)" />
 							<param name="content_path" value="plugin://script.embuary.info/nextaired/week"/>
 							<param name="widget_header" value="$LOCALIZE[31572]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
@@ -206,6 +209,7 @@
 							<param name="list_id" value="6500"/>
 						</include>
 						<include content="WidgetNextWatchEpisodesBanner" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired) + !Skin.HasSetting(HomeBanner)">
+							<param name="visible" value="System.AddonIsEnabled(script.embuary.info)" />
 							<param name="content_path" value="plugin://script.embuary.info/nextaired/week"/>
 							<param name="widget_header" value="$LOCALIZE[31572]"/>
 							<param name="widget_header_focus" value="$INFO[Container(65001).ListItem.Label, | ]"/>
