@@ -27,7 +27,7 @@
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 				<bordersize>4</bordersize>
-				<texture border="4" background="true" fallback="defaultaddonnone.png">$INFO[Container(6).ListItem.Art(poster)]</texture>
+				<texture border="4" background="true">$VAR[VideoVersionPosterVar]</texture>
 			</control>
 			<control type="group">
 				<left>-30</left>
@@ -73,7 +73,7 @@
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="125" width="880">
+				<itemlayout height="135" width="880">
 					<control type="image">
 						<left>7</left>
 						<top>7</top>
@@ -99,8 +99,18 @@
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
+					<control type="progress">
+						<left>7</left>
+						<top>98</top>
+						<width>197</width>
+						<height>1</height>
+						<texturebg />
+						<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+						<info>ListItem.PercentPlayed</info>
+						<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+					</control>
 					<control type="label">
-						<left>215</left>
+						<left>220</left>
 						<top>0</top>
 						<right>14</right>
 						<height>125</height>
@@ -110,7 +120,7 @@
 						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
-						<left>215</left>
+						<left>220</left>
 						<top>10</top>
 						<right>14</right>
 						<height>62.5</height>
@@ -120,7 +130,7 @@
 						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
-						<left>215</left>
+						<left>220</left>
 						<top>52.5</top>
 						<right>14</right>
 						<height>62.5</height>
@@ -130,9 +140,9 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="125" width="880">
+				<focusedlayout height="135" width="880">
 					<control type="image">
-						<left>0</left>
+						<left>211</left>
 						<top>0</top>
 						<right>0</right>
 						<bottom>0</bottom>
@@ -164,8 +174,18 @@
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
+					<control type="progress">
+						<left>7</left>
+						<top>98</top>
+						<width>197</width>
+						<height>1</height>
+						<texturebg />
+						<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+						<info>ListItem.PercentPlayed</info>
+						<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+					</control>
 					<control type="label">
-						<left>215</left>
+						<left>220</left>
 						<top>0</top>
 						<right>14</right>
 						<height>125</height>
@@ -176,7 +196,7 @@
 						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
-						<left>215</left>
+						<left>220</left>
 						<top>10</top>
 						<right>14</right>
 						<height>62.5</height>
@@ -187,7 +207,7 @@
 						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
-						<left>215</left>
+						<left>220</left>
 						<top>52.5</top>
 						<right>14</right>
 						<height>62.5</height>

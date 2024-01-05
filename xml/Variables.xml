@@ -1369,6 +1369,14 @@
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
+	<variable name="VideoVersionPosterVar">
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[Container(6).ListItem.Art(animatedposter)]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(poster))">$INFO[Container(6).ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(set))">$INFO[Container(6).ListItem.Art(set)]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(landscape))">$INFO[Container(6).ListItem.Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(thumb))">$INFO[Container(6).ListItem.Art(thumb)]</value>
+		<value>$INFO[Container(6).ListItem.Icon]</value>
+	</variable>
 	<variable name="IconWallThumbVar">
 		<value condition="Container.Content(countries) + String.IsEqual(Skin.String(moviecountryicons.path),resource://resource.images.moviecountryicons.maps/)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.maps/,.png]</value>
 		<value condition="Container.Content(countries) + String.IsEqual(Skin.String(moviecountryicons.path),resource://resource.images.moviecountryicons.flags/)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.flags/,.png]</value>

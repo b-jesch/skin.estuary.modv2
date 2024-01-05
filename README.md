@@ -47,6 +47,8 @@ supports animated poster only.
   * Debug controls to skin settings extras added
   * Dialog select window of video versions improved
   * added option showing CD replacement when primal CD art is not available 
+  * some visible conditions of tv show widgets (Home) depends on Embuary helper/info implemented
+
 
 - .2
   * missing condition of showing disc art on visualisations fixed
