@@ -25,32 +25,44 @@
 			<radioposy>0</radioposy>
 		</definition>
 	</include>
+	<include name="OSDSliderNib">
+		<param name="nib_texture" />
+		<param name="focuscolor" value="00FFFFFF" />
+		<definition>
+			<top>-5</top>
+			<height>20</height>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<texturesliderbar colordiffuse="00FFFFFF">$PARAM[nib_texture]</texturesliderbar>
+			<textureslidernib colordiffuse="$PARAM[focuscolor]">$PARAM[nib_texture]</textureslidernib>
+			<textureslidernibfocus colordiffuse="$PARAM[focuscolor]">$PARAM[nib_texture]</textureslidernibfocus>
+		</definition>
+	</include>
 	<include name="InfoDialogPvrMetadata">
 		<param name="textcolor">$VAR[SkinColorVar]</param>
 		<param name="labelwidth">190</param>
 		<param name="labelalign">right</param>
 		<param name="font">font12</param>
 		<definition>
-				<control type="label" id="$PARAM[control_id]">
-					<width>$PARAM[labelwidth]</width>
-					<align>$PARAM[labelalign]</align>
-					<font>$PARAM[font]</font>
-					<label>$PARAM[label]</label>
-					<textcolor>$PARAM[textcolor]</textcolor>
-					<align>left</align>
-					<scroll>true</scroll>
-					<visible>$PARAM[visible]</visible>
-				</control>
-				<control type="textbox">
-					<left>$PARAM[labelwidth]</left>
-					<right>36</right>
-					<top>-4</top>
-					<font>$PARAM[font]</font>
-					<height>auto</height>
-					<label>$PARAM[content]</label>
-					<autoscroll delay="3000" time="1000" repeat="10000" />
-					<visible>$PARAM[visible]</visible>
-				</control>
+			<control type="label" id="$PARAM[control_id]">
+				<width>$PARAM[labelwidth]</width>
+				<align>$PARAM[labelalign]</align>
+				<font>$PARAM[font]</font>
+				<label>$PARAM[label]</label>
+				<textcolor>$PARAM[textcolor]</textcolor>
+				<align>left</align>
+				<scroll>true</scroll>
+				<visible>$PARAM[visible]</visible>
+			</control>
+			<control type="textbox">
+				<left>$PARAM[labelwidth]</left>
+				<right>36</right>
+				<top>-4</top>
+				<font>$PARAM[font]</font>
+				<height>auto</height>
+				<label>$PARAM[content]</label>
+				<autoscroll delay="3000" time="1000" repeat="10000" />
+				<visible>$PARAM[visible]</visible>
+			</control>
 		</definition>
 	</include>
 	<include name="InfoDialogMetadata">

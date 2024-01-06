@@ -49,6 +49,7 @@ supports animated poster only.
   * added option showing CD replacement when primal CD art is not available
   * some visible conditions of tv show widgets (Home) depends on Embuary helper/info implemented
   * Frame skip (FrameAdvance) implemented
+  * Skin Setting of video resolution timings on video startup improved
 
 
 - .4

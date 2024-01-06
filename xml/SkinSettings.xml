@@ -761,12 +761,18 @@
 					<onclick>Skin.ToggleSetting(DisableThemes)</onclick>
 					<selected>!Skin.HasSetting(DisableThemes)</selected>
 				</control>
-				<control type="radiobutton" id="510">
+				<control type="button" id="510">
 					<label>$LOCALIZE[31670]</label>
-					<visible>System.HasAddon(service.coreelec.settings)</visible>
+					<label2>$VAR[ShowVideoResolutionVar]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(ShowVideoResolution)</onclick>
-					<selected>Skin.HasSetting(ShowVideoResolution)</selected>
+					<visible>System.HasAddon(service.coreelec.settings)</visible>
+					<onclick condition="String.IsEmpty(Skin.String(show_videoresolution))">Skin.SetString(show_videoresolution,31578)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(show_videoresolution),31584)">Skin.SetString(show_videoresolution,31578)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(show_videoresolution),31583)">Skin.SetString(show_videoresolution,31584)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(show_videoresolution),31582)">Skin.SetString(show_videoresolution,31583)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(show_videoresolution),31581)">Skin.SetString(show_videoresolution,31582)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(show_videoresolution),31578)">Skin.SetString(show_videoresolution,31581)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(show_videoresolution)) + !String.IsEqual(Skin.String(show_videoresolution),31578) + !String.IsEqual(Skin.String(show_videoresolution),31581) + !String.IsEqual(Skin.String(show_videoresolution),31582) + !String.IsEqual(Skin.String(show_videoresolution),31583) + !String.IsEqual(Skin.String(show_videoresolution),31584)">Skin.SetString(show_videoresolution,31578)</onclick>
 				</control>
 				<control type="button" id="509">
 					<label>$LOCALIZE[31663]</label>
