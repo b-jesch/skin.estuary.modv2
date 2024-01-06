@@ -27,7 +27,7 @@
 		<name>fullscreenresolutioninfotimer</name>
 		<description>Shows videoresolution (HDR, HLG, DV) Info on start</description>
 		<start reset="true">Window.IsVisible(1111)</start>
-		<stop>Window.IsVisible(1111) + Integer.IsGreater(Skin.TimerElapsedSecs(fullscreenresolutioninfotimer),8)</stop>
+		<stop>Window.IsVisible(1111) + [Integer.IsGreater(Skin.TimerElapsedSecs(fullscreenresolutioninfotimer),5) + String.IsEqual(Skin.String(show_videoresolution),31581)] | [Integer.IsGreater(Skin.TimerElapsedSecs(fullscreenresolutioninfotimer),7) + String.IsEqual(Skin.String(show_videoresolution),31582)] | [Integer.IsGreater(Skin.TimerElapsedSecs(fullscreenresolutioninfotimer),10) + String.IsEqual(Skin.String(show_videoresolution),31583)] | [Integer.IsGreater(Skin.TimerElapsedSecs(fullscreenresolutioninfotimer),15) + String.IsEqual(Skin.String(show_videoresolution),31584)]</stop>
 		<reset>!Window.IsVisible(1111)</reset>
 		<onstop>Dialog.Close(1111)</onstop>
 	</timer>

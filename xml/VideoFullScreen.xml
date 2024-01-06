@@ -3,7 +3,7 @@
 	<defaultcontrol></defaultcontrol>
 	<onload>ClearProperty(ThumbSplit1,Home)</onload>
 	<onload>ClearProperty(ThumbSplit2,Home)</onload>
-	<onload condition="Skin.HasSetting(ShowVideoResolution) + [String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10) | String.StartsWith(Player.Process(amlogic.eoft_gamut),HLG) | String.StartsWith(Player.Process(amlogic.eoft_gamut),DV)]">ActivateWindow(1111)</onload>
+	<onload condition="!String.IsEqual(Skin.String(show_videoresolution),31578) + !String.IsEqual(Skin.String(show_videoresolution),31334) + [String.StartsWith(Player.Process(amlogic.eoft_gamut),HDR10) | String.StartsWith(Player.Process(amlogic.eoft_gamut),HLG) | String.StartsWith(Player.Process(amlogic.eoft_gamut),DV)]">ActivateWindow(1111)</onload>
 	<onload condition="String.Contains(Player.Art(thumb),ytimg)">AlarmClock(setfo,SetFocus(9606),00:01,silent)</onload>
 	<controls>
 	<control type="button" id="9606">
