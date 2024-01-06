@@ -753,6 +753,7 @@
 				</control>
 				<control type="button" id="510">
 					<label>$LOCALIZE[31670]</label>
+					<label2>$VAR[ShowVideoResolutionVar]</label2>
 					<visible>System.HasAddon(service.coreelec.settings)</visible>
 					<include>DefaultSettingButton</include>
 					<visible>System.HasAddon(service.coreelec.settings)</visible>
