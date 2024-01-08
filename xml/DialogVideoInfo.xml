@@ -445,7 +445,7 @@
 				<param name="visible" value="!Skin.HasSetting(VideoInfo_NextUpEpisodes)"/>
 			</include>
 			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">
-				<param name="content_path" value="videodb://inprogresstvshows/$INFO[ListItem.DBID]/-2/?tvshowid=$INFO[ListItem.TvShowDBID]"/>
+				<param name="content_path" value="videodb://inprogresstvshows/$INFO[ListItem.TvShowDBID]/-2/"/>
 				<param name="widget_target" value="videos"/>
 				<param name="widget_thumb" value="$VAR[InfoWidgetThumbVar2]"/>
 				<param name="sortby" value="playcount"/>
