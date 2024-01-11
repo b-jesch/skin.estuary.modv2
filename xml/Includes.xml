@@ -3394,6 +3394,8 @@
 					<control type="slider">
 						<include content="OSDSliderNib">
 							<param name="nib_texture">osd/progress/nub_leftright_fa.png</param>
+							<param name="nib_height">24</param>
+							<param name="nib_top">-7</param>
 							<param name="focuscolor">$VAR[SkinColorVar]</param>
 						</include>
 						<info>Player.Progress</info>
@@ -3412,6 +3414,8 @@
 					<control type="slider">
 						<include content="OSDSliderNib">
 							<param name="nib_texture">osd/progress/nub_leftright_fa.png</param>
+							<param name="nib_height">24</param>
+							<param name="nib_top">-7</param>
 							<param name="focuscolor">$VAR[SkinColorVar]</param>
 						</include>
 						<info>PVR.TimeshiftProgressPlayPos</info>
@@ -3432,6 +3436,8 @@
 					<control type="slider">
 						<include content="OSDSliderNib">
 							<param name="nib_texture">osd/progress/nub_leftright_fa.png</param>
+							<param name="nib_height">24</param>
+							<param name="nib_top">-7</param>
 						</include>
 						<info>Player.Progress</info>
 						<action>seek</action>
@@ -3448,6 +3454,8 @@
 					<control type="slider">
 						<include content="OSDSliderNib">
 							<param name="nib_texture">osd/progress/nub_leftright_fa.png</param>
+							<param name="nib_height">24</param>
+							<param name="nib_top">-7</param>
 						</include>
 						<info>PVR.TimeshiftProgressPlayPos</info>
 						<action>pvr.seek</action>

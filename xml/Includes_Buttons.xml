@@ -27,10 +27,12 @@
 	</include>
 	<include name="OSDSliderNib">
 		<param name="nib_texture" />
-		<param name="focuscolor" value="00FFFFFF" />
+		<param name="focuscolor">00FFFFFF</param>
+		<param name="nib_height">20</param>
+		<param name="nib_top">-5</param>
 		<definition>
-			<top>-5</top>
-			<height>20</height>
+			<top>$PARAM[nib_top]</top>
+			<height>$PARAM[nib_height]</height>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<texturesliderbar colordiffuse="00FFFFFF">$PARAM[nib_texture]</texturesliderbar>
 			<textureslidernib colordiffuse="$PARAM[focuscolor]">$PARAM[nib_texture]</textureslidernib>
