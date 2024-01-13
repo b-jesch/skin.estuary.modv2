@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .4
+  * visibility conditions of ratings extended to video info flags
+  
+
 - .3
   * Debug controls to skin settings extras added
   * Dialog select window of video versions improved
