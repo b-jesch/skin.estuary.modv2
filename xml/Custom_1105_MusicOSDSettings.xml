@@ -81,10 +81,10 @@
 						<label>$LOCALIZE[31637]</label>
 						<onclick condition="System.HasAddon(script.cu.lrclyrics)">Skin.ToggleSetting(enable_lyrics)</onclick>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,true)</onclick>
-						<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics) + !Window.IsActive(script-cu-lrclyrics-main.xml)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,false)</onclick>
+						<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,false)</onclick>
+						<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics) + !Window.IsActive(script-cu-lrclyrics-main.xml)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,true)</onclick>
 						<enable>!Window.IsActive(script-cu-lrclyrics-main.xml)</enable>
-						<selected>!Skin.HasSetting(enable_lyrics) | Window.IsActive(script-cu-lrclyrics-main.xml)</selected>
+						<selected>Skin.HasSetting(enable_lyrics) | Window.IsActive(script-cu-lrclyrics-main.xml)</selected>
 					</control>
 					<control type="radiobutton" id="50013">
 						<width>800</width>

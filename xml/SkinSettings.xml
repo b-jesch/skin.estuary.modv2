@@ -274,10 +274,10 @@
 					<label>$LOCALIZE[31637]</label>
 					<include>DefaultSettingButton</include>
 					<onclick condition="System.HasAddon(script.cu.lrclyrics)">Skin.ToggleSetting(enable_lyrics)</onclick>
-					<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,true)</onclick>
-					<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,false)</onclick>
+					<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,false)</onclick>
+					<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,true)</onclick>
 					<onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
-					<selected>!Skin.HasSetting(enable_lyrics)</selected>
+					<selected>Skin.HasSetting(enable_lyrics)</selected>
 				</control>
 				<control type="radiobutton" id="214">
 					<label>  ∟$LOCALIZE[31379]</label>
@@ -1290,6 +1290,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SelectBool(31602, 31603|tomatometerallcritics, 31604|tomatometeravgcritics, 31605|tomatometerallaudience, 31606|tomatometeravgaudience)</onclick>
 					<label2>$VAR[RottenSettingLabel2Var]</label2>
+					<enable>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)</enable>
 				</control>
 				<control type="radiobutton" id="715">
 					<label>$LOCALIZE[31285]</label>

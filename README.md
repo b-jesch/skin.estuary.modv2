@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .6
+  * visibility conditions of ratings extended to video info flags
+
+
 - .5
   * Debug controls to skin settings extras added
   * added option showing CD replacement when primal CD art is not available
