@@ -689,7 +689,7 @@
 		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Art(set.fanart))">$INFO[ListItem.Art(set.fanart)]</value>
 		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Art(setfanart))">$INFO[ListItem.Art(setfanart)]</value>
 		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Art(set.landscape))">$INFO[ListItem.Art(set.landscape)]</value>
-		<value condition="String.IsEqual(listitem.dbtype,episode) + Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="String.IsEqual(listitem.dbtype,episode) + !$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="String.IsEqual(listitem.dbtype,episode) + String.IsEmpty(ListItem.Art(thumb)) + Integer.IsLess(ListItem.Playcount,1)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="String.IsEqual(listitem.dbtype,episode) + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(season.landscape))">$INFO[ListItem.Art(season.landscape)]</value>
@@ -701,7 +701,7 @@
 		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="InfoWidgetThumbVar2">
-		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
@@ -831,10 +831,6 @@
 	<variable name="BackgroundInfoVar">
 		<value condition="Skin.HasSetting(EnableExtraFanart) + [String.IsEmpty(ListItem.Art(fanart1)) | String.IsEmpty(ListItem.Art(tvshow.fanart1))]">$INFO[Window(home).Property(fanart)]</value>
 		<value condition="!Skin.HasSetting(EnableExtraFanart)">$INFO[Window(home).Property(fanart)]</value>
-	</variable>
-	<variable name="PlotSpoilerInfoVar">
-		<value condition="[Skin.HasSetting(hide_plotforspoiler) + String.IsEqual(ListItem.DBType,episode)] + Integer.IsLess(ListItem.Playcount,1) + !String.StartsWith(Container.FolderPath,plugin://)">$LOCALIZE[31230]</value>
-		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="PlotSpoilerVar">
 		<value condition="[Skin.HasSetting(hide_plotforspoiler) + String.IsEqual(ListItem.DBType,episode)] + Integer.IsLess(ListItem.Playcount,1) + !String.StartsWith(Container.FolderPath,plugin://)">[COLOR white]$LOCALIZE[31230][/COLOR]</value>
@@ -1351,7 +1347,7 @@
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(set)) + String.IsEqual(listitem.dbtype,set)">$INFO[ListItem.Art(set)]</value>
-		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="String.IsEmpty(ListItem.Art(thumb)) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb)) + String.IsEqual(listitem.dbtype,episode)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEqual(listitem.dbtype,episode)">$INFO[ListItem.Art(fanart)]</value>
@@ -1361,15 +1357,15 @@
 	<variable name="InfoWallThumbVar2">
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="InfoWatchThumbVar">
-		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="InfoWallEpisodeVar">
-		<value condition="Skin.HasSetting(hide_thumbforspoiler) + Integer.IsLess(ListItem.Playcount,1)">$VAR[InfoWidgetThumbVar]</value>
+		<value condition="!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1)">$VAR[InfoWidgetThumbVar]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="IconWallPosterVar">

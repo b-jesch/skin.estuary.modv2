@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.2.0+nexus ###
 - .6
   * visibility conditions of ratings extended to video info flags
+  * settings of 'hide for spoiler', 'hide episode thumb of unseen episodes' removed from skin settings
 
 
 - .5

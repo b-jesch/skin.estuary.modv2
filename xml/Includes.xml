@@ -77,6 +77,8 @@
 	<expression name="PvrNextUpTimeSlot">[!Skin.HasSetting(disable_PVRNextUp) + Integer.IsEqual(PVR.EpgEventRemainingTime(hh),0) + Integer.IsEqual(PVR.EpgEventRemainingTime(mm),0) + Integer.IsLess(PVR.EpgEventRemainingTime(ss),36) + Integer.IsGreater(PVR.EpgEventRemainingTime(ss),4)]</expression>
 	<!-- Expression if PVR frontend has numbered Devices (#0 ... #8) -->
 	<expression name="PvrHasNumberedDevices">String.Contains(PVR.ActStreamDevice,#0) | String.Contains(PVR.ActStreamDevice,#1) | String.Contains(PVR.ActStreamDevice,#2) | String.Contains(PVR.ActStreamDevice,#3) | String.Contains(PVR.ActStreamDevice,#4) | String.Contains(PVR.ActStreamDevice,#5) | String.Contains(PVR.ActStreamDevice,#6) | String.Contains(PVR.ActStreamDevice,#7) | String.Contains(PVR.ActStreamDevice,#8)</expression>
+	<!-- Expression if show thumbs on unwatched episodes is set -->
+	<expression name="show_unwatchedthumbs">String.Contains(Window(home).Property(videolibrary.showunwatchedplots),2)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
