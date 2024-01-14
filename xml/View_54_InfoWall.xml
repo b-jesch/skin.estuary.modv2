@@ -682,7 +682,7 @@
 				<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-widget-back.png</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>!Container.Content(videos)</visible>
-				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
+				<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 			</control>
@@ -694,7 +694,7 @@
 				<texture background="true">$VAR[LibraryClearLogoVar]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>!Container.Content(videos)</visible>
-				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
+				<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]</visible>
 			</control>
 			<control type="image">

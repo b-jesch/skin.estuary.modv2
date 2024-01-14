@@ -32,7 +32,7 @@
 					<top>10</top>
 					<orientation>horizontal</orientation>
 					<height>50</height>
-					<width>500</width>
+					<width>290</width>
 					<itemgap>3</itemgap>
 					<aligny>center</aligny>
 					<control type="group">
@@ -40,13 +40,12 @@
 						<control type="image">
 							<width>44</width>
 							<height>44</height>
+							<aligny>center</aligny>
 							<texture colordiffuse="AFFFFFFF">$VAR[LogoVar]</texture>
 						</control>
-					</control>
-					<control type="group">
-						<align>left</align>
 						<control type="image">
 							<height>48</height>
+							<width>235</width>
 							<aspectratio>keep</aspectratio>
 							<texture colordiffuse="AFFFFFFF">$VAR[VideoresolutionFullScreenVar]</texture>
 						</control>

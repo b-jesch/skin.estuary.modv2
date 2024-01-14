@@ -147,7 +147,7 @@
 						<height>160</height>
 						<align>left</align>
 						<font>fontplot2</font>
-						<label fallback="19055">$VAR[PlotSpoilerInfoVar]</label>
+						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!Skin.HasSetting(enable_LibraryClearArt) + !String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
@@ -158,7 +158,7 @@
 						<height>160</height>
 						<align>left</align>
 						<font>fontplot2</font>
-						<label fallback="19055">$VAR[PlotSpoilerInfoVar]</label>
+						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Skin.HasSetting(enable_LibraryClearArt) | String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>

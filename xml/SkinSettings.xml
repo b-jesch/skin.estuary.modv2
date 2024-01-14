@@ -930,18 +930,6 @@
 					<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 					<selected>Skin.HasSetting(autoscroll)</selected>
 				</control>
-				<control type="radiobutton" id="902">
-					<label>$LOCALIZE[31231]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(hide_plotforspoiler)</onclick>
-					<selected>Skin.HasSetting(hide_plotforspoiler)</selected>
-				</control>
-				<control type="radiobutton" id="904">
-					<label>$LOCALIZE[31326]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(hide_thumbforspoiler)</onclick>
-					<selected>Skin.HasSetting(hide_thumbforspoiler)</selected>
-				</control>
 				<control type="radiobutton" id="905">
 					<label>$LOCALIZE[31554]</label>
 					<include>DefaultSettingButton</include>

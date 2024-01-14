@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.2.0+omega ###
 - .4
   * visibility conditions of ratings extended to video info flags
+  * settings of 'hide for spoiler', 'hide episode thumb of unseen episodes' removed from skin settings
   
 
 - .3

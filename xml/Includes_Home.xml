@@ -158,7 +158,7 @@
 					<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-widget-back.png</texture>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
 					<visible>String.IsEmpty(ListItem.Art(poster.0))</visible>
-					<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
+					<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 					<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 					<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 				</control>
@@ -170,7 +170,7 @@
 					<texture background="true">$VAR[LibraryClearLogoVar]</texture>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
 					<visible>String.IsEmpty(ListItem.Art(poster.0))</visible>
-					<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
+					<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 					<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 				</control>
 				<control type="image">
@@ -3491,7 +3491,7 @@
 				<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-widget-back.png</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>!Container.Content(videos)</visible>
-				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
+				<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 			</control>
@@ -3503,7 +3503,7 @@
 				<texture background="true">$VAR[LibraryClearLogoVar]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>!Container.Content(videos)</visible>
-				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
+				<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
@@ -4373,7 +4373,7 @@
 				<height>58</height>
 				<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-widget-back.png</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
-				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
+				<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 			</control>
@@ -4384,7 +4384,7 @@
 				<height>54</height>
 				<texture background="true">$VAR[LibraryClearLogoVar]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
-				<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(hide_thumbforspoiler)</visible>
+				<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
 			</control>
 			<control type="image">
