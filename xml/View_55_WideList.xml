@@ -436,6 +436,7 @@
 					<width>32</width>
 					<height>32</height>
 					<texture>$VAR[AddonsOriginVar]</texture>
+					<visible>!ListItem.IsFolder</visible>
 				</control>
 			</control>
 		</focusedlayout>
@@ -474,6 +475,7 @@
 					<width>32</width>
 					<height>32</height>
 					<texture>$VAR[AddonsOriginVar]</texture>
+					<visible>!ListItem.IsFolder</visible>
 				</control>
 			</control>
 		</itemlayout>
