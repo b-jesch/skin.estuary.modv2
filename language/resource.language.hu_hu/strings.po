@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-09-24 13:25+0000\n"
-"Last-Translator: C4Wiz <c4wiz@live.com>\n"
+"PO-Revision-Date: 2024-01-14 08:25+0000\n"
+"Last-Translator: frodo19\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/skin-estuary-"
 "modv2/glossary/hu/>\n"
 "Language: hu_hu\n"
@@ -147,12 +147,8 @@ msgstr "Válassz értékelés típust a médiaelemek megjelenítéséhez"
 
 #: /xml/DialogFavourites.xml
 msgctxt "#31025"
-msgid ""
-"No favourites found. You can add any item from media views to this list by "
-"using the context menu."
-msgstr ""
-"Nem találhatóak kedvencek. Bármely elemet hozzáadhat ehhez a listához a "
-"média nézetekből, a környezeti menü használatával."
+msgid "No favourites found. You can add any item from media views to this list by using the context menu."
+msgstr "Nem találhatóak kedvencek. Bármely elemet hozzáadhat ehhez a listához a média nézetekből, a környezeti menü használatával."
 
 #: /xml/DialogSeekBar.xml
 msgctxt "#31026"
@@ -273,8 +269,8 @@ msgstr "Info megjelenítése"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31051"
-msgid "Enable Splash screen"
-msgstr "Splash kép engedélyezése"
+msgid "Enable Splash Screen (disabled if 'perform on startup' is set)"
+msgstr "Splash kép engedélyezése (le van tiltva, ha a „végrehajtás indításkor” be van állítva)"
 
 #: /xml/Includes.xml
 msgctxt "#31052"
@@ -1961,6 +1957,11 @@ msgid "Show scrolling text"
 msgstr "Gördülő szöveg"
 
 #: /xml/SkinSettings.xml
+msgctxt "#31432"
+msgid "Scraper ratings"
+msgstr "Scrapper értékelés"
+
+#: /xml/SkinSettings.xml
 msgctxt "#31433"
 msgid "My ratings"
 msgstr "Saját pontozás"
@@ -2203,6 +2204,16 @@ msgstr "2:37:1 (1920x810)"
 msgctxt "#31480"
 msgid "Scope mode"
 msgstr "Mód"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31481"
+msgid "My ratings and scraper ratings"
+msgstr "Saját értékelés és scrapper értékelés"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31482"
+msgid "Scraper ratings text color"
+msgstr "Scrapper értékelés szövegszín"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31483"
@@ -2562,14 +2573,8 @@ msgid "Local Path to animated Poster Folder"
 msgstr "Helyi elérési út az Animált poszerekhez"
 
 msgctxt "#31599"
-msgid ""
-"The folder of the animated Poster Collection was not defined yet. Define a "
-"Folder on the local File System containing animated Posters within the Skin "
-"Settings."
-msgstr ""
-"Az animált posztergyűjtemény mappája még nincs meghatározva. Határozzon meg "
-"egy mappát a helyi fájlrendszerben, amely animált posztereket tartalmaz, a "
-"felszín beállításokhoz. "
+msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
+msgstr "Az animált posztergyűjtemény mappája még nincs meghatározva. Határozzon meg, egy mappát a helyi fájlrendszerben, amely animált posztereket tartalmaz, a felszín beállításokhoz."
 
 msgctxt "#31600"
 msgid "Could not assign animated Poster"
@@ -2744,3 +2749,149 @@ msgstr "Minimalizált opciók menü"
 msgctxt "#31639"
 msgid "Default Action on 'PVR' Widgets"
 msgstr "Alapértelmezett művelet a „PVR” widgeteken"
+
+#: /xml/SkinSettings.xml
+
+msgctxt "#31640"
+msgid "Enable background for splash screen"
+msgstr "Háttér engedélyezés a splash képhez"
+
+msgctxt "#31641"
+msgid "Prefer Album Fanart over Artist Fanart"
+msgstr "Album fanart előnyben részesítése az Artist fanart helyett"
+
+msgctxt "#31642"
+msgid "High Transparency of Seekbar Background"
+msgstr "Több átlátszóság a seekbaron"
+
+#: /xml/MyVideoNav
+
+msgctxt "#31643"
+msgid "Use Poster View"
+msgstr "Poszer nézet használata"
+
+msgctxt "#31644"
+msgid "Arial Unicode based"
+msgstr "Arial Unicode bázis"
+
+#: /xml/Includes_MediaMenu.xml
+
+msgctxt "#31645"
+msgid "Quick Navigation"
+msgstr "Gyors navigáció"
+
+#: /xml/MusicOSD.xml
+
+msgctxt "#31646"
+msgid "Black Screen : off"
+msgstr "Fekete képernyő: ki"
+
+msgctxt "#31647"
+msgid "Black Screen : on"
+msgstr "Fekete képernyő: be"
+
+#: /xml/Skinsettings.xml
+
+msgctxt "#31648"
+msgid "Stop Player if Video/Audio is paused longer than"
+msgstr "Állítsa le a lejátszót, ha a Video/Audio hosszabb ideig szünetel, mint"
+
+msgctxt "#31649"
+msgid "1 Minute"
+msgstr "1 perc"
+
+msgctxt "#31650"
+msgid "2 Minutes"
+msgstr "2 perc"
+
+msgctxt "#31651"
+msgid "3 Minutes"
+msgstr "3 perc"
+
+msgctxt "#31652"
+msgid "4 Minutes"
+msgstr "4 perc"
+
+msgctxt "#31653"
+msgid "5 Minutes"
+msgstr "5 perc"
+
+msgctxt "#31655"
+msgid "Show Battery Level"
+msgstr "Az akkumulátor töltöttségi szintjét mutatja"
+
+msgctxt "#31656"
+msgid "Show Title and Year on Poster Wall View"
+msgstr "Cím és év megjelenítése a Poster és Wall nézetben"
+
+msgctxt "#31657"
+msgid "Show Internet Status"
+msgstr "Internet státuszt mutat"
+
+msgctxt "#31658"
+msgid "Show own Level Colors"
+msgstr "Saját szín szintek megjelenítése"
+
+msgctxt "#31659"
+msgid "Color of Text Shadow"
+msgstr "Szöveg árnyék színe"
+
+msgctxt "#31660"
+msgid "current Time"
+msgstr "jelenlegi idő"
+msgctxt "#31661"
+
+msgid "Decrease Play speed"
+msgstr "Csökkenti a lejátszási sebességet"
+
+msgctxt "#31662"
+msgid "Increase Play speed"
+msgstr "Növeli a lejátszási sebességet"
+
+#: SkinSettings.xml
+
+msgctxt "#31663"
+msgid "Busy Spinner"
+msgstr "Betöltési animáció"
+
+#: Video OSD
+
+msgctxt "#31664"
+msgid "TUN"
+msgstr "TUN"
+
+msgctxt "#31665"
+msgid "SIG"
+msgstr "SIG"
+
+msgctxt "#31666"
+msgid "SNR"
+msgstr "SNR"
+
+msgctxt "#31667"
+msgid "REC"
+msgstr "FELVÉTEL"
+
+msgctxt "#31668"
+msgid "Hide SIG/SNR flags if not provided by Backend Driver"
+msgstr "SIG/SNR jelzők elrejtése, ha nem a Backend Driver biztosítja"
+
+#: 1137 Settings Flags
+
+msgctxt "#31669"
+msgid "Show Date added to Library"
+msgstr "A médiatárhoz hozzáadás dátumának megjelenítése"
+
+#: Skinsettings
+
+msgctxt "#31670"
+msgid "Show Video Resolution on Video start"
+msgstr "Mutasd a videó felbontás ikont a lejátszás elején"
+
+msgctxt "#31671"
+msgid "Toggle Skin Debug"
+msgstr "Skin Debug megjelenítése"
+
+msgctxt "#31672"
+msgid "Show Replacement when primal CDArt is not available"
+msgstr "Csere lehetőség, ha az elsődleges CDArt nem érhető el"
