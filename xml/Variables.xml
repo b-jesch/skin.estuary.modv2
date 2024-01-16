@@ -1187,6 +1187,11 @@
 		<value condition="String.IsEqual(Skin.String(autoclose_osd),31584)">$LOCALIZE[31584]</value>
 		<value>$LOCALIZE[31334]</value>
 	</variable>
+	<variable name="DefaultOsdButtonVar">
+		<value condition="String.IsEqual(Skin.String(defaultosdbutton),36045)">$LOCALIZE[36045]</value>
+		<value condition="String.IsEqual(Skin.String(defaultosdbutton),36044)">$LOCALIZE[36044]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
 	<variable name="ShowVideoResolutionVar">
 		<value condition="String.IsEqual(Skin.String(show_videoresolution),31578)">$LOCALIZE[31578]</value>
 		<value condition="String.IsEqual(Skin.String(show_videoresolution),31581)">$LOCALIZE[31581]</value>

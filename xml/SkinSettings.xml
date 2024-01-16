@@ -171,6 +171,17 @@
 				<ondown>200</ondown>
 				<pagecontrol>60</pagecontrol>
 				<visible>Container(9000).HasFocus(9)</visible>
+				<control type="label" id="900015">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>80</height>
+					<label>$LOCALIZE[10120]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
 				<control type="button" id="201">
 					<label>$LOCALIZE[31613]</label>
 					<include>DefaultSettingButton</include>
@@ -179,6 +190,17 @@
 					<onclick condition="String.IsEmpty(Skin.String(OsdMusicMediaTime))">Skin.SetString(OsdMusicMediaTime,1)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),0)">Skin.SetString(OsdMusicMediaTime,1)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),1)">Skin.SetString(OsdMusicMediaTime,0)</onclick>
+				</control>
+				<control type="label" id="900016">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>80</height>
+					<label>$LOCALIZE[31628]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="radiobutton" id="202">
 					<label>$LOCALIZE[31163]</label>
@@ -1101,6 +1123,14 @@
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(no_animations)</selected>
 					<onclick>Skin.ToggleSetting(no_animations)</onclick>
+				</control>
+				<control type="button" id="703">
+					<label>$LOCALIZE[31673]</label>
+					<label2>$VAR[DefaultOsdButtonVar]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="String.IsEmpty(Skin.String(defaultosdbutton))">Skin.SetString(defaultosdbutton,36045)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(defaultosdbutton),36045)">Skin.SetString(defaultosdbutton,36044)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(defaultosdbutton),36044)">Skin.SetString(defaultosdbutton,36045)</onclick>
 				</control>
 				<control type="button" id="719">
 					<label>$LOCALIZE[31577]</label>
