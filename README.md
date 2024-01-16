@@ -46,6 +46,8 @@ supports animated poster only.
 - .4
   * visibility conditions of ratings extended to video info flags
   * settings of 'hide for spoiler', 'hide episode thumb of unseen episodes' removed from skin settings
+    (use 'settings, media, videos, show information for unwatched items' instead)
+  * setting for default selection of OSD button added (Stop, Play/Pause)
   
 
 - .3
