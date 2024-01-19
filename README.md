@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .5
+  * condition visibility of episode thumbs depending on watch status fixed (startup)
+
+
 - .4
   * visibility conditions of ratings extended to video info flags
   * settings of 'hide for spoiler', 'hide episode thumb of unseen episodes' removed from skin settings

@@ -2,6 +2,7 @@
 <window>
 	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
+	<onload>RunScript(skin.estuary.modv2,getKodiSetting,videolibrary.showunwatchedplots)</onload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
