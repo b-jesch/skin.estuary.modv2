@@ -81,11 +81,18 @@
 					<control type="group">
 						<left>7</left>
 						<top>43</top>
-						<visible>ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.IsPlaying | ListItem.IsResumable | ListItem.HasArchive | Integer.IsGreater(ListItem.Playcount,0)</visible>
+						<visible>ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem. IsPlaying | ListItem.IsResumable | ListItem.HasArchive | Integer.IsGreater(ListItem.Playcount,0)</visible>
 						<control type="image">
 							<width>70</width>
 							<height>70</height>
 							<texture>overlays/overlay-bg.png</texture>
+							<visible>Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+						</control>
+						<control type="image">
+							<width>197</width>
+							<height>70</height>
+							<texture>overlays/overlayfade.png</texture>
+							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="image">
 							<left>3</left>
@@ -93,6 +100,16 @@
 							<width>32</width>
 							<height>32</height>
 							<texture>$VAR[WallWatchedIconVar]</texture>
+						</control>
+						<control type="progress">
+							<left>40</left>
+							<top>32</top>
+							<width>154</width>
+							<height>1</height>
+							<texturebg />
+							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+							<info>ListItem.PercentPlayed</info>
+							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 					</control>
 					<control type="label">
@@ -157,6 +174,13 @@
 							<width>70</width>
 							<height>70</height>
 							<texture>overlays/overlay-bg.png</texture>
+							<visible>Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+						</control>
+						<control type="image">
+							<width>197</width>
+							<height>70</height>
+							<texture>overlays/overlayfade.png</texture>
+							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="image">
 							<left>3</left>
@@ -164,6 +188,16 @@
 							<width>32</width>
 							<height>32</height>
 							<texture>$VAR[WallWatchedIconVar]</texture>
+						</control>
+						<control type="progress">
+							<left>40</left>
+							<top>32</top>
+							<width>154</width>
+							<height>1</height>
+							<texturebg />
+							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+							<info>ListItem.PercentPlayed</info>
+							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 					</control>
 					<control type="label">
