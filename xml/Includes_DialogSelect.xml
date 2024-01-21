@@ -117,7 +117,7 @@
 						<top>40</top>
 						<right>14</right>
 						<height>35</height>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.VideoVersionName,(,)]</label>
 						<font>font12_bold</font>
 						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
@@ -127,7 +127,7 @@
 						<right>14</right>
 						<height>35</height>
 						<font>font12_bold</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.VideoVersionName,(,)]</label>
 						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
@@ -205,7 +205,7 @@
 						<top>40</top>
 						<right>14</right>
 						<height>35</height>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.VideoVersionName,(,)]</label>
 						<font>font12_bold</font>
 						<scroll>true</scroll>
 						<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -216,7 +216,7 @@
 						<right>14</right>
 						<height>35</height>
 						<font>font12_bold</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.VideoVersionName,(,)]</label>
 						<scroll>true</scroll>
 						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
