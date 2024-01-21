@@ -31,19 +31,15 @@
 			</control>
 			<control type="group">
 				<left>-30</left>
+				<right>200</right>
 				<bottom>0</bottom>
 				<height>70</height>
-				<width>980</width>
 				<visible>Control.HasFocus(6)</visible>
 				<include content="MediaFlagsInfoDialogLeft">
 					<param name="align" value="left" />
 					<param name="infolabel_prefix" value="Container(6)." />
 					<param name="show_ratings" value="false" />
 					<param name="resolution_var" value="$INFO[Container(6).ListItem.VideoResolution,flags/videoresolution/,.png]" />
-				</include>
-				<include content="MediaFlagsInfoDialogRight">
-					<param name="align" value="right" />
-					<param name="infolabel_prefix" value="Container(6)." />
 				</include>
 			</control>
 			<control type="list" id="3">
@@ -73,10 +69,10 @@
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="135" width="880">
+				<itemlayout height="115" width="880">
 					<control type="image">
 						<left>7</left>
-						<top>7</top>
+						<top>2</top>
 						<width>197</width>
 						<height>111</height>
 						<texture fallback="DefaultAddonMore.png">$VAR[WidgetThumbViewVar]</texture>
@@ -84,7 +80,7 @@
 					</control>
 					<control type="group">
 						<left>7</left>
-						<top>48</top>
+						<top>43</top>
 						<visible>ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.IsPlaying | ListItem.IsResumable | ListItem.HasArchive | Integer.IsGreater(ListItem.Playcount,0)</visible>
 						<control type="image">
 							<width>70</width>
@@ -99,50 +95,46 @@
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
-					<control type="progress">
-						<left>7</left>
-						<top>98</top>
-						<width>197</width>
-						<height>1</height>
-						<texturebg />
-						<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-						<info>ListItem.PercentPlayed</info>
-						<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-					</control>
 					<control type="label">
 						<left>220</left>
-						<top>0</top>
+						<top>40</top>
 						<right>14</right>
-						<height>125</height>
-						<aligny>center</aligny>
+						<height>35</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>font14</font>
+						<font>font12_bold</font>
 						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>220</left>
-						<top>10</top>
+						<top>2</top>
 						<right>14</right>
-						<height>62.5</height>
-						<font>font14</font>
-						<aligny>center</aligny>
+						<height>35</height>
+						<font>font12_bold</font>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>220</left>
-						<top>52.5</top>
+						<top>37</top>
 						<right>14</right>
-						<height>62.5</height>
+						<height>35</height>
 						<font>font12</font>
-						<aligny>center</aligny>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
+					<control type="label">
+						<left>220</left>
+						<top>72</top>
+						<right>14</right>
+						<height>35</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Duration,$LOCALIZE[2050] : ]</label>
+					</control>
 				</itemlayout>
-				<focusedlayout height="135" width="880">
+				<focusedlayout height="115" width="880">
 					<control type="image">
-						<left>211</left>
+						<left>5</left>
 						<top>0</top>
 						<right>0</right>
 						<bottom>0</bottom>
@@ -151,7 +143,7 @@
 					</control>
 					<control type="image">
 						<left>7</left>
-						<top>7</top>
+						<top>2</top>
 						<width>197</width>
 						<height>111</height>
 						<texture fallback="DefaultAddonMore.png">$VAR[WidgetThumbViewVar]</texture>
@@ -159,7 +151,7 @@
 					</control>
 					<control type="group">
 						<left>7</left>
-						<top>48</top>
+						<top>43</top>
 						<visible>ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem. IsPlaying | ListItem.IsResumable | ListItem.HasArchive | Integer.IsGreater(ListItem.Playcount,0)</visible>
 						<control type="image">
 							<width>70</width>
@@ -174,47 +166,43 @@
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
-					<control type="progress">
-						<left>7</left>
-						<top>98</top>
-						<width>197</width>
-						<height>1</height>
-						<texturebg />
-						<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-						<info>ListItem.PercentPlayed</info>
-						<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-					</control>
 					<control type="label">
 						<left>220</left>
-						<top>0</top>
+						<top>40</top>
 						<right>14</right>
-						<height>125</height>
-						<aligny>center</aligny>
+						<height>35</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>font14</font>
+						<font>font12_bold</font>
 						<scroll>true</scroll>
 						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>220</left>
-						<top>10</top>
+						<top>0</top>
 						<right>14</right>
-						<height>62.5</height>
-						<font>font14</font>
-						<aligny>center</aligny>
+						<height>35</height>
+						<font>font12_bold</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
 						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>220</left>
-						<top>52.5</top>
+						<top>37</top>
 						<right>14</right>
-						<height>62.5</height>
+						<height>35</height>
 						<font>font12</font>
-						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="label">
+						<left>220</left>
+						<top>72</top>
+						<right>14</right>
+						<height>35</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Duration,$LOCALIZE[2050] : ]</label>
 					</control>
 				</focusedlayout>
 			</control>
