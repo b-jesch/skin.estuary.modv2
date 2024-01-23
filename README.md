@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.2.0+nexus ###
 - .7
   * condition visibility of episode thumbs depending on watch status fixed (startup)
+  * colored icons redesigned (thanks to frodo19)
 
 
 - .6
