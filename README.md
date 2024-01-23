@@ -45,6 +45,8 @@ supports animated poster only.
 ### 21.2.0+omega ###
 - .5
   * condition visibility of episode thumbs depending on watch status fixed (startup)
+  * colored icons redesigned (thanks to frodo19)
+  * minor improvements in video version selection dialog
 
 
 - .4
