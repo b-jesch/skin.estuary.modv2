@@ -1297,7 +1297,7 @@
 		<definition>
 			<control type="group">
 				<width>104</width>
-				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/imdb.png" />
 					<param name="width" value="104" />
@@ -1308,7 +1308,7 @@
 			</control>
 			<control type="group">
 				<width>104</width>
-				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tmdb)) + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/tmdb.png" />
 					<param name="width" value="104" />
@@ -1319,7 +1319,7 @@
 			</control>
 			<control type="group">
 				<width>104</width>
-				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(themoviedb)) + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/tmdb.png" />
 					<param name="width" value="104" />
@@ -1330,7 +1330,7 @@
 			</control>
 			<control type="group">
 				<width>104</width>
-				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(tvdb)) + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/tvdb.png" />
 					<param name="width" value="104" />
@@ -1341,7 +1341,7 @@
 			</control>
 			<control type="group">
 				<width>112</width>
-				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(Window(Home).Property(rotten)) + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/rotten.png" />
 					<param name="width" value="112" />
@@ -1352,7 +1352,7 @@
 			</control>
 			<control type="group">
 				<width>104</width>
-				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty(Window(Home).Property(metacritic)) + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/metacritic.png" />
 					<param name="width" value="104" />
@@ -1363,7 +1363,7 @@
 			</control>
 			<control type="group">
 				<width>104</width>
-				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(trakt)) + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/trakt.png" />
 					<param name="width" value="104" />
@@ -1374,7 +1374,7 @@
 			</control>
 			<control type="group">
 				<width>104</width>
-				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating) + [Container.Content(albums) | Container.Content(songs)] + [Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!Container.Content(albums) + !Container.Content(songs) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating(imdb)) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/rating.png" />
 					<param name="width" value="104" />
@@ -1385,7 +1385,7 @@
 			</control>
 			<control type="group">
 				<width>82</width>
-				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.UserRating) + [Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)]</visible>
+				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.UserRating) + Skin.HasSetting(infodialog_rating)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/myrating.png" />
 					<param name="width" value="82" />
