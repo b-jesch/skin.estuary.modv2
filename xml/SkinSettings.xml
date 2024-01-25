@@ -1281,6 +1281,35 @@
 					<param name="header">31221</param>
 					<param name="setting">BorderColor</param>
 				</include>
+				<control type="radiobutton" id="715">
+					<label>$LOCALIZE[31285]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(background_showvideo)</onclick>
+					<selected>!Skin.HasSetting(background_showvideo)</selected>
+				</control>
+				<control type="radiobutton" id="720">
+					<label>$LOCALIZE[31284]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(background_showvisualisation)</onclick>
+					<selected>!Skin.HasSetting(background_showvisualisation)</selected>
+				</control>
+				<control type="label" id="30021">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>80</height>
+					<label>$LOCALIZE[31674]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="radiobutton" id="725">
+					<label>$LOCALIZE[31675]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(infodialog_rating)</onclick>
+					<selected>Skin.HasSetting(infodialog_rating)</selected>
+				</control>
 				<control type="button" id="711">
 					<label>$LOCALIZE[31024]</label>
 					<include>DefaultSettingButton</include>
@@ -1309,18 +1338,6 @@
 					<onclick>Skin.SelectBool(31602, 31603|tomatometerallcritics, 31604|tomatometeravgcritics, 31605|tomatometerallaudience, 31606|tomatometeravgaudience)</onclick>
 					<label2>$VAR[RottenSettingLabel2Var]</label2>
 					<enable>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)</enable>
-				</control>
-				<control type="radiobutton" id="715">
-					<label>$LOCALIZE[31285]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(background_showvideo)</onclick>
-					<selected>!Skin.HasSetting(background_showvideo)</selected>
-				</control>
-				<control type="radiobutton" id="720">
-					<label>$LOCALIZE[31284]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(background_showvisualisation)</onclick>
-					<selected>!Skin.HasSetting(background_showvisualisation)</selected>
 				</control>
 			</control>
 			<control type="grouplist" id="600">
