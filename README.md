@@ -43,6 +43,11 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .6
+  * Jump2Letter for Interprets (music videos) implemented
+  * Option for showing rating flags in video info added
+
+  
 - .5
   * condition visibility of episode thumbs depending on watch status fixed (startup)
   * colored icons redesigned (thanks to frodo19)
