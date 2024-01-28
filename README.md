@@ -44,6 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .8
+  * Jump2Letter for Interprets (music videos) implemented
+  * Option for showing rating flags in video info added
+
+
 - .7
   * condition visibility of episode thumbs depending on watch status fixed (startup)
   * colored icons redesigned (thanks to frodo19)
