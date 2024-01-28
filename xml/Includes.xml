@@ -96,7 +96,6 @@
 					<width>12</width>
 					<onleft>50</onleft>
 					<onright condition="$EXP[isJump2Letter]">SetFocus(8000)</onright>
-					<onright>SetFocus(8000)</onright>
 					<onright condition="!$EXP[isJump2Letter]">50</onright>
 					<orientation>vertical</orientation>
 					<texturesliderbackground />
