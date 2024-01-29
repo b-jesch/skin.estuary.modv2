@@ -2334,7 +2334,7 @@
 							<visible>Container.Filtered</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
+							<label>$INFO[Container.CurrentItem, , / ]$INFO[Container.NumItems]</label>
 							<include>BreadcrumbsLabel</include>
 						</control>
 						<control type="label">
