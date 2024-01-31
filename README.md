@@ -46,6 +46,7 @@ supports animated poster only.
 - .6
   * Jump2Letter for Interprets (music videos) implemented
   * Option for showing rating flags in video info added
+  * Chinese language strings added
 
   
 - .5
