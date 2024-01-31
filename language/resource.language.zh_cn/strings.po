@@ -1,0 +1,2814 @@
+# Kodi Media Center language file
+# Addon Name: Estuary MOD v2
+# Addon id: skin.estuary.modv2
+# Addon Provider: Guilouz, PvD
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI Main\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Guilouz\n"
+"Language-Team: English (United Kingdom)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /xml/Home.xml /xml/DialogSeekBar.xml
+msgctxt "#31000"
+msgid "Now playing"
+msgstr "正在播放"
+
+#: /xml/Home.xml
+msgctxt "#31001"
+msgid "Search..."
+msgstr "搜索..."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31002"
+msgid "Show media fanart as background"
+msgstr "显示媒体同人画作为背景"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31003"
+msgid "Cinema mode"
+msgstr "影院模式"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31004"
+msgid "Change mode"
+msgstr "改变模式"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31005"
+msgid "Watch as 2D"
+msgstr "以2D形式观看"
+
+#: /xml/Home.xml
+msgctxt "#31006"
+msgid "Random movies"
+msgstr "随机电影"
+
+#: /xml/Home.xml
+msgctxt "#31007"
+msgid "Unwatched movies"
+msgstr "未观看的电影"
+
+#: Missing string 31108
+
+#: /xml/MyVideoNav.xml
+msgctxt "#31009"
+msgid "Download icons"
+msgstr "下载图标"
+
+#: /xml/Home.xml
+msgctxt "#31010"
+msgid "In progress movies"
+msgstr "正在进行的电影"
+
+#: /xml/Home.xml
+msgctxt "#31011"
+msgid "Most played albums"
+msgstr "播放次数最多的专辑"
+
+#: /xml/Home.xml
+msgctxt "#31012"
+msgid "Random albums"
+msgstr "随机相册"
+
+#: /xml/Home.xml
+msgctxt "#31013"
+msgid "Random artists"
+msgstr "随机艺术家"
+
+#: /xml/Home.xml
+msgctxt "#31014"
+msgid "Unplayed albums"
+msgstr "未播放的专辑"
+
+#. home screen recordings widget: recent tv / radio recordings
+#: /xml/Home.xml
+msgctxt "#31015"
+msgid "Recent recordings"
+msgstr "最近的录音"
+
+#. home screen channel widget: recently played tv channels. (please note that in some non-english languages #31018 and #31016 might not be equal)
+#: /xml/Home.xml
+msgctxt "#31016"
+msgid "Recently played channels"
+msgstr "最近播放的频道"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31017"
+msgid "Rated"
+msgstr "评分"
+
+#. home screen channel widget: recently played radio channels. (please note that in some non-english languages #31018 and #31016 might not be equal)
+#: /xml/Home.xml
+msgctxt "#31018"
+msgid "Recently played channels"
+msgstr "最近播放的频道"
+
+#: /xml/Home.xml /xml/MyWeather.xml
+msgctxt "#31019"
+msgid "Forecast"
+msgstr "预告"
+
+#: /xml/MyMusicNav.xml /xml/MyPics.xml /xml/MyVideoNav.xml
+msgctxt "#31020"
+msgid "Actions"
+msgstr "行动"
+
+#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml /xml/Includes_MediaMenu.xml /xml/EventLog.xml
+msgctxt "#31021"
+msgid "Misc options"
+msgstr "其他选项"
+
+#: /xml/Includes_MediaMenu.xml /xml/Includes.xml
+msgctxt "#31022"
+msgid "Sort by"
+msgstr "排序依据"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31023"
+msgid "Viewtype"
+msgstr "视图类型"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31024"
+msgid "Select rating to display on media items and flags"
+msgstr "查看类型选择要在媒体项目和标志上显示的分级"
+
+#: /xml/DialogFavourites.xml
+msgctxt "#31025"
+msgid "No favourites found. You can add any item from media views to this list by using the context menu."
+msgstr "未找到收藏夹。您可以使用上下文菜单将媒体视图中的任何项目添加到此列表中。"
+
+#: /xml/DialogSeekBar.xml
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "时移"
+
+#: /xml/DialogAlbumInfo.xml /xml/DialogVideoInfo.xml
+msgctxt "#31028"
+msgid "Show fanart"
+msgstr "展示同人画"
+
+#: /xml/SettingsProfile.xml
+msgctxt "#31029"
+msgid "Last logged in"
+msgstr "上次登录"
+
+#: /xml/SettingsSystemInfo.xml
+msgctxt "#31030"
+msgid "System memory usage"
+msgstr "系统内存使用情况"
+
+#: /xml/SettingsSystemInfo.xml
+msgctxt "#31031"
+msgid "Version info"
+msgstr "版本信息"
+
+#: /xml/EventLog.xml /xml/Includes_MediaMenu.xml /xml/SmartPlaylistEditor.xml
+msgctxt "#31032"
+msgid "Order"
+msgstr "命令"
+
+#: /xml/DialogVideoInfo.xml /xml/DialogSongInfo.xml
+msgctxt "#31033"
+msgid "My rating"
+msgstr "我的评价"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31034"
+msgid "Extended info"
+msgstr "扩展信息"
+
+#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
+msgctxt "#31035"
+msgid "Pages"
+msgstr "页数"
+
+#: /xml/FileBrowser.xml /xml/Variables.xml /xml/MyPVRRecordings.xml
+msgctxt "#31036"
+msgid "items"
+msgstr "项目"
+
+msgctxt "#31037"
+msgid "item"
+msgstr "物品"
+
+#: /xml/Variables.xml
+msgctxt "#31038"
+msgid "Rewind"
+msgstr "倒回"
+
+#: /xml/Variables.xml
+msgctxt "#31039"
+msgid "Fast forward"
+msgstr "快进"
+
+#: /xml/Variables.xml /xml/MyPics.xml
+msgctxt "#31041"
+msgid "Camera manufacturer"
+msgstr "影片制造商"
+
+#: /xml/SmartPlaylistEditor.xml
+msgctxt "#31042"
+msgid "Playlist options"
+msgstr "播放列表选项"
+
+#: /xml/SmartPlaylistEditor.xml
+msgctxt "#31043"
+msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
+msgstr "设置类型并添加规则以创建智能播放列表。这些播放列表是动态的，包括数据库中应用于所选规则的所有媒体项目。"
+
+#: /xml/DialogPVRGroupManager.xml
+msgctxt "#31044"
+msgid "Add group"
+msgstr "添加组"
+
+#: /xml/DialogPVRGroupManager.xml
+msgctxt "#31045"
+msgid "Rename group"
+msgstr "重命名组"
+
+#: /xml/DialogPVRGroupManager.xml
+msgctxt "#31046"
+msgid "Delete group"
+msgstr "删除组"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31048"
+msgid "Available"
+msgstr "可用的"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31049"
+msgid "Show content"
+msgstr "展示内容"
+
+#: /xml/Variables.xml
+msgctxt "#31050"
+msgid "Show plot"
+msgstr "显示情节"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31051"
+msgid "Enable Splash Screen (disabled if 'perform on startup' is set)"
+msgstr "启用启动屏幕（如果设置了“启动时执行”则禁用）"
+
+#: /xml/Includes.xml
+msgctxt "#31052"
+msgid "filtered"
+msgstr "过滤"
+
+#: /xml/Font.xml
+msgctxt "#31053"
+msgid "Arial based"
+msgstr "基于 Arial"
+
+#: /xml/Variables.xml
+msgctxt "#31054"
+msgid "Forward jumping"
+msgstr "向前跳跃"
+
+#: /xml/Variables.xml
+msgctxt "#31055"
+msgid "Backward jumping"
+msgstr "向后跳跃"
+
+#: /xml/MyMusicNav.xml /xml/MyVideoNav.xml
+msgctxt "#31056"
+msgid "Go to playlist"
+msgstr "前往播放列表"
+
+#: /xml/SettingsProfile.xml
+msgctxt "#31057"
+msgid "Show login screen on startup"
+msgstr "启动时显示登录屏幕"
+
+#: /xml/SettingsProfile.xml
+msgctxt "#31058"
+msgid "Automatic Login on startup"
+msgstr "启动时自动登录"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31061"
+msgid "Main menu items"
+msgstr "主菜单项"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31062"
+msgid "Weather fanarts pack"
+msgstr "天气同人画包"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31063"
+msgid "Sections"
+msgstr "部分"
+
+#: /xml/Variables.xml
+msgctxt "#31064"
+msgid "unwatched"
+msgstr "未被观看的"
+
+#: /xml/MyVideoPlaylist.xml
+msgctxt "#31065"
+msgid "Video playlist"
+msgstr "视频播放列表"
+
+#: /xml/MyMusicPlaylist.xml
+msgctxt "#31066"
+msgid "Music playlist"
+msgstr "音乐播放列表"
+
+#: /xml/EventLog.xml
+msgctxt "#31067"
+msgid "Event log"
+msgstr "事件日志"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31068"
+msgid "Choose presets"
+msgstr "选择预设"
+
+#: /xml/AddonBrowser.xml
+msgctxt "#31069"
+msgid "Last Updated"
+msgstr "最近更新时间"
+
+#: /xml/DialogAddonInfo.xml
+msgctxt "#31071"
+msgid "by"
+msgstr "经过"
+
+#: /xml/DialogButtonMenu.xml /xml/LoginScreen.xml
+msgctxt "#31072"
+msgid "Power Options"
+msgstr "电源选项"
+
+#: /xml/Home.xml
+msgctxt "#31075"
+msgid "Movie sets"
+msgstr "电影布景"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31079"
+msgid "Cast not available"
+msgstr "演员不可用"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31080"
+msgid "Ends at"
+msgstr "结束于"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31082"
+msgid "Lyrics add-on"
+msgstr "歌词插件"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31083"
+msgid "Lyrics add-on settings"
+msgstr "歌词附加设置"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31084"
+msgid "Visualisation settings"
+msgstr "可视化设置"
+
+#: /xml/DialogPVRGroupManager.xml
+msgctxt "#31089"
+msgid "Available groups"
+msgstr "可用组"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31090"
+msgid "Search trailer"
+msgstr "搜索预告片"
+
+#: /xml/VideoOSD.xml /xml/Variables.xml
+msgctxt "#31092"
+msgid "Video menu"
+msgstr "视频菜单"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31093"
+msgid "Show weather info"
+msgstr "显示天气信息"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31095"
+msgid "Use slide animations"
+msgstr "使用幻灯片动画"
+
+#: /xml/DialogSubtitles.xml
+msgctxt "#31096"
+msgid "Local subtitle available"
+msgstr "提供本地字幕"
+
+#: /xml/DialogPVRChannelManager.xml
+msgctxt "#31097"
+msgid "Channel options"
+msgstr "频道选项"
+
+#: /xml/LoginScreen.xml
+msgctxt "#31098"
+msgid "Select your Kodi user profile[CR]to login and continue"
+msgstr "选择您的 Kodi 用户个人资料[CR]登录并继续"
+
+#. viewtype name
+#: /xml/View_52_IconWall.xml
+msgctxt "#31099"
+msgid "IconWall"
+msgstr "图标墙"
+
+#. viewtype name
+#: /xml/View_53_Shift.xml
+msgctxt "#31100"
+msgid "Shift"
+msgstr "转移"
+
+#. viewtype name
+#: /xml/View_54_InfoWall.xml
+msgctxt "#31101"
+msgid "InfoWall (posters)"
+msgstr "信息墙（海报）"
+
+#. viewtype name
+#: /xml/View_500_Wall.xml
+msgctxt "#31102"
+msgid "Wall (posters)"
+msgstr "墙（海报）"
+
+#: /xml/SmartPlaylistRule.xml
+msgctxt "#31103"
+msgid "Enter text here..."
+msgstr "在此输入文字..."
+
+#: /xml/Home.xml
+msgctxt "#31104"
+msgid "Your video library is currently empty. In order to populate it with your personal media, add a video source and configure it. After the source has been added and indexed you will be able to browse your library."
+msgstr "您的视频库当前为空。 为了使用您的个人媒体填充它，请添加视频源并对其进行配置。 添加源并建立索引后，您将能够浏览您的库。"
+
+#: /xml/Home.xml
+msgctxt "#31105"
+msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
+msgstr "添加视频源并设置适当的内容类型以填充您的视频库。"
+
+#: /xml/Variables.xml
+msgctxt "#31106"
+msgid "Teletext"
+msgstr "图文电视"
+
+#. viewtype name
+#: /xml/View_55_WideList.xml
+msgctxt "#31107"
+msgid "WideList"
+msgstr "宽列表"
+
+#. viewtype name
+#: /xml/Includes_PVR.xml
+msgctxt "#31108"
+msgid "BigList"
+msgstr "大名单"
+
+#: /xml/Home.xml
+msgctxt "#31110"
+msgid "Your music library is currently empty. In order to populate it with your personal media, add a music source and configure it. After the source has been added and indexed you will be able to browse your library."
+msgstr "您的音乐库目前为空。 为了用您的个人媒体填充它，请添加音乐源并对其进行配置。 添加源并建立索引后，您将能够浏览您的库."
+
+#: /xml/Home.xml
+msgctxt "#31111"
+msgid "View your personal pictures or download one of the many image add-ons from the official repository."
+msgstr "查看您的个人图片或从官方存储库下载众多图像插件之一。"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31112"
+msgid "Toggle audio stream"
+msgstr "切换音频流"
+
+#: /xml/Custom_1107_SearchDialog.xml
+msgctxt "#31113"
+msgid "Search local library"
+msgstr "搜索本地收藏"
+
+#: /xml/Custom_1107_SearchDialog.xml /xml/DialogMusicInfo.xml
+msgctxt "#31114"
+msgid "Search YouTube"
+msgstr "搜索 YouTube"
+
+#: /xml/Custom_1107_SearchDialog.xml
+msgctxt "#31115"
+msgid "Search TheMovieDB"
+msgstr "搜索TheMovieDB"
+
+#: /xml/Home.xml
+msgctxt "#31116"
+msgid "Add games source"
+msgstr "添加游戏源"
+
+#: /xml/MyVideoNav.xml
+msgctxt "#31117"
+msgid "Edit nodes"
+msgstr "编辑节点"
+
+#: /xml/Home.xml
+msgctxt "#31118"
+msgid "Enter add-on browser"
+msgstr "输入附加浏览器"
+
+#: /xml/Home.xml
+msgctxt "#31119"
+msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
+msgstr "您还没有安装任何附加组件。 请访问我们的附加浏览器来浏览我们的收藏并改善您的 Kodi 体验。"
+
+#: /xml/Home.xml
+msgctxt "#31120"
+msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
+msgstr "您尚未设置天气提供商。 要查看天气信息，请选择天气提供商并设置您的位置。"
+
+#: /xml/Home.xml
+msgctxt "#31121"
+msgid "Set weather provider"
+msgstr "设置天气提供者"
+
+#: /xml/Home.xml
+msgctxt "#31122"
+msgid "Unwatched TV Shows"
+msgstr "未观看的电视节目"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31123"
+msgid "Same director"
+msgstr "同一个导演"
+
+#: /xml/MyPics.xml
+msgctxt "#31124"
+msgid "Show images on map"
+msgstr "在地图上显示图像"
+
+#: /xml/Variables.xml
+msgctxt "#31125"
+msgid "is"
+msgstr "是"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31126"
+msgid "Press [B]OK[/B] to show plot"
+msgstr "按 [B]OK[/B] 显示绘图"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31127"
+msgid "Show icons"
+msgstr "显示图标"
+
+#: /xml/Variables.xml
+msgctxt "#31128"
+msgid "Contributors"
+msgstr "贡献者"
+
+#: /xml/Variables.xml
+msgctxt "#31129"
+msgid "General settings applying to all areas of the skin."
+msgstr "适用于皮肤所有区域的常规设置。"
+
+#: /xml/Variables.xml
+msgctxt "#31130"
+msgid "Main menu-related settings: Configure the home screen to your likings."
+msgstr "主菜单相关设置：根据您的喜好配置主屏幕。"
+
+#: /shortcuts/addons.DATA.xml
+msgctxt "#31131"
+msgid "Add-ons settings"
+msgstr "附加组件设置"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31132"
+msgid "Hide 'Categories' widget"
+msgstr "隐藏“类别”小部件"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31133"
+msgid "Show banners on episodes/thumbs widgets"
+msgstr "在剧集/拇指小部件上显示横幅"
+
+#: /xml/DialogSeekBar.xml
+msgctxt "#31134"
+msgid "Remaining"
+msgstr "其余的"
+
+#: /xml/DialogAddonInfo.xml
+msgctxt "#31136"
+msgid "Click here to see latest changes..."
+msgstr "单击此处查看最新更改..."
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31137"
+msgid "PVR info"
+msgstr "PVR信息"
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31138"
+msgid "Player process info"
+msgstr "播放器进程信息"
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31139"
+msgid "Video decoder"
+msgstr "视频解码器"
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31140"
+msgid "Pixel format"
+msgstr "像素格式"
+
+#: /xml/DialogAddonInfo.xml
+msgctxt "#31141"
+msgid "Changes for version"
+msgstr "版本变更"
+
+#: /xml/Variables.xml
+msgctxt "#31142"
+msgid "Play speed"
+msgstr "播放速度"
+
+#: /xml/Home.xml
+msgctxt "#31143"
+msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "您尚未设置 PVR。 为了使用 PVR，请选择 PVR 客户端插件并进行配置。 请访问 http://kodi.wiki/view/PVR 了解更多信息。"
+
+#: /xml/Home.xml
+msgctxt "#31144"
+msgid "Enter add-on browser"
+msgstr "输入附加浏览器"
+
+#: /xml/Custom_1107_SearchDialog.xml
+msgctxt "#31145"
+msgid "Search add-ons"
+msgstr "搜索附加组件"
+
+#: /xml/Home.xml
+msgctxt "#31148"
+msgid "Categories"
+msgstr "类别"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31149"
+msgid "Video genres fanarts pack"
+msgstr "视频流派同人画包"
+
+#: /xml/DialogAddonInfo.xml
+msgctxt "#31150"
+msgid "Repository"
+msgstr "存储库"
+
+#: /xml/Home.xml
+msgctxt "#31151"
+msgid "Unwatched music videos"
+msgstr "未观看的音乐视频"
+
+#: /xml/Home.xml
+msgctxt "#31152"
+msgid "Random music videos"
+msgstr "随机音乐视频"
+
+#: /xml/Includes.xml
+msgctxt "#31153"
+msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
+msgstr "您没有安装任何此类附加组件。 进入插件浏览器下载我们社区创建的插件。"
+
+#: /xml/MyWeather.xml
+msgctxt "#31154"
+msgid "Press [B]OK[/B] to switch between locations"
+msgstr "按 [B]OK[/B] 在位置之间切换"
+
+#: /xml/VideoOSDBookmarks.xml
+msgctxt "#31155"
+msgid "No bookmarks created yet."
+msgstr "尚未创建书签。"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31156"
+msgid "Choose background pattern"
+msgstr "选择背景图案"
+
+#: /xml/SettingsSystemInfo.xml
+msgctxt "#31157"
+msgid "Library info"
+msgstr "资料库信息"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31158"
+msgid "Touch mode"
+msgstr "触摸模式"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31159"
+msgid "Artworks"
+msgstr "作品"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31160"
+msgid "Show media flags"
+msgstr "显示媒体标志"
+
+#: /xml/DialogNumeric.xml
+msgctxt "#31161"
+msgid "Numeric pad"
+msgstr "数字键盘"
+
+#: /xml/Home.xml
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "玩您的个人游戏或从官方存储库下载众多游戏插件之一。"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "显示同人画背景"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31200"
+msgid "Main menu"
+msgstr "主菜单"
+
+#: /xml/Custom_1120_SourcesDialog.xml
+msgctxt "#31201"
+msgid "Add media sources"
+msgstr "添加媒体源"
+
+#: /xml/Custom_1120_SourcesDialog.xml
+msgctxt "#31202"
+msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
+msgstr "每种媒体类型的 \"Files\" 部分的快捷方式。 去那里为您的数据库添加其他来源。"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31203"
+msgid "Home menu"
+msgstr "主菜单"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31204"
+msgid "Hide main menu when selecting widgets"
+msgstr "选择小部件时隐藏主菜单"
+
+#: /xml/View_503_Gallery.xml
+msgctxt "#31205"
+msgid "Gallery"
+msgstr "画廊"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31206"
+msgid "Reset main menu settings"
+msgstr "重置主菜单设置"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31207"
+msgid "Are you sure you want to reset display of all menu items back to default ?"
+msgstr "您确定要将所有菜单项的显示重置为默认值吗？"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31208"
+msgid "Changes of version"
+msgstr "版本变更"
+
+#: /xml/Variables.xml
+msgctxt "#31209"
+msgid "Update video library"
+msgstr "更新视频库"
+
+#: /xml/Variables.xml
+msgctxt "#31210"
+msgid "Update music library"
+msgstr "更新音乐库"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31211"
+msgid "Show smaller icons for 'Categories' widgets"
+msgstr "显示“类别”小部件的较小图标"
+
+#: /xml/Home.xml
+msgctxt "#31212"
+msgid "Next episodes to watch"
+msgstr "接下来要观看的剧集"
+
+#: /xml/Variables.xml
+msgctxt "#31213"
+msgid "Stop scanning video library"
+msgstr "停止扫描视频库"
+
+#: /xml/Variables.xml
+msgctxt "#31214"
+msgid "Stop scanning music library"
+msgstr "停止扫描音乐库"
+
+#: /xml/View_504_ThumbsWall.xml
+msgctxt "#31215"
+msgid "Wall (thumbnails)"
+msgstr "墙（缩略图）"
+
+#: /xml/View_505_ThumbsInfoWall.xml
+msgctxt "#31216"
+msgid "InfoWall (thumbnails)"
+msgstr "信息墙（缩略图）"
+
+#: /xml/View_506_Mosaic.xml
+msgctxt "#31217"
+msgid "Mosaic (horizontal)"
+msgstr "马赛克（水平）"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31218"
+msgid "Hide watched items"
+msgstr "隐藏观看的项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31219"
+msgid "Colors"
+msgstr "颜色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31220"
+msgid "Main color"
+msgstr "主色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31221"
+msgid "Border color"
+msgstr "边框颜色"
+
+#: /xml/script-skin_helper_service-ColorPicker.xml
+msgctxt "#31222"
+msgid "Color selection"
+msgstr "颜色选择"
+
+#: /xml/script-skin_helper_service-ColorPicker.xml
+msgctxt "#31223"
+msgid "Color"
+msgstr "颜色"
+
+#: /xml/DialogContextMenu.xml
+msgctxt "#31224"
+msgid "Context menu"
+msgstr "上下文菜单"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31225"
+msgid "Next aired"
+msgstr "下一次播出"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31226"
+msgid "Last aired"
+msgstr "最后播出"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31227"
+msgid "votes"
+msgstr "投票"
+
+#: /xml/Variables.xml
+msgctxt "#31228"
+msgid "hardware decoding"
+msgstr "硬件解码"
+
+#: /xml/Variables.xml
+msgctxt "#31229"
+msgid "software decoding"
+msgstr "软件解码"
+
+#: /xml/Variables.xml
+msgctxt "#31230"
+msgid "Plot masked to avoid spoilers."
+msgstr "为了避免剧透，剧情被屏蔽。"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31233"
+msgid "Background color"
+msgstr "背景颜色"
+
+#: /xml/Variables.xml
+msgctxt "#31234"
+msgid "Next chapter"
+msgstr "下一章"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31235"
+msgid "Background pattern color"
+msgstr "背景图案颜色"
+
+#: /xml/Variables.xml
+msgctxt "#31236"
+msgid "Previous chapter"
+msgstr "上一章"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31237"
+msgid "Opacity for fanart as background"
+msgstr "作为背景的同人画的不透明度"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31238"
+msgid "0%"
+msgstr "0%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31239"
+msgid "5%"
+msgstr "5%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31240"
+msgid "10%"
+msgstr "10%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31241"
+msgid "15%"
+msgstr "15%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31242"
+msgid "20%"
+msgstr "20%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31243"
+msgid "25%"
+msgstr "25%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31244"
+msgid "30%"
+msgstr "30%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31245"
+msgid "35%"
+msgstr "35%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31246"
+msgid "40%"
+msgstr "40%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31247"
+msgid "45%"
+msgstr "45%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31248"
+msgid "50%"
+msgstr "50%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31249"
+msgid "55%"
+msgstr "55%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31250"
+msgid "60%"
+msgstr "60%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31251"
+msgid "65%"
+msgstr "65%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31252"
+msgid "70%"
+msgstr "70%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31253"
+msgid "75%"
+msgstr "75%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31254"
+msgid "80%"
+msgstr "80%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31255"
+msgid "85%"
+msgstr "85%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31256"
+msgid "90%"
+msgstr "90%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31257"
+msgid "95%"
+msgstr "95%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31258"
+msgid "100%"
+msgstr "100%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31259"
+msgid "Show ExtraFanarts"
+msgstr "显示额外同人作品"
+
+#: /xml/Variables.xml
+msgctxt "#31260"
+msgid "Pause"
+msgstr "暂停"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#31261"
+msgid "Press [B]OK[/B] to read description"
+msgstr "按 [B]OK[/B] 阅读说明"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31262"
+msgid "Weather icons pack"
+msgstr "天气图标包"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31263"
+msgid "Kiosk Mode"
+msgstr "自助终端模式"
+
+#: /xml/Variables.xml
+msgctxt "#31264"
+msgid "None"
+msgstr "无"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31265"
+msgid "Splash screen (photo, video or music)"
+msgstr "启动画面（照片、视频或音乐）"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31266"
+msgid "Extras"
+msgstr "附加功能"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31267"
+msgid "Number of items to display on widgets"
+msgstr "小部件上显示的项目数"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31268"
+msgid "Show media clearlogos"
+msgstr "显示媒体清晰徽标"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31269"
+msgid "Backup / Restore"
+msgstr "备份/恢复"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31270"
+msgid "Backup skin settings"
+msgstr "备份皮肤设置"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31271"
+msgid "Restore skin settings"
+msgstr "恢复皮肤设置"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31272"
+msgid "Set location of backup file"
+msgstr "设置备份文件的位置"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31273"
+msgid "Necessary add-ons"
+msgstr "必要的附加组件"
+
+#: /xml/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31274"
+msgid "Hide Spoilers"
+msgstr "隐藏剧透"
+
+#: /xml/script-nextup-notification-NextUpInfo.xml
+msgctxt "#31275"
+msgid "Next episode"
+msgstr "下一集"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31276"
+msgid "Disable zoom effect"
+msgstr "禁用缩放效果"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31278"
+msgid "Music OSD"
+msgstr "音乐 OSD"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31279"
+msgid "Video OSD"
+msgstr "视频 OSD"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31280"
+msgid "Show music visualisation screen when playing song"
+msgstr "播放歌曲时显示音乐可视化屏幕"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31281"
+msgid "Enable ExtraFanarts for background"
+msgstr "启用额外同人画背景"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31282"
+msgid "Animate background"
+msgstr "动画背景"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31283"
+msgid "Show visualisation effects"
+msgstr "显示可视化效果"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31284"
+msgid "Show music visualisation effects on background"
+msgstr "显示背景音乐可视化效果"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31285"
+msgid "Show video on background"
+msgstr "在背景上显示视频"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31286"
+msgid "Disable Kodi screensaver"
+msgstr "禁用 Kodi 屏幕保护程序"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31287"
+msgid "Show album CDArt"
+msgstr "显示 CDArt 相册"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31288"
+msgid "Show Clearlogo on video info"
+msgstr "在视频信息中显示 Clearlogo"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31289"
+msgid "Show artist Clearlogo"
+msgstr "显示艺术家 Clearlogo"
+
+#: /xml/MusicVisualisation.xml
+msgctxt "#31290"
+msgid "Next tracks"
+msgstr "下一首曲目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31291"
+msgid "Show artist banner"
+msgstr "显示艺术家横幅"
+
+#: /xml/script-cu-lrclyrics-main.xml
+msgctxt "#31292"
+msgid "Lyrics source"
+msgstr "歌词来源"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31293"
+msgid "Media flags color"
+msgstr "媒体标志颜色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31294"
+msgid "Show ClearArt on video info"
+msgstr "在视频信息中显示 ClearArt"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31295"
+msgid "Show CDArt on video OSD"
+msgstr "在视频 OSD 上显示 CDArt"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31296"
+msgid "Actors list"
+msgstr "演员名单"
+
+#: /xml/Custom_1123_SettingsMoviesWidgets.xml
+msgctxt "#31297"
+msgid "Hide widget"
+msgstr "隐藏小工具"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31298"
+msgid "Manage items from 'Movies' widget"
+msgstr "管理 \"电影 \"部件中的项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31299"
+msgid "Manage items from 'TV shows' widget"
+msgstr "管理 \"电视节目 \"部件中的项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31300"
+msgid "Manage items from 'Music' widget"
+msgstr "管理 \"音乐 \"部件中的项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31301"
+msgid "Manage items from 'Music videos' widget"
+msgstr "管理 \"音乐视频 \"部件中的项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31302"
+msgid "Manage items from 'TV' widget"
+msgstr "管理 \"电视 \"部件中的项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31303"
+msgid "Manage items from 'Radio' widget"
+msgstr "管理 \"无线电 \"部件中的项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31304"
+msgid "Manage items from 'Add-ons' widget"
+msgstr "从 \"附加组件 \"部件管理项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31305"
+msgid "Manage items from 'Videos' widget"
+msgstr "管理 \"视频 \"部件中的项目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31306"
+msgid "Customize main menu"
+msgstr "自定义主菜单"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31307"
+msgid "Next airing episodes"
+msgstr "下次播出剧集"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31308"
+msgid "Studios icons pack"
+msgstr "工作室图标包"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31309"
+msgid "Records labels icons pack"
+msgstr "唱片标签图标包"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31310"
+msgid "Video genres icons pack"
+msgstr "视频流派图标包"
+
+#: /xml/Variables.xml
+msgctxt "#31311"
+msgid "Settings applying to library."
+msgstr "适用于资料库的设置。"
+
+#: /xml/Variables.xml
+msgctxt "#31312"
+msgid "Display of Artworks related settings."
+msgstr "展示艺术品相关设置。"
+
+#: /xml/Variables.xml
+msgctxt "#31313"
+msgid "Visualization of the music screen related settings."
+msgstr "可视化音乐屏幕相关设置"
+
+#: /xml/Variables.xml
+msgctxt "#31314"
+msgid "Visualization of the video screen related settings."
+msgstr "视频画面相关设置的可视化。"
+
+#: /xml/Variables.xml
+msgctxt "#31315"
+msgid "Skin colors related settings."
+msgstr "皮肤颜色相关设置"
+
+#: /xml/Variables.xml
+msgctxt "#31316"
+msgid "Necessary addons for good performance."
+msgstr "实现良好性能的必要插件。"
+
+#: /xml/Variables.xml
+msgctxt "#31317"
+msgid "Backup and restore skin settings."
+msgstr "备份和恢复皮肤设置"
+
+#: /xml/Variables.xml
+msgctxt "#31318"
+msgid "Additional settings."
+msgstr "其他设置"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31319"
+msgid "Show, add and remove animated posters"
+msgstr "显示、添加和移除动画海报"
+
+#: /xml/script-NextAired-TVGuide.xml
+msgctxt "#31320"
+msgid "Next aired episode"
+msgstr "下一集播出"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31321"
+msgid "Thumbs with banners"
+msgstr "点赞"
+
+#: /xml/Home.xml
+msgctxt "#31322"
+msgid "Hardware info"
+msgstr "硬件信息"
+
+#: /xml/Home.xml
+msgctxt "#31323"
+msgid "Hard disk usage:"
+msgstr "硬盘使用情况："
+
+#: /xml/SkinSettings.xml
+msgctxt "#31324"
+msgid "Opacity for top and bottom bars"
+msgstr "顶部和底部栏的不透明度"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31325"
+msgid "Power menu style"
+msgstr "电源菜单样式"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31327"
+msgid "Preconfigured widgets"
+msgstr "预配置部件"
+
+#: /xml/Variables.xml
+msgctxt "#31328"
+msgid "Go up item"
+msgstr "上一个项目"
+
+#: /xml/Variables.xml
+msgctxt "#31329"
+msgid "Go down item"
+msgstr "下一个项目"
+
+#: /xml/Variables.xml
+msgctxt "#31330"
+msgid "Add item"
+msgstr "添加项目"
+
+#: /xml/Variables.xml
+msgctxt "#31331"
+msgid "Delete item"
+msgstr "删除项目"
+
+#: /xml/Variables.xml
+msgctxt "#31332"
+msgid "Disable item"
+msgstr "禁用项目"
+
+#: /xml/Variables.xml
+msgctxt "#31333"
+msgid "Enable item"
+msgstr "启用项目"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31334"
+msgid "Not defined"
+msgstr "未定义"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31335"
+msgid "Skin Helper Service Widgets"
+msgstr "皮肤助手服务小工具"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31336"
+msgid "Set type of widgets"
+msgstr "设置部件类型"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31337"
+msgid "Widget appearence"
+msgstr "小部件外观"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31338"
+msgid "Posters"
+msgstr "海报"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31339"
+msgid "Thumbs without banners"
+msgstr "不点赞"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31340"
+msgid "Squares"
+msgstr "正方形"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31341"
+msgid "Enable background of 'Power options' shortcut"
+msgstr "启用 \"电源选项 \"快捷方式的背景"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31342"
+msgid "Enable background of 'Settings' shortcut"
+msgstr "启用 \"设置 \"快捷方式的背景"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31343"
+msgid "Enable background of 'Search...' shortcut"
+msgstr "启用 \"搜索... \"快捷方式的背景"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31344"
+msgid "Background"
+msgstr "背景介绍"
+
+#: /shortcuts/musicvideos.DATA.xml
+msgctxt "#31345"
+msgid "Music videos - Library"
+msgstr "音乐视频 - 资料库"
+
+#: /xml/View_507_Mosaic_Vertical.xml
+msgctxt "#31346"
+msgid "Mosaic (vertical)"
+msgstr "马赛克（垂直）"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31347"
+msgid "View"
+msgstr "查看"
+
+#: /xml/Variables.xml
+msgctxt "#31348"
+msgid "None"
+msgstr "无"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31349"
+msgid "Enable forced views"
+msgstr "启用强制视图"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31350"
+msgid "Forced view for movies"
+msgstr "强制观看电影"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31351"
+msgid "Forced view for movie sets"
+msgstr "电影布景的强制视角"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31352"
+msgid "Forced view for movies inside set"
+msgstr "强制观看片场内的电影"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31353"
+msgid "Forced view for tv shows"
+msgstr "强制观看电视节目"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31354"
+msgid "Forced view for seasons"
+msgstr "季节性强制景观"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31355"
+msgid "Forced view for episodes"
+msgstr "强制观看剧集"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31356"
+msgid "Forced view for artists"
+msgstr "强制艺术家观看"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31357"
+msgid "Forced view for albums"
+msgstr "强制查看相册"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31358"
+msgid "Forced view for music videos"
+msgstr "强制观看音乐视频"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31359"
+msgid "Show fullscreen video info for movies and TV shows"
+msgstr "全屏显示电影和电视节目的视频信息"
+
+#: /xml/Variables.xml
+msgctxt "#31360"
+msgid "Power menu-related settings: Configure it to your likings."
+msgstr "电源菜单相关设置： 根据自己的喜好进行配置"
+
+#: /xml/Home.xml
+msgctxt "#31361"
+msgid "All channels"
+msgstr "All channels"
+
+#: /xml/Home.xml
+msgctxt "#31362"
+msgid "All radios"
+msgstr "所有无线电台"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31363"
+msgid "Fixed lyrics colors"
+msgstr "固定歌词颜色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31364"
+msgid "Greyed out watched items"
+msgstr "灰色显示已看过的项目"
+
+#: /xml/Includes.xml
+msgctxt "#31365"
+msgid "Jump to letter"
+msgstr "跳转到字母"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31366"
+msgid "Lists (up to 8 items)"
+msgstr "列表（最多 8 个项目）"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31367"
+msgid "Sort method of widget"
+msgstr "小工具的排序方法"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31368"
+msgid "Sort direction of widget"
+msgstr "部件的排序方向"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#31369"
+msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
+msgstr "按 [B]OK[/B] 阅读说明，或按 [B]Left[/B] 显示返回拇指"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31370"
+msgid "Show CDArt on movies widgets"
+msgstr "在电影小部件上显示 CDArt"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31371"
+msgid "Show movies CDArt"
+msgstr "显示电影 CDArt"
+
+#: /xml/Home.xml
+msgctxt "#31372"
+msgid "Games sources"
+msgstr "游戏资源"
+
+#: /xml/Home.xml
+msgctxt "#31373"
+msgid "Your games library is currently empty. In order to populate it with your personal games, add a games source. After the source has been added you will be able to browse your games list. You will also need to install necessary add-ons for games."
+msgstr "您的游戏库目前是空的。要在其中添加您的个人游戏，请添加一个游戏源。添加游戏源后，您就可以浏览游戏列表了。您还需要安装必要的游戏插件。"
+
+#: /xml/Home.xml
+msgctxt "#31374"
+msgid "Your pictures library is currently empty. In order to populate it with your personal pictures, add a pictures source. After the source has been added you will be able to browse your pictures list."
+msgstr "您的图片库目前是空的。要在其中添加您的个人图片，请添加图片来源。添加图片源后，您就可以浏览图片列表了。"
+
+#: /xml/Home.xml
+msgctxt "#31375"
+msgid "Pictures sources"
+msgstr "图片来源"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31376"
+msgid "Show colored outline"
+msgstr "显示彩色轮廓"
+
+#: /xml/MyMusicPlaylistEditor.xml
+msgctxt "#31377"
+msgid "Music files"
+msgstr "音乐档案"
+
+#: /xml/MyMusicPlaylistEditor.xml
+msgctxt "#31378"
+msgid "Current playlist"
+msgstr "当前播放列表"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31379"
+msgid "animate lyrics"
+msgstr "动画歌词"
+
+#: /xml/Custom_1132_MoviesSetsInfo.xml
+msgctxt "#31380"
+msgid "Press [B]Up[/B] for extended info"
+msgstr "按 [B]Up[/B] 获取更多信息"
+
+#: /xml/addon.xml
+msgctxt "#31381"
+msgid "Movies set information"
+msgstr "电影集信息"
+
+#: /xml/addon.xml
+msgctxt "#31382"
+msgid "Extended information"
+msgstr "扩展资料"
+
+#: /xml/Variables.xml
+msgctxt "#31383"
+msgid "Correct password ! This menu is now available for"
+msgstr "密码正确！该菜单现在可用于"
+
+#: /xml/Variables.xml
+msgctxt "#31384"
+msgid "minute(s)"
+msgstr "分钟"
+
+#: /xml/Variables.xml
+msgctxt "#31385"
+msgid "Incorrect password ! Please Retry."
+msgstr "密码不正确！请重试。"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31386"
+msgid "Password protection"
+msgstr "密码保护"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31387"
+msgid "Parental control"
+msgstr "家长控制"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31388"
+msgid "Set password protection for menu items"
+msgstr "为菜单项设置密码保护"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31389"
+msgid "Password has been successfully set !"
+msgstr "密码已成功设置 ！"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31390"
+msgid "Accessibility duration for menu items"
+msgstr "菜单项无障碍持续时间"
+
+#: /xml/Custom_1133_ParentalControl.xml
+msgctxt "#31391"
+msgid "Password-protected content.[CR]Press [B]Enter[/B] and please enter password."
+msgstr "有密码保护的内容。[CR]按 [B]Enter[/B] 并请输入密码。"
+
+#: /xml/DialogKeyboard.xml
+msgctxt "#31392"
+msgid "Please enter password"
+msgstr "请输入密码"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31395"
+msgid "Enable Next Up popup for Live TV"
+msgstr "启用实时电视的 \"下一步 \"弹出窗口"
+
+#: /xml/Custom_1134_PVRNextUp.xml
+msgctxt "#31396"
+msgid "Next up"
+msgstr "下一个"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31397"
+msgid "Show 'Settings' shortcut widget"
+msgstr "显示 \"设置 \"快捷部件"
+
+#: /xml/Custom_1136_WarningPopUp.xml
+msgctxt "#31398"
+msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
+msgstr "安装此版本后，必须重启 Kodi 并在皮肤设置中进行\"[B]重置主菜单和电源菜单设置[/B]\"。"
+
+#: /xml/Custom_1136_WarningPopUp.xml
+msgctxt "#31399"
+msgid "Warning!"
+msgstr "警告！！！"
+
+#: /xml/Custom_1136_WarningPopUp.xml
+msgctxt "#31400"
+msgid "Do not display anymore"
+msgstr "不再显示"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31401"
+msgid "Rating text color"
+msgstr "评级文本颜色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31402"
+msgid "Show visualisation effects behind background"
+msgstr "在背景后显示可视化效果"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31403"
+msgid "Posters panel"
+msgstr "海报展板"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31404"
+msgid "Widgets to personalize"
+msgstr "个性化小工具"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31405"
+msgid "Vertical panel (1 item)"
+msgstr "垂直面板（1 件）"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31406"
+msgid "Thumbs without banners panel"
+msgstr "无横幅面板的拇指"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31407"
+msgid "Thumbs with banners panel"
+msgstr "带横幅面板的大拇指"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31408"
+msgid "Squares panel"
+msgstr "方格面板"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31409"
+msgid "Banners panel"
+msgstr "横幅面板"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31410"
+msgid "Miniatures"
+msgstr "微缩模型"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31411"
+msgid "Miniatures panel"
+msgstr "微型模型展板"
+
+#. viewtype name
+#: /xml/View_508_DoubleLists.xml
+msgctxt "#31412"
+msgid "Double lists"
+msgstr "双列表"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31413"
+msgid "Show Skin Helper Service widgets settings"
+msgstr "显示皮肤助手服务部件设置"
+
+#. viewtype name
+#: /xml/View_509_TripleLists.xml
+msgctxt "#31414"
+msgid "Triple lists"
+msgstr "三重列表"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31415"
+msgid "Show clearlogos at the top of menu"
+msgstr "在菜单顶部显示清晰标识"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31416"
+msgid "Minimize main menu"
+msgstr "最小化主菜单"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31417"
+msgid "Show item label on top"
+msgstr "在顶部显示项目标签"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31418"
+msgid "Required add-ons"
+msgstr "必需附加组件"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31419"
+msgid "Optional add-ons"
+msgstr "可选附加组件"
+
+#: /xml/Variables.xml
+msgctxt "#31420"
+msgid "Directed by"
+msgstr "导演"
+
+#: /xml/Variables.xml
+msgctxt "#31421"
+msgid "Similar to"
+msgstr "类似于"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31422"
+msgid "Play trailers in full screen"
+msgstr "全屏播放预告片"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31423"
+msgid "Enable gradient colors"
+msgstr "启用渐变色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31424"
+msgid "Secondary color"
+msgstr "次要颜色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31425"
+msgid "Use small Video OSD"
+msgstr "使用小尺寸视频 OSD"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31426"
+msgid "Personalize 'Categories' widget"
+msgstr "个性化 \"类别 \"小工具"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31427"
+msgid "Classic list"
+msgstr "经典列表"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31428"
+msgid "Icons list"
+msgstr "图标列表"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31429"
+msgid "Configure personal API keys"
+msgstr "配置个人 API 密钥"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31430"
+msgid "Hide video info when video is paused"
+msgstr "暂停视频时隐藏视频信息"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31431"
+msgid "Show scrolling text"
+msgstr "显示滚动文本"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31432"
+msgid "Scraper ratings"
+msgstr "刮削评分"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31433"
+msgid "My ratings"
+msgstr "我的评分"
+
+#: /xml/Variables.xml
+msgctxt "#31434"
+msgid "win"
+msgstr "获胜"
+
+#: /xml/Variables.xml
+msgctxt "#31435"
+msgid "wins"
+msgstr "赢得"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31436"
+msgid "Oscars"
+msgstr "奥斯卡金像奖"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31437"
+msgid "Hide fanart opacity in fullscreen mode"
+msgstr "在全屏模式下隐藏同人画不透明度"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31438"
+msgid "Show a border for media"
+msgstr "显示媒体边框"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31439"
+msgid "Get all Artworks"
+msgstr "获取所有作品"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31440"
+msgid "Standard colors for genres"
+msgstr "流派的标准颜色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31441"
+msgid "Pause video during access to info"
+msgstr "访问信息时暂停视频"
+
+#: /xml/script-NextAired-TVGuide.xml
+msgctxt "#31442"
+msgid "Last aired episode"
+msgstr "最后播出的一集"
+
+#: /xml/script-NextAired-TVGuide.xml
+msgctxt "#31443"
+msgid "Airs"
+msgstr "空气"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31444"
+msgid "Configure media flags"
+msgstr "配置媒体标志"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31445"
+msgid "Show media source"
+msgstr "显示媒体源"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31446"
+msgid "Show media resolution"
+msgstr "显示媒体分辨率"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31447"
+msgid "Show media video codec"
+msgstr "显示媒体视频编解码器"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31448"
+msgid "Show media aspect ratio"
+msgstr "显示媒体长宽比"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31449"
+msgid "Show media audio codec"
+msgstr "显示媒体音频编解码器"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31450"
+msgid "Show media audio channels"
+msgstr "显示媒体音频通道"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31451"
+msgid "Show media duration"
+msgstr "显示媒体持续时间"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31452"
+msgid "Show media finish time"
+msgstr "显示媒体结束时间"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31453"
+msgid "Show media studio logo"
+msgstr "显示媒体工作室标志"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31454"
+msgid "Show media record label logo"
+msgstr "显示媒体唱片标签标识"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31455"
+msgid "Show movies of saga"
+msgstr "显示传奇电影"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31456"
+msgid "Show albums of artist"
+msgstr "显示艺术家的专辑"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31457"
+msgid "Show artist ClearArt"
+msgstr "显示艺术家 ClearArt"
+
+#: /xml/Custom_1101_SettingsList.xml
+msgctxt "#31458"
+msgid "Select Program"
+msgstr "选择程序"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31459"
+msgid "Enable themes (Valentine's Day, Easter, Halloween & Christmas)"
+msgstr "启用主题（情人节、复活节、万圣节和圣诞节）"
+
+#: /xml/Home.xml
+msgctxt "#31460"
+msgid "Your library is currently empty.[CR]In order to populate it with your personal media, add  sources and configure them."
+msgstr "您的资料库目前是空的。[CR]要在资料库中添加个人媒体，请添加来源并对其进行配置。"
+
+#: /xml/Variables.xml
+msgctxt "#31461"
+msgid "Recommended Youtube videos"
+msgstr "推荐的 Youtube 视频"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31462"
+msgid "Video countries icons pack"
+msgstr "各国视频图标包"
+
+#: /xml/Includes.xml
+msgctxt "#31463"
+msgid "No broadcast this day"
+msgstr "本日暂不播出"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31464"
+msgid "Automatically show music video info at beginning and end of playing"
+msgstr "在播放开始和结束时自动显示音乐视频信息"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31465"
+msgid "Background replacement"
+msgstr "背景更换"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31466"
+msgid "Genres panel"
+msgstr "流派小组"
+
+#: /xml/Home.xml
+msgctxt "#31467"
+msgid "Most played music videos"
+msgstr "播放次数最多的音乐视频"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31468"
+msgid "Show media names with widgets names"
+msgstr "用部件名称显示媒体名称"
+
+#: /xml/Variables.xml
+msgctxt "#31469"
+msgid "Christmas Theme"
+msgstr "圣诞主题"
+
+#: /xml/Variables.xml
+msgctxt "#31470"
+msgid "Halloween Theme"
+msgstr "万圣节主题"
+
+#: /xml/Variables.xml
+msgctxt "#31471"
+msgid "Easter Theme"
+msgstr "复活节主题"
+
+#: /xml/Variables.xml
+msgctxt "#31472"
+msgid "Valentine's Day Theme"
+msgstr "情人节主题"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31473"
+msgid "Show channel groups"
+msgstr "显示频道组"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31474"
+msgid "Scope mode for constant image height (CIH) setup"
+msgstr "恒定图像高度 (CIH) 设置的范围模式"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31475"
+msgid "2:35:1 (1920x817)"
+msgstr "2:35:1 (1920x817)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31476"
+msgid "2:40:1 (1920x800)"
+msgstr "2:40:1 (1920x800)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31477"
+msgid "1:77:1 (1920x1080)"
+msgstr "1:77:1 (1920x1080)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31478"
+msgid "1:85:1 (1920x1038)"
+msgstr "1:85:1 (1920x1038)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31479"
+msgid "2:37:1 (1920x810)"
+msgstr "2:37:1 (1920x810)"
+
+#: /xml/Variables.xml
+msgctxt "#31480"
+msgid "Scope mode"
+msgstr "示波器模式"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31481"
+msgid "My ratings and scraper ratings"
+msgstr "我的评分和刮晓评分"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31482"
+msgid "Scraper ratings text color"
+msgstr "刮削评分文本颜色"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31483"
+msgid "My ratings text color"
+msgstr "我的评分文字颜色"
+
+#: /xml/Includes.xml
+msgctxt "#31484"
+msgid "Loading..."
+msgstr "正在加载..."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31485"
+msgid "Parental control related settings."
+msgstr "家长控制相关设置"
+
+#: /xml/Custom_1101_SettingsList.xml
+msgctxt "#31486"
+msgid "Select Resolution"
+msgstr "选择分辨率"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31487"
+msgid "Date added"
+msgstr "添加日期"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31488"
+msgid "Show extended info"
+msgstr "显示扩展信息"
+
+#: /xml/Variables.xml
+msgctxt "#31489"
+msgid "By"
+msgstr "通过"
+
+#: /xml/Variables.xml
+msgctxt "#31490"
+msgid "Movies from movie set"
+msgstr "电影拍摄现场的电影"
+
+#: /xml/Custom_1132_MoviesSetsInfo.xml
+msgctxt "#31491"
+msgid "Press [B]DOWN[/B] to show info from selected movie"
+msgstr "按 [B]DOWN[/B] 显示所选影片的信息"
+
+#: /xml/Variables.xml
+msgctxt "#31492"
+msgid "Lists settings"
+msgstr "列表设置"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31493"
+msgid "Show Actors list"
+msgstr "演出演员名单"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#31494"
+msgid "Episode count"
+msgstr "集数"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31495"
+msgid "Movies from director"
+msgstr "导演的电影"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31496"
+msgid "Similar movies"
+msgstr "类似电影"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31497"
+msgid "Movies from studio"
+msgstr "工作室电影"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31498"
+msgid "Next Up episodes"
+msgstr "下一集"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31499"
+msgid "Similar TV shows"
+msgstr "类似电视节目"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31500"
+msgid "Fanarts list"
+msgstr "同人作品列表"
+
+#: /xml/Variables.xml
+msgctxt "#31501"
+msgid "Albums from library"
+msgstr "资料库中的相册"
+
+#: /xml/Variables.xml
+msgctxt "#31502"
+msgid "Complete discography"
+msgstr "完整唱片目录"
+
+#: /xml/Variables.xml
+msgctxt "#31503"
+msgid "Songs from album"
+msgstr "专辑歌曲"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#31504"
+msgid "Press [B]OK[/B] to show back thumb"
+msgstr "按 [B]OK[/B] 显示返回拇指"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#31505"
+msgid "Episode of the season"
+msgstr "本季的插曲"
+
+#: /xml/Variables.xml
+msgctxt "#31506"
+msgid "Posters"
+msgstr "海报"
+
+#: /xml/Variables.xml
+msgctxt "#31507"
+msgid "Fanarts"
+msgstr "同人作品"
+
+#: /xml/Variables.xml
+msgctxt "#31508"
+msgid "Resume playback at"
+msgstr "在以下位置恢复播放"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31509"
+msgid "Press [B]OK[/B] to show biography"
+msgstr "按 [B]OK[/B] 显示传记"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31510"
+msgid "Website"
+msgstr "网址"
+
+#: /xml/Variables.xml
+msgctxt "#31511"
+msgid "Role in movie"
+msgstr "电影角色"
+
+#: /xml/Variables.xml
+msgctxt "#31512"
+msgid "Crew member in movie"
+msgstr "电影中的工作人员"
+
+#: /xml/Variables.xml
+msgctxt "#31513"
+msgid "Role in TV show"
+msgstr "电视节目中的角色"
+
+#: /xml/Variables.xml
+msgctxt "#31514"
+msgid "Crew member in TV show"
+msgstr "电视节目中的工作人员"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31515"
+msgid "Palm Week"
+msgstr "复活节"
+
+msgctxt "#31550"
+msgid "Channel groups"
+msgstr "频道组"
+
+msgctxt "#31551"
+msgid "German Telecast Offers"
+msgstr "德国电视转播优惠"
+
+msgctxt "#31552"
+msgid "Also apply to radio and internet station logos"
+msgstr "也适用于广播电台和网络电台的徽标"
+
+msgctxt "#31553"
+msgid "Use poster view for music video widgets"
+msgstr "为音乐视频小部件使用海报视图"
+
+msgctxt "#31554"
+msgid "Show year of publication in title"
+msgstr "在标题中显示出版年份"
+
+msgctxt "#31555"
+msgid "Optional icons and fanart packs"
+msgstr "可选图标和扇形图包"
+
+msgctxt "#31556"
+msgid "Reboot from NAND (Android)"
+msgstr "从 NAND 重新启动（安卓）"
+
+msgctxt "#31557"
+msgid "Restart Kodi"
+msgstr "重启 Kodi"
+
+msgctxt "#31558"
+msgid "Addon-ID"
+msgstr "插件 ID"
+
+msgctxt "#31559"
+msgid "Platform"
+msgstr "平台"
+
+msgctxt "#31560"
+msgid "Forced Views"
+msgstr "强制浏览"
+
+msgctxt "#31561"
+msgid "Show PVR related Artworks"
+msgstr "显示与 PVR 相关的作品"
+
+msgctxt "#31562"
+msgid "PVR Artwork Configuration"
+msgstr "PVR 作品配置"
+
+msgctxt "#31563"
+msgid "Show date"
+msgstr "演出日期"
+
+msgctxt "#31564"
+msgid "Top Bar"
+msgstr "顶部栏"
+
+msgctxt "#31565"
+msgid "Bottom Bar"
+msgstr "底部栏"
+
+msgctxt "#31566"
+msgid "Media"
+msgstr "媒体"
+
+msgctxt "#31567"
+msgid "Kodi/Distribution Logo"
+msgstr "kodi/发行徽标"
+
+msgctxt "#31568"
+msgid "LibreELEC"
+msgstr "自由电气"
+
+msgctxt "#31569"
+msgid "CoreELEC"
+msgstr "核心电气"
+
+msgctxt "#31570"
+msgid "Show extended Power Menu"
+msgstr "显示扩展电源菜单"
+
+msgctxt "#31571"
+msgid "Prefer Fanart in EPG preview window if available"
+msgstr "首选 EPG 预览窗口中的 同人海报（如果有）"
+
+msgctxt "#31572"
+msgid "Upcoming episodes"
+msgstr "即将播出的剧集"
+
+msgctxt "#31573"
+msgid "Show MPAA rating"
+msgstr "显示 MPAA 评级"
+
+msgctxt "#31574"
+msgid "(until "
+msgstr "(直到"
+
+msgctxt "#31575"
+msgid "Show Color Depth"
+msgstr "显示色深"
+
+msgctxt "#31576"
+msgid "Show additional Infos within the PVR widgets"
+msgstr "在 PVR 部件中显示其他信息"
+
+msgctxt "#31577"
+msgid "Close Video OSD automatically after"
+msgstr "之后自动关闭视频 OSD"
+
+msgctxt "#31578"
+msgid "disabled"
+msgstr "已缺失"
+
+msgctxt "#31580"
+msgid "3 seconds"
+msgstr "3 秒钟"
+
+msgctxt "#31581"
+msgid "5 seconds"
+msgstr "5 秒钟"
+
+msgctxt "#31582"
+msgid "7 seconds"
+msgstr "7 秒钟"
+
+msgctxt "#31583"
+msgid "10 seconds"
+msgstr "10 秒钟"
+
+msgctxt "#31584"
+msgid "15 seconds"
+msgstr "15 秒钟"
+
+msgctxt "#31585"
+msgid "Show Channel Numbers"
+msgstr "显示频道编号"
+
+msgctxt "#31586"
+msgid "Show Date of First aired"
+msgstr "节目首播日期"
+
+msgctxt "#31587"
+msgid "Item Path of Picture Widgets"
+msgstr "图片小部件的项目路径"
+
+msgctxt "#31588"
+msgid "Default Action on 'Movie' and 'TV-Show' Widgets"
+msgstr "电影 \"和 \"电视节目 \"小工具上的默认操作"
+
+msgctxt "#31589"
+msgid "Play Item"
+msgstr "播放项目"
+
+msgctxt "#31590"
+msgid "Show Info"
+msgstr "显示信息"
+
+msgctxt "#31591"
+msgid "Sort Order"
+msgstr "排序顺序"
+
+msgctxt "#31592"
+msgid "Show Path Navigation (Breadcrumbs) in List Views"
+msgstr "在列表视图中显示路径导航（面包屑）功能"
+
+msgctxt "#31593"
+msgid "Show only 'current item / item count' Information"
+msgstr "只显示 \"当前项目/项目数 \"信息"
+
+msgctxt "#31594"
+msgid "Set Animated Poster"
+msgstr "设置动画海报"
+
+msgctxt "#31595"
+msgid "Remove Animated Poster"
+msgstr "移除动画海报"
+
+msgctxt "#31596"
+msgid "Animated Poster removed"
+msgstr "删除动画海报"
+
+msgctxt "#31597"
+msgid "Animated Poster added"
+msgstr "添加动画海报"
+
+msgctxt "#31598"
+msgid "Local Path to animated Poster Folder"
+msgstr "指向动画海报文件夹的本地路径"
+
+msgctxt "#31599"
+msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
+msgstr "尚未定义动画海报集的文件夹。请在皮肤设置中定义本地文件系统中包含动画海报的文件夹。"
+
+msgctxt "#31600"
+msgid "Could not assign animated Poster"
+msgstr "无法分配动画海报"
+
+msgctxt "#31601"
+msgid "Hit Probability: "
+msgstr "命中率："
+
+#: SkinSettings.xml
+msgctxt "#31602"
+msgid "'Rotten Tomatoes' Rating Category"
+msgstr "烂番茄 \"评级分类\""
+
+#: SkinSettings.xml
+msgctxt "#31603"
+msgid "Tomatometer all Critics"
+msgstr "烂番茄所有评论"
+
+#: SkinSettings.xml
+msgctxt "#31604"
+msgid "Tomatometer average Critics"
+msgstr "烂番茄平均评论"
+
+#: SkinSettings.xml
+msgctxt "#31605"
+msgid "Tomatometer all Audience"
+msgstr "烂番茄所有观众人数"
+
+#: SkinSettings.xml
+msgctxt "#31606"
+msgid "烂番茄平均观众人数"
+msgstr ""
+
+#: SkinSettings.xml
+msgctxt "#31607"
+msgid "Use simplified Video OSD Navigation"
+msgstr "使用简化的视频 OSD 导航"
+
+msgctxt "#31608"
+msgid "Previous seen Channel"
+msgstr "以前看过的频道"
+
+#: Includes_MediaMenu.xml
+msgctxt "#31609"
+msgid "Show PVR Channel Status"
+msgstr "显示 PVR 频道状态"
+
+#: DialogPlayerProcessInfo
+
+msgctxt "#31610"
+msgid "Display Mode"
+msgstr "显示模式"
+
+msgctxt "#31611"
+msgid "Eoft & Gamut"
+msgstr "Eoft & 色域"
+
+msgctxt "#31612"
+msgid "Color Depth"
+msgstr "颜色深度"
+
+#: SkinSettings.xml
+
+msgctxt "#31613"
+msgid "Display Media Time"
+msgstr "显示媒体时间"
+
+msgctxt "#31614"
+msgid "current Time / total Time"
+msgstr "当前时间/总时间"
+
+msgctxt "#31615"
+msgid "Remaining Time"
+msgstr "剩余时间"
+
+#: SkinSettings.xml
+
+msgctxt "#31616"
+msgid "Use Background for PVR Channel Icons"
+msgstr "为 PVR 频道图标使用背景"
+
+#: Custom_1127_settingsTVWidgets.xml
+
+msgctxt "#31617"
+msgid "Saved Search Results"
+msgstr "已保存的搜索结果"
+
+#: SkinSettings.xml
+
+msgctxt "#31618"
+msgid "Use full Height for Channel and Program OSD"
+msgstr "频道和节目 OSD 使用全高度"
+
+#: Font.xml
+
+msgctxt "#31619"
+msgid "Economica based"
+msgstr ""
+
+#. viewtype name
+#: /xml/View_510_Flix.xml
+
+msgctxt "#31620"
+msgid "Flix Landscape"
+msgstr "Flix 景观"
+
+#: Variables.xml (SkinSettings.xml)
+
+msgctxt "#31621"
+msgid "Visualization of the PVR and TV screen related settings."
+msgstr "PVR 和电视屏幕相关设置的可视化。"
+
+#: /xml/SkinSettings.xml
+
+msgctxt "#31622"
+msgid "Disabled timers"
+msgstr "禁用计时器"
+
+#: SkinSettings.xml
+
+msgctxt "#31623"
+msgid "Default Action on 'Timer' Widgets"
+msgstr "计时器 \"小工具上的默认操作\""
+
+msgctxt "#31624"
+msgid "Show Timer Settings"
+msgstr "显示计时器设置"
+
+msgctxt "#31625"
+msgid "Show Broadcast Information"
+msgstr "节目播出信息"
+
+msgctxt "#31627"
+msgid "Video OSD"
+msgstr "视频 OSD"
+
+msgctxt "#31628"
+msgid "OSD Artwork"
+msgstr "OSD 作品"
+
+msgctxt "#31630"
+msgid "Use simple Seekbar on Chapter and Time Seeking"
+msgstr "使用简单的搜索栏进行章节和时间搜索"
+
+msgctxt "#31631"
+msgid "Action on 'last channel switch' OSD Button"
+msgstr "最后频道切换 \"OSD 按钮上的操作\""
+
+msgctxt "#31632"
+msgid "Switch to last Channel directly"
+msgstr "直接切换到最后一个频道"
+
+msgctxt "#31633"
+msgid "Show last five Channels"
+msgstr "显示最近五个频道"
+
+msgctxt "#31634"
+msgid "Last watched"
+msgstr "最后观看"
+
+#: DialogContextMenu.xml
+
+msgctxt "#31635"
+msgid "Play Trailer"
+msgstr "播放预告片"
+
+msgctxt "#31636"
+msgid "Show 'Play Trailer' in Context Menu"
+msgstr "在上下文菜单中显示 \"播放预告片\""
+
+#: Skinsettings.xml
+
+msgctxt "#31637"
+msgid "Activate Lyrics"
+msgstr "激活歌词"
+
+msgctxt "#31638"
+msgid "Minimized Options Menu"
+msgstr "最小化选项菜单"
+
+msgctxt "#31639"
+msgid "Default Action on 'PVR' Widgets"
+msgstr "“PVR”小部件上的默认操作"
+
+#: /xml/SkinSettings.xml
+
+msgctxt "#31640"
+msgid "Enable background for splash screen"
+msgstr "启用启动画面背景"
+
+msgctxt "#31641"
+msgid "Prefer Album Fanart over Artist Fanart"
+msgstr "比起艺术家同人画，更喜欢专辑同人画"
+
+msgctxt "#31642"
+msgid "High Transparency of Seekbar Background"
+msgstr "搜索栏背景高透明度"
+
+#: /xml/MyVideoNav
+
+msgctxt "#31643"
+msgid "Use Poster View"
+msgstr "使用海报视图"
+
+msgctxt "#31644"
+msgid "Arial Unicode based"
+msgstr ""
+
+#: /xml/Includes_MediaMenu.xml
+
+msgctxt "#31645"
+msgid "Quick Navigation"
+msgstr "使用海报视图"
+
+#: /xml/MusicOSD.xml
+
+msgctxt "#31646"
+msgid "Black Screen : off"
+msgstr "黑屏：关闭"
+
+msgctxt "#31647"
+msgid "Black Screen : on"
+msgstr "黑屏：开"
+
+#: /xml/Skinsettings.xml
+
+msgctxt "#31648"
+msgid "Stop Player if Video/Audio is paused longer than"
+msgstr "如果视频/音频暂停时间超过，则停止播放器"
+
+msgctxt "#31649"
+msgid "1 Minute"
+msgstr "1 分钟"
+
+msgctxt "#31650"
+msgid "2 分钟"
+msgstr ""
+
+msgctxt "#31651"
+msgid "3 Minutes"
+msgstr "3 分钟"
+
+msgctxt "#31652"
+msgid "4 Minutes"
+msgstr "4 分钟"
+
+msgctxt "#31653"
+msgid "5 Minutes"
+msgstr "5 分钟"
+
+msgctxt "#31655"
+msgid "Show Battery Level"
+msgstr "显示电池电量"
+
+msgctxt "#31656"
+msgid "Show Title and Year on Poster Wall View"
+msgstr "在海报墙视图上显示标题和年份"
+
+msgctxt "#31657"
+msgid "Show Internet Status"
+msgstr "显示互联网状态"
+
+msgctxt "#31658"
+msgid "Show own Level Colors"
+msgstr "显示自己的级别颜色"
+
+msgctxt "#31659"
+msgid "Color of Text Shadow"
+msgstr "文字阴影的颜色"
+
+msgctxt "#31660"
+msgid "current Time"
+msgstr "当前时间"
+
+msgctxt "#31661"
+msgid "Decrease Play speed"
+msgstr "降低播放速度"
+
+msgctxt "#31662"
+msgid "increase Play speed"
+msgstr "提高播放速度"
+
+#: SkinSettings.xml
+
+msgctxt "#31663"
+msgid "Busy Spinner"
+msgstr "忙碌的旋转器"
+
+#: Video OSD
+
+msgctxt "#31664"
+msgid "TUN"
+msgstr "TUN"
+
+msgctxt "#31665"
+msgid "SIG"
+msgstr "SIG"
+
+msgctxt "#31666"
+msgid "SNR"
+msgstr "SNR"
+
+msgctxt "#31667"
+msgid "REC"
+msgstr "REC"
+
+msgctxt "#31668"
+msgid "Hide SIG/SNR flags if not provided by Backend Driver"
+msgstr "如果后端驱动程序未提供，则隐藏 SIG/SNR 标志"
+
+#: 1137 Settings Flags
+
+msgctxt "#31669"
+msgid "Show Date added to Library"
+msgstr "显示日期已添加到资料库"
+
+#: Skinsettings
+
+msgctxt "#31670"
+msgid "Show Video Resolution on Video start"
+msgstr "在视频启动时显示视频分辨率"
+
+msgctxt "#31671"
+msgid "Toggle Skin Debug"
+msgstr "切换皮肤调试"
+
+msgctxt "#31672"
+msgid "Show Replacement when primal CDArt is not available"
+msgstr "当原始 CDArt 不可用时，显示替换功能"
+
+msgctxt "#31673"
+msgid "Default button on Video/Audio OSD"
+msgstr "视频/音频 OSD 上的默认按钮"
