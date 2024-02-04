@@ -43,6 +43,9 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .7
+  * Title position on timeshift in music OSD fixed (PVR Radio)
+
 - .6
   * Jump2Letter for Interprets (music videos) implemented
   * Option for showing rating flags in video info added
