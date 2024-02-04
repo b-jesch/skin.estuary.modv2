@@ -3965,6 +3965,7 @@
 					<scroll>true</scroll>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>Window.IsVisible(visualisation) + String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>460</left>
@@ -3978,6 +3979,7 @@
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 					<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
+					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				</control>
 				<control type="group">
 					<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1139)</visible>

@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .9
+  * Title position on timeshift in music OSD fixed (PVR Radio)
+
+
 - .8
   * Jump2Letter for Interprets (music videos) implemented
   * Option for showing rating flags in video info added
