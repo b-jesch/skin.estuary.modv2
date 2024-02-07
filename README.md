@@ -45,6 +45,8 @@ supports animated poster only.
 ### 21.2.0+omega ###
 - .7
   * Title position on timeshift in music OSD fixed (PVR Radio)
+  * Visibility of EDL and Cuts in seek bar fixed
+  
 
 - .6
   * Jump2Letter for Interprets (music videos) implemented
