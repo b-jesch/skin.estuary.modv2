@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.2.0+nexus ###
 - .9
   * Title position on timeshift in music OSD fixed (PVR Radio)
+  * Visibility of EDL and Cuts in seek bar fixed
 
 
 - .8
