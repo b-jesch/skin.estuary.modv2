@@ -1415,11 +1415,15 @@
 	</variable>
 	<variable name="ListLabel2Var">
 		<value condition="String.IsEmpty(Container.PluginName) + [Container.Content(tvshows) | Container.Content(seasons)] + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
-		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + Skin.HasSetting(circle_rating)">$INFO[ListItem.Rating,, • ]$INFO[ListItem.Year]</value>
- 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + Skin.HasSetting(circle_userrating)">$INFO[ListItem.UserRating,, • ]$INFO[ListItem.Year]</value>
- 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + Skin.HasSetting(circle_bothrating) + !String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating,, • ]$INFO[ListItem.Year]</value>
- 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + Skin.HasSetting(circle_bothrating) + String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.Rating,, • ]$INFO[ListItem.Year]</value>
-		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
+		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + !Skin.HasSetting(hide_pubyear) + Skin.HasSetting(circle_rating)">$INFO[ListItem.Rating,, • ]$INFO[ListItem.Year]</value>
+ 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + !Skin.HasSetting(hide_pubyear) + Skin.HasSetting(circle_userrating)">$INFO[ListItem.UserRating,, • ]$INFO[ListItem.Year]</value>
+ 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + !Skin.HasSetting(hide_pubyear) + Skin.HasSetting(circle_bothrating) + !String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating,, • ]$INFO[ListItem.Year]</value>
+ 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + !Skin.HasSetting(hide_pubyear) + Skin.HasSetting(circle_bothrating) + String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.Rating,, • ]$INFO[ListItem.Year]</value>
+		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + !Skin.HasSetting(hide_pubyear)">$INFO[ListItem.Year]</value>
+		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + Skin.HasSetting(hide_pubyear) + Skin.HasSetting(circle_rating)">$INFO[ListItem.Rating]</value>
+ 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + Skin.HasSetting(hide_pubyear) + Skin.HasSetting(circle_userrating)">$INFO[ListItem.UserRating]</value>
+ 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + Skin.HasSetting(hide_pubyear) + Skin.HasSetting(circle_bothrating) + !String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating]</value>
+ 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + Skin.HasSetting(hide_pubyear) + Skin.HasSetting(circle_bothrating) + String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.Rating]</value>
 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[20359]) + Skin.HasSetting(circle_rating) + Container.Content(episodes)">$INFO[ListItem.Rating,, • ]$INFO[ListItem.Premiered]</value>
  		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[20359]) + Skin.HasSetting(circle_userrating) + Container.Content(episodes)">$INFO[ListItem.UserRating,, • ]$INFO[ListItem.Premiered]</value>
  		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[20359]) + Skin.HasSetting(circle_bothrating) + !String.IsEmpty(ListItem.UserRating) + Container.Content(episodes)">$INFO[ListItem.UserRating,, • ]$INFO[ListItem.Premiered]</value>

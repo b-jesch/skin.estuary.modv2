@@ -46,6 +46,7 @@ supports animated poster only.
 - .7
   * Title position on timeshift in music OSD fixed (PVR Radio)
   * Visibility of EDL and Cuts in seek bar fixed
+  * Year from list views removed if year is shown behind title
   
 
 - .6
