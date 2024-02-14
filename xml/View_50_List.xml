@@ -38,7 +38,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>40</left>
 						<right>120</right>
-						<top>100</top>
+						<top>80</top>
 						<fadetime>200</fadetime>
 						<aspectratio aligny="top">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar2]</texture>
@@ -48,12 +48,24 @@
 						<depth>DepthContentPopout</depth>
 						<left>40</left>
 						<right>40</right>
-						<top>100</top>
-						<bottom>120</bottom>
+						<top>80</top>
+						<bottom>160</bottom>
 						<fadetime>200</fadetime>
 						<aspectratio aligny="top">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar2]</texture>
 						<visible>!Skin.HasSetting(enable_LibraryDiscArt) | String.IsEmpty(ListItem.Art(discart)) | ListItem.IsCollection</visible>
+					</control>
+					<control type="image">
+						<depth>DepthContentPopout</depth>
+						<left>40</left>
+						<right>40</right>
+						<bottom>80</bottom>
+						<height>120</height>
+						<aspectratio aligny="bottom" align="center">keep</aspectratio>
+						<texture background="true">$VAR[BannerVar]</texture>
+						<bordertexture>colors/white.png</bordertexture>
+						<bordersize>1</bordersize>
+						<visible>ListItem.IsCollection</visible>
 					</control>
 					<control type="group">
 						<top>690</top>
@@ -92,7 +104,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<top>82</top>
+						<top>62</top>
 						<left>293</left>
 						<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
 						<visible>!Skin.HasSetting(enable_LibraryDiscArt) | String.IsEmpty(ListItem.Art(discart)) | ListItem.IsCollection</visible>
@@ -101,7 +113,7 @@
 						</include>
 					</control>
 					<control type="group">
-						<top>82</top>
+						<top>62</top>
 						<left>243</left>
 						<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
 						<visible>Skin.HasSetting(enable_LibraryDiscArt) + !String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
