@@ -44,6 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .10
+  * Subtitle flags in info views fixed
+  * Visibility condition of rotating disc art in video/audio OSD fixed
+
+
 - .9
   * Title position on timeshift in music OSD fixed (PVR Radio)
   * Visibility of EDL and Cuts in seek bar fixed
