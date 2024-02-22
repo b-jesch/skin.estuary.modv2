@@ -46,6 +46,8 @@ supports animated poster only.
 - .8
   * Subtitle flags in info views fixed
   * Visibility condition of rotating disc art in video/audio OSD fixed
+  * in progress tvshows widget moved to top
+  * Video resolution to list views added
 
 
 - .7

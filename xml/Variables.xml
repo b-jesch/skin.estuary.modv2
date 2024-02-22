@@ -1917,6 +1917,10 @@
 		<value condition="ListItem.IsCollection">overlays/set.png</value>
 		<value condition="ListItem.HasVideoVersions">overlays/versions.png</value>
 		<value condition="ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder">overlays/folder.png</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,8K)">overlays/8k.png</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,4K)">overlays/4k.png</value>
+		<value condition="!String.IsEmpty(ListItem.VideoResolution) + Integer.IsGreater(ListItem.VideoResolution,576)">overlays/hd.png</value>
+		<value condition="!String.IsEmpty(ListItem.VideoResolution) + Integer.IsLess(ListItem.VideoResolution,720)">overlays/sd.png</value>
 		<value condition="!String.IsEmpty(ListItem.Overlay)">$INFO[ListItem.Overlay]</value>
 		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
 	</variable>
