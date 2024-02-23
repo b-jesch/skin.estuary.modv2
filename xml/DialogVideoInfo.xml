@@ -476,9 +476,9 @@
 			<control type="grouplist" id="6100">
 				<top>-20</top>
 				<left>50</left>
-				<height>430</height>
+				<height>440</height>
 				<orientation>vertical</orientation>
-				<itemgap>-8</itemgap>
+				<itemgap>-9</itemgap>
 				<visible>Control.HasFocus(5002) | [!Control.IsVisible(50) + !Control.IsVisible(5100) + !Control.IsVisible(5200) + !Control.IsVisible(5300) + !Control.IsVisible(5400) + !Control.IsVisible(5500) + !Control.IsVisible(5600) + !Control.IsVisible(5700) + !Control.IsVisible(5800) + !Control.IsVisible(5900) + !Control.IsVisible(6000) + !Control.IsVisible(63000)]</visible>
 				<include>OpenClose_Right</include>
 				<animation effect="fade" time="100">VisibleChange</animation>
