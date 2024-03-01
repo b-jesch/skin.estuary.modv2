@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .9
+  * status overlays partial reverted
+  
+
 - .8
   * Subtitle flags in info views fixed
   * Visibility condition of rotating disc art in video/audio OSD fixed
