@@ -44,8 +44,12 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .12
+  * visibility of cd art in music osd modified
+
+
 - .11
-    * status overlays partial reverted
+  * status overlays partial reverted
   
 
 - .10
