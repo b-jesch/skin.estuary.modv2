@@ -3766,7 +3766,7 @@
 						<param name="bottom" value="65" />
 					</include>
 					<control type="group">
-						<visible>Window.IsVisible(visualisation) | [!Window.IsVisible(visualisation) + !Skin.HasSetting(show_discart)]</visible>
+						<visible>[Window.IsVisible(visualisation) + !Skin.HasSetting(show_disc)] | [!Window.IsVisible(visualisation) + !Skin.HasSetting(show_discart)]</visible>
 						<visible>Skin.HasSetting(show_replacement) | !String.IsEmpty(Player.Art(discart)) | !String.IsEmpty(Player.Art(album.discart)) | !String.IsEmpty(Window(Home).Property(PVR.Artwork.discart))</visible>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing + [Player.HasVideo + !Skin.HasSetting(show_discart)] | [Player.HasAudio + !Skin.HasSetting(show_disc)]">Conditional</animation>
 						<control type="image" id="4393">

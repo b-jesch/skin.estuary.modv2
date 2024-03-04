@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .10
+  * visibility of cd art in music osd modified
+
+
 - .9
   * status overlays partial reverted
   
