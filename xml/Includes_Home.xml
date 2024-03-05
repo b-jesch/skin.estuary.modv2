@@ -1073,6 +1073,7 @@
 	</include>
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
+		<param name="item_treshold">0</param>
 		<param name="extend_label">false</param>
 		<definition>
 			<control type="group" id="$PARAM[list_id]666">
@@ -1081,7 +1082,7 @@
 				<height>90</height>
 				<right>55</right>
 				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | Container($PARAM[list_id]).IsUpdating</visible>
 				<animation effect="slide" end="0,45" time="300" tween="sine" easing="out" condition="Control.HasFocus($PARAM[list_id]) + String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel) + !Skin.HasSetting(HideWidgetLabels)">Conditional</animation>
 				<control type="image">
 					<left>2</left>

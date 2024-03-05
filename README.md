@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.2.0+omega ###
 - .10
   * visibility of cd art in music osd modified
+  * PVR widget update on content changes (info update) implemented
 
 
 - .9
