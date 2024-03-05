@@ -2267,7 +2267,7 @@
 	<include name="TopBar">
 		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31591]: , | ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
 		<param name="visible">true</param>
-		<param name="width">900</param>
+		<param name="width">1200</param>
 		<definition>
 			<control type="group">
 				<animation effect="slide" end="0,-112" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="WidgetListChannels">
+        <param name="item_treshold">0</param>
+        <param name="info_update">0</param>
         <param name="item_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
         <param name="icon">$INFO[ListItem.Icon]</param>
         <param name="label">$INFO[ListItem.Label]</param>
@@ -11,6 +13,7 @@
                 <param name="label">$PARAM[widget_header]</param>
                 <param name="label_focus">$PARAM[widget_header_focus]</param>
                 <param name="list_id" value="$PARAM[list_id]"/>
+                <param name="item_treshold" value="$PARAM[item_treshold]"/>
             </include>
             <include content="BusyListSpinner">
                 <param name="list_id" value="$PARAM[list_id]"/>
@@ -24,8 +27,8 @@
                 <include content="WidgetListCommon">
                     <param name="list_id" value="$PARAM[list_id]"/>
                 </include>
-                <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-                <itemlayout width="310" height="500">
+                <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | Container($PARAM[list_id]).IsUpdating</visible>
+                <itemlayout width="310" height="500" infoupdate="$PARAM[info_update]">
                     <control type="group">
                         <left>70</left>
                         <control type="image">
@@ -125,7 +128,7 @@
                         </control>
                     </control>
                 </itemlayout>
-                <focusedlayout width="310" height="500">
+                <focusedlayout width="310" height="500" infoupdate="$PARAM[info_update]">
                     <control type="group">
                         <depth>DepthContentPopout</depth>
                         <left>70</left>

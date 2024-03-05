@@ -46,6 +46,7 @@ supports animated poster only.
 ### 4.2.0+nexus ###
 - .12
   * visibility of cd art in music osd modified
+  * PVR widget update on content changes (info update) implemented
 
 
 - .11

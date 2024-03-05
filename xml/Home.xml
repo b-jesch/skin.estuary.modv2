@@ -554,6 +554,7 @@
 							<param name="widget_target" value="tvchannels"/>
 							<param name="list_id" value="12200"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
+							<param name="info_update" value="5000"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
 							<param name="label2" value="$INFO[ListItem.Title] $VAR[SeasonEpisodeLabel]"/>
 						</include>
@@ -575,6 +576,8 @@
 							<param name="widget_target" value="tvchannels"/>
 							<param name="list_id" value="12400"/>
 							<param name="item_limit" value="2000"/>
+							<param name="info_update" value="5000"/>
+							<param name="item_treshold" value="1"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
 							<param name="label2" value="$INFO[ListItem.Title] $VAR[SeasonEpisodeLabel]"/>
 						</include>
