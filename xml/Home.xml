@@ -188,6 +188,7 @@
 							<param name="content_path" value="$VAR[HideWatchedEpisodesFromRecentlyVar]"/>
 							<param name="widget_header" value="$LOCALIZE[20387]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6100).ListItem.TVShowTitle, | , - ]$INFO[Container(6100).ListItem.Season,,x]$INFO[Container(6100).ListItem.Episode,,. ]$INFO[Container(6100).ListItem.Title]$INFO[Container(6100).ListItem.Year, (,)]"/>
+							<param name="browse" value="never"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6100"/>
 						</include>
@@ -195,6 +196,7 @@
 							<param name="content_path" value="$VAR[HideWatchedEpisodesFromRecentlyVar]"/>
 							<param name="widget_header" value="$LOCALIZE[20387]"/>
 							<param name="widget_header_focus" value="$INFO[Container(61001).ListItem.TVShowTitle, | , - ]$INFO[Container(61001).ListItem.Season,,x]$INFO[Container(61001).ListItem.Episode,,. ]$INFO[Container(61001).ListItem.Title]$INFO[Container(61001).ListItem.Year, (,)]"/>
+							<param name="browse" value="never"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="61001"/>
 						</include>

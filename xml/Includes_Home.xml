@@ -5386,6 +5386,7 @@
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
+		<param name="browse">auto</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -5479,7 +5480,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]" browse="$PARAM[browse]">$PARAM[content_path]</content>
 				<onclick condition="String.IsEqual(Skin.String(widget_action),31590) + [Control.HasFocus(6100) | Control.HasFocus(61001) | Control.HasFocus(6700) | Control.HasFocus(67001)]">Info</onclick>
 			</control>
 		</definition>
@@ -5492,6 +5493,7 @@
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
+		<param name="browse">auto</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -5585,7 +5587,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]" browse="$PARAM[browse]">$PARAM[content_path]</content>
 				<onclick condition="String.IsEqual(Skin.String(widget_action),31590) + [Control.HasFocus(6100) | Control.HasFocus(61001) | Control.HasFocus(6700) | Control.HasFocus(67001)]">Info</onclick>
 			</control>
 		</definition>
