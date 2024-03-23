@@ -43,6 +43,11 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .11
+  * visibility condition of top bar overlay fixed
+  * setting for showing video sizes in list views implemented
+
+
 - .10
   * visibility of cd art in music osd modified
   * PVR widget update on content changes (info update) implemented

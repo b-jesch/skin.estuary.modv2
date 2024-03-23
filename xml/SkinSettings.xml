@@ -1278,6 +1278,12 @@
 					<onclick>Skin.ToggleSetting(background_showvideo)</onclick>
 					<selected>!Skin.HasSetting(background_showvideo)</selected>
 				</control>
+				<control type="radiobutton" id="726">
+					<label>$LOCALIZE[31676]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_vsize)</onclick>
+					<selected>Skin.HasSetting(show_vsize)</selected>
+				</control>
 				<control type="radiobutton" id="720">
 					<label>$LOCALIZE[31284]</label>
 					<include>DefaultSettingButton</include>
