@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1109">
-	<visible>[Window.IsActive(fullscreenvideo) + !Player.HasGame + !Window.IsVisible(fullscreeninfo)] | [Window.IsActive(visualisation) + !Skin.HasSetting(dim_screen)]</visible>
-	<visible>Window.IsActive(seekbar) | Window.IsActive(1135) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide)</visible>
+	<visible>[Window.IsActive(fullscreenvideo) + !Player.HasGame + ![!Pvr.IsPlayingTV + Window.IsActive(fullscreeninfo) + !Skin.HasSetting(ExtendedOSDInfo)]] | [Window.IsActive(visualisation) + !Skin.HasSetting(dim_screen)]</visible>
+	<visible>Window.IsActive(seekbar) | Window.IsActive(1135) | Window.IsActive(1143) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide)</visible>
 	<depth>DepthOSD</depth>
 	<include>Animation_TopSlide</include>
 	<zorder>0</zorder>
