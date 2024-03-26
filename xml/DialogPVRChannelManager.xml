@@ -123,22 +123,11 @@
 							<visible>ListItem.Property(ParentalLocked)</visible>
 						</control>
 						<control type="label">
-							<left>45</left>
-							<top>-15</top>
+							<left>85</left>
 							<right>40</right>
-							<height>70</height>
-							<textoffsetx>40</textoffsetx>
+							<bottom>0</bottom>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Property(Number),[B],[/B] - ]$INFO[ListItem.Property(Name)]</label>
-						</control>
-						<control type="label">
-							<left>85</left>
-							<top>35</top>
-							<right>40</right>
-							<height>30</height>
-							<font>font12</font>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
 						</control>
 					</focusedlayout>
 				</control>
@@ -155,9 +144,9 @@
 					<control type="label" id="9001">
 						<description>channel options Header</description>
 						<width>700</width>
-						<height>60</height>
+						<height>70</height>
 						<textoffsetx>30</textoffsetx>
-						<font>font12</font>
+						<font>font13</font>
 						<label>$LOCALIZE[31097]</label>
 						<aligny>center</aligny>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -181,6 +170,12 @@
 						<include>SettingsItemCommon</include>
 						<label>$LOCALIZE[19202]</label>
 					</control>
+					<control type="button">
+						<description>Client name</description>
+						<width>700</width>
+						<include>SettingsItemCommon</include>
+						<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
+					</control>
 					<control type="radiobutton" id="12">
 						<description>EPG activated</description>
 						<width>700</width>
@@ -201,13 +196,14 @@
 					</control>
 				</control>
 				<control type="image">
-					<left>600</left>
-					<top>290</top>
-					<width>70</width>
-					<height>50</height>
+					<left>595</left>
+					<top>285</top>
+					<width>80</width>
+					<height>60</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[Container(20).ListItem.Property(icon)]</texture>
 				</control>
+				<!--
 				<control type="grouplist">
 					<top>565</top>
 					<itemgap>-15</itemgap>
@@ -227,34 +223,8 @@
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-					<control type="button" id="31">
-						<description>New channel Button</description>
-						<width>700</width>
-						<height>100</height>
-						<textoffsetx>40</textoffsetx>
-						<align>center</align>
-						<label>$LOCALIZE[19204]</label>
-					</control>
-					<control type="button" id="30">
-						<description>Group Manager Button</description>
-						<width>700</width>
-						<height>100</height>
-						<textoffsetx>40</textoffsetx>
-						<align>center</align>
-						<label>$LOCALIZE[19205]</label>
-					</control>
-					<control type="togglebutton" id="34">
-						<description>TV/Radio toggle</description>
-						<width>700</width>
-						<height>100</height>
-						<textoffsetx>40</textoffsetx>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$LOCALIZE[19024]</label>
-						<altlabel>$LOCALIZE[19023]</altlabel>
-						<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
-					</control>
 				</control>
+				-->
 			</control>
 			<control type="grouplist" id="9000">
 				<right>20</right>
@@ -278,6 +248,29 @@
 					<param name="id" value="6" />
 					<param name="label" value="$LOCALIZE[222]" />
 				</include>
+				<include content="DefaultDialogButton">
+					<param name="width" value="400" />
+					<param name="id" value="31" />
+					<param name="label" value="$LOCALIZE[19204]" />
+				</include>
+				<include content="DefaultDialogButton">
+					<param name="width" value="400" />
+					<param name="id" value="30" />
+					<param name="label" value="$LOCALIZE[19205]" />
+				</include>
+
+				<control type="togglebutton" id="34">
+					<description>TV/Radio toggle</description>
+					<width>400</width>
+					<height>100</height>
+					<textoffsetx>40</textoffsetx>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font25_title</font>
+					<label>$LOCALIZE[19024]</label>
+					<altlabel>$LOCALIZE[19023]</altlabel>
+					<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
+				</control>
 			</control>
 		</control>
 	</controls>

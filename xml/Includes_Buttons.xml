@@ -392,6 +392,7 @@
 	</include>
 	<include name="InfoDialogToggleButton">
 		<param name="width">262</param>
+		<param name="font">font20_title</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
 				<width>$PARAM[width]</width>
@@ -405,7 +406,7 @@
 				<radioposx>108</radioposx>
 				<radioposy>18</radioposy>
 				<radiowidth>48</radiowidth>
-				<font>font20_title</font>
+				<font>$PARAM[font]</font>
 				<textureradioonfocus colordiffuse="FFFFFFFF">$PARAM[icon_on]</textureradioonfocus>
 				<textureradioonnofocus colordiffuse="FFFFFFFF">$PARAM[icon_on]</textureradioonnofocus>
 				<textureradioofffocus colordiffuse="FFFFFFFF">$PARAM[icon_off]</textureradioofffocus>
