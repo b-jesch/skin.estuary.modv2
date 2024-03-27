@@ -103,7 +103,7 @@
 					<description>name label</description>
 					<left>0</left>
 					<top>0</top>
-					<width>360</width>
+					<width>400</width>
 					<height>70</height>
 					<label>$LOCALIZE[31089]: [COLOR white]$INFO[Container(13).NumItems][/COLOR]</label>
 					<align>center</align>
@@ -114,14 +114,14 @@
 				<control type="image">
 					<left>0</left>
 					<top>55</top>
-					<width>360</width>
+					<width>400</width>
 					<height>740</height>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="list" id="13">
 					<left>20</left>
 					<top>75</top>
-					<width>320</width>
+					<width>365</width>
 					<height>700</height>
 					<onup>13</onup>
 					<ondown>13</ondown>
@@ -129,7 +129,7 @@
 					<onright>73</onright>
 					<pagecontrol>73</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout width="320" height="70">
+					<itemlayout width="365" height="70">
 						<control type="label">
 							<left>20</left>
 							<right>70</right>
@@ -149,7 +149,7 @@
 							<aspectratio>keep</aspectratio>
 						</control>
 					</itemlayout>
-					<focusedlayout width="320" height="70">
+					<focusedlayout width="365" height="70">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -180,7 +180,7 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="73">
-					<left>340</left>
+					<left>385</left>
 					<top>75</top>
 					<width>12</width>
 					<height>700</height>
@@ -193,7 +193,7 @@
 			</control>
 			<control type="group">
 				<description>Channels list</description>
-				<left>700</left>
+				<left>740</left>
 				<top>80</top>
 				<include content="ChannelManagerList">
 					<param name="header_id" value="21" />
@@ -205,7 +205,7 @@
 			</control>
 			<control type="group">
 				<description>Grouped Channels list</description>
-				<left>1200</left>
+				<left>1220</left>
 				<top>80</top>
 				<include content="ChannelManagerList">
 					<param name="header_id" value="22" />

@@ -5,7 +5,7 @@
 			<orientation>horizontal</orientation>
 			<left>0</left>
 			<align>center</align>
-			<width>510</width>
+			<width>490</width>
 			<control type="label" id="$PARAM[header_id]">
 				<width>auto</width>
 				<height>70</height>
@@ -25,14 +25,14 @@
 		<control type="image">
 			<left>0</left>
 			<top>55</top>
-			<width>510</width>
+			<width>490</width>
 			<height>740</height>
 			<texture border="40">buttons/dialogbutton-nofo.png</texture>
 		</control>
 		<control type="list" id="$PARAM[list_id]">
 			<left>20</left>
 			<top>75</top>
-			<width>470</width>
+			<width>450</width>
 			<height>700</height>
 			<onup>$PARAM[list_id]</onup>
 			<ondown>$PARAM[list_id]</ondown>
@@ -40,7 +40,7 @@
 			<onright>$PARAM[scrollbar_id]</onright>
 			<pagecontrol>$PARAM[scrollbar_id]</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="70" width="470">
+			<itemlayout height="70" width="450">
 				<control type="image">
 					<width>60</width>
 					<height>60</height>
@@ -61,7 +61,7 @@
 					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout height="70" width="470">
+			<focusedlayout height="70" width="450">
 				<control type="image">
 					<left>0</left>
 					<right>0</right>
@@ -98,7 +98,7 @@
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="$PARAM[scrollbar_id]">
-			<left>495</left>
+			<left>475</left>
 			<top>75</top>
 			<width>12</width>
 			<height>700</height>
