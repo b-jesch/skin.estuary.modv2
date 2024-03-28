@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.0+omega ###
+- .12
+ * Channel manager, channel group manager fixed
+
+  
 - .11
   * visibility condition of top bar overlay fixed
   * setting for showing video sizes in list views implemented
