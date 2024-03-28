@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 4.2.0+nexus ###
+- .14
+  * Channel manager, channel group manager fixed
+  
+
 - .13
   * visibility condition of top bar overlay fixed
   * setting for showing video sizes in list views implemented
