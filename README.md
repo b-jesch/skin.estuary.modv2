@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
+- .18
+  * Auto Hide OSD when player is forwarding
+
+
 - .17
   * some improvements in triple list view
   * improve check of HDR type labels in video OSD 
