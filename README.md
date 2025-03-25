@@ -42,6 +42,10 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+### 4.3+nexus ###
+- .0
+  some backports from Omega
+
 
 ### 4.2.1+nexus ###
 - .0
