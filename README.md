@@ -42,12 +42,11 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
-### 21.2.2+omega ###
+### 21.2.1+omega ###
 - .19
   * Visibility condition of 1142_themes changed (was always initialized before)
 
 
-### 21.2.1+omega ###
 - .18
   * Auto Hide OSD when player is forwarding
 
