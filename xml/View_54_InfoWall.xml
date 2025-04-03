@@ -1482,8 +1482,7 @@
 					<width>80</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg.png</texture>
-					<visible>ListItem.IsResumable | Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-					<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(3336))</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -1541,7 +1540,7 @@
 					<visible>String.IsEmpty(ListItem.Property(WatchedEpisodes)) + String.IsEmpty(ListItem.Property(UnwatchedEpisodes)) + !String.IsEmpty(Skin.String(EpisodesDisplay)) + !String.IsEqual(Skin.String(EpisodesDisplay),31578)</visible>
 				</control>
 			</control>
-			<control type="image">
+			<control type="image" id="3336">
 				<left>35</left>
 				<top>338</top>
 				<width>32</width>
