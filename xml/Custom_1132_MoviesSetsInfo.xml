@@ -284,8 +284,8 @@
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="153" />
-						<param name="label" value="$LOCALIZE[31017] : [COLOR white]$VAR[MPAALabelMoviesSetsVar][/COLOR]" />
-						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Mpaa)" />
+						<param name="label" value="$INFO[Container(60).ListItem.mpaa,$LOCALIZE[31017] : [COLOR white],[/COLOR]]" />
+ 						<param name="visible" value="!String.IsEmpty(Container(60).ListItem.Mpaa)" />
 						<param name="textcolor" value="$VAR[SkinColorVar]" />
 						<param name="font" value="fontplot" />
 					</include>
