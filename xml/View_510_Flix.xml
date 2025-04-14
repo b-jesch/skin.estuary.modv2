@@ -140,13 +140,13 @@
 			<control type="group">
 				<left>35</left>
 				<top>155</top>
-				<visible>!String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Container.Content(artists) + [ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.IsPlaying | ListItem.IsResumable | ListItem.HasArchive | ListItem.HasVideoVersions | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]</visible>
+				<visible>!String.IsEmpty(Control.GetLabel(51001)) + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Container.Content(artists) + [ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.IsPlaying | ListItem.IsResumable | ListItem.HasArchive | ListItem.HasVideoVersions | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]</visible>
 				<control type="image">
 					<width>70</width>
 					<height>70</height>
 					<texture>overlays/overlay-bg.png</texture>
 				</control>
-				<control type="image">
+				<control type="image" id="51001">
 					<left>3</left>
 					<top>37</top>
 					<width>32</width>
