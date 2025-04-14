@@ -343,15 +343,6 @@
 		<value condition="String.IsEqual(ListItem.Episode,1)">$INFO[ListItem.Episode,, $LOCALIZE[20452]]</value>
 		<value>$INFO[ListItem.Episode,, $LOCALIZE[20453]]</value>
 	</variable>
-	<variable name="MPAALabelMoviesSetsVar">
-		<value condition="String.Contains(Container(60).ListItem.mpaa,10) + String.Contains(System.Language,French)">Interdit au moins de 10 ans</value>
-		<value condition="String.Contains(Container(60).ListItem.mpaa,12) + String.Contains(System.Language,French)">Interdit au moins de 12 ans</value>
-		<value condition="String.Contains(Container(60).ListItem.mpaa,16) + String.Contains(System.Language,French)">Interdit au moins de 16 ans</value>
-		<value condition="String.Contains(Container(60).ListItem.mpaa,18) + String.Contains(System.Language,French)">Interdit au moins de 18 ans</value>
-		<value condition="String.Contains(Container(60).ListItem.mpaa,U) + String.Contains(System.Language,French)">Tout public</value>
-		<value condition="String.Contains(Container(60).ListItem.mpaa,Rated) + String.Contains(System.Language,French)">Inconnue</value>
-		<value>$INFO[Container(60).ListItem.mpaa]</value>
-	</variable>
 	<variable name="StatusNextAiredVar">
 		<value condition="String.Contains(Window(Home).Property(NextAired.Status),Ended) + String.Contains(System.Language,French)">Terminé</value>
 		<value condition="String.Contains(Window(Home).Property(NextAired.Status),Continuing) + String.Contains(System.Language,French)">En cours</value>
