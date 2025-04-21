@@ -47,6 +47,7 @@ supports animated poster only.
   * Display of Seasons improved (Internationalisation, Flex view)
   * Cleanups (Moviesets Info)
   * Date formatting in PVR Timers Home Widget changed
+  * Seen/in progress movies removed from random movie playlist
 
 - .19
   * Visibility condition of 1142_themes changed (was always initialized before)
