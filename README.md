@@ -44,7 +44,9 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
 - .20
-  Display of Seasons improved (Internationalisation, Flex view)
+  * Display of Seasons improved (Internationalisation, Flex view)
+  * Cleanups (Moviesets Info)
+  * Date formatting in PVR Timers Home Widget changed
 
 - .19
   * Visibility condition of 1142_themes changed (was always initialized before)

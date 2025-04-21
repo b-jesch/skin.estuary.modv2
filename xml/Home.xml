@@ -525,11 +525,11 @@
 							<param name="sortorder" value="ascending"/>
 							<param name="sortby" value="date"/>
 							<param name="widget_header" value="$LOCALIZE[19040]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Datetime, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Date, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
-							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
+							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Date, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="onclick" value="Info"/>
 						</include>
@@ -538,11 +538,11 @@
 							<param name="sortorder" value="ascending"/>
 							<param name="sortby" value="date"/>
 							<param name="widget_header" value="$LOCALIZE[19040]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Datetime, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Date, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
-							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Datetime, - ,]"/>
+							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Date, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="onclick" value="Info"/>
 						</include>
