@@ -518,10 +518,10 @@
 							<param name="sortorder" value="ascending"/>
 							<param name="sortby" value="date"/>
 							<param name="widget_header" value="$LOCALIZE[19040]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Datetime, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Date, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
-							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
+							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Date, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31624)" value="ActivateWindow(pvrtimersetting)"/>
 							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31625)" value="ActivateWindow(pvrguideinfo)"/>
@@ -531,10 +531,10 @@
 							<param name="sortorder" value="ascending"/>
 							<param name="sortby" value="date"/>
 							<param name="widget_header" value="$LOCALIZE[19040]"/>
-							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Datetime(hh:mm), | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
+							<param name="widget_header_focus" value="$INFO[Container(12700).ListItem.Date, | ,]$INFO[Container(12700).ListItem.ChannelName, - ]$INFO[Container(12700).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
-							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Datetime, - ,]"/>
+							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Date, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31624)" value="ActivateWindow(pvrtimersetting)"/>
 							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31625)" value="ActivateWindow(pvrguideinfo)"/>
