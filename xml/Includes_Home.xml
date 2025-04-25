@@ -1174,6 +1174,7 @@
 	</include>
 	<include name="WidgetPanelPoster">
 		<param name="visible">true</param>
+		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -1222,7 +1223,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
@@ -1233,7 +1234,7 @@
 		<param name="sortby"></param>
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
-		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
+		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -1318,7 +1319,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
@@ -1329,7 +1330,7 @@
 		<param name="sortby"></param>
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
-		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
+		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -1415,7 +1416,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
@@ -1424,7 +1425,7 @@
 		<param name="sortby"></param>
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
-		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
+		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
 		<param name="fallback_icon">DefaultAudio.png</param>
 		<definition>
 			<include content="CategoryLabel">
@@ -1506,12 +1507,13 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
 	<include name="WidgetPanelBanners">
 		<param name="visible">True</param>
+		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -1868,12 +1870,13 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
 	<include name="WidgetPanelCategoriesPersonal">
 		<param name="visible">true</param>
+		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -2357,7 +2360,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
@@ -2416,6 +2419,7 @@
 		<param name="visible">true</param>
 		<param name="fallback_icon">DefaultVideo</param>
 		<param name="browse">$VAR[BrowseVar]</param>
+		<param name="item_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -2487,7 +2491,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$VAR[Label_SkinSetting_WidgetNumber]" browse="$PARAM[browse]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]" browse="$PARAM[browse]">$PARAM[content_path]</content>
 				<onclick condition="String.IsEqual(Skin.String(widget_action),31590) + [Control.HasFocus(5100) | Control.HasFocus(5200) | Control.HasFocus(5300) | Control.HasFocus(5400) | Control.HasFocus(16300) | Control.HasFocus(16400)] | Control.HasFocus(16500)">Info</onclick>
 			</control>
 		</definition>

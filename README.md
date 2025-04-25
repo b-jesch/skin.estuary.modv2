@@ -44,11 +44,12 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
 - .20
-  * Display of Seasons improved (Internationalisation, Flix view)
+  * Display of Seasons improved (Season flags, Flix view)
   * Cleanups (Moviesets Info)
   * Date formatting in PVR Timers Home Widget changed
   * Seen/in progress movies removed from random movie playlist
   * Episode flag background in Flix view removed (not necessary)
+  * Improvements on skin shortcuts panels implemented (Issue #174)
 
 - .19
   * Visibility condition of 1142_themes changed (was always initialized before)
