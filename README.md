@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
+- .21
+  * Icon added (Issue #176)
+
+
 - .20
   * Display of Seasons improved (Season flags, Flix view)
   * Cleanups (Moviesets Info)
