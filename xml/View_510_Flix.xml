@@ -298,13 +298,23 @@
 			</control>
 			<control type="image">
 				<depth>DepthContentPopout</depth>
+				<top>150</top>
+				<left>40</left>
+				<width max="537">auto</width>
+				<height>120</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture>$VAR[LibraryClearLogoVar]</texture>
+				<visible>!ListItem.IsParentFolder + Container.Content(seasons)</visible>
+			</control>
+			<control type="image">
+				<depth>DepthContentPopout</depth>
 				<top>60</top>
 				<left>40</left>
 				<width max="537">auto</width>
 				<height>120</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture>$INFO[ListItem.Art(clearlogo)]</texture>
-				<visible>!ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder + !Container.Content(seasons)</visible>
 			</control>
 			<control type="label">
 				<top>60</top>
