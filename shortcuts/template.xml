@@ -310,6 +310,7 @@
 						<param name="widget_target" value="$SKINSHORTCUTS[target9]"/>
 						<param name="sortby" value="$SKINSHORTCUTS[sortby9]"/>
 						<param name="sortorder" value="$SKINSHORTCUTS[sortorder9]"/>
+						<param name="item_limit" value="$INFO[Skin.String(shortcuts_widgetLimit)]"/>
 						<param name="list_id" value="23100$SKINSHORTCUTS[id]"/>
 					</include>
 				</control>

@@ -529,6 +529,13 @@
 					<onclick>Skin.ToggleSetting(widgetAnimation9)</onclick>
 					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.9))]</visible>
 				</control>
+				<control type="button" id="14834">
+					<label>  ∟$LOCALIZE[31713]</label>
+					<label2>$INFO[Skin.String(shortcuts_widgetLimit)]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SetNumeric(shortcuts_widgetLimit)</onclick>
+					<visible>[String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.9))]</visible>
+				</control>
 				<control type="button" id="14832">
 					<label>  ∟$LOCALIZE[31367]</label>
 					<include>DefaultSettingButton</include>
