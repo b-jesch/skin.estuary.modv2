@@ -529,6 +529,7 @@
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
+							<param name="info_update" value="5000"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Date, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="onclick" value="Info"/>
@@ -542,6 +543,7 @@
 							<param name="widget_target" value="tvtimers"/>
 							<param name="list_id" value="12700"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
+							<param name="info_update" value="5000"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Date, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
 							<param name="onclick" value="Info"/>

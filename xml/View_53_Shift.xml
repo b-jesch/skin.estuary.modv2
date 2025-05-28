@@ -103,6 +103,17 @@
 							<bordersize>20</bordersize>
 							<visible>Container.Content(artists) | Container.Content(albums)</visible>
 						</control>
+						<control type="textbox">
+							<left>25</left>
+							<top>605</top>
+							<width>320</width>
+							<height>100</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<visible>!String.IsEqual(listitem.dbtype,season) + Skin.HasSetting(enable_LibraryClearLogo) | [String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
+						</control>
 						<control type="image">
 							<left>20</left>
 							<top>605</top>
@@ -110,7 +121,7 @@
 							<height>100</height>
 							<aspectratio aligny="center">keep</aspectratio>
 							<texture>$VAR[ViewClearLogoVar]</texture>
-							<visible>!String.IsEqual(listitem.dbtype,season)</visible>
+							<visible>!String.IsEqual(listitem.dbtype,season) + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
 						</control>
 						<control type="image">
 							<left>20</left>
@@ -119,31 +130,6 @@
 							<height>110</height>
 							<aspectratio aligny="center">stretch</aspectratio>
 							<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
-							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
-							<visible>!String.IsEqual(listitem.dbtype,album)</visible>
-						</control>
-						<control type="textbox">
-							<left>25</left>
-							<top>605</top>
-							<width>320</width>
-							<height>100</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>[String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))] | String.IsEqual(listitem.dbtype,season)</visible>
-						</control>
-						<control type="textbox">
-							<left>25</left>
-							<top>605</top>
-							<width>320</width>
-							<height>100</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>[String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 							<visible>!String.IsEqual(listitem.dbtype,album)</visible>
 						</control>
@@ -223,15 +209,6 @@
 								<aspectratio>keep</aspectratio>
 							</control>
 						</control>
-						<control type="image">
-							<left>20</left>
-							<top>605</top>
-							<width>330</width>
-							<height>100</height>
-							<aspectratio aligny="center">keep</aspectratio>
-							<texture>$VAR[ViewClearLogoVar]</texture>
-							<visible>!String.IsEqual(listitem.dbtype,season)</visible>
-						</control>
 						<control type="textbox">
 							<left>25</left>
 							<top>605</top>
@@ -241,7 +218,16 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-							<visible>[String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))] | String.IsEqual(listitem.dbtype,season)</visible>
+							<visible>!String.IsEqual(listitem.dbtype,season) + Skin.HasSetting(enable_LibraryClearLogo) | [String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>605</top>
+							<width>330</width>
+							<height>100</height>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture>$VAR[ViewClearLogoVar]</texture>
+							<visible>!String.IsEqual(listitem.dbtype,season) + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
 						</control>
 						<control type="image">
 							<left>169</left>
