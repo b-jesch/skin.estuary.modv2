@@ -45,6 +45,8 @@ supports animated poster only.
 ### 21.2.1+omega ###
 - .21
   * Icon added (Issue #176)
+  * Visibility of clearlogos depending on skin settings fixed (Shift view)
+  * smaller adjustments
 
 
 - .20
