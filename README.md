@@ -43,6 +43,11 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
+- .22
+  * revert random unseen movies to random movies
+  * random tvshows added
+
+
 - .21
   * Icon added (Issue #176)
   * Visibility of clearlogos depending on skin settings fixed (Shift view)
