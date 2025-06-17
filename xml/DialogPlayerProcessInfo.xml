@@ -647,7 +647,6 @@
 					<aligny>bottom</aligny>
 					<label>$INFO[PVR.ActStreamDevice,$LOCALIZE[19006] : [COLOR white],[/COLOR]]</label>
 					<font>font12</font>
-
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 				</control>
 				<control type="label">
@@ -704,17 +703,58 @@
 					<aligny>bottom</aligny>
 					<label>$INFO[PVR.ActStreamMux,$LOCALIZE[19100] : [COLOR white],[/COLOR]]</label>
 					<font>font12</font>
-
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 				</control>
 				<control type="group">
 					<height>30</height>
 					<width>710</width>
+					<visible>!String.IsEmpty(PVR.ActStreamSignal) + !Skin.HasSetting(disable_pvr_zerovalues)</visible>
 					<control type="label">
 						<width>350</width>
 						<height>30</height>
 						<aligny>bottom</aligny>
-						<label>$INFO[PVR.ActStreamSignal,$LOCALIZE[19008] : [COLOR white],[/COLOR]]</label>
+						<label>$INFO[PVR.ActStreamSignal,$LOCALIZE[31715] : [COLOR white],[/COLOR]]</label>
+						<font>font12</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+					</control>
+					<control type="progress">
+						<top>15</top>
+						<left>360</left>
+						<width>350</width>
+						<height>10</height>
+						<info>PVR.ActStreamSignal</info>
+					</control>
+				</control>
+				<control type="group">
+					<height>30</height>
+					<width>710</width>
+					<visible>!String.IsEmpty(PVR.ActStreamSnr) + !Skin.HasSetting(disable_pvr_zerovalues)</visible>
+					<control type="label">
+						<top>5</top>
+						<width>350</width>
+						<height>30</height>
+						<aligny>bottom</aligny>
+						<label>$INFO[PVR.ActStreamSnr,$LOCALIZE[31716] : [COLOR white],[/COLOR]]</label>
+						<font>font12</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+					</control>
+					<control type="progress">
+						<top>15</top>
+						<left>360</left>
+						<width>350</width>
+						<height>10</height>
+						<info>PVR.ActStreamSnr</info>
+					</control>
+				</control>
+				<control type="group">
+					<height>30</height>
+					<width>710</width>
+					<visible>!String.IsEmpty(PVR.ActStreamProgrSignal) + !Skin.HasSetting(disable_pvr_zerovalues)</visible>
+					<control type="label">
+						<width>350</width>
+						<height>30</height>
+						<aligny>bottom</aligny>
+						<label>$INFO[PVR.ActStreamProgrSignal,$LOCALIZE[31717] : [COLOR white],[/COLOR]]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
@@ -729,12 +769,13 @@
 				<control type="group">
 					<height>30</height>
 					<width>710</width>
+					<visible>!String.IsEmpty(PVR.ActStreamProgrSnr) + !Skin.HasSetting(disable_pvr_zerovalues)</visible>
 					<control type="label">
 						<top>5</top>
 						<width>350</width>
 						<height>30</height>
 						<aligny>bottom</aligny>
-						<label>$INFO[PVR.ActStreamSnr,$LOCALIZE[19009] : [COLOR white],[/COLOR]]</label>
+						<label>$INFO[PVR.ActStreamProgrSnr,$LOCALIZE[31718] : [COLOR white],[/COLOR]]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
