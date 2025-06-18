@@ -72,19 +72,25 @@
 						<onclick>Skin.ToggleSetting(hide_unwatchedtvshows)</onclick>
 					</control>
 					<control type="radiobutton" id="11117">
+						<label>$LOCALIZE[31297] : $LOCALIZE[31714]</label>More actions
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_randomtvshows)</selected>
+						<onclick>Skin.ToggleSetting(hide_randomtvshows)</onclick>
+					</control>
+					<control type="radiobutton" id="11118">
 						<label>$LOCALIZE[31297] : $LOCALIZE[31572]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_nextaired)</selected>
 						<onclick>Skin.ToggleSetting(hide_nextaired)</onclick>
 						<enable>System.AddonIsEnabled(script.embuary.info)</enable>
 					</control>
-					<control type="radiobutton" id="11118">
+					<control type="radiobutton" id="11119">
 						<label>$LOCALIZE[31297] : $LOCALIZE[135]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_genretvshows)</selected>
 						<onclick>Skin.ToggleSetting(hide_genretvshows)</onclick>
 					</control>
-					<control type="radiobutton" id="11119">
+					<control type="radiobutton" id="11120">
 						<label>$LOCALIZE[31297] : $LOCALIZE[20388]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_studiotvshows)</selected>
