@@ -47,8 +47,17 @@
                         <aligny>top</aligny>
                 </control>
                 <control type="label">
-                        <description>Start, End</description>
+                        <description>Year</description>
                         <top>75</top>
+                        <height>15</height>
+                        <font>font10</font>
+                        <label>$INFO[Window(Home).Property(GTO.Info.Year)]</label>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                </control>
+                <control type="label">
+                        <description>Start, End</description>
+                        <top>105</top>
                         <height>15</height>
                         <font>font10</font>
                         <label>$INFO[Window(Home).Property(GTO.Info.Date)] - $INFO[Window(Home).Property(GTO.Info.EndTime)]</label>
@@ -56,7 +65,7 @@
                         <aligny>top</aligny>
                 </control>
                 <control type="label">
-                        <top>105</top>
+                        <top>135</top>
                         <height>15</height>
                         <font>font10</font>
                         <label>$INFO[Window(Home).Property(GTO.Info.RunTime)] min</label>
@@ -83,9 +92,9 @@
             </control>
             <control type="textbox">
                     <left>450</left>
-                    <top>248</top>
+                    <top>278</top>
                     <width>630</width>
-                    <height>88</height>
+                    <height>58</height>
                     <font>font10</font>
                     <scrolltime>200</scrolltime>
                     <autoscroll delay="5000" time="5000" repeat="10000">!IsEmpty(Window(Home).Property(GTO.Info.Cast))</autoscroll>
