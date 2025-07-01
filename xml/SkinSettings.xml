@@ -182,15 +182,6 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="button" id="201">
-					<label>$LOCALIZE[31613]</label>
-					<include>DefaultSettingButton</include>
-					<label2>$VAR[OsdMusicMediaTimeVar]</label2>
-					<description>display media time on osd</description>
-					<onclick condition="String.IsEmpty(Skin.String(OsdMusicMediaTime))">Skin.SetString(OsdMusicMediaTime,1)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),0)">Skin.SetString(OsdMusicMediaTime,1)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),1)">Skin.SetString(OsdMusicMediaTime,0)</onclick>
-				</control>
 				<control type="label" id="900016">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>

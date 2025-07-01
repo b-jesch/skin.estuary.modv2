@@ -43,6 +43,12 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
+- .23
+  * current/total time in music OSD reduced to remaining time only
+  * Description of signal quality changed to signal strength
+  * tv scraper dialog window updated
+
+
 - .22
   * revert random unseen movies to random movies
   * random tvshows added
