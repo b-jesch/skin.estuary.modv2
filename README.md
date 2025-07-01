@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 4.3+nexus ###
+- .1
+  current/total time in music OSD reduced to remaining time only
+
+
 - .0
   some backports from Omega
 

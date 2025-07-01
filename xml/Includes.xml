@@ -3676,32 +3676,12 @@
 							<visible>String.IsEqual(Skin.String(OsdMediaTime),1) + VideoPlayer.HasEpg</visible>
 						</control>
 					</control>
-					<control type="group">
+					<control type="label">
+						<!--<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>-->
+						<label>$INFO[Container.TotalTime]</label>
+						<font>font12</font>
+						<align>right</align>
 						<visible>Window.IsVisible(visualisation)</visible>
-						<control type="label">
-							<label>$VAR[OsdMusicMediaTimeVar]$INFO[Player.SeekTime, : ]$INFO[Player.Duration, / ]</label>
-							<font>font12</font>
-							<align>right</align>
-							<visible>!String.IsEmpty(Player.Duration) + [String.IsEqual(Skin.String(OsdMusicMediaTime),0) | String.IsEmpty(Skin.String(OsdMusicMediaTime))]</visible>
-						</control>
-						<control type="label">
-							<label>$INFO[Player.SeekTime,$LOCALIZE[31660] : ]</label>
-							<font>font12</font>
-							<align>right</align>
-							<visible>String.IsEmpty(Player.Duration) + [String.IsEqual(Skin.String(OsdMusicMediaTime),0) | String.IsEmpty(Skin.String(OsdMusicMediaTime))]</visible>
-						</control>
-						<control type="label">
-							<label>$VAR[OsdMusicMediaTimeVar]$INFO[Player.TimeRemaining, : ]</label>
-							<font>font12</font>
-							<align>right</align>
-							<visible>!String.IsEmpty(Player.TimeRemaining) + String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
-						</control>
-						<control type="label">
-							<label>$INFO[Player.SeekTime,$LOCALIZE[31660] : ]</label>
-							<font>font12</font>
-							<align>right</align>
-							<visible>String.IsEmpty(Player.TimeRemaining) + String.IsEqual(Skin.String(OsdMusicMediaTime),1)</visible>
-						</control>
 					</control>
 					<control type="group">
 						<visible>!Skin.HasSetting(SmallOSDVideo) + !Window.IsVisible(visualisation)</visible>

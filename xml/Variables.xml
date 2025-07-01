@@ -215,12 +215,7 @@
 	</variable>
 	<variable name="OsdMediaTimeVar">
 		<value condition="String.IsEqual(Skin.String(OsdMediaTime),0)">$LOCALIZE[31614]</value>
-		<value condition="String.IsEqual(Skin.String(OsdMediaTime),1)">$LOCALIZE[31615]</value>
-		<value>$LOCALIZE[31614]</value>
-	</variable>
-	<variable name="OsdMusicMediaTimeVar">
-		<value condition="String.IsEqual(Skin.String(OsdMusicMediaTime),0)">$LOCALIZE[31614]</value>
-		<value condition="String.IsEqual(Skin.String(OsdMusicMediaTime),1)">$LOCALIZE[31615]</value>
+		<value condition="String.IsEqual(Skin.String(OsdMediaTime),1)">$LOCALIZE[31134]</value>
 		<value>$LOCALIZE[31614]</value>
 	</variable>
 	<variable name="PVRArtworksVar">
