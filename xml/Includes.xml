@@ -1136,7 +1136,7 @@
 				</include>
 				<include content="MediaFlag">
 					<param name="width" value="5" />
-					<param name="visible" value="!Skin.HasSetting(show_tmdbflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating)" />
+					<param name="visible" value="[!Skin.HasSetting(show_tmdbflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating)] | [!Skin.HasSetting(show_mpaaflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa)]" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/tmdb.png" />
