@@ -93,6 +93,12 @@
 						<selected>!Skin.HasSetting(show_mediaendtimeflag)</selected>
 						<onclick>Skin.ToggleSetting(show_mediaendtimeflag)</onclick>
 					</control>
+					<control type="radiobutton" id="11127">
+						<label>$LOCALIZE[31615]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_tmdbflag)</selected>
+						<onclick>Skin.ToggleSetting(show_tmdbflag)</onclick>
+					</control>
 					<control type="radiobutton" id="11123">
 						<label>$LOCALIZE[31573]</label>
 						<include>DefaultSettingButton</include>

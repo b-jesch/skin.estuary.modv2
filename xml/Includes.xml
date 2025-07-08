@@ -1136,7 +1136,15 @@
 				</include>
 				<include content="MediaFlag">
 					<param name="width" value="5" />
-					<param name="visible" value="!Skin.HasSetting(show_mpaaflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.mpaa)" />
+					<param name="visible" value="!Skin.HasSetting(show_tmdbflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/tmdb.png" />
+					<param name="width" value="104" />
+					<param name="label_width" value="58" />
+					<param name="label_left" value="44" />
+					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating]" />
+					<param name="visible" value="!String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,album) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,song) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[MPAAImageVar]" />
@@ -3677,8 +3685,7 @@
 						</control>
 					</control>
 					<control type="label">
-						<!--<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>-->
-						<label>$INFO[Container.TotalTime]</label>
+						<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134] : ]</label>
 						<font>font12</font>
 						<align>right</align>
 						<visible>Window.IsVisible(visualisation)</visible>
