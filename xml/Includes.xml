@@ -1235,13 +1235,6 @@
 				</control>
 			</control>
 			<control type="group">
-				<width>5</width>
-				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1))</visible>
-				<include content="MediaFlag">
-					<param name="width" value="0" />
-				</include>
-			</control>
-			<control type="group">
 				<width>104</width>
 				<height>40</height>
 				<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty($PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.3))</visible>

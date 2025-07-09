@@ -50,7 +50,8 @@ supports animated poster only.
 - .23
   * current/total time in music OSD reduced to remaining time only
   * Description of signal quality changed to signal strength
-  * tv scraper dialog window updated
+  * tv scraper dialog window updated (Telecast Offers, mostly german broadcasts)
+  * TMDB rating added to bottom flags
 
 
 - .22
