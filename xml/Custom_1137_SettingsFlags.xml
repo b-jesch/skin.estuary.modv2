@@ -99,6 +99,13 @@
 						<selected>!Skin.HasSetting(show_tmdbflag)</selected>
 						<onclick>Skin.ToggleSetting(show_tmdbflag)</onclick>
 					</control>
+					<control type="radiobutton" id="11128">
+						<label>  ∟$LOCALIZE[31716]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(use_imdblogo)</selected>
+						<onclick>Skin.ToggleSetting(use_imdblogo)</onclick>
+						<visible>!Skin.HasSetting(show_tmdbflag</visible>
+					</control>
 					<control type="radiobutton" id="11123">
 						<label>$LOCALIZE[31573]</label>
 						<include>DefaultSettingButton</include>
