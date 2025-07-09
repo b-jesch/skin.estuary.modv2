@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
+- .24
+  * switch between imdb and tmdb logo in flag configuration dialog added
+
+
 - .23
   * current/total time in music OSD reduced to remaining time only
   * Description of signal quality changed to signal strength
