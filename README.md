@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.2.1+omega ###
 - .24
   * switch between imdb and tmdb logo in flag configuration dialog added
+  * Rating settings in skin settings fixed
 
 
 - .23
