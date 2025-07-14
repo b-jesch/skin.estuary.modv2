@@ -1307,6 +1307,13 @@
 					<onclick>Skin.ToggleSetting(infodialog_rating)</onclick>
 					<selected>Skin.HasSetting(infodialog_rating)</selected>
 				</control>
+				<control type="button" id="714">
+					<label>$LOCALIZE[31602]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(31602, 31603|tomatometerallcritics, 31604|tomatometeravgcritics, 31605|tomatometerallaudience, 31606|tomatometeravgaudience)</onclick>
+					<label2>$VAR[RottenSettingLabel2Var]</label2>
+					<enable>Skin.HasSetting(infodialog_rating)</enable>
+				</control>
 				<control type="button" id="711">
 					<label>$LOCALIZE[31024]</label>
 					<include>DefaultSettingButton</include>
@@ -1329,13 +1336,6 @@
 					<param name="header">31483</param>
 					<param name="setting">UserRatingStringColor</param>
 				</include>
-				<control type="button" id="714">
-					<label>$LOCALIZE[31602]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(31602, 31603|tomatometerallcritics, 31604|tomatometeravgcritics, 31605|tomatometerallaudience, 31606|tomatometeravgaudience)</onclick>
-					<label2>$VAR[RottenSettingLabel2Var]</label2>
-					<enable>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_bothrating)</enable>
-				</control>
 			</control>
 			<control type="grouplist" id="600">
 				<top>168</top>
