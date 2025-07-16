@@ -1705,7 +1705,7 @@
 		<value>$INFO[Container.ListItem.AudioCodec,flags/audiocodec/,.png]</value>
 	</variable>
 	<variable name="BannerVar">
-		<value condition="!String.IsEmpty(ListItem.Art(season.banner)) + !String.IsEqual(ListItem.dbtype,season)">$INFO[ListItem.Art(season.banner)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(season.banner)) + String.IsEqual(ListItem.dbtype,episode)">$INFO[ListItem.Art(season.banner)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(PVR.Artwork.banner))">$INFO[Window(Home).Property(PVR.Artwork.banner)]</value>
