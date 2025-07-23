@@ -39,7 +39,7 @@
 						<left>40</left>
 						<right>120</right>
 						<top>80</top>
-						<fadetime>200</fadetime>
+						<fadetime>50</fadetime>
 						<aspectratio aligny="top">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar2]</texture>
 						<visible>Skin.HasSetting(enable_LibraryDiscArt) + !String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
@@ -50,7 +50,7 @@
 						<right>40</right>
 						<top>80</top>
 						<bottom>160</bottom>
-						<fadetime>200</fadetime>
+						<fadetime>50</fadetime>
 						<aspectratio aligny="top">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar2]</texture>
 						<visible>!Skin.HasSetting(enable_LibraryDiscArt) | String.IsEmpty(ListItem.Art(discart)) | ListItem.IsCollection</visible>

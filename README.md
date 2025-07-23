@@ -46,7 +46,7 @@ supports animated poster only.
 - .24
   * switch between imdb and tmdb logo in flag configuration dialog added
   * Rating settings in skin settings fixed
-  * tvshow banner replaced with season banner in episode listings
+  * tvshow banner/poster replaced with season banner/poster in episode listings
   * isPlayable status in EPG grid added
 
 
