@@ -3659,10 +3659,12 @@
 						<visible>Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0) + !Player.HasVideo</visible>
 					</control>
 					<control type="label">
-						<right>30</right>
+						<left>260</left>
+						<right>570</right>
 						<label>$VAR[SeekTimeLabelVar]</label>
 						<font>font12</font>
 						<align>center</align>
+						<scroll>true</scroll>
 						<visible>!Player.ChannelPreviewActive + ![Window.IsVisible(visualisation) + Player.IsInternetStream] | VideoPlayer.HasEpg</visible>
 					</control>
 					<control type="group">
