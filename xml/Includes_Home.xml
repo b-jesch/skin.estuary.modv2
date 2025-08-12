@@ -566,7 +566,10 @@
 				<control type="group">
 					<depth>DepthContentPopout</depth>
 					<left>70</left>
-					<include content="Animation_FocusBounce" condition="" />
+					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="228,70" />
+						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="228,70" />
+					</animation>
 					<control type="image">
 						<width>316</width>
 						<height>200</height>
@@ -732,7 +735,10 @@
 				<control type="group">
 					<depth>DepthContentPopout</depth>
 					<left>70</left>
-					<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
+					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="228,70" />
+						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="228,70" />
+					</animation>
 					<control type="image">
 						<width>316</width>
 						<height>200</height>
