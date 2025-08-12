@@ -1101,10 +1101,7 @@
 			<focusedlayout height="210" width="380">
 				<control type="group">
 					<depth>DepthContentPopout</depth>
-					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-						<effect type="zoom" end="105" time="75" tween="sine" easing="out" center="auto" />
-						<effect type="zoom" end="95" time="225" tween="sine" delay="100" easing="out" center="auto" />
-					</animation>
+					<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 					<top>100</top>
 					<left>2</left>
 					<control type="image">

@@ -762,10 +762,7 @@
 							<control type="group">
 								<depth>DepthContentPopout</depth>
 								<left>70</left>       					 
-								<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-            						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-       					 		</animation>
+								<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
 									<param name="focused" value="true" />
@@ -785,10 +782,7 @@
 							<control type="group">
 								<depth>DepthContentPopout</depth>
 								<left>70</left>       					 
-								<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-            						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-       					 		</animation>
+								<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
 									<param name="focused" value="true" />
@@ -1698,7 +1692,7 @@
 							<height>85</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<include>Animation_FocusBounce_Home</include>
+							<include content="Animation_FocusBounce_Home" condition="!Skin.HasSetting(no_animations)" />
 							<visible>!ControlGroup(700).HasFocus</visible>
 						</control>
 						<control type="image">
@@ -1708,7 +1702,7 @@
 							<height>85</height>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
-							<include>Animation_FocusBounce_Home</include>
+							<include content="Animation_FocusBounce_Home" condition="!Skin.HasSetting(no_animations)" />
 							<visible>ControlGroup(700).HasFocus</visible>
 						</control>
 						<control type="label">

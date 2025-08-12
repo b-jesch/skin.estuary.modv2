@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Animation_FocusBounce_Home">
-		<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+		<animation type="Focus" reversible="false">
 			<effect type="zoom" end="125" time="75" tween="sine" easing="out" center="auto" />
 			<effect type="zoom" end="80" time="225" tween="sine" delay="100" easing="out" center="auto" />
+		</animation>
+	</include>
+	<include name="Animation_FocusBounce">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
+			<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
 		</animation>
 	</include>
 	<include name="Animation_FocusTextureFade">

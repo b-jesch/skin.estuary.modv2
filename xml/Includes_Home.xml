@@ -388,10 +388,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>80</left>
 						<top>64</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="GenresLayout">
 							<param name="focused" value="true" />
 							<param name="list_id" value="$PARAM[list_id]" />
@@ -445,10 +442,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>80</left>
 						<top>20</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="GenresLayout">
 							<param name="focused" value="true" />
 							<param name="list_id" value="$PARAM[list_id]" />
@@ -572,10 +566,7 @@
 				<control type="group">
 					<depth>DepthContentPopout</depth>
 					<left>70</left>
-					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="228,70" />
-						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="228,70" />
-					</animation>
+					<include content="Animation_FocusBounce" condition="" />
 					<control type="image">
 						<width>316</width>
 						<height>200</height>
@@ -741,10 +732,7 @@
 				<control type="group">
 					<depth>DepthContentPopout</depth>
 					<left>70</left>
-					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="228,70" />
-						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="228,70" />
-					</animation>
+					<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 					<control type="image">
 						<width>316</width>
 						<height>200</height>
@@ -1214,10 +1202,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />
 						</include>
@@ -1278,10 +1263,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -1307,10 +1289,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -1374,10 +1353,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeBannerLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -1403,10 +1379,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeBannerLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -1467,10 +1440,7 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallMusicLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
@@ -1494,10 +1464,7 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallMusicLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
@@ -1723,10 +1690,7 @@
 				<focusedlayout height="210" width="680">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<left>89</left>
 							<top>0</top>
@@ -2148,10 +2112,7 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<width>316</width>
 							<height>200</height>
@@ -2401,10 +2362,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />
 						</include>
@@ -2469,10 +2427,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallMovieLayout" condition="!Skin.HasSetting(HideWidgetLabels)">
 							<param name="focused" value="true" />
 						</include>
@@ -4830,10 +4785,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeLayoutPreconfigured">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -4859,10 +4811,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeLayoutPreconfigured">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -4927,10 +4876,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeBannerLayoutPreconfigured">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -4956,10 +4902,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeBannerLayoutPreconfigured">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5024,10 +4967,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5053,10 +4993,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5121,10 +5058,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeBannerLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5150,10 +5084,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextAiringEpisodeBannerLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5218,10 +5149,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextWatchEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5251,10 +5179,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextWatchEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5324,10 +5249,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextWatchEpisodeBannerLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5357,10 +5279,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoNextWatchEpisodeBannerLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5430,10 +5349,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5463,10 +5379,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5536,10 +5449,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallEpisodeBannerLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5569,10 +5479,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>0</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallEpisodeBannerLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
@@ -5642,10 +5549,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>-5</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallMusicLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
@@ -6092,10 +5996,7 @@
 					<depth>DepthContentPopout</depth>
 					<left>70</left>
 					<top>10</top>
-					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-						<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-						<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-					</animation>
+					<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 					<control type="image">
 						<width>316</width>
 						<height>200</height>
@@ -6771,10 +6672,7 @@
 					<control type="group">
 						<left>70</left>
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<left>0</left>
 							<top>20</top>
@@ -8189,10 +8087,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<left>9</left>
 							<top>-16</top>
@@ -8384,10 +8279,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<left>9</left>
 							<top>-16</top>
@@ -8567,10 +8459,7 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<left>13</left>
 							<top>-12</top>

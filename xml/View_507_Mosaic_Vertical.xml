@@ -77,10 +77,7 @@
 					<control type="group">
 						<top>85</top>
 						<left>5</left>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-       					 </animation>	
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<left>24</left>
 							<top>24</top>
@@ -168,10 +165,7 @@
 					<control type="group">
 						<top>88</top>
 						<left>45</left>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-       					 </animation>	
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<left>24</left>
 							<top>24</top>
@@ -301,10 +295,7 @@
 				</itemlayout>
 				<focusedlayout height="310" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(use_posters)]">
 					<control type="group">
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<left>24</left>
 							<top>24</top>
