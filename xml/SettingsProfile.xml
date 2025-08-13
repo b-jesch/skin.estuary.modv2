@@ -82,10 +82,7 @@
 				</itemlayout>
 				<focusedlayout height="390" width="354">
 					<control type="group">
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-       					 </animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<control type="image">
 							<top>5</top>
 							<width>320</width>

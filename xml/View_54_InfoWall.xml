@@ -2184,10 +2184,7 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-       					 </animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<top>120</top>
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />
@@ -2208,10 +2205,7 @@
 				<focusedlayout height="300" width="300" condition="Container.Content(episodes) | Container.Content(videos)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-       					 </animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<left>64</left>
 						<top>110</top>
 						<include content="InfoWallEpisodeLayout">
@@ -2230,10 +2224,7 @@
 				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            				<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-            				<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-       					 </animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<top>150</top>
 						<left>40</left>
 						<include content="InfoWallMusicLayout">

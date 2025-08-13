@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.2.1+omega ###
 - .25
   * label overlap for long titles in small video OSD fixed
+  * Bounce animation code improved
 
 
 - .24

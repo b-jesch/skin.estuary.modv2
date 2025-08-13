@@ -174,7 +174,7 @@
 							<top>1</top>
 							<width>95</width>
 							<height>95</height>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<include content="Animation_FocusBounce_Home" condition="!Skin.HasSetting(no_animations)" />
 							<include>Animation_FocusBounce_Home</include>
 							<visible>!Control.HasFocus(990)</visible>
 						</control>
@@ -184,7 +184,7 @@
 							<width>95</width>
 							<height>95</height>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
-							<include>Animation_FocusBounce_Home</include>
+							<include content="Animation_FocusBounce_Home" condition="!Skin.HasSetting(no_animations)" />
 							<visible>Control.HasFocus(990)</visible>
 						</control>
 						<control type="label">
@@ -292,10 +292,7 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<top>140</top>
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />
@@ -305,10 +302,7 @@
 				<focusedlayout height="290" width="320" condition="Container.Content(episodes)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<left>64</left>
 						<top>120</top>
 						<include content="InfoWallEpisodeLayout">
@@ -319,10 +313,7 @@
 				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(actors) | Container.Content(directors)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="91" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<top>130</top>
 						<left>40</left>
 						<include content="InfoWallMusicLayout">
@@ -333,10 +324,7 @@
 				<focusedlayout height="280" width="430" condition="Container.Content(livetv)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-							<effect type="zoom" end="105" time="75" tween="sine" easing="out" center="auto" />
-							<effect type="zoom" end="95" time="225" tween="sine" delay="100" easing="out" center="auto" />
-						</animation>
+						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<top>130</top>
 						<left>40</left>
 						<control type="image">
