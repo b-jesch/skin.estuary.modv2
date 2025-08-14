@@ -248,7 +248,7 @@
 					<top>210</top>
 					<width>381</width>
 					<height>1</height>
-					<texturebg></texturebg>
+					<texturebg />
 					<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 					<info>ListItem.PercentPlayed</info>
 					<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -268,7 +268,7 @@
 					<top>210</top>
 					<width>381</width>
 					<height>1</height>
-					<texturebg></texturebg>
+					<texturebg />
 					<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 					<info>ListItem.Progress</info>
 					<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -1225,7 +1225,7 @@
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
+		<param name="sortby" />
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
@@ -1315,7 +1315,7 @@
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
+		<param name="sortby" />
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
@@ -1404,7 +1404,7 @@
 	</include>
 	<include name="WidgetPanelSquare">
 		<param name="sub_label">$INFO[ListItem.Label]</param>
-		<param name="sortby"></param>
+		<param name="sortby" />
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="item_limit">$INFO[Skin.String(shortcuts_widgetLimit)]</param>
@@ -1646,7 +1646,7 @@
 							<top>162</top>
 							<width>632</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg />
 							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -1664,7 +1664,7 @@
 							<top>162</top>
 							<width>632</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg />
 							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.Progress</info>
 							<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -1821,7 +1821,7 @@
 							<top>162</top>
 							<width>632</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg />
 							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -1839,7 +1839,7 @@
 							<top>162</top>
 							<width>632</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg />
 							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.Progress</info>
 							<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -2085,7 +2085,7 @@
 							<top>162</top>
 							<width>276</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg />
 							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -2103,7 +2103,7 @@
 							<top>162</top>
 							<width>276</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg />
 							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.Progress</info>
 							<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -2303,7 +2303,7 @@
 							<top>162</top>
 							<width>276</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg />
 							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -2321,7 +2321,7 @@
 							<top>162</top>
 							<width>276</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg />
 							<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.Progress</info>
 							<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -2784,7 +2784,7 @@
 				<top>249</top>
 				<width>276</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -2795,7 +2795,7 @@
 				<top>209</top>
 				<width>350</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -3131,7 +3131,7 @@
 				<top>288</top>
 				<width>276</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -3142,7 +3142,7 @@
 				<top>274</top>
 				<width>350</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -3588,7 +3588,7 @@
 				<top>249</top>
 				<width>276</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -3599,7 +3599,7 @@
 				<top>209</top>
 				<width>350</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg/>
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -3628,7 +3628,7 @@
 				<top>249</top>
 				<width>276</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.Progress</info>
 				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -3639,7 +3639,7 @@
 				<top>209</top>
 				<width>350</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.Progress</info>
 				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -4088,7 +4088,7 @@
 				<top>288</top>
 				<width>276</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -4099,7 +4099,7 @@
 				<top>274</top>
 				<width>350</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -4128,7 +4128,7 @@
 				<top>288</top>
 				<width>276</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.Progress</info>
 				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -4139,7 +4139,7 @@
 				<top>274</top>
 				<width>350</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.Progress</info>
 				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -4452,7 +4452,7 @@
 				<top>249</top>
 				<width>276</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -4463,7 +4463,7 @@
 				<top>209</top>
 				<width>350</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -4722,7 +4722,7 @@
 				<top>288</top>
 				<width>276</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -4733,7 +4733,7 @@
 				<top>274</top>
 				<width>350</width>
 				<height>1</height>
-				<texturebg></texturebg>
+				<texturebg />
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -4751,7 +4751,7 @@
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
+		<param name="sortby" />
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
@@ -5216,7 +5216,7 @@
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
+		<param name="sortby" />
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
@@ -5317,7 +5317,7 @@
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
+		<param name="sortby" />
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
@@ -5418,7 +5418,7 @@
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
+		<param name="sortby" />
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
@@ -5517,7 +5517,7 @@
 	</include>
 	<include name="WidgetListSquare">
 		<param name="sub_label">$INFO[ListItem.Label]</param>
-		<param name="sortby"></param>
+		<param name="sortby" />
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
@@ -5973,7 +5973,7 @@
 						<top>162</top>
 						<width>276</width>
 						<height>1</height>
-						<texturebg></texturebg>
+						<texturebg />
 						<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 						<info>ListItem.PercentPlayed</info>
 						<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -5991,7 +5991,7 @@
 						<top>162</top>
 						<width>276</width>
 						<height>1</height>
-						<texturebg></texturebg>
+						<texturebg />
 						<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 						<info>ListItem.Progress</info>
 						<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -6222,7 +6222,7 @@
 						<top>162</top>
 						<width>276</width>
 						<height>1</height>
-						<texturebg></texturebg>
+						<texturebg />
 						<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 						<info>ListItem.PercentPlayed</info>
 						<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -6240,7 +6240,7 @@
 						<top>162</top>
 						<width>276</width>
 						<height>1</height>
-						<texturebg></texturebg>
+						<texturebg />
 						<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 						<info>ListItem.Progress</info>
 						<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
