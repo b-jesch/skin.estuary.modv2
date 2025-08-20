@@ -117,7 +117,7 @@
 							<param name="list_id" value="5300"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_randommovies)">
-							<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
+							<param name="content_path" value="$VAR[HideWatchedMoviesFromRandomVar]"/>
 							<param name="widget_header" value="$LOCALIZE[31006]"/>
 							<param name="widget_header_focus" value="$INFO[Container(5400).ListItem.Title, | ]$INFO[Container(5400).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>

@@ -1316,6 +1316,10 @@
 		<value condition="Skin.HasSetting(HideWatchedEpisodesFromRecently)">special://skin/playlists/recent_unwatched_episodes.xsp</value>
 		<value>special://skin/playlists/recent_episodes.xsp</value>
 	</variable>
+	<variable name="HideWatchedMoviesFromRandomVar">
+		<value condition="Skin.HasSetting(HideWatchedMoviesFromRandom)">special://skin/playlists/random_unwatched_movies.xsp</value>
+		<value>special://skin/playlists/random_movies.xsp</value>
+	</variable>
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.HasReminder">windows/pvr/bell.png</value>
