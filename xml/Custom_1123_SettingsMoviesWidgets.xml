@@ -65,12 +65,18 @@
 						<onclick>Skin.ToggleSetting(hide_randommovies)</onclick>
 					</control>
 					<control type="radiobutton" id="11118">
+						<label>$LOCALIZE[31297] : $LOCALIZE[70000]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(hide_watchedmovies)</selected>
+						<onclick>Skin.ToggleSetting(hide_watchedmovies)</onclick>
+					</control>
+					<control type="radiobutton" id="11119">
 						<label>$LOCALIZE[31297] : $LOCALIZE[135]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_genremovies)</selected>
 						<onclick>Skin.ToggleSetting(hide_genremovies)</onclick>
 					</control>
-					<control type="radiobutton" id="11119">
+					<control type="radiobutton" id="11120">
 						<label>$LOCALIZE[31297] : $LOCALIZE[31075]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_sets)</selected>
