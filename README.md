@@ -46,6 +46,8 @@ supports animated poster only.
 - .25
   * label overlap for long titles in small video OSD fixed
   * Bounce animation code improved
+  * syntax of empty xml tags corrected (cosmetic)
+  * Watched movies playlist added (PR #180)
 
 
 - .24
