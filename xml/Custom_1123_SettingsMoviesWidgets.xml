@@ -72,7 +72,7 @@
 						<enable>!Skin.HasSetting(hide_randommovies)</enable>
 					</control>
 					<control type="radiobutton" id="11118">
-						<label>$LOCALIZE[31297] : $LOCALIZE[70000]</label>
+						<label>$LOCALIZE[31297] : $LOCALIZE[31008]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_watchedmovies)</selected>
 						<onclick>Skin.ToggleSetting(hide_watchedmovies)</onclick>
