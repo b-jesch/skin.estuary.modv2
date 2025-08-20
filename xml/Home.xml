@@ -126,7 +126,7 @@
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_watchedmovies)">
 							<param name="content_path" value="special://skin/playlists/watched_movies.xsp"/>
-							<param name="widget_header" value="$LOCALIZE[70000]"/>
+							<param name="widget_header" value="$LOCALIZE[31008]"/>
 							<param name="widget_header_focus" value="$INFO[Container(5700).ListItem.Title, | ]$INFO[Container(5700).ListItem.Year, (,)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="browse" value="never"/>
