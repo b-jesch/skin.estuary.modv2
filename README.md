@@ -45,6 +45,7 @@ supports animated poster only.
 ### 21.2.1+omega ###
 - .26
   * Media flags in PVR radio extended (sample rate, bit depth)
+  * Player process info in PVR radio added
 
 
 - .25

@@ -230,6 +230,13 @@
 					<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
 					<visible>System.AddonIsEnabled(script.cu.lrclyrics)</visible>
 				</control>
+				<control type="radiobutton" id="62044">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/processinfo.png"/>
+					</include>
+					<onclick>ActivateWindow(playerprocessinfo)</onclick>
+					<visible>VideoPlayer.Content(livetv)</visible>
+				</control>
 				<control type="radiobutton" id="5000">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/settings.png"/>
