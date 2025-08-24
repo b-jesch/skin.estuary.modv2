@@ -43,6 +43,10 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
+- .26
+  * Media flags in PVR radio extended (sample rate, bit depth)
+
+
 - .25
   * label overlap for long titles in small video OSD fixed
   * Bounce animation code improved

@@ -3965,7 +3965,7 @@
 					<font>font37_bold</font>
 					<scroll>true</scroll>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<visible>Window.IsVisible(visualisation) + String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+					<visible>!Window.IsVisible(playerprocessinfo) + Window.IsVisible(visualisation) + String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				</control>
 				<control type="label">
@@ -3978,7 +3978,7 @@
 					<font>font37_bold</font>
 					<scroll>true</scroll>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<visible>Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+					<visible>!Window.IsVisible(playerprocessinfo) + Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 					<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				</control>
@@ -4130,6 +4130,14 @@
 								<param name="visible" value="!String.IsEmpty(MusicPlayer.Samplerate) + Window.IsVisible(visualisation)" />
 							</include>
 							<include content="MediaFlag">
+								<param name="width" value="180" />
+								<param name="label_width" value="176" />
+								<param name="label_left" value="2" />
+								<param name="label" value="$INFO[Player.Process(audiosamplerate),, Hz]" />
+								<param name="texture" value="flags/cadre3.png" />
+								<param name="visible" value="String.IsEmpty(MusicPlayer.Samplerate) + !String.IsEmpty(Player.Process(audiosamplerate)) + Window.IsVisible(visualisation)" />
+							</include>
+							<include content="MediaFlag">
 								<param name="width" value="155" />
 								<param name="label_width" value="151" />
 								<param name="label_left" value="2" />
@@ -4144,6 +4152,14 @@
 								<param name="label" value="$INFO[MusicPlayer.BitsPerSample,, bits]" />
 								<param name="texture" value="flags/cadre4.png" />
 								<param name="visible" value="!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(visualisation)" />
+							</include>
+							<include content="MediaFlag">
+								<param name="width" value="120" />
+								<param name="label_width" value="116" />
+								<param name="label_left" value="2" />
+								<param name="label" value="$INFO[Player.Process(audiobitspersample),, bits]" />
+								<param name="texture" value="flags/cadre4.png" />
+								<param name="visible" value="String.IsEmpty(MusicPlayer.BitsPerSample) + !String.IsEmpty(Player.Process(audiobitspersample)) + Window.IsVisible(visualisation)" />
 							</include>
 							<include content="MediaFlag">
 								<param name="width" value="120" />
