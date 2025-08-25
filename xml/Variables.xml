@@ -2246,28 +2246,29 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,10)">9.1</value>
     </variable>
 	<variable name="LabelHdrTypeVar">
-		<value condition="String.IsEqual(VideoPlayer.HdrType,dolbyvision">Dolby Vision</value>
+		<value condition="String.IsEqual(VideoPlayer.HdrType,dolbyvision)">Dolby Vision</value>
 		<value condition="!String.IsEmpty(VideoPlayer.HdrType)">$INFO[VideoPlayer.HdrType,[UPPERCASE],[/UPPERCASE]]</value>
 		<value>SDR</value>
 	</variable>
 	<variable name="DVELVar">
 		<value condition="String.Contains(Player.Process(video.dovi.el.type),minimum)">MEL</value>
 		<value condition="String.Contains(Player.Process(video.dovi.el.type),full)">FEL</value>
+		<value />
 	</variable>
 	<variable name="RPUPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR lightgreen]■[/COLOR] [COLOR $VAR[ColorHighlight]]RPU[/COLOR]</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR lightgreen]■[/COLOR] RPU</value>
 		<value>[COLOR dimgrey]■ RPU[/COLOR]</value>
 	</variable>
 	<variable name="BLPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.bl.present),1)">[COLOR lightgreen]■[/COLOR] [COLOR $VAR[ColorHighlight]]BASE[/COLOR]</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.bl.present),1)">[COLOR lightgreen]■[/COLOR] BASE</value>
 		<value>[COLOR dimgrey]■ BASE[/COLOR]</value>
 	</variable>
 	<variable name="ELPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.el.present),1)">[COLOR lightgreen]■[/COLOR] [COLOR $VAR[ColorHighlight]]EL Layer[/COLOR]</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.el.present),1)">[COLOR lightgreen]■[/COLOR] EL Layer</value>
 		<value>[COLOR dimgrey]■ EL Layer[/COLOR]</value>
 	</variable>
     <variable name="ELSourcePresentVar">
-        <value condition="String.IsEqual(Player.Process(video.source.dovi.el.present),1) + !String.IsEqual(Player.Process(video.source.dovi.el.type),Player.Process(video.dovi.el.type)) + !String.IsEmpty($VAR[DVELVar])">[COLOR lightgreen]■[/COLOR] [COLOR $VAR[ColorHighlight]]EL Source Type $VAR[DVELVar][/COLOR]</value>
+        <value condition="String.IsEqual(Player.Process(video.source.dovi.el.present),1) + !String.IsEqual(Player.Process(video.source.dovi.el.type),Player.Process(video.dovi.el.type)) + [String.Contains(Player.Process(video.dovi.el.type),minimum) | String.Contains(Player.Process(video.dovi.el.type),full)]">[COLOR lightgreen]■[/COLOR] EL Source Type $VAR[DVELVar]</value>
         <value>[COLOR dimgrey]■ EL Source Present[/COLOR]</value>
     </variable>
 	<variable name="DVTunnelVar">
@@ -2290,6 +2291,6 @@
         <value condition="String.Contains(Player.Process(video.dovi.profile),4) | String.Contains(Player.Process(video.dovi.profile),5) | String.Contains(Player.Process(video.dovi.profile),7) | String.Contains(Player.Process(video.dovi.profile),8)"> Profile $INFO[Player.Process(video.dovi.profile)]$VAR[DVProfileExtVar]</value>
     </variable>
     <variable name="DVProfileExtVar">
-		<value condition="[Integer.IsGreaterOrEqual(Player.Process(video.dovi.bl.signal.compatibility),1) + Integer.IsLess(Player.Process(video.dovi.bl.signal.compatibility),4)] | Integer.IsEqual(Player.Process(video.dovi.bl.signal.compatibility),8)">$INFO[Player.Process(video.dovi.bl.signal.compatibility,.]</value>
+		<value condition="[Integer.IsGreaterOrEqual(Player.Process(video.dovi.bl.signal.compatibility),1) + Integer.IsLess(Player.Process(video.dovi.bl.signal.compatibility),4)] | Integer.IsEqual(Player.Process(video.dovi.bl.signal.compatibility),8)">$INFO[Player.Process(video.dovi.bl.signal.compatibility),.]</value>
     </variable>
 </includes>
