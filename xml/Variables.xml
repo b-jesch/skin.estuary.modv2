@@ -2256,19 +2256,19 @@
 		<value />
 	</variable>
 	<variable name="RPUPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR lightgreen]■[/COLOR] RPU</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR lightgreen]■[/COLOR] [COLOR white]RPU[/COLOR]</value>
 		<value>[COLOR dimgrey]■ RPU[/COLOR]</value>
 	</variable>
 	<variable name="BLPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.bl.present),1)">[COLOR lightgreen]■[/COLOR] BASE</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.bl.present),1)">[COLOR lightgreen]■[/COLOR] [COLOR white]BASE[/COLOR]</value>
 		<value>[COLOR dimgrey]■ BASE[/COLOR]</value>
 	</variable>
 	<variable name="ELPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.el.present),1)">[COLOR lightgreen]■[/COLOR] EL Layer</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.el.present),1)">[COLOR lightgreen]■[/COLOR] [COLOR white]EL Layer[/COLOR]</value>
 		<value>[COLOR dimgrey]■ EL Layer[/COLOR]</value>
 	</variable>
     <variable name="ELSourcePresentVar">
-        <value condition="String.IsEqual(Player.Process(video.source.dovi.el.present),1) + !String.IsEqual(Player.Process(video.source.dovi.el.type),Player.Process(video.dovi.el.type)) + [String.Contains(Player.Process(video.dovi.el.type),minimum) | String.Contains(Player.Process(video.dovi.el.type),full)]">[COLOR lightgreen]■[/COLOR] EL Source Type $VAR[DVELVar]</value>
+        <value condition="String.IsEqual(Player.Process(video.source.dovi.el.present),1) + !String.IsEqual(Player.Process(video.source.dovi.el.type),Player.Process(video.dovi.el.type)) + [String.Contains(Player.Process(video.dovi.el.type),minimum) | String.Contains(Player.Process(video.dovi.el.type),full)]">[COLOR lightgreen]■[/COLOR] [COLOR white]EL Source Type $VAR[DVELVar][/COLOR]</value>
         <value>[COLOR dimgrey]■ EL Source Present[/COLOR]</value>
     </variable>
 	<variable name="DVTunnelVar">
