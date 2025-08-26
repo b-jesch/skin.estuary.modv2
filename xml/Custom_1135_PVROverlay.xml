@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1135">
-	<visible>Player.ShowInfo + VideoPlayer.Content(LiveTV)</visible>
+	<visible>Player.ShowInfo + VideoPlayer.Content(LiveTV) + !Window.IsVisible(musicosd)</visible>
 	<depth>DepthOSD</depth>
 	<controls>
 		<control type="group">
