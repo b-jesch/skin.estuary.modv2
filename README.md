@@ -47,6 +47,7 @@ supports animated poster only.
   * Media flags in PVR radio extended (sample rate, bit depth)
   * Player process info in PVR radio added
   * some errors in player process info for cpm builds fixed (DV & HDR)
+  * some skin animations improved
 
 
 - .25

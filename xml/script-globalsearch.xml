@@ -174,8 +174,7 @@
 							<top>1</top>
 							<width>95</width>
 							<height>95</height>
-							<include content="Animation_FocusBounce_Home" condition="!Skin.HasSetting(no_animations)" />
-							<include>Animation_FocusBounce_Home</include>
+							<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 							<visible>!Control.HasFocus(990)</visible>
 						</control>
 						<control type="image">
@@ -184,7 +183,7 @@
 							<width>95</width>
 							<height>95</height>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
-							<include content="Animation_FocusBounce_Home" condition="!Skin.HasSetting(no_animations)" />
+							<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 							<visible>Control.HasFocus(990)</visible>
 						</control>
 						<control type="label">

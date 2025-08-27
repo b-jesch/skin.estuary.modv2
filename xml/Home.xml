@@ -1709,7 +1709,7 @@
 							<height>85</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<include content="Animation_FocusBounce_Home" condition="!Skin.HasSetting(no_animations)" />
+							<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 							<visible>!ControlGroup(700).HasFocus</visible>
 						</control>
 						<control type="image">
@@ -1719,7 +1719,7 @@
 							<height>85</height>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
-							<include content="Animation_FocusBounce_Home" condition="!Skin.HasSetting(no_animations)" />
+							<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 							<visible>ControlGroup(700).HasFocus</visible>
 						</control>
 						<control type="label">

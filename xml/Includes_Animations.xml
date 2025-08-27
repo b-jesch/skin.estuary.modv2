@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="Animation_FocusBounce_Home">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" end="125" time="75" tween="sine" easing="out" center="auto" />
-			<effect type="zoom" end="80" time="225" tween="sine" delay="100" easing="out" center="auto" />
-		</animation>
-	</include>
 	<include name="Animation_FocusBounce">
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" end="110" time="75" tween="sine" easing="out" center="auto" />
@@ -112,10 +106,10 @@
 	</include>
 	<include name="Animation_BottomFadeInOut">
 		<animation type="WindowOpen" reversible="False">
-			<effect type="fade" start="0" end="100" time="200" delay="100"/>
+			<effect type="fade" start="0" end="100" time="300" delay="300"/>
 		</animation>
 		<animation type="WindowClose" reversible="False">
-			<effect type="fade" start="100" end="0" time="200" delay="1200"/>
+			<effect type="fade" start="100" end="0" time="200" />
 		</animation>
 	</include>
 	<include name="Animation_BottomFadeIn">
