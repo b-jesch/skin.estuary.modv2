@@ -1401,6 +1401,7 @@
 	</variable>
 	<variable name="InfoWallThumbVar">
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(tvshow.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(set)) + String.IsEqual(listitem.dbtype,set)">$INFO[ListItem.Art(set)]</value>
 		<value condition="!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value condition="String.IsEmpty(ListItem.Art(thumb)) + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
@@ -1412,7 +1413,7 @@
 	<variable name="InfoWallThumbVar2">
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [Container.Content(episodes) | Container.Content(seasons)]">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + [Container.Content(episodes) | Container.Content(seasons)]">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
 		<value>$INFO[ListItem.Icon]</value>
