@@ -43,6 +43,12 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
+- .27
+  * Fix overlap issue on category and widget labels
+  * Fix dependency of widget labels in custom vertical widget
+  * revert season poster in listview, add flag for AVS2
+
+
 - .26
   * Media flags in PVR radio extended (sample rate, bit depth)
   * Player process info in PVR radio added
