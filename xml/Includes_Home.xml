@@ -1074,7 +1074,12 @@
 				<left>55</left>
 				<top>80</top>
 				<height>100</height>
-				<right>55</right>
+				<include content="ItemRight" condition="Skin.HasSetting(show_date)">
+					<param name="right" value="550" />
+				</include>
+				<include content="ItemRight" condition="!Skin.HasSetting(show_date)">
+					<param name="right" value="200" />
+				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | Container($PARAM[list_id]).IsUpdating</visible>
 				<control type="image">
@@ -1087,20 +1092,20 @@
 				<control type="label">
 					<left>22</left>
 					<top>0</top>
-					<right>2</right>
 					<height>90</height>
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
+					<scroll>true</scroll>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Skin.HasSetting(HideWidgetLabels)</visible>
 				</control>
 				<control type="label">
 					<left>22</left>
 					<top>0</top>
-					<right>2</right>
 					<height>90</height>
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
+					<scroll>true</scroll>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>!Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)</visible>
 				</control>
@@ -1111,6 +1116,7 @@
 					<height>90</height>
 					<label>$PARAM[label]$PARAM[label_focus]</label>
 					<font>font25_title</font>
+					<scroll>true</scroll>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Control.HasFocus($PARAM[list_id]) + [!Skin.HasSetting(HideWidgetLabels) | $PARAM[extend_label]]</visible>
 				</control>
