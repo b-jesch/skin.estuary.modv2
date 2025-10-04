@@ -1386,7 +1386,17 @@
 					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
-					<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+					<visible>Skin.HasSetting(HideWidgetLabels) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>-10</top>
+					<width>290</width>
+					<height>400</height>
+					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>!Skin.HasSetting(HideWidgetLabels) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				</control>
 				<control type="image">
 					<left>54</left>

@@ -1242,7 +1242,7 @@
 					<param name="texture" value="flags/st_language.png" />
 					<param name="width" value="104" />
 					<param name="label_width" value="56" />
-					<param name="label_left" value="48" />
+					<param name="label_left" value="52" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)]" />
 				</include>
 			</control>
@@ -1254,12 +1254,12 @@
 					<param name="texture" value="flags/st_language.2.png" />
 					<param name="width" value="164" />
 					<param name="label_width" value="56" />
-					<param name="label_left" value="48" />
+					<param name="label_left" value="52" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.1)]" />
 				</include>
 				<control type="label">
 					<width>56</width>
-					<left>106</left>
+					<left>109</left>
 					<height>40</height>
 					<align>center</align>
 					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.2)]</label>
@@ -1289,7 +1289,7 @@
 				</control>
 				<control type="label">
 					<width>56</width>
-					<left>164</left>
+					<left>167</left>
 					<height>40</height>
 					<align>center</align>
 					<label>$INFO[$PARAM[infolabel_prefix]ListItem.Property(SubtitleLanguage.3)]</label>
