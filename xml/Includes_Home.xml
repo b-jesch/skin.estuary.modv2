@@ -1073,7 +1073,7 @@
 			<control type="group" id="$PARAM[list_id]666">
 				<left>55</left>
 				<top>80</top>
-				<height>100</height>
+				<height>125</height>
 				<include content="ItemRight" condition="Skin.HasSetting(show_date)">
 					<param name="right" value="550" />
 				</include>
@@ -1089,34 +1089,31 @@
 					<height>11</height>
 					<texture colordiffuse="$VAR[SkinColorVar]">frame/puce.png</texture>
 				</control>
-				<control type="label">
+				<control type="textbox">
 					<left>22</left>
 					<top>0</top>
 					<height>90</height>
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
-					<scroll>true</scroll>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Skin.HasSetting(HideWidgetLabels)</visible>
 				</control>
-				<control type="label">
+				<control type="textbox">
 					<left>22</left>
 					<top>0</top>
 					<height>90</height>
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
-					<scroll>true</scroll>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>!Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)</visible>
 				</control>
-				<control type="label">
+				<control type="textbox">
 					<left>22</left>
 					<top>0</top>
 					<right>2</right>
 					<height>90</height>
 					<label>$PARAM[label]$PARAM[label_focus]</label>
 					<font>font25_title</font>
-					<scroll>true</scroll>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Control.HasFocus($PARAM[list_id]) + [!Skin.HasSetting(HideWidgetLabels) | $PARAM[extend_label]]</visible>
 				</control>
