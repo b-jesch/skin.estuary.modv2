@@ -374,13 +374,6 @@
 					<include content="MediaFlag">
 						<param name="width" value="5" />
 					</include>
-					<include content="MediaFlagsRatings">
-						<param name="infolabel_prefix"/>
-					</include>
-					<include content="MediaFlag">
-						<param name="width" value="0" />
-						<param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
-					</include>
 					<include content="MediaFlag">
 						<param name="texture" value="flags/lastseen.png" />
 						<param name="width" value="200" />
@@ -432,7 +425,8 @@
 				<width>1100</width>
 				<bottom>605</bottom>
 				<font>fontplot2</font>
-				<label>$INFO[ListItem.Genre,[B],: [/B]]$INFO[ListItem.Plot]</label>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<label>$INFO[ListItem.Genre,[B],: [/B]][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 				<autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>!ListItem.IsParentFolder + !String.IsEmpty(ListItem.Plot)</visible>
 			</control>

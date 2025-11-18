@@ -189,6 +189,8 @@
 		<value condition="Control.IsVisible(55)">$INFO[Container(50055).NumItems,, $LOCALIZE[36901]]</value>
 		<value condition="Control.IsVisible(502) + String.IsEqual(Container(50502).NumItems,1)">$INFO[Container(50502).NumItems,, $LOCALIZE[36900]]</value>
 		<value condition="Control.IsVisible(502)">$INFO[Container(50502).NumItems,, $LOCALIZE[36901]]</value>
+		<value condition="Control.IsVisible(510) + String.IsEqual(Container(510).NumItems,1)">$INFO[Container(510).NumItems,, $LOCALIZE[36900]]</value>
+		<value condition="Control.IsVisible(510)">$INFO[Container(510).NumItems,, $LOCALIZE[36901]]</value>
 	</variable>
 	<variable name="PVRGenresVar">
 		<value condition="String.IsEqual(Skin.String(genrecolors),31334) | String.IsEqual(Skin.String(genrecolors),1223)">windows/pvr/epg-genres/0.png</value>
@@ -1715,9 +1717,9 @@
 		<value>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</value>
 	</variable>
 	<variable name="VideoPlayerAudioCodecFlagVar">
-		<value condition="String.Contains(VideoPlayer.AudioCodec,truehd) + String.Contains(Player.Filenameandpath,ATMOS)">flags/audiocodec/atmos.png</value>
-		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma) + String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)">flags/audiocodec/dts-x.png</value>
-		<value condition="String.Contains(VideoPlayer.AudioCodec,dtsma) + String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)">flags/audiocodec/dts-x.png</value>
+		<value condition="String.Contains(Player.Filenameandpath,ATMOS)">flags/audiocodec/atmos.png</value>
+		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">flags/audiocodec/dts-x.png</value>
+		<value condition="String.Contains(VideoPlayer.AudioCodec,dtsma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">flags/audiocodec/dts-x.png</value>
 		<value>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</value>
 	</variable>
 	<variable name="Container6_AudioCodecFlagVar">
@@ -2222,9 +2224,11 @@
 		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshdma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">DTS-X [FN]</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtsma)">DTS-HD MA</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_hra)">DTS-HD HRA</value>
+		<value condition="String.Contains(VideoPlayer.AudioCodec,truehd_atmos)">Dolby Digital w. Atmos</value>
 		<value condition="String.Contains(VideoPlayer.AudioCodec,truehd) + String.Contains(Player.Filenameandpath,atmos)">Dolby Digital w. Atmos [FN]</value>
 		<value condition="String.Contains(VideoPlayer.AudioCodec,truehd)">DD True HD</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma)">DTS-HD MA</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">DD Plus w. Atmos</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3) + String.Contains(Player.Filenameandpath,atmos)">DD Plus w. Atmos [FN]</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">Dolby Digital Plus</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm_bluray)">PCM</value>
