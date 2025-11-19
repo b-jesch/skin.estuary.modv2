@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="View_503_Gallery">
+        <defaultcontrol always="true">503</defaultcontrol>
         <control type="group">
             <visible>Control.IsVisible(503)</visible>
             <include>Visible_Right</include>
@@ -68,7 +69,7 @@
                         </control>
                         <control type="image">
                             <centerleft>50%</centerleft>
-                            <top>20</top>
+                            <top>9</top>
                             <height>36</height>
                             <width>36</width>
                             <texture>$VAR[ListWatchedIconVar]</texture>
@@ -76,7 +77,7 @@
                         </control>
                         <control type="image">
                             <centerleft>50%</centerleft>
-                            <top>20</top>
+                            <top>9</top>
                             <height>36</height>
                             <width>36</width>
                             <texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
@@ -89,6 +90,18 @@
                     <include>View_Gallery_Info</include>
                 </focusedlayout>
             </control>
+        </control>
+        <control type="textbox">
+            <include>OpenClose_Left</include>
+            <bottom>-120</bottom>
+            <left>30</left>
+            <right>30</right>
+            <height>130</height>
+            <font>fontplot2</font>
+            <textcolor>$VAR[SkinColorVar]</textcolor>
+            <label>$INFO[ListItem.Genre,[B],: [/B]][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+            <autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+            <visible>!ListItem.IsParentFolder + !String.IsEmpty(ListItem.Plot)</visible>
         </control>
     </include>
     <include name="View_Gallery_Fanart">
@@ -105,18 +118,18 @@
             <control type="image">
                 <left>10</left>
                 <right>10</right>
-                <top>10</top>
+                <top>0</top>
                 <bottom>10</bottom>
                 <fadetime>200</fadetime>
                 <aspectratio>stretch</aspectratio>
-                <texture fallback="DefaultVideoFanart.png">$VAR[InfoWidgetThumbVar]</texture>
+                <texture fallback="DefaultVideoFanart.png">$VAR[WidgetThumbViewVar]</texture>
                 <fadetime>300</fadetime>
                 <visible>!Container.Content(episodes)</visible>
             </control>
             <control type="image">
                 <left>10</left>
                 <right>10</right>
-                <top>10</top>
+                <top>0</top>
                 <bottom>10</bottom>
                 <fadetime>200</fadetime>
                 <aspectratio>stretch</aspectratio>
@@ -126,7 +139,7 @@
             <control type="image">
                 <left>10</left>
                 <right>10</right>
-                <top>10</top>
+                <top>0</top>
                 <bottom>10</bottom>
                 <fadetime>200</fadetime>
                 <aspectratio>stretch</aspectratio>
@@ -143,7 +156,7 @@
             <height>122</height>
             <control type="image">
 				<left>0</left>
-				<bottom>565</bottom>
+				<bottom>575</bottom>
 				<width>110</width>
 				<height>110</height>
 				<texture flipy="true">overlays/overlay-bg.png</texture>
@@ -152,10 +165,10 @@
 			</control>
 			<control type="image">
 				<left>5</left>
-				<bottom>629</bottom>
+				<bottom>640</bottom>
 				<width>36</width>
 				<height>36</height>
-				<texture>$VAR[WallWatchedIconVar]</texture>
+				<texture>$VAR[ListWatchedIconVar]</texture>
 				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
             <control type="image">
@@ -163,6 +176,74 @@
                 <height>45</height>
                 <bottom>-5</bottom>
                 <texture>dialogs/back.png</texture>
+            </control>
+            <!--
+            <control type="image">
+                <width>100%</width>
+                <height>65</height>
+                <bottom>620</bottom>
+                <texture>dialogs/back.png</texture>
+            </control>
+            <control type="grouplist">
+                <visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
+                <bottom>605</bottom>
+                <right>15</right>
+                <height>70</height>
+                <width>900</width>
+                <itemgap>3</itemgap>
+                <orientation>horizontal</orientation>
+                <align>right</align>
+                <aligny>center</aligny>
+                <include content="MediaFlagsAudioSubs">
+                    <param name="infolabel_prefix"/>
+                </include>
+                <include content="MediaFlag">
+                    <param name="width" value="5" />
+                </include>
+                <include content="MediaFlag">
+                    <param name="texture" value="flags/lastseen.png" />
+                    <param name="width" value="200" />
+                    <param name="label_width" value="146" />
+                    <param name="label_left" value="50" />
+                    <param name="label" value="$INFO[ListItem.LastPlayed]" />
+                    <param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
+                </include>
+            </control>
+            -->
+            <control type="list" id="50351">
+                <left>0</left>
+                <bottom>45</bottom>
+                <width>1156</width>
+                <height>170</height>
+                <orientation>horizontal</orientation>
+                <autoscroll time="1500">true</autoscroll>
+                <itemgap>5</itemgap>
+                <visible>!Skin.HasSetting(show_moviessetflag) + ListItem.IsCollection</visible>
+                <focusedlayout height="170" width="129">
+                    <control type="image">
+                        <left>5</left>
+                        <top>0</top>
+                        <right>5</right>
+                        <bottom>0</bottom>
+                        <aspectratio>stretch</aspectratio>
+                        <texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(poster)]</texture>
+                        <bordertexture>colors/white.png</bordertexture>
+                        <bordersize>1</bordersize>
+                    </control>
+                </focusedlayout>
+                <itemlayout height="170" width="129">
+                    <control type="image">
+                        <left>5</left>
+                        <top>0</top>
+                        <right>5</right>
+                        <bottom>0</bottom>
+                        <aspectratio>stretch</aspectratio>
+                        <texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(poster)]</texture>
+                        <bordertexture>colors/white.png</bordertexture>
+                        <bordersize>1</bordersize>
+                    </control>
+                </itemlayout>
+                <content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
             </control>
             <control type="label">
                 <left>20</left>

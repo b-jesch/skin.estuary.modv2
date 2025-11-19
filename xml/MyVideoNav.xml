@@ -266,53 +266,6 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Control.IsVisible(503) + ListItem.IsCollection</visible>
-				<visible>!Skin.HasSetting(show_moviessetflag)</visible>
-				<control type="list" id="500503">
-					<right>16</right>
-					<bottom>100</bottom>
-					<width>820</width>
-					<height>102</height>
-					<orientation>horizontal</orientation>
-					<autoscroll time="1500">true</autoscroll>
-					<itemgap>5</itemgap>
-					<animation effect="slide" end="738,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,1)">conditional</animation>
-					<animation effect="slide" end="656,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,2)">conditional</animation>
-					<animation effect="slide" end="574,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,3)">conditional</animation>
-					<animation effect="slide" end="492,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,4)">conditional</animation>
-					<animation effect="slide" end="410,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,5)">conditional</animation>
-					<animation effect="slide" end="328,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,6)">conditional</animation>
-					<animation effect="slide" end="246,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,7)">conditional</animation>
-					<animation effect="slide" end="164,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,8)">conditional</animation>
-					<animation effect="slide" end="82,0" time="0" condition="Integer.IsEqual(Container(500503).NumItems,9)">conditional</animation>
-					<focusedlayout height="102" width="82">
-						<control type="image">
-							<left>5</left>
-							<top>0</top>
-							<right>5</right>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture>colors/white.png</bordertexture>
-							<bordersize>1</bordersize>
-						</control>
-					</focusedlayout>
-					<itemlayout height="102" width="82">
-						<control type="image">
-							<left>5</left>
-							<top>0</top>
-							<right>5</right>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture>colors/white.png</bordertexture>
-							<bordersize>1</bordersize>
-						</control>
-					</itemlayout>
-					<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
-				</control>
-			</control>
-			<control type="group">
 				<control type="image">
 					<top>15</top>
 					<width>310</width>

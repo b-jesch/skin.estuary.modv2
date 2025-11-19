@@ -189,8 +189,6 @@
 		<value condition="Control.IsVisible(55)">$INFO[Container(50055).NumItems,, $LOCALIZE[36901]]</value>
 		<value condition="Control.IsVisible(502) + String.IsEqual(Container(50502).NumItems,1)">$INFO[Container(50502).NumItems,, $LOCALIZE[36900]]</value>
 		<value condition="Control.IsVisible(502)">$INFO[Container(50502).NumItems,, $LOCALIZE[36901]]</value>
-		<value condition="Control.IsVisible(510) + String.IsEqual(Container(510).NumItems,1)">$INFO[Container(510).NumItems,, $LOCALIZE[36900]]</value>
-		<value condition="Control.IsVisible(510)">$INFO[Container(510).NumItems,, $LOCALIZE[36901]]</value>
 	</variable>
 	<variable name="PVRGenresVar">
 		<value condition="String.IsEqual(Skin.String(genrecolors),31334) | String.IsEqual(Skin.String(genrecolors),1223)">windows/pvr/epg-genres/0.png</value>

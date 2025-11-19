@@ -383,7 +383,7 @@
 						<param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
 					</include>
 				</control>
-				<control type="list" id="51000">
+				<control type="list" id="51051">
 					<visible>ListItem.IsCollection</visible>
 					<top>8</top>
 					<width>980</width>
