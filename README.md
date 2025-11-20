@@ -43,6 +43,12 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 ### 21.2.1+omega ###
+- .28
+  * Textures updated
+  * some views improved (Flex, Poster, Gallery)
+  * label handling for atmos improved
+
+
 - .27
   * Fix overlap issue on category and widget labels (changed from label to textbox)
   * Fix dependency of widget labels in custom vertical widget

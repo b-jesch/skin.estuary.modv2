@@ -1036,6 +1036,12 @@
 					<param name="visible2" value="!Skin.HasSetting(show_mediaaudiocodecflag)" />
 				</include>
 				<include content="MediaFlag">
+					<param name="texture" value="flags/audiocodec/atmos.png" />
+					<param name="width" value="104" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.AudioCodec,_atmos) | String.Contains($PARAM[infolabel_prefix]ListItem.FilenameAndPath,ATMOS)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediaaudiocodecflag)" />
+				</include>
+				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
 					<param name="width" value="104" />
 					<param name="fallback" value="flags/audiochannel/fallback.png" />
@@ -1495,6 +1501,12 @@
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec) + !Skin.HasSetting(show_mediaaudiocodecflag)" />
 				</include>
 				<include content="MediaFlag">
+					<param name="texture" value="flags/audiocodec/atmos.png" />
+					<param name="width" value="104" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.AudioCodec,_atmos) | String.Contains($PARAM[infolabel_prefix]ListItem.FilenameAndPath,ATMOS)" />
+					<param name="visible2" value="!Skin.HasSetting(show_mediaaudiocodecflag)" />
+				</include>
+				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
 					<param name="fallback" value="flags/audiochannel/fallback.png" />
 					<param name="width" value="104" />
@@ -1544,6 +1556,13 @@
 					<param name="visible" value="Window.IsVisible(1141)" />
 				</include>
 				<include content="MediaFlag">
+					<param name="texture" value="flags/audiocodec/atmos.png" />
+					<param name="width" value="104" />
+					<param name="fallback" value="flags/audiocodec/fallback.png" />
+					<param name="visible" value="String.Contains(VideoPlayer.AudioCodec,_atmos) | String.Contains(Player.FilenameAndPath,ATMOS)" />
+					<param name="visible2" value="Window.IsVisible(1141)" />
+				</include>
+				<include content="MediaFlag">
 					<param name="texture" value="flags/cadre2.png" />
 					<param name="width" value="164" />
 					<param name="label_width" value="158" />
@@ -1579,7 +1598,6 @@
 		<param name="infolabel_prefix" />
 		<param name="pvr">false</param>
 		<param name="resolution_var">$VAR[3DFlagVar]</param>
-		<param name="audiocodec_var">$VAR[AudioCodecFlagVar]</param>
 		<param name="visible">true</param>
 		<param name="align">right</param>
 		<definition>
@@ -4115,6 +4133,12 @@
 								<param name="texture" value="$VAR[VideoPlayerAudioCodecFlagVar]" />
 								<param name="fallback" value="flags/audiocodec/fallback.png" />
 								<param name="width" value="104" />
+							</include>
+							<include content="MediaFlag">
+								<param name="texture" value="flags/audiocodec/atmos.png" />
+								<param name="fallback" value="flags/audiocodec/fallback.png" />
+								<param name="width" value="104" />
+								<param name="visible" value="String.Contains(VideoPlayer.AudioCodec,_atmos) | String.Contains(Player.FilenameAndPath,ATMOS)" />
 							</include>
 							<include content="MediaFlag">
 								<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
