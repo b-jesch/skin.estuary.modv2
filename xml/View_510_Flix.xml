@@ -319,7 +319,7 @@
 			<control type="label">
 				<top>60</top>
 				<left>50</left>
-				<right>20</right>
+				<width>1100</width>
 				<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
 				<font>font52_title</font>
 				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -331,7 +331,7 @@
 			<control type="label">
 				<top>135</top>
 				<left>50</left>
-				<right>20</right>
+				<width>1100</width>
 				<label>[B]$VAR[VideoInfoSubLabelVar][/B]</label>
 				<font>fontplot2</font>
 				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -344,7 +344,7 @@
 			<control type="label">
 				<top>185</top>
 				<left>50</left>
-				<right>20</right>
+				<width>1100</width>
 				<label>$VAR[VideoInfoSubLabelVar]</label>
 				<font>font30_title</font>
 				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
