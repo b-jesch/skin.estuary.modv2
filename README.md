@@ -46,7 +46,9 @@ supports animated poster only.
 ### 21.3+omega ###
 - .0
   * Player Process Info update for avdvplus/cpm builds
-  * bump version
+  * status flags for recordings (TV section) added
+  * seasonal dates for 2026 updated
+  * bump version, readme updated
 
 
 ### 21.2.1+omega ###
