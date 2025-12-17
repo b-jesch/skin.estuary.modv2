@@ -1336,6 +1336,19 @@
 		<value condition="ListItem.IsFinale">windows/pvr/finished.png</value>
 		<value condition="ListItem.IsEncrypted + ![Window.IsVisible(tvguide) | Window.IsVisible(home)]">windows/pvr/encrypt.png</value>
 	</variable>
+	<variable name="PVRRecordingsImageVar">
+		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
+		<value condition="ListItem.IsCollection">overlays/set.png</value>
+		<value condition="ListItem.HasVideoVersions + !Control.HasFocus(6)">overlays/versions.png</value>
+		<value condition="ListItem.IsPlaying">overlays/watched/OverlayPlaying-List.png</value>
+		<value condition="ListItem.IsResumable + !String.IsEqual(ListItem.DBType,tvshow)">overlays/watched/resume.png</value>
+		<value condition="Integer.IsGreater(ListItem.Playcount,0) + [Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch.xml)]">OverlayWatched.png</value>
+		<value condition="Integer.IsGreater(ListItem.Playcount,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]">overlaywatched.png</value>
+		<value condition="Integer.IsGreater(ListItem.Playcount,0)">overlaywatched.png</value>
+		<value condition="ListItem.HasArchive">windows/pvr/archive.png</value>
+		<value condition=" !String.StartsWith(container.folderpath,plugin://) + Container.Content(seasons)">overlays/watched/set.png</value>
+		<value condition="ListItem.IsEncrypted + ![Window.IsVisible(tvguide) | Window.IsVisible(home)]">windows/pvr/encrypt.png</value>
+	</variable>
 	<variable name="AutoCompletionContentVar">
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>
 	</variable>

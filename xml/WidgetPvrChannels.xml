@@ -9,6 +9,7 @@
         <param name="label">$INFO[ListItem.Label]</param>
         <param name="label2">$INFO[ListItem.Title]</param>
         <param name="onclick" />
+        <param name="showitemstatus">false</param>
         <definition>
             <include content="CategoryLabel">
                 <param name="label">$PARAM[widget_header]</param>
@@ -96,8 +97,16 @@
                             <top>30</top>
                             <width>32</width>
                             <height>32</height>
+                            <texture>$VAR[PVRRecordingsImageVar]</texture>
+                            <visible>$PARAM[showitemstatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
+                        </control>
+                        <control type="image">
+                            <left>260</left>
+                            <top>30</top>
+                            <width>32</width>
+                            <height>32</height>
                             <texture>$VAR[PVRStatusImageVar]</texture>
-                            <visible>!Skin.HasSetting(ShowPVRStatus)</visible>
+                            <visible>!$PARAM[showitemstatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
                         </control>
                         <control type="image">
                             <left>20</left>
@@ -218,8 +227,16 @@
                             <top>30</top>
                             <width>32</width>
                             <height>32</height>
+                            <texture>$VAR[PVRRecordingsImageVar]</texture>
+                            <visible>$PARAM[showitemstatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
+                        </control>
+                        <control type="image">
+                            <left>260</left>
+                            <top>30</top>
+                            <width>32</width>
+                            <height>32</height>
                             <texture>$VAR[PVRStatusImageVar]</texture>
-                            <visible>!Skin.HasSetting(ShowPVRStatus)</visible>
+                            <visible>!$PARAM[showitemstatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
                         </control>
                         <control type="image">
                             <left>20</left>
