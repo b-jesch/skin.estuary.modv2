@@ -43,7 +43,13 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 
+
 ### 21.3+omega ###
+- .1
+  * improvements on widget labels in Home menu
+  * colorbutton added (important for addons which using colorbutton controls in their setup)
+
+
 - .0
   * Player Process Info update for avdvplus/cpm builds
   * status flags for recordings (TV section) added

@@ -1073,7 +1073,7 @@
 			<control type="group" id="$PARAM[list_id]666">
 				<left>55</left>
 				<top>80</top>
-				<height>125</height>
+				<height>110</height>
 				<include content="ItemRight" condition="Skin.HasSetting(show_date)">
 					<param name="right" value="550" />
 				</include>
@@ -1092,30 +1092,33 @@
 				<control type="textbox">
 					<left>22</left>
 					<top>0</top>
-					<height>90</height>
+					<height>75</height>
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Skin.HasSetting(HideWidgetLabels)</visible>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<left>22</left>
 					<top>0</top>
-					<height>90</height>
+					<height>75</height>
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>!Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)</visible>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<left>22</left>
 					<top>0</top>
 					<right>2</right>
-					<height>90</height>
+					<height>75</height>
 					<label>$PARAM[label]$PARAM[label_focus]</label>
 					<font>font25_title</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Control.HasFocus($PARAM[list_id]) + [!Skin.HasSetting(HideWidgetLabels) | $PARAM[extend_label]]</visible>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 		</definition>
