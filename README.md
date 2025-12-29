@@ -48,6 +48,7 @@ supports animated poster only.
 - .1
   * improvements on widget labels in Home menu
   * colorbutton added (important for addons which using colorbutton controls in their setup)
+  * Player Process Info extended for U3K builds
 
 
 - .0
