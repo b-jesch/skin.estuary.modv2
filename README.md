@@ -45,6 +45,15 @@ supports animated poster only.
 
 
 ### 21.3+omega ###
+- .3
+  * Textures updated
+  * expression for detection of special builds updated (community/avdvplus)
+
+
+- .2
+  * syntax error fixed
+
+
 - .1
   * improvements on widget labels in Home menu
   * colorbutton added (important for addons which using colorbutton controls in their setup)
