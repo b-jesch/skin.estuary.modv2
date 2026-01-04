@@ -434,7 +434,7 @@
 						<left>360</left>
 						<width>330</width>
 						<aligny>bottom</aligny>
-						<label>[COLOR white] $INFO[Player.Process(video.dovi.l1.min.nits)] | $INFO[Player.Process(video.dovi.l1.max.nits)] | $INFO[Player.Process(video.dovi.l1.avg.nits)] $LOCALIZE[31699][/COLOR]</label>
+						<label>[COLOR white]$INFO[Player.Process(video.dovi.l1.min.nits)] | $INFO[Player.Process(video.dovi.l1.max.nits)] | $INFO[Player.Process(video.dovi.l1.avg.nits)] $LOCALIZE[31699][/COLOR]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
@@ -453,7 +453,7 @@
 						<left>360</left>
 						<width>330</width>
 						<aligny>bottom</aligny>
-						<label>[COLOR white] $INFO[Player.Process(video.dovi.l1.min.pq)] | $INFO[Player.Process(video.dovi.l1.max.pq)] | $INFO[Player.Process(video.dovi.l1.avg.pq)] PQ-12bit[/COLOR]</label>
+						<label>[COLOR white]$INFO[Player.Process(video.dovi.l1.min.pq)] | $INFO[Player.Process(video.dovi.l1.max.pq)] | $INFO[Player.Process(video.dovi.l1.avg.pq)] PQ-12bit[/COLOR]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
@@ -472,7 +472,7 @@
 						<left>360</left>
 						<width>330</width>
 						<aligny>bottom</aligny>
-						<label>[COLOR white] $INFO[Player.Process(video.hdr.min.lum)] | $INFO[Player.Process(video.hdr.max.lum)] $LOCALIZE[31699][/COLOR]</label>
+						<label>[COLOR white]$INFO[Player.Process(video.hdr.min.lum)] | $INFO[Player.Process(video.hdr.max.lum)] $LOCALIZE[31699][/COLOR]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
@@ -491,7 +491,26 @@
 						<left>360</left>
 						<width>330</width>
 						<aligny>bottom</aligny>
-						<label>[COLOR white] $INFO[Player.Process(video.hdr.max.cll)] | $INFO[Player.Process(video.hdr.max.fall)] $LOCALIZE[31699][/COLOR]</label>
+						<label>[COLOR white]$INFO[Player.Process(video.hdr.max.cll)] | $INFO[Player.Process(video.hdr.max.fall)] $LOCALIZE[31699][/COLOR]</label>
+						<font>font12</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<height>35</height>
+					<visible>String.IsEqual(Player.Process(video.dovi.has.config),1) + String.IsEqual(Player.Process(video.dovi.has.l5),1)</visible>
+					<control type="label">
+						<width>360</width>
+						<aligny>bottom</aligny>
+						<label>$LOCALIZE[31717] : </label>
+						<font>font12</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+					</control>
+					<control type="label">
+						<left>360</left>
+						<width>330</width>
+						<aligny>bottom</aligny>
+						<label>[COLOR white]$INFO[Player.Process(video.dovi.l5.left.offset)] | $INFO[Player.Process(video.dovi.l5.right.offset)] | $INFO[Player.Process(video.dovi.l5.top.offset)] | $INFO[Player.Process(video.dovi.l5.bottom.offset)][/COLOR]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>

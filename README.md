@@ -48,6 +48,7 @@ supports animated poster only.
 - .3
   * Textures updated
   * expression for detection of special builds updated (community/avdvplus)
+  * L5 active area (DV) in PPI added 
 
 
 - .2
