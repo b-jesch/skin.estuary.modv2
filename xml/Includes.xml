@@ -1145,7 +1145,7 @@
 					<param name="label_width" value="58" />
 					<param name="label_left" value="44" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating]" />
-					<param name="visible" value="!Skin.HasSetting(use_imdblogo) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,album) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,song) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,set) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,tvshow) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating)" />
+					<param name="visible" value="!Skin.HasSetting(use_imdblogo) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,album) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,song) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,set) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/imdb.png" />
@@ -1153,7 +1153,7 @@
 					<param name="label_width" value="58" />
 					<param name="label_left" value="44" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Rating]" />
-					<param name="visible" value="Skin.HasSetting(use_imdblogo) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,album) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,song) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,set) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,tvshow) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating)" />
+					<param name="visible" value="Skin.HasSetting(use_imdblogo) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,album) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,song) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBType,set) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Rating)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[MPAAImageVar]" />

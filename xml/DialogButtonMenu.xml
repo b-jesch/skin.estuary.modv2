@@ -169,13 +169,15 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
+						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
+						<onclick>dialog.close(all,true)</onclick>
 						<onclick>Suspend</onclick>
 						<visible>System.CanSuspend</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13010]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
+						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
+						<onclick>dialog.close(all,true)</onclick>
 						<onclick>Hibernate</onclick>
 						<visible>System.CanHibernate</visible>
 					</item>
@@ -406,13 +408,15 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
+						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
+						<onclick>dialog.close(all,true)</onclick>
 						<onclick>Suspend</onclick>
 						<visible>System.CanSuspend</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13010]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
+						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
+						<onclick>dialog.close(all,true)</onclick>
 						<onclick>Hibernate</onclick>
 						<visible>System.CanHibernate</visible>
 					</item>
@@ -558,13 +562,15 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
+						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
+						<onclick>dialog.close(all,true)</onclick>
 						<onclick>Suspend</onclick>
 						<visible>System.CanSuspend</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13010]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon> 
+						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
+						<onclick>dialog.close(all,true)</onclick>
 						<onclick>Hibernate</onclick>
 						<visible>System.CanHibernate</visible>
 					</item>
