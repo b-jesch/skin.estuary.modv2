@@ -1795,6 +1795,7 @@
 		<value condition="Control.HasFocus(608) + String.IsEqual(Skin.String(channelswitch_action),31633)">$LOCALIZE[31016]</value>
 		<value condition="Control.HasFocus(609) | Control.HasFocus(610)">$LOCALIZE[31142]</value>
 		<value condition="Control.HasFocus(6021)">$LOCALIZE[208]</value>
+		<value condition="Control.HasFocus(6022">$INFO[PVR.EpgEventElapsedTime]</value>
 		<value condition="Control.HasFocus(70011)">$LOCALIZE[31138]</value>
 		<value condition="Control.HasFocus(70012) | Control.HasFocus(70013)">$LOCALIZE[31034]</value>
 		<value condition="Control.HasFocus(70014) + !Window.IsVisible(1122)">$LOCALIZE[31296]</value>
