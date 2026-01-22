@@ -45,6 +45,12 @@ supports animated poster only.
 
 
 ### 21.3+omega ###
+- .4
+  * Implementation of jump to start of a dash stream in Video OSD
+  * Rating added to tvshows (was accidently removed)
+  * Exiting power menu on suspend/hibernate
+
+
 - .3
   * Textures updated
   * expression for detection of special builds updated (community/avdvplus)

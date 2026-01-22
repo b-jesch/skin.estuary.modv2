@@ -57,6 +57,16 @@ if __name__ == '__main__':
             xbmcgui.Window(10000).setProperty('size', '%s%s' % ('{0:0.2f}'.format(fs), units[unit]))
             xbmc.log('set Property \'size\' to %s%s' % ('{0:0.2f}'.format(fs), units[unit]), xbmc.LOGINFO)
 
+        elif sys.argv[1] == 'calcSeek':
+            '''
+            calculate the seek position of a time string hh:mm:ss
+            [argv2]: time string (hh:)mm:ss
+        
+            '''
+            seeksecs = sum(x * int(t) for x, t in zip([1, 60, 3600], reversed(sys.argv[2].split(":")))) + 5
+            xbmcgui.Window(10000).setProperty('seeksecs', str(seeksecs * -1))
+            xbmc.log('set Property \'seeksecs\' to ' + str(seeksecs * -1), xbmc.LOGINFO)
+
         elif sys.argv[1] == 'calculate':
             '''
                 calculates two parameters, use integer operations

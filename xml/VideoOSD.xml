@@ -2,6 +2,8 @@
 <window>
 	<onload condition="!Player.PauseEnabled | String.IsEqual(Skin.String(defaultosdbutton),36044)">SetFocus(603)</onload>
 	<onload condition="Player.Rewinding | Player.Forwarding">SetFocus(6021)</onload>
+	<onload>RunScript(skin.estuary.modv2,calcSeek,$INFO[PVR.EpgEventElapsedTime])</onload>
+	<onunload>ClearProperty(seeksecs,home)</onunload>
 	<defaultcontrol always="true">602</defaultcontrol>
 	<include>Animation_BottomFadeInOut</include>
 	<depth>DepthOSD</depth>
@@ -73,6 +75,17 @@
 					<visible>Player.SeekEnabled</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
+				<control type="radiobutton" id="6020">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/jump.png"/>
+					</include>
+					<onclick>Seek($INFO[Window(home).Property(seeksecs)])</onclick>
+					<onclick>SetProperty(JumpEnabled,off,home)</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<enable>!String.IsEqual(Window(home).Property(JumpEnabled),off)</enable>
+					<visible>Player.SeekEnabled + Player.IsInternetStream + VideoPlayer.HasEpg</visible>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+				</control>
 				<control type="radiobutton" id="602">
 					<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/play.png</textureradioonfocus>
 					<textureradioonnofocus>osd/fullscreen/buttons/play.png</textureradioonnofocus>
@@ -108,6 +121,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/stop.png"/>
 					</include>
 					<onclick>PlayerControl(Stop)</onclick>
+					<onclick>SetProperty(JumpEnabled,on,home)</onclick>
 				</control>
 				<control type="radiobutton" id="609">
 					<include content="OSDButton">
