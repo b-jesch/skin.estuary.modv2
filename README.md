@@ -50,6 +50,7 @@ supports animated poster only.
   * Rating added to tvshows (was accidently removed)
   * Exiting power menu on suspend/hibernate
   * p3i special build detection added
+  * hopefully fixed a widget navigation issue (issue #92)
 
 
 - .3

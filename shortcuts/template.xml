@@ -186,6 +186,8 @@
 					<include condition="!Skin.HasSetting(UseSmallerCategories)">PersonalWidgetListCategoriesBig</include>
 					<include condition="Skin.HasSetting(UseSmallerCategories)">PersonalWidgetListCategoriesSmall</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle1]">
+						<param name="onup" value="9000"/>
+      					<param name="ondown" value="22200$SKINSHORTCUTS[id]"/>
 						<param name="content_path" value="$SKINSHORTCUTS[content1]"/>
 						<param name="widget_header" value="$SKINSHORTCUTS[name1]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus22100$SKINSHORTCUTS[id]]"/>
@@ -195,6 +197,8 @@
 						<param name="list_id" value="22100$SKINSHORTCUTS[id]"/>
 					</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle2]">
+						<param name="onup" value="22100$SKINSHORTCUTS[id]"/>
+      					<param name="ondown" value="22300$SKINSHORTCUTS[id]"/>
 						<param name="content_path" value="$SKINSHORTCUTS[content2]"/>
 						<param name="widget_header" value="$SKINSHORTCUTS[name2]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus22200$SKINSHORTCUTS[id]]"/>
@@ -204,6 +208,8 @@
 						<param name="list_id" value="22200$SKINSHORTCUTS[id]"/>
 					</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle3]">
+						<param name="onup" value="22200$SKINSHORTCUTS[id]"/>
+      					<param name="ondown" value="22400$SKINSHORTCUTS[id]"/>
 						<param name="content_path" value="$SKINSHORTCUTS[content3]"/>
 						<param name="widget_header" value="$SKINSHORTCUTS[name3]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus22300$SKINSHORTCUTS[id]]"/>
@@ -213,6 +219,8 @@
 						<param name="list_id" value="22300$SKINSHORTCUTS[id]"/>
 					</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle4]">
+						<param name="onup" value="22300$SKINSHORTCUTS[id]"/>
+      					<param name="ondown" value="22500$SKINSHORTCUTS[id]"/>
 						<param name="content_path" value="$SKINSHORTCUTS[content4]"/>
 						<param name="widget_header" value="$SKINSHORTCUTS[name4]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus22400$SKINSHORTCUTS[id]]"/>
@@ -222,6 +230,8 @@
 						<param name="list_id" value="22400$SKINSHORTCUTS[id]"/>
 					</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle5]">
+						<param name="onup" value="22400$SKINSHORTCUTS[id]"/>
+      					<param name="ondown" value="22600$SKINSHORTCUTS[id]"/>
 						<param name="content_path" value="$SKINSHORTCUTS[content5]"/>
 						<param name="widget_header" value="$SKINSHORTCUTS[name5]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus22500$SKINSHORTCUTS[id]]"/>
@@ -231,6 +241,8 @@
 						<param name="list_id" value="22500$SKINSHORTCUTS[id]"/>
 					</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle6]">
+						<param name="onup" value="22500$SKINSHORTCUTS[id]"/>
+      					<param name="ondown" value="22700$SKINSHORTCUTS[id]"/>
 						<param name="content_path" value="$SKINSHORTCUTS[content6]"/>
 						<param name="widget_header" value="$SKINSHORTCUTS[name6]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus22600$SKINSHORTCUTS[id]]"/>
@@ -240,6 +252,8 @@
 						<param name="list_id" value="22600$SKINSHORTCUTS[id]"/>
 					</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle7]">
+						<param name="onup" value="22600$SKINSHORTCUTS[id]"/>
+      					<param name="ondown" value="22800$SKINSHORTCUTS[id]"/>
 						<param name="content_path" value="$SKINSHORTCUTS[content7]"/>
 						<param name="widget_header" value="$SKINSHORTCUTS[name7]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus22700$SKINSHORTCUTS[id]]"/>
@@ -249,6 +263,8 @@
 						<param name="list_id" value="22700$SKINSHORTCUTS[id]"/>
 					</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle8]">
+						<param name="onup" value="22700$SKINSHORTCUTS[id]"/>
+      					<param name="ondown" value="9000"/>
 						<param name="content_path" value="$SKINSHORTCUTS[content8]"/>
 						<param name="widget_header" value="$SKINSHORTCUTS[name8]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus22800$SKINSHORTCUTS[id]]"/>
