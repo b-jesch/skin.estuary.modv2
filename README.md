@@ -49,6 +49,7 @@ supports animated poster only.
   * Implementation of jump to start of a dash stream in Video OSD
   * Rating added to tvshows (was accidently removed)
   * Exiting power menu on suspend/hibernate
+  * p3i special build detection added
 
 
 - .3

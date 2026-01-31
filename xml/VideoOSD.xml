@@ -4,6 +4,7 @@
 	<onload condition="Player.Rewinding | Player.Forwarding">SetFocus(6021)</onload>
 	<onload>RunScript(skin.estuary.modv2,calcSeek,$INFO[PVR.EpgEventElapsedTime])</onload>
 	<onunload>ClearProperty(seeksecs,home)</onunload>
+	<onunload condition="!Player.Playing">ClearProperty(JumpEnabled,home)</onunload>
 	<defaultcontrol always="true">602</defaultcontrol>
 	<include>Animation_BottomFadeInOut</include>
 	<depth>DepthOSD</depth>
