@@ -23,7 +23,7 @@
                     <param name="list_id" value="$PARAM[list_id]"/>
                 </include>
                 <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-              <itemlayout width="310" height="500" infoupdate="$PARAM[info_update]">
+                <itemlayout width="310" height="500" infoupdate="$PARAM[info_update]">
                     <control type="group">
                         <left>70</left>
                         <control type="image">

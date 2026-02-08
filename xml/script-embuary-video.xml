@@ -327,7 +327,7 @@
 					</include>
 					<control type="group">
 						<top>120</top>
-						<include content="ExtendedInfoCastList">
+						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10052"/>
 							<param name="label" value="$INFO[ListItem.Label]"/>
 							<param name="label2" value="$INFO[ListItem.Label2]"/>
@@ -357,7 +357,7 @@
 					</include>
 					<control type="group">
 						<top>120</top>
-						<include content="ExtendedInfoCastList">
+						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10056"/>
 							<param name="label" value="$INFO[ListItem.Label]"/>
 							<param name="label2" value="$INFO[ListItem.Label2]"/>
@@ -383,6 +383,7 @@
 							<param name="list_id" value="10057"/>
 							<param name="ondown" value="10058"/>
 							<param name="onup" value="10056"/>
+							<param name="textbox" value="true"/>
 						</include>
 					</control>
 				</control>
@@ -404,6 +405,7 @@
 							<param name="list_id" value="10058"/>
 							<param name="ondown" value="10053"/>
 							<param name="onup" value="10057"/>
+							<param name="textbox" value="true"/>
 						</include>
 					</control>
 				</control>
@@ -425,6 +427,7 @@
 							<param name="list_id" value="10053"/>
 							<param name="ondown" value="10054"/>
 							<param name="onup" value="10058"/>
+							<param name="textbox" value="true"/>
 						</include>
 					</control>
 				</control>
@@ -493,6 +496,7 @@
 							<param name="list_id" value="10059"/>
 							<param name="ondown" value="100"/>
 							<param name="onup" value="10055"/>
+							<param name="hidelabel" value="true"/>
 						</include>
 					</control>
 				</control>

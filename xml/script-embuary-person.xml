@@ -13,6 +13,7 @@
 	<onload condition="!Skin.HasSetting(disable_PauseOnExtraInfos)">PlayerControl(Play)</onload>
 	<onunload condition="!Skin.HasSetting(disable_PauseOnExtraInfos)">PlayerControl(Play)</onunload>
 	<controls>
+
 		<!-- Storage container for the item details -->
 		<control type="list" id="10051">
 			<top>-3000</top>
@@ -22,6 +23,7 @@
 			<itemlayout/>
 			<focusedlayout/>
 		</control>
+
 		<!-- infos -->
 		<control type="grouplist" id="50">
 			<animation type="WindowOpen">
@@ -186,7 +188,6 @@
 				</control>
 			</control>
 
-
 			<!-- movies -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container(10052).NumItems,0) | Container(10052).IsUpdating</visible>
@@ -203,6 +204,7 @@
 							<param name="list_id" value="10052"/>
 							<param name="ondown" value="10053"/>
 							<param name="onup" value="100"/>
+							<param name="textbox">true</param>
 						</include>
 					</control>
 				</control>
@@ -225,6 +227,7 @@
 							<param name="list_id" value="10053"/>
 							<param name="ondown" value="10054"/>
 							<param name="onup" value="10052"/>
+							<param name="textbox">true</param>
 						</include>
 					</control>
 				</control>
@@ -246,6 +249,7 @@
 						<top>120</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10054"/>
+							<param name="hidelabel" value="true"/>
 							<param name="ondown" value="100"/>
 							<param name="onup" value="10053"/>
 						</include>
