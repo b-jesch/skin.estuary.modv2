@@ -8062,7 +8062,7 @@
 							<width>290</width>
 							<height>400</height>
 							<texture background="true" fallback="$PARAM[fallback]">$PARAM[icon]</texture>
-							<aspectratio>stretch</aspectratio>
+							<aspectratio>scale</aspectratio>
 							<bordersize>20</bordersize>
 							<visible>Skin.HasSetting(show_borders)</visible>
 						</control>
@@ -8072,7 +8072,7 @@
 							<width>290</width>
 							<height>400</height>
 							<texture background="true" fallback="$PARAM[fallback]">$PARAM[icon]</texture>
-							<aspectratio>stretch</aspectratio>
+							<aspectratio>scale</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 							<visible>!Skin.HasSetting(show_borders)</visible>
@@ -8212,7 +8212,7 @@
 							<width>290</width>
 							<height>400</height>
 							<texture background="true" fallback="$PARAM[fallback]">$PARAM[icon]</texture>
-							<aspectratio>stretch</aspectratio>
+							<aspectratio>scale</aspectratio>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="group">

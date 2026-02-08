@@ -331,6 +331,7 @@
 							<param name="list_id" value="10052"/>
 							<param name="label" value="$INFO[ListItem.Label]"/>
 							<param name="label2" value="$INFO[ListItem.Label2]"/>
+							<param name="fallback" value="DefaultActorSolid.png"/>
 							<param name="ondown" value="10056"/>
 							<param name="onup" value="100"/>
 						</include>
@@ -361,6 +362,7 @@
 							<param name="list_id" value="10056"/>
 							<param name="label" value="$INFO[ListItem.Label]"/>
 							<param name="label2" value="$INFO[ListItem.Label2]"/>
+							<param name="fallback" value="DefaultActorSolid.png"/>
 							<param name="ondown" value="10057"/>
 							<param name="onup" value="10052"/>
 						</include>
