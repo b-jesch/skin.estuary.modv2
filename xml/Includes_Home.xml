@@ -8022,8 +8022,8 @@
 	<include name="ExtendedInfoPosterList">
 		<param name="icon">$VAR[IconWallPosterVar]</param>
 		<param name="fallback">DefaultVideo.png</param>
-		<param name="hidelabel">false</param>
-		<param name="textbox">false</param>
+		<param name="hide_label">false</param>
+		<param name="use_textbox">false</param>
 		<definition>
 			<control type="list" id="$PARAM[list_id]">
 				<left>-23</left>

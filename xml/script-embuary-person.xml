@@ -28,14 +28,9 @@
 		<control type="grouplist" id="50">
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-				<effect type="slide" start="320" end="0" time="400" tween="cubic" easing="out" />
 			</animation>
-			<animation type="WindowCLose" condition="String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">
+			<animation type="WindowCLose">
 				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-				<effect type="slide" start="0" end="320" time="300" tween="cubic" easing="out" />
-			</animation>
-			<animation type="WindowCLose" condition="!String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">
-				<effect type="fade" start="100" end="0" time="0" tween="sine" easing="out" />
 			</animation>
 			<width>1920</width>
 			<top>145</top>
@@ -204,7 +199,7 @@
 							<param name="list_id" value="10052"/>
 							<param name="ondown" value="10053"/>
 							<param name="onup" value="100"/>
-							<param name="textbox">true</param>
+							<param name="use_textbox" value="true"/>
 						</include>
 					</control>
 				</control>
@@ -227,7 +222,7 @@
 							<param name="list_id" value="10053"/>
 							<param name="ondown" value="10054"/>
 							<param name="onup" value="10052"/>
-							<param name="textbox">true</param>
+							<param name="use_textbox" value="true"/>
 						</include>
 					</control>
 				</control>
@@ -249,7 +244,7 @@
 						<top>120</top>
 						<include content="ExtendedInfoPosterList">
 							<param name="list_id" value="10054"/>
-							<param name="hidelabel" value="true"/>
+							<param name="hide_label" value="true"/>
 							<param name="ondown" value="100"/>
 							<param name="onup" value="10053"/>
 						</include>
@@ -273,9 +268,6 @@
 				<right>35</right>
 				<top>20</top>
 				<height>80</height>
-				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">WindowClose</animation>
-				<animation effect="fade" start="100" end="0" time="0" condition="!String.IsEmpty(Window(home).Property(script.embuary.info-nextcall))">WindowClose</animation>
 				<control type="label">
 					<left>20</left>
 					<right>200</right>
