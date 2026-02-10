@@ -45,6 +45,11 @@ supports animated poster only.
 
 
 ### 21.3+omega ###
+- .5
+  * fix helpers.py (Video OSD script error)
+  * smaller improvements
+
+
 - .4
   * Implementation of jump to start of a dash stream in Video OSD (experimental)
   * Rating added to tvshows (was accidently removed)
