@@ -662,6 +662,12 @@
 					<onclick>Skin.ToggleSetting(use_fullOsdList)</onclick>
 					<selected>Skin.HasSetting(use_fullOsdList)</selected>
 				</control>
+				<control type="radiobutton" id="407">
+					<label>$LOCALIZE[31718]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(switch_channelgroups)</onclick>
+					<selected>Skin.HasSetting(switch_channelgroups)</selected>
+				</control>
 				<control type="radiobutton" id="404">
 					<label>$LOCALIZE[31395]</label>
 					<include>DefaultSettingButton</include>

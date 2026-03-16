@@ -57,8 +57,7 @@
 						<texturenofocus colordiffuse="$VAR[SkinColorVar]">lists/nofocus.png</texturenofocus>
 						<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
 						<onclick>PreviousChannelGroup</onclick>
-						<onleft>22</onleft>
-						<onright>22</onright>
+						<onright>2</onright>
 						<ondown>11</ondown>
 						<onup>11</onup>
 					</control>
@@ -78,8 +77,7 @@
 						<texturenofocus colordiffuse="$VAR[SkinColorVar]">lists/nofocus.png</texturenofocus>
 						<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
 						<onclick>NextChannelGroup</onclick>
-						<onleft>20</onleft>
-						<onright>20</onright>
+						<onleft>2</onleft>
 						<ondown>11</ondown>
 						<onup>11</onup>
 					</control>
@@ -118,8 +116,10 @@
 					<left>0</left>
 					<bottom>10</bottom>
 					<width>881</width>
-					<onleft>PreviousChannelGroup</onleft>
-					<onright>NextChannelGroup</onright>
+					<onleft condition="Skin.HasSetting(switch_channelgroups)">PreviousChannelGroup</onleft>
+					<onright condition="Skin.HasSetting(switch_channelgroups)">NextChannelGroup</onright>
+					<onleft condition="!Skin.HasSetting(switch_channelgroups)">60</onleft>
+					<onright condition="!Skin.HasSetting(switch_channelgroups)">60</onright>
 					<onup>2</onup>
 					<ondown>11</ondown>
 					<pagecontrol>60</pagecontrol>

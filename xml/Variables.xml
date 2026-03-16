@@ -728,10 +728,6 @@
 		<value condition="VideoPlayer.Content(movies)">special://skin/extras/home-images/movies.jpg</value>
 		<value condition="VideoPlayer.Content(episodes)">special://skin/extras/home-images/tvshows.jpg</value>
 	</variable>
-	<variable name="PlayerFanartOpacityVar">
-		<value condition="Skin.HasSetting(hide_fanartopacity) + !Player.ShowInfo + !Window.IsVisible(musicosd)">FFFFFFFF</value>
-		<value>$VAR[Background_Opacity]</value>
-	</variable>
 	<variable name="PlayerInfoClearLogoVar">
 		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.clearlogo))">$INFO[Window(Home).Property(PVR.Artwork.clearlogo)]</value>
 		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.logo))">$INFO[Window(Home).Property(PVR.Artwork.logo)]</value>

@@ -45,6 +45,12 @@ supports animated poster only.
 
 
 ### 21.3+omega ###
+- .6
+  * file size calculation fixed
+  * add option "left/right switches channelgroups" for PVR Channel OSD (skin settings, PVR & TV)
+  * minor improvements, see GitHub
+
+
 - .5
   * fix helpers.py (Video OSD script error)
   * smaller improvements

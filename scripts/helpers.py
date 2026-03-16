@@ -46,9 +46,8 @@ if __name__ == '__main__':
             '''
             unit = 0
             fs = 0 if (sys.argv[2][0:9] == 'plugin://' or sys.argv[2][0:7] == 'davs://'
-                       or sys.argv[2][0:6] == 'dav://' or sys.argv[2][0:8] or sys.argv[2][0:7] == 'http://'
-                       or sys.argv[2][0:8] == 'https://'
-                       or sys.argv[2][0:17] == '/emby_addon_mode/') else xbmcvfs.File(sys.argv[2]).size()
+                       or sys.argv[2][0:6] == 'dav://' or sys.argv[2][0:7] == 'http://'
+                       or sys.argv[2][0:8] == 'https://' or sys.argv[2][0:17] == '/emby_addon_mode/') else xbmcvfs.File(sys.argv[2]).size()
             fs = 0 if fs < 0 else fs
 
             while fs > 1024 and unit < 5:
