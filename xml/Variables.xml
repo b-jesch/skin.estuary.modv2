@@ -209,9 +209,6 @@
 		<value condition="String.Contains(PVR.ActStreamDevice,#8)">#8</value>
 		<value>UNK</value>
 	</variable>
-	<variable name="OscarsVar">
-		<value/>
-	</variable>
 	<variable name="BatteryLevelVar">
 		<value condition="Integer.IsGreater(System.BatteryLevel,40) + Skin.HasSetting(show_battery_colors)">FF1CAC78</value>
 		<value condition="Integer.IsGreater(System.BatteryLevel,40) + !Skin.HasSetting(show_battery_colors)">$VAR[SkinColorVar]</value>
@@ -1130,7 +1127,7 @@
 	<variable name="SkinColorVar">
 		<value condition="$EXP[ChristmasTime]">ffe30022</value>
 		<value condition="$EXP[HalloweenTime]">fff38844</value>
-		<value condition="$EXP[PreEasterTime]">ffffc852</value>
+		<value condition="$EXP[PreEasterTime]">ffd38c02</value>
 		<value condition="$EXP[EasterTime]">ffe9d66b</value>
 		<value condition="$EXP[ValentineTime]">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
@@ -1139,7 +1136,7 @@
 	<variable name="GradientColorVar">
 		<value condition="$EXP[ChristmasTime]">ffe30022</value>
 		<value condition="$EXP[HalloweenTime]">fff38844</value>
-		<value condition="$EXP[PreEasterTime]">ffff9d52</value>
+		<value condition="$EXP[PreEasterTime]">ff58670f</value>
 		<value condition="$EXP[EasterTime]">ffe9d66b</value>
 		<value condition="$EXP[ValentineTime]">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
@@ -1148,7 +1145,7 @@
 	<variable name="BackgroundColorVar">
 		<value condition="$EXP[ChristmasTime]">ff11624a</value>
 		<value condition="$EXP[HalloweenTime]">ff3b3b3b</value>
-		<value condition="$EXP[PreEasterTime]">ffff7252</value>
+		<value condition="$EXP[PreEasterTime]">ff123322</value>
 		<value condition="$EXP[EasterTime]">ff57a4cb</value>
 		<value condition="$EXP[ValentineTime]">ffca76a6</value>
 		<value condition="!String.IsEmpty(Skin.String(BackgroundColor))">$INFO[Skin.String(BackgroundColor)]</value>

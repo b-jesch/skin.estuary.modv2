@@ -45,6 +45,13 @@ supports animated poster only.
 
 
 ### 21.3+omega ###
+- .7
+  * Textures updated
+  * EPG Info in PVR OSD improved
+  * Picture Views/Info improved
+  * Colors of Holy Week theme adjusted
+
+
 - .6
   * file size calculation fixed
   * add option "left/right switches channelgroups" for PVR Channel OSD (skin settings, PVR & TV)

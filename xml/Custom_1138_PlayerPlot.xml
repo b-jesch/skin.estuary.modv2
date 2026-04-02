@@ -10,7 +10,7 @@
 			<animation effect="slide" end="0,-135" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
 			<animation effect="slide" end="0,-131.5" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
 			<animation effect="slide" end="0,-21" time="0" condition="Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
-			<control type="textbox">
+			<control type="textbox" id="2001">
 				<visible>[!Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]</visible>
 				<left>460</left>
 				<top>123</top>
@@ -18,9 +18,14 @@
 				<height>180</height>
 				<align>justify</align>
 				<font>fontplot</font>
-				<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
-				<autoscroll delay="9000" time="5000" repeat="8000">true</autoscroll>
+				<label>$INFO[VideoPlayer.Tagline,[B],[/B] ]$INFO[VideoPlayer.Plot]</label>
+				<pagecontrol>3001</pagecontrol>
 				<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
+			</control>
+			<control type="scrollbar" id="3001">
+				<include>HiddenObject</include>
+				<ondown>3000</ondown>
+				<onup>3000</onup>
 			</control>
 			<control type="group">
 				<visible>[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]</visible>
@@ -190,10 +195,42 @@
 					<label>$LOCALIZE[15067]</label>
 					<font>font25_title</font>
 					<onup>1</onup>
-					<ondown>1</ondown>
+					<ondown>Dialog.Close(all)</ondown>
 					<onclick>Dialog.Close(all)</onclick>
 					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+				</control>
+				<control type="button" id="2">
+					<width>auto</width>
+					<height>100</height>
+					<textoffsetx>30</textoffsetx>
+					<label>$LOCALIZE[13333]</label>
+					<font>font25_title</font>
+					<onup>2</onup>
+					<ondown>Dialog.Close(all)</ondown>
+					<onclick>SetFocus(3001)</onclick>
+					<onclick>Down</onclick>
+					<onclick condition="Control.IsVisible(3001) + !String.IsEqual(Container(2001).CurrentPage,Container(2001).NumPages)">SetFocus(2)</onclick>
+					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+					<visible>Integer.IsGreater(Container(2001).NumPages,1</visible>
+					<enable>Control.IsVisible(3001) + !String.IsEqual(Container(2001).CurrentPage,Container(2001).NumPages)</enable>
+				</control>
+				<control type="button" id="3">
+					<width>auto</width>
+					<height>100</height>
+					<textoffsetx>30</textoffsetx>
+					<label>$LOCALIZE[13332]</label>
+					<font>font25_title</font>
+					<onup>3</onup>
+					<ondown>Dialog.Close(all)</ondown>
+					<onclick>SetFocus(3001)</onclick>
+					<onclick>Up</onclick>
+					<onclick condition="Control.IsVisible(3001) + !Integer.IsEqual(Container(2001).CurrentPage,1)">SetFocus(3)</onclick>
+					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+					<visible>Integer.IsGreater(Container(2001).NumPages,1</visible>
+					<enable>Control.IsVisible(3001) + Integer.IsGreater(Container(2001).CurrentPage,1)</enable>
 				</control>
 			</control>
 		</control>
