@@ -165,10 +165,18 @@
 				</control>
 				<control type="radiobutton" id="605">
 					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/playlist_next.png"/>
+					</include>
+					<onclick>PlayerControl(Next)</onclick>
+					<visible>Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)] | PVR.IsTimeShift</visible>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+				</control>
+				<control type="radiobutton" id="611">
+					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 					</include>
 					<onclick>PlayerControl(Next)</onclick>
-					<visible>Player.HasSceneMarkers | Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)] | PVR.IsTimeShift</visible>
+					<visible>[Player.HasSceneMarkers | Player.ChapterCount] + !Integer.IsGreater(Playlist.Length(video),1) | [Player.SeekEnabled + VideoPlayer.Content(livetv)] | PVR.IsTimeShift</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="804">
@@ -212,6 +220,15 @@
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(pvrchannelguide)</onclick>
 					<visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+				</control>
+				<control type="radiobutton" id="70042">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/playlist_vid.png"/>
+					</include>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>ActivateWindow(videoplaylist)</onclick>
+					<visible>Integer.IsGreater(Playlist.Length(video),1)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 				<control type="radiobutton" id="70046">

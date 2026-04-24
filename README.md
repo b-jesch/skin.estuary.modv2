@@ -45,6 +45,14 @@ supports animated poster only.
 
 
 ### 21.3+omega ###
+- .8
+- * Textures updated
+  * missing playlist button in video OSD added (#196)
+  * missing toggle option for studios in tvshow widget settings added
+  * hide collection (sets) flag if container contents are already sets 
+  * Moviesets info improved (video info, set info)
+  
+
 - .7
   * Textures updated
   * EPG Info in PVR OSD improved

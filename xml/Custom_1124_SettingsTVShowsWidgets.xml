@@ -90,7 +90,7 @@
 						<selected>Skin.HasSetting(hide_genretvshows)</selected>
 						<onclick>Skin.ToggleSetting(hide_genretvshows)</onclick>
 					</control>
-					<control type="radiobutton" id="11120">
+					<control type="radiobutton" id="11121">
 						<label>$LOCALIZE[31297] : $LOCALIZE[20388]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(hide_studiotvshows)</selected>

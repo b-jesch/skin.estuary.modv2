@@ -10,7 +10,6 @@
             <left>20</left>
             <right>20</right>
             <height>700</height>
-
             <control type="group">
                 <control type="wraplist" id="503">
                     <top>-10</top>
@@ -96,7 +95,7 @@
                                 <top>0</top>
                                 <bottom>10</bottom>
                                 <fadetime>200</fadetime>
-                                <aspectratio>stretch</aspectratio>
+                                <aspectratio>scale</aspectratio>
                                 <texture fallback="DefaultVideoFanart.png">$VAR[WidgetThumbViewVar]</texture>
                                 <fadetime>300</fadetime>
                                 <visible>!Container.Content(episodes)</visible>
@@ -107,7 +106,7 @@
                                 <top>0</top>
                                 <bottom>10</bottom>
                                 <fadetime>200</fadetime>
-                                <aspectratio>stretch</aspectratio>
+                                <aspectratio>scale</aspectratio>
                                 <texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Art(thumb)]</texture>
                                 <visible>Container.Content(episodes) + ![!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + Container.Content(episodes)]</visible>
                             </control>
@@ -117,7 +116,7 @@
                                 <top>0</top>
                                 <bottom>10</bottom>
                                 <fadetime>200</fadetime>
-                                <aspectratio>stretch</aspectratio>
+                                <aspectratio>scale</aspectratio>
                                 <texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Art(fanart)]</texture>
                                 <visible>Container.Content(episodes) + [!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + Container.Content(episodes)]</visible>
                             </control>
