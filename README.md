@@ -45,6 +45,10 @@ supports animated poster only.
 
 
 ### 21.3+omega ###
+- .9
+  * missing season labels in shift view fixed
+
+
 - .8
 - * Textures updated
   * missing playlist button in video OSD added (#196)

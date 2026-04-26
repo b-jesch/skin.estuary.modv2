@@ -112,6 +112,17 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<visible>String.IsEqual(listitem.dbtype,season)</visible>
+						</control>
+						<control type="textbox">
+							<left>25</left>
+							<top>605</top>
+							<width>320</width>
+							<height>100</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 							<visible>!String.IsEqual(listitem.dbtype,season) + Skin.HasSetting(enable_LibraryClearLogo) | [String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 						</control>
 						<control type="image">
@@ -208,6 +219,17 @@
 								<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 								<aspectratio>keep</aspectratio>
 							</control>
+						</control>
+						<control type="textbox">
+							<left>25</left>
+							<top>605</top>
+							<width>320</width>
+							<height>100</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<visible>String.IsEqual(listitem.dbtype,season)</visible>
 						</control>
 						<control type="textbox">
 							<left>25</left>
