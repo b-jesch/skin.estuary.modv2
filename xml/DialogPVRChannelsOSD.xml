@@ -120,7 +120,8 @@
 					<onright condition="Skin.HasSetting(switch_channelgroups)">NextChannelGroup</onright>
 					<onleft condition="!Skin.HasSetting(switch_channelgroups)">60</onleft>
 					<onright condition="!Skin.HasSetting(switch_channelgroups)">60</onright>
-					<onup>2</onup>
+					<onup condition="Skin.HasSetting(switch_channelgroups)">11</onup>
+					<onup condition="!Skin.HasSetting(switch_channelgroups)">2</onup>
 					<ondown>11</ondown>
 					<pagecontrol>60</pagecontrol>
 					<movement>5</movement>
