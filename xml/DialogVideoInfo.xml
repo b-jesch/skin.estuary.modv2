@@ -148,7 +148,7 @@
 						<height>160</height>
 						<align>left</align>
 						<font>fontplot2</font>
-						<label fallback="19055">$INFO[ListItem.Plot] $INFO[Container(5900).ListItem.Plot]</label>
+						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!Skin.HasSetting(enable_LibraryClearArt) + !String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
@@ -159,7 +159,7 @@
 						<height>160</height>
 						<align>left</align>
 						<font>fontplot2</font>
-						<label fallback="19055">$INFO[ListItem.Plot] $INFO[Container(5900).ListItem.Plot]</label>
+						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Skin.HasSetting(enable_LibraryClearArt) | String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
 					</control>
@@ -457,17 +457,6 @@
 				<param name="onclick2" value="PlayMedia($ESCINFO[ListItem.FileNameAndPath])"/>
 				<param name="visible" value="!Skin.HasSetting(VideoInfo_NextUpEpisodes)"/>
 			</include>
-			<include content="WidgetListPosterInfo" condition="String.IsEqual(ListItem.DBType,set)">
-				<param name="content_path" value="videodb://movies/sets/$INFO[ListItem.DBID]/"/>
-				<param name="sortby" value="year"/>
-				<param name="sortorder" value="ascending"/>
-				<param name="widget_target" value="videos"/>
-				<param name="limit" value="100"/>
-				<param name="list_id" value="5900"/>
-				<param name="onclick" value="Action(close)"/>
-				<param name="onclick2" value="PlayMedia($ESCINFO[Listitem.FilenameAndPath])"/>
-				<param name="visible_play" value="true"/>
-			</include>
 			<include content="WidgetListThumbInfo" condition="String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">
 				<param name="content_path" value="videodb://inprogresstvshows/$INFO[ListItem.TvShowDBID]/-2/"/>
 				<param name="widget_target" value="videos"/>
@@ -480,6 +469,17 @@
 				<param name="onclick" value="Action(close)"/>
 				<param name="onclick2" value="PlayMedia($ESCINFO[ListItem.FileNameAndPath])"/>
 				<param name="visible" value="!Skin.HasSetting(VideoInfo_NextUpEpisodes)"/>
+			</include>
+			<include content="WidgetListPosterInfo" condition="String.IsEqual(ListItem.DBType,set)">
+				<param name="content_path" value="videodb://movies/sets/$INFO[ListItem.DBID]/"/>
+				<param name="sortby" value="year"/>
+				<param name="sortorder" value="ascending"/>
+				<param name="widget_target" value="videos"/>
+				<param name="limit" value="100"/>
+				<param name="list_id" value="5900"/>
+				<param name="onclick" value="Action(close)"/>
+				<param name="onclick2" value="PlayMedia($ESCINFO[Listitem.FilenameAndPath])"/>
+				<param name="visible_play" value="true"/>
 			</include>
 		</control>
 		<control type="group">

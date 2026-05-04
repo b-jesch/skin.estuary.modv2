@@ -37,7 +37,6 @@
 				<texture background="true" fallback="fallback.png">$VAR[ClearLogoVar]</texture>
 				<fadetime>300</fadetime>
 				<include>OpenClose_Right</include>
-				<visible>Control.HasFocus(60)</visible>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
