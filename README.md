@@ -44,13 +44,16 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 
-### 21.3+omega ###
-- .9
+### 21.4+omega ###
+- .0
   * missing season labels in shift view fixed
   * smaller adjustments in PVR area (label sizes, navigation)
   * fix plot description in video info
+  * selection for default, localized and original title in skin settings added
+  * introducing original/localized titles in several views and home screen (except favourites). Requires scraper support.
 
 
+### 21.3+omega ###
 - .8
 - * Textures updated
   * missing playlist button in video OSD added (#196)

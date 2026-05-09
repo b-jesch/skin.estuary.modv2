@@ -77,7 +77,7 @@
 		<param name="fallback_image">DefaultAudio.png</param>
 		<param name="main_label">$INFO[ListItem.Artist]</param>
 		<param name="sub_label">$INFO[ListItem.Title]</param>
-		<param name="single_label">$INFO[ListItem.TVShowTitle,, - ]$INFO[ListItem.Label]</param>
+		<param name="single_label">$VAR[ListLabelVar]</param>
 		<param name="focused">false</param>
 		<definition>
 			<control type="image">
@@ -1283,7 +1283,7 @@
 				<width>$PARAM[width]</width>
 				<height>25</height>
 				<align>center</align>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$VAR[ListLabelVar]</label>
 				<font>font20_title</font>
 				<scroll>$PARAM[focused]</scroll>
 			</control>
@@ -1373,7 +1373,7 @@
 					<font>font27</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabelVar]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
 					<visible>!ListItem.IsParentFolder</visible>
 					<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)  + String.IsEqual(listitem.dbtype,genre)]</visible>
@@ -2011,7 +2011,7 @@
 				<top>302</top>
 				<width>505</width>
 				<height>43</height>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$VAR[ListLabelVar]</label>
 				<font>font25_title</font>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -2036,7 +2036,7 @@
 				<top>302</top>
 				<width>365</width>
 				<height>43</height>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$VAR[ListLabelVar]</label>
 				<font>font25_title</font>
 				<align>left</align>
 				<aligny>center</aligny>

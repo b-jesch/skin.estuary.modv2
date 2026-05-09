@@ -110,7 +110,7 @@
 							<height>100</height>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$VAR[ListLabelVar]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 							<visible>String.IsEqual(listitem.dbtype,season)</visible>
 						</control>
@@ -121,7 +121,7 @@
 							<height>100</height>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$VAR[ListLabelVar]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 							<visible>!String.IsEqual(listitem.dbtype,season) + Skin.HasSetting(enable_LibraryClearLogo) | [String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 						</control>
@@ -227,7 +227,7 @@
 							<height>100</height>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$VAR[ListLabelVar]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 							<visible>String.IsEqual(listitem.dbtype,season)</visible>
 						</control>
@@ -238,7 +238,7 @@
 							<height>100</height>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$VAR[ListLabelVar]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 							<visible>!String.IsEqual(listitem.dbtype,season) + Skin.HasSetting(enable_LibraryClearLogo) | [String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 						</control>

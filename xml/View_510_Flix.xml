@@ -113,7 +113,7 @@
 				<font>font20_title</font>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
+				<label>$VAR[ListLabelVar]</label>
 				<visible>Container.Content(seasons)</visible>
 			</control>
 			<control type="label">
@@ -320,7 +320,7 @@
 				<top>60</top>
 				<left>50</left>
 				<width>1100</width>
-				<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
+				<label>$VAR[ListLabelVar]</label>
 				<font>font52_title</font>
 				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<height>65</height>

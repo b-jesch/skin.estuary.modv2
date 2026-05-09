@@ -51,7 +51,7 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[ListLabelVar]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
@@ -87,7 +87,7 @@
 						<bottom>0</bottom>
 						<right>40</right>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[ListLabelVar]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
@@ -96,7 +96,7 @@
 						<bottom>0</bottom>
 						<right>40</right>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[ListLabelVar]</label>
 						<textcolor>grey</textcolor>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
@@ -301,7 +301,7 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[ListLabelVar]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
@@ -320,7 +320,7 @@
 						<bottom>0</bottom>
 						<right>40</right>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[ListLabelVar]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>

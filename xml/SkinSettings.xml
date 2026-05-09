@@ -955,6 +955,17 @@
 					<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 					<selected>Skin.HasSetting(autoscroll)</selected>
 				</control>
+				<control type="button" id="902">
+					<label>$LOCALIZE[31719]</label>
+					<label2>$VAR[TitleSettingsVar]</label2>
+					<include>DefaultSettingButton</include>
+					<description>title settings and appearance</description>
+					<onclick condition="String.IsEmpty(Skin.String(titlesettings))">Skin.SetString(titlesettings,571)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(titlesettings),localized)">Skin.SetString(titlesettings,default)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(titlesettings),original)">Skin.SetString(titlesettings,localized)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(titlesettings),default)">Skin.SetString(titlesettings,original)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(titlesettings)) + !String.IsEqual(Skin.String(titlesettings),default) + !String.IsEqual(Skin.String(titlesettings),original) + !String.IsEqual(Skin.String(titlesettings),localized)">Skin.SetString(titlesettings,default)</onclick>
+				</control>
 				<control type="radiobutton" id="905">
 					<label>$LOCALIZE[31554]</label>
 					<include>DefaultSettingButton</include>

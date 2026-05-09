@@ -18,10 +18,6 @@
 		<value condition="!String.IsEmpty(Skin.String(global-background))">$INFO[Skin.String(global-background)]</value>
 		<value>$LOCALIZE[31264]</value>
 	</variable>
-	<variable name="PlayButtonLabelInfoDialog">
-		<value condition="String.IsEqual(listitem.dbtype,tvshow)">$LOCALIZE[1024]</value>
-		<value>$LOCALIZE[208]</value>
-	</variable>
 	<variable name="OSVar">
 		<value condition="System.Platform.Android">Android</value>
 		<value condition="System.Platform.IOS">IOS</value>
@@ -317,14 +313,6 @@
 		<value condition="!String.IsEmpty(ListItem.Art(back))">$LOCALIZE[31369]</value>
 		<value condition="!String.IsEmpty(Player.Art(album.back))">$LOCALIZE[31369]</value>
 		<value>$LOCALIZE[31261]</value>
-	</variable>
-	<variable name="MainLabelMoviesSetsInfoVar">
-		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Title)">$INFO[Container(60).ListItem.Title]$INFO[Container(60).ListItem.Year, (,)]</value>
-		<value condition="Control.HasFocus(60) + String.IsEmpty(Container(60).ListItem.Title)">$INFO[Container(60).ListItem.Label]$INFO[Container(60).ListItem.Year, (,)]</value>
-		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem.Season)">$INFO[ListItem.Season,$LOCALIZE[20373] ,]</value>
- 		<value condition="Container.Content(seasons) + String.IsEmpty(ListItem.Season)">$LOCALIZE[20366]</value>
-		<value condition="ListItem.IsCollection">$INFO[ListItem.Label]</value>
-		<value>$INFO[ListItem.Title]</value>
 	</variable>
 	<variable name="SubLabelMoviesSetsInfoVar">
 		<value condition="Control.HasFocus(60)">$INFO[Container(60).ListItem.Tagline,[I],[/I]]</value>
@@ -831,8 +819,8 @@
 		<value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 	</variable>
 	<variable name="OsdMainLabelVar">
-		<value condition="!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(hide_pubyear)">$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]</value>
-		<value condition="!VideoPlayer.Content(LiveTV) + Skin.HasSetting(hide_pubyear)">$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</value>
+		<value condition="!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(hide_pubyear)">$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$VAR[VideoInfoPlayerMainLabelVar]</value>
+		<value condition="!VideoPlayer.Content(LiveTV) + Skin.HasSetting(hide_pubyear)">$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$VAR[VideoInfoPlayerMainLabelVar]$INFO[VideoPlayer.Year, (,)]</value>
 		<value condition="VideoPlayer.Content(LiveTV) + !Skin.HasSetting(hide_pubyear) + !Pvr.IsPlayingRadio">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode]$INFO[VideoPlayer.EpisodeName,. ]</value>
 		<value condition="VideoPlayer.Content(LiveTV) + Skin.HasSetting(hide_pubyear) + !Pvr.IsPlayingRadio">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Season, - ,x]$INFO[VideoPlayer.Episode]$INFO[VideoPlayer.EpisodeName,. ]$INFO[VideoPlayer.Year, (,)]</value>
 	</variable>
@@ -1278,6 +1266,12 @@
 		<value condition="String.IsEqual(Skin.String(channelswitch_action),31633)">$LOCALIZE[31633]</value>
 		<value>$LOCALIZE[31334]</value>
 	</variable>
+	<variable name="TitleSettingsVar">
+		<value condition="String.IsEqual(Skin.String(titlesettings),default)">$LOCALIZE[571]</value>
+		<value condition="String.IsEqual(Skin.String(titlesettings),original)">$LOCALIZE[31720]</value>
+		<value condition="String.IsEqual(Skin.String(titlesettings),localized)">$LOCALIZE[31721]</value>
+		<value>$LOCALIZE[31334]</value>
+	</variable>
 	<variable name="Bars_Opacity">
 		<value condition="Skin.HasSetting(opacitybars_0)">00FFFFFF</value>
 		<value condition="Skin.HasSetting(opacitybars_5)">0DFFFFFF</value>
@@ -1343,6 +1337,13 @@
 	</variable>
 	<variable name="AutoCompletionContentVar">
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>
+	</variable>
+	<variable name="ListLabelVar">
+		<value condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle]</value>
+		<value condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
+		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="PlaylistLabelVar">
 		<value condition="String.IsEqual(ListItem.DbType,episode)">$INFO[ListItem.TVShowtitle,,: ]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
@@ -1921,18 +1922,16 @@
 		<value condition="ListItem.IsCollection"/>
 		<value>$INFO[ListItem.Year, (,)]</value>
 	</variable>
-	<variable name="VideoInfoMainLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
-		<value>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</value>
-	</variable>
 	<variable name="MusicInfoMainLabelVar">
 		<value condition="Container.Content(artists)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Album]$INFO[ListItem.Year, (,)]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
 	</variable>
 	<variable name="VideoInfoPlayerMainLabelVar">
-		<value condition="!String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</value>
-		<value>$INFO[VideoPlayer.Label]$INFO[VideoPlayer.Year, (,)]</value>
+		<value condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</value>
+		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(VideoPlayer.OriginalTitle)">$INFO[VideoPlayer.OriginalTitle]$INFO[VideoPlayer.Year, (,)]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.Label)">$INFO[VideoPlayer.Label]$INFO[VideoPlayer.Year, (,)]</value>
+		<value>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</value>
 	</variable>
 	<variable name="VideoInfoSubLabelVar">
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]-[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,]</value>
