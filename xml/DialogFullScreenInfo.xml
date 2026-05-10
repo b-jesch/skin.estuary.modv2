@@ -51,13 +51,13 @@
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPlayerPosterVar]</texture>
 				</control>
 			</control>
-			<control type="image" id="3334">
-				<top>170</top>
-				<right>50</right>
-				<width>284</width>
-				<height>110</height>
+			<control type="image" id="3337">
+				<top>120</top>
+				<right>30</right>
+				<width>342</width>
+				<height>210</height>
 				<aspectratio align="right" aligny="top">keep</aspectratio>
-				<texture background="true" fallback="fallback.png">$VAR[PlayerInfoClearLogoVar]</texture>
+				<texture background="true" fallback="fallback.png">$VAR[PlayerInfoClearArtVar]</texture>
 				<include>OpenClose_Right</include>
 			</control>
 			<control type="group">
@@ -90,12 +90,7 @@
 				</control>
 				<control type="group" id="140">
 					<top>80</top>
-					<include condition="!String.IsEqual(Control.GetLabel(3334),fallback.png)" content="ItemRight">
-						<param name="right" value="315" />
-					</include>
-					<include condition="String.IsEqual(Control.GetLabel(3334),fallback.png)" content="ItemRight">
-						<param name="right" value="-5" />
-					</include>
+					<right>315</right>
 					<control type="button" id="138">
 						<left>-8</left>
 						<height>211</height>
@@ -120,6 +115,36 @@
 						<label fallback="19055">$INFO[VideoPlayer.Plot]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
+					<visible>!String.IsEqual(Control.GetLabel(3337),fallback.png)</visible>
+				</control>
+				<control type="group" id="140">
+					<top>80</top>
+					<right>5</right>
+					<control type="button" id="138">
+						<left>-8</left>
+						<height>211</height>
+						<aligny>bottom</aligny>
+						<label/>
+						<onclick condition="!String.IsEmpty(VideoPlayer.Plot)">SetProperty(TextViewer_Header,$LOCALIZE[207],home)</onclick>
+						<onclick condition="!String.IsEmpty(VideoPlayer.Plot)">SetProperty(TextViewer_Text,$ESCINFO[VideoPlayer.Plot],home)</onclick>
+						<onclick condition="!String.IsEmpty(VideoPlayer.Plot)">ActivateWindow(1102)</onclick>
+						<onleft>138</onleft>
+						<onright>138</onright>
+						<ondown>438</ondown>
+						<onup>438</onup>
+						<texturenofocus border="21" />
+					</control>
+					<control type="textbox">
+						<left>16</left>
+						<top>23</top>
+						<right>25</right>
+						<height>160</height>
+						<align>left</align>
+						<font>fontplot2</font>
+						<label fallback="19055">$INFO[VideoPlayer.Plot]</label>
+						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+					<visible>String.IsEqual(Control.GetLabel(3337),fallback.png)</visible>
 				</control>
 				<control type="label">
 					<left>16</left>

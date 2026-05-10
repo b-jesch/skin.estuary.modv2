@@ -1339,7 +1339,7 @@
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>
 	</variable>
 	<variable name="ListLabelVar">
-		<value condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle]</value>
 		<value condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
@@ -1600,10 +1600,9 @@
 		<value>$LOCALIZE[31348]</value>
 	</variable>
 	<variable name="RottenSettingLabel2Var">
-		<value condition="Skin.HasSetting(tomatometerallcritics)">$LOCALIZE[31603]</value>
-		<value condition="Skin.HasSetting(tomatometeravgcritics)">$LOCALIZE[31604]</value>
-		<value condition="Skin.HasSetting(tomatometerallaudience)">$LOCALIZE[31605]</value>
-		<value condition="Skin.HasSetting(tomatometeravgaudience)">$LOCALIZE[31606]</value>
+		<value condition="Skin.HasSetting(rottentomatoes)">$LOCALIZE[31603]</value>
+		<value condition="Skin.HasSetting(rottentomatoes_topcritics)">$LOCALIZE[31604]</value>
+		<value condition="Skin.HasSetting(rottentomatoes_audience)">$LOCALIZE[31605]</value>
 		<value>$LOCALIZE[31603]</value>
 	</variable>
 	<variable name="ScopeSettingLabel2Var">

@@ -205,7 +205,6 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6800"/>
 						</include>
-
 						<include content="WidgetListEpisodes" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_recentlytvshows) + Skin.HasSetting(HomeBanner)">
 							<param name="content_path" value="$VAR[HideWatchedEpisodesFromRecentlyVar]"/>
 							<param name="widget_header" value="$LOCALIZE[20387]"/>

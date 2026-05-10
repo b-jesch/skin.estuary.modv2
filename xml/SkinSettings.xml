@@ -960,7 +960,7 @@
 					<label2>$VAR[TitleSettingsVar]</label2>
 					<include>DefaultSettingButton</include>
 					<description>title settings and appearance</description>
-					<onclick condition="String.IsEmpty(Skin.String(titlesettings))">Skin.SetString(titlesettings,571)</onclick>
+					<onclick condition="String.IsEmpty(Skin.String(titlesettings))">Skin.SetString(titlesettings,default)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(titlesettings),localized)">Skin.SetString(titlesettings,default)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(titlesettings),original)">Skin.SetString(titlesettings,localized)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(titlesettings),default)">Skin.SetString(titlesettings,original)</onclick>
@@ -1324,7 +1324,7 @@
 				<control type="button" id="714">
 					<label>$LOCALIZE[31602]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(31602, 31603|tomatometerallcritics, 31604|tomatometeravgcritics, 31605|tomatometerallaudience, 31606|tomatometeravgaudience)</onclick>
+					<onclick>Skin.SelectBool(31602, 31603|rottentomatoes, 31604|rottentomatoes_topcritics, 31605|rottentomatoes_audience)</onclick>
 					<label2>$VAR[RottenSettingLabel2Var]</label2>
 					<enable>Skin.HasSetting(infodialog_rating)</enable>
 				</control>

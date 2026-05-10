@@ -2397,7 +2397,7 @@
 		<param name="browse">$VAR[BrowseVar]</param>
 		<param name="item_limit">$VAR[Label_SkinSetting_WidgetNumber]</param>
 		<definition>
-			<include content="CategoryLabel" condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)]">
+			<include content="CategoryLabel" condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)]">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="label_focus">$PARAM[widget_header_focus]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>

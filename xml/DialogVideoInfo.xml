@@ -3,10 +3,9 @@
 	<defaultcontrol always="true">5000</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onload condition="Integer.IsGreater(ListItem.PercentPlayed,0)">SetFocus(446)</onload>
-	<onload condition="Skin.HasSetting(tomatometerallcritics) + !String.IsEmpty(ListItem.Rating(tomatometerallcritics))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometerallcritics)],10,rotten)</onload>
-	<onload condition="Skin.HasSetting(tomatometeravgcritics) + !String.IsEmpty(ListItem.Rating(tomatometeravgcritics))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometeravgcritics)],10,rotten)</onload>
-	<onload condition="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.Rating(tomatometerallaudience))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometerallaudience)],10,rotten)</onload>
-	<onload condition="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.Rating(tomatometeravgaudience))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometeravgaudience)],10,rotten)</onload>
+	<onload condition="Skin.HasSetting(rottentomatoes) + !String.IsEmpty(ListItem.Rating(rottentomatoes))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(rottentomatoes)],10,rotten)</onload>
+	<onload condition="Skin.HasSetting(rottentomatoes_topcritics) + !String.IsEmpty(ListItem.Rating(rottentomatoes_topcritics))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(rottentomatoes_topcritics)],10,rotten)</onload>
+	<onload condition="Skin.HasSetting(rottentomatoes_audience) + !String.IsEmpty(ListItem.Rating(rottentomatoes_audience))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(rottentomatoes_audience)],10,rotten)</onload>
 	<onload condition="!String.IsEmpty(ListItem.Rating(metacritic))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(metacritic)],10,metacritic)</onload>
 	<onload condition="String.IsEmpty(ListItem.Size) | String.StartsWith(ListItem.Size,0.00)">RunScript(skin.estuary.modv2,getFileSize,$ESCINFO[ListItem.FileNameAndPath])</onload>
 	<onload condition="Window.IsVisible(Custom_1132_MoviesSetsInfo.xml)">Dialog.Close(1132)</onload>
@@ -51,7 +50,7 @@
 				<include>OpenClose_Right</include>
 				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)] + !Skin.HasSetting(enable_LibraryClearArt)</visible>
 			</control>
-			<control type="image" id="3334">
+			<control type="image">
 				<right>50</right>
 				<top>485</top>
 				<width>284</width>
@@ -606,29 +605,22 @@
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="160" />
-					<param name="label" value="$INFO[ListItem.RatingAndVotes(tomatometerallcritics),$LOCALIZE[563] Rotten Tomatoes (Tomatometer all Critics) : [COLOR white],[/COLOR]]" />
-					<param name="visible" value="Skin.HasSetting(tomatometerallcritics) + !String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics))" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(rottentomatoes),$LOCALIZE[563] Rotten Tomatoes (All Critics) : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="Skin.HasSetting(rottentomatoes) + !String.IsEmpty(ListItem.RatingAndVotes(rottentomatoes))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="font12" />
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="161" />
-					<param name="label" value="$INFO[ListItem.RatingAndVotes(tomatometeravgcritics),$LOCALIZE[563] Rotten Tomatoes (Tomatometer average Critics) : [COLOR white],[/COLOR]]" />
-					<param name="visible" value="Skin.HasSetting(tomatometeravgcritics) + !String.IsEmpty(ListItem.RatingAndVotes(tomatometeravgcritics))" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(rottentomatoes_topcritics),$LOCALIZE[563] Rotten Tomatoes (Top Critics) : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="Skin.HasSetting(rottentomatoes_topcritics) + !String.IsEmpty(ListItem.RatingAndVotes(rottentomatoes_topcritics))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="font12" />
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="162" />
-					<param name="label" value="$INFO[ListItem.RatingAndVotes(tomatometerallaudience),$LOCALIZE[563] Rotten Tomatoes (Tomatometer all Audience) : [COLOR white],[/COLOR]]" />
-					<param name="visible" value="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.RatingAndVotes(tomatometerallaudience))" />
-					<param name="textcolor" value="$VAR[SkinColorVar]" />
-					<param name="font" value="font12" />
-				</include>
-				<include content="InfoDialogMetadata">
-					<param name="control_id" value="163" />
-					<param name="label" value="$INFO[ListItem.RatingAndVotes(tomatometeravgaudience),$LOCALIZE[563] Rotten Tomatoes (Tomatometer average Audience) : [COLOR white],[/COLOR]]" />
-					<param name="visible" value="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.RatingAndVotes(tomatometeravgaudience))" />
+					<param name="label" value="$INFO[ListItem.RatingAndVotes(rottentomatoes_audience),$LOCALIZE[563] Rotten Tomatoes (Audience) : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="Skin.HasSetting(rottentomatoes_audience) + !String.IsEmpty(ListItem.RatingAndVotes(rottentomatoes_audience))" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="font12" />
 				</include>
