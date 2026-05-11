@@ -51,8 +51,20 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<left>105</left>
+						<top>0</top>
+						<bottom>0</bottom>
+						<right>40</right>
+						<aligny>center</aligny>
+						<scroll>true</scroll>
 						<label>$VAR[ListLabelVar]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -81,25 +93,51 @@
 						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 					</control>
-					<control type="label">
-						<left>105</left>
-						<top>0</top>
-						<bottom>0</bottom>
-						<right>40</right>
-						<aligny>center</aligny>
-						<label>$VAR[ListLabelVar]</label>
-						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+					<control type="group">
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+						<control type="label">
+							<left>105</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>40</right>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
+						<control type="label">
+							<left>105</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>40</right>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>grey</textcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+						</control>
 					</control>
-					<control type="label">
-						<left>105</left>
-						<top>0</top>
-						<bottom>0</bottom>
-						<right>40</right>
-						<aligny>center</aligny>
-						<label>$VAR[ListLabelVar]</label>
-						<textcolor>grey</textcolor>
-						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+					<control type="group">
+						<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+						<control type="label">
+							<left>105</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>40</right>
+							<aligny>center</aligny>
+							<label>$VAR[ListLabelVar]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
+						<control type="label">
+							<left>105</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>40</right>
+							<aligny>center</aligny>
+							<label>$VAR[ListLabelVar]</label>
+							<textcolor>grey</textcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
+						</control>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -301,7 +339,7 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
-						<label>$VAR[ListLabelVar]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
@@ -320,7 +358,7 @@
 						<bottom>0</bottom>
 						<right>40</right>
 						<aligny>center</aligny>
-						<label>$VAR[ListLabelVar]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
