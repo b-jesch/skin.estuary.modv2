@@ -45,6 +45,10 @@ supports animated poster only.
 
 
 ### 21.4+omega ###
+- .2
+  * some label/title issues fixed
+
+
 - .1
   * Rotten Tomatoes categories updated (rottentomatoes, rottentomatoes_topcritics, rottentomatoes_audience), 
     Universal Movie Scraper Python + OMDB Key required
