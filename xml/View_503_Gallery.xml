@@ -46,7 +46,7 @@
                                 <height>75</height>
                                 <width>590</width>
                                 <animation effect="rotate" end="90" start="0" condition="true" center="20,650">Conditional</animation>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[ListLabelVar]</label>
                                 <align>left</align>
                             </control>
                             <control type="label">
@@ -55,7 +55,7 @@
                                 <height>75</height>
                                 <width>590</width>
                                 <animation effect="rotate" end="90" start="0" condition="true" center="20,650">Conditional</animation>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[ListLabelVar]</label>
                                 <align>left</align>
                                 <textcolor>grey</textcolor>
                                 <visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
@@ -149,39 +149,6 @@
                                 <bottom>-5</bottom>
                                 <texture>dialogs/back.png</texture>
                             </control>
-                            <!--
-                            <control type="image">
-                                <width>100%</width>
-                                <height>65</height>
-                                <bottom>620</bottom>
-                                <texture>dialogs/back.png</texture>
-                            </control>
-                            <control type="grouplist">
-                                <visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
-                                <bottom>605</bottom>
-                                <right>15</right>
-                                <height>70</height>
-                                <width>900</width>
-                                <itemgap>3</itemgap>
-                                <orientation>horizontal</orientation>
-                                <align>right</align>
-                                <aligny>center</aligny>
-                                <include content="MediaFlagsAudioSubs">
-                                    <param name="infolabel_prefix"/>
-                                </include>
-                                <include content="MediaFlag">
-                                    <param name="width" value="5" />
-                                </include>
-                                <include content="MediaFlag">
-                                    <param name="texture" value="flags/lastseen.png" />
-                                    <param name="width" value="200" />
-                                    <param name="label_width" value="146" />
-                                    <param name="label_left" value="50" />
-                                    <param name="label" value="$INFO[ListItem.LastPlayed]" />
-                                    <param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
-                                </include>
-                            </control>
-                            -->
                             <control type="list" id="50302">
                                 <left>-2</left>
                                 <bottom>45</bottom>
@@ -225,7 +192,7 @@
                                 <align>center</align>
                                 <aligny>center</aligny>
                                 <font>font30_title</font>
-                                <label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+                                <label>$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]</label>
                                 <scroll>true</scroll>
                             </control>
                         </control>
@@ -243,20 +210,6 @@
                     <autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
                     <visible>!String.IsEmpty(ListItem.Plot)</visible>
                 </control>
-                <!--
-                <control type="textbox">
-                    <include>OpenClose_Left</include>
-                    <bottom>-115</bottom>
-                    <left>30</left>
-                    <right>30</right>
-                    <height>125</height>
-                    <font>fontplot2</font>
-                    <textcolor>$VAR[SkinColorVar]</textcolor>
-                    <label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-                    <autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-                    <visible>ListItem.IsCollection + !String.IsEmpty(ListItem.Plot)</visible>
-                </control>
-                -->
             </control>
         </control>
     </include>

@@ -2342,13 +2342,20 @@
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 			</control>
 		</definition>
-	</include>
+	</include><value condition="String.IsEqual(Skin.String(titlesettings),original) + String.IsEqual(Container(22100$SKINSHORTCUTS[id]).ListItem.dbtype,movie)">$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.OriginalTitle, | ]$INFO[Container(22100$SKINSHORTCUTS[id]).ListItem.Year, (,)]</value>
+
 	<include name="Widget">
 		<param name="visible">true</param>
 		<definition>
-			<include content="CategoryLabel">
+			<include content="CategoryLabel" condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)]">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="label_focus">$PARAM[widget_header_focus]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
+			</include>
+			<include content="CategoryLabel" condition="String.IsEqual(Skin.String(titlesettings),original)">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="label_focus">$PARAM[widget_header_focus_2]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
