@@ -148,7 +148,7 @@
 	<include name="OpenClose_FadeSlide_Left">
 		<animation type="WindowOpen">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="-320" end="0" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="-320" end="0" time="300" tween="cubic" easing="out" />
 		</animation>
 		<animation type="WindowClose">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
@@ -162,7 +162,7 @@
 	<include name="OpenClose_FadeSlide_Right">
 		<animation type="WindowOpen">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="320" end="0" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="320" end="0" time="300" tween="cubic" easing="out" />
 		</animation>
 		<animation type="WindowClose">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />

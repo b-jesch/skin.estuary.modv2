@@ -192,9 +192,14 @@
 		</control>
 		<control type="group">
 			<top>440</top>
-			<include content="CategoryLabel">
-				<param name="label">$INFO[ListItem.Title]</param>
+			<include content="CategoryLabel" condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)]">
+				<param name="label">$VAR[ListLabelVar]</param>
 				<param name="label_focus">$INFO[Container(60).ListItem.Title, | ]</param>
+				<param name="list_id" value="60"/>
+			</include>
+			<include content="CategoryLabel" condition="String.IsEqual(Skin.String(titlesettings),original)">
+				<param name="label">$VAR[ListLabelVar]</param>
+				<param name="label_focus">$INFO[Container(60).ListItem.OriginalTitle, | ]</param>
 				<param name="list_id" value="60"/>
 			</include>
 		</control>

@@ -1074,6 +1074,9 @@
 				<left>55</left>
 				<top>80</top>
 				<height>110</height>
+				<include content="ItemRight" condition="Window.IsVisible(1132)">
+					<param name="right" value="750" />
+				</include>
 				<include content="ItemRight" condition="Skin.HasSetting(show_date)">
 					<param name="right" value="600" />
 				</include>
