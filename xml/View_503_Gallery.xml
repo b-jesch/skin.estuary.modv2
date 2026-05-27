@@ -194,7 +194,7 @@
                                 <font>font30_title</font>
                                 <label>$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]</label>
                                 <scroll>true</scroll>
-                                <visible>String.IsEqual(ListItem.DBType,movie) | !String.IsEqual(ListItem.DBType,set)</visible>
+                                <visible>String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,set)</visible>
                             </control>
                             <control type="label">
                                 <left>20</left>

@@ -1100,7 +1100,7 @@
 					<font>font25_title</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Skin.HasSetting(HideWidgetLabels)</visible>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="4000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<left>22</left>
@@ -1110,7 +1110,7 @@
 					<font>font25_title</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>!Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(HideWidgetLabels)</visible>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="4000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<left>22</left>
@@ -1121,7 +1121,7 @@
 					<font>font25_title</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Control.HasFocus($PARAM[list_id]) + [!Skin.HasSetting(HideWidgetLabels) | $PARAM[extend_label]]</visible>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="4000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 		</definition>
@@ -2444,7 +2444,7 @@
 							<param name="focused" value="false" />
 						</include>
 						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels)">
-							<param name="main_label" value="$PARAM[label_focus]" />
+							<param name="single_label" value="$PARAM[label_focus]" />
 							<param name="focused" value="false" />
 							<param name="fallback_image" value="$PARAM[fallback_icon]" />
 						</include>
@@ -2469,8 +2469,13 @@
 						<include content="InfoWallMovieLayout" condition="!Skin.HasSetting(HideWidgetLabels)">
 							<param name="focused" value="true" />
 						</include>
-						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels)">
-							<param name="main_label" value="$PARAM[label_focus]" />
+						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels) + [String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)]">
+							<param name="main_label" value="$PARAM[widget_header_focus]" />
+							<param name="focused" value="false" />
+							<param name="fallback_image" value="$PARAM[fallback_icon]" />
+						</include>
+						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels) + String.IsEqual(Skin.String(titlesettings),original)">
+							<param name="main_label" value="$PARAM[widget_header_focus_2]" />
 							<param name="focused" value="true" />
 							<param name="fallback_image" value="$PARAM[fallback_icon]" />
 						</include>

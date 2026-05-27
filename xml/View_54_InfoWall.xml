@@ -2020,6 +2020,19 @@
 				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="label">
+				<left>73</left>
+				<top>302</top>
+				<width>505</width>
+				<height>43</height>
+				<label>$INFO[ListItem.Year, (,)]</label>
+				<font>font25_title</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<scroll>$PARAM[focused]</scroll>
+				<visible>Container.Content(movies) + !String.IsEqual(ListItem.DBType,set) + Skin.HasSetting(hide_pubyear)</visible>
+				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
+			</control>
+			<control type="label">
 				<left>42</left>
 				<top>302</top>
 				<width>536</width>
@@ -2036,12 +2049,25 @@
 				<top>302</top>
 				<width>365</width>
 				<height>43</height>
-				<label>$VAR[ListLabelVar]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<font>font25_title</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
-				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(hide_pubyear)</visible>
+				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
+			</control>
+			<control type="label">
+				<left>73</left>
+				<top>302</top>
+				<width>365</width>
+				<height>43</height>
+				<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+				<font>font25_title</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>$PARAM[focused]</scroll>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(hide_pubyear)</visible>
 				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="image">

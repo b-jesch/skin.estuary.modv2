@@ -45,6 +45,10 @@ supports animated poster only.
 
 
 ### 21.4+omega ###
+- .3
+- views / widgets / shortcuts improvements / fixes
+
+
 - .2
   * some label/title issues fixed
   * Skinshortcuts templates updated
