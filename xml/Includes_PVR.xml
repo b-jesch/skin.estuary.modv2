@@ -464,7 +464,7 @@
 					<visible>Skin.HasSetting(EnableGradientColor)</visible>
 				</control>
 				<control type="progress">
-					<right>10</right>
+					<right>20</right>
 					<top>18</top>
 					<width>50</width>
 					<height>12</height>
@@ -474,7 +474,7 @@
 					<info>ListItem.Progress</info>
 				</control>
 				<control type="progress">
-					<right>10</right>
+					<right>20</right>
 					<top>32</top>
 					<width>50</width>
 					<height>12</height>
@@ -524,7 +524,7 @@
 			</focusedlayout>
 			<itemlayout height="70">
 				<control type="progress">
-					<right>10</right>
+					<right>20</right>
 					<top>18</top>
 					<width>50</width>
 					<height>12</height>
@@ -534,7 +534,7 @@
 					<info>ListItem.Progress</info>
 				</control>
 				<control type="progress">
-					<right>10</right>
+					<right>20</right>
 					<top>32</top>
 					<width>50</width>
 					<height>12</height>

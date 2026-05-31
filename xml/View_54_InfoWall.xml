@@ -267,11 +267,11 @@
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
 				<autoscroll delay="1000" time="1000" repeat="1000">$PARAM[focused]</autoscroll>
-				<visible>!String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,song) + !String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEqual(ListItem.DBType,tvshow)</visible>
+				<visible>!String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,song) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]]]</visible>
 			</control>
 			<control type="group">
-				<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow)</visible>
+				<visible>![!String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,song) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow)]]</visible>
 				<visible>![!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]]]</visible>
 				<control type="label">
 					<left>25</left>
@@ -288,7 +288,7 @@
 					<top>328</top>
 					<width>266</width>
 					<label>$PARAM[main_label]</label>
-					<font>font12</font>
+					<font>font10_bold</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
@@ -699,9 +699,9 @@
 			</control>
 			<control type="image">
 				<left>136</left>
-				<top>116</top>
-				<width>160</width>
-				<height>70</height>
+				<top>106</top>
+				<width>80</width>
+				<height>80</height>
 				<texture flipx="true">overlays/overlay-bg.png</texture>
 				<visible>![String.IsEqual(listitem.dbtype,episode) + [Control.IsVisible(500) | Control.IsVisible(54)]] + ![String.IsEqual(listitem.dbtype,episode) + Window.IsVisible(MyVideoNav.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31101])]]</visible>
 				<visible>!Window.IsVisible(script-embuary-video.xml) + !Window.IsVisible(script-embuary-person.xml) + ![Container.Content(videos) + String.IsEmpty(ListItem.Label2)]</visible>
@@ -720,9 +720,9 @@
 			</control>
 			<control type="image">
 				<left>20</left>
-				<top>116</top>
-				<width>160</width>
-				<height>70</height>
+				<top>106</top>
+				<width>80</width>
+				<height>80</height>
 				<texture>overlays/overlay-bg.png</texture>
 				<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
 				<animation effect="slide" end="0,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + [Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml)]]]">Conditional</animation>

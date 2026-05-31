@@ -46,7 +46,7 @@ supports animated poster only.
 
 ### 21.4+omega ###
 - .3
-- views / widgets / shortcuts improvements / fixes
+  * views/widgets/shortcuts improvements & fixes 2nd part
 
 
 - .2

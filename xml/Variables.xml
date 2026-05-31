@@ -1437,7 +1437,7 @@
 	<variable name="IconWallPosterVar">
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [Container.Content(episodes) | Container.Content(seasons)]">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + [Container.Content(episodes) | Container.Content(seasons)]">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + [Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons)]">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(set))">$INFO[ListItem.Art(set)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
@@ -1925,8 +1925,8 @@
 	<variable name="VideoInfoPlayerMainLabelVar">
 		<value condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
 		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(VideoPlayer.OriginalTitle)">$INFO[VideoPlayer.OriginalTitle]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.Label)">$INFO[VideoPlayer.Label]$INFO[VideoPlayer.Year, (,)]</value>
-		<value>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.Label)">$INFO[VideoPlayer.Label]</value>
+		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="VideoInfoSubLabelVar">
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]-[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,]</value>
