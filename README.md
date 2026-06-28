@@ -45,6 +45,12 @@ supports animated poster only.
 
 
 ### 21.4+omega ###
+- .5
+  * Youtube button (additional Infos) in video info dialog added
+  * visibility of tmdb/imdb flag fixed
+  * smaller adjustments
+
+
 - .4
   * improvements & fixes 3rd part
 
