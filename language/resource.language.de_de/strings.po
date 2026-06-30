@@ -2716,20 +2716,16 @@ msgstr "Zeige Laufzeit in Listen"
 #: Player Process Info
 
 msgctxt "#31686"
-msgid "Video Queue"
-msgstr "Video Queue"
+msgid "Video Queue / Data"
+msgstr "Video Queue / Daten"
 
-msgctxt "#31687"
-msgid "Video Queue Data"
-msgstr "Video Queue Daten"
+#: Empty string 31687
 
 msgctxt "#31688"
-msgid "Audio Queue"
-msgstr "Audio Queue"
+msgid "Audio Queue / Data"
+msgstr "Audio Queue / Daten"
 
-msgctxt "#31689"
-msgid "Audio Queue Data"
-msgstr "Audo Queue Daten"
+#: Empty string 31689
 
 msgctxt "#31690"
 msgid "HDR & DV"
@@ -2867,3 +2863,8 @@ msgstr "Lokalisierter Titel"
 msgctxt "#31722"
 msgid "Search 'Making Of' on Youtube"
 msgstr "'Making Of' auf Youtube suchen"
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31723"
+msgid "CPU & RAM Usage :"
+msgstr "CPU & RAM Nutzung :"

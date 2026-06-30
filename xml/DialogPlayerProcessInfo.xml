@@ -134,7 +134,7 @@
 					<width>690</width>
 					<width>690</width>
 					<aligny>bottom</aligny>
-					<label>$LOCALIZE[22012] : [COLOR white]$INFO[system.memory(used),, | ]$INFO[system.memory(total),,  -  ]$INFO[system.memory(used.percent),,] [/COLOR]</label>
+					<label>$LOCALIZE[22012] : [COLOR white]$INFO[system.memory(used),, | ]$INFO[system.memory(total)][/COLOR]</label>
 					<font>font12</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>!System.Platform.Android</visible>
@@ -145,15 +145,6 @@
 					<width>690</width>
 					<aligny>bottom</aligny>
 					<label>$LOCALIZE[31703] : [COLOR white]$VAR[LabelAudioCodecVar] - $VAR[LabelAudioChannelsVar][/COLOR]</label>
-					<font>font12</font>
-					<textcolor>$VAR[SkinColorVar]</textcolor>
-				</control>
-				<control type="label">
-					<height>35</height>
-					<width>690</width>
-					<aligny>bottom</aligny>
-					<scroll>true</scroll>
-					<label>$INFO[VideoPlayer.AudioLanguage,$LOCALIZE[21447] : [COLOR white][UPPERCASE],[/UPPERCASE][/COLOR]]</label>
 					<font>font12</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 				</control>
@@ -196,36 +187,39 @@
 					<control type="label">
 						<width>300</width>
 						<aligny>bottom</aligny>
-						<label>$LOCALIZE[140] </label>
+						<label>$LOCALIZE[31723]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
 					<control type="progress">
 						<description>CPU BAR</description>
 						<left>260</left>
-						<width>430</width>
+						<width>150</width>
 						<top>12</top>
 						<height>14</height>
-						<info>System.CPUUsage</info>
+						<info>System.CpuUsage</info>
 					</control>
-				</control>
-				<control type="group">
-					<height>35</height>
-					<width>690</width>
 					<control type="label">
-						<width>300</width>
-						<aligny>bottom</aligny>
-						<label>$LOCALIZE[22012] : </label>
-						<font>font12</font>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<top>1</top>
+						<left>420</left>
+						<width>80</width>
+						<label>$INFO[Window(Home).Property(avgCPU)]</label>
+						<font>font10</font>
 					</control>
 					<control type="progress">
 						<description>Ram BAR</description>
-						<left>260</left>
-						<width>430</width>
+						<left>490</left>
+						<width>150</width>
 						<top>12</top>
 						<height>14</height>
-						<info>system.memory(used)</info>
+						<info>System.Memory(used)</info>
+					</control>
+					<control type="label">
+						<top>1</top>
+						<left>650</left>
+						<width>80</width>
+						<label>$INFO[System.Memory(used.percent)]</label>
+						<font>font10</font>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -243,29 +237,32 @@
 						<control type="progress">
 							<description>VIDEO QUEUE BAR</description>
 							<left>260</left>
-							<width>430</width>
+							<width>150</width>
 							<top>12</top>
 							<height>14</height>
 							<info>Player.Process(video.queue.level)</info>
 						</control>
-					</control>
-					<control type="group">
-						<height>35</height>
-						<width>690</width>
 						<control type="label">
-							<width>300</width>
-							<aligny>bottom</aligny>
-							<label>$LOCALIZE[31687] : </label>
-							<font>font12</font>
-							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<top>1</top>
+							<left>420</left>
+							<width>80</width>
+							<label>$INFO[Player.Process(video.queue.level),,%]</label>
+							<font>font10</font>
 						</control>
 						<control type="progress">
 							<description>VIDEO QUEUE DATA BAR</description>
-							<left>260</left>
-							<width>430</width>
+							<left>490</left>
+							<width>150</width>
 							<top>12</top>
 							<height>14</height>
 							<info>Player.Process(video.queue.data.level)</info>
+						</control>
+						<control type="label">
+							<top>1</top>
+							<left>650</left>
+							<width>80</width>
+							<label>$INFO[Player.Process(video.queue.data.level,,%]</label>
+							<font>font10</font>
 						</control>
 					</control>
 					<control type="group">
@@ -281,32 +278,35 @@
 						<control type="progress">
 							<description>AUDIO QUEUE BAR</description>
 							<left>260</left>
-							<width>430</width>
+							<width>150</width>
 							<top>12</top>
 							<height>14</height>
 							<info>Player.Process(audio.queue.level)</info>
 						</control>
-					</control>
-					<control type="group">
-						<height>35</height>
-						<width>690</width>
 						<control type="label">
-							<width>300</width>
-							<aligny>bottom</aligny>
-							<label>$LOCALIZE[31689] : </label>
-							<font>font12</font>
-							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<top>1</top>
+							<left>420</left>
+							<width>80</width>
+							<label>$INFO[Player.Process(audio.queue.level),,%]</label>
+							<font>font10</font>
 						</control>
 						<control type="progress">
 							<description>AUDIO QUEUE DATA BAR</description>
-							<left>260</left>
-							<width>430</width>
+							<left>490</left>
+							<width>150</width>
 							<top>12</top>
 							<height>14</height>
 							<info>Player.Process(audio.queue.data.level)</info>
 						</control>
+						<control type="label">
+							<top>1</top>
+							<left>650</left>
+							<width>80</width>
+							<label>$INFO[Player.Process(audio.queue.data.level,,%]</label>
+							<font>font10</font>
+						</control>
 					</control>
-					<control type="label">
+					<!--<control type="label">
 						<height>35</height>
 						<width>690</width>
 						<aligny>bottom</aligny>
@@ -325,12 +325,12 @@
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>!VideoPlayer.SubtitlesEnabled</visible>
-					</control>
+					</control>-->
 				</control>
 				<control type="grouplist">
-					<visible>Player.HasVideo + !$EXP[special_build]</visible>
+					<visible>Player.HasVideo</visible>
 					<control type="label">
-						<height>35</height>
+						<height>70</height>
 						<width>690</width>
 						<aligny>bottom</aligny>
 						<label/>
@@ -341,6 +341,15 @@
 						<aligny>bottom</aligny>
 						<scroll>true</scroll>
 						<label>$LOCALIZE[31706] : [COLOR white]$VAR[LabelHdrTypeVar][/COLOR]</label>
+						<font>font12</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+					</control>
+					<control type="label">
+						<height>35</height>
+						<width>690</width>
+						<aligny>bottom</aligny>
+						<scroll>true</scroll>
+						<label>$INFO[VideoPlayer.AudioLanguage,$LOCALIZE[21447] : [COLOR white][UPPERCASE],[/UPPERCASE][/COLOR]]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>

@@ -46,8 +46,10 @@ supports animated poster only.
 
 ### 21.4+omega ###
 - .5
-  * Youtube button (additional Infos) in video info dialog added
+  * YouTube button (additional Infos) in video info dialog added
   * visibility of tmdb/imdb flag fixed
+  * avg CPU load script implemented
+  * Player Process Info updated
   * smaller adjustments
 
 

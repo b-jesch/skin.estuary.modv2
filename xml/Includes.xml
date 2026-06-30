@@ -1558,13 +1558,6 @@
 					<param name="visible" value="Window.IsVisible(1141)" />
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="flags/audiocodec/atmos.png" />
-					<param name="width" value="104" />
-					<param name="fallback" value="flags/audiocodec/fallback.png" />
-					<param name="visible" value="String.Contains(VideoPlayer.AudioCodec,_atmos) | String.Contains(Player.FilenameAndPath,ATMOS)" />
-					<param name="visible2" value="Window.IsVisible(1141)" />
-				</include>
-				<include content="MediaFlag">
 					<param name="texture" value="flags/cadre2.png" />
 					<param name="width" value="164" />
 					<param name="label_width" value="158" />

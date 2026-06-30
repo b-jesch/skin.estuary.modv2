@@ -1,4 +1,6 @@
 import xbmc
+import xbmcgui
+import re
 
 # view switcher
 
@@ -57,14 +59,21 @@ if __name__ == '__main__':
 
     xbmc.sleep(1000)
     monitor = xbmc.Monitor()
-    xbmc.log('Estuary MOD V2 Nexus service handler started', level=xbmc.LOGINFO)
+    xbmc.log('Estuary MOD V2 service handler started', level=xbmc.LOGINFO)
 
     while not monitor.abortRequested():
         if monitor.waitForAbort(2): break
+
+        # get average CPU usage over all CPU cores
+
+        cores = re.findall('(\d+)%', xbmc.getInfoLabel('System.CpuUsage'))
+        sum = 0
+        for core in cores: sum += int(core)
+        if len(cores) > 0: xbmcgui.Window(10000).setProperty('avgCPU', '{}%'.format(sum // len(cores)))
 
         # call service viewswitcher
 
         if xbmc.getCondVisibility('Skin.HasSetting(ForcedViews.Enabled)'):
             content, mode = viewswitcher(content, mode)
 
-    xbmc.log('Estuary MOD V2 Nexus service handler finished')
+    xbmc.log('Estuary MOD V2 service handler finished')
