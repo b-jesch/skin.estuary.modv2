@@ -306,26 +306,6 @@
 							<font>font10</font>
 						</control>
 					</control>
-					<!--<control type="label">
-						<height>35</height>
-						<width>690</width>
-						<aligny>bottom</aligny>
-						<scroll>true</scroll>
-						<label>$INFO[VideoPlayer.SubtitlesLanguage,$LOCALIZE[21448] : [COLOR white][UPPERCASE],[/UPPERCASE][/COLOR]]</label>
-						<font>font12</font>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>VideoPlayer.SubtitlesEnabled</visible>
-					</control>
-					<control type="label">
-						<height>35</height>
-						<width>690</width>
-						<aligny>bottom</aligny>
-						<scroll>true</scroll>
-						<label>$INFO[VideoPlayer.SubtitlesLanguage,$LOCALIZE[21448] : [COLOR white][UPPERCASE], - [/UPPERCASE]$LOCALIZE[13106][/COLOR]]</label>
-						<font>font12</font>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>!VideoPlayer.SubtitlesEnabled</visible>
-					</control>-->
 				</control>
 				<control type="grouplist">
 					<visible>Player.HasVideo</visible>
@@ -505,8 +485,12 @@
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
 				</control>
-				<control type="group">
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
 					<height>35</height>
+					<align>left</align>
+					<itemgap>5</itemgap>
+					<width>690</width>
 					<visible>String.IsEqual(Player.Process(video.dovi.has.config),1) + String.IsEqual(Player.Process(video.dovi.has.l5),1)</visible>
 					<control type="label">
 						<width>360</width>
@@ -517,11 +501,17 @@
 					</control>
 					<control type="label">
 						<left>360</left>
-						<width>330</width>
+						<width>220</width>
 						<aligny>bottom</aligny>
 						<label>[COLOR white]$INFO[Player.Process(video.dovi.l5.left.offset)] | $INFO[Player.Process(video.dovi.l5.right.offset)] | $INFO[Player.Process(video.dovi.l5.top.offset)] | $INFO[Player.Process(video.dovi.l5.bottom.offset)][/COLOR]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+					</control>
+					<control type="image">
+						<height>40</height>
+						<width>50</width>
+						<texture>icons/dimensions.png</texture>
+						<aspectratio align="left" aligny="center">keep</aspectratio>
 					</control>
 				</control>
 				<control type="label">
