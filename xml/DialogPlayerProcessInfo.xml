@@ -499,19 +499,20 @@
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
-					<control type="label">
-						<left>360</left>
-						<width>220</width>
-						<aligny>bottom</aligny>
-						<label>[COLOR white]$INFO[Player.Process(video.dovi.l5.left.offset)] | $INFO[Player.Process(video.dovi.l5.right.offset)] | $INFO[Player.Process(video.dovi.l5.top.offset)] | $INFO[Player.Process(video.dovi.l5.bottom.offset)][/COLOR]</label>
-						<font>font12</font>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-					</control>
 					<control type="image">
+						<left>360</left>
 						<height>40</height>
 						<width>50</width>
 						<texture>icons/dimensions.png</texture>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<left>410</left>
+						<width>220</width>
+						<aligny>bottom</aligny>
+						<label>[COLOR white] : $INFO[Player.Process(video.dovi.l5.left.offset)] | $INFO[Player.Process(video.dovi.l5.right.offset)] | $INFO[Player.Process(video.dovi.l5.top.offset)] | $INFO[Player.Process(video.dovi.l5.bottom.offset)][/COLOR]</label>
+						<font>font12</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
 				</control>
 				<control type="label">
