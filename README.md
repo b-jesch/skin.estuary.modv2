@@ -1,4 +1,4 @@
-# Skin Estuary MOD V2 for KODI 21 Omega KN Edition #
+# Skin Estuary MOD V2 for KODI 22 Piers KN Edition #
 
 **Some screenshots You'll find at the end of this Readme**
 
@@ -42,6 +42,9 @@ If you navigate in your movie library, you'll have a new entry now to (re)assign
 supports animated poster only.
 
 ![](resources/setup_ap.png)
+
+### 22.0+piers ###
+- .0 start migration
 
 
 ### 21.4+omega ###
