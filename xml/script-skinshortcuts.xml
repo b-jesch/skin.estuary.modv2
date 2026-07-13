@@ -231,13 +231,6 @@
 					<onclick>ActivateWindow(1123)</onclick>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MoviesWidget)</visible>
 				</control>
-				<control type="radiobutton" id="10014">
-					<label>$LOCALIZE[31133]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(HomeBanner)</selected>
-					<onclick>Skin.ToggleSetting(HomeBanner)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),TVShowsWidget)</visible>
-				</control>
 				<control type="button" id="10007">
 					<label>$LOCALIZE[31299]</label>
 					<include>DefaultSettingButton</include>

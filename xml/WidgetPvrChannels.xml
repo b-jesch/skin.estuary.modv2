@@ -66,7 +66,6 @@
                             <height>200</height>
                             <texture fallback="DefaultTVShows.png">$PARAM[icon]</texture>
                             <aspectratio>keep</aspectratio>
-                            <animation effect="slide" end="0,27" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HidePvrWidgetInfo)] + Window.IsVisible(Home)">Conditional</animation>
                         </control>
                         <control type="label">
                             <left>42</left>
@@ -78,7 +77,7 @@
                             <shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
                             <align>center</align>
                             <aligny>top</aligny>
-                            <visible>![[!Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HidePvrWidgetInfo)] + Window.IsVisible(Home)]</visible>
+                            <visible>Window.IsVisible(Home)</visible>
                         </control>
                         <control type="label">
                             <left>42</left>
@@ -90,7 +89,7 @@
                             <shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
                             <align>center</align>
                             <aligny>top</aligny>
-                            <visible>![[!Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HidePvrWidgetInfo)] + Window.IsVisible(Home)]</visible>
+                            <visible>Window.IsVisible(Home)</visible>
                         </control>
                         <control type="image">
                             <left>260</left>
@@ -194,7 +193,6 @@
                             <height>200</height>
                             <texture fallback="DefaultTVShows.png">$PARAM[icon]</texture>
                             <aspectratio>keep</aspectratio>
-                            <animation effect="slide" end="0,27" time="0" condition="[[!Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HidePvrWidgetInfo)] + Window.IsVisible(Home)]">Conditional</animation>
                         </control>
                         <control type="label">
                             <left>42</left>
@@ -207,7 +205,7 @@
                             <align>center</align>
                             <scroll>true</scroll>
                             <aligny>top</aligny>
-                            <visible>![[!Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HidePvrWidgetInfo)] + Window.IsVisible(Home)]</visible>
+                            <visible>Window.IsVisible(Home)</visible>
                         </control>
                         <control type="label">
                             <left>42</left>
@@ -220,7 +218,7 @@
                             <align>center</align>
                             <scroll>true</scroll>
                             <aligny>top</aligny>
-                            <visible>![[!Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HidePvrWidgetInfo)] + Window.IsVisible(Home)]</visible>
+                            <visible>Window.IsVisible(Home)</visible>
                         </control>
                         <control type="image">
                             <left>260</left>

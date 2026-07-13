@@ -1339,10 +1339,21 @@
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>
 	</variable>
 	<variable name="ListLabelVar">
-		<value condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
-		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle]</value>
+		<value condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Title) + !Skin.HasSetting(hide_pubyear)">$INFO[ListItem.Title]</value>
+		<value condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Title) + Skin.HasSetting(hide_pubyear)">$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
+		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(ListItem.OriginalTitle) + !Skin.HasSetting(hide_pubyear)">$INFO[ListItem.OriginalTitle]</value>
+		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(ListItem.OriginalTitle) + Skin.HasSetting(hide_pubyear)">$INFO[ListItem.OriginalTitle]$INFO[ListItem.Year, (,)]</value>
 		<value condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="ListTVShowLabelVar">
+		<value condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.TVShowTitle) + !Skin.HasSetting(hide_pubyear)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="[String.IsEmpty(Skin.String(titlesettings)) | String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.TVShowTitle) + Skin.HasSetting(hide_pubyear)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year, (,)]</value>
+		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(ListItem.OriginalTitle) + !Skin.HasSetting(hide_pubyear)">$INFO[ListItem.OriginalTitle]</value>
+		<value condition="String.IsEqual(Skin.String(titlesettings),original) + !String.IsEmpty(ListItem.OriginalTitle) + Skin.HasSetting(hide_pubyear)">$INFO[ListItem.OriginalTitle]$INFO[ListItem.Year, (,)]</value>
+		<value condition="[String.IsEqual(Skin.String(titlesettings),default) | String.IsEqual(Skin.String(titlesettings),localized)] + !String.IsEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
+		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="PlaylistLabelVar">
@@ -1458,22 +1469,9 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="IconWallThumbVar">
-		<value condition="Container.Content(countries) + String.IsEqual(Skin.String(moviecountryicons.path),resource://resource.images.moviecountryicons.maps/)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.maps/,.png]</value>
-		<value condition="Container.Content(countries) + String.IsEqual(Skin.String(moviecountryicons.path),resource://resource.images.moviecountryicons.flags/)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.flags/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.arctic.zephyr/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.coloured/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.filmstrip/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.filmstrip/,.jpg]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.grey/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.grey/,.jpg]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.poster/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.poster/,.jpg]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.transparent/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.white/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.white/,.jpg]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.xzener-flat/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-flat/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.xzener-reflection/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-reflection/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre) + String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.estuarymod/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.estuarymod/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,studio) + String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.estuarymod/)">$INFO[ListItem.Label,resource://resource.images.studios.estuarymod/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,studio) + String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,studio) + String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,studio) + String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.squarehd/)">$INFO[ListItem.Label,resource://resource.images.studios.squarehd/,.jpg]</value>
+		<value condition="Container.Content(countries) + !String.IsEmpty(Skin.String(moviecountryicons.path))">$INFO[Skin.String(moviecountryicons.path)]$INFO[ListItem.Label,,.png]</value>
+		<value condition="String.IsEqual(listitem.dbtype,genre) + !String.IsEmpty(Skin.String(moviegenreicons.path))">$INFO[Skin.String(moviegenreicons.path)]$INFO[ListItem.Label,,.png]</value>
+		<value condition="String.IsEqual(listitem.dbtype,studio) + !String.IsEmpty(Skin.String(studiologos.path))">$INFO[Skin.String(studiologos.path)]$INFO[ListItem.Label,,.png]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster)) + Container.Content(seasons)">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(tvshow.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
@@ -1570,22 +1568,11 @@
 		<value condition="Integer.IsGreater(ListItem.TotalDiscs,1)">$INFO[ListItem.DiscNumber]$INFO[ListItem.DiscTitle, - ]</value>
 	</variable>
 	<variable name="WidgetGenreIconVar">
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.arctic.zephyr/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.coloured/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.filmstrip/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.filmstrip/,.jpg]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.grey/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.grey/,.jpg]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.poster/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.poster/,.jpg]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.transparent/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.white/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.white/,.jpg]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.xzener-flat/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-flat/,.png]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.xzener-reflection/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-reflection/,.png]</value>
-		<value condition="String.IsEqual(Skin.String(moviegenreicons.path),resource://resource.images.moviegenreicons.estuarymod/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.estuarymod/,.png]</value>
+		<value condition="!String.IsEmpty(Skin.String(moviegenreicons.path)">$INFO[Skin.String(moviegenreicons.path)]$INFO[ListItem.Label,,.png]</value>
 		<value>DefaultGenre.png</value>
 	</variable>
 	<variable name="WidgetStudioIconVar">
-		<value condition="String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.estuarymod/)">$INFO[ListItem.Label,resource://resource.images.studios.estuarymod/,.png]</value>
-		<value condition="String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value condition="String.IsEqual(Skin.String(studiologos.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
+		<value condition="!String.IsEmpty(Skin.String(studiologos.path)">$INFO[Skin.String(studiologos.path)]$INFO[ListItem.Label,,.png]</value>
 		<value>DefaultStudios.png</value>
 	</variable>
 	<variable name="AddonsLabel2Var">

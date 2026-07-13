@@ -56,20 +56,7 @@
 						<label>$VAR[ListLabelVar]</label>
 						<wrapmultiline>true</wrapmultiline>
 						<scroll>true</scroll>
-						<visible>!ListItem.IsCollection + !Skin.HasSetting(hide_pubyear)</visible>
-					</control>
-					<control type="label">
-						<top>145</top>
-						<left>30</left>
-						<width>537</width>
-						<aligny>center</aligny>
-						<align>center</align>
-						<height>100</height>
-						<font>font36_title</font>
-						<label>$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]</label>
-						<wrapmultiline>true</wrapmultiline>
-						<scroll>true</scroll>
-						<visible>!ListItem.IsCollection + Skin.HasSetting(hide_pubyear)</visible>
+						<visible>!ListItem.IsCollection</visible>
 					</control>
 					<control type="textbox">
 						<top>120</top>
@@ -446,12 +433,6 @@
 						<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
 						<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
 						<visible>Container.Content() + String.IsEmpty(Container.PluginName)</visible>
-					</control>
-					<control type="button" id="623">
-						<include>MediaMenuItemsCommon</include>
-						<label>$LOCALIZE[31009]</label>
-						<onclick>InstallAddon(resource.images.studios.white)</onclick>
-						<visible>Container.Content(studios) + !System.HasAddon(resource.images.studios.white)</visible>
 					</control>
 					<control type="button" id="624">
 						<include>MediaMenuItemsCommon</include>

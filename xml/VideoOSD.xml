@@ -305,6 +305,7 @@
 					</include>
 					<onclick>RunScript(script.input.adsp)</onclick>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + System.HasAddon(script.input.adsp)</visible>
+					<enable>System.AddonIsEnabled(script.imput.adsp)</enable>
 				</control>
 				<control type="radiobutton" id="700">
 					<include content="OSDButton">

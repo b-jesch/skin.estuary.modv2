@@ -184,7 +184,7 @@
 					<skinshortcuts>visibility</skinshortcuts>
 					<pagecontrol>22010</pagecontrol>
 					<include condition="!Skin.HasSetting(UseSmallerCategories)">PersonalWidgetListCategoriesBig</include>
-					<include condition="Skin.HasSetting(UseSmallerCategories)">PersonalWidgetListCategoriesSmall</include>
+					<include condition="Skin.HasSetting(UseSmallerCategories)">PersonalWidgetListCategories</include>
 					<include content="Widget$SKINSHORTCUTS[WidgetStyle1]">
 						<param name="onup" value="9000"/>
       					<param name="ondown" value="22200$SKINSHORTCUTS[id]"/>

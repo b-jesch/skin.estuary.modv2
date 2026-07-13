@@ -597,39 +597,6 @@
 					<selected>System.HasAddon(script.module.animated_artwork)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
-				<control type="label" id="30016">
-					<textoffsetx>45</textoffsetx>
-					<top>0</top>
-					<height>80</height>
-					<label>$LOCALIZE[31555]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font28_title</font>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="radiobutton" id="321">
-					<label>Movie Genres Icons for Estuary MOD V2 $INFO[System.AddonVersion(resource.images.moviegenreicons.estuarymod),(,)]</label>
-					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(resource.images.moviegenreicons.estuarymod)">InstallAddon(resource.images.moviegenreicons.estuarymod)</onclick>
-					<onclick condition="System.HasAddon(resource.images.moviegenreicons.estuarymod)">Addon.OpenSettings(resource.images.moviegenreicons.estuarymod)</onclick>
-					<selected>System.HasAddon(resource.images.moviegenreicons.estuarymod)</selected>
-					<include>DefaultSettingButton</include>
-				</control>
-				<control type="radiobutton" id="322">
-					<label>Studio Icons - White $INFO[System.AddonVersion(resource.images.studios.white),(,)]</label>
-					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
-					<onclick condition="!System.HasAddon(resource.images.studios.white)">InstallAddon(resource.images.studios.white)</onclick>
-					<onclick condition="System.HasAddon(resource.images.studios.white)">Addon.OpenSettings(resource.images.studios.white)</onclick>
-					<selected>System.HasAddon(resource.images.studios.white)</selected>
-					<include>DefaultSettingButton</include>
-				</control>
 			</control>
 			<control type="grouplist" id="400">
 				<top>168</top>
@@ -801,15 +768,6 @@
 					<onclick condition="String.IsEqual(Skin.String(Spinner_type),4)">Skin.SetString(spinner_type,5)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(Spinner_type),5)">Skin.SetString(spinner_type,1)</onclick>
 				</control>
-				<!-- Maybe later (WIP)
-				<control type="button" id="502">
-					<label>$LOCALIZE[31587]</label>
-					<label2>$VAR[Label_SkinSetting_PictureSource]</label2>
-					<include>DefaultSettingButton</include>
-					 <onclick condition="!Skin.String(picture_source)">Skin.SetPath(picture_source)</onclick>
-					<onclick condition="Skin.String(picture_source)">Skin.Reset(picture_source)</onclick>
-				</control>
-				-->
 				<control type="radiobutton" id="507">
 					<label>$LOCALIZE[31158]</label>
 					<include>DefaultSettingButton</include>
@@ -1398,21 +1356,6 @@
 					<visible>Skin.HasSetting(Skin_EnableAnimatedPosters)</visible>
 				</control>
 				<control type="button" id="606">
-					<label>$LOCALIZE[31149]</label>
-					<label2>$VAR[Label_SkinSetting_MovieGenreFanart]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
-					<enable>Skin.HasSetting(show_fanart)</enable>
-				</control>
-				<control type="button" id="607">
-					<label>$LOCALIZE[31310]</label>
-					<label2>$VAR[Label_SkinSetting_MovieGenreIcons]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=moviegenreicons&amp;type=resource.images.moviegenreicons)</onclick>
-				</control>
-				<control type="button" id="608">
 					<label>$LOCALIZE[31062]</label>
 					<label2>$VAR[Label_SkinSetting_WeatherFanart]</label2>
 					<include>DefaultSettingButton</include>
@@ -1420,12 +1363,27 @@
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					<enable>Skin.HasSetting(show_fanart)</enable>
 				</control>
-				<control type="button" id="609">
+				<control type="button" id="607">
 					<label>$LOCALIZE[31262]</label>
 					<label2>$VAR[Label_SkinSetting_WeatherIcons]</label2>
 					<include>DefaultSettingButton</include>
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+				</control>
+				<control type="button" id="608">
+					<label>$LOCALIZE[31149]</label>
+					<label2>$VAR[Label_SkinSetting_MovieGenreFanart]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
+					<enable>Skin.HasSetting(show_fanart)</enable>
+				</control>
+				<control type="button" id="609">
+					<label>$LOCALIZE[31310]</label>
+					<label2>$VAR[Label_SkinSetting_MovieGenreIcons]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=moviegenreicons&amp;type=resource.images.moviegenreicons)</onclick>
 				</control>
 				<control type="button" id="610">
 					<label>$LOCALIZE[31308]</label>
@@ -1599,25 +1557,6 @@
 					<onclick condition="!String.IsEmpty(Skin.String(widget_action_pvr)) + !String.IsEqual(Skin.String(widget_action_pvr),31589) + !String.IsEqual(Skin.String(widget_action_pvr),31590)">Skin.SetString(widget_action_pvr,31589)</onclick>
 					<visible>System.HasPVRAddon</visible>
 				</control>
-				<control type="radiobutton" id="10021">
-					<label>$LOCALIZE[31468]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(HideWidgetLabels)</onclick>
-					<selected>!Skin.HasSetting(HideWidgetLabels)</selected>
-				</control>
-				<control type="radiobutton" id="10022">
-					<include>DefaultSettingButton</include>
-					<label>  ∟$LOCALIZE[31576]</label>
-					<onclick>Skin.ToggleSetting(HidePvrWidgetInfo)</onclick>
-					<selected>Skin.HasSetting(HidePvrWidgetInfo)</selected>
-					<visible>!Skin.HasSetting(HideWidgetLabels)</visible>
-				</control>
-				<control type="radiobutton" id="10014">
-					<label>$LOCALIZE[31211]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(UseSmallerCategories)</onclick>
-					<selected>Skin.HasSetting(UseSmallerCategories)</selected>
-				</control>
 				<control type="radiobutton" id="10018">
 					<label>$LOCALIZE[31370]</label>
 					<include>DefaultSettingButton</include>
@@ -1641,12 +1580,12 @@
 					<onclick condition="String.IsEqual(Skin.String(EpisodesDisplay),31681)">Skin.SetString(EpisodesDisplay,31578)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(EpisodesDisplay),31578)">Skin.SetString(EpisodesDisplay,31680)</onclick>
 				</control>
-				<control type="radiobutton" id="10017">
+				<!--<control type="radiobutton" id="10017">
 					<label>$LOCALIZE[31364]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(greyedout_watched_home)</onclick>
 					<selected>Skin.HasSetting(greyedout_watched_home)</selected>
-				</control>
+				</control>-->
 				<control type="radiobutton" id="10020">
 					<label>$LOCALIZE[31397]</label>
 					<include>DefaultSettingButton</include>
