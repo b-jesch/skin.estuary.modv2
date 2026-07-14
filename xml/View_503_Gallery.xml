@@ -95,7 +95,7 @@
                                 <top>0</top>
                                 <bottom>10</bottom>
                                 <fadetime>200</fadetime>
-                                <aspectratio>scale</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture fallback="DefaultVideoFanart.png">$VAR[WidgetThumbViewVar]</texture>
                                 <fadetime>300</fadetime>
                                 <visible>!Container.Content(episodes)</visible>
@@ -106,9 +106,9 @@
                                 <top>0</top>
                                 <bottom>10</bottom>
                                 <fadetime>200</fadetime>
-                                <aspectratio>scale</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Art(thumb)]</texture>
-                                <visible>Container.Content(episodes) + ![!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + Container.Content(episodes)]</visible>
+                                <visible>Container.Content(episodes) + !$EXP[show_unwatchedthumbs] + Integer.IsGreater(ListItem.Playcount,0)</visible>
                             </control>
                             <control type="image">
                                 <left>10</left>
@@ -116,9 +116,9 @@
                                 <top>0</top>
                                 <bottom>10</bottom>
                                 <fadetime>200</fadetime>
-                                <aspectratio>scale</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true" fallback="DefaultVideoFanart.png">$INFO[ListItem.Art(fanart)]</texture>
-                                <visible>Container.Content(episodes) + [!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + Container.Content(episodes)]</visible>
+                                <visible>Container.Content(episodes) + Integer.IsLess(ListItem.Playcount,1)</visible>
                             </control>
                         </control>
                         <control type="group">
@@ -192,7 +192,7 @@
                                 <align>center</align>
                                 <aligny>center</aligny>
                                 <font>font30_title</font>
-                                <label>$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]</label>
+                                <label>$VAR[ListLabelVar]</label>
                                 <scroll>true</scroll>
                                 <visible>String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,set)</visible>
                             </control>

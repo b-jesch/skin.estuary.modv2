@@ -80,86 +80,85 @@
 		<param name="single_label">$VAR[ListLabelVar]</param>
 		<param name="focused">false</param>
 		<definition>
-			<control type="image">
-				<left>-2</left>
-				<top>-2</top>
-				<width>296</width>
-				<height>390</height>
-				<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-musiclayout.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+			<control type="group">
+				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
+				<control type="image">
+					<left>-2</left>
+					<top>-2</top>
+					<width>306</width>
+					<height>306</height>
+					<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-musiclayout-nolabel.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>Skin.HasSetting(show_borders)</visible>
+				</control>
+				<control type="image">
+					<top>0</top>
+					<width>302</width>
+					<height>302</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<top>-6</top>
+					<left>-6</left>
+					<width>314</width>
+					<height>314</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<top>-6</top>
+					<left>-6</left>
+					<width>314</width>
+					<height>314</height>
+					<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[focused]</visible>
+					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+				</control>
+			</control>
+			<control type="group">
 				<visible>![Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]]</visible>
-			</control>
-			<control type="image">
-				<left>-2</left>
-				<top>-2</top>
-				<width>296</width>
-				<height>296</height>
-				<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-musiclayout-nolabel.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
-			</control>
-			<control type="image">
-				<top>0</top>
-				<width>292</width>
-				<height>386</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
-				<visible>![Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]]</visible>
-			</control>
-			<control type="image">
-				<top>0</top>
-				<width>292</width>
-				<height>292</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
-			</control>
-			<control type="image">
-				<top>-6</top>
-				<left>-6</left>
-				<width>304</width>
-				<height>398</height>
-				<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-				<visible>$PARAM[focused]</visible>
-				<visible>![Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]]</visible>
-			</control>
-			<control type="image">
-				<top>-6</top>
-				<left>-6</left>
-				<width>304</width>
-				<height>304</height>
-				<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-				<visible>$PARAM[focused]</visible>
-				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
-			</control>
-			<control type="image">
-				<top>-6</top>
-				<left>-6</left>
-				<width>304</width>
-				<height>304</height>
-				<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
-				<bordersize>20</bordersize>
-				<visible>$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
+				<control type="image">
+					<left>-2</left>
+					<top>-2</top>
+					<width>306</width>
+					<height>390</height>
+					<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-musiclayout.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+				</control>
+				<control type="image">
+					<top>0</top>
+					<width>302</width>
+					<height>386</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordersize>20</bordersize>
+					<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+				</control>
+				<control type="image">
+					<top>-6</top>
+					<left>-6</left>
+					<width>314</width>
+					<height>398</height>
+					<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[focused]</visible>
+				</control>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>292</width>
-				<height>292</height>
+				<width>302</width>
+				<height>302</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
@@ -169,8 +168,8 @@
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>292</width>
-				<height>296</height>
+				<width>302</width>
+				<height>306</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
@@ -179,16 +178,16 @@
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>292</width>
-				<height>296</height>
+				<width>302</width>
+				<height>306</height>
 				<texture fallback="DefaultDirector.png" background="true">http://localhost:52307/getthumb&amp;title=$ESCINFO[ListItem.Label,, imdb]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
 				<visible>Window.IsVisible(script-globalsearch.xml) + Container.Content(directors)</visible>
 			</control>
 			<control type="image">
-				<left>40</left>
-				<top>38</top>
+				<left>45</left>
+				<top>43</top>
 				<width>214</width>
 				<height>236</height>
 				<texture fallback="DefaultGenre.png">$VAR[WidgetGenreIconVar]</texture>
@@ -197,7 +196,7 @@
 				<animation effect="slide" end="0,-10" time="0" condition="Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]">Conditional</animation>
 			</control>
 			<control type="image">
-				<left>40</left>
+				<left>45</left>
 				<top>38</top>
 				<width>214</width>
 				<height>236</height>
@@ -209,7 +208,7 @@
 			<control type="textbox">
 				<left>22</left>
 				<top>296</top>
-				<width>250</width>
+				<width>260</width>
 				<height>68</height>
 				<font>font12</font>
 				<align>center</align>
@@ -225,7 +224,7 @@
 				<control type="label">
 					<left>22</left>
 					<top>300</top>
-					<width>246</width>
+					<width>256</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font10</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -235,7 +234,7 @@
 				<control type="label">
 					<left>22</left>
 					<top>328</top>
-					<width>246</width>
+					<width>256</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10_bold</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -245,7 +244,7 @@
 			</control>
 			<control type="image">
 				<left>23</left>
-				<top>263</top>
+				<top>273</top>
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
@@ -255,7 +254,7 @@
 			<control type="label">
 				<left>25</left>
 				<top>268</top>
-				<width>266</width>
+				<width>276</width>
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<font>font20_title</font>
 				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -266,8 +265,8 @@
 			<control type="image">
 				<top>20</top>
 				<left>20</left>
-				<width>276</width>
-				<height>346</height>
+				<width>286</width>
+				<height>356</height>
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
@@ -275,61 +274,27 @@
 			<control type="image">
 				<top>18</top>
 				<left>18</left>
-				<width>280</width>
-				<height>350</height>
+				<width>290</width>
+				<height>360</height>
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
-				<top>376</top>
-				<width>276</width>
+				<top>386</top>
+				<width>286</width>
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
 				<visible>![Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]]</visible>
 			</control>
-			<control type="image">
-				<left>20</left>
-				<top>306</top>
-				<width>276</width>
-				<height>4</height>
-				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
-			</control>
-			<control type="progress">
-				<left>20</left>
-				<top>278</top>
-				<width>276</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.PercentPlayed</info>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
-			</control>
-			<control type="image">
-				<left>20</left>
-				<top>306</top>
-				<width>276</width>
-				<height>4</height>
-				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.Progress,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
-			</control>
-			<control type="progress">
-				<left>20</left>
-				<top>278</top>
-				<width>276</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.Progress</info>
-				<visible>!Integer.IsEqual(ListItem.Progress,0) + [String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)]</visible>
-				<visible>Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]</visible>
-			</control>
+			<include content="InfoWallProgressLayout" condition="Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]">
+				<param name="top" value="306" />
+				<param name="top_2" value="278" />
+				<param name="left" value="20" />
+				<param name="width" value="276" />
+			</include>
 			<control type="group">
 				<left>133</left>
 				<top>1</top>
@@ -662,7 +627,7 @@
 				<width>$PARAM[width]</width>
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) | !Integer.IsEqual(ListItem.Progress,0)</visible>
 			</control>
 			<control type="progress">
 				<left>$PARAM[left]</left>
@@ -674,14 +639,14 @@
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
-			<control type="image">
+			<!--<control type="image">
 				<left>$PARAM[left]</left>
-				<top>$PARAM[top]</top>
+				<top>$PARAM[top_2]</top>
 				<width>$PARAM[width]</width>
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
-			</control>
+			</control>-->
 			<control type="progress">
 				<left>$PARAM[left]</left>
 				<top>$PARAM[top]</top>

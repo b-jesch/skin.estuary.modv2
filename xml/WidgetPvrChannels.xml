@@ -107,34 +107,12 @@
                             <texture>$VAR[PVRStatusImageVar]</texture>
                             <visible>!$PARAM[showitemstatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
                         </control>
-                        <control type="image">
-                            <left>20</left>
-                            <top>330</top>
-                            <width>279</width>
-                            <height>4</height>
-                            <texture>dialogs/back.png</texture>
-                            <visible>!Integer.IsEqual(ListItem.Progress,0) | !Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-                        </control>
-                        <control type="progress">
-                            <left>20</left>
-                            <top>302</top>
-                            <width>279</width>
-                            <height>1</height>
-                            <texturebg></texturebg>
-                            <midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-                            <info>ListItem.Progress</info>
-                            <visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
-                        </control>
-                        <control type="progress">
-                            <left>20</left>
-                            <top>302</top>
-                            <width>279</width>
-                            <height>1</height>
-                            <texturebg></texturebg>
-                            <midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-                            <info>ListItem.PercentPlayed</info>
-                            <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-                        </control>
+                        <include content="InfoWallProgressLayout">
+                            <param name="top" value="305" />
+                            <param name="top_2" value="333" />
+                            <param name="left" value="20" />
+                            <param name="width" value="279" />
+                        </include>
                     </control>
                 </itemlayout>
                 <focusedlayout width="310" height="500" infoupdate="$PARAM[info_update]">
@@ -236,34 +214,12 @@
                             <texture>$VAR[PVRStatusImageVar]</texture>
                             <visible>!$PARAM[showitemstatus] + !Skin.HasSetting(ShowPVRStatus)</visible>
                         </control>
-                        <control type="image">
-                            <left>20</left>
-                            <top>330</top>
-                            <width>279</width>
-                            <height>4</height>
-                            <texture>dialogs/back.png</texture>
-                            <visible>!Integer.IsEqual(ListItem.Progress,0) | !Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-                        </control>
-                        <control type="progress">
-                            <left>20</left>
-                            <top>302</top>
-                            <width>279</width>
-                            <height>1</height>
-                            <texturebg></texturebg>
-                            <midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-                            <info>ListItem.Progress</info>
-                            <visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
-                        </control>
-                        <control type="progress">
-                            <left>20</left>
-                            <top>302</top>
-                            <width>279</width>
-                            <height>1</height>
-                            <texturebg></texturebg>
-                            <midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-                            <info>ListItem.PercentPlayed</info>
-                            <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-                        </control>
+                        <include content="InfoWallProgressLayout">
+                            <param name="top" value="305" />
+                            <param name="top_2" value="333" />
+                            <param name="left" value="20" />
+                            <param name="width" value="279" />
+                        </include>
                     </control>
                 </focusedlayout>
                 <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]" browse="$PARAM[browse]">$PARAM[content_path]</content>

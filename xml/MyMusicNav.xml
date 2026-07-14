@@ -23,7 +23,7 @@
 			<include>View_509_TripleLists</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
-				<visible>Control.Isvisible(54) | Control.IsVisible(55) | Control.IsVisible(505)</visible>
+				<visible>Control.Isvisible(50) | Control.Isvisible(54) | Control.IsVisible(55) | Control.IsVisible(505)</visible>
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
 			</control>
