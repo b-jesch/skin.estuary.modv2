@@ -438,7 +438,7 @@
 			<focusposition>7</focusposition>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
 			<orientation>vertical</orientation>
-			<onleft>9000</onleft>
+			<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
 			<onright>73</onright>
 			<onup>51</onup>
 			<ondown>51</ondown>
@@ -597,7 +597,7 @@
 			<focusposition>5</focusposition>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
 			<orientation>vertical</orientation>
-			<onleft>9000</onleft>
+			<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
 			<onright>73</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
@@ -792,7 +792,7 @@
 			<focusposition>3</focusposition>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
 			<orientation>vertical</orientation>
-			<onleft>9000</onleft>
+			<onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
 			<onright>73</onright>
 			<onup>53</onup>
 			<ondown>53</ondown>

@@ -85,8 +85,8 @@
 				<control type="image">
 					<left>-2</left>
 					<top>-2</top>
-					<width>306</width>
-					<height>306</height>
+					<width>316</width>
+					<height>316</height>
 					<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-musiclayout-nolabel.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -95,8 +95,8 @@
 				</control>
 				<control type="image">
 					<top>0</top>
-					<width>302</width>
-					<height>302</height>
+					<width>312</width>
+					<height>312</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -104,8 +104,8 @@
 				<control type="image">
 					<top>-6</top>
 					<left>-6</left>
-					<width>314</width>
-					<height>314</height>
+					<width>324</width>
+					<height>324</height>
 					<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -114,8 +114,8 @@
 				<control type="image">
 					<top>-6</top>
 					<left>-6</left>
-					<width>314</width>
-					<height>314</height>
+					<width>324</width>
+					<height>324</height>
 					<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 					<bordersize>20</bordersize>
 					<visible>$PARAM[focused]</visible>
@@ -127,7 +127,7 @@
 				<control type="image">
 					<left>-2</left>
 					<top>-2</top>
-					<width>306</width>
+					<width>316</width>
 					<height>390</height>
 					<texture colordiffuse="$VAR[BorderColorVar]">dialogs/border-musiclayout.png</texture>
 					<aspectratio>stretch</aspectratio>
@@ -137,7 +137,7 @@
 				</control>
 				<control type="image">
 					<top>0</top>
-					<width>302</width>
+					<width>312</width>
 					<height>386</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordersize>20</bordersize>
@@ -146,7 +146,7 @@
 				<control type="image">
 					<top>-6</top>
 					<left>-6</left>
-					<width>314</width>
+					<width>324</width>
 					<height>398</height>
 					<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -157,8 +157,8 @@
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>302</width>
-				<height>302</height>
+				<width>312</width>
+				<height>312</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
@@ -168,18 +168,18 @@
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>302</width>
-				<height>306</height>
+				<width>312</width>
+				<height>312</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
-				<aspectratio>scale</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
 				<visible>Window.IsVisible(script-globalsearch.xml) + !Container.Content(directors)</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>302</width>
-				<height>306</height>
+				<width>312</width>
+				<height>316</height>
 				<texture fallback="DefaultDirector.png" background="true">http://localhost:52307/getthumb&amp;title=$ESCINFO[ListItem.Label,, imdb]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
@@ -208,7 +208,7 @@
 			<control type="textbox">
 				<left>22</left>
 				<top>296</top>
-				<width>260</width>
+				<width>270</width>
 				<height>68</height>
 				<font>font12</font>
 				<align>center</align>
@@ -224,7 +224,7 @@
 				<control type="label">
 					<left>22</left>
 					<top>300</top>
-					<width>256</width>
+					<width>266</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font10</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -234,7 +234,7 @@
 				<control type="label">
 					<left>22</left>
 					<top>328</top>
-					<width>256</width>
+					<width>266</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10_bold</font>
 					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>

@@ -44,7 +44,8 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 22.0+piers ###
-- .0 start development for Kodi 22 (Piers)
+- .0 
+- start development for Kodi 22 (Piers)
 - code cleanup pt.1/2
 
 ### 21.4+omega ###
