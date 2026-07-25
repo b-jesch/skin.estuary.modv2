@@ -2,6 +2,13 @@
 
 **Some screenshots You'll find at the end of this Readme**
 
+## Important Notes ##
+
+With Kodi 22 (Piers), MikeSilvo introduced his revised addon, “Skin Shortcuts V3.” Existing installations of “Skin Shortcuts” 
+may be automatically updated. **Since this addon is not backward-compatible with the one used in this skin, the skin will not 
+work on Piers.** To use this skin on Piers anyway, you’ll need to downgrade the “Skin Shortcuts” addon to version 2.0.3 and 
+disable automatic updates for this add-on.
+
 ## Installation Notes ##
 
 It's strongly recommended to install the skin via the "Kodinerds Repo", as this is the only way to guarantee that additional 
