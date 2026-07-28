@@ -4,7 +4,24 @@
 	<backgroundcolor>background</backgroundcolor>
 	<include condition="Skin.HasSetting(powermenu_list)">Animation_DialogPopupOpenClose</include>
 	<controls>
-		<include condition="!Skin.HasSetting(powermenu_list)">DefaultBackground</include>
+		<control type="group">
+			<visible>!Skin.HasSetting(powermenu_list)</visible>
+			<include>FullScreenDimensions</include>
+			<control type="image">
+				<texture background="true">colors/black.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<include>DefaultBackground</include>
+			<control type="image">
+				<depth>DepthBackground</depth>
+				<aspectratio>scale</aspectratio>
+				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+				<texture background="true" colordiffuse="$VAR[Background_Opacity]">special://skin/extras/home-images/power.jpg</texture>
+				<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + [$EXP[widgetHasFocus] | Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)]</visible>
+			</control>
+		</control>
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<width>1900</width>
@@ -17,468 +34,36 @@
 				<width>100%</width>
 				<top>0</top>
 				<height>780</height>
-				<itemlayout height="260" width="380">
-					<control type="image">
-						<left>-5</left>
-						<width>390</width>
-						<height>270</height>
-						<texture>dialogs/dialog-bg-nobo.png</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
-					</control>
-					<control type="image">
-						<centerleft>50%</centerleft>
-						<top>30</top>
-						<width>300</width>
-						<height>140</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio align="center">keep</aspectratio>
-					</control>
-					<control type="textbox">
-						<left>25</left>
-						<top>170</top>
-						<width>350</width>
-						<height>80</height>
-						<font>font25_narrow</font>
-						<label>$INFO[ListItem.Label,[B],[/B]]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-					</control>
-				</itemlayout>
-				<focusedlayout height="230" width="380">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
-						<control type="image">
-							<left>-5</left>
-							<width>390</width>
-							<height>270</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<top>-6</top>
-							<left>-11</left>
-							<width>402</width>
-							<height>282</height>
-							<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<top>-6</top>
-							<left>-11</left>
-							<width>402</width>
-							<height>282</height>
-							<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
-							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(EnableGradientColor)</visible>
-						</control>
-						<control type="image">
-							<centerleft>50%</centerleft>
-							<top>30</top>
-							<width>300</width>
-							<height>140</height>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<aspectratio align="center">keep</aspectratio>
-						</control>
-						<control type="textbox">
-							<left>25</left>
-							<top>170</top>
-							<width>350</width>
-							<height>80</height>
-							<font>font25_narrow</font>
-							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>$LOCALIZE[210]</label>
-						<icon>DefaultShortcut.png</icon>
-						<onclick>Back</onclick>
-						<visible>Skin.HasSetting(touchmode)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13012]</label>
-						<icon>special://skin/extras/icons/Power menu/exit.png</icon> 
-						<onclick>Quit</onclick>
-						<visible>System.ShowExitButton</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13016]</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon>
-						<onclick>Powerdown</onclick>
-						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13016] (RPM)</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown_rpm.png</icon>
-						<onclick>Action(close)</onclick>
-						<onclick>RunAddon(service.rpm,poweroff)</onclick>
-						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13013]</label>
-						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset</onclick>
-						<visible>System.CanReboot</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31557]</label>
-						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
-						<onclick>RestartApp</onclick>
-						<visible>System.Platform.Linux | System.Platform.Windows</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31556]</label>
-						<icon>special://skin/extras/icons/Power menu/reboot_android.png</icon>
-						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
-						<onclick>Reboot</onclick>
-						<visible>System.CanReboot</visible>
-						<visible>System.PathExist("/dev/system") | System.PathExist("/dev/userdata") | System.PathExist("/dev/super")</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20150]</label>
-						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
-						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20150]</label>
-						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
-						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
-						<onclick>dialog.close(all,true)</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
-						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13011]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>Suspend</onclick>
-						<visible>System.CanSuspend</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13010]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>Hibernate</onclick>
-						<visible>System.CanHibernate</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
-						<icon>special://skin/extras/icons/Power menu/logoff.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>System.LogOff</onclick>
-						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
-						<visible>System.Loggedon</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$VAR[MasterModeLabel]</label>
-						<icon>special://skin/extras/icons/Power menu/mastermode.png</icon> 
-						<onclick>mastermode</onclick>
-						<visible>System.HasLocks</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13017]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
-						<onclick>InhibitIdleShutdown(true)</onclick>
-						<visible>System.HasShutdown +!System.IsInhibit</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13018]</label>
-						<icon>special://skin/extras/icons/Power menu/inhibitidleshutdown.png</icon> 
-						<onclick>InhibitIdleShutdown(false)</onclick>
-						<visible>System.HasShutdown + System.IsInhibit</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					 <item>
-						<label>$LOCALIZE[31209]</label>
-						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
-						<onclick>UpdateLibrary(video)</onclick>
-						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
-						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31213]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
-						<onclick>UpdateLibrary(video)</onclick>
-						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31210]</label>
-						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
-						<onclick>UpdateLibrary(music)</onclick>
-						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31214]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
-						<onclick>UpdateLibrary(music)</onclick>
-						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-				</content>
+				<include content="SettingsPanel">
+					<param name="icon_height" value="120" />
+					<param name="icon_width" value="300" />
+					<param name="aspect" value="keep" />
+				</include>
+				<include content="PowerMenuItems" />
 			</control>
 		</control>
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<left>0</left>
 			<right>0</right>
-			<centertop>50%</centertop>
+			<centertop>40%</centertop>
 			<include>OpenClose_Right</include>
 			<visible>Skin.HasSetting(powermenu_iconlist)</visible>
 			<control id="9000" type="wraplist">
 				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
+				<centertop>70%</centertop>
 				<width>1900</width>
 				<height>380</height>
 				<focusposition>2</focusposition>
 				<orientation>horizontal</orientation>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<itemlayout height="380" width="380">
-					<control type="image">
-						<left>0</left>
-						<width>380</width>
-						<height>380</height>
-						<texture>dialogs/dialog-bg-nobo.png</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
-					</control>
-					<control type="image">
-						<left>40</left>
-						<top>70</top>
-						<width>300</width>
-						<height>150</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="textbox">
-						<left>30</left>
-						<top>255</top>
-						<width>320</width>
-						<height>80</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font25_narrow</font>
-						<label>$INFO[ListItem.Label,[B],[/B]]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="380" width="380">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
-						<control type="image">
-							<left>0</left>
-							<width>380</width>
-							<height>380</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<top>-6</top>
-							<left>-6</left>
-							<width>392</width>
-							<height>392</height>
-							<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<top>-6</top>
-							<left>-6</left>
-							<width>392</width>
-							<height>392</height>
-							<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
-							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(EnableGradientColor)</visible>
-						</control>
-						<control type="image">
-							<left>40</left>
-							<top>70</top>
-							<width>300</width>
-							<height>150</height>
-							<aspectratio align="center">keep</aspectratio>
-							<texture>$INFO[ListItem.Icon]</texture>
-						</control>
-						<control type="textbox">
-							<left>30</left>
-							<top>255</top>
-							<width>320</width>
-							<height>80</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font25_narrow</font>
-							<label>$INFO[ListItem.Label,[B],[/B]]</label>
-						</control>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>$LOCALIZE[210]</label>
-						<icon>DefaultShortcut.png</icon>
-						<onclick>Back</onclick>
-						<visible>Skin.HasSetting(touchmode)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13012]</label>
-						<icon>special://skin/extras/icons/Power menu/exit.png</icon> 
-						<onclick>Quit</onclick>
-						<visible>System.ShowExitButton</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13016]</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
-						<onclick>Powerdown</onclick>
-						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13016] (RPM)</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown_rpm.png</icon>
-						<onclick>Action(close)</onclick>
-						<onclick>RunAddon(service.rpm,poweroff)</onclick>
-						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13013]</label>
-						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset</onclick>
-						<visible>System.CanReboot</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31557]</label>
-						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
-						<onclick>RestartApp</onclick>
-						<visible>System.Platform.Linux | System.Platform.Windows</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31556]</label>
-						<icon>special://skin/extras/icons/Power menu/reboot_android.png</icon>
-						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
-						<onclick>Reboot</onclick>
-						<visible>System.CanReboot</visible>
-						<visible>System.PathExist("/dev/system") | System.PathExist("/dev/userdata") | System.PathExist("/dev/super")</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20150]</label>
-						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
-						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20150]</label>
-						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
-						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
-						<onclick>dialog.close(all,true)</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
-						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13011]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>Suspend</onclick>
-						<visible>System.CanSuspend</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13010]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>Hibernate</onclick>
-						<visible>System.CanHibernate</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
-						<icon>special://skin/extras/icons/Power menu/logoff.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>System.LogOff</onclick>
-						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
-						<visible>System.Loggedon</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$VAR[MasterModeLabel]</label>
-						<icon>special://skin/extras/icons/Power menu/mastermode.png</icon> 
-						<onclick>mastermode</onclick>
-						<visible>System.HasLocks</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13017]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
-						<onclick>InhibitIdleShutdown(true)</onclick>
-						<visible>System.HasShutdown +!System.IsInhibit</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13018]</label>
-						<icon>special://skin/extras/icons/Power menu/inhibitidleshutdown.png</icon> 
-						<onclick>InhibitIdleShutdown(false)</onclick>
-						<visible>System.HasShutdown + System.IsInhibit</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					 <item>
-						<label>$LOCALIZE[31209]</label>
-						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
-						<onclick>UpdateLibrary(video)</onclick>
-						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
-						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31213]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
-						<onclick>UpdateLibrary(video)</onclick>
-						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31210]</label>
-						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
-						<onclick>UpdateLibrary(music)</onclick>
-						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31214]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
-						<onclick>UpdateLibrary(music)</onclick>
-						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-				</content>
+				<include content="SettingsPanel">
+					<param name="icon_height" value="120" />
+					<param name="icon_width" value="300" />
+					<param name="aspect" value="keep" />
+				</include>
+				<include content="PowerMenuItems" />
+				<include content="PowerMenuItems" />
 			</control>
 		</control>
 		<control type="group">
@@ -495,144 +80,7 @@
 			</include>
 			<control type="panel" id="9000">
 				<include>ButtonMenuList</include>
-				<content>
-					<item>
-						<label>$LOCALIZE[13012]</label>
-						<icon>special://skin/extras/icons/Power menu/exit.png</icon> 
-						<onclick>Quit</onclick>
-						<visible>System.ShowExitButton</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13016]</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
-						<onclick>Powerdown</onclick>
-						<visible>System.CanPowerDown + !System.AddonIsEnabled(service.rpm)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13016] (RPM)</label>
-						<icon>special://skin/extras/icons/Power menu/powerdown_rpm.png</icon>
-						<onclick>Action(close)</onclick>
-						<onclick>RunAddon(service.rpm,poweroff)</onclick>
-						<visible>System.CanPowerDown + System.AddonIsEnabled(service.rpm)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13013]</label>
-						<icon>special://skin/extras/icons/Power menu/reboot.png</icon>
-						<onclick>Reset</onclick>
-						<visible>System.CanReboot</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31557]</label>
-						<icon>special://skin/extras/icons/Power menu/restart.png</icon>
-						<onclick>RestartApp</onclick>
-						<visible>System.Platform.Linux | System.Platform.Windows</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31556]</label>
-						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
-						<onclick>Reboot</onclick>
-						<visible>System.CanReboot</visible>
-						<visible>System.PathExist("/dev/system") | System.PathExist("/dev/userdata") | System.PathExist("/dev/super")</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20150]</label>
-						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon> 
-						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20150]</label>
-						<icon>special://skin/extras/icons/Power menu/shutdowntimer.png</icon>
-						<onclick>RunAddon(service.sleepy.watchdog)</onclick>
-						<onclick>dialog.close(all,true)</onclick>
-						<visible>!System.HasAlarm(shutdowntimer) + System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
-						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer) + !System.AddonIsEnabled(service.sleepy.watchdog)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13011]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>Suspend</onclick>
-						<visible>System.CanSuspend</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13010]</label>
-						<icon>special://skin/extras/icons/Power menu/suspend.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>Hibernate</onclick>
-						<visible>System.CanHibernate</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
-						<icon>special://skin/extras/icons/Power menu/logoff.png</icon>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>System.LogOff</onclick>
-						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
-						<visible>System.Loggedon</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$VAR[MasterModeLabel]</label>
-						<icon>special://skin/extras/icons/Power menu/mastermode.png</icon> 
-						<onclick>mastermode</onclick>
-						<visible>System.HasLocks</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13017]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon> 
-						<onclick>InhibitIdleShutdown(true)</onclick>
-						<visible>System.HasShutdown +!System.IsInhibit</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[13018]</label>
-						<icon>special://skin/extras/icons/Power menu/inhibitidleshutdown.png</icon> 
-						<onclick>InhibitIdleShutdown(false)</onclick>
-						<visible>System.HasShutdown + System.IsInhibit</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					 <item>
-						<label>$LOCALIZE[31209]</label>
-						<icon>special://skin/extras/icons/Power menu/updatevideo.png</icon>
-						<onclick>UpdateLibrary(video)</onclick>
-						<visible>!Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
-						 <visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31213]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
-						<onclick>UpdateLibrary(video)</onclick>
-						<visible>Library.IsScanningVideo + [Library.HasContent(movies) | Library.HasContent(tvshows) | Library.HasContent(musicvideos)]</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31210]</label>
-						<icon>special://skin/extras/icons/Power menu/updatemusic.png</icon>
-						<onclick>UpdateLibrary(music)</onclick>
-						<visible>!Library.IsScanningMusic + Library.HasContent(music)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-					<item>
-						<label>$LOCALIZE[31214]</label>
-						<icon>special://skin/extras/icons/Power menu/cancel.png</icon>
-						<onclick>UpdateLibrary(music)</onclick>
-						<visible>Library.IsScanningMusic + Library.HasContent(music)</visible>
-						<visible>!Skin.HasSetting(ExtendedPowerMenu)</visible>
-					</item>
-				</content>
+				<include content="PowerMenuItems" />
 			</control>
 		</control>
 		<include condition="!Skin.HasSetting(powermenu_list)">TopBar</include>

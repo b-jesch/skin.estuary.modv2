@@ -180,9 +180,10 @@
 					</control>
 					<control type="textbox">
 						<left>585</left>
-						<top>490</top>
-						<height>200</height>
+						<top>550</top>
+						<height>100</height>
 						<right>50</right>
+						<align>center</align>
 						<label>$LOCALIZE[19055]</label>
 						<visible>String.IsEmpty(ListItem.Plot)</visible>
 					</control>
@@ -266,7 +267,7 @@
 				<width>476</width>
 				<height>716</height>
 				<fadetime>200</fadetime>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>scale</aspectratio>
 				<texture fallback="DefaultVideo.png" background="true">$VAR[IconWallPosterVar]</texture>
 			</control>
 			<control type="group">

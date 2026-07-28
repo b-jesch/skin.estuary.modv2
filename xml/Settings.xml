@@ -20,7 +20,11 @@
 				<pagecontrol>60</pagecontrol>
 				<onright>60</onright>
 				<onleft>60</onleft>
-				<include>SettingsPanel</include>
+				<include content="SettingsPanel">
+					<param name="icon_height">160</param>
+					<param name="icon_width">240</param>
+					<param name="aspect">scale</param>
+				</include>
 				<content>
 					<item>
 						<label>$LOCALIZE[20094]</label>
@@ -109,9 +113,7 @@
 			<param name="height">920</param>
 			<param name="leftright">9000</param>
 		</include>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5]" />
-		</include>
+		<include>TopBar</include>
 		<include>BottomBar</include>
 	</controls>
 </window>

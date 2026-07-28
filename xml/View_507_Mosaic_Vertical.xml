@@ -58,18 +58,6 @@
 							<texture fallback="DefaultNoPreview.png" background="true">$VAR[ShiftThumbVar]</texture>
 							<bordersize>20</bordersize>
 							<aspectratio>scale</aspectratio>
-							<visible>Skin.HasSetting(show_borders)</visible>
-						</control>
-						<control type="image">
-							<left>10</left>
-							<top>10</top>
-							<width>406</width>
-							<height>255</height>
-							<texture fallback="DefaultNoPreview.png" background="true">$VAR[ShiftThumbVar]</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-							<aspectratio>scale</aspectratio>
-							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -128,18 +116,6 @@
 							<texture fallback="DefaultAudio.png" background="true">$VAR[InfoWallThumbVar]</texture>
 							<bordersize>20</bordersize>
 							<aspectratio>scale</aspectratio>
-							<visible>Skin.HasSetting(show_borders)</visible>
-						</control>
-						<control type="image">
-							<left>10</left>
-							<top>10</top>
-							<width>255</width>
-							<height>255</height>
-							<texture fallback="DefaultAudio.png" background="true">$VAR[InfoWallThumbVar]</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-							<aspectratio>scale</aspectratio>
-							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>30</left>
@@ -243,21 +219,18 @@
 						<top>10</top>
 						<width>240</width>
 						<height>340</height>
-						<texture fallback="DefaultVideo.png" background="true">$VAR[ShiftThumbVar]</texture>
+						<texture fallback="DefaultVideo" background="true">colors/black.png</texture>
 						<bordersize>20</bordersize>
-						<aspectratio>scale</aspectratio>
-						<visible>Skin.HasSetting(show_borders)</visible>
-					</control>
+						<aspectratio>stretch</aspectratio>
+					</control>>
 					<control type="image">
 						<left>10</left>
 						<top>10</top>
 						<width>240</width>
 						<height>340</height>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[ShiftThumbVar]</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 						<aspectratio>scale</aspectratio>
-						<visible>!Skin.HasSetting(show_borders)</visible>
 					</control>
 					<control type="image">
 						<left>30</left>
