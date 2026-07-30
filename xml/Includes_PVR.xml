@@ -1404,7 +1404,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
 					<fadetime>200</fadetime>
-				</control>>
+				</control>
 				<include content="BusyPvrArtworkSpinner">
 					<param name="top" value="82" />
 					<param name="left" value="130" />
