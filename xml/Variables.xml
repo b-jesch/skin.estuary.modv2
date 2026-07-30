@@ -222,8 +222,8 @@
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart)) + Skin.HasSetting(prefer_PvrFanart)">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.poster))">$INFO[Window(Home).Property(PVR.Artwork.poster)]</value>
 		<value condition="!String.HasSetting(Skin_enablePvrArtwork) + !String.IsEmpty(Window(Home).Property(PVR.Artwork.fanart))">$INFO[Window(Home).Property(PVR.Artwork.fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
-		<value>$INFO[ListItem.Icon]</value>
+		<value condition="!String.IsEmpty(Container(11).ListItem.EpgEventIcon)">$INFO[Container(11).ListItem.EpgEventIcon]</value>
+		<value>$INFO[Container(11).ListItem.Icon]</value>
 	</variable>
 	<variable name="PVRArtworksVarOSD">
 		<value condition="!Window.IsVisible(tvchannels)">$VAR[PVRArtworksVar]</value>
