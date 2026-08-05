@@ -1015,17 +1015,12 @@
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.HdrType,flags/videoresolution/,.png]" />
 					<param name="width" value="58" />
-					<param name="visible" value="[String.Contains($PARAM[infolabel_prefix]ListItem.HdrType,hdr) | String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hlg)] + !String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,.hdrplus.) + !Skin.HasSetting(show_mediacolordepthflag)" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="flags/videoresolution/hdrplus.png" />
-					<param name="width" value="92" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,.hdrplus.) + !Skin.HasSetting(show_mediacolordepthflag)" />
+					<param name="visible" value="[String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hdr10) | String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hlg)] + !Skin.HasSetting(show_mediacolordepthflag)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.HdrType,flags/videoresolution/,.png]" />
 					<param name="width" value="92" />
-					<param name="visible" value="String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,dolbyvision) + !Skin.HasSetting(show_mediacolordepthflag)" />
+					<param name="visible" value="[String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,dolbyvision) | String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hdr10plus)] + !Skin.HasSetting(show_mediacolordepthflag)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
@@ -1481,7 +1476,7 @@
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.HdrType,flags/videoresolution/,.png]" />
 					<param name="width" value="58" />
-					<param name="visible" value="[String.Contains($PARAM[infolabel_prefix]ListItem.HdrType,hdr) | String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hlg)] + !String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,.hdrplus.) + !Skin.HasSetting(show_mediacolordepthflag)" />
+					<param name="visible" value="[String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hdr10) | String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hlg)] + !Skin.HasSetting(show_mediacolordepthflag)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/videoresolution/hdrplus.png" />
@@ -1491,7 +1486,7 @@
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.HdrType,flags/videoresolution/,.png]" />
 					<param name="width" value="92" />
-					<param name="visible" value="String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,dolbyvision) + !Skin.HasSetting(show_mediacolordepthflag)" />
+					<param name="visible" value="[String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,dolbyvision) | String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hdr10plus)] + !Skin.HasSetting(show_mediacolordepthflag)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
@@ -3930,7 +3925,7 @@
 						<control type="image" id="4393">
 							<aligny>top</aligny>
 							<aspectratio align="left">keep</aspectratio>
-							<texture background="true" diffuse="overlays/cdart_mask.png">$VAR[PlayerInfoDiscArtVar]</texture>
+							<texture background="true" diffuse="overlays/cdart_mask2.png">$VAR[PlayerInfoDiscArtVar]</texture>
 						</control>
 						<control type="label">
 							<left>70</left>
@@ -3942,6 +3937,7 @@
 							<font>font10</font>
 							<label>$VAR[MusicPlayerDiscTitleVar]</label>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<wrapmultiline>true</wrapmultiline>
 							<visible>String.IsEqual(Control.GetLabel(4393),osd/cd.png)</visible>
 						</control>
@@ -3954,7 +3950,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<label>$VAR[MusicPlayerDiscAlbumVar]</label>
-							<textcolor>black</textcolor>
+							<textcolor>white</textcolor>
 							<wrapmultiline>true</wrapmultiline>
 							<visible>String.IsEqual(Control.GetLabel(4393),osd/cd.png)</visible>
 						</control>
@@ -4242,17 +4238,12 @@
 							</include>
 							<include content="MediaFlag">
 								<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
-								<param name="visible" value="[String.Contains(VideoPlayer.HdrType,hdr) | String.Contains(VideoPlayer.HdrType,hlg)] + !String.Contains(Player.Filenameandpath,.hdrplus.) + !String.IsEqual(Player.Process(video.source.hdr.type.raw),2) + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="[String.IsEqual(VideoPlayer.HdrType,hdr) | String.Contains(VideoPlayer.HdrType,hlg)] + !String.IsEqual(Player.Process(video.source.hdr.type.raw),2) + !Window.IsVisible(visualisation)" />
 								<param name="width" value="58" />
 							</include>
 							<include content="MediaFlag">
-								<param name="texture" value="flags/videoresolution/hdrplus.png" />
-								<param name="visible" value="[String.Contains(Player.Filenameandpath,.hdrplus.) | String.IsEqual(Player.Process(video.source.hdr.type.raw),2)] + !Window.IsVisible(visualisation)" />
-								<param name="width" value="92" />
-							</include>
-							<include content="MediaFlag">
 								<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
-								<param name="visible" value="String.IsEqual(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="[String.IsEqual(VideoPlayer.HdrType,dolbyvision) | String.IsEqual(VideoPlayer.HdrType,hdr10plus)] + !Window.IsVisible(visualisation)" />
 								<param name="width" value="94" />
 							</include>
 							<include content="MediaFlag">

@@ -240,12 +240,12 @@
 					<include content="MediaFlag">
 						<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
 						<param name="width" value="58" />
-						<param name="visible" value="String.Contains(VideoPlayer.HdrType,hdr) | String.IsEqual(VideoPlayer.HdrType,hlg)" />
+						<param name="visible" value="String.IsEqual(VideoPlayer.HdrType,hdr10) | String.IsEqual(VideoPlayer.HdrType,hlg)" />
 					</include>
 					<include content="MediaFlag">
 						<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
 						<param name="width" value="92" />
-						<param name="visible" value="String.IsEqual(VideoPlayer.HdrType,dolbyvision)" />
+						<param name="visible" value="String.IsEqual(VideoPlayer.HdrType,dolbyvision) | String.IsEqual(VideoPlayer.HdrType,hdr10plus)" />
 					</include>
 					<include content="MediaFlag">
 						<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />

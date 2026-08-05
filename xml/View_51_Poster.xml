@@ -135,7 +135,7 @@
 							<left>630</left>
 							<right>50</right>
 							<height>40</height>
-							<label>$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]</label>
+							<label>$VAR[ListLabelVar]</label>
 							<font>font45_title</font>
 							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<scroll>true</scroll>

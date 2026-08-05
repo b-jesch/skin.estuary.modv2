@@ -46,7 +46,9 @@ supports animated poster only.
 ### 22.0+piers ###
 - .0 
 - start development for Kodi 22 (Piers)
-- code cleanup pt.1/2
+- code cleanup pt.1/2/3/4
+- Power menu updated
+- Mediaflags to piers updated
 
 ### 21.4+omega ###
 - .5

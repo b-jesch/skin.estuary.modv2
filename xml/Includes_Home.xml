@@ -2222,35 +2222,6 @@
 							<bordersize>20</bordersize>
 							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
-						<control type="group">
-							<visible>Skin.HasSetting(HideWidgetLabels)</visible>
-							<control type="image">
-								<left>35</left>
-								<bottom>50</bottom>
-								<height>70</height>
-								<width>250</width>
-								<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
-							</control>
-							<control type="label">
-								<left>50</left>
-								<bottom>97</bottom>
-								<height>20</height>
-								<width>220</width>
-								<align>center</align>
-								<label>$INFO[ListItem.Label]</label>
-								<font>font12</font>
-								<textcolor>$VAR[SkinColorVar]</textcolor>
-							</control>
-							<control type="label">
-								<left>50</left>
-								<bottom>67</bottom>
-								<height>20</height>
-								<width>220</width>
-								<align>center</align>
-								<label>$INFO[ListItem.Label2]</label>
-								<font>font12</font>
-							</control>
-						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout width="314" height="430">
@@ -2298,35 +2269,6 @@
 							<texture background="true" fallback="DefaultActorSolid.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio>scale</aspectratio>
 							<bordersize>20</bordersize>
-						</control>
-						<control type="group">
-							<visible>!Control.HasFocus($PARAM[list_id]) + Skin.HasSetting(HideWidgetLabels)</visible>
-							<control type="image">
-								<left>35</left>
-								<bottom>50</bottom>
-								<height>70</height>
-								<width>250</width>
-								<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
-							</control>
-							<control type="label">
-								<left>50</left>
-								<bottom>97</bottom>
-								<height>20</height>
-								<width>220</width>
-								<align>center</align>
-								<label>$INFO[ListItem.Label]</label>
-								<font>font12</font>
-								<textcolor>$VAR[SkinColorVar]</textcolor>
-							</control>
-							<control type="label">
-								<left>50</left>
-								<bottom>67</bottom>
-								<height>20</height>
-								<width>220</width>
-								<align>center</align>
-								<label>$INFO[ListItem.Label2]</label>
-								<font>font12</font>
-							</control>
 						</control>
 					</control>
 				</focusedlayout>
