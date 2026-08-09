@@ -4212,6 +4212,14 @@
 								<param name="texture" value="flags/st_language.png" />
 								<param name="visible" value="!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled" />
 							</include>
+							<include content="MediaFlag">
+									<param name="width" value="104" />
+									<param name="label_width" value="64" />
+									<param name="label_left" value="40" />
+									<param name="label" value="ext" />
+									<param name="texture" value="flags/st_language.png" />
+									<param name="visible" value="String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled" />
+								</include>
 						</control>
 						<include content="MediaFlagPvrOsd">
 							<param name="bottom" value="145"/>
