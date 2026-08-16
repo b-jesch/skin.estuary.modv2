@@ -67,7 +67,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12</font>
+				<font>font10_bold</font>
 				<label>$INFO[ListItem.Label]</label>
 				<scroll>$PARAM[focused]</scroll>
 			</control>
@@ -210,7 +210,7 @@
 				<top>296</top>
 				<width>270</width>
 				<height>68</height>
-				<font>font12</font>
+				<font>font10_bold</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
@@ -405,7 +405,7 @@
 					<top>186</top>
 					<width>266</width>
 					<height>80</height>
-					<font>font12</font>
+					<font>font10_bold</font>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$PARAM[label]</label>
@@ -419,7 +419,7 @@
 						<top>195</top>
 						<width>266</width>
 						<label>$PARAM[sub_label]</label>
-						<font>font12</font>
+						<font>font10_bold</font>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<scroll>$PARAM[focused]</scroll>
 						<align>center</align>
@@ -1341,24 +1341,11 @@
 				<width>505</width>
 				<height>43</height>
 				<label>$VAR[ListLabelVar]</label>
-				<font>font25_title</font>
+				<font>font10_bold</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
 				<visible>Container.Content(movies) | Container.Content(sets)</visible>
-				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
-			</control>
-			<control type="label">
-				<left>73</left>
-				<top>302</top>
-				<width>505</width>
-				<height>43</height>
-				<label>$INFO[ListItem.Year, (,)]</label>
-				<font>font25_title</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<scroll>$PARAM[focused]</scroll>
-				<visible>Container.Content(movies) + !String.IsEqual(ListItem.DBType,set) + Skin.HasSetting(hide_pubyear)</visible>
 				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="label">
@@ -1367,7 +1354,7 @@
 				<width>536</width>
 				<height>43</height>
 				<label>$INFO[ListItem.Label]</label>
-				<font>font25_title</font>
+				<font>font10_bold</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
@@ -1379,7 +1366,7 @@
 				<width>365</width>
 				<height>43</height>
 				<label>$INFO[ListItem.Label]</label>
-				<font>font25_title</font>
+				<font>font10_bold</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
@@ -1391,8 +1378,8 @@
 				<top>302</top>
 				<width>365</width>
 				<height>43</height>
-				<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
-				<font>font25_title</font>
+				<label>$VAR[ListLabelVar]</label>
+				<font>font10_bold</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
@@ -1412,7 +1399,7 @@
 				<top>302</top>
 				<width>120</width>
 				<height>43</height>
-				<font>font25_title</font>
+				<font>font10_bold</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$VAR[BannerLabel2Var]</label>
