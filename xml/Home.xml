@@ -735,29 +735,7 @@
 						<orientation>vertical</orientation>
 						<pagecontrol>14010</pagecontrol>
 						<visible>Integer.IsGreater(Container(14100).NumItems,0) | Container(14100).IsUpdating</visible>
-						<itemlayout width="340" height="410" condition="Skin.HasSetting(HideWidgetLabels)">
-							<control type="group">
-								<left>70</left>
-								<include content="InfoWallMusicLayout">
-									<param name="fallback_image" value="DefaultFavourites.png" />
-									<param name="focused" value="false" />
-									<param name="sub_label" value="$INFO[Container(14100).ListItem.OriginalTitle]" />
-								</include>
-							</control>
-						</itemlayout>
-						<focusedlayout width="340" height="410" condition="Skin.HasSetting(HideWidgetLabels)">
-							<control type="group">
-								<depth>DepthContentPopout</depth>
-								<left>70</left>       					 
-								<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
-								<include content="InfoWallMusicLayout">
-									<param name="fallback_image" value="DefaultFavourites.png" />
-									<param name="focused" value="true" />
-									<param name="sub_label" value="$INFO[Container(14100).ListItem.OriginalTitle]" />
-								</include>
-							</control>
-						</focusedlayout>
-						<itemlayout width="340" height="340" condition="!Skin.HasSetting(HideWidgetLabels)">
+						<itemlayout width="340" height="340">
 							<control type="group">
 								<left>70</left>
 								<include content="InfoWallMusicLayout">
@@ -766,7 +744,7 @@
 								</include>
 							</control>
 						</itemlayout>
-						<focusedlayout width="340" height="340" condition="!Skin.HasSetting(HideWidgetLabels)">
+						<focusedlayout width="340" height="340">
 							<control type="group">
 								<depth>DepthContentPopout</depth>
 								<left>70</left>       					 

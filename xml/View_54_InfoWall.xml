@@ -67,7 +67,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12</font>
+				<font>font10_bold</font>
 				<label>$INFO[ListItem.Label]</label>
 				<scroll>$PARAM[focused]</scroll>
 			</control>
@@ -210,7 +210,7 @@
 				<top>296</top>
 				<width>270</width>
 				<height>68</height>
-				<font>font12</font>
+				<font>font10_bold</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
@@ -405,7 +405,7 @@
 					<top>186</top>
 					<width>266</width>
 					<height>80</height>
-					<font>font12</font>
+					<font>font10_bold</font>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$PARAM[label]</label>
@@ -419,7 +419,7 @@
 						<top>195</top>
 						<width>266</width>
 						<label>$PARAM[sub_label]</label>
-						<font>font12</font>
+						<font>font10_bold</font>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<scroll>$PARAM[focused]</scroll>
 						<align>center</align>
@@ -692,7 +692,7 @@
 		<param name="infolabels">false</param>
 		<definition>
 			<control type="group">
-				<visible>[String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(animatedposter))]</visible>
+				<visible>String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(animatedposter))</visible>
 				<control type="image">
 					<left>13</left>
 					<top>-12</top>
@@ -741,7 +741,7 @@
 					<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>$PARAM[focused]</visible>
+					<visible>$PARAM[focused] + !Skin.HasSetting(EnableGradientColor)</visible>
 				</control>
 				<control type="image">
 					<left>9</left>
@@ -750,8 +750,7 @@
 					<height>412</height>
 					<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 					<bordersize>20</bordersize>
-					<visible>$PARAM[focused]</visible>
-					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+					<visible>$PARAM[focused] + Skin.HasSetting(EnableGradientColor)</visible>
 				</control>
 				<control type="textbox">
 					<left>40</left>
@@ -764,17 +763,7 @@
 					<label>$VAR[ListLabelVar]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
 					<visible>!ListItem.IsParentFolder</visible>
-					<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)  + String.IsEqual(listitem.dbtype,genre)]</visible>
-				</control>
-				<control type="image">
-					<left>24</left>
-					<top>-1</top>
-					<width>272</width>
-					<height>270</height>
-					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
-					<aspectratio>scale</aspectratio>
-					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(HideWidgetLabels) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+					<visible>!Window.IsVisible(Home)  + !String.IsEqual(listitem.dbtype,genre)]</visible>
 				</control>
 				<control type="image">
 					<left>15</left>
@@ -818,13 +807,12 @@
 						<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>$PARAM[focused]</visible>
+						<visible>$PARAM[focused] + !Skin.HasSetting(EnableGradientColor)</visible>
 					</control>
 					<control type="image">
 						<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 						<bordersize>20</bordersize>
-						<visible>$PARAM[focused]</visible>
-						<visible>Skin.HasSetting(EnableGradientColor)</visible>
+						<visible>$PARAM[focused] + Skin.HasSetting(EnableGradientColor)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -913,12 +901,11 @@
 			<control type="group">
 				<left>35</left>
 				<top>290</top>
-				<visible>![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+				<visible>String.IsEqual($VAR[WallWatchedIconVar],) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				<control type="image">
 					<width>80</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg.png</texture>
-					<visible>$EXP[WatchedIconVisibility] | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1354,24 +1341,11 @@
 				<width>505</width>
 				<height>43</height>
 				<label>$VAR[ListLabelVar]</label>
-				<font>font25_title</font>
+				<font>font10_bold</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
 				<visible>Container.Content(movies) | Container.Content(sets)</visible>
-				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
-			</control>
-			<control type="label">
-				<left>73</left>
-				<top>302</top>
-				<width>505</width>
-				<height>43</height>
-				<label>$INFO[ListItem.Year, (,)]</label>
-				<font>font25_title</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<scroll>$PARAM[focused]</scroll>
-				<visible>Container.Content(movies) + !String.IsEqual(ListItem.DBType,set) + Skin.HasSetting(hide_pubyear)</visible>
 				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="label">
@@ -1380,7 +1354,7 @@
 				<width>536</width>
 				<height>43</height>
 				<label>$INFO[ListItem.Label]</label>
-				<font>font25_title</font>
+				<font>font10_bold</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
@@ -1392,7 +1366,7 @@
 				<width>365</width>
 				<height>43</height>
 				<label>$INFO[ListItem.Label]</label>
-				<font>font25_title</font>
+				<font>font10_bold</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
@@ -1404,8 +1378,8 @@
 				<top>302</top>
 				<width>365</width>
 				<height>43</height>
-				<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
-				<font>font25_title</font>
+				<label>$VAR[ListLabelVar]</label>
+				<font>font10_bold</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>$PARAM[focused]</scroll>
@@ -1425,7 +1399,7 @@
 				<top>302</top>
 				<width>120</width>
 				<height>43</height>
-				<font>font25_title</font>
+				<font>font10_bold</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$VAR[BannerLabel2Var]</label>
@@ -1549,7 +1523,7 @@
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos) | Container.Content(games) | Container.Content(favourites)</visible>
-				<itemlayout height="460" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
+				<itemlayout height="460" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
 					<control type="group">
 						<left>30</left>
 						<top>120</top>
@@ -1558,7 +1532,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
+				<focusedlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
@@ -1592,14 +1566,14 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)]">
+				<itemlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums)">
 					<control type="group">
 						<top>150</top>
 						<left>40</left>
 						<include>InfoWallMusicLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)]">
+				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
