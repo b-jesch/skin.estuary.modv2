@@ -82,7 +82,7 @@
 	<!-- Expression if special versions of Kodi is installed (cpm, avdvplus, u3k) -->
 	<expression name="special_build">String.Contains(System.OSVersionInfo,(cpm)) | String.Contains(System.OSVersionInfo,(community)) | String.Contains(System.OSVersionInfo,(u3k)) | String.Contains(System.OSVersionInfo,(avdvplus)) | String.Contains(System.OSVersionInfo,(p3i))</expression>
 	<!-- Expression if icons for watched states should be shown -->
-	<expression name="WatchedIconVisibility">Integer.IsGreater(ListItem.Playcount,0) | ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.IsPlaying | ListItem.IsResumable | ListItem.HasArchive | ListItem.HasVideoVersions</expression>
+	<expression name="hasStatusIcon">Integer.IsGreater(ListItem.Playcount,0) | ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.IsPlaying | ListItem.IsResumable | ListItem.HasArchive | ListItem.HasVideoVersions</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -1477,11 +1477,6 @@
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.HdrType,flags/videoresolution/,.png]" />
 					<param name="width" value="58" />
 					<param name="visible" value="[String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hdr10) | String.IsEqual($PARAM[infolabel_prefix]ListItem.HdrType,hlg)] + !Skin.HasSetting(show_mediacolordepthflag)" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="flags/videoresolution/hdrplus.png" />
-					<param name="width" value="92" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,.hdrplus.) + !Skin.HasSetting(show_mediacolordepthflag)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.HdrType,flags/videoresolution/,.png]" />
@@ -4238,7 +4233,7 @@
 							</include>
 							<include content="MediaFlag">
 								<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
-								<param name="visible" value="[String.IsEqual(VideoPlayer.HdrType,hdr) | String.Contains(VideoPlayer.HdrType,hlg)] + !String.IsEqual(Player.Process(video.source.hdr.type.raw),2) + !Window.IsVisible(visualisation)" />
+								<param name="visible" value="[String.IsEqual(VideoPlayer.HdrType,hdr10) | String.Contains(VideoPlayer.HdrType,hlg)] + !String.IsEqual(Player.Process(video.source.hdr.type.raw),2) + !Window.IsVisible(visualisation)" />
 								<param name="width" value="58" />
 							</include>
 							<include content="MediaFlag">
@@ -4348,6 +4343,14 @@
 								<param name="label" value="$INFO[VideoPlayer.SubtitlesLanguage]" />
 								<param name="texture" value="flags/st_language.png" />
 								<param name="visible" value="!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled" />
+							</include>
+							<include content="MediaFlag">
+								<param name="width" value="104" />
+								<param name="label_width" value="64" />
+								<param name="label_left" value="40" />
+								<param name="label" value="ext" />
+								<param name="texture" value="flags/st_language.png" />
+								<param name="visible" value="String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled" />
 							</include>
 						</control>
 						<include content="MediaFlagPvrOsd">

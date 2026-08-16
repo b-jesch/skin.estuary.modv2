@@ -165,12 +165,6 @@
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="false" />
 						</include>
-						<include content="InfoWallProgressLayout" condition="Skin.HasSetting(HideWidgetLabels)">
-							<param name="top" value="350" />
-							<param name="top_2" value="378" />
-							<param name="left" value="20" />
-							<param name="width" value="275" />
-						</include>
 					</control>
 				</itemlayout>
 				<focusedlayout width="310" height="486">
@@ -181,12 +175,6 @@
 						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />
-						</include>
-						<include content="InfoWallProgressLayout" condition="Skin.HasSetting(HideWidgetLabels)">
-							<param name="top" value="350" />
-							<param name="top_2" value="378" />
-							<param name="left" value="20" />
-							<param name="width" value="275" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -339,7 +327,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<left>-2</left>
@@ -351,7 +339,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<top>10</top>
@@ -360,7 +348,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<top>10</top>
@@ -369,7 +357,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
 				<visible>Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<top>10</top>
@@ -379,7 +367,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!Skin.HasSetting(show_borders)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<top>10</top>
@@ -389,7 +377,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!Skin.HasSetting(show_borders)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<top>4</top>
@@ -400,7 +388,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<top>4</top>
@@ -411,7 +399,7 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<top>4</top>
@@ -422,7 +410,7 @@
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<top>4</top>
@@ -433,7 +421,7 @@
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<visible>Skin.HasSetting(EnableGradientColor)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -442,7 +430,7 @@
 				<height>156</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWatchThumbVar]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -451,7 +439,7 @@
 				<height>197</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWatchThumbVar]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -461,7 +449,7 @@
 				<texture colordiffuse="4DFFFFFF">dialogs/clearlogo-widget-back.png</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 				<visible>![String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 			</control>
 			<control type="image">
@@ -472,7 +460,7 @@
 				<texture background="true">$VAR[LibraryClearLogoVar]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<left>136</left>
@@ -481,7 +469,7 @@
 				<height>70</height>
 				<texture flipx="true">overlays/overlay-bg.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
-				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+				<animation effect="slide" end="74,41" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
 			</control>
 			<control type="label">
 				<left>31</left>
@@ -491,7 +479,7 @@
 				<font>font20_title</font>
 				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<align>right</align>
-				<animation effect="slide" end="74,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+				<animation effect="slide" end="74,41" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -500,7 +488,7 @@
 				<height>70</height>
 				<texture>overlays/overlay-bg.png</texture>
 				<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-				<animation effect="slide" end="0,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+				<animation effect="slide" end="0,41" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -508,7 +496,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
-				<animation effect="slide" end="0,41" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+				<animation effect="slide" end="0,41" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
 			</control>
 			<control type="textbox">
 				<left>28</left>
@@ -520,11 +508,11 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Window.IsActive(videos)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(videos)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 				<control type="label">
 					<left>29</left>
 					<top>195</top>
@@ -553,7 +541,7 @@
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -562,7 +550,7 @@
 				<height>4</height>
 				<texture>dialogs/back.png</texture>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="progress">
 				<left>20</left>
@@ -573,7 +561,7 @@
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				<visible>![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
 			<control type="progress">
 				<left>20</left>
@@ -584,12 +572,12 @@
 				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				<visible>[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]</visible>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
 			<control type="group">
 				<left>133</left>
 				<top>11</top>
-				<animation effect="slide" end="37,0" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+				<animation effect="slide" end="37,0" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircle</include>
 			</control>
 		</definition>
@@ -619,18 +607,10 @@
 				<left>-10</left>
 				<top>105</top>
 				<right>0</right>
-				<include content="ItemHeight" condition="Skin.HasSetting(HideWidgetLabels)">
-					<param name="height" value="400"/>
-				</include>
-				<include content="ItemHeight" condition="!Skin.HasSetting(HideWidgetLabels)">
-					<param name="height" value="350"/>
-				</include>
-				<include content="WidgetListCommon">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
+				<height>350</height>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500" condition="![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
+				<itemlayout width="310" height="500" condition="!Window.IsVisible(Home)">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -642,7 +622,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500" condition="![!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
+				<focusedlayout width="310" height="500" condition="!Window.IsVisible(Home)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -660,7 +640,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout width="390" height="400" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
+				<itemlayout width="390" height="400" condition="Window.IsVisible(Home)">
 					<control type="group">
 						<left>70</left>
 						<top>0</top>
@@ -672,7 +652,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="390" height="400" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">
+				<focusedlayout width="390" height="400" condition="Window.IsVisible(Home)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -902,7 +882,7 @@
 							<height>$PARAM[icon_height]</height>
 							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
-							<animation effect="slide" end="0,26" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+							<animation effect="slide" end="0,26" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
 						</control>
 					</control>
 				</itemlayout>
@@ -946,7 +926,7 @@
 							<height>$PARAM[icon_height]</height>
 							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
-							<animation effect="slide" end="0,26" time="0" condition="[!Skin.HasSetting(HideWidgetLabels) + Window.IsVisible(Home)]">Conditional</animation>
+							<animation effect="slide" end="0,26" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
 						</control>
 					</control>
 				</focusedlayout>
@@ -2496,51 +2476,6 @@
 							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="group">
-							<visible>Skin.HasSetting(HideWidgetLabels) + !$PARAM[hidelabel]</visible>
-							<control type="image">
-								<left>35</left>
-								<bottom>50</bottom>
-								<height>70</height>
-								<width>250</width>
-								<texture background="true" colordiffuse="EFFFFFFF">colors/black.png</texture>
-							</control>
-							<control type="textbox">
-								<left>35</left>
-								<bottom>50</bottom>
-								<width>240</width>
-								<height>65</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>font25_narrow</font>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-								<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
-								<visible>$PARAM[textbox]</visible>
-							</control>
-							<control type="group">
-								<visible>!$PARAM[textbox]</visible>
-								<control type="label">
-									<left>55</left>
-									<bottom>97</bottom>
-									<height>20</height>
-									<width>220</width>
-									<align>center</align>
-									<label>$INFO[ListItem.Label]</label>
-									<font>font12</font>
-									<textcolor>$VAR[SkinColorVar]</textcolor>
-								</control>
-								<control type="label">
-									<left>55</left>
-									<bottom>67</bottom>
-									<height>20</height>
-									<width>220</width>
-									<align>center</align>
-									<label>$INFO[ListItem.Label2]</label>
-									<font>font12</font>
-								</control>
-							</control>>
-						</control>
-						<control type="group">
 							<top>10</top>
 							<left>35</left>
 							<width>250</width>
@@ -2563,7 +2498,7 @@
 						<control type="group">
 							<top>10</top>
 							<right>-40</right>
-							<visible>ListItem.IsResumable | Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+							<visible>String.IsEqual($VAR[WallWatchedIconVar],)</visible>
 							<control type="image">
 								<right>0</right>
 								<top>0</top>
@@ -2632,51 +2567,6 @@
 							<texture background="true" fallback="$PARAM[fallback]">$PARAM[icon]</texture>
 							<aspectratio>scale</aspectratio>
 							<bordersize>20</bordersize>
-						</control>
-						<control type="group">
-							<visible>Skin.HasSetting(HideWidgetLabels) + !$PARAM[hidelabel]</visible>
-							<control type="image">
-								<left>35</left>
-								<bottom>50</bottom>
-								<height>70</height>
-								<width>250</width>
-								<texture background="true" colordiffuse="EFFFFFFF">colors/black.png</texture>
-							</control>
-							<control type="textbox">
-								<left>35</left>
-								<bottom>50</bottom>
-								<width>240</width>
-								<height>65</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>font25_narrow</font>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-								<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
-								<visible>$PARAM[textbox]</visible>
-							</control>
-							<control type="group">
-								<visible>!$PARAM[textbox]</visible>
-								<control type="label">
-									<left>55</left>
-									<bottom>97</bottom>
-									<height>20</height>
-									<width>220</width>
-									<align>center</align>
-									<label>$INFO[ListItem.Label]</label>
-									<font>font12</font>
-									<textcolor>$VAR[SkinColorVar]</textcolor>
-								</control>
-								<control type="label">
-									<left>55</left>
-									<bottom>67</bottom>
-									<height>20</height>
-									<width>220</width>
-									<align>center</align>
-									<label>$INFO[ListItem.Label2]</label>
-									<font>font12</font>
-								</control>
-							</control>>
 						</control>
 						<control type="group">
 							<top>10</top>
