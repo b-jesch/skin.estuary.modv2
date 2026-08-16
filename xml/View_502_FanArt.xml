@@ -58,33 +58,12 @@
 				</control>
 				<control type="image">
 					<left>48</left>
-					<top>469</top>
-					<width>310</width>
-					<height>290</height>
-					<texture background="true">lists/panel.png</texture>
-					<aspectratio>scale</aspectratio>
-					<visible>String.IsEqual(ListItem.DbType,musicvideo) + !Skin.HasSetting(use_posterview)</visible>
-				</control>
-				<control type="image">
-					<left>53</left>
-					<top>474</top>
-					<width>300</width>
-					<height>300</height>
-					<texture background="true">$VAR[IconWallPosterVar]</texture>
-					<aspectratio>scale</aspectratio>
-					<bordertexture>colors/white.png</bordertexture>
-					<bordersize>2</bordersize>
-					<fadetime>300</fadetime>
-					<visible>String.IsEqual(ListItem.DbType,musicvideo) + !Skin.HasSetting(use_posterview)</visible>
-				</control>
-				<control type="image">
-					<left>48</left>
 					<top>369</top>
 					<width>280</width>
 					<height>390</height>
 					<texture background="true">lists/panel.png</texture>
 					<aspectratio>scale</aspectratio>
-					<visible>String.IsEqual(ListItem.DbType,musicvideo) + Skin.HasSetting(use_posterview)</visible>
+					<visible>String.IsEqual(ListItem.DbType,musicvideo)</visible>
 				</control>
 				<control type="image">
 					<left>53</left>
@@ -96,7 +75,7 @@
 					<bordertexture>colors/white.png</bordertexture>
 					<bordersize>2</bordersize>
 					<fadetime>300</fadetime>
-					<visible>String.IsEqual(ListItem.DbType,musicvideo) + Skin.HasSetting(use_posterview)</visible>
+					<visible>String.IsEqual(ListItem.DbType,musicvideo)</visible>
 				</control>
 				<control type="group">
 					<top>472</top>

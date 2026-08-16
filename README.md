@@ -50,6 +50,7 @@ supports animated poster only.
 - Power menu updated
 - Mediaflags to piers updated
 - Romanian language strings added
+- code cleanup pt.5/6
 
 Previous changes see readme.md of Omega Tree
  

@@ -391,7 +391,7 @@
 					<width>80</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg.png</texture>
-					<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+					<visible>!StringIsEqual($VAR[WallWatchedIconVar],)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -558,7 +558,7 @@
 					<width>80</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg.png</texture>
-					<visible>ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+					<visible>!StringIsEqual($VAR[WallWatchedIconVar],)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -639,14 +639,6 @@
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
-			<!--<control type="image">
-				<left>$PARAM[left]</left>
-				<top>$PARAM[top_2]</top>
-				<width>$PARAM[width]</width>
-				<height>4</height>
-				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
-			</control>-->
 			<control type="progress">
 				<left>$PARAM[left]</left>
 				<top>$PARAM[top]</top>
@@ -901,11 +893,12 @@
 			<control type="group">
 				<left>35</left>
 				<top>290</top>
-				<visible>String.IsEqual($VAR[WallWatchedIconVar],) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+				<visible>!String.IsEqual(listitem.dbtype,genre) + !String.IsEqual(listitem.dbtype,studio)</visible>
 				<control type="image">
 					<width>80</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg.png</texture>
+					<visible>!String.IsEqual($VAR[WallWatchedIconVar],)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1090,7 +1083,7 @@
 				<width>160</width>
 				<height>60</height>
 				<texture>overlays/overlay-bg.png</texture>
-				<visible>ListItem.IsCollection | ListItem.IsResumable | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+				<visible>!String.IsEqual($VAR[WallWatchedIconVar],)</visible>
 				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="image">

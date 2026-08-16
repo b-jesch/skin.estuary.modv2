@@ -26,7 +26,7 @@
 				<animation effect="slide" end="22,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9) + [Container.Content(episodes) | Container.Content(videos) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | Container.Content(addons)]">Conditional</animation>
 				<animation effect="slide" end="118,0" time="0" condition="String.IsEqual(Skin.AspectRatio,21:9) + Container.Content(images)">Conditional</animation>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | Container.Content(addons) | Container.Content(images) | Container.Content(videos) | Container.Content(games) | Container.Content(favourites)</visible>
-				<itemlayout height="460" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
+				<itemlayout height="460" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
 					<control type="group">
 						<top>120</top>
 						<include content="InfoWallMovieLayout">
@@ -34,7 +34,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="460" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(use_posterview)]">
+				<focusedlayout height="460" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<include content="Animation_FocusBounce" condition="!Skin.HasSetting(no_animations)" />
@@ -83,7 +83,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="400" width="300" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)]">
+				<itemlayout height="400" width="300" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)">
 					<control type="group">
 						<top>150</top>
 						<include content="InfoWallMusicLayout">
@@ -91,7 +91,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="400" width="300" condition="Container.Content(artists) | Container.Content(albums) | [Container.Content(musicvideos) + !Skin.HasSetting(use_posterview)]">
+				<focusedlayout height="400" width="300" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<top>150</top>
