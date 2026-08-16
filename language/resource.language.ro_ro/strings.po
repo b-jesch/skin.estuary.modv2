@@ -1,0 +1,3024 @@
+# Kodi Media Center language file
+# Addon Name: Estuary MOD v2
+# Addon id: skin.estuary.modv2
+# Addon Provider: Guilouz, PvD
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI Main\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Vuzzy\n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /xml/Home.xml /xml/DialogSeekBar.xml
+msgctxt "#31000"
+msgid "Now playing"
+msgstr "Se redă acum"
+
+#: /xml/Home.xml
+msgctxt "#31001"
+msgid "Search..."
+msgstr "Caută..."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31002"
+msgid "Show media fanart as background"
+msgstr "Afișează fanart-ul media ca fundal"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31003"
+msgid "Cinema mode"
+msgstr "Mod cinema"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31004"
+msgid "Change mode"
+msgstr "Schimbă modul"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31005"
+msgid "Watch as 2D"
+msgstr "Vizionează în 2D"
+
+#: /xml/Home.xml
+msgctxt "#31006"
+msgid "Random movies"
+msgstr "Filme aleatorii"
+
+#: /xml/Home.xml
+msgctxt "#31007"
+msgid "Unwatched movies"
+msgstr "Filme nevizionate"
+
+#: /xml/Home.xml
+msgctxt "#31008"
+msgid "Watched movies"
+msgstr "Filme vizionate"
+
+#: /xml/MyVideoNav.xml
+msgctxt "#31009"
+msgid "Download icons"
+msgstr "Descarcă pictograme"
+
+#: /xml/Home.xml
+msgctxt "#31010"
+msgid "In progress movies"
+msgstr "Filme în curs"
+
+#: /xml/Home.xml
+msgctxt "#31011"
+msgid "Most played albums"
+msgstr "Cele mai ascultate albume"
+
+#: /xml/Home.xml
+msgctxt "#31012"
+msgid "Random albums"
+msgstr "Albume aleatorii"
+
+#: /xml/Home.xml
+msgctxt "#31013"
+msgid "Random artists"
+msgstr "Artiști aleatorii"
+
+#: /xml/Home.xml
+msgctxt "#31014"
+msgid "Unplayed albums"
+msgstr "Albume neascultate"
+
+#. home screen recordings widget: recent tv / radio recordings
+#: /xml/Home.xml
+msgctxt "#31015"
+msgid "Recent recordings"
+msgstr "Înregistrări recente"
+
+#. home screen channel widget: recently played tv channels. (please note that in some non-english languages #31018 and #31016 might not be equal)
+#: /xml/Home.xml
+msgctxt "#31016"
+msgid "Recently played channels"
+msgstr "Canale redate recent"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31017"
+msgid "Rated"
+msgstr "Evaluat"
+
+#. home screen channel widget: recently played radio channels. (please note that in some non-english languages #31018 and #31016 might not be equal)
+#: /xml/Home.xml
+msgctxt "#31018"
+msgid "Recently played channels"
+msgstr "Canale redate recent"
+
+#: /xml/Home.xml /xml/MyWeather.xml
+msgctxt "#31019"
+msgid "Forecast"
+msgstr "Prognoză"
+
+#: /xml/MyMusicNav.xml /xml/MyPics.xml /xml/MyVideoNav.xml
+msgctxt "#31020"
+msgid "Actions"
+msgstr "Acțiuni"
+
+#: /xml/AddonBrowser.xml /xml/DialogPVRChannelManager.xml /xml/Includes_MediaMenu.xml /xml/EventLog.xml
+msgctxt "#31021"
+msgid "Misc options"
+msgstr "Opțiuni diverse"
+
+#: /xml/Includes_MediaMenu.xml /xml/Includes.xml
+msgctxt "#31022"
+msgid "Sort by"
+msgstr "Sortează după"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31023"
+msgid "Viewtype"
+msgstr "Tip de vizualizare"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31024"
+msgid "Select rating to display on media items"
+msgstr "Selectează evaluarea de afișat pentru elementele media"
+
+#: /xml/DialogFavourites.xml
+msgctxt "#31025"
+msgid "No favourites found. You can add any item from media views to this list by using the context menu."
+msgstr "Nu au fost găsite elemente favorite. Poți adăuga orice element din vizualizările media în această listă folosind meniul contextual."
+
+#: /xml/DialogSeekBar.xml
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "Timeshift"
+
+#: /xml/DialogAlbumInfo.xml /xml/DialogVideoInfo.xml
+msgctxt "#31028"
+msgid "Show fanart"
+msgstr "Afișează fanart"
+
+#: /xml/SettingsProfile.xml
+msgctxt "#31029"
+msgid "Last logged in"
+msgstr "Ultima autentificare"
+
+#: /xml/SettingsSystemInfo.xml
+msgctxt "#31030"
+msgid "System memory usage"
+msgstr "Utilizarea memoriei sistemului"
+
+#: /xml/SettingsSystemInfo.xml
+msgctxt "#31031"
+msgid "Version info"
+msgstr "Informații despre versiune"
+
+#: /xml/EventLog.xml /xml/Includes_MediaMenu.xml /xml/SmartPlaylistEditor.xml
+msgctxt "#31032"
+msgid "Order"
+msgstr "Ordine"
+
+#: /xml/DialogVideoInfo.xml /xml/DialogSongInfo.xml
+msgctxt "#31033"
+msgid "My rating"
+msgstr "Evaluarea mea"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31034"
+msgid "Extended info"
+msgstr "Informații extinse"
+
+#: /xml/DialogPVRChannelManager.xml /xml/DialogPVRChannelsOSD.xml /xml/DialogPVRGuideOSD.xml /xml/Variables.xml /xml/FileBrowser.xml
+msgctxt "#31035"
+msgid "Pages"
+msgstr "Pagini"
+
+#: /xml/FileBrowser.xml /xml/Variables.xml /xml/MyPVRRecordings.xml
+msgctxt "#31036"
+msgid "items"
+msgstr "elemente"
+
+msgctxt "#31037"
+msgid "item"
+msgstr "element"
+
+#: /xml/Variables.xml
+msgctxt "#31038"
+msgid "Rewind"
+msgstr "Derulare înapoi"
+
+#: /xml/Variables.xml
+msgctxt "#31039"
+msgid "Fast forward"
+msgstr "Derulare rapidă înainte"
+
+#: /xml/Variables.xml /xml/MyPics.xml
+msgctxt "#31041"
+msgid "Camera manufacturer"
+msgstr "Producătorul camerei"
+
+#: /xml/SmartPlaylistEditor.xml
+msgctxt "#31042"
+msgid "Playlist options"
+msgstr "Opțiuni listă de redare"
+
+#: /xml/SmartPlaylistEditor.xml
+msgctxt "#31043"
+msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
+msgstr "Setează tipul și adaugă reguli pentru a crea o listă de redare inteligentă. Aceste liste de redare sunt dinamice și includ toate elementele media din baza ta de date care corespund regulilor alese."
+
+#: /xml/DialogPVRGroupManager.xml
+msgctxt "#31044"
+msgid "Add group"
+msgstr "Adaugă grup"
+
+#: /xml/DialogPVRGroupManager.xml
+msgctxt "#31045"
+msgid "Rename group"
+msgstr "Redenumește grupul"
+
+#: /xml/DialogPVRGroupManager.xml
+msgctxt "#31046"
+msgid "Delete group"
+msgstr "Șterge grupul"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31048"
+msgid "Available"
+msgstr "Disponibil"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31049"
+msgid "Show content"
+msgstr "Afișează conținutul"
+
+#: /xml/Variables.xml
+msgctxt "#31050"
+msgid "Show plot"
+msgstr "Afișează rezumatul"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31051"
+msgid "Enable Splash Screen (disabled if 'perform on startup' is set)"
+msgstr "Activează ecranul de pornire (dezactivat dacă este setat „efectuează la pornire”)"
+
+#: /xml/Includes.xml
+msgctxt "#31052"
+msgid "filtered"
+msgstr "filtrate"
+
+#: /xml/Font.xml
+msgctxt "#31053"
+msgid "Arial based"
+msgstr "Bazat pe Arial"
+
+#: /xml/Variables.xml
+msgctxt "#31054"
+msgid "Forward jumping"
+msgstr "Derulează înainte"
+
+#: /xml/Variables.xml
+msgctxt "#31055"
+msgid "Backward jumping"
+msgstr "Derulează înapoi"
+
+#: /xml/MyMusicNav.xml /xml/MyVideoNav.xml
+msgctxt "#31056"
+msgid "Go to playlist"
+msgstr "Mergi la lista de redare"
+
+#: /xml/SettingsProfile.xml
+msgctxt "#31057"
+msgid "Show login screen on startup"
+msgstr "Afișează ecranul de autentificare la pornire"
+
+#: /xml/SettingsProfile.xml
+msgctxt "#31058"
+msgid "Automatic Login on startup"
+msgstr "Autentificare automată la pornire"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31061"
+msgid "Main menu items"
+msgstr "Elemente din meniul principal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31062"
+msgid "Weather fanarts pack"
+msgstr "Pachet de fanart-uri meteo"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31063"
+msgid "Sections"
+msgstr "Secțiuni"
+
+#: /xml/Variables.xml
+msgctxt "#31064"
+msgid "unwatched"
+msgstr "nevizionate"
+
+#: /xml/MyVideoPlaylist.xml
+msgctxt "#31065"
+msgid "Video playlist"
+msgstr "Listă de redare video"
+
+#: /xml/MyMusicPlaylist.xml
+msgctxt "#31066"
+msgid "Music playlist"
+msgstr "Listă de redare muzicală"
+
+#: /xml/EventLog.xml
+msgctxt "#31067"
+msgid "Event log"
+msgstr "Jurnal de evenimente"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31068"
+msgid "Choose presets"
+msgstr "Alege presetări"
+
+#: /xml/AddonBrowser.xml
+msgctxt "#31069"
+msgid "Last Updated"
+msgstr "Ultima actualizare"
+
+#: /xml/DialogAddonInfo.xml
+msgctxt "#31071"
+msgid "by"
+msgstr "de"
+
+#: /xml/DialogButtonMenu.xml /xml/LoginScreen.xml
+msgctxt "#31072"
+msgid "Power Options"
+msgstr "Opțiuni de alimentare"
+
+#: /xml/Home.xml
+msgctxt "#31075"
+msgid "Movie sets"
+msgstr "Colecții de filme"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31079"
+msgid "Cast not available"
+msgstr "Distribuția nu este disponibilă"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31080"
+msgid "Ends at"
+msgstr "Se termină la"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31082"
+msgid "Lyrics add-on"
+msgstr "Supliment pentru versuri"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31083"
+msgid "Lyrics add-on settings"
+msgstr "Setări supliment pentru versuri"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31084"
+msgid "Visualisation settings"
+msgstr "Setări vizualizare"
+
+#: /xml/DialogPVRGroupManager.xml
+msgctxt "#31089"
+msgid "Available groups"
+msgstr "Grupuri disponibile"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31090"
+msgid "Search trailer"
+msgstr "Caută trailer"
+
+#: /xml/VideoOSD.xml /xml/Variables.xml
+msgctxt "#31092"
+msgid "Video menu"
+msgstr "Meniu video"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31093"
+msgid "Show weather info"
+msgstr "Afișează informațiile meteo"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31095"
+msgid "Use slide animations"
+msgstr "Folosește animații de glisare"
+
+#: /xml/DialogSubtitles.xml
+msgctxt "#31096"
+msgid "Local subtitle available"
+msgstr "Subtitrare locală disponibilă"
+
+#: /xml/DialogPVRChannelManager.xml
+msgctxt "#31097"
+msgid "Channel options"
+msgstr "Opțiuni canal"
+
+#: /xml/LoginScreen.xml
+msgctxt "#31098"
+msgid "Select your Kodi user profile[CR]to login and continue"
+msgstr "Selectează profilul tău de utilizator Kodi[CR]pentru a te autentifica și a continua"
+
+#. viewtype name
+#: /xml/View_52_IconWall.xml
+msgctxt "#31099"
+msgid "IconWall"
+msgstr "Perete cu pictograme"
+
+#. viewtype name
+#: /xml/View_53_Shift.xml
+msgctxt "#31100"
+msgid "Shift"
+msgstr "Deplasare"
+
+#. viewtype name
+#: /xml/View_54_InfoWall.xml
+msgctxt "#31101"
+msgid "InfoWall (posters)"
+msgstr "Perete informativ (postere)"
+
+#. viewtype name
+#: /xml/View_500_Wall.xml
+msgctxt "#31102"
+msgid "Wall (posters)"
+msgstr "Perete (postere)"
+
+#: /xml/SmartPlaylistRule.xml
+msgctxt "#31103"
+msgid "Enter text here..."
+msgstr "Introdu textul aici..."
+
+#: /xml/Home.xml
+msgctxt "#31104"
+msgid "Your video library is currently empty. In order to populate it with your personal media, add a video source and configure it. After the source has been added and indexed you will be able to browse your library."
+msgstr "Biblioteca ta video este momentan goală. Pentru a o completa cu fișierele tale media personale, adaugă o sursă video și configureaz-o. După ce sursa a fost adăugată și indexată, vei putea naviga în biblioteca ta."
+
+#: /xml/Home.xml
+msgctxt "#31105"
+msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
+msgstr "Adaugă surse video și setează tipul de conținut corespunzător pentru a completa bibliotecile tale video."
+
+#: /xml/Variables.xml
+msgctxt "#31106"
+msgid "Teletext"
+msgstr "Teletext"
+
+#. viewtype name
+#: /xml/View_55_WideList.xml
+msgctxt "#31107"
+msgid "WideList"
+msgstr "Listă largă"
+
+#. viewtype name
+#: /xml/Includes_PVR.xml
+msgctxt "#31108"
+msgid "BigList"
+msgstr "Listă mare"
+
+#: /xml/Home.xml
+msgctxt "#31110"
+msgid "Your music library is currently empty. In order to populate it with your personal media, add a music source and configure it. After the source has been added and indexed you will be able to browse your library."
+msgstr "Biblioteca ta muzicală este momentan goală. Pentru a o completa cu fișierele tale media personale, adaugă o sursă muzicală și configureaz-o. După ce sursa a fost adăugată și indexată, vei putea naviga în biblioteca ta."
+
+#: /xml/Home.xml
+msgctxt "#31111"
+msgid "View your personal pictures or download one of the many image add-ons from the official repository."
+msgstr "Vizualizează imaginile tale personale sau descarcă unul dintre numeroasele suplimente pentru imagini din repository-ul oficial."
+
+#: /xml/VideoOSD.xml
+msgctxt "#31112"
+msgid "Toggle audio stream"
+msgstr "Comută fluxul audio"
+
+#: /xml/Custom_1107_SearchDialog.xml
+msgctxt "#31113"
+msgid "Search local library"
+msgstr "Caută în biblioteca locală"
+
+#: /xml/Custom_1107_SearchDialog.xml /xml/DialogMusicInfo.xml
+msgctxt "#31114"
+msgid "Search YouTube"
+msgstr "Caută pe YouTube"
+
+#: /xml/Custom_1107_SearchDialog.xml
+msgctxt "#31115"
+msgid "Search TheMovieDB"
+msgstr "Caută pe TheMovieDB"
+
+#: /xml/Home.xml
+msgctxt "#31116"
+msgid "Add games source"
+msgstr "Adaugă sursă de jocuri"
+
+#: /xml/MyVideoNav.xml
+msgctxt "#31117"
+msgid "Edit nodes"
+msgstr "Editează nodurile"
+
+#: /xml/Home.xml
+msgctxt "#31118"
+msgid "Enter add-on browser"
+msgstr "Deschide browserul de suplimente"
+
+#: /xml/Home.xml
+msgctxt "#31119"
+msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
+msgstr "Nu ai instalat încă niciun supliment. Accesează browserul de suplimente pentru a răsfoi colecția noastră și pentru a-ți îmbunătăți experiența Kodi."
+
+#: /xml/Home.xml
+msgctxt "#31120"
+msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
+msgstr "Nu ai configurat încă un furnizor de servicii meteo. Pentru a vedea informațiile meteo, alege un furnizor de servicii meteo și configurează locația."
+
+#: /xml/Home.xml
+msgctxt "#31121"
+msgid "Set weather provider"
+msgstr "Setează furnizorul meteo"
+
+#: /xml/Home.xml
+msgctxt "#31122"
+msgid "Unwatched TV Shows"
+msgstr "Seriale TV nevizionate"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31123"
+msgid "Same director"
+msgstr "Același regizor"
+
+#: /xml/MyPics.xml
+msgctxt "#31124"
+msgid "Show images on map"
+msgstr "Afișează imaginile pe hartă"
+
+#: /xml/Variables.xml
+msgctxt "#31125"
+msgid "is"
+msgstr "este"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31126"
+msgid "Press [B]OK[/B] to show plot"
+msgstr "Apasă [B]OK[/B] pentru a afișa rezumatul"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31127"
+msgid "Show icons"
+msgstr "Afișează pictogramele"
+
+#: /xml/Variables.xml
+msgctxt "#31128"
+msgid "Contributors"
+msgstr "Contribuitori"
+
+#: /xml/Variables.xml
+msgctxt "#31129"
+msgid "General settings applying to all areas of the skin."
+msgstr "Setări generale aplicabile tuturor zonelor interfeței."
+
+#: /xml/Variables.xml
+msgctxt "#31130"
+msgid "Main menu-related settings: Configure the home screen to your likings."
+msgstr "Setări pentru meniul principal: Configurează ecranul principal după preferințele tale."
+
+#: /shortcuts/addons.DATA.xml
+msgctxt "#31131"
+msgid "Add-ons settings"
+msgstr "Setări suplimente"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31132"
+msgid "Hide 'Categories' widget"
+msgstr "Ascunde widgetul „Categorii”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31133"
+msgid "Show banners on episodes/thumbs widgets"
+msgstr "Afișează bannere în widgeturile pentru episoade/miniaturi"
+
+#: /xml/DialogSeekBar.xml
+msgctxt "#31134"
+msgid "Remaining"
+msgstr "Rămas"
+
+#: /xml/DialogAddonInfo.xml
+msgctxt "#31136"
+msgid "Click here to see latest changes..."
+msgstr "Apasă aici pentru a vedea ultimele modificări..."
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31137"
+msgid "PVR info"
+msgstr "Informații PVR"
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31138"
+msgid "Player process info"
+msgstr "Informații despre procesul playerului"
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31139"
+msgid "Video decoder"
+msgstr "Decoder video"
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31140"
+msgid "Pixel format"
+msgstr "Format pixeli"
+
+#: /xml/DialogAddonInfo.xml
+msgctxt "#31141"
+msgid "Changes for version"
+msgstr "Modificări pentru versiunea"
+
+#: /xml/Variables.xml
+msgctxt "#31142"
+msgid "Play speed"
+msgstr "Viteză de redare"
+
+#: /xml/Home.xml
+msgctxt "#31143"
+msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "Nu ai configurat încă PVR. Pentru a utiliza PVR, alege un supliment client PVR și configurează-l. Vizitează http://kodi.wiki/view/PVR pentru a afla mai multe."
+
+#: /xml/Home.xml
+msgctxt "#31144"
+msgid "Enter add-on browser"
+msgstr "Deschide browserul de suplimente"
+
+#: /xml/Custom_1107_SearchDialog.xml
+msgctxt "#31145"
+msgid "Search add-ons"
+msgstr "Caută suplimente"
+
+#: /xml/Home.xml
+msgctxt "#31148"
+msgid "Categories"
+msgstr "Categorii"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31149"
+msgid "Video genres fanarts pack"
+msgstr "Pachet de fanart-uri pentru genuri de filme"
+
+#: /xml/DialogAddonInfo.xml
+msgctxt "#31150"
+msgid "Repository"
+msgstr "Repozitoriu"
+
+#: /xml/Home.xml
+msgctxt "#31151"
+msgid "Unwatched music videos"
+msgstr "Videoclipuri muzicale nevizionate"
+
+#: /xml/Home.xml
+msgctxt "#31152"
+msgid "Random music videos"
+msgstr "Videoclipuri muzicale aleatorii"
+
+#: /xml/Includes.xml
+msgctxt "#31153"
+msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
+msgstr "Nu ai instalat niciun supliment de acest tip. Deschide browserul de suplimente pentru a descărca suplimente create de comunitatea noastră."
+
+#: /xml/MyWeather.xml
+msgctxt "#31154"
+msgid "Press [B]OK[/B] to switch between locations"
+msgstr "Apasă [B]OK[/B] pentru a comuta între locații"
+
+#: /xml/VideoOSDBookmarks.xml
+msgctxt "#31155"
+msgid "No bookmarks created yet."
+msgstr "Nu a fost creat încă niciun marcaj."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31156"
+msgid "Choose background pattern"
+msgstr "Alege modelul de fundal"
+
+#: /xml/SettingsSystemInfo.xml
+msgctxt "#31157"
+msgid "Library info"
+msgstr "Informații bibliotecă"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31158"
+msgid "Touch mode"
+msgstr "Mod tactil"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31159"
+msgid "Artworks"
+msgstr "Materiale grafice"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31160"
+msgid "Show media flags"
+msgstr "Afișează indicatorii media"
+
+#: /xml/DialogNumeric.xml
+msgctxt "#31161"
+msgid "Numeric pad"
+msgstr "Tastatură numerică"
+
+#: /xml/Home.xml
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Joacă jocurile tale personale sau descarcă unul dintre numeroasele suplimente pentru jocuri din repozitoriul oficial."
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "Afișează fundalul fanart"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31200"
+msgid "Main menu"
+msgstr "Meniu principal"
+
+#: /xml/Custom_1120_SourcesDialog.xml
+msgctxt "#31201"
+msgid "Add media sources"
+msgstr "Adaugă surse media"
+
+#: /xml/Custom_1120_SourcesDialog.xml
+msgctxt "#31202"
+msgid "Shortcuts to the 'Files' sections of each media type. Go there to add additional sources for your databases."
+msgstr "Comenzi rapide către secțiunile 'Fișiere' ale fiecărui tip de media. Accesează-le pentru a adăuga surse suplimentare pentru bazele tale de date."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31203"
+msgid "Home menu"
+msgstr "Meniu principal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31204"
+msgid "Hide main menu when selecting widgets"
+msgstr "Ascunde meniul principal la selectarea widgeturilor"
+
+#: /xml/View_503_Gallery.xml
+msgctxt "#31205"
+msgid "Gallery"
+msgstr "Galerie"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31206"
+msgid "Reset main menu settings"
+msgstr "Resetează setările meniului principal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31207"
+msgid "Are you sure you want to reset display of all menu items back to default ?"
+msgstr "Sigur vrei să resetezi afișarea tuturor elementelor meniului la valorile implicite?"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31208"
+msgid "Changes of version"
+msgstr "Modificări ale versiunii"
+
+#: /xml/Variables.xml
+msgctxt "#31209"
+msgid "Update video library"
+msgstr "Actualizează biblioteca video"
+
+#: /xml/Variables.xml
+msgctxt "#31210"
+msgid "Update music library"
+msgstr "Actualizează biblioteca muzicală"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31211"
+msgid "Show smaller icons for 'Categories' widgets"
+msgstr "Afișează pictograme mai mici pentru widgeturile „Categorii”"
+
+#: /xml/Home.xml
+msgctxt "#31212"
+msgid "Next episodes to watch"
+msgstr "Următoarele episoade de vizionat"
+
+#: /xml/Variables.xml
+msgctxt "#31213"
+msgid "Stop scanning video library"
+msgstr "Oprește scanarea bibliotecii video"
+
+#: /xml/Variables.xml
+msgctxt "#31214"
+msgid "Stop scanning music library"
+msgstr "Oprește scanarea bibliotecii muzicale"
+
+#: /xml/View_504_ThumbsWall.xml
+msgctxt "#31215"
+msgid "Wall (thumbnails)"
+msgstr "Perete (miniaturi)"
+
+#: /xml/View_505_ThumbsInfoWall.xml
+msgctxt "#31216"
+msgid "InfoWall (thumbnails)"
+msgstr "Perete informativ (miniaturi)"
+
+#: /xml/View_506_Mosaic.xml
+msgctxt "#31217"
+msgid "Mosaic (horizontal)"
+msgstr "Mozaic (orizontal)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31218"
+msgid "Hide watched items"
+msgstr "Ascunde elementele vizionate"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31219"
+msgid "Colors"
+msgstr "Culori"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31220"
+msgid "Main color"
+msgstr "Culoare principală"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31221"
+msgid "Border color"
+msgstr "Culoarea marginii"
+
+#: /xml/script-skin_helper_service-ColorPicker.xml
+msgctxt "#31222"
+msgid "Color selection"
+msgstr "Selectare culoare"
+
+#: /xml/script-skin_helper_service-ColorPicker.xml
+msgctxt "#31223"
+msgid "Color"
+msgstr "Culoare"
+
+#: /xml/DialogContextMenu.xml
+msgctxt "#31224"
+msgid "Context menu"
+msgstr "Meniu contextual"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31225"
+msgid "Next aired"
+msgstr "Următoarea difuzare"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31226"
+msgid "Last aired"
+msgstr "Ultima difuzare"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31227"
+msgid "votes"
+msgstr "voturi"
+
+#: /xml/Variables.xml
+msgctxt "#31228"
+msgid "hardware decoding"
+msgstr "decodare hardware"
+
+#: /xml/Variables.xml
+msgctxt "#31229"
+msgid "software decoding"
+msgstr "decodare software"
+
+#: /xml/Variables.xml
+msgctxt "#31230"
+msgid "Plot masked to avoid spoilers."
+msgstr "Rezumatul este ascuns pentru a evita spoilerele."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31233"
+msgid "Background color"
+msgstr "Culoarea fundalului"
+
+#: /xml/Variables.xml
+msgctxt "#31234"
+msgid "Next chapter/title"
+msgstr "Următorul capitol/titlu"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31235"
+msgid "Background pattern color"
+msgstr "Culoarea modelului de fundal"
+
+#: /xml/Variables.xml
+msgctxt "#31236"
+msgid "Previous chapter"
+msgstr "Capitolul anterior"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31237"
+msgid "Opacity for background fanart"
+msgstr "Opacitatea fanart-ului de fundal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31238"
+msgid "0%"
+msgstr "0%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31239"
+msgid "5%"
+msgstr "5%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31240"
+msgid "10%"
+msgstr "10%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31241"
+msgid "15%"
+msgstr "15%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31242"
+msgid "20%"
+msgstr "20%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31243"
+msgid "25%"
+msgstr "25%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31244"
+msgid "30%"
+msgstr "30%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31245"
+msgid "35%"
+msgstr "35%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31246"
+msgid "40%"
+msgstr "40%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31247"
+msgid "45%"
+msgstr "45%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31248"
+msgid "50%"
+msgstr "50%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31249"
+msgid "55%"
+msgstr "55%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31250"
+msgid "60%"
+msgstr "60%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31251"
+msgid "65%"
+msgstr "65%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31252"
+msgid "70%"
+msgstr "70%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31253"
+msgid "75%"
+msgstr "75%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31254"
+msgid "80%"
+msgstr "80%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31255"
+msgid "85%"
+msgstr "85%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31256"
+msgid "90%"
+msgstr "90%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31257"
+msgid "95%"
+msgstr "95%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31258"
+msgid "100%"
+msgstr "100%"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31259"
+msgid "Show ExtraFanarts"
+msgstr "Afișează ExtraFanart-urile"
+
+#: /xml/Variables.xml
+msgctxt "#31260"
+msgid "Pause"
+msgstr "Pauză"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#31261"
+msgid "Press [B]OK[/B] to read description"
+msgstr "Apasă [B]OK[/B] pentru a citi descrierea"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31262"
+msgid "Weather icons pack"
+msgstr "Pachet pictograme meteo"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31263"
+msgid "Kiosk Mode"
+msgstr "Mod restricționat"
+
+#: /xml/Variables.xml
+msgctxt "#31264"
+msgid "None"
+msgstr "Niciunul"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31265"
+msgid "Splash screen (photo, video or music)"
+msgstr "Ecran de pornire (poză, videoclip sau muzică)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31266"
+msgid "Extras"
+msgstr "Extra"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31267"
+msgid "Number of items to display on widgets"
+msgstr "Numărul de elemente afișate în widgeturi"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31268"
+msgid "Show media clearlogos"
+msgstr "Afișează logourile media (clearlogo)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31269"
+msgid "Backup / Restore"
+msgstr "Copie de siguranță / Restaurare"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31270"
+msgid "Backup skin settings"
+msgstr "Creează o copie de siguranță a setărilor skinului"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31271"
+msgid "Restore skin settings"
+msgstr "Restaurează setările skinului"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31272"
+msgid "Set location of backup file"
+msgstr "Setează locația fișierului de rezervă"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31273"
+msgid "Necessary add-ons"
+msgstr "Suplimente necesare"
+
+#: /xml/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31274"
+msgid "Hide Spoilers"
+msgstr "Ascunde spoilerele"
+
+#: /xml/script-nextup-notification-NextUpInfo.xml
+msgctxt "#31275"
+msgid "Next episode"
+msgstr "Următorul episod"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31276"
+msgid "Disable zoom effect"
+msgstr "Dezactivează efectul de zoom"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31278"
+msgid "Music OSD"
+msgstr "OSD muzical"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31279"
+msgid "Video OSD"
+msgstr "OSD video"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31280"
+msgid "Show music visualisation screen when playing song"
+msgstr "Afișează ecranul de vizualizare muzicală la redarea unei melodii"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31281"
+msgid "Enable ExtraFanarts for background"
+msgstr "Activează fanart-urile suplimentare pentru fundal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31282"
+msgid "Animate background"
+msgstr "Animează fundalul"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31283"
+msgid "Show visualisation effects"
+msgstr "Afișează efectele de vizualizare"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31284"
+msgid "Show music visualisation effects on background"
+msgstr "Afișează efectele de vizualizare muzicală pe fundal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31285"
+msgid "Show video on background"
+msgstr "Afișează videoclipul pe fundal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31286"
+msgid "Disable Kodi screensaver"
+msgstr "Dezactivează screensaverul Kodi"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31287"
+msgid "Show album CDArt"
+msgstr "Afișează CDArt-ul albumului"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31288"
+msgid "Show Clearlogo on video info"
+msgstr "Afișează Clearlogo în informațiile video"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31289"
+msgid "Show artist Clearlogo"
+msgstr "Afișează Clearlogo-ul artistului"
+
+#: /xml/MusicVisualisation.xml
+msgctxt "#31290"
+msgid "Next tracks"
+msgstr "Următoarele piese"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31291"
+msgid "Show artist banner"
+msgstr "Afișează bannerul artistului"
+
+#: /xml/script-cu-lrclyrics-main.xml
+msgctxt "#31292"
+msgid "Lyrics source"
+msgstr "Sursa versurilor"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31293"
+msgid "Media flags color"
+msgstr "Culoarea indicatorilor media"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31294"
+msgid "Show ClearArt on video info"
+msgstr "Afișează ClearArt în informațiile video"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31295"
+msgid "Show CDArt on video OSD"
+msgstr "Afișează CDArt în OSD-ul video"
+
+#: /xml/VideoOSD.xml
+msgctxt "#31296"
+msgid "Actors list"
+msgstr "Lista actorilor"
+
+#: /xml/Custom_1123_SettingsMoviesWidgets.xml
+msgctxt "#31297"
+msgid "Hide widget"
+msgstr "Ascunde widgetul"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31298"
+msgid "Manage items from 'Movies' widget"
+msgstr "Gestionează elementele din widgetul „Filme”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31299"
+msgid "Manage items from 'TV shows' widget"
+msgstr "Gestionează elementele din widgetul „Seriale TV”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31300"
+msgid "Manage items from 'Music' widget"
+msgstr "Gestionează elementele din widgetul „Muzică”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31301"
+msgid "Manage items from 'Music videos' widget"
+msgstr "Gestionează elementele din widgetul „Videoclipuri muzicale”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31302"
+msgid "Manage items from 'TV' widget"
+msgstr "Gestionează elementele din widgetul „TV”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31303"
+msgid "Manage items from 'Radio' widget"
+msgstr "Gestionează elementele din widgetul „Radio”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31304"
+msgid "Manage items from 'Add-ons' widget"
+msgstr "Gestionează elementele din widgetul „Suplimente”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31305"
+msgid "Manage items from 'Videos' widget"
+msgstr "Gestionează elementele din widgetul „Videoclipuri”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31306"
+msgid "Customize main menu"
+msgstr "Personalizează meniul principal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31307"
+msgid "Next airing episodes"
+msgstr "Următoarele episoade difuzate"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31308"
+msgid "Studios icons pack"
+msgstr "Pachet pictograme studiouri"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31309"
+msgid "Records labels icons pack"
+msgstr "Pachet pictograme case de discuri"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31310"
+msgid "Video genres icons pack"
+msgstr "Pachet pictograme genuri video"
+
+#: /xml/Variables.xml
+msgctxt "#31311"
+msgid "Settings applying to library."
+msgstr "Setări aplicabile bibliotecii."
+
+#: /xml/Variables.xml
+msgctxt "#31312"
+msgid "Display of Artworks related settings."
+msgstr "Setări referitoare la afișarea materialelor grafice."
+
+#: /xml/Variables.xml
+msgctxt "#31313"
+msgid "Visualization of the music screen related settings."
+msgstr "Setări referitoare la vizualizarea ecranului muzical."
+
+#: /xml/Variables.xml
+msgctxt "#31314"
+msgid "Visualization of the video screen related settings."
+msgstr "Setări referitoare la vizualizarea ecranului video."
+
+#: /xml/Variables.xml
+msgctxt "#31315"
+msgid "Skin colors related settings."
+msgstr "Setări referitoare la culorile interfeței."
+
+#: /xml/Variables.xml
+msgctxt "#31316"
+msgid "Necessary addons for good performance."
+msgstr "Suplimente necesare pentru o funcționare optimă."
+
+#: /xml/Variables.xml
+msgctxt "#31317"
+msgid "Backup and restore skin settings."
+msgstr "Copie de siguranță și restaurare a setărilor interfeței."
+
+#: /xml/Variables.xml
+msgctxt "#31318"
+msgid "Additional settings."
+msgstr "Setări suplimentare."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31319"
+msgid "Show, add and remove animated posters"
+msgstr "Afișează, adaugă și elimină posterele animate"
+
+#: /xml/script-NextAired-TVGuide.xml
+msgctxt "#31320"
+msgid "Next aired episode"
+msgstr "Următorul episod difuzat"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31321"
+msgid "Thumbs with banners"
+msgstr "Miniaturi cu bannere"
+
+#: /xml/Home.xml
+msgctxt "#31322"
+msgid "Hardware info"
+msgstr "Informații hardware"
+
+#: /xml/Home.xml
+msgctxt "#31323"
+msgid "Hard disk usage:"
+msgstr "Utilizarea hard diskului:"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31324"
+msgid "Opacity for top and bottom bars"
+msgstr "Opacitatea zonelor de sus și de jos"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31325"
+msgid "Power menu style"
+msgstr "Stilul meniului de alimentare"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31327"
+msgid "Preconfigured widgets"
+msgstr "Widgeturi preconfigurate"
+
+#: /xml/Variables.xml
+msgctxt "#31328"
+msgid "Go up item"
+msgstr "Mută elementul în sus"
+
+#: /xml/Variables.xml
+msgctxt "#31329"
+msgid "Go down item"
+msgstr "Mută elementul în jos"
+
+#: /xml/Variables.xml
+msgctxt "#31330"
+msgid "Add item"
+msgstr "Adaugă element"
+
+#: /xml/Variables.xml
+msgctxt "#31331"
+msgid "Delete item"
+msgstr "Șterge element"
+
+#: /xml/Variables.xml
+msgctxt "#31332"
+msgid "Disable item"
+msgstr "Dezactivează element"
+
+#: /xml/Variables.xml
+msgctxt "#31333"
+msgid "Enable item"
+msgstr "Activează element"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31334"
+msgid "Not defined"
+msgstr "Nedefinit"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31335"
+msgid "Skin Helper Service Widgets"
+msgstr "Widgeturi Skin Helper Service"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31336"
+msgid "Set type of widgets"
+msgstr "Setează tipul widgeturilor"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31337"
+msgid "Widget appearence"
+msgstr "Aspectul widgeturilor"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31338"
+msgid "Posters"
+msgstr "Postere"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31339"
+msgid "Thumbs without banners"
+msgstr "Miniaturi fără bannere"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31340"
+msgid "Squares"
+msgstr "Pătrate"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31341"
+msgid "Enable background of 'Power options' shortcut"
+msgstr "Activează fundalul comenzii rapide „Opțiuni de alimentare”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31342"
+msgid "Enable background of 'Settings' shortcut"
+msgstr "Activează fundalul comenzii rapide „Setări”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31343"
+msgid "Enable background of 'Search...' shortcut"
+msgstr "Activează fundalul comenzii rapide „Caută...”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31344"
+msgid "Background"
+msgstr "Fundal"
+
+#: /shortcuts/musicvideos.DATA.xml
+msgctxt "#31345"
+msgid "Music videos - Library"
+msgstr "Videoclipuri muzicale - Bibliotecă"
+
+#: /xml/View_507_Mosaic_Vertical.xml
+msgctxt "#31346"
+msgid "Mosaic (vertical)"
+msgstr "Mozaic (vertical)"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31347"
+msgid "View"
+msgstr "Vizualizare"
+
+#: /xml/Variables.xml
+msgctxt "#31348"
+msgid "None"
+msgstr "Niciunul"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31349"
+msgid "Enable forced views"
+msgstr "Activează vizualizările forțate"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31350"
+msgid "Forced view for movies"
+msgstr "Vizualizare forțată pentru filme"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31351"
+msgid "Forced view for movie sets"
+msgstr "Vizualizare forțată pentru colecții de filme"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31352"
+msgid "Forced view for movies inside set"
+msgstr "Vizualizare forțată pentru filmele din colecție"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31353"
+msgid "Forced view for tv shows"
+msgstr "Vizualizare forțată pentru seriale TV"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31354"
+msgid "Forced view for seasons"
+msgstr "Vizualizare forțată pentru sezoane"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31355"
+msgid "Forced view for episodes"
+msgstr "Vizualizare forțată pentru episoade"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31356"
+msgid "Forced view for artists"
+msgstr "Vizualizare forțată pentru artiști"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31357"
+msgid "Forced view for albums"
+msgstr "Vizualizare forțată pentru albume"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31358"
+msgid "Forced view for music videos"
+msgstr "Vizualizare forțată pentru videoclipuri muzicale"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31359"
+msgid "Show fullscreen video info for movies and TV shows"
+msgstr "Afișează informațiile video pe tot ecranul pentru filme și seriale TV"
+
+#: /xml/Variables.xml
+msgctxt "#31360"
+msgid "Power menu-related settings: Configure it to your likings."
+msgstr "Setări pentru meniul de alimentare: configurează-l după preferințele tale."
+
+#: /xml/Home.xml
+msgctxt "#31361"
+msgid "All channels"
+msgstr "Toate canalele"
+
+#: /xml/Home.xml
+msgctxt "#31362"
+msgid "All radios"
+msgstr "Toate posturile de radio"
+
+#: /xml/Custom_1105_MusicOSDSettings.xml
+msgctxt "#31363"
+msgid "Fixed lyrics colors"
+msgstr "Culori fixe pentru versuri"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31364"
+msgid "Greyed out watched items"
+msgstr "Estompează elementele vizionate"
+
+#: /xml/Includes.xml
+msgctxt "#31365"
+msgid "Jump to letter"
+msgstr "Salt la literă"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31366"
+msgid "Lists (up to 8 items)"
+msgstr "Liste (până la 8 elemente)"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31367"
+msgid "Sort method of widget"
+msgstr "Metoda de sortare a widgetului"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31368"
+msgid "Sort direction of widget"
+msgstr "Direcția de sortare a widgetului"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#31369"
+msgid "Press [B]OK[/B] to read description or [B]Left[/B] to show back thumb"
+msgstr "Apasă [B]OK[/B] pentru a citi descrierea sau [B]Stânga[/B] pentru a afișa miniatura din spate"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31370"
+msgid "Show CDArt on movies widgets"
+msgstr "Afișează CDArt în widgeturile pentru filme"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31371"
+msgid "Show movies CDArt"
+msgstr "Afișează CDArt-ul filmelor"
+
+#: /xml/Home.xml
+msgctxt "#31372"
+msgid "Games sources"
+msgstr "Surse de jocuri"
+
+#: /xml/Home.xml
+msgctxt "#31373"
+msgid "Your games library is currently empty. In order to populate it with your personal games, add a games source. After the source has been added you will be able to browse your games list. You will also need to install necessary add-ons for games."
+msgstr "Biblioteca ta de jocuri este momentan goală. Pentru a o completa cu jocurile tale personale, adaugă o sursă de jocuri. După ce sursa a fost adăugată, vei putea naviga în lista jocurilor tale. De asemenea, va trebui să instalezi suplimentele necesare pentru jocuri."
+
+#: /xml/Home.xml
+msgctxt "#31374"
+msgid "Your pictures library is currently empty. In order to populate it with your personal pictures, add a pictures source. After the source has been added you will be able to browse your pictures list."
+msgstr "Biblioteca ta de imagini este momentan goală. Pentru a o completa cu imaginile tale personale, adaugă o sursă de imagini. După ce sursa a fost adăugată, vei putea naviga în lista imaginilor tale."
+
+#: /xml/Home.xml
+msgctxt "#31375"
+msgid "Pictures sources"
+msgstr "Surse de imagini"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31376"
+msgid "Show colored outline"
+msgstr "Afișează conturul colorat"
+
+#: /xml/MyMusicPlaylistEditor.xml
+msgctxt "#31377"
+msgid "Music files"
+msgstr "Fișiere muzicale"
+
+#: /xml/MyMusicPlaylistEditor.xml
+msgctxt "#31378"
+msgid "Current playlist"
+msgstr "Lista de redare curentă"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31379"
+msgid "animate lyrics"
+msgstr "animează versurile"
+
+#: /xml/Custom_1132_MoviesSetsInfo.xml
+msgctxt "#31380"
+msgid "Press [B]Up[/B] for extended info"
+msgstr "Apasă [B]Sus[/B] pentru informații extinse"
+
+#: /xml/addon.xml
+msgctxt "#31381"
+msgid "Movies set information"
+msgstr "Informații despre colecția de filme"
+
+#: /xml/addon.xml
+msgctxt "#31382"
+msgid "Extended information"
+msgstr "Informații extinse"
+
+#: /xml/Variables.xml
+msgctxt "#31383"
+msgid "Correct password ! This menu is now available for"
+msgstr "Parolă corectă! Acest meniu este acum disponibil pentru"
+
+#: /xml/Variables.xml
+msgctxt "#31384"
+msgid "minute(s)"
+msgstr "minut(e)"
+
+#: /xml/Variables.xml
+msgctxt "#31385"
+msgid "Incorrect password ! Please Retry."
+msgstr "Parolă incorectă! Încearcă din nou."
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31386"
+msgid "Password protection"
+msgstr "Protecție cu parolă"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31387"
+msgid "Parental control"
+msgstr "Control parental"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31388"
+msgid "Set password protection for menu items"
+msgstr "Setează protecția cu parolă pentru elementele meniului"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31389"
+msgid "Password has been successfully set !"
+msgstr "Parola a fost setată cu succes!"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31390"
+msgid "Accessibility duration for menu items"
+msgstr "Durata de accesibilitate pentru elementele meniului"
+
+#: /xml/Custom_1133_ParentalControl.xml
+msgctxt "#31391"
+msgid "Password-protected content.[CR]Press [B]Enter[/B] and please enter password."
+msgstr "Conținut protejat prin parolă.[CR]Apasă [B]Enter[/B] și introdu parola."
+
+#: /xml/DialogKeyboard.xml
+msgctxt "#31392"
+msgid "Please enter password"
+msgstr "Introdu parola"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31395"
+msgid "Enable Next Up popup for Live TV"
+msgstr "Activează fereastra pop-up „Urmează” pentru Live TV"
+
+#: /xml/Custom_1134_PVRNextUp.xml
+msgctxt "#31396"
+msgid "Next up"
+msgstr "Urmează"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31397"
+msgid "Show 'Settings' shortcut widget"
+msgstr "Afișează widgetul comenzii rapide „Setări”"
+
+#: /xml/Custom_1136_WarningPopUp.xml
+msgctxt "#31398"
+msgid "It's necessary to reboot Kodi and '[B]Reset main menu and power menu settings[/B]' in skin settings after installation of this version."
+msgstr "Este necesar să repornești Kodi și să folosești opțiunea „[B]Resetează setările meniului principal și ale meniului de alimentare[/B]” din setările interfeței după instalarea acestei versiuni."
+
+#: /xml/Custom_1136_WarningPopUp.xml
+msgctxt "#31399"
+msgid "Warning!"
+msgstr "Atenție!"
+
+#: /xml/Custom_1136_WarningPopUp.xml
+msgctxt "#31400"
+msgid "Do not display anymore"
+msgstr "Nu mai afișa"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31401"
+msgid "Rating text color"
+msgstr "Culoarea textului evaluării"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31402"
+msgid "Show visualisation effects behind background"
+msgstr "Afișează efectele de vizualizare în spatele fundalului"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31403"
+msgid "Posters panel"
+msgstr "Panou cu postere"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31404"
+msgid "Widgets to personalize"
+msgstr "Widgeturi de personalizat"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31405"
+msgid "Vertical panel (1 item)"
+msgstr "Panou vertical (1 element)"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31406"
+msgid "Thumbs without banners panel"
+msgstr "Panou cu miniaturi fără bannere"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31407"
+msgid "Thumbs with banners panel"
+msgstr "Panou cu miniaturi și bannere"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31408"
+msgid "Squares panel"
+msgstr "Panou cu pătrate"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31409"
+msgid "Banners panel"
+msgstr "Panou cu bannere"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31410"
+msgid "Miniatures"
+msgstr "Miniaturi"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31411"
+msgid "Miniatures panel"
+msgstr "Panou cu miniaturi"
+
+#. viewtype name
+#: /xml/View_508_DoubleLists.xml
+msgctxt "#31412"
+msgid "Double lists"
+msgstr "Liste duble"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31413"
+msgid "Show Skin Helper Service widgets settings"
+msgstr "Afișează setările widgeturilor Skin Helper Service"
+
+#. viewtype name
+#: /xml/View_509_TripleLists.xml
+msgctxt "#31414"
+msgid "Triple lists"
+msgstr "Liste triple"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31415"
+msgid "Show clearlogos at the top of menu"
+msgstr "Afișează clearlogo-urile în partea de sus a meniului"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31416"
+msgid "Minimize main menu"
+msgstr "Minimizează meniul principal"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31417"
+msgid "Show item label on top"
+msgstr "Afișează eticheta elementului în partea de sus"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31418"
+msgid "Required add-ons"
+msgstr "Suplimente necesare"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31419"
+msgid "Optional add-ons"
+msgstr "Suplimente opționale"
+
+#: /xml/Variables.xml
+msgctxt "#31420"
+msgid "Directed by"
+msgstr "Regizat de"
+
+#: /xml/Variables.xml
+msgctxt "#31421"
+msgid "Similar to"
+msgstr "Similar cu"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31422"
+msgid "Play trailers in full screen"
+msgstr "Redă trailerele pe tot ecranul"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31423"
+msgid "Enable gradient colors"
+msgstr "Activează culorile gradient"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31424"
+msgid "Secondary color"
+msgstr "Culoare secundară"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31425"
+msgid "Use small Video OSD"
+msgstr "Folosește OSD video compact"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31426"
+msgid "Personalize 'Categories' widget"
+msgstr "Personalizează widgetul „Categorii”"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31427"
+msgid "Classic list"
+msgstr "Listă clasică"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31428"
+msgid "Icons list"
+msgstr "Listă cu pictograme"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31429"
+msgid "Configure personal API keys"
+msgstr "Configurează cheile API personale"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31430"
+msgid "Hide video info when video is paused"
+msgstr "Ascunde informațiile video când videoclipul este pus pe pauză"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31431"
+msgid "Show scrolling text"
+msgstr "Afișează textul derulant"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31432"
+msgid "Scraper ratings"
+msgstr "Evaluări de la scraper"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31433"
+msgid "My ratings"
+msgstr "Evaluările mele"
+
+#: /xml/Variables.xml
+msgctxt "#31434"
+msgid "win"
+msgstr "premiu"
+
+#: /xml/Variables.xml
+msgctxt "#31435"
+msgid "wins"
+msgstr "premii"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31436"
+msgid "Oscars"
+msgstr "Oscaruri"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31437"
+msgid "Hide fanart opacity in fullscreen mode"
+msgstr "Ascunde opacitatea fanart-ului în modul ecran complet"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31438"
+msgid "Show a border for media"
+msgstr "Afișează marginea pentru elementele media"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31439"
+msgid "Get all Artworks"
+msgstr "Descarcă toate materialele grafice"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31440"
+msgid "Genre Colors"
+msgstr "Culori genuri"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31441"
+msgid "Pause video during access to info"
+msgstr "Pune videoclipul pe pauză la accesarea informațiilor"
+
+#: /xml/script-NextAired-TVGuide.xml
+msgctxt "#31442"
+msgid "Last aired episode"
+msgstr "Ultimul episod difuzat"
+
+#: /xml/script-NextAired-TVGuide.xml
+msgctxt "#31443"
+msgid "Airs"
+msgstr "Se difuzează"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31444"
+msgid "Configure media flags"
+msgstr "Configurează indicatorii media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31445"
+msgid "Show media source"
+msgstr "Afișează sursa media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31446"
+msgid "Show media resolution"
+msgstr "Afișează rezoluția media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31447"
+msgid "Show media video codec"
+msgstr "Afișează codecul video media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31448"
+msgid "Show media aspect ratio"
+msgstr "Afișează raportul de aspect media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31449"
+msgid "Show media audio codec"
+msgstr "Afișează codecul audio media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31450"
+msgid "Show media audio channels"
+msgstr "Afișează canalele audio media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31451"
+msgid "Show media duration"
+msgstr "Afișează durata media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31452"
+msgid "Show media finish time"
+msgstr "Afișează ora de finalizare a redării"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31453"
+msgid "Show media studio logo"
+msgstr "Afișează logo-ul studioului media"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31454"
+msgid "Show media record label logo"
+msgstr "Afișează logo-ul casei de discuri"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31455"
+msgid "Show movies of saga"
+msgstr "Afișează filmele din saga"
+
+#: /xml/Custom_1137_SettingsFlags.xml
+msgctxt "#31456"
+msgid "Show albums of artist"
+msgstr "Afișează albumele artistului"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31457"
+msgid "Show artist ClearArt"
+msgstr "Afișează ClearArt-ul artistului"
+
+#: /xml/Custom_1101_SettingsList.xml
+msgctxt "#31458"
+msgid "Select Program"
+msgstr "Selectează programul"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31459"
+msgid "Enable themes (Valentine's Day, Easter, Halloween & Christmas)"
+msgstr "Activează temele (Ziua Îndrăgostiților, Paște, Halloween și Crăciun)"
+
+#: /xml/Home.xml
+msgctxt "#31460"
+msgid "Your library is currently empty.[CR]In order to populate it with your personal media, add  sources and configure them."
+msgstr "Biblioteca ta este momentan goală.[CR]Pentru a o completa cu fișierele media personale, adaugă surse și configurează-le."
+
+#: /xml/Variables.xml
+msgctxt "#31461"
+msgid "Recommended Youtube videos"
+msgstr "Videoclipuri YouTube recomandate"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31462"
+msgid "Video countries icons pack"
+msgstr "Pachet pictograme țări video"
+
+#: /xml/Includes.xml
+msgctxt "#31463"
+msgid "No broadcast this day"
+msgstr "Nu există difuzări în această zi"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31464"
+msgid "Automatically show music video info at beginning and end of playing"
+msgstr "Afișează automat informațiile videoclipului muzical la începutul și la sfârșitul redării"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31465"
+msgid "Background replacement"
+msgstr "Înlocuirea fundalului"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31466"
+msgid "Genres panel"
+msgstr "Panou cu genuri"
+
+#: /xml/Home.xml
+msgctxt "#31467"
+msgid "Most played music videos"
+msgstr "Cele mai redate videoclipuri muzicale"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31468"
+msgid "Show media names with widgets names"
+msgstr "Afișează numele elementelor media împreună cu numele widgeturilor"
+
+#: /xml/Variables.xml
+msgctxt "#31469"
+msgid "Christmas Theme"
+msgstr "Tema de Crăciun"
+
+#: /xml/Variables.xml
+msgctxt "#31470"
+msgid "Halloween Theme"
+msgstr "Tema de Halloween"
+
+#: /xml/Variables.xml
+msgctxt "#31471"
+msgid "Easter Theme"
+msgstr "Tema de Paște"
+
+#: /xml/Variables.xml
+msgctxt "#31472"
+msgid "Valentine's Day Theme"
+msgstr "Tema de Ziua Îndrăgostiților"
+
+#: /xml/Includes_MediaMenu.xml
+msgctxt "#31473"
+msgid "Show channel groups"
+msgstr "Afișează grupurile de canale"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31474"
+msgid "Scope mode for constant image height (CIH) setup"
+msgstr "Modul Scope pentru configurarea înălțimii constante a imaginii (CIH)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31475"
+msgid "2:35:1 (1920x817)"
+msgstr "2:35:1 (1920x817)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31476"
+msgid "2:40:1 (1920x800)"
+msgstr "2:40:1 (1920x800)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31477"
+msgid "1:77:1 (1920x1080)"
+msgstr "1:77:1 (1920x1080)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31478"
+msgid "1:85:1 (1920x1038)"
+msgstr "1:85:1 (1920x1038)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31479"
+msgid "2:37:1 (1920x810)"
+msgstr "2:37:1 (1920x810)"
+
+#: /xml/Variables.xml
+msgctxt "#31480"
+msgid "Scope mode"
+msgstr "Mod Scope"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31481"
+msgid "My ratings and scraper ratings"
+msgstr "Evaluările mele și evaluările scraperului"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31482"
+msgid "Scraper ratings text color"
+msgstr "Culoarea textului evaluărilor scraperului"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31483"
+msgid "My ratings text color"
+msgstr "Culoarea textului evaluărilor mele"
+
+#: /xml/Includes.xml
+msgctxt "#31484"
+msgid "Loading..."
+msgstr "Se încarcă..."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31485"
+msgid "Parental control related settings."
+msgstr "Setări pentru controlul parental."
+
+#: /xml/Custom_1101_SettingsList.xml
+msgctxt "#31486"
+msgid "Select Resolution"
+msgstr "Selectează rezoluția"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31487"
+msgid "Date added"
+msgstr "Data adăugării"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31488"
+msgid "Show extended info"
+msgstr "Afișează informațiile extinse"
+
+#: /xml/Variables.xml
+msgctxt "#31489"
+msgid "By"
+msgstr "De"
+
+#: /xml/Variables.xml
+msgctxt "#31490"
+msgid "Movies from movie set"
+msgstr "Filme din colecție"
+
+#: /xml/Custom_1132_MoviesSetsInfo.xml
+msgctxt "#31491"
+msgid "Press [B]DOWN[/B] to show info from selected movie"
+msgstr "Apasă [B]JOS[/B] pentru a afișa informațiile filmului selectat"
+
+#: /xml/Variables.xml
+msgctxt "#31492"
+msgid "Lists settings"
+msgstr "Setări liste"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31493"
+msgid "Show Actors list"
+msgstr "Afișează lista actorilor"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#31494"
+msgid "Episode count"
+msgstr "Număr de episoade"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31495"
+msgid "Movies from director"
+msgstr "Filme ale regizorului"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31496"
+msgid "Similar movies"
+msgstr "Filme similare"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31497"
+msgid "Movies from studio"
+msgstr "Filme ale studioului"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31498"
+msgid "Next Up episodes"
+msgstr "Următoarele episoade"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31499"
+msgid "Similar TV shows"
+msgstr "Seriale TV similare"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#31500"
+msgid "Fanarts list"
+msgstr "Lista fanarturilor"
+
+#: /xml/Variables.xml
+msgctxt "#31501"
+msgid "Albums from library"
+msgstr "Albume din bibliotecă"
+
+#: /xml/Variables.xml
+msgctxt "#31502"
+msgid "Complete discography"
+msgstr "Discografie completă"
+
+#: /xml/Variables.xml
+msgctxt "#31503"
+msgid "Songs from album"
+msgstr "Melodii din album"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#31504"
+msgid "Press [B]OK[/B] to show back thumb"
+msgstr "Apasă [B]OK[/B] pentru a afișa miniatura din spate"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#31505"
+msgid "Episode of the season"
+msgstr "Episod din sezon"
+
+#: /xml/Variables.xml
+msgctxt "#31506"
+msgid "Posters"
+msgstr "Postere"
+
+#: /xml/Variables.xml
+msgctxt "#31507"
+msgid "Fanarts"
+msgstr "Fanarturi"
+
+#: /xml/Variables.xml
+msgctxt "#31508"
+msgid "Resume playback at"
+msgstr "Reia redarea de la"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31509"
+msgid "Press [B]OK[/B] to show biography"
+msgstr "Apasă [B]OK[/B] pentru a afișa biografia"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31510"
+msgid "Website"
+msgstr "Site web"
+
+#: /xml/Variables.xml
+msgctxt "#31511"
+msgid "Role in movie"
+msgstr "Rol în film"
+
+#: /xml/Variables.xml
+msgctxt "#31512"
+msgid "Crew member in movie"
+msgstr "Membru al echipei filmului"
+
+#: /xml/Variables.xml
+msgctxt "#31513"
+msgid "Role in TV show"
+msgstr "Rol în serialul TV"
+
+#: /xml/Variables.xml
+msgctxt "#31514"
+msgid "Crew member in TV show"
+msgstr "Membru al echipei serialului TV"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31515"
+msgid "Palm Week"
+msgstr "Săptămâna Floriilor"
+
+msgctxt "#31550"
+msgid "Channel groups"
+msgstr "Grupuri de canale"
+
+msgctxt "#31551"
+msgid "German Telecast Offers"
+msgstr "Oferte de difuzare germane"
+
+msgctxt "#31552"
+msgid "Also apply to radio and internet station logos"
+msgstr "Aplică de asemenea pentru logourile posturilor de radio și ale posturilor de internet"
+
+msgctxt "#31553"
+msgid "Use poster view for music video widgets"
+msgstr "Folosește vizualizarea cu postere pentru widgeturile videoclipurilor muzicale"
+
+msgctxt "#31554"
+msgid "Show year of publication in title"
+msgstr "Afișează anul publicării în titlu"
+
+msgctxt "#31555"
+msgid "Optional icons and fanart packs"
+msgstr "Pachete opționale de pictograme și fanart"
+
+msgctxt "#31556"
+msgid "Reboot from NAND (Android)"
+msgstr "Repornește din NAND (Android)"
+
+msgctxt "#31557"
+msgid "Restart Kodi"
+msgstr "Repornește Kodi"
+
+msgctxt "#31558"
+msgid "Addon-ID"
+msgstr "ID supliment"
+
+msgctxt "#31559"
+msgid "Platform"
+msgstr "Platformă"
+
+msgctxt "#31560"
+msgid "Forced Views"
+msgstr "Vizualizări forțate"
+
+msgctxt "#31561"
+msgid "Show PVR related Artworks"
+msgstr "Afișează materialele grafice asociate PVR"
+
+msgctxt "#31562"
+msgid "PVR Artwork Configuration"
+msgstr "Configurarea materialelor grafice PVR"
+
+msgctxt "#31563"
+msgid "Show date"
+msgstr "Afișează data"
+
+msgctxt "#31564"
+msgid "Top Bar"
+msgstr "Bară superioară"
+
+msgctxt "#31565"
+msgid "Bottom Bar"
+msgstr "Bară inferioară"
+
+msgctxt "#31566"
+msgid "Media"
+msgstr "Media"
+
+msgctxt "#31567"
+msgid "Kodi/Distribution Logo"
+msgstr "Logo Kodi/Distribuție"
+
+msgctxt "#31568"
+msgid "LibreELEC"
+msgstr "LibreELEC"
+
+msgctxt "#31569"
+msgid "CoreELEC"
+msgstr "CoreELEC"
+
+msgctxt "#31570"
+msgid "Show extended Power Menu"
+msgstr "Afișează meniul de alimentare extins"
+
+msgctxt "#31571"
+msgid "Prefer Fanart in EPG preview window if available"
+msgstr "Preferă Fanart în fereastra de previzualizare EPG, dacă este disponibil"
+
+msgctxt "#31572"
+msgid "Upcoming episodes"
+msgstr "Episoade următoare"
+
+msgctxt "#31573"
+msgid "Show MPAA rating"
+msgstr "Afișează clasificarea MPAA"
+
+msgctxt "#31574"
+msgid "(until "
+msgstr "(până la "
+
+msgctxt "#31575"
+msgid "Show Color Depth"
+msgstr "Afișează profunzimea culorii"
+
+msgctxt "#31576"
+msgid "Show additional Infos within the PVR widgets"
+msgstr "Afișează informații suplimentare în widgeturile PVR"
+
+msgctxt "#31577"
+msgid "Close Video OSD automatically after"
+msgstr "Închide automat OSD-ul video după"
+
+msgctxt "#31578"
+msgid "disabled"
+msgstr "dezactivat"
+
+msgctxt "#31580"
+msgid "3 seconds"
+msgstr "3 secunde"
+
+msgctxt "#31581"
+msgid "5 seconds"
+msgstr "5 secunde"
+
+msgctxt "#31582"
+msgid "7 seconds"
+msgstr "7 secunde"
+
+msgctxt "#31583"
+msgid "10 seconds"
+msgstr "10 secunde"
+
+msgctxt "#31584"
+msgid "15 seconds"
+msgstr "15 secunde"
+
+msgctxt "#31585"
+msgid "Show Channel Numbers"
+msgstr "Afișează numerele canalelor"
+
+msgctxt "#31586"
+msgid "Show Date of First aired"
+msgstr "Afișează data primei difuzări"
+
+msgctxt "#31587"
+msgid "Item Path of Picture Widgets"
+msgstr "Calea elementului pentru widgeturile de imagini"
+
+msgctxt "#31588"
+msgid "Default Action on 'Movie' and 'TV-Show' Widgets"
+msgstr "Acțiunea implicită pentru widgeturile „Film” și „Serial TV”"
+
+msgctxt "#31589"
+msgid "Play Item"
+msgstr "Redă elementul"
+
+msgctxt "#31590"
+msgid "Show Info"
+msgstr "Afișează informațiile"
+
+msgctxt "#31591"
+msgid "Sort Order"
+msgstr "Ordinea de sortare"
+
+msgctxt "#31592"
+msgid "Show Path Navigation (Breadcrumbs) in List Views"
+msgstr "Afișează navigarea pe cale (Breadcrumbs) în vizualizările de tip listă"
+
+msgctxt "#31593"
+msgid "Show only 'current item / item count' Information"
+msgstr "Afișează doar informațiile „element curent / număr de elemente”"
+
+msgctxt "#31594"
+msgid "Set Animated Poster"
+msgstr "Setează posterul animat"
+
+msgctxt "#31595"
+msgid "Remove Animated Poster"
+msgstr "Elimină posterul animat"
+
+msgctxt "#31596"
+msgid "Animated Poster removed"
+msgstr "Posterul animat a fost eliminat"
+
+msgctxt "#31597"
+msgid "Animated Poster added"
+msgstr "Posterul animat a fost adăugat"
+
+msgctxt "#31598"
+msgid "Local Path to animated Poster Folder"
+msgstr "Calea locală către folderul cu postere animate"
+
+msgctxt "#31599"
+msgid "The folder of the animated Poster Collection was not defined yet. Define a Folder on the local File System containing animated Posters within the Skin Settings."
+msgstr "Folderul colecției de postere animate nu a fost definit încă. Definește, în setările interfeței, un folder din sistemul local de fișiere care conține postere animate."
+
+msgctxt "#31600"
+msgid "Could not assign animated Poster"
+msgstr "Posterul animat nu a putut fi atribuit"
+
+msgctxt "#31601"
+msgid "Hit Probability: "
+msgstr "Probabilitate de potrivire: "
+
+#: SkinSettings.xml
+msgctxt "#31602"
+msgid "'Rotten Tomatoes' Rating Category"
+msgstr "Categoria de evaluare „Rotten Tomatoes”"
+
+#: SkinSettings.xml
+msgctxt "#31603"
+msgid "All Critics"
+msgstr "Toți criticii"
+
+#: SkinSettings.xml
+msgctxt "#31604"
+msgid "Top Critics"
+msgstr "Criticii de top"
+
+#: SkinSettings.xml
+msgctxt "#31605"
+msgid "Audience"
+msgstr "Audiență"
+
+#: SkinSettings.xml
+msgctxt "#31607"
+msgid "Use simplified Video OSD Navigation"
+msgstr "Folosește navigarea simplificată în OSD video"
+
+msgctxt "#31608"
+msgid "Previous seen Channel"
+msgstr "Canal vizionat anterior"
+
+#: Includes_MediaMenu.xml
+msgctxt "#31609"
+msgid "Show PVR Channel Status"
+msgstr "Afișează starea canalului PVR"
+
+#: DialogPlayerProcessInfo
+
+msgctxt "#31610"
+msgid "Display Mode"
+msgstr "Mod afișare"
+
+msgctxt "#31611"
+msgid "Eoft & Gamut"
+msgstr "Eoft & Gamă"
+
+msgctxt "#31612"
+msgid "Color Depth"
+msgstr "Adâncime de culoare"
+
+#: SkinSettings.xml
+
+msgctxt "#31613"
+msgid "Display Media Time"
+msgstr "Afișează timpul conținutului media"
+
+msgctxt "#31614"
+msgid "current Time / total Time"
+msgstr "timp curent / timp total"
+
+msgctxt "#31615"
+msgid "Show TMDB/IMDB rating"
+msgstr "Afișează ratingul TMDB/IMDB"
+
+#: SkinSettings.xml
+
+msgctxt "#31616"
+msgid "Use Background for PVR Channel Icons"
+msgstr "Folosește fundalul pentru pictogramele canalelor PVR"
+
+#: Custom_1127_settingsTVWidgets.xml
+
+msgctxt "#31617"
+msgid "Saved Search Results"
+msgstr "Rezultate de căutare salvate"
+
+#: SkinSettings.xml
+
+msgctxt "#31618"
+msgid "Use full Height for Channel and Program OSD"
+msgstr "Folosește înălțimea completă pentru OSD-ul canalului și programului"
+
+#: Font.xml
+
+msgctxt "#31619"
+msgid "Economica based"
+msgstr "Bazat pe Economica"
+
+#. viewtype name
+#: /xml/View_510_Flix.xml
+
+msgctxt "#31620"
+msgid "Flix Landscape"
+msgstr "Flix peisaj"
+
+#: Variables.xml (SkinSettings.xml)
+
+msgctxt "#31621"
+msgid "Visualization of the PVR and TV screen related settings."
+msgstr "Setări legate de vizualizarea ecranului PVR și TV."
+
+#: /xml/SkinSettings.xml
+
+msgctxt "#31622"
+msgid "Disabled timers"
+msgstr "Programări dezactivate"
+
+#: SkinSettings.xml
+
+msgctxt "#31623"
+msgid "Default Action on 'Timer' Widgets"
+msgstr "Acțiunea implicită pentru widgeturile „Programare”"
+
+msgctxt "#31624"
+msgid "Show Timer Settings"
+msgstr "Afișează setările programării"
+
+msgctxt "#31625"
+msgid "Show Broadcast Information"
+msgstr "Afișează informațiile despre difuzare"
+
+msgctxt "#31627"
+msgid "Video OSD"
+msgstr "OSD video"
+
+msgctxt "#31628"
+msgid "OSD Artwork"
+msgstr "Artwork OSD"
+
+msgctxt "#31630"
+msgid "Use simple Seekbar on Chapter and Time Seeking"
+msgstr "Folosește bara de căutare simplă la navigarea după capitol și timp"
+
+msgctxt "#31631"
+msgid "Action on 'last channel switch' OSD Button"
+msgstr "Acțiunea butonului OSD „comutare la ultimul canal”"
+
+msgctxt "#31632"
+msgid "Switch to last Channel directly"
+msgstr "Comută direct la ultimul canal"
+
+msgctxt "#31633"
+msgid "Show last five Channels"
+msgstr "Afișează ultimele cinci canale"
+
+msgctxt "#31634"
+msgid "Last watched"
+msgstr "Ultimul vizionat"
+
+#: DialogContextMenu.xml
+
+msgctxt "#31635"
+msgid "Play Trailer"
+msgstr "Redă trailerul"
+
+msgctxt "#31636"
+msgid "Show 'Play Trailer' in Context Menu"
+msgstr "Afișează „Redă trailerul” în meniul contextual"
+
+#: Skinsettings.xml
+
+msgctxt "#31637"
+msgid "Activate Lyrics"
+msgstr "Activează versurile"
+
+msgctxt "#31638"
+msgid "Minimized Options Menu"
+msgstr "Meniu de opțiuni minimizat"
+
+msgctxt "#31639"
+msgid "Default Action on 'PVR' Widgets"
+msgstr "Acțiunea implicită pentru widgeturile „PVR”"
+
+#: /xml/SkinSettings.xml
+
+msgctxt "#31640"
+msgid "Enable background for splash screen"
+msgstr "Activează fundalul pentru ecranul de pornire"
+
+msgctxt "#31641"
+msgid "Prefer Album Fanart over Artist Fanart"
+msgstr "Preferă fanartul albumului în locul fanartului artistului"
+
+msgctxt "#31642"
+msgid "High Transparency of Seekbar Background"
+msgstr "Transparență ridicată a fundalului barei de derulare"
+
+#: /xml/MyVideoNav
+
+msgctxt "#31643"
+msgid "Use Poster View"
+msgstr "Folosește vizualizarea cu postere"
+
+msgctxt "#31644"
+msgid "Arial Unicode based"
+msgstr "Bazat pe Arial Unicode"
+
+#: /xml/Includes_MediaMenu.xml
+
+msgctxt "#31645"
+msgid "Quick Navigation"
+msgstr "Navigare rapidă"
+
+#: /xml/MusicOSD.xml
+
+msgctxt "#31646"
+msgid "Black Screen : off"
+msgstr "Ecran negru: dezactivat"
+
+msgctxt "#31647"
+msgid "Black Screen : on"
+msgstr "Ecran negru: activat"
+
+#: /xml/Skinsettings.xml
+
+msgctxt "#31648"
+msgid "Stop Player if Video/Audio is paused longer than"
+msgstr "Oprește playerul dacă videoclipul/audio este pus pe pauză mai mult de"
+
+msgctxt "#31649"
+msgid "1 Minute"
+msgstr "1 minut"
+
+msgctxt "#31650"
+msgid "2 Minutes"
+msgstr "2 minute"
+
+msgctxt "#31651"
+msgid "3 Minutes"
+msgstr "3 minute"
+
+msgctxt "#31652"
+msgid "4 Minutes"
+msgstr "4 minute"
+
+msgctxt "#31653"
+msgid "5 Minutes"
+msgstr "5 minute"
+
+msgctxt "#31655"
+msgid "Show Battery Level"
+msgstr "Afișează nivelul bateriei"
+
+msgctxt "#31656"
+msgid "Show Title and Year on Poster Wall View"
+msgstr "Afișează titlul și anul în vizualizarea peretelui cu postere"
+
+msgctxt "#31657"
+msgid "Show Internet Status"
+msgstr "Afișează starea internetului"
+
+msgctxt "#31658"
+msgid "Show own Level Colors"
+msgstr "Afișează propriile culori pentru niveluri"
+
+msgctxt "#31659"
+msgid "Color of Text Shadow"
+msgstr "Culoarea umbrei textului"
+
+msgctxt "#31660"
+msgid "current Time"
+msgstr "timp curent"
+
+msgctxt "#31661"
+msgid "Decrease Play speed"
+msgstr "Micșorează viteza de redare"
+
+msgctxt "#31662"
+msgid "increase Play speed"
+msgstr "Mărește viteza de redare"
+
+#: SkinSettings.xml
+
+msgctxt "#31663"
+msgid "Busy Spinner"
+msgstr "Indicator de încărcare"
+
+#: Video OSD
+
+msgctxt "#31664"
+msgid "TUN"
+msgstr "TUN"
+
+msgctxt "#31665"
+msgid "SIG"
+msgstr "SIG"
+
+msgctxt "#31666"
+msgid "SNR"
+msgstr "SNR"
+
+msgctxt "#31667"
+msgid "REC"
+msgstr "REC"
+
+msgctxt "#31668"
+msgid "Hide SIG/SNR flags if not provided by Backend Driver"
+msgstr "Ascunde indicatorii SIG/SNR dacă nu sunt furnizați de driverul backend"
+
+#: 1137 Settings Flags
+
+msgctxt "#31669"
+msgid "Show Date added to Library"
+msgstr "Afișează data adăugării în bibliotecă"
+
+#: Skinsettings
+
+msgctxt "#31670"
+msgid "Show Video Resolution on Video start"
+msgstr "Afișează rezoluția video la pornirea videoclipului"
+
+msgctxt "#31671"
+msgid "Toggle Skin Debug"
+msgstr "Comută depanarea interfeței"
+
+msgctxt "#31672"
+msgid "Show Replacement when primal CDArt is not available"
+msgstr "Afișează înlocuitorul când CDArt-ul principal nu este disponibil"
+
+msgctxt "#31673"
+msgid "Default button on Video/Audio OSD"
+msgstr "Buton implicit în OSD video/audio"
+
+msgctxt "#31674"
+msgid "Ratings"
+msgstr "Evaluări"
+
+msgctxt "#31675"
+msgid "Show Ratings in Dialog Info Views"
+msgstr "Afișează evaluările în ferestrele cu informații"
+
+msgctxt "#31676"
+msgid "Show Video Size Icon in List Views"
+msgstr "Afișează pictograma dimensiunii video în vizualizările listă"
+
+msgctxt "#31677"
+msgid "Now in Cinemas"
+msgstr "Acum în cinematografe"
+
+msgctxt "#31678"
+msgid "Next up in Cinemas"
+msgstr "Urmează în cinematografe"
+
+msgctxt "#31679"
+msgid "Set Display of Episodes to"
+msgstr "Setează afișarea episoadelor la"
+
+msgctxt "#31680"
+msgid "watched / total"
+msgstr "vizionate / total"
+
+msgctxt "#31681"
+msgid "unwatched / total"
+msgstr "nevizionate / total"
+
+#: Player Process Info
+
+msgctxt "#31682"
+msgid "Info Labels"
+msgstr "Etichete informații"
+
+msgctxt "#31683"
+msgid "(currently deactivated)"
+msgstr "(dezactivat momentan)"
+
+#: Time format minutes (list views)
+
+msgctxt "#31684"
+msgid "mins"
+msgstr "minute"
+
+msgctxt "#31685"
+msgid "Show Run Time in List Views"
+msgstr "Afișează durata în vizualizările listă"
+
+#: Player Process Info
+
+msgctxt "#31686"
+msgid "Video Queue / Data"
+msgstr "Listă de redare Video / Date"
+
+# Empty string 31687
+
+msgctxt "#31688"
+msgid "Audio Queue / Data"
+msgstr "Listă de redare Audio / Date"
+
+#: Empty string 31689
+
+msgctxt "#31690"
+msgid "HDR & DV"
+msgstr "HDR și DV"
+
+msgctxt "#31692"
+msgid "CPU Usage"
+msgstr "Utilizare CPU"
+
+msgctxt "#31692"
+msgid "CPU Usage"
+msgstr "Utilizare CPU"
+
+msgctxt "#31693"
+msgid "RPU (L6) MDL"
+msgstr "RPU (L6) MDL"
+
+msgctxt "#31694"
+msgid "RPU (L6) maxCLL/maxFALL"
+msgstr "RPU (L6) maxCLL/maxFALL"
+
+msgctxt "#31695"
+msgid "L1 min/max/avg Luminance"
+msgstr "Luminanță L1 min/max/medie"
+
+msgctxt "#31696"
+msgid "L1 min/max/avg PQ"
+msgstr "PQ L1 min/max/medie"
+
+msgctxt "#31697"
+msgid "HDR10 BL MDL"
+msgstr "HDR10 BL MDL"
+
+msgctxt "#31698"
+msgid "HDR10 BL maxCLL/maxFALL"
+msgstr "HDR10 BL maxCLL/maxFALL"
+
+msgctxt "#31699"
+msgid "cd/m²"
+msgstr "cd/m²"
+
+msgctxt "#31700"
+msgid "Dolby Vision Profile"
+msgstr "Profil Dolby Vision"
+
+msgctxt "#31701"
+msgid "Level"
+msgstr "Nivel"
+
+msgctxt "#31702"
+msgid "Dolby Vision Version"
+msgstr "Versiune Dolby Vision"
+
+msgctxt "#31703"
+msgid "Audio Codec & Channels"
+msgstr "Codec audio și canale"
+
+msgctxt "#31704"
+msgid "VS10 Engine"
+msgstr "Motor VS10"
+
+msgctxt "#31705"
+msgid "VS10 Status"
+msgstr "Stare VS10"
+
+msgctxt "#31706"
+msgid "HDR Mode (Source)"
+msgstr "Mod HDR (sursă)"
+
+msgctxt "#31707"
+msgid "fps"
+msgstr "fps"
+
+msgctxt "#31708"
+msgid "Mbit/s"
+msgstr "Mbit/s"
+
+msgctxt "#31709"
+msgid "Last updated TV Shows"
+msgstr "Ultimele seriale TV actualizate"
+
+msgctxt "#31710"
+msgid "upper left"
+msgstr "stânga sus"
+
+msgctxt "#31711"
+msgid "bottom left"
+msgstr "stânga jos"
+
+msgctxt "#31712"
+msgid "Display Position"
+msgstr "Poziție afișare"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31713"
+msgid "Number of items displaying on vertical panel"
+msgstr "Numărul de elemente afișate pe panoul vertical"
+
+#: /xml/custom_1124_SettingsTShowsWidgets.xml
+msgctxt "#31714"
+msgid "Random TV Shows"
+msgstr "Seriale TV aleatorii"
+
+#:PlayerProcessInfo.xml
+msgctxt "#31715"
+msgid "Signal Strength"
+msgstr "Puterea semnalului"
+
+#:Custom_1137_SettingsFlags.xml
+msgctxt "#31716"
+msgid "Use IMDB logo instead of TMDB logo"
+msgstr "Folosește logoul IMDB în locul logoului TMDB"
+
+#:PlayerProcessInfo.xml
+msgctxt "#31717"
+msgid "L5 active Area [l,r,t,b]"
+msgstr "Zona activă L5 [stânga,dreapta,sus,jos]"
+
+#:DialogPVRChannelsOSD.xml
+msgctxt "#31718"
+msgid "Left/Right switches between Channelgroups"
+msgstr "Stânga/Dreapta comută între grupurile de canale"
+
+#: xml/SkinSettings.xml
+msgctxt "#31719"
+msgid "Titles language settings"
+msgstr "Setări pentru limba titlurilor"
+
+msgctxt "#31720"
+msgid "Original title"
+msgstr "Titlu original"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31721"
+msgid "Localized title"
+msgstr "Titlu localizat"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#31722"
+msgid "Search 'Making Of' on Youtube"
+msgstr "Caută 'Making Of' pe Youtube"
+
+#: /xml/DialogPlayerProcessInfo.xml
+msgctxt "#31723"
+msgid "CPU & RAM Usage :"
+msgstr "Utilizare CPU & RAM:"
