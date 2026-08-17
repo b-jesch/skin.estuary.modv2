@@ -789,7 +789,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster)) | !String.IsEmpty(ListItem.Art(season.poster)) | !String.IsEmpty(ListItem.Art(animatedposter))]</visible>
+				<visible>![String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(animatedposter))]</visible>
 				<control type="group">
 					<left>9</left>
 					<top>-16</top>
@@ -1083,8 +1083,7 @@
 				<width>160</width>
 				<height>60</height>
 				<texture>overlays/overlay-bg.png</texture>
-				<visible>!String.IsEqual($VAR[WallWatchedIconVar],)</visible>
-				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
+				<visible>!String.IsEqual($VAR[WallWatchedIconVar],) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="image">
 				<left>35</left>

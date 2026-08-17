@@ -146,8 +146,7 @@
 				<width>110</width>
 				<height>110</height>
 				<texture flipy="true">overlays/overlay-bg.png</texture>
-				<visible>!StringIsEqual($VAR[WallWatchedIconVar],)</visible>
-				<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
+				<visible>!StringIsEqual($VAR[WallWatchedIconVar],) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="image">
 				<left>5</left>
