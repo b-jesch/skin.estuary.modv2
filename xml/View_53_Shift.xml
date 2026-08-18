@@ -81,10 +81,10 @@
 					<itemlayout width="370">
 						<control type="image">
 							<depth>DepthContentPopout</depth>
-							<left>0</left>
+							<left>-13</left>
 							<top>90</top>
-							<width>370</width>
-							<height>480</height>
+							<width>400</width>
+							<height>520</height>
 							<aspectratio aligny="center" align="center">keep</aspectratio>
 							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -93,10 +93,10 @@
 						</control>
 						<control type="image">
 							<depth>DepthContentPopout</depth>
-							<left>0</left>
+							<left>-13</left>
 							<top>90</top>
-							<width>370</width>
-							<height>480</height>
+							<width>400</width>
+							<height>520</height>
 							<aspectratio aligny="center" align="center">keep</aspectratio>
 							<texture fallback="DefaultAudio.png">$VAR[ShiftThumbVar]</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -145,8 +145,8 @@
 							<visible>!String.IsEqual(listitem.dbtype,album)</visible>
 						</control>
 						<control type="image">
-							<left>169</left>
-							<top>560</top>
+							<left>32</left>
+							<top>555</top>
 							<width>32</width>
 							<height>32</height>
 							<texture>$VAR[WallWatchedIconVar]</texture>
@@ -164,10 +164,10 @@
 					<focusedlayout width="370">
 						<control type="image">
 							<depth>DepthContentPopout</depth>
-							<left>0</left>
+							<left>-13</left>
 							<top>90</top>
-							<width>370</width>
-							<height>480</height>
+							<width>400</width>
+							<height>520</height>
 							<aspectratio aligny="center" align="center">keep</aspectratio>
 							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -176,10 +176,10 @@
 						</control>
 						<control type="image">
 							<depth>DepthContentPopout</depth>
-							<left>0</left>
+							<left>-13</left>
 							<top>90</top>
-							<width>370</width>
-							<height>480</height>
+							<width>400</width>
+							<height>520</height>
 							<aspectratio aligny="center" align="center">keep</aspectratio>
 							<texture fallback="DefaultAudio.png">$VAR[ShiftThumbVar]</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -187,13 +187,13 @@
 							<visible>Container.Content(artists) | Container.Content(albums)</visible>
 						</control>
 						<control type="group">
-							<top>375</top>
+							<top>395</top>
 							<visible>Skin.HasSetting(enable_LibraryDiscArt)</visible>
 							<visible>!String.IsEmpty(ListItem.Art(discart)) + !String.IsEqual(ListItem.DbType,album) + !ListItem.IsCollection</visible>
-							<animation effect="slide" start="0,50" end="0,0" time="300" tween="cubic" easing="out" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,-10" end="0,50" time="500" tween="cubic" easing="out" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 							<control type="image">
-								<right>15</right>
+								<right>5</right>
 								<top>0</top>
 								<width>172</width>
 								<height>172</height>
@@ -202,7 +202,7 @@
 								<visible>!Skin.HasSetting(enable_LibraryDiscArtOverlay)</visible>
 							</control>
 							<control type="image">
-								<right>15</right>
+								<right>5</right>
 								<top>0</top>
 								<width>172</width>
 								<height>172</height>
@@ -212,7 +212,7 @@
 								<visible>Skin.HasSetting(EnableGradientColor)</visible>
 							</control>
 							<control type="image">
-								<right>16</right>
+								<right>6</right>
 								<top>1</top>
 								<width>170</width>
 								<height>170</height>
@@ -252,8 +252,8 @@
 							<visible>!String.IsEqual(listitem.dbtype,season) + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
 						</control>
 						<control type="image">
-							<left>169</left>
-							<top>560</top>
+							<left>32</left>
+							<top>555</top>
 							<width>32</width>
 							<height>32</height>
 							<texture>$VAR[WallWatchedIconVar]</texture>

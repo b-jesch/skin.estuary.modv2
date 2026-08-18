@@ -246,14 +246,6 @@
 					</control>
 					<control type="image">
 						<left>30</left>
-						<top>260</top>
-						<width>70</width>
-						<height>70</height>
-						<texture>overlays/overlay-bg.png</texture>
-						<visible>!StringIsEqual($VAR[WallWatchedIconVar],)</visible>
-					</control>
-					<control type="image">
-						<left>30</left>
 						<top>300</top>
 						<width>28</width>
 						<height>28</height>
@@ -305,14 +297,6 @@
 							<texture fallback="DefaultVideo.png" background="true">$VAR[ShiftThumbVar]</texture>
 							<bordersize>20</bordersize>
 							<aspectratio>scale</aspectratio>
-						</control>
-						<control type="image">
-							<left>30</left>
-							<top>260</top>
-							<width>70</width>
-							<height>70</height>
-							<texture>overlays/overlay-bg.png</texture>
-							<visible>!StringIsEqual($VAR[WallWatchedIconVar],)</visible>
 						</control>
 						<control type="image">
 							<left>30</left>

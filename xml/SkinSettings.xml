@@ -919,12 +919,6 @@
 					<onclick>Skin.ToggleSetting(hide_pubyear)</onclick>
 					<selected>Skin.HasSetting(hide_pubyear)</selected>
 				</control>
-				<control type="radiobutton" id="921">
-					<label>$LOCALIZE[31656]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(show_wallviewlabels)</onclick>
-					<selected>Skin.HasSetting(show_wallviewlabels)</selected>
-				</control>
 				<control type="radiobutton" id="917">
 					<label>$LOCALIZE[31364]</label>
 					<include>DefaultSettingButton</include>
@@ -1162,13 +1156,6 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(show_breadcrumbs)</onclick>
 					<selected>Skin.HasSetting(show_breadcrumbs)</selected>
-				</control>
-				<control type="radiobutton" id="718">
-					<label>  ∟$LOCALIZE[31593]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(show_breadcrumbs_countonly)</onclick>
-					<selected>Skin.HasSetting(show_breadcrumbs_countonly)</selected>
-					<visible>Skin.HasSetting(show_breadcrumbs)</visible>
 				</control>
 				<control type="label" id="30018">
 					<textoffsetx>45</textoffsetx>

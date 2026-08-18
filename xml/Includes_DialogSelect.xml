@@ -85,16 +85,9 @@
 						<top>43</top>
 						<visible>ListItem.Property(PVR.IsRecordingTimer) | ListItem.Property(PVR.IsRemindingTimer) | ListItem.HasTimer | ListItem.IsCollection | ListItem. IsPlaying | ListItem.IsResumable | ListItem.HasArchive | Integer.IsGreater(ListItem.Playcount,0)</visible>
 						<control type="image">
-							<width>70</width>
-							<height>70</height>
-							<texture>overlays/overlay-bg.png</texture>
-							<visible>Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-						</control>
-						<control type="image">
 							<width>197</width>
 							<height>70</height>
-							<texture>overlays/overlayfade.png</texture>
-							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 						</control>
 						<control type="image">
 							<left>3</left>
@@ -173,16 +166,9 @@
 						<top>43</top>
 						<visible>ListItem.Property(PVR.IsRecordingTimer) | ListItem.Property(PVR.IsRemindingTimer) | ListItem.HasTimer | ListItem.IsCollection | ListItem. IsPlaying | ListItem.IsResumable | ListItem.HasArchive | Integer.IsGreater(ListItem.Playcount,0)</visible>
 						<control type="image">
-							<width>70</width>
-							<height>70</height>
-							<texture>overlays/overlay-bg.png</texture>
-							<visible>Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-						</control>
-						<control type="image">
 							<width>197</width>
 							<height>70</height>
 							<texture>overlays/overlayfade.png</texture>
-							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="image">
 							<left>3</left>

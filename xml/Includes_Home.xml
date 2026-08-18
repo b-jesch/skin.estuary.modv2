@@ -487,7 +487,7 @@
 				<width>160</width>
 				<height>70</height>
 				<texture>overlays/overlay-bg.png</texture>
-				<visible>!StringIsEqual($VAR[WallWatchedIconVar],)</visible>
+				<visible>!String.IsEqual($VAR[WallWatchedIconVar],)</visible>
 				<animation effect="slide" end="0,41" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
 			</control>
 			<control type="image">
@@ -582,7 +582,7 @@
 			</control>
 		</definition>
 	</include>
-	<include name="WidgetNextWatchEpisodes">
+	<!--<include name="WidgetNextWatchEpisodes">
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
@@ -674,7 +674,7 @@
 				<onclick condition="String.IsEqual(Skin.String(widget_action),31590) + [Control.HasFocus(6100) | Control.HasFocus(61001) | Control.HasFocus(6700) | Control.HasFocus(67001)]">Info</onclick>
 			</control>
 		</definition>
-	</include>
+	</include>-->
 	<include name="WidgetListEpisodes">
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>

@@ -364,8 +364,7 @@
 					<height>289</height>
 					<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 					<bordersize>20</bordersize>
-					<visible>$PARAM[focused]</visible>
-					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+					<visible>$PARAM[focused] + Skin.HasSetting(EnableGradientColor)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -385,14 +384,7 @@
 					<aspectratio>scale</aspectratio>
 					<visible>Container.Content(videos)</visible>
 				</control>
-				<control type="image">
-					<left>20</left>
-					<top>105</top>
-					<width>80</width>
-					<height>80</height>
-					<texture>overlays/overlay-bg.png</texture>
-					<visible>!StringIsEqual($VAR[WallWatchedIconVar],)</visible>
-				</control>
+
 				<control type="image">
 					<left>20</left>
 					<top>153</top>
@@ -489,8 +481,7 @@
 					<height>249</height>
 					<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 					<bordersize>20</bordersize>
-					<visible>$PARAM[focused]</visible>
-					<visible>Skin.HasSetting(EnableGradientColor)</visible>
+					<visible>$PARAM[focused] + Skin.HasSetting(EnableGradientColor)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -532,14 +523,21 @@
 					<visible>String.IsEqual(ListItem.DBType,episode) + $EXP[show_unwatchedthumbs]</visible>
 				</control>
 				<control type="image">
-					<left>136</left>
-					<top>106</top>
+					<left>290</left>
+					<top>148</top>
 					<width>80</width>
 					<height>80</height>
 					<texture flipx="true">overlays/overlay-bg.png</texture>
 					<visible>![String.IsEqual(listitem.dbtype,episode) + [Control.IsVisible(500) | Control.IsVisible(54)]] + ![String.IsEqual(listitem.dbtype,episode) + Window.IsVisible(MyVideoNav.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31101])]]</visible>
 					<visible>!Window.IsVisible(script-embuary-video.xml) + !Window.IsVisible(script-embuary-person.xml) + ![Container.Content(videos) + String.IsEmpty(ListItem.Label2)]</visible>
 					<animation effect="slide" end="74,41" time="0">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>20</left>
+					<top>177</top>
+					<width>350</width>
+					<height>50</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 				</control>
 				<control type="label">
 					<left>31</left>
@@ -551,14 +549,6 @@
 					<align>right</align>
 					<visible>![String.IsEqual(listitem.dbtype,episode) + [Control.IsVisible(500) | Control.IsVisible(54)]] + ![String.IsEqual(listitem.dbtype,episode) + Window.IsVisible(MyVideoNav.xml) + [String.IsEqual(Container.ViewMode,$LOCALIZE[31102]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31101])]]</visible>
 					<animation effect="slide" end="74,41" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<left>20</left>
-					<top>147</top>
-					<width>80</width>
-					<height>80</height>
-					<texture>overlays/overlay-bg.png</texture>
-					<visible>!StringIsEqual($VAR[WallWatchedIconVar],)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -610,7 +600,7 @@
 				<top>11</top>
 				<visible>!$PARAM[focused]</visible>
 				<animation effect="slide" end="37,0" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
-				<visible>Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home)</visible>
+				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Window.IsVisible(Home)</visible>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircleGreyed</include>
 			</control>
 		</definition>
@@ -651,34 +641,6 @@
 			</control>
 		</definition>
 	</include>
-	<include name="WallViewLabels">
-		<param name="left">35</param>
-		<param name="top">382</param>
-		<param name="top_2">404</param>
-		<param name="width">250</param>
-		<definition>
-			<control type="label">
-				<left>$PARAM[left]</left>
-				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>25</height>
-				<align>center</align>
-				<label>$VAR[ListLabelVar]</label>
-				<font>font20_title</font>
-				<scroll>$PARAM[focused]</scroll>
-			</control>
-			<control type="label">
-				<left>$PARAM[left]</left>
-				<top>$PARAM[top_2]</top>
-				<width>$PARAM[width]</width>
-				<height>22</height>
-				<align>center</align>
-				<label>$INFO[ListItem.Year]</label>
-				<visible>!Listitem.IsCollection</visible>
-				<font>font09</font>
-			</control>
-		</definition>
-	</include>
 	<include name="InfoWallMovieLayout">
 		<param name="focused">false</param>
 		<param name="infolabels">false</param>
@@ -702,25 +664,6 @@
 					<width>290</width>
 					<height>400</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>290</width>
-					<height>400</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders) + String.IsEqual(listitem.dbtype,genre)</visible>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>290</width>
-					<height>400</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 					<visible>!Skin.HasSetting(show_borders)</visible>
@@ -733,7 +676,7 @@
 					<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>$PARAM[focused] + !Skin.HasSetting(EnableGradientColor)</visible>
+					<visible>$PARAM[focused]</visible>
 				</control>
 				<control type="image">
 					<left>9</left>
@@ -799,7 +742,7 @@
 						<texture colordiffuse="$VAR[SkinColorVar]">colors/grey.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>$PARAM[focused] + !Skin.HasSetting(EnableGradientColor)</visible>
+						<visible>$PARAM[focused]</visible>
 					</control>
 					<control type="image">
 						<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
@@ -840,17 +783,17 @@
 					<visible>!$PARAM[focused]</visible>
 					<visible>Skin.HasSetting(show_borders)</visible>
 				</control>
-			</control>
-			<control type="group">
-				<visible>String.IsEqual(ListItem.DBtype,tvshow) + !String.IsEmpty(Skin.String(EpisodesDisplay)) + !String.IsEqual(Skin.String(EpisodesDisplay),31578) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
-				<top>320</top>
 				<control type="image">
 					<left>35</left>
-					<top>0</top>
+					<top>320</top>
 					<width>250</width>
 					<height>50</height>
 					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 				</control>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(ListItem.DBtype,tvshow) + !String.IsEmpty(Skin.String(EpisodesDisplay)) + !String.IsEqual(Skin.String(EpisodesDisplay),31578) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+				<top>320</top>
 				<control type="label">
 					<left>0</left>
 					<top>20</top>
@@ -895,12 +838,6 @@
 				<top>290</top>
 				<visible>!String.IsEqual(listitem.dbtype,genre) + !String.IsEqual(listitem.dbtype,studio)</visible>
 				<control type="image">
-					<width>80</width>
-					<height>80</height>
-					<texture>overlays/overlay-bg.png</texture>
-					<visible>!String.IsEqual($VAR[WallWatchedIconVar],)</visible>
-				</control>
-				<control type="image">
 					<top>48</top>
 					<width>32</width>
 					<height>32</height>
@@ -940,10 +877,6 @@
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircleGreyed</include>
 			</control>
 			<include>InfoWallProgressLayout</include>
-			<include content="WallViewLabels" condition="Skin.HasSetting(show_wallviewlabels) + !Window.IsVisible(Home) + $PARAM[infolabels]">
-				<param name="left">35</param>
-				<param name="width">250</param>
-			</include>
 			<control type="group">
 				<top>195</top>
 				<visible>[Skin.HasSetting(enable_LibraryDiscArt) + !Window.IsVisible(Home)] | [Skin.HasSetting(enable_HomeDiscArt) + Window.IsVisible(Home)]</visible>
@@ -1035,8 +968,7 @@
 				<height>344</height>
 				<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 				<bordersize>20</bordersize>
-				<visible>$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(EnableGradientColor)</visible>
+				<visible>$PARAM[focused] + Skin.HasSetting(EnableGradientColor)</visible>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -1076,14 +1008,6 @@
 				<aspectratio>stretch</aspectratio>
 				<bordersize>20</bordersize>
 				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>35</left>
-				<top>242</top>
-				<width>160</width>
-				<height>60</height>
-				<texture>overlays/overlay-bg.png</texture>
-				<visible>!String.IsEqual($VAR[WallWatchedIconVar],) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="image">
 				<left>35</left>

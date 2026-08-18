@@ -125,14 +125,6 @@
 							<param name="browse" value="never"/>
 							<param name="list_id" value="5700"/>
 						</include>
-						<include content="WidgetListSquare" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_genremovies)">
-							<param name="content_path" value="videodb://movies/genres/"/>
-							<param name="widget_header" value="$LOCALIZE[135]"/>
-							<param name="widget_header_focus" value="$INFO[Container(5500).ListItem.Label, | ]"/>
-							<param name="widget_target" value="videos"/>
-							<param name="sortby" value="sorttitle"/>
-							<param name="list_id" value="5500"/>
-						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(hide_sets)">
 							<param name="content_path" value="videodb://movies/sets/"/>
 							<param name="widget_header" value="$LOCALIZE[31075]"/>
@@ -191,7 +183,7 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6100"/>
 						</include>
-						<include content="WidgetNextWatchEpisodes" condition="System.AddonIsEnabled(script.embuary.helper) + Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes)">
+						<include content="WidgetListEpisodes" condition="System.AddonIsEnabled(script.embuary.helper) + Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextepisodes)">
 							<param name="content_path" value="plugin://script.embuary.helper?info=getnextup"/>
 							<param name="widget_header" value="$LOCALIZE[31212]"/>
 							<param name="widget_header_focus" value="$VAR[ListTVShowLabelVar, | , - ]$INFO[Container(6700).ListItem.Season,,x]$INFO[Container(6700).ListItem.Episode,,. ]$VAR[ListLabelVar]"/>
@@ -213,28 +205,12 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="61000"/>
 						</include>
-						<include content="WidgetNextWatchEpisodes" condition="System.AddonIsEnabled(script.embuary.info) + Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired)">
+						<include content="WidgetListEpisodes" condition="System.AddonIsEnabled(script.embuary.info) + Library.HasContent(tvshows) + !Skin.HasSetting(hide_nextaired)">
 							<param name="content_path" value="plugin://script.embuary.info/nextaired/week"/>
 							<param name="widget_header" value="$LOCALIZE[31572]"/>
 							<param name="widget_header_focus" value="$INFO[Container(6500).ListItem.Label, | ]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6500"/>
-						</include>
-						<include content="WidgetListSquare" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_genretvshows)">
-							<param name="content_path" value="videodb://tvshows/genres/"/>
-							<param name="widget_header" value="$LOCALIZE[135]"/>
-							<param name="widget_header_focus" value="$INFO[Container(6400).ListItem.Label, | ]"/>
-							<param name="widget_target" value="videos"/>
-							<param name="sortby" value="sorttitle"/>
-							<param name="list_id" value="6400"/>
-						</include>
-						<include content="WidgetListSquare" condition="Library.HasContent(tvshows) + !Skin.HasSetting(hide_studiotvshows)">
-							<param name="content_path" value="videodb://tvshows/studios/"/>
-							<param name="widget_header" value="$LOCALIZE[20388]"/>
-							<param name="widget_header_focus" value="$INFO[Container(6600).ListItem.Label, | ]"/>
-							<param name="widget_target" value="videos"/>
-							<param name="list_id" value="6600"/>
-							<param name="fallback_image" value="DefaultStudios.png"/>
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">

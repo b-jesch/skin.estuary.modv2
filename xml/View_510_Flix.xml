@@ -77,9 +77,8 @@
 				<left>34</left>
 				<top>180</top>
 				<width>382</width>
-				<height>45</height>
-				<texture flipy="true" colordiffuse="$VAR[Bars_Opacity]">frame/osdfade.png</texture>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+				<height>50</height>
+				<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 			</control>
 			<control type="image">
 				<right>35</right>

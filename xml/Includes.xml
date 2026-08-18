@@ -2462,12 +2462,12 @@
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
 					<visible>Skin.HasSetting(show_breadcrumbs)</visible>
-					<visible>[Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(505) | Control.IsVisible(506) | Control.IsVisible(507) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]]</visible>
+					<visible>[Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(55)| Control.IsVisible(500) | Control.IsVisible(505) | Control.IsVisible(506) | Control.IsVisible(507) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9) + !Control.HasFocus(531)]]</visible>
 					<visible>!Container.Content(addons) + [Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(pictures) | Window.IsVisible(favouritesbrowser)]</visible>
 					<control type="grouplist">
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>Skin.HasSetting(show_breadcrumbs) + !Skin.HasSetting(show_breadcrumbs_countonly)</visible>
+						<visible>Skin.HasSetting(show_breadcrumbs)</visible>
 						<control type="label">
 							<label>$PARAM[breadcrumbs_label]</label>
 							<include content="BreadcrumbsLabel">
@@ -2508,22 +2508,9 @@
 							<include>BreadcrumbsLabel</include>
 						</control>
 						<control type="label">
-							<visible>[Control.IsVisible(506) | Control.IsVisible(507)] + !Skin.HasSetting(show_breadcrumbs_countonly)</visible>
-							<label>$INFO[ListItem.Label, - ,]</label>
+							<visible>Control.IsVisible(500) | Control.IsVisible(506) | Control.IsVisible(507)</visible>
+							<label>$VAR[ListLabelVar, - ,]</label>
 							<include>BreadcrumbsLabel</include>
-						</control>
-					</control>
-					<control type="grouplist">
-						<orientation>horizontal</orientation>
-						<usecontrolcoords>true</usecontrolcoords>
-						<visible>Skin.HasSetting(show_breadcrumbs) + Skin.HasSetting(show_breadcrumbs_countonly) + !Control.IsVisible(506) + !Control.IsVisible(507)</visible>
-						<control type="label">
-							<font>font12</font>
-							<width>540</width>
-							<align>right</align>
-							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-							<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
 						</control>
 					</control>
 				</control>
