@@ -52,9 +52,14 @@ supports animated poster only.
 
 
 ### 21.4+omega ###
+- .7
+  * Romanian language added
+
+
 - .6
   * Fanart/Poster preview in TV channels fixed
   * OSD mediaflag of external subtitles extended
+
 
 - .5
   * YouTube button (additional Infos) in video info dialog added
