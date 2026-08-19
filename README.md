@@ -54,7 +54,8 @@ supports animated poster only.
 ### 21.4+omega ###
 - .7
   * Romanian language added
-
+  * Visibility of Seekbar changed to 2 secs
+  * some strings syntax fixed
 
 - .6
   * Fanart/Poster preview in TV channels fixed
