@@ -1569,11 +1569,11 @@
 		<value condition="Integer.IsGreater(ListItem.TotalDiscs,1)">$INFO[ListItem.DiscNumber]$INFO[ListItem.DiscTitle, - ]</value>
 	</variable>
 	<variable name="WidgetGenreIconVar">
-		<value condition="!String.IsEmpty(Skin.String(moviegenreicons.path)">$INFO[Skin.String(moviegenreicons.path)]$INFO[ListItem.Label,,.png]</value>
+		<value condition="!String.IsEmpty(Skin.String(moviegenreicons.path))">$INFO[Skin.String(moviegenreicons.path)]$INFO[ListItem.Label,,.png]</value>
 		<value>DefaultGenre.png</value>
 	</variable>
 	<variable name="WidgetStudioIconVar">
-		<value condition="!String.IsEmpty(Skin.String(studiologos.path)">$INFO[Skin.String(studiologos.path)]$INFO[ListItem.Label,,.png]</value>
+		<value condition="!String.IsEmpty(Skin.String(studiologos.path))">$INFO[Skin.String(studiologos.path)]$INFO[ListItem.Label,,.png]</value>
 		<value>DefaultStudios.png</value>
 	</variable>
 	<variable name="AddonsLabel2Var">

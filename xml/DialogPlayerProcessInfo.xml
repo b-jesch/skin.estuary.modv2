@@ -261,7 +261,7 @@
 							<top>1</top>
 							<left>650</left>
 							<width>80</width>
-							<label>$INFO[Player.Process(video.queue.data.level,,%]</label>
+							<label>$INFO[Player.Process(video.queue.data.level),,%]</label>
 							<font>font10</font>
 						</control>
 					</control>
@@ -302,7 +302,7 @@
 							<top>1</top>
 							<left>650</left>
 							<width>80</width>
-							<label>$INFO[Player.Process(audio.queue.data.level,,%]</label>
+							<label>$INFO[Player.Process(audio.queue.data.level),,%]</label>
 							<font>font10</font>
 						</control>
 					</control>
