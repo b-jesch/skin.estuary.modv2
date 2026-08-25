@@ -696,8 +696,7 @@
 					<aligny>center</aligny>
 					<label>$VAR[ListLabelVar]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
-					<visible>!ListItem.IsParentFolder</visible>
-					<visible>!Window.IsVisible(Home)  + !String.IsEqual(listitem.dbtype,genre)]</visible>
+					<visible>!ListItem.IsParentFolder + !Window.IsVisible(Home)  + !String.IsEqual(listitem.dbtype,genre)</visible>
 				</control>
 				<control type="image">
 					<left>15</left>

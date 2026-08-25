@@ -28,7 +28,7 @@
 					<fadetime>300</fadetime>
 				</control>
 			</control>
-			<control type="image" id="3334">
+			<control type="image" id="3338">
 				<top>170</top>
 				<right>50</right>
 				<width>284</width>
@@ -79,10 +79,10 @@
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">ActivateWindow(1102)</onclick>
 						<onleft>5003</onleft>
 						<onright>5003</onright>
-						<ondown>5000</ondown>
+						<ondown>60</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
-						<visible>!String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>!String.IsEqual(Control.GetLabel(3338),fallback.png)</visible>
 					</control>
 					<control type="button" id="138">
 						<left>-8</left>
@@ -93,12 +93,30 @@
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">SetProperty(TextViewer_Header,$LOCALIZE[207],home)</onclick>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">SetProperty(TextViewer_Text,$ESCINFO[ListItem.Plot],home)</onclick>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">ActivateWindow(1102)</onclick>
-						<onleft>138</onleft>
-						<onright>138</onright>
-						<ondown>5000</ondown>
+						<onleft>5003</onleft>
+						<onright>5003</onright>
+						<ondown>60</ondown>
 						<onup>5002</onup>
 						<texturenofocus border="21"></texturenofocus>
-						<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>String.IsEqual(Control.GetLabel(3338),fallback.png)</visible>
+					</control>
+					<control type="image">
+						<top>-130</top>
+						<left>-120</left>
+						<right>200</right>
+						<height>550</height>
+						<aspectratio>stretch</aspectratio>
+						<texture colordiffuse="$VAR[BackgroundColorVar]" diffuse="overlays/dialoginfo_text.png">colors/grey50.png</texture>
+						<visible>!Skin.HasSetting(enable_LibraryClearArt) + !String.IsEqual(Control.GetLabel(3338),fallback.png)</visible>
+						</control>
+					<control type="image">
+						<top>-130</top>
+						<left>-150</left>
+						<right>-100</right>
+						<height>550</height>
+						<aspectratio>stretch</aspectratio>
+						<texture colordiffuse="$VAR[BackgroundColorVar]" diffuse="overlays/dialoginfo_text.png">colors/grey50.png</texture>
+						<visible>Skin.HasSetting(enable_LibraryClearArt) | String.IsEqual(Control.GetLabel(3338),fallback.png)</visible>
 					</control>
 					<control type="textbox">
 						<left>16</left>
@@ -109,7 +127,7 @@
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[PlotMoviesSetsInfoVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>!String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>!String.IsEqual(Control.GetLabel(3338),fallback.png)</visible>
 					</control>
 					<control type="textbox">
 						<left>16</left>
@@ -120,7 +138,7 @@
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[PlotMoviesSetsInfoVar]</label>
 						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+						<visible>String.IsEqual(Control.GetLabel(3338),fallback.png)</visible>
 					</control>
 				</control>
 			</control>
@@ -173,13 +191,11 @@
 			</control>
 		</control>
 		<control type="grouplist">
-			<visible>Control.HasFocus(60)</visible>
-			<visible>![String.IsEmpty(Container(60).ListItem.Property(AudioLanguage.1)) + String.IsEmpty(Container(60).ListItem.Property(AudioLanguage.2)) + String.IsEmpty(Container(60).ListItem.Property(AudioLanguage.3)) + String.IsEmpty(Container(60).ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(Container(60).ListItem.Property(SubtitleLanguage.2)) + String.IsEmpty(Container(60).ListItem.Property(SubtitleLanguage.3))]</visible>
+			<visible>Control.HasFocus(60) | Control.HasFocus(5002)</visible>
 			<include>OpenClose_Right</include>
-			<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)]</visible>
 			<right>50</right>
 			<top>370</top>
-			<height>70</height>
+			<height>90</height>
 			<width>820</width>
 			<height>142</height>
 			<itemgap>5</itemgap>
@@ -246,8 +262,8 @@
 		<control type="group">
 			<bottom>0</bottom>
 			<height>430</height>
-			<control type="image" id="3335">
-				<top>-20</top>
+			<control type="image" id="3339">
+				<top>-80</top>
 				<right>50</right>
 				<width>360</width>
 				<height>360</height>
@@ -368,12 +384,12 @@
 		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<top>418</top>
-			<height>70</height>
+			<top>425</top>
+			<height>90</height>
 			<include content="MediaFlagsInfoDialogLeft">
 				<param name="align" value="left" />
 				<param name="infolabel_prefix" value="Container(60)."/>
-				<param name="visible" value="Control.HasFocus(60)"/>
+				<param name="visible" value="Control.HasFocus(60) | Control.HasFocus(5002)"/>
 			</include>
 			<include content="MediaFlagsInfoDialogRight">
 				<param name="align" value="right" />

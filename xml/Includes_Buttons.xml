@@ -83,20 +83,6 @@
 				<shadowcolor>$PARAM[shadowcolor]</shadowcolor>
 				<visible>$PARAM[visible]</visible>
 				<scroll>true</scroll>
-				<visible>String.IsEqual(Control.GetLabel(3335),fallback.png) | Container.Content(favourites)</visible>
-			</control>
-			<control type="label" id="$PARAM[control_id]">
-				<left>0</left>
-				<right>430</right>
-				<height>40</height>
-				<aligny>center</aligny>
-				<font>$PARAM[font]</font>
-				<label>$PARAM[label]</label>
-				<textcolor>$PARAM[textcolor]</textcolor>
-				<shadowcolor>$PARAM[shadowcolor]</shadowcolor>
-				<visible>$PARAM[visible]</visible>
-				<scroll>true</scroll>
-				<visible>!String.IsEqual(Control.GetLabel(3335),fallback.png) + !Container.Content(favourites)</visible>
 			</control>
 		</definition>
 	</include>

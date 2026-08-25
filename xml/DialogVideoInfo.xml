@@ -82,7 +82,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture colordiffuse="$VAR[BackgroundColorVar]" diffuse="overlays/dialoginfo_text.png">colors/grey50.png</texture>
 					<visible>Skin.HasSetting(enable_LibraryClearArt) | String.IsEqual(Control.GetLabel(3336),fallback.png)</visible>
-					</control>
+				</control>
 				<control type="label">
 					<top>-14</top>
 					<left>16</left>

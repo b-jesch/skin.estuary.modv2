@@ -638,7 +638,7 @@
 						<left>10</left>
 						<align>justify</align>
 						<autoscroll time="5000" delay="5000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+						<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>!String.IsEmpty(ListItem.Plot)</visible>
 					</control>

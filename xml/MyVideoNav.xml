@@ -133,23 +133,12 @@
 							<left>10</left>
 							<top>0</top>
 							<width>537</width>
-							<bottom>300</bottom>
-							<align>justify</align>
-							<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
-						</control>
-						<control type="textbox">
-							<left>10</left>
-							<top>0</top>
-							<width>537</width>
 							<bottom>295</bottom>
 							<align>justify</align>
 							<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
-							<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+							<visible>!String.IsEmpty(ListItem.Plot)</visible>
 						</control>
 						<control type="textbox">
 							<left>10</left>

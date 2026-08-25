@@ -183,6 +183,8 @@
 		<value condition="[Control.IsVisible(50) | Control.IsVisible(54) | Control.IsVisible(505)]">$INFO[Container(50054).NumItems,, $LOCALIZE[36901]]</value>
 		<value condition="Control.IsVisible(55) + String.IsEqual(Container(50055).NumItems,1)">$INFO[Container(50055).NumItems,, $LOCALIZE[36900]]</value>
 		<value condition="Control.IsVisible(55)">$INFO[Container(50055).NumItems,, $LOCALIZE[36901]]</value>
+		<value condition="Control.IsVisible(53) + String.IsEqual(Container(50053).NumItems,1)">$INFO[Container(50055).NumItems,, $LOCALIZE[36900]]</value>
+		<value condition="Control.IsVisible(53)">$INFO[Container(50053).NumItems,, $LOCALIZE[36901]]</value>
 		<value condition="Control.IsVisible(502) + String.IsEqual(Container(50502).NumItems,1)">$INFO[Container(50502).NumItems,, $LOCALIZE[36900]]</value>
 		<value condition="Control.IsVisible(502)">$INFO[Container(50502).NumItems,, $LOCALIZE[36901]]</value>
 		<value condition="Control.IsVisible(503) + String.IsEqual(Container(50302).NumItems,1)">$INFO[Container(50302).NumItems,, $LOCALIZE[36900]]</value>
@@ -343,7 +345,9 @@
 		<value condition="Control.HasFocus(60) + !String.IsEmpty(Container(60).ListItem.Duration)">$INFO[Container(60).ListItem.Duration(h)]h$INFO[Container(60).ListItem.Duration(mm)]</value>
 		<value condition="Control.HasFocus(5083) + !String.IsEmpty(Container(5083).ListItem.Duration)">$INFO[Container(5083).ListItem.Duration(h)]h$INFO[Container(5083).ListItem.Duration(mm)]</value>
 		<value condition="Control.HasFocus(5084) + !String.IsEmpty(Container(5084).ListItem.Duration)">$INFO[Container(5084).ListItem.Duration(h)]h$INFO[Container(5084).ListItem.Duration(mm)]</value>
-		<value condition="Control.HasFocus(5094) + !String.IsEmpty(Container(5094).ListItem.Duration)">$INFO[Container(5094).ListItem.Duration(h)]h$INFO[Container(5094).ListItem.Duration(mm)]</value>			<value condition="Control.HasFocus(5083) + !String.IsEmpty(Container(5083).ListItem.Duration)">$INFO[Container(5083).ListItem.Duration(h)]h$INFO[Container(5083).ListItem.Duration(mm)]</value>
+		<value condition="Control.HasFocus(5094) + !String.IsEmpty(Container(5094).ListItem.Duration)">$INFO[Container(5094).ListItem.Duration(h)]h$INFO[Container(5094).ListItem.Duration(mm)]</value>
+		<value condition="Control.HasFocus(5083) + !String.IsEmpty(Container(5083).ListItem.Duration)">$INFO[Container(5083).ListItem.Duration(h)]h$INFO[Container(5083).ListItem.Duration(mm)]</value>
+		<value condition="Control.HasFocus(6100) + !String.IsEmpty(Container(6100).ListItem.Duration)">$INFO[Container(6100).ListItem.Duration(h)]h$INFO[Container(6100).ListItem.Duration(mm)]</value>			<value condition="Control.HasFocus(6100) + !String.IsEmpty(Container(6100).ListItem.Duration)">$INFO[Container(6100).ListItem.Duration(h)]h$INFO[Container(6100).ListItem.Duration(mm)]</value>
 		<value>$INFO[ListItem.Duration(h)]h$INFO[ListItem.Duration(mm)]</value>
 	</variable>
 	<variable name="PlayerDurationVar">
@@ -1517,7 +1521,7 @@
 		<value condition="String.IsEqual(listitem.dbtype,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(listitem.dbtype,album) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="Window.IsActive(pictures)">$INFO[ListItem.Size,$LOCALIZE[289] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830] : [COLOR white],[/COLOR][CR]]$INFO[ListItem.Date,$LOCALIZE[552] : [COLOR white],[/COLOR][CR]]</value>
-		<value condition="!String.IsEmpty(ListItem.Plot) + ListItem.IsCollection">[B]$VAR[CollectionNumberVar][/B][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</value>
+		<value condition="!String.IsEmpty(ListItem.Plot) + ListItem.IsCollection">[B]$VAR[CollectionNumberVar][/B]: [COLOR white]$INFO[ListItem.Plot][/COLOR]</value>
 		<value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 	</variable>
 	<variable name="SelectLabel">
