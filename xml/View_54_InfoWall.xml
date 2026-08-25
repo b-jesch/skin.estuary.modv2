@@ -208,7 +208,7 @@
 			<control type="textbox">
 				<left>22</left>
 				<top>296</top>
-				<width>270</width>
+				<width>266</width>
 				<height>68</height>
 				<font>font10_bold</font>
 				<align>center</align>
@@ -254,7 +254,7 @@
 			<control type="label">
 				<left>25</left>
 				<top>268</top>
-				<width>276</width>
+				<width>266</width>
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<font>font20_title</font>
 				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -291,7 +291,6 @@
 			</control>
 			<include content="InfoWallProgressLayout" condition="Window.IsVisible(Home) + ![Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsActive(favouritesbrowser)]">
 				<param name="top" value="306" />
-				<param name="top_2" value="278" />
 				<param name="left" value="20" />
 				<param name="width" value="276" />
 			</include>
@@ -429,7 +428,6 @@
 				</control>
 				<include content="InfoWallProgressLayout">
 					<param name="top" value="249" />
-					<param name="top_2" value="277" />
 					<param name="left" value="20" />
 					<param name="width" value="275" />
 				</include>
@@ -559,7 +557,6 @@
 				</control>
 				<include content="InfoWallProgressLayout">
 					<param name="top" value="209" />
-					<param name="top_2" value="237" />
 					<param name="left" value="20" />
 					<param name="width" value="350" />
 				</include>
@@ -607,37 +604,33 @@
 	</include>
 	<include name="InfoWallProgressLayout">
 		<param name="left">35</param>
-		<param name="top">352</param>
-		<param name="top_2">380</param>
+		<param name="top">355</param>
 		<param name="width">250</param>
 		<definition>
-			<control type="image">
-				<left>$PARAM[left]</left>
-				<top>$PARAM[top_2]</top>
-				<width>$PARAM[width]</width>
-				<height>4</height>
-				<texture>dialogs/back.png</texture>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) | !Integer.IsEqual(ListItem.Progress,0)</visible>
-			</control>
-			<control type="progress">
-				<left>$PARAM[left]</left>
+			<control type="group">
 				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.PercentPlayed</info>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-			</control>
-			<control type="progress">
 				<left>$PARAM[left]</left>
-				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.Progress</info>
-				<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+				<control type="image">
+					<top>28</top>
+					<height>4</height>
+					<texture>dialogs/back.png</texture>
+					<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) | !Integer.IsEqual(ListItem.Progress,0)</visible>
+				</control>
+				<control type="progress">
+					<height>1</height>
+					<texturebg></texturebg>
+					<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+					<info>ListItem.PercentPlayed</info>
+					<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+				</control>
+				<control type="progress">
+					<height>1</height>
+					<texturebg></texturebg>
+					<midtexture colordiffuse="$VAR[SkinColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+					<info>ListItem.Progress</info>
+					<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
+				</control>
 			</control>
 		</definition>
 	</include>
