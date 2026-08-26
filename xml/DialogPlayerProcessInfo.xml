@@ -318,9 +318,20 @@
 						<width>690</width>
 						<aligny>bottom</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[VideoPlayer.AudioName,$LOCALIZE[21447] : [COLOR white],[/COLOR]]</label>
+						<label>$INFO[VideoPlayer.AudioLanguageEx,$LOCALIZE[21447] : [COLOR white]] - $INFO[VideoPlayer.Audioname][/COLOR]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!String.IsEqual(VideoPlayer.AudioLanguageEx,VideoPlayer.AudioName)</visible>
+					</control>
+					<control type="label">
+						<height>35</height>
+						<width>690</width>
+						<aligny>bottom</aligny>
+						<scroll>true</scroll>
+						<label>$INFO[VideoPlayer.AudioLanguageEx,$LOCALIZE[21447] : [COLOR white],[/COLOR]]</label>
+						<font>font12</font>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>String.IsEqual(VideoPlayer.AudioLanguageEx,VideoPlayer.AudioName)</visible>
 					</control>
 					<control type="label">
 						<height>35</height>
