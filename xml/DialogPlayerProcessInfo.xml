@@ -65,11 +65,11 @@
 					<height>35</height>
 					<width>690</width>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videowidth),$LOCALIZE[38031] : [COLOR white],x]$INFO[Player.Process(videoheight)]$INFO[Player.Process(videoscantype)]$INFO[Player.Process(videofps),$COMMA , $LOCALIZE[31707]]$INFO[Player.Process(video.live.mibit.rate),$COMMA , $LOCALIZE[31708]][/COLOR]</label>
+					<label>$INFO[Player.Process(videowidth),$LOCALIZE[38031] : [COLOR white],x]$INFO[Player.Process(videoheight)]$INFO[Player.Process(videoscantype)]$INFO[Player.Process(videofps) ,$COMMA ,$LOCALIZE[31707]]$INFO[Player.Process(videolivebitrate), $COMMA ,][/COLOR]</label>
 					<font>font12</font>
 					<visible>Player.HasVideo</visible>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<visible>!String.IsEmpty(Player.Process(video.live.mibit.rate))</visible>
+					<visible>!String.IsEmpty(Player.Process(videolivebitrate))</visible>
 				</control>
 				<control type="label">
 					<height>35</height>
@@ -79,7 +79,7 @@
 					<font>font12</font>
 					<visible>Player.HasVideo</visible>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<visible>String.IsEmpty(Player.Process(video.live.mibit.rate))</visible>
+					<visible>String.IsEmpty(Player.Process(videolivebitrate))</visible>
 				</control>
 				<control type="label">
 					<width>690</width>
@@ -104,20 +104,10 @@
 					<width>690</width>
 					<aligny>bottom</aligny>
 					<scroll>true</scroll>
-					<label>$LOCALIZE[14250] : [COLOR white]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]$INFO[VideoPlayer.AudioBitrate,$COMMA , kb/s][/COLOR]</label>
+					<label>$LOCALIZE[14250] : [COLOR white]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]$INFO[Player.Process(audiolivebitrate),$COMMA ,][/COLOR]</label>
 					<font>font12</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<visible>!String.IsEmpty(VideoPlayer.AudioBitrate)</visible>
-				</control>
-				<control type="label">
-					<height>35</height>
-					<width>690</width>
-					<aligny>bottom</aligny>
-					<scroll>true</scroll>
-					<label>$LOCALIZE[14250] : [COLOR white]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]$INFO[Player.Process(audio.live.kibit.rate),$COMMA , kb/s][/COLOR]</label>
-					<font>font12</font>
-					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<visible>!String.IsEmpty(Player.Process(audio.live.kibit.rate)) + String.IsEmpty(VideoPlayer.AudioBitrate)</visible>
+					<visible>!String.IsEmpty(Player.Process(audiolivebitrate))</visible>
 				</control>
 				<control type="label">
 					<height>35</height>
@@ -127,7 +117,7 @@
 					<label>$LOCALIZE[14250] : [COLOR white]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz][/COLOR]</label>
 					<font>font12</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
-					<visible>String.IsEmpty(Videoplayer.AudioBitrate) + String.IsEmpty(Player.Process(audio.live.kibit.rate))</visible>
+					<visible>String.IsEmpty(Videoplayer.AudioBitrate) + String.IsEmpty(Player.Process(audiolivebitrate))</visible>
 				</control>
 				<control type="label">
 					<height>35</height>
@@ -223,7 +213,6 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<visible>$EXP[special_build]</visible>
 					<control type="group">
 						<height>35</height>
 						<width>690</width>
@@ -240,13 +229,13 @@
 							<width>150</width>
 							<top>12</top>
 							<height>14</height>
-							<info>Player.Process(video.queue.level)</info>
+							<info>Player.Process(videoqueuelevel)</info>
 						</control>
 						<control type="label">
 							<top>1</top>
 							<left>420</left>
 							<width>80</width>
-							<label>$INFO[Player.Process(video.queue.level),,%]</label>
+							<label>$INFO[Player.Process(videoqueuelevel),,%]</label>
 							<font>font10</font>
 						</control>
 						<control type="progress">
@@ -255,13 +244,13 @@
 							<width>150</width>
 							<top>12</top>
 							<height>14</height>
-							<info>Player.Process(video.queue.data.level)</info>
+							<info>Player.Process(videoqueuedatalevel)</info>
 						</control>
 						<control type="label">
 							<top>1</top>
 							<left>650</left>
 							<width>80</width>
-							<label>$INFO[Player.Process(video.queue.data.level),,%]</label>
+							<label>$INFO[Player.Process(videoqueuedatalevel),,%]</label>
 							<font>font10</font>
 						</control>
 					</control>
@@ -281,13 +270,13 @@
 							<width>150</width>
 							<top>12</top>
 							<height>14</height>
-							<info>Player.Process(audio.queue.level)</info>
+							<info>Player.Process(audioqueuelevel)</info>
 						</control>
 						<control type="label">
 							<top>1</top>
 							<left>420</left>
 							<width>80</width>
-							<label>$INFO[Player.Process(audio.queue.level),,%]</label>
+							<label>$INFO[Player.Process(audioqueuelevel),,%]</label>
 							<font>font10</font>
 						</control>
 						<control type="progress">
@@ -296,13 +285,13 @@
 							<width>150</width>
 							<top>12</top>
 							<height>14</height>
-							<info>Player.Process(audio.queue.data.level)</info>
+							<info>Player.Process(audioqueuedatalevel)</info>
 						</control>
 						<control type="label">
 							<top>1</top>
 							<left>650</left>
 							<width>80</width>
-							<label>$INFO[Player.Process(audio.queue.data.level),,%]</label>
+							<label>$INFO[Player.Process(audioqueuedatalevel),,%]</label>
 							<font>font10</font>
 						</control>
 					</control>
@@ -329,7 +318,7 @@
 						<width>690</width>
 						<aligny>bottom</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[VideoPlayer.AudioLanguage,$LOCALIZE[21447] : [COLOR white][UPPERCASE],[/UPPERCASE][/COLOR]]</label>
+						<label>$INFO[VideoPlayer.AudioName,$LOCALIZE[21447] : [COLOR white],[/COLOR]]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
@@ -338,7 +327,7 @@
 						<width>690</width>
 						<aligny>bottom</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[VideoPlayer.SubtitlesLanguage,$LOCALIZE[21448] : [COLOR white][UPPERCASE],[/UPPERCASE][/COLOR]]</label>
+						<label>$INFO[VideoPlayer.SubtitleName,$LOCALIZE[21448] : [COLOR white],[/COLOR]]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>VideoPlayer.SubtitlesEnabled</visible>
