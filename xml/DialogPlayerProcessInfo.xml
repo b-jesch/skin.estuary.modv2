@@ -173,7 +173,7 @@
 				<control type="group">
 					<height>35</height>
 					<width>690</width>
-					<visible>!System.Platform.Android</visible>
+					<!--<visible>!System.Platform.Android</visible>-->
 					<control type="label">
 						<width>300</width>
 						<aligny>bottom</aligny>
@@ -193,7 +193,7 @@
 						<top>1</top>
 						<left>420</left>
 						<width>80</width>
-						<label>$INFO[Window(Home).Property(avgCPU)]</label>
+						<label>$INFO[System.CpuUsage]</label>
 						<font>font10</font>
 					</control>
 					<control type="progress">
@@ -309,7 +309,7 @@
 						<width>690</width>
 						<aligny>bottom</aligny>
 						<scroll>true</scroll>
-						<label>$LOCALIZE[31706] : [COLOR white]$VAR[LabelHdrTypeVar][/COLOR]</label>
+						<label>$LOCALIZE[31706] : [COLOR white]$VAR[LabelHdrTypeVar] $INFO[VideoPlayer.HdrDetail][/COLOR]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
