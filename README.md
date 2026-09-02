@@ -51,14 +51,16 @@ supports animated poster only.
 - Mediaflags to piers updated
 - Romanian language strings added
 - code cleanup pt.5/6/7/8
+- new infolabels in PPI implemented/updated
+- colored flags updated (thanks to frodo19)
 
-Previous changes see readme.md of Omega Tree
+Previous changes see README.md of Omega Tree
  
 ### Screenshots ###
 
-![PVR Info](resources/screenshots/screenshot_1.png)![Embuary Info](resources/screenshots/screenshot_2.png)
-![Music Visualization](resources/screenshots/screenshot_3.png)![PVR OSD](resources/screenshots/screenshot_4.png)
-![TV Widget](resources/screenshots/screenshot_5.png)![Video OSD](resources/screenshots/screenshot_6.png)
+![PVR Info](resources/screenshots/screenshot_1.png)
+![Embuary Info](resources/screenshots/screenshot_2.png)
+![Video OSD](resources/screenshots/screenshot_6.png)
 ![Embuary localized Infos](resources/screenshots/screenshot_7.png)
 ![New channel View](resources/screenshots/screenshot_8.png)
 ![Improved OSD](resources/screenshots/screenshot_9.png)

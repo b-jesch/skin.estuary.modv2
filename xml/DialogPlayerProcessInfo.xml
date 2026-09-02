@@ -193,7 +193,7 @@
 						<top>1</top>
 						<left>420</left>
 						<width>80</width>
-						<label>$INFO[System.CpuUsage]</label>
+						<label>$INFO[Window(Home).Property(avgCPU)]</label>
 						<font>font10</font>
 					</control>
 					<control type="progress">

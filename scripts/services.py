@@ -63,12 +63,11 @@ if __name__ == '__main__':
 
     # iterates CPU load over all available cores and set the average value as property 'avgCPU'
 
-    # cores = [int(core) for core in re.findall('(\\d+)%', xbmc.getInfoLabel('System.CpuUsage'))]
-    # xbmc.log('{} Core(s) used'.format(len(cores)))
-
     while not monitor.abortRequested():
         if monitor.waitForAbort(2): break
-        # if len(cores) > 0: xbmcgui.Window(10000).setProperty('avgCPU', '{}%'.format(sum(cores) // len(cores)))
+        cores = [int(core) for core in re.findall('(\\d+)%', xbmc.getInfoLabel('System.CpuUsage'))]
+        if len(cores) > 0: xbmcgui.Window(10000).setProperty('avgCPU', '{}%'.format(sum(cores) // len(cores)))
+        else: xbmcgui.Window(10000).setProperty('avgCPU', 'n/a')
 
         # call service viewswitcher
 

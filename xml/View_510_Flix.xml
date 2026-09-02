@@ -50,8 +50,7 @@
 				<height>267</height>
 				<texture colordiffuse="$VAR[GradientColorVar]">colors/gradient.png</texture>
 				<bordersize>20</bordersize>
-				<visible>$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(EnableGradientColor)</visible>
+				<visible>$PARAM[focused] + Skin.HasSetting(EnableGradientColor)</visible>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -75,7 +74,7 @@
 			</control>
 			<control type="image">
 				<left>34</left>
-				<top>180</top>
+				<top>176</top>
 				<width>382</width>
 				<height>50</height>
 				<texture colordiffuse="90FFFFFF">overlays/overlayfade.png</texture>
