@@ -1664,14 +1664,6 @@
 		<value condition="Container(6).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container(6).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
-	<variable name="Container50_3DFlagVar">
-		<value condition="String.Contains(Container(50).ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
-		<value condition="String.Contains(Container(50).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
-		<value condition="String.Contains(Container(50).ListItem.Filenameandpath,3d.tab)">flags/videoresolution/3Dtab.png</value>
-		<value condition="String.Contains(Container(50).ListItem.Filenameandpath,.3d.)">flags/videoresolution/3D.png</value>
-		<value condition="Container(50).ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value>$INFO[Container(50).ListItem.VideoResolution,flags/videoresolution/,.png]</value>
-	</variable>
 	<variable name="Container5083_3DFlagVar">
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
 		<value condition="String.Contains(Container(5083).ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>

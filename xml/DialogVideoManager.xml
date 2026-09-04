@@ -85,7 +85,8 @@
 					<param name="align" value="left" />
 					<param name="infolabel_prefix" value="Container(50)." />
 					<param name="show_ratings" value="false" />
-					<param name="resolution_var" value="$VAR[Container50_3DFlagVar]" />
+					<param name="resolution_var" value="$VAR[Container3DFlagVar]" />
+					<param name="audiocodec_var" value="$VAR[ContainerAudioCodecFlagVar]" />
 				</include>
 			</control>
 			<control type="grouplist" id="101">
