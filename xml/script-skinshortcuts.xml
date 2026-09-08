@@ -164,7 +164,7 @@
 					<description>Change action</description>
 					<include>DefaultSettingButton</include>
 					<label>$ADDON[script.skinshortcuts 32027]</label>
-					<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
+					<label2>$INFO[Container(211).ListItem.Property(path)]</label2>
 					<visible>!String.IsEqual(Container(211).ListItem.Property(defaultID),libreelec)</visible>
 				</control>
 				<control type="button" id="305">
@@ -229,49 +229,49 @@
 					<label>$LOCALIZE[31298]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1123)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MoviesWidget)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(name),Movies)</visible>
 				</control>
 				<control type="button" id="10007">
 					<label>$LOCALIZE[31299]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1124)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),TVShowsWidget)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(name),TVShows)</visible>
 				</control>
 				<control type="button" id="10008">
 					<label>$LOCALIZE[31300]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1125)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MusicWidget)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(name),Music)</visible>
 				</control>
 				<control type="button" id="1009">
 					<label>$LOCALIZE[31301]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1126)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MusicVideosWidget)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(name),MusicVideos)</visible>
 				</control>
 				<control type="button" id="10010">
 					<label>$LOCALIZE[31302]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1127)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),LiveTVWidget)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(name),LiveTV)</visible>
 				</control>
 				<control type="button" id="10011">
 					<label>$LOCALIZE[31303]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1128)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),RadioWidget)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(name),Radio)</visible>
 				</control>
 				<control type="button" id="10012">
 					<label>$LOCALIZE[31304]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1129)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),AddonsWidget)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(name),Addons)</visible>
 				</control>
 				<control type="button" id="10013">
 					<label>$LOCALIZE[31305]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1130)</onclick>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),VideoWidget)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(name),Videos)</visible>
 				</control>			
 				<control type="button" id="1475">
 					<include>DefaultSettingButton</include>

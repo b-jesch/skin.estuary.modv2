@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
-	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml)</onload>
 	<onload>RunScript(skin.estuary.modv2,getKodiSetting,videolibrary.showunwatchedplots)</onload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
@@ -76,9 +76,9 @@
 				<control type="group" id="5000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),MoviesWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Movies)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="MoviesWidget"/>
+						<param name="id" value="Movies"/>
 					</include>
 					<control type="grouplist" id="5001">
 						<include>WidgetGroupListCommon</include>
@@ -148,9 +148,9 @@
 				<control type="group" id="6000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),TVShowsWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),TVShows)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="TVShowsWidget"/>
+						<param name="id" value="TVShows"/>
 					</include>
 					<control type="grouplist" id="6001">
 						<include>WidgetGroupListCommon</include>
@@ -227,9 +227,9 @@
 				<control type="group" id="7000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),MusicWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Music)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="MusicWidget"/>
+						<param name="id" value="Music"/>
 					</include>
 					<control type="grouplist" id="7001">
 						<include>WidgetGroupListCommon</include>
@@ -346,9 +346,9 @@
 				<control type="group" id="8000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),AddonsWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Addons)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="AddonsWidget"/>
+						<param name="id" value="Addons"/>
 					</include>
 					<control type="grouplist" id="8001">
 						<include>WidgetGroupListCommon</include>
@@ -433,9 +433,9 @@
 				<control type="group" id="11000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),VideoWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Videos)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="VideoWidget"/>
+						<param name="id" value="Videos"/>
 					</include>
 					<control type="grouplist" id="11001">
 						<include>WidgetGroupListCommon</include>
@@ -475,9 +475,9 @@
 				<control type="group" id="12000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),LiveTVWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),LiveTV)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="LiveTVWidget"/>
+						<param name="id" value="LiveTV"/>
 					</include>
 					<control type="grouplist" id="12001">
 						<include>WidgetGroupListCommon</include>
@@ -595,9 +595,9 @@
 				<control type="group" id="13000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),RadioWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Radio)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="RadioWidget"/>
+						<param name="id" value="Radio"/>
 					</include>
 					<control type="grouplist" id="13001">
 						<include>WidgetGroupListCommon</include>
@@ -687,9 +687,9 @@
 				<control type="group" id="14000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),FavoritesWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Favorites)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="FavoritesWidget"/>
+						<param name="id" value="Favorites"/>
 					</include>
 					<include content="CategoryLabel">
 						<param name="label">$LOCALIZE[10134]</param>
@@ -749,9 +749,9 @@
 				<control type="group" id="15000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),Weather)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="WeatherWidget"/>
+						<param name="id" value="Weather"/>
 					</include>
 					<top>6</top>
 					<control type="grouplist" id="15001">
@@ -854,9 +854,9 @@
 				<control type="group" id="16000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),MusicVideosWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),MusicVideos)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="MusicVideosWidget"/>
+						<param name="id" value="MusicVideos"/>
 					</include>
 					<control type="grouplist" id="16001">
 						<include>WidgetGroupListCommon</include>
@@ -907,16 +907,6 @@
 							<param name="fallback_image" value="DefaultMusicSongs.png" />
 							<param name="list_id" value="16500"/>
 						</include>
-						<include content="WidgetListSquare" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_musicvideostudios)">
-							<param name="content_path" value="videodb://musicvideos/studios/"/>
-							<param name="widget_header" value="$LOCALIZE[20388]"/>
-							<param name="widget_header_focus" value="$INFO[Container(16600).ListItem.Label, | ]"/>
-							<param name="widget_target" value="music"/>
-							<param name="list_id" value="16600"/>
-							<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
-							<param name="icon_height" value="70"/>
-							<param name="fallback_image" value="DefaultStudios.png"/>
-						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
 						<param name="text_label" value="$LOCALIZE[31460]" />
@@ -932,9 +922,9 @@
 				<control type="group" id="4000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),PicturesWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Pictures)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="PicturesWidget"/>
+						<param name="id" value="Pictures"/>
 					</include>
 					<control type="grouplist" id="4001">
 						<include>WidgetGroupListCommon</include>
@@ -961,9 +951,9 @@
 				<control type="group" id="17000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),GamesWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Games)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="GamesWidget"/>
+						<param name="id" value="Games"/>
 					</include>
 					<control type="grouplist" id="17001">
 						<include>WidgetGroupListCommon</include>
@@ -1001,9 +991,9 @@
 				<control type="group" id="21000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),DiscWidget)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Disc)</visible>
 					<include content="Visible_Right_Delayed_Home">
-						<param name="id" value="DiscWidget"/>
+						<param name="id" value="Disc"/>
 					</include>
 					<include content="ImageWidget">
 						<param name="text_label" value="$INFO[System.DVDLabel]" />
@@ -1540,21 +1530,21 @@
 					<bottom>-10</bottom>
 					<focusposition>0</focusposition>
 					<onfocus>ClearProperty(listposition,home)</onfocus>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),DiscWidget)">21000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),MoviesWidget)">5000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),TVShowsWidget)">6000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),MusicWidget)">7000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),MusicVideosWidget)">16000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),LiveTVWidget)">12000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),RadioWidget)">13000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),GamesWidget)">17000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),AddonsWidget)">8000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),PicturesWidget)">4000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),VideoWidget)">11000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),FavoritesWidget)">14000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget)">15000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetList)">22000</onright>
-					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),PersonalWidgetPanel)">23000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Disc)">21000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Movies)">5000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),TVShows)">6000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Music)">7000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),MusicVideos)">16000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),LiveTV)">12000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Radio)">13000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Games)">17000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Addons)">8000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Pictures)">4000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Videos)">11000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Favorites)">14000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),Weather)">15000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),PersonalWidgetList)">22000</onright>
+					<onright condition="String.IsEqual(Container(9000).ListItem.Property(name),PersonalWidgetPanel)">23000</onright>
 					<onup>700</onup>
 					<ondown>700</ondown>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>

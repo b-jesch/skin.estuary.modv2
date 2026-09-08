@@ -57,20 +57,20 @@
 				<top>-10</top>
 				<width>420</width>
 				<height>255</height>
-				<texture background="true" fallback="DefaultVideoFanart.png">$VAR[WidgetThumbViewVar]</texture>
+				<texture background="true">DefaultFolderBack.png</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
-				<visible>!ListItem.IsParentFolder</visible>
+				<visible>ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image">
 				<left>15</left>
 				<top>-10</top>
 				<width>420</width>
 				<height>255</height>
-				<texture background="true">DefaultFolderBack.png</texture>
+				<texture background="true" fallback="DefaultVideo.png">$VAR[WidgetThumbViewVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
-				<visible>ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder | ListItem.HasVideoVersions</visible>
 			</control>
 			<control type="image">
 				<left>34</left>
@@ -418,9 +418,9 @@
 				<bottom>605</bottom>
 				<font>fontplot2</font>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
-				<label>$INFO[ListItem.Genre,[B],: [/B]][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+				<label>$INFO[ListItem.Genre,[B],: [/B]][COLOR white]$VAR[PlotSpoilerVar][/COLOR]</label>
 				<autoscroll delay="6000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>!ListItem.IsParentFolder + !String.IsEmpty(ListItem.Plot)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 		<control type="group">

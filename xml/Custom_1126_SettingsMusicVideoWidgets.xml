@@ -63,12 +63,6 @@
 						<selected>Skin.HasSetting(hide_randommusicvideo)</selected>
 						<onclick>Skin.ToggleSetting(hide_randommusicvideo)</onclick>
 					</control>
-					<control type="radiobutton" id="11117">
-						<label>$LOCALIZE[31297] : $LOCALIZE[20388]</label>
-						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(hide_musicvideostudios)</selected>
-						<onclick>Skin.ToggleSetting(hide_musicvideostudios)</onclick>
-					</control>		
 				</control>
 				<include content="SettingsScrollbar">
 					<param name="height">485</param>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+  <!-- Flat widget (appears ungrouped in picker) -->
+  <widget name="favourites" label="Favourites" type="videos">
+    <path>favourites://</path>
+  </widget>
+
+  <!-- Group of widgets (creates nested navigation in picker) -->
+  <group name="movies" label="Movie Widgets" visible="Library.HasContent(movies)">
+    <widget name="recentlymovies" label="$LOCALIZE[20386]" type="movies" target="movies">
+      <path>$VAR[HideWatchedMoviesFromRecentlyVar]</path>
+    </widget>
+    <widget name="inprogressmovies" label="$LOCALIZE[31010]" type="movies" target="movies">
+      <path>special://skin/playlists/inprogress_movies.xsp</path>
+    </widget>
+    <widget name="sets" label="$LOCALIZE[31075]" type="sets" target="movies">
+      <path>videodb://movies/sets/</path>
+    </widget>
+  </group>
+</widgets>

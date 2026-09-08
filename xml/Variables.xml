@@ -684,6 +684,7 @@
 		<value condition="!String.IsEmpty(Listitem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value>$INFO[ListItem.Art(icon)]</value>
 	</variable>
 	<variable name="InfoWidgetThumbVar2">
 		<value condition="!$EXP[show_unwatchedthumbs] + Integer.IsLess(ListItem.Playcount,1) + String.IsEqual(listitem.dbtype,episode)">$VAR[InfoWidgetThumbVar]</value>
@@ -820,6 +821,7 @@
 	</variable>
 	<variable name="PlotSpoilerVar">
 		<value condition="[Skin.HasSetting(hide_plotforspoiler) + String.IsEqual(ListItem.DBType,episode)] + Integer.IsLess(ListItem.Playcount,1) + !String.StartsWith(Container.FolderPath,plugin://)">[COLOR white]$LOCALIZE[31230][/COLOR]</value>
+		<value condition="String.IsEqual(ListItem.DBType,season)">$INFO[Container.ShowPlot]</value>
 		<value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 	</variable>
 	<variable name="OsdMainLabelVar">
