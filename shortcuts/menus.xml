@@ -38,13 +38,13 @@
             <action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
             <visible>Library.HasContent(musicvideos)</visible>
         </item>
-        <item name="livetv" submenu="livetv" background="special://skin/extras/home-images/livetv.jpg">
+        <item name="livetv" submenu="livetv" background="special://skin/extras/home-images/livetv.jpg" visible="PVR.HasTVChannels">
             <label>$LOCALIZE[19020]</label>
             <label2>Common Shortcut</label2>
             <icon>icons/sidemenu/livetv.png</icon>
             <action>ActivateWindow(TVChannels)</action>
         </item>
-        <item name="radio" submenu="radio" background="special://skin/extras/home-images/radio.jpg">
+        <item name="radio" submenu="radio" background="special://skin/extras/home-images/radio.jpg" visible="PVR.HasRadioChannels">
             <label>$LOCALIZE[19021]</label>
             <label2>Common Shortcut</label2>
             <icon>icons/sidemenu/radio.png</icon>
@@ -104,8 +104,9 @@
         </item>
     </menu>
 
-    <!-- Category Widgets -->
-    
+    <!-- Category Menus - same name attribute as items in main menu -->
+    <!-- movies -->
+
     <submenu name="movies">
         <allow widgets="false" />
         <item name="RecentlyAddedMovies">
@@ -213,6 +214,9 @@
             <action>UpdateLibrary(video)</action>
         </item>
     </submenu>
+
+    <!-- TVShows -->
+
     <submenu name="tvshows">
         <allow widgets="false"/>
         <item name="RecentlyAddedEpisodes">
@@ -276,6 +280,9 @@
             <action>UpdateLibrary(video)</action>
         </item>
     </submenu>
+
+    <!-- Music -->
+
     <submenu name="music">
         <item name="RecentlyAddedMusic">
             <label>359</label>
@@ -350,6 +357,9 @@
             <action>UpdateLibrary(music)</action>
         </item>
     </submenu>
+
+    <!-- Music Videos (Concerts -->
+
     <submenu name="musicvideos">
         <item name="RecentlyAddedMusicvideos">
             <label>$LOCALIZE[20390]</label>
@@ -429,7 +439,10 @@
             <icon>$VAR[VideoLibraryScanIcon]</icon>
             <action>UpdateLibrary(video)</action>
         </item>
-    </submenu>    
+    </submenu>
+
+    <!-- Live TV -->
+
     <submenu name="livetv">
         <item name="GTOscrape">
             <label>$ADDON[script.service.gto 30116]</label>
@@ -457,31 +470,34 @@
             <icon>icons/pvr/epg.png</icon>
             <action>ActivateWindow(TVGuide)</action>
         </item>
-        <item name="recordTV">
+        <item name="tvrecordings">
             <label>$LOCALIZE[19017]</label>
             <label2>LiveTV Shortcut</label2>
             <icon>icons/pvr/recording.png</icon>
             <action>ActivateWindow(TVRecordings)</action>
         </item>
-        <item name="timerTV">
+        <item name="tvtimers">
             <label>$LOCALIZE[19040]</label>
             <label2>LiveTV Shortcut</label2>
             <icon>icons/pvr/timer.png</icon>
             <action>ActivateWindow(TVTimers)</action>
         </item>
-        <item name="timerrulesTV">
+        <item name="tvtimerrules">
             <label>$LOCALIZE[19138]</label>
             <label2>LiveTV Shortcut</label2>
             <icon>icons/pvr/timer-rule.png</icon>
             <action>ActivateWindow(TVTimerRules)</action>
         </item>
-        <item name="searchTV">
+        <item name="tvsearch">
             <label>$LOCALIZE[137]</label>
             <label2>LiveTV Shortcut</label2>
             <icon>DefaultAddonsSearch.png</icon>
             <action>ActivateWindow(TVSearch)</action>
         </item>
     </submenu>
+
+    <!-- Radio -->
+
     <submenu name="radio">
         <item name="radioChannels">
             <label>$LOCALIZE[19024]</label>
@@ -519,7 +535,10 @@
             <icon>DefaultAddonsSearch.png</icon>
             <action>ActivateWindow(RadioSearch)</action>
         </item>
-    </submenu>    
+    </submenu>
+
+    <!-- Addons -->
+
     <submenu name="addons">
         <item name="addonsInstalled">
             <label>$LOCALIZE[24998]</label>
@@ -557,7 +576,10 @@
             <icon>Settings.png</icon>
             <action>ActivateWindow(systemsettings,addons)</action>
         </item>
-    </submenu>   
+    </submenu>
+
+    <!-- Videos -->
+
     <submenu name="videos">
         <item name="allMovies">
             <label>$LOCALIZE[342]</label>
@@ -601,9 +623,108 @@
             <icon>LibrarySettings.png</icon>
             <action>ActivateWindow(Videos,root,return)</action>
         </item>
-    </submenu>    
+    </submenu>
+
     <icons>
         <source label="Skin Icons" icon="defaultpicture.png">special://skin/extras/icons/</source>
         <source label="$LOCALIZE[19285]" icon="defaultpicture.png">Browse</source>
     </icons>
+
+    <!-- Groupings -->
+
+    <!--
+    <groupings>
+      <group name="common" label="$LOCALIZE[10000]" icon="DefaultFolder.png">
+        <shortcut name="videos" label="$LOCALIZE[3]" icon="DefaultVideo.png">
+          <action>ActivateWindow(Videos,library://video/,return)</action>
+        </shortcut>
+        <shortcut name="movies" label="$LOCALIZE[342]" icon="DefaultMovies.png" visible="Library.HasContent(movies)">
+          <action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+        </shortcut>
+        <shortcut name="tvshows" label="$LOCALIZE[20343]" icon="DefaultTVShows.png" visible="Library.HasContent(tvshows)">
+          <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+        </shortcut>
+        <shortcut name="musicvideos" label="$LOCALIZE[20389]" icon="DefaultMusicVideos.png" visible="Library.HasContent(musicvideos)">
+          <action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
+        </shortcut>
+        <shortcut name="music" label="$LOCALIZE[2]" icon="DefaultMusicAlbums.png">
+          <action>ActivateWindow(Music,library://music/,return)</action>
+        </shortcut>
+        <shortcut name="pictures" label="$LOCALIZE[1]" icon="DefaultPicture.png">
+          <action>ActivateWindow(Pictures)</action>
+        </shortcut>
+        <shortcut name="programs" label="$LOCALIZE[10001]" icon="DefaultAddonProgram.png">
+          <action>ActivateWindow(Programs,Addons,return)</action>
+        </shortcut>
+        <shortcut name="games" label="$LOCALIZE[10821]" icon="DefaultAddonGame.png">
+          <action>ActivateWindow(Games)</action>
+        </shortcut>
+        <shortcut name="weather" label="$LOCALIZE[12600]" icon="DefaultAddonWeather.png">
+          <action>ActivateWindow(Weather)</action>
+        </shortcut>
+        <shortcut name="favourites" label="$LOCALIZE[1036]" icon="DefaultFavourites.png">
+          <action>ActivateWindow(FavouritesBrowser)</action>
+        </shortcut>
+      </group>
+
+      <group name="livetv" label="$LOCALIZE[19020]" icon="DefaultPVRChannels.png" visible="PVR.HasTVChannels">
+        <shortcut name="tv-guide" label="$LOCALIZE[19069]" icon="DefaultPVRGuide.png">
+          <action>ActivateWindow(TVGuide)</action>
+        </shortcut>
+        <shortcut name="tv-channels" label="$LOCALIZE[19023]" icon="DefaultPVRChannels.png">
+          <action>ActivateWindow(TVChannels)</action>
+        </shortcut>
+        <shortcut name="tv-recordings" label="$LOCALIZE[19163]" icon="DefaultPVRRecordings.png">
+          <action>ActivateWindow(TVRecordings)</action>
+        </shortcut>
+        <content source="pvr" target="tv" folder="$LOCALIZE[19023]" />
+      </group>
+
+      <group name="radio" label="$LOCALIZE[19021]" icon="DefaultPVRChannels.png" visible="PVR.HasRadioChannels">
+        <shortcut name="radio-guide" label="$LOCALIZE[19069]" icon="DefaultPVRGuide.png">
+          <action>ActivateWindow(RadioGuide)</action>
+        </shortcut>
+        <shortcut name="radio-channels" label="$LOCALIZE[19024]" icon="DefaultPVRChannels.png">
+          <action>ActivateWindow(RadioChannels)</action>
+        </shortcut>
+        <content source="pvr" target="radio" folder="$LOCALIZE[19024]" />
+      </group>
+
+      <group name="library" label="$LOCALIZE[14022]" icon="DefaultVideo.png">
+        <content source="nodes" target="video" folder="$LOCALIZE[14236]" />
+        <content source="nodes" target="music" folder="$LOCALIZE[14237]" />
+      </group>
+
+      <group name="playlists" label="$LOCALIZE[136]" icon="DefaultPlaylist.png">
+        <content source="playlists" target="video" folder="$LOCALIZE[14236]" />
+        <content source="playlists" target="music" folder="$LOCALIZE[14237]" />
+      </group>
+
+      <group name="addons" label="$LOCALIZE[24001]" icon="DefaultAddon.png">
+        <group name="addons-video" label="$LOCALIZE[1037]" icon="DefaultAddonVideo.png">
+          <content source="addons" target="video" label="$LOCALIZE[1037]" />
+        </group>
+        <group name="addons-music" label="$LOCALIZE[1038]" icon="DefaultAddonMusic.png">
+          <content source="addons" target="music" label="$LOCALIZE[1038]" />
+        </group>
+        <group name="addons-pictures" label="$LOCALIZE[1039]" icon="DefaultAddonPicture.png">
+          <content source="addons" target="pictures" label="$LOCALIZE[1039]" />
+        </group>
+        <group name="addons-programs" label="$LOCALIZE[10001]" icon="DefaultAddonProgram.png">
+          <content source="addons" target="programs" label="$LOCALIZE[10001]" />
+        </group>
+      </group>
+
+      <group name="sources" label="$LOCALIZE[20094]" icon="DefaultFolder.png">
+        <content source="sources" target="video" folder="$LOCALIZE[3]" />
+        <content source="sources" target="music" folder="$LOCALIZE[2]" />
+        <content source="sources" target="pictures" folder="$LOCALIZE[1]" />
+      </group>
+
+      <group name="favourites" label="$LOCALIZE[1036]" icon="DefaultFavourites.png">
+        <content source="favourites" />
+      </group>
+
+    </groupings>
+    -->
 </menus>
