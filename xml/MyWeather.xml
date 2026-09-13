@@ -101,7 +101,7 @@
 					<onup>20000</onup>
 					<ondown>15100</ondown>
 					<font>font12</font>
-					<onclick>Weather.Data(Current.Location)Next</onclick>
+					<onclick>Weather.LocationNext</onclick>
 					<label/>
 				</control>
 				<control type="label">
@@ -116,12 +116,30 @@
 				</control>
 				<control type="label">
 					<right>400</right>
-					<top>140</top>
+					<top>125</top>
 					<align>right</align>
-					<label>$INFO[Weather.Data(Location)][CR]$LOCALIZE[402] : $INFO[Weather.Data(Current.FeelsLike)][CR]$INFO[Weather.Data(Current.Condition)]</label>
-					<font>font14</font>
+					<label>$INFO[Weather.Data(Location),[B],[/B]][CR]$LOCALIZE[402] : $INFO[Weather.Data(Current.FeelsLike)][CR]$INFO[Weather.Data(Current.Condition)]</label>
+					<font>font12</font>
 					<width>630</width>
 					<visible>!String.StartsWith(Weather.Data(Current.Temperature),$LOCALIZE[503])</visible>
+				</control>
+				<control type="label">
+					<right>400</right>
+					<top>235</top>
+					<align>right</align>
+					<label>$INFO[Weather.LastUpdated,$LOCALIZE[24004] : ,]</label>
+					<font>font12</font>
+					<width>630</width>
+					<visible>!Weather.IsUpdating</visible>
+				</control>
+				<control type="label">
+					<right>400</right>
+					<top>236</top>
+					<align>right</align>
+					<label>$LOCALIZE[31069]</label>
+					<font>font12</font>
+					<width>630</width>
+					<visible>Weather.IsUpdating</visible>
 				</control>
 				<control type="grouplist">
 					<top>154</top>

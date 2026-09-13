@@ -68,7 +68,7 @@
 				<animation effect="fade" time="300">VisibleChange</animation>
 				<include content="LeftAlignedInfo">
 					<param name="main_label" value="$INFO[Window(AddonBrowser).Property(Updated)]" />
-					<param name="sub_label" value="$LOCALIZE[31069] :" />
+					<param name="sub_label" value="$LOCALIZE[12014] :" />
 				</include>
 			</control>
 		</control>

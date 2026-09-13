@@ -720,7 +720,7 @@
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
-				<param name="height" value="105"/>
+				<param name="height" value="90"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>-10</left>

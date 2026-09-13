@@ -44,7 +44,7 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<imagepath background="true" colordiffuse="99FFFFFF">$VAR[WeatherFanartVar]</imagepath>
-			<visible>!Control.HasFocus(9000) + String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget) + !String.IsEmpty(Container(9000).ListItem.Property(background)) + Skin.HasSetting(show_fanart) + !Player.HasMedia</visible>
+			<visible>!Control.HasFocus(9000) + String.IsEqual(Container(9000).ListItem.Property(name),weather) + !String.IsEmpty(Container(9000).ListItem.Property(background)) + Skin.HasSetting(show_fanart) + !Player.HasMedia</visible>
 		</control>
 		<control type="image">
 			<right>0</right>
@@ -749,7 +749,7 @@
 				<control type="group" id="15000">
 					<animation effect="slide" end="502,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 					<animation effect="slide" end="135,0" time="300" tween="sine" easing="inout" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(widget),Weather)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),Weather)</visible>
 					<include content="Visible_Right_Delayed_Home">
 						<param name="id" value="Weather"/>
 					</include>

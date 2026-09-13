@@ -5,7 +5,7 @@
 			<value condition="!String.IsEmpty(Window(home).Property(NextUpNotification.NowPlaying.Type)) + String.IsEqual(Window(home).Property(NextUpNotification.NowPlaying.Type),episode) + Integer.IsGreater(Window(home).Property(NextUpNotification.NowPlaying.DBID),-1)">plugin://script.embuary.helper?info=getcast&amp;dbid=$INFO[Window(home).Property(NextUpNotification.NowPlaying.DBID)]&amp;idtype=episode</value>
 			<value condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;dbid=$INFO[VideoPlayer.DBID]</value>
 			<value condition="VideoPlayer.Content(movies) + String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title=$INFO[VideoPlayer.Title]</value>
-			<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;dbid=$INFO[VideoPlayer.DBID]&amp;idtype=episode</value>
+			<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=episode&amp;dbid=$INFO[VideoPlayer.DBID]</value>
 			<value condition="VideoPlayer.Content(episodes) + String.IsEmpty(VideoPlayer.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title=$INFO[VideoPlayer.TvShowTitle]</value>
 			<value condition="VideoPlayer.Content(livetv)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title=$INFO[VideoPlayer.Title]</value>
 	</variable>
@@ -1741,7 +1741,6 @@
 		<value condition="!String.IsEmpty(Container.Art(artist.banner))">$INFO[Container.Art(artist.banner)]</value>
 	</variable>
 	<variable name="PosterVar">
-		<!--<value condition="ListItem.IsParentFolder + ![Control.IsVisible(55) + Container.Content(files)]">DefaultFolderBack.png</value>-->
 		<value condition="Container.Content(actors) | Container.Content(directors)">$INFO[Container.ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster)) + Container.Content(seasons)">$INFO[ListItem.Art(poster)]</value>

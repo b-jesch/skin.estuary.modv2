@@ -2648,14 +2648,14 @@
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>$INFO[Weather.Data(Current.Temperature),| ,]$INFO[System.TemperatureUnits]</label>
+						<label>$INFO[Weather.Data(Current.Temperature),| ,]</label>
 						<visible>Skin.HasSetting(show_weatherinfo) + Skin.HasSetting(show_date) + Weather.IsFetched + ![String.IsEqual(Weather.Data(Current.FanartCode),na)]</visible>
 					</control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>$INFO[Weather.Data(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+						<label>$INFO[Weather.Data(Current.Temperature)]</label>
 						<visible>Skin.HasSetting(show_weatherinfo) + !Skin.HasSetting(show_date) + Weather.IsFetched + ![String.IsEqual(Weather.Data(Current.FanartCode),na)]</visible>
 					</control>
 					<control type="image">
