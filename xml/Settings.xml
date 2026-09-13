@@ -6,7 +6,17 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
+		<include>FullScreenDimensions</include>
 		<include>DefaultBackground</include>
+			<control type="image">
+				<depth>DepthBackground</depth>
+				<aspectratio>scale</aspectratio>
+				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+				<texture background="true" colordiffuse="$VAR[Background_Opacity]">special://skin/extras/home-images/settings.jpg</texture>
+				<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Skin.HasSetting(enable_settings_background)</visible>
+			</control>
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<width>1900</width>

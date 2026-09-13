@@ -19,7 +19,7 @@
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
 				<texture background="true" colordiffuse="$VAR[Background_Opacity]">special://skin/extras/home-images/power.jpg</texture>
-				<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+				<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !Skin.HasSetting(enable_power_background)</visible>
 			</control>
 		</control>
 		<control type="group">

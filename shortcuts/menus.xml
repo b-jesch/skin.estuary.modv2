@@ -14,14 +14,12 @@
             <label2>Common Shortcut</label2>
             <action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
             <icon>icons/sidemenu/movies.png</icon>
-            <visible>Library.HasContent(movies)</visible>
         </item>
         <item name="tvshows" submenu="tvshows" background="special://skin/extras/home-images/tvshows.jpg">
             <label>$LOCALIZE[20343]</label>
             <label2>Common Shortcut</label2>
             <icon>icons/sidemenu/tv.png</icon>
             <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
-            <visible>Library.HasContent(tvshows)</visible>
         </item>
         <item name="music" submenu="music" background="special://skin/extras/home-images/music.jpg">
             <label>$LOCALIZE[2]</label>
@@ -29,22 +27,20 @@
             <action>ActivateWindow(Music,musicdb://recentlyaddedalbums/)</action>
             <icon>icons/sidemenu/music.png</icon>
             <action>ActivateWindow(Music,musicdb://artists/,return)</action>
-            <visible>Library.HasContent(music)</visible>
         </item>
         <item name="musicvideos" submenu="musicvideos" background="special://skin/extras/home-images/musicvideos.jpg">
             <label>$LOCALIZE[20389]</label>
             <label2>Common Shortcut</label2>
             <icon>icons/sidemenu/musicvideos.png</icon>
             <action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
-            <visible>Library.HasContent(musicvideos)</visible>
         </item>
-        <item name="livetv" submenu="livetv" background="special://skin/extras/home-images/livetv.jpg" visible="PVR.HasTVChannels">
+        <item name="livetv" submenu="livetv" background="special://skin/extras/home-images/livetv.jpg">
             <label>$LOCALIZE[19020]</label>
             <label2>Common Shortcut</label2>
             <icon>icons/sidemenu/livetv.png</icon>
             <action>ActivateWindow(TVChannels)</action>
         </item>
-        <item name="radio" submenu="radio" background="special://skin/extras/home-images/radio.jpg" visible="PVR.HasRadioChannels">
+        <item name="radio" submenu="radio" background="special://skin/extras/home-images/radio.jpg">
             <label>$LOCALIZE[19021]</label>
             <label2>Common Shortcut</label2>
             <icon>icons/sidemenu/radio.png</icon>

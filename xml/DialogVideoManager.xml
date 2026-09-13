@@ -6,15 +6,15 @@
 			<centertop>50%</centertop>
 			<centerleft>50%</centerleft>
 			<width>1320</width>
-			<height>710</height>
+			<height>780</height>
 			<include>Animation_DialogPopupVisible</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1320" />
-				<param name="height" value="710" />
+				<param name="height" value="780" />
 				<param name="header_id" value="2" />
 			</include>
 			<control type="image">
-				<top>170</top>
+				<bottom>130</bottom>
 				<left>20</left>
 				<width>300</width>
 				<height>450</height>
@@ -30,14 +30,14 @@
 					<top>0</top>
 					<left>0</left>
 					<width>680</width>
-					<bottom>120</bottom>
+					<bottom>110</bottom>
 					<texture border="21">dialogs/dialog-bg.png</texture>
 				</control>
 				<control type="list" id="50">
 					<description>version list</description>
 					<top>20</top>
 					<left>20</left>
-					<bottom>130</bottom>
+					<bottom>110</bottom>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft>200</onleft>
@@ -55,7 +55,7 @@
 					<left>660</left>
 					<top>20</top>
 					<width>12</width>
-					<bottom>130</bottom>
+					<bottom>110</bottom>
 					<onleft>50</onleft>
 					<onright>101</onright>
 					<orientation>vertical</orientation>
@@ -63,12 +63,12 @@
 				<control type="label">
 					<visible>Control.HasFocus(50)</visible>
 					<align>left</align>
-					<top>505</top>
-					<left>20</left>
-					<width>940</width>
+					<bottom>70</bottom>
+					<left>-300</left>
+					<right>40</right>
 					<height>40</height>
 					<scroll>true</scroll>
-					<font>font20_title</font>
+					<font>font12</font>
 					<textcolor>99FFFFFF</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<haspath>false</haspath>
@@ -78,7 +78,7 @@
 			<control type="group">
 				<left>-30</left>
 				<right>200</right>
-				<bottom>0</bottom>
+				<bottom>5</bottom>
 				<height>70</height>
 				<visible>Control.HasFocus(50)</visible>
 				<include content="MediaFlagsInfoDialogLeft">
@@ -93,7 +93,7 @@
 				<left>1000</left>
 				<top>90</top>
 				<width>300</width>
-				<height>565</height>
+				<height>625</height>
 				<onleft condition="Integer.IsGreater(Container(50).NumItems,0)">100</onleft>
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<align>top</align>
@@ -123,6 +123,11 @@
 				<include content="DefaultDialogButton">
 					<param name="id" value="26" />
 					<param name="label" value="$LOCALIZE[15015]" />
+				</include>
+                <include content="DefaultDialogButton">
+					<param name="id" value="29" />
+					<param name="label" value="$LOCALIZE[40046]" />
+					<param name="visible">Window.IsActive(managevideoversions)</param>
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="25" />
