@@ -101,7 +101,7 @@
 					<onup>20000</onup>
 					<ondown>15100</ondown>
 					<font>font12</font>
-					<onclick>Weather.LocationNext</onclick>
+					<onclick>Weather.Data(Current.Location)Next</onclick>
 					<label/>
 				</control>
 				<control type="label">
@@ -112,16 +112,16 @@
 					<width>500</width>
 					<align>right</align>
 					<font>WeatherTemp</font>
-					<label>$INFO[Weather.Temperature]</label>
+					<label>$INFO[Weather.Data(Current.Temperature)]</label>
 				</control>
 				<control type="label">
 					<right>400</right>
 					<top>140</top>
 					<align>right</align>
-					<label>$INFO[Window(Weather).Property(Location)][CR][I]$LOCALIZE[402] : $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I][CR]$INFO[Weather.Conditions]</label>
+					<label>$INFO[Weather.Data(Location)][CR]$LOCALIZE[402] : $INFO[Weather.Data(Current.FeelsLike)][CR]$INFO[Weather.Data(Current.Condition)]</label>
 					<font>font14</font>
 					<width>630</width>
-					<visible>!String.StartsWith(Weather.Temperature,$LOCALIZE[503])</visible>
+					<visible>!String.StartsWith(Weather.Data(Current.Temperature),$LOCALIZE[503])</visible>
 				</control>
 				<control type="grouplist">
 					<top>154</top>
@@ -130,27 +130,27 @@
 					<align>justify</align>
 					<orientation>horizontal</orientation>
 					<include content="WeatherIcon">
-						<param name="label" value="Window(weather).Property(Current.Wind)" />
+						<param name="label" value="Weather.Data(Current.Wind)" />
 						<param name="texture" value="icons/weather/wind.png" />
 						<param name="header" value="$LOCALIZE[404]" />
 					</include>
 					<include content="WeatherIcon">
-						<param name="label" value="Window(weather).Property(Current.Humidity)" />
+						<param name="label" value="Weather.Data(Current.Humidity)" />
 						<param name="texture" value="icons/weather/humidity.png" />
 						<param name="header" value="$LOCALIZE[406]" />
 					</include>
 					<include content="WeatherIcon">
-						<param name="label" value="Window(weather).Property(Current.Precipitation)" />
+						<param name="label" value="Weather.Data(Current.Precipitation)" />
 						<param name="texture" value="icons/weather/rain.png" />
 						<param name="header" value="$LOCALIZE[33021]" />
 					</include>
 					<include content="WeatherIcon">
-						<param name="label" value="Window(weather).Property(Today.Sunrise)" />
+						<param name="label" value="Weather.Data(Today.Sunrise)" />
 						<param name="texture" value="icons/weather/sunrise.png" />
 						<param name="header" value="$LOCALIZE[405]" />
 					</include>
 					<include content="WeatherIcon">
-						<param name="label" value="Window(weather).Property(Today.Sunset)" />
+						<param name="label" value="Weather.Data(Today.Sunset)" />
 						<param name="texture" value="icons/weather/sunset.png" />
 						<param name="header" value="$LOCALIZE[403]" />
 					</include>
@@ -160,14 +160,14 @@
 				<param name="content_include" value="DailyItems" />
 				<param name="list_id" value="15100" />
 				<param name="widget_header" value="$LOCALIZE[31019]"/>
-				<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+				<param name="visible" value="!String.IsEmpty(Weather.Data(Daily.IsFetched))" />
 				<param name="width" value="258" />
 			</include>
 			<include content="WeatherWidget">
 				<param name="content_include" value="HourlyItems" />
 				<param name="list_id" value="15200" />
 				<param name="widget_header" value="$LOCALIZE[33036]"/>
-				<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+				<param name="visible" value="!String.IsEmpty(Weather.Data(Hourly.IsFetched))" />
 				<param name="width" value="258" />
 			</include>
 			<include content="WeatherMapItem">
@@ -197,8 +197,8 @@
 			</include>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[8]$INFO[Window(Weather).Property(Location), / ]" />
-			<param name="sublabel" value="$INFO[Window(weather).Property(WeatherProvider)]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[8]$INFO[Weather.Data(Location), / ]" />
+			<param name="sublabel" value="$INFO[Weather.Data(WeatherProvider)]" />
 		</include>
 		<include>BottomBar</include>
 	</controls>
