@@ -1398,13 +1398,6 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="button" id="10023">
-					<include>DefaultSettingButton</include>
-					<description>menu logo</description>
-					<onclick>Skin.SelectBool(31567, 15109|MenuLogoDefault, 31568|MenuLogoLE, 31569|MenuLogoCE)</onclick>
-					<label>$LOCALIZE[31567]</label>
-					<label2>$VAR[Label_SkinSetting_Logo]</label2>
-				</control>
 				<control type="radiobutton" id="10024">
 					<label>$LOCALIZE[31416]</label>
 					<include>DefaultSettingButton</include>
@@ -1730,6 +1723,29 @@
 			<textcolor>$VAR[SkinColorVar]</textcolor>
 			<label>$VAR[SkinSettingsHelpTextVar]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+		</control>
+		<control type="group">
+			<depth>DepthBars</depth>
+			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<visible>!Skin.HasSetting(powermenu_list)</visible>
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+				<aspectratio>keep</aspectratio>
+				<width>56</width>
+				<height>56</height>
+				<texture colordiffuse="$VAR[LogoColorVar]">$VAR[LogoVar]</texture>
+			</control>
+			<control type="image">
+				<left>55</left>
+				<top>4</top>
+				<aspectratio>keep</aspectratio>
+				<width>202</width>
+				<height>50</height>
+				<texture>$VAR[LogoTextVar]</texture>
+			</control>
 		</control>
 	</controls>
 </window>

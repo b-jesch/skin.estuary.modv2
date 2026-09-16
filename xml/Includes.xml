@@ -2393,7 +2393,7 @@
 					<textureradioonfocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="CCFFFFFF">icons/logo.png</textureradioonnofocus>
 					<onclick>Action(close)</onclick>
-					<visible>!Skin.HasSetting(touchmode) + !Skin.HasSetting(MenuLogoLE) + !Skin.HasSetting(MenuLogoCE)</visible>
+					<visible>!Skin.HasSetting(touchmode) + !System.HasAddon(service.libreelec.settings) + !System.HasAddon(service.coreelec.settings)</visible>
 				</control>
 				<control type="radiobutton">
 					<radiowidth>48</radiowidth>
@@ -2406,7 +2406,7 @@
 					<textureradioonfocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="CCFFFFFF">icons/le-logo-white.png</textureradioonnofocus>
 					<onclick>Action(close)</onclick>
-					<visible>!Skin.HasSetting(touchmode) + Skin.HasSetting(MenuLogoLE)</visible>
+					<visible>!Skin.HasSetting(touchmode) + System.HasAddon(service.libreelec.settings)</visible>
 				</control>
 				<control type="radiobutton">
 					<radiowidth>48</radiowidth>
@@ -2419,7 +2419,7 @@
 					<textureradioonfocus colordiffuse="CCFFFFFF">dialogs/close.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="CCFFFFFF">icons/ce-logo-white.png</textureradioonnofocus>
 					<onclick>Action(close)</onclick>
-					<visible>!Skin.HasSetting(touchmode) + Skin.HasSetting(MenuLogoCE)</visible>
+					<visible>!Skin.HasSetting(touchmode) + System.HasAddon(service.coreelec.settings)</visible>
 				</control>
 			</control>
 			<control type="button">

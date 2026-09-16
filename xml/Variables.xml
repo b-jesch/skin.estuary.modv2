@@ -21,9 +21,11 @@
 	<variable name="OSVar">
 		<value condition="System.Platform.Android">Android</value>
 		<value condition="System.Platform.IOS">IOS</value>
-		<value condition="System.Platform.Darwin">OSX</value>
+		<value condition="System.Platform.OSX">OSX</value>
+		<value condition="System.Platform.TVOS">tvOS</value>
 		<value condition="System.Platform.UWP">Universal Windows Platform</value>
 		<value condition="System.Platform.Windows">Windows</value>
+		<value condition="System.Platform.WebOS">WebOS</value>
 		<value condition="System.Platform.Linux">Linux</value>
 		<value>unknown</value>
 	</variable>
@@ -477,24 +479,19 @@
 		<value condition="!String.IsEmpty(Skin.String(ap_source))">$INFO[Skin.String(ap_source)]</value>
 		<value>$LOCALIZE[20078]</value>
 	</variable>
-	<variable name="Label_SkinSetting_Logo">
-		<value condition="Skin.HasSetting(MenuLogoLE)">$LOCALIZE[31568]</value>
-		<value condition="Skin.HasSetting(MenuLogoCE)">$LOCALIZE[31569]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
 	<variable name="LogoVar">
-		<value condition="Skin.HasSetting(MenuLogoLE)">icons/le-logo.png</value>
-		<value condition="Skin.HasSetting(MenuLogoCE)">icons/ce-logo.png</value>
+		<value condition="System.HasAddon(service.libreelec.settings)">icons/le-logo.png</value>
+		<value condition="System.HasAddon(service.coreelec.settings)">icons/ce-logo.png</value>
 		<value>icons/logo.png</value>
 	</variable>
 	<variable name="LogoTextVar">
-		<value condition="Skin.HasSetting(MenuLogoLE)">icons/le-logo-text.png</value>
-		<value condition="Skin.HasSetting(MenuLogoCE)">icons/ce-logo-text.png</value>
+		<value condition="System.HasAddon(service.libreelec.settings)">icons/le-logo-text.png</value>
+		<value condition="System.HasAddon(service.coreelec.settings)">icons/ce-logo-text.png</value>
 		<value>icons/logo-text.png</value>
 	</variable>
 		<variable name="LogoColorVar">
-		<value condition="Skin.HasSetting(MenuLogoLE)">white</value>
-		<value condition="Skin.HasSetting(MenuLogoCE)">white</value>
+		<value condition="System.HasAddon(service.libreelec.settings)">white</value>
+		<value condition="System.HasAddon(service.coreelec.settings)">white</value>
 		<value>$VAR[SkinColorVar]</value>
 	</variable>
 	<variable name="Label_SkinSetting_SearchFanart">
