@@ -38,7 +38,7 @@
             <label>$LOCALIZE[19020]</label>
             <label2>Common Shortcut</label2>
             <icon>icons/sidemenu/livetv.png</icon>
-            <action>ActivateWindow(TVChannels)</action>
+            <action>ActivateWindow(TVGuide)</action>
         </item>
         <item name="radio" submenu="radio" background="special://skin/extras/home-images/radio.jpg">
             <label>$LOCALIZE[19021]</label>
@@ -628,9 +628,8 @@
 
     <!-- Groupings -->
 
-    <!--
     <groupings>
-      <group name="common" label="$LOCALIZE[10000]" icon="DefaultFolder.png">
+      <group name="mainmenu" label="$LOCALIZE[10000]" icon="DefaultFolder.png">
         <shortcut name="videos" label="$LOCALIZE[3]" icon="DefaultVideo.png">
           <action>ActivateWindow(Videos,library://video/,return)</action>
         </shortcut>
@@ -642,6 +641,9 @@
         </shortcut>
         <shortcut name="musicvideos" label="$LOCALIZE[20389]" icon="DefaultMusicVideos.png" visible="Library.HasContent(musicvideos)">
           <action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
+        </shortcut>
+        <shortcut name="livetv" label="$LOCALIZE[19020]" icon="DefaultPVRChannels.png" visible="PVR.HasTVChannels">
+          <action>ActivateWindow(TVGuide)</action>
         </shortcut>
         <shortcut name="music" label="$LOCALIZE[2]" icon="DefaultMusicAlbums.png">
           <action>ActivateWindow(Music,library://music/,return)</action>
@@ -722,5 +724,4 @@
       </group>
 
     </groupings>
-    -->
 </menus>
