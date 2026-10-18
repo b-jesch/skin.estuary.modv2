@@ -1078,7 +1078,7 @@
 	</variable>
 	<variable name="BorderColorVar">
 		<value condition="!String.IsEmpty(Skin.String(BorderColor))">$INFO[Skin.String(BorderColor)]</value>
-		<value>d8181818</value>
+		<value>border_color</value>
 	</variable>
 	<variable name="RatingColorVar">
 		<value condition="$EXP[PreEasterTheme]">ffff0b03</value>
