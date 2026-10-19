@@ -376,7 +376,6 @@
 				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 			</control>
 		</control>
 	</include>
