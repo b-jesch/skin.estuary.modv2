@@ -158,26 +158,26 @@
 					<include>DefaultSettingButton</include>
 					<label>$ADDON[script.skinshortcuts 32048]</label>
 					<label2>$INFO[Container(211).ListItem.Label]</label2>
-					<visible>!String.IsEqual(Container(211).ListItem.Property(defaultID),libreelec)</visible>
+					<visible>!String.IsEqual(Container(211).ListItem.Property(name),libreelec) + !String.IsEqual(Container(211).ListItem.Property(name),coreelec)</visible>
 				</control>
 				<control type="button" id="307">
 					<description>Change action</description>
 					<include>DefaultSettingButton</include>
 					<label>$ADDON[script.skinshortcuts 32027]</label>
 					<label2>$INFO[Container(211).ListItem.Property(path)]</label2>
-					<visible>!String.IsEqual(Container(211).ListItem.Property(defaultID),libreelec)</visible>
+					<visible>!String.IsEqual(Container(211).ListItem.Property(name),libreelec) + !String.IsEqual(Container(211).ListItem.Property(name),coreelec)</visible>
 				</control>
 				<control type="button" id="305">
 					<description>Change label</description>
 					<include>DefaultSettingButton</include>
 					<label>$ADDON[script.skinshortcuts 32025]</label>
 					<label2>$INFO[Container(211).ListItem.Label]</label2>
-					<visible>!String.IsEqual(Container(211).ListItem.Property(defaultID),libreelec)</visible>
+					<visible>!String.IsEqual(Container(211).ListItem.Property(name),libreelec) + !String.IsEqual(Container(211).ListItem.Property(name),coreelec)</visible>
 				</control>
 				<control type="button" id="306">
 					<description>Browse for thumbnail</description>
 					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32026]</label>
+					<label>$LOCALIZE[31724]</label>
 					<label2>$INFO[Container(211).ListItem.Icon]</label2>
 				</control>
 				<control type="button" id="310">
@@ -185,32 +185,32 @@
 					<include>DefaultSettingButton</include>
 					<label>$ADDON[script.skinshortcuts 32045]</label>
 					<label2>$VAR[Label_SkinSetting_Backgrounds]</label2>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 				</control>
 				<control type="button" id="405">
                    <description>Edit submenu</description>
                    <include>DefaultSettingButton</include>
                    <label>$LOCALIZE[31426]</label>
-                   <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                   <visible>!String.IsEqual(Container(211).ListItem.Property(defaultID),libreelec) + !String.IsEqual(Container(211).ListItem.Property(widget),PicturesWidget) + !String.IsEqual(Container(211).ListItem.Property(widget),GamesWidget) + !String.IsEqual(Container(211).ListItem.Property(widget),FavoritesWidget) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget)</visible>
+                   <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
+                   <visible>!String.IsEqual(Container(211).ListItem.Property(name),libreelec) + !String.IsEqual(Container(211).ListItem.Property(name),coreelec) + !String.IsEqual(Container(211).ListItem.Property(name),pictures) + !String.IsEqual(Container(211).ListItem.Property(name),games) + !String.IsEqual(Container(211).ListItem.Property(name),favorites) + !String.IsEqual(Container(211).ListItem.Property(name),weather)</visible>
                 </control>
                 <control type="radiobutton" id="3129">
                     <label>  ∟$LOCALIZE[31132]</label>
                     <include>DefaultSettingButton</include>
                     <selected>!String.IsEmpty(Container(211).ListItem.Property(HideSubMenu))</selected>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList) | String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel)</visible>
                 </control>
 				<control type="button" id="312">
 					<include>DefaultSettingButton</include>
 					<label>$ADDON[script.skinshortcuts 32138]</label>
-					<label2/>
+					<label2>$INFO[Container(211).ListItem.Property(name)]</label2>
+					<onclick>RunScript(script.skinshortcuts,type=reset,menu=submenu)</onclick>
 					<visible/>
 				</control>
 				<control type="button" id="10005">
 					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[31336]</label>
-					<label2>$VAR[Label_SkinSetting_Widget]</label2>
+					<label>$LOCALIZE[31206]</label>
 					<onclick>Skin.Reset(widgetAnimation1)</onclick>
 					<onclick>Skin.Reset(widgetAnimation2)</onclick>
 					<onclick>Skin.Reset(widgetAnimation3)</onclick>
@@ -221,9 +221,9 @@
 					<onclick>Skin.Reset(widgetAnimation8)</onclick>
 					<onclick>Skin.Reset(widgetAnimation9)</onclick>
 					<onclick>SetProperty(WidgetVisibility,True,home)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>!String.IsEqual(Container(211).ListItem.Property(defaultID),libreelec)</visible>
+					<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
+					<visible>!String.IsEqual(Container(211).ListItem.Property(name),libreelec) + !String.IsEqual(Container(211).ListItem.Property(name),coreelec)</visible>
 				</control>
 				<control type="button" id="10006">
 					<label>$LOCALIZE[31298]</label>
@@ -280,7 +280,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,1)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14751">
@@ -309,7 +309,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,2)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14761">
@@ -338,7 +338,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,3)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14771">
@@ -367,7 +367,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,4)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14781">
@@ -396,7 +396,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,5)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14791">
@@ -425,7 +425,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,6)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14801">
@@ -454,7 +454,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,7)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14811">
@@ -483,7 +483,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,8)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetList)</visible>
 				</control>
 				<control type="button" id="14821">
@@ -512,7 +512,7 @@
 					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
 					<onclick>SetProperty(widgetID,9)</onclick>
 					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),PersonalWidgetPanel)</visible>
 				</control>
 				<control type="button" id="14831">
@@ -558,6 +558,38 @@
 				<height>3</height>
 				<texture colordiffuse="$VAR[SkinColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
+			<!--
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<width>750</width>
+				<left>45</left>
+				<top>60</top>
+				<control type="label">
+					<width>250</width>
+					<height>70</height>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<font>font09</font>
+					<label>Gruppe: $INFO[Window.Property(menuname)]</label>
+				</control>
+				<control type="label">
+					<width>250</width>
+					<height>70</height>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<font>font09</font>
+					<label>Name: $INFO[Container(211).ListItem.Property(name)]</label>
+				</control>
+				<control type="label">
+					<width>250</width>
+					<height>70</height>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<font>font09</font>
+					<label>Widget Label: $INFO[Container(211).ListItem.Property(menulabel)]</label>
+				</control>
+			</control>
+			-->
 		</control>
 		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[31306]" />
