@@ -12,7 +12,7 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders)</visible>
+				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -21,7 +21,7 @@
 				<height>255</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders)</visible>
+				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -31,7 +31,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>!Skin.HasSetting(show_borders)</visible>
+				<visible>Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<left>9</left>
@@ -145,7 +145,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
+				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<left>33</left>
@@ -155,7 +155,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
+				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="group">
 				<left>200</left>

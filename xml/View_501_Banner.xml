@@ -35,7 +35,7 @@
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(show_borders)</visible>
+							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -45,7 +45,7 @@
 							<texture background="true">dialogs/dialog-bg-nobo.png</texture>
 							<aspectratio aligny="center">scale</aspectratio>
 							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(show_borders)</visible>
+							<visible!Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -56,7 +56,7 @@
 							<aspectratio aligny="center">scale</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>!Skin.HasSetting(show_borders)</visible>
+							<visible>Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -166,7 +166,7 @@
 							<height>198</height>
 							<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 							<aspectratio aligny="center">scale</aspectratio>
-							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>18</left>
@@ -175,7 +175,7 @@
 							<height>202</height>
 							<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 							<aspectratio aligny="center">scale</aspectratio>
-							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>20</left>

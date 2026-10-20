@@ -12,19 +12,19 @@
 		<item name="movies" submenu="movies" background="special://skin/extras/home-images/movies.jpg">
 			<label>$LOCALIZE[342]</label>
 			<label2>Common Shortcut</label2>
-			<action>ActivateWindow(Videos,videodb://movies/titles/)</action>
+			<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
 			<icon>icons/sidemenu/movies.png</icon>
 		</item>
 		<item name="tvshows" submenu="tvshows" background="special://skin/extras/home-images/tvshows.jpg">
 			<label>$LOCALIZE[20343]</label>
 			<label2>Common Shortcut</label2>
 			<icon>icons/sidemenu/tv.png</icon>
-			<action>ActivateWindow(Videos,videodb://tvshows/titles/)</action>
+			<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
 		</item>
 		<item name="music" submenu="music" background="special://skin/extras/home-images/music.jpg">
 			<label>$LOCALIZE[2]</label>
 			<label2>Common Shortcut</label2>
-			<action>ActivateWindow(Music,musicdb://recentlyaddedalbums/)</action>
+			<action>ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</action>
 			<icon>icons/sidemenu/music.png</icon>
 			<action>ActivateWindow(Music,musicdb://artists/)</action>
 		</item>
@@ -32,7 +32,7 @@
 			<label>$LOCALIZE[20389]</label>
 			<label2>Common Shortcut</label2>
 			<icon>icons/sidemenu/musicvideos.png</icon>
-			<action>ActivateWindow(Videos,videodb://musicvideos/titles/)</action>
+			<action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
 		</item>
 		<item name="livetv" submenu="livetv" background="special://skin/extras/home-images/livetv.jpg">
 			<label>$LOCALIZE[19020]</label>

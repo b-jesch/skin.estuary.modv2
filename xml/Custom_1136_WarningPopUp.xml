@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1136">
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol always="true">2</defaultcontrol>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="group">
@@ -11,7 +11,7 @@
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1000" />
 				<param name="height" value="440" />
-				<param name="header_label" value="$LOCALIZE[31399]" />
+				<param name="header_label" value="$INFO[Window(home).Property(Popup_Header)]" />
 				<param name="header_id" value="1" />
 			</include>
 			<control type="textbox">
@@ -20,9 +20,10 @@
 				<width>940</width>
 				<height>300</height>
 				<shadowcolor>black</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
 				<pagecontrol>3000</pagecontrol>
 				<font>font13</font>
-				<label>$LOCALIZE[31398]</label>
+				<label>$INFO[Window(home).Property(Popup_Text)]</label>
 			</control>
 			<control type="grouplist" id="9000">
 				<orientation>horizontal</orientation>
@@ -30,31 +31,27 @@
 				<top>300</top>
 				<width>1000</width>
 				<align>center</align>
-				<control type="radiobutton" id="2">
+				<control type="button" id="2">
 					<width>430</width>
 					<height>100</height>
-					<label>$LOCALIZE[31400]</label>
+					<label>$LOCALIZE[106]</label>
 					<font>font25_title</font>
-					<textoffsetx>38</textoffsetx>
-					<textwidth>280</textwidth>
-					<onclick>Skin.ToggleSetting(FirstTimeRun2)</onclick>
-					<align>left</align>
-					<scroll>true</scroll>
+					<textoffsetx>30</textoffsetx>
+					<onclick>ClearProperty(PopUp_Text,home)</onclick>
+					<onclick>Dialog.Close(1136)</onclick>
+					<align>center</align>
 					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
-					<textureradioonfocus>buttons/status-on.png</textureradioonfocus>
-					<textureradioonnofocus>buttons/status-on.png</textureradioonnofocus>
-					<textureradioofffocus>buttons/status-off.png</textureradioofffocus>
-					<textureradiooffnofocus>buttons/status-off.png</textureradiooffnofocus>
-					<textureradiooffdisabled>buttons/status-off.png</textureradiooffdisabled>
-					<textureradioondisabled>buttons/status-on.png</textureradioondisabled>
 				</control>
 				<control type="button" id="3">
 					<width>430</width>
 					<height>100</height>
-					<label>$LOCALIZE[15067]</label>
+					<label>$LOCALIZE[107]</label>
 					<font>font25_title</font>
 					<textoffsetx>30</textoffsetx>
+					<onclick>ClearProperty(PopUp_Text,home)</onclick>
+					<onclick>Skin.ResetSettings</onclick>
+					<onclick>ReloadSkin()</onclick>
 					<onclick>Dialog.Close(1136)</onclick>
 					<align>center</align>
 					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>

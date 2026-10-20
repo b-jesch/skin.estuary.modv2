@@ -54,7 +54,9 @@ supports animated poster only.
 - new infolabels in PPI implemented/updated
 - colored flags updated (thanks to frodo19)
 - start upgrading to skinshortcus V3
-- implementing new labels (Piers) 
+- implementing new labels (Piers)
+- inverting some standard settings
+- skin reset added, popup warning dialog to skin full reset added 
 
 Previous changes see README.md of Omega Tree
  

@@ -12,7 +12,7 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders)</visible>
+				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<top>-10</top>
@@ -20,7 +20,7 @@
 				<height>380</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders)</visible>
+				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<top>-10</top>
@@ -29,7 +29,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>!Skin.HasSetting(show_borders)</visible>
+				<visible>Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<top>-16</top>
@@ -91,7 +91,7 @@
 					<aspectratio>stretch</aspectratio>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders)</visible>
+					<visible>!Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="image">
 					<top>0</top>
@@ -133,7 +133,7 @@
 					<aspectratio>stretch</aspectratio>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+					<visible>!Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				</control>
 				<control type="image">
 					<top>0</top>
@@ -141,7 +141,7 @@
 					<height>386</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+					<visible>!Skin.HasSetting(show_borders) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				</control>
 				<control type="image">
 					<top>-6</top>
@@ -269,7 +269,7 @@
 				<height>356</height>
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
 			</control>
 			<control type="image">
 				<top>18</top>
@@ -278,7 +278,7 @@
 				<height>360</height>
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + String.IsEqual(ListItem.DBType,musicvideo) + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -327,7 +327,7 @@
 					<aspectratio>stretch</aspectratio>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders)</visible>
+					<visible>!Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="image">
 					<top>10</top>
@@ -335,7 +335,7 @@
 					<height>277</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders)</visible>
+					<visible>!Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="image">
 					<top>10</top>
@@ -344,7 +344,7 @@
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>!Skin.HasSetting(show_borders)</visible>
+					<visible>Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="image">
 					<top>4</top>
@@ -443,7 +443,7 @@
 					<aspectratio>stretch</aspectratio>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders)</visible>
+					<visible>!Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="image">
 					<top>10</top>
@@ -451,7 +451,7 @@
 					<height>237</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(show_borders)</visible>
+					<visible>!Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="image">
 					<top>10</top>
@@ -460,7 +460,7 @@
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>!Skin.HasSetting(show_borders)</visible>
+					<visible>Skin.HasSetting(show_borders)</visible>
 				</control>
 				<control type="image">
 					<top>4</top>
@@ -568,7 +568,7 @@
 				<height>237</height>
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
-				<visible>!Window.IsVisible(Home) + Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
+				<visible>!Window.IsVisible(Home) + Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<top>28</top>
@@ -577,7 +577,7 @@
 				<height>241</height>
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<visible>!$PARAM[focused]</visible>
-				<visible>!Window.IsVisible(Home) + Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
+				<visible>!Window.IsVisible(Home) + Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="group">
 				<left>133</left>
@@ -647,7 +647,7 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>!Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -809,7 +809,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
 			</control>
 			<control type="image">
 				<left>33</left>
@@ -819,7 +819,7 @@
 				<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!$PARAM[focused]</visible>
-				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
+				<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Window.IsVisible(Home) + !Skin.HasSetting(show_borders) + !String.IsEqual(listitem.dbtype,genre)</visible>
 			</control>
 			<control type="group">
 				<left>135</left>
@@ -887,7 +887,7 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders)</visible>
+				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -896,7 +896,7 @@
 				<height>332</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
-				<visible>Skin.HasSetting(show_borders)</visible>
+				<visible>!Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -906,7 +906,7 @@
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>!Skin.HasSetting(show_borders)</visible>
+				<visible>Skin.HasSetting(show_borders)</visible>
 			</control>
 			<control type="image">
 				<left>9</left>

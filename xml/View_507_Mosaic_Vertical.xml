@@ -39,7 +39,7 @@
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(show_borders)</visible>
+							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -106,7 +106,7 @@
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-							<visible>Skin.HasSetting(show_borders)</visible>
+							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -124,7 +124,7 @@
 							<height>215</height>
 							<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 							<aspectratio>scale</aspectratio>
-							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Container.Content(musicvideos) + !Skin.HasSetting(show_borders)</visible>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Container.Content(musicvideos) + Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>28</left>
@@ -133,7 +133,7 @@
 							<height>219</height>
 							<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 							<aspectratio>scale</aspectratio>
-							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Container.Content(musicvideos) + Skin.HasSetting(show_borders)</visible>
+							<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Container.Content(musicvideos) + !Skin.HasSetting(show_borders)</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -212,7 +212,7 @@
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>Skin.HasSetting(show_borders)</visible>
+						<visible>!Skin.HasSetting(show_borders)</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -246,7 +246,7 @@
 						<height>300</height>
 						<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 						<aspectratio>scale</aspectratio>
-						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
+						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
 					</control>
 					<control type="image">
 						<left>28</left>
@@ -255,7 +255,7 @@
 						<height>304</height>
 						<texture background="true" colordiffuse="BFFFFFFF">colors/black.png</texture>
 						<aspectratio>scale</aspectratio>
-						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + Skin.HasSetting(show_borders)</visible>
+						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0) + !Skin.HasSetting(show_borders)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="310" width="210" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(use_posters)]">

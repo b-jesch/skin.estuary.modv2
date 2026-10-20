@@ -801,10 +801,12 @@
 					<textcolor>red</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="button" id="513">
+				<control type="button" id="514">
 					<label>$LOCALIZE[31729]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ResetSettings</onclick>
+					<onclick>SetProperty(Popup_Header,$LOCALIZE[31729],home)</onclick>
+					<onclick>SetProperty(Popup_Text,$LOCALIZE[31730],home)</onclick>
+					<onclick>ActivateWindow(1136)</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="800">
