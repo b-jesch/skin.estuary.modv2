@@ -60,7 +60,7 @@
 								<top>10</top>
 								<width>50</width>
 								<height>50</height>
-								<texture>$INFO[ListItem.Property(icon)]</texture>
+								<texture fallback="DefaultTVShows.png">$INFO[ListItem.Property(icon)]</texture>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="image">
@@ -110,7 +110,7 @@
 							<top>10</top>
 							<width>50</width>
 							<height>50</height>
-							<texture>$INFO[ListItem.Property(icon)]</texture>
+							<texture fallback="DefaultTVShows.png">$INFO[ListItem.Property(icon)]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">

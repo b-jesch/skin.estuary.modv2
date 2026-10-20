@@ -338,7 +338,7 @@
 						<width>690</width>
 						<aligny>bottom</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[VideoPlayer.SubtitleName,$LOCALIZE[21448] : [COLOR white],[/COLOR]]</label>
+						<label>$INFO[VideoPlayer.SubtitleName,$LOCALIZE[21448] : [COLOR white]] $INFO[VideoPlayer.SubtitlesLanguage,[UPPERCASE],[/UPPERCASE]] $INFO[VideoPlayer.SubtitleCodec,(,)][/COLOR]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>VideoPlayer.SubtitlesEnabled</visible>

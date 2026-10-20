@@ -219,7 +219,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<aspectratio>keep</aspectratio>
-					<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+					<texture fallback="DefaultTVShows.png">$INFO[ListItem.ChannelLogo]</texture>
 				</control>
 				<control type="label">
 					<height>60</height>
@@ -630,7 +630,7 @@
 						<width>80</width>
 						<height>70</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture fallback="DefaultTVShows2.png">$INFO[listitem.icon]</texture>
+						<texture fallback="DefaultTVShows2.png">$INFO[listitem.ChannelLogo]</texture>
 					</control>
 					<control type="progress">
 						<left>105</left>
@@ -712,7 +712,7 @@
 						<width>80</width>
 						<height>70</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture fallback="DefaultTVShows2.png">$INFO[listitem.icon]</texture>
+						<texture fallback="DefaultTVShows2.png">$INFO[listitem.ChannelLogo]</texture>
 					</control>
 					<control type="progress">
 						<left>105</left>
@@ -825,7 +825,7 @@
 						<width>130</width>
 						<height>100</height>
 						<aspectratio align="center">keep</aspectratio>
-						<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
+						<texture fallback="DefaultTVShows.png">$INFO[listitem.ChannelLogo]</texture>
 						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="label">
@@ -919,7 +919,7 @@
 						<width>130</width>
 						<height>100</height>
 						<aspectratio align="center">keep</aspectratio>
-						<texture fallback="DefaultTVShows.png">$INFO[listitem.icon]</texture>
+						<texture fallback="DefaultTVShows.png">$INFO[listitem.ChannelLogo]</texture>
 						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
 					<control type="label">
@@ -1038,7 +1038,7 @@
 						<top>28</top>
 						<width>100</width>
 						<height>70</height>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture>$INFO[ListItem.ChannelLogo]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
@@ -1146,7 +1146,7 @@
 						<top>28</top>
 						<width>100</width>
 						<height>70</height>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture>$INFO[ListItem.ChannelLogo]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>Skin.HasSetting(ShowPVRChannelNumbers)</visible>
 					</control>
@@ -1273,7 +1273,7 @@
 					<top>5</top>
 					<bottom>5</bottom>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+					<texture fallback="DefaultTVShows.png">$INFO[ListItem.ChannelLogo]</texture>
 					<fadetime>200</fadetime>
 					<visible>![Skin.HasSetting(background_showvideo) + Player.HasVideo] + String.IsEmpty(Control.GetLabel(24002))</visible>
 				</control>

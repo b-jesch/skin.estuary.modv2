@@ -144,7 +144,7 @@
 							<height>60</height>
 							<right>5</right>
 							<top>5</top>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
 							<bordersize>2</bordersize>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -172,7 +172,7 @@
 							<height>60</height>
 							<right>5</right>
 							<top>5</top>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
 							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 							<bordersize>2</bordersize>
 							<aspectratio>keep</aspectratio>

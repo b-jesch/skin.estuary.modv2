@@ -790,6 +790,22 @@
 					<include>DefaultSettingButton</include>
 					<onclick>ReloadSkin()</onclick>
 				</control>
+				<control type="label" id="900015">
+					<textoffsetx>45</textoffsetx>
+					<top>0</top>
+					<height>80</height>
+					<label>$LOCALIZE[31728]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="button" id="513">
+					<label>$LOCALIZE[31729]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ResetSettings</onclick>
+				</control>
 			</control>
 			<control type="grouplist" id="800">
 				<top>168</top>
@@ -1203,14 +1219,14 @@
 					<label>$LOCALIZE[31438]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(show_borders)</onclick>
-					<selected>Skin.HasSetting(show_borders)</selected>
+					<selected>!Skin.HasSetting(show_borders)</selected>
 				</control>
 				<control type="radiobutton" id="709">
 					<label>  ∟$LOCALIZE[31552]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(stationlogo_border)</onclick>
-					<selected>Skin.HasSetting(stationlogo_border)</selected>
-					<visible>Skin.HasSetting(show_borders)</visible>
+					<selected>!Skin.HasSetting(stationlogo_border)</selected>
+					<visible>!Skin.HasSetting(show_borders)</visible>
 				</control>
 				<include content="DefaultColorSettingButton">
 					<param name="visible">Skin.HasSetting(show_borders)</param>

@@ -570,7 +570,7 @@
 					<aligny>center</aligny>
 					<scroll>true</scroll>
 					<font>font09</font>
-					<label>Gruppe: $INFO[Window.Property(menuname)]</label>
+					<label>Gruppe: $INFO[Window.Property(menu)]</label>
 				</control>
 				<control type="label">
 					<width>250</width>

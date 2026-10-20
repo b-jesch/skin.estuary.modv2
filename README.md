@@ -53,6 +53,8 @@ supports animated poster only.
 - code cleanup pt.5/6/7/8
 - new infolabels in PPI implemented/updated
 - colored flags updated (thanks to frodo19)
+- start upgrading to skinshortcus V3
+- implementing new labels (Piers) 
 
 Previous changes see README.md of Omega Tree
  
