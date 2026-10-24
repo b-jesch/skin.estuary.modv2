@@ -1498,7 +1498,7 @@
 								<left>20</left>
 								<right>20</right>
 								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-								<label>$LOCALIZE[13271] $INFO[System.CPUUsage] [B]-[/B] $INFO[System.CPUTemperature]</label>
+								<label>$LOCALIZE[13271] $INFO[Control.GetLabel(62071),,%] [B]-[/B] $VAR[CPUCoreCountVar] cores [B]-[/B] $INFO[System.CPUTemperature]</label>
 								<scroll>true</scroll>
 								<visible>Integer.IsGreaterOrEqual()(System.CPUTemperature,1)</visible>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1512,13 +1512,13 @@
 								<left>20</left>
 								<right>20</right>
 								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-								<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+								<label>$LOCALIZE[13271] $INFO[Control.GetLabel(62071),,%] [B]-[/B] $VAR[CPUCoreCountVar] cores</label>
 								<scroll>true</scroll>
 								<visible>Integer.IsEqual(System.CPUTemperature,0)</visible>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
-							<control type="progress">
+							<control type="progress" id="62071">
 								<top>710</top>
 								<centerleft>50%</centerleft>
 								<width>1200</width>

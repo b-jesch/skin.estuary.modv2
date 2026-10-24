@@ -13,60 +13,91 @@
 				<height>550</height>
 				<orientation>vertical</orientation>
 				<control type="label" id="2">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(2),CPU0)</visible>
 				</control>
 				<control type="label" id="3">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(3),CPU0)</visible>
 				</control>
 				<control type="label" id="4">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(4),CPU0)</visible>
 				</control>
 				<control type="label" id="5">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(5),CPU0)</visible>
 				</control>
 				<control type="label" id="6">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(6),CPU0)</visible>
 				</control>
 				<control type="label" id="7">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(7),CPU0)</visible>
 				</control>
 				<control type="label" id="8">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(8),CPU0)</visible>
 				</control>
 				<control type="label" id="9">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(9),CPU0)</visible>
 				</control>
 				<control type="label" id="10">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(10),CPU0)</visible>
 				</control>
 				<control type="label" id="11">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(11),CPU0)</visible>
 				</control>
 				<control type="label" id="12">
-					<height>47</height>
+					<height>42</height>
 					<right>40</right>
 					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] | !String.Contains(Control.GetLabel(12),CPU0)</visible>
 				</control>
+			</control>
+			<control type="label">
+				<left>400</left>
+				<top>468</top>
+				<right>40</right>
+				<height>42</height>
+				<font>font13</font>
+				<label>$LOCALIZE[13271] $INFO[Control.GetLabel(62072),,%] [B]-[/B] $VAR[CPUCoreCountVar] cores</label>
+				<visible>[System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)] + [String.Contains(Control.GetLabel(2),CPU0) | String.Contains(Control.GetLabel(3),CPU0) | String.Contains(Control.GetLabel(4),CPU0) | String.Contains(Control.GetLabel(5),CPU0) | String.Contains(Control.GetLabel(6),CPU0) | String.Contains(Control.GetLabel(7),CPU0) | String.Contains(Control.GetLabel(8),CPU0) | String.Contains(Control.GetLabel(9),CPU0) | String.Contains(Control.GetLabel(10),CPU0) | String.Contains(Control.GetLabel(11),CPU0) | String.Contains(Control.GetLabel(12),CPU0)]</visible>
 			</control>
 			<control type="textbox" id="30">
 				<left>400</left>
@@ -107,11 +138,11 @@
 				<texture colordiffuse="$VAR[SkinColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="group">
-				<bottom>0</bottom>
-				<height>330</height>
+				<bottom>25</bottom>
+				<height>350</height>
 				<control type="image">
 					<left>360</left>
-					<top>20</top>
+					<top>10</top>
 					<right>0</right>
 					<height>2</height>
 					<texture colordiffuse="$VAR[SkinColorVar]" border="2">dialogs/separator-grey.png</texture>
@@ -128,12 +159,32 @@
 						<textoffsety>40</textoffsety>
 						<shadowcolor>black</shadowcolor>
 						<font>font27</font>
+						<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)]</visible>
+					</control>
+					<control type="label">
+						<description>CPU Text Compact</description>
+						<width>800</width>
+						<height>80</height>
+						<label>$LOCALIZE[13271] $INFO[Control.GetLabel(62072),,%] [B]-[/B] $VAR[CPUCoreCountVar] cores</label>
+						<aligny>top</aligny>
+						<textoffsety>40</textoffsety>
+						<shadowcolor>black</shadowcolor>
+						<font>font27</font>
+						<visible>System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)</visible>
 					</control>
 					<control type="progress">
 						<description>CPU BAR</description>
 						<width>800</width>
 						<height>16</height>
 						<info>System.CPUUsage</info>
+						<visible>![System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)]</visible>
+					</control>
+					<control type="progress" id="62072">
+						<description>CPU BAR Compact</description>
+						<width>800</width>
+						<height>16</height>
+						<info>System.CPUUsage</info>
+						<visible>System.HasCoreId(9) | String.Contains(System.CPUUsage,CPU9)</visible>
 					</control>
 					<control type="label">
 						<description>Memory Text</description>
