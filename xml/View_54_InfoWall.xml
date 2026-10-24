@@ -1304,7 +1304,7 @@
 		<param name="infolabels">false</param>
 		<definition>
 			<control type="group">
-				<visible>[String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(animatedposter))]</visible>
+				<visible>[String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(animatedposter))] | [String.IsEqual(listitem.dbtype,musicvideo) + !String.IsEmpty(ListItem.Art(thumb)) + [String.IsEmpty(ListItem.Art(poster)) | String.Contains(ListItem.Art(poster),theaudiodb)]]</visible>
 				<control type="image">
 					<left>13</left>
 					<top>-12</top>
@@ -1383,10 +1383,30 @@
 					<top>-1</top>
 					<width>272</width>
 					<height>270</height>
+					<texture fallback="DefaultMusicVideos.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>Skin.HasSetting(HideWidgetLabels) + [String.IsEqual(listitem.dbtype,musicvideo) + !String.IsEmpty(ListItem.Art(thumb)) + [String.IsEmpty(ListItem.Art(poster)) | String.Contains(ListItem.Art(poster),theaudiodb)]]</visible>
+				</control>
+				<control type="image">
+					<left>24</left>
+					<top>-1</top>
+					<width>272</width>
+					<height>270</height>
 					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
-					<visible>Skin.HasSetting(HideWidgetLabels) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+					<visible>Skin.HasSetting(HideWidgetLabels) + ![String.IsEqual(listitem.dbtype,musicvideo) + !String.IsEmpty(ListItem.Art(thumb)) + [String.IsEmpty(ListItem.Art(poster)) | String.Contains(ListItem.Art(poster),theaudiodb)]] + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>-10</top>
+					<width>290</width>
+					<height>400</height>
+					<texture fallback="DefaultMusicVideos.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>!Skin.HasSetting(HideWidgetLabels) + [String.IsEqual(listitem.dbtype,musicvideo) + !String.IsEmpty(ListItem.Art(thumb)) + [String.IsEmpty(ListItem.Art(poster)) | String.Contains(ListItem.Art(poster),theaudiodb)]]</visible>
 				</control>
 				<control type="image">
 					<left>15</left>
@@ -1396,7 +1416,7 @@
 					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
-					<visible>!Skin.HasSetting(HideWidgetLabels) + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
+					<visible>!Skin.HasSetting(HideWidgetLabels) + ![String.IsEqual(listitem.dbtype,musicvideo) + !String.IsEmpty(ListItem.Art(thumb)) + [String.IsEmpty(ListItem.Art(poster)) | String.Contains(ListItem.Art(poster),theaudiodb)]] + ![String.IsEqual(listitem.dbtype,genre) | String.IsEqual(listitem.dbtype,studio)]</visible>
 				</control>
 				<control type="image">
 					<left>54</left>
@@ -1420,7 +1440,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>![String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(animatedposter))]</visible>
+				<visible>![String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(animatedposter))] + ![String.IsEqual(listitem.dbtype,musicvideo) + !String.IsEmpty(ListItem.Art(thumb)) + [String.IsEmpty(ListItem.Art(poster)) | String.Contains(ListItem.Art(poster),theaudiodb)]]</visible>
 				<control type="image">
 					<left>9</left>
 					<top>-16</top>

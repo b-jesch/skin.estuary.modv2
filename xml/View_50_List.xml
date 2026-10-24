@@ -714,7 +714,7 @@
 							<param name="width" value="540" />
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="descending" />
-							<param name="item_label" value="$INFO[ListItem.Year,,[COLOR white]  -  ]$INFO[ListItem.Label][/COLOR]" />
+							<param name="item_label" value="$VAR[ListYearDashVar]$INFO[ListItem.Label][/COLOR]" />
 							<param name="textcolor" value="$VAR[SkinColorVar]" />
 							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
 						</include>

@@ -1225,7 +1225,7 @@
 							<param name="focused" value="true" />
 						</include>
 						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels) + Skin.HasSetting(hide_pubyear)">
-							<param name="single_label" value="$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]" />
+							<param name="single_label" value="$VAR[ListLabelVar]$VAR[WidgetYearVar]" />
 							<param name="focused" value="true" />
 							<param name="fallback_image" value="$PARAM[fallback_icon]" />
 						</include>
@@ -2400,7 +2400,7 @@
 							<param name="focused" value="false" />
 						</include>
 						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels) + Skin.HasSetting(hide_pubyear)">
-							<param name="single_label" value="$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]" />
+							<param name="single_label" value="$VAR[ListLabelVar]$VAR[WidgetYearVar]" />
 							<param name="focused" value="false" />
 							<param name="fallback_image" value="$PARAM[fallback_icon]" />
 						</include>
@@ -2427,7 +2427,7 @@
 							<param name="focused" value="true" />
 						</include>
 						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels) + Skin.HasSetting(hide_pubyear)">
-							<param name="single_label" value="$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]" />
+							<param name="single_label" value="$VAR[ListLabelVar]$VAR[WidgetYearVar]" />
 							<param name="focused" value="true" />
 							<param name="fallback_image" value="$PARAM[fallback_icon]" />
 						</include>
@@ -2491,7 +2491,7 @@
 							<param name="focused" value="false" />
 						</include>
 						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels) + Skin.HasSetting(hide_pubyear)">
-							<param name="single_label" value="$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]" />
+							<param name="single_label" value="$VAR[ListLabelVar]$VAR[WidgetYearVar]" />
 							<param name="focused" value="false" />
 							<param name="fallback_image" value="$PARAM[fallback_icon]" />
 						</include>
@@ -2522,7 +2522,7 @@
 							<param name="focused" value="true" />
 						</include>
 						<include content="InfoWallMusicLayout" condition="Skin.HasSetting(HideWidgetLabels) + Skin.HasSetting(hide_pubyear)">
-							<param name="single_label" value="$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]" />
+							<param name="single_label" value="$VAR[ListLabelVar]$VAR[WidgetYearVar]" />
 							<param name="focused" value="true" />
 							<param name="fallback_image" value="$PARAM[fallback_icon]" />
 						</include>
