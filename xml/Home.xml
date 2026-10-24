@@ -1356,7 +1356,7 @@
 							<height>120%</height>
 						</control>
 						<control type="group">
-							<top>-60</top>
+							<top>-20</top>
 							<control type="label">
 								<top>150</top>
 								<align>center</align>
@@ -1411,7 +1411,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>350</top>
+								<top>338</top>
 								<align>center</align>
 								<height>30</height>
 								<textoffsety>10</textoffsety>
@@ -1426,7 +1426,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>410</top>
+								<top>392</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font14</font>
@@ -1439,7 +1439,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>450</top>
+								<top>428</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font14</font>
@@ -1452,7 +1452,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>490</top>
+								<top>464</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font14</font>
@@ -1465,7 +1465,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>530</top>
+								<top>500</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font14</font>
@@ -1478,7 +1478,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>610</top>
+								<top>560</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font36_title</font>
@@ -1491,7 +1491,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>660</top>
+								<top>606</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font14</font>
@@ -1505,7 +1505,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>660</top>
+								<top>606</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font14</font>
@@ -1519,7 +1519,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="progress" id="62071">
-								<top>710</top>
+								<top>652</top>
 								<centerleft>50%</centerleft>
 								<width>1200</width>
 								<height>16</height>
@@ -1528,7 +1528,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>736</top>
+								<top>678</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font14</font>
@@ -1541,7 +1541,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="progress">
-								<top>786</top>
+								<top>724</top>
 								<centerleft>50%</centerleft>
 								<width>1200</width>
 								<height>16</height>
@@ -1550,7 +1550,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="label">
-								<top>846</top>
+								<top>756</top>
 								<align>center</align>
 								<height>30</height>
 								<font>font36_title</font>
@@ -1563,7 +1563,7 @@
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 							</control>
 							<control type="textbox">
-								<top>940</top>
+								<top>878</top>
 								<align>center</align>
 								<height>100</height>
 								<left>20</left>
@@ -1581,7 +1581,7 @@
 							<left>50</left>
 							<right>50</right>
 							<align>justify</align>
-							<top>825</top>
+							<top>782</top>
 							<visible>![[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets)]</visible>
 							<control type="group">
 								<width>300</width>
@@ -1675,7 +1675,7 @@
 							<left>0</left>
 							<right>510</right>
 							<align>justify</align>
-							<top>825</top>
+							<top>782</top>
 							<visible>[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)</visible>
 							<control type="group">
 								<width>300</width>
@@ -1752,7 +1752,7 @@
 							<left>0</left>
 							<right>135</right>
 							<align>justify</align>
-							<top>825</top>
+							<top>782</top>
 							<visible>[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)</visible>
 							<control type="group">
 								<width>300</width>
