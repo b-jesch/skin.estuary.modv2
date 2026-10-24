@@ -115,6 +115,19 @@
 					<height>65</height>
 					<align>left</align>
 					<scroll>true</scroll>
+					<visible>!Skin.HasSetting(hide_pubyear) | String.IsEmpty(ListItem.Year)</visible>
+				</control>
+				<control type="label">
+					<top>-14</top>
+					<left>16</left>
+					<right>20</right>
+					<label>$VAR[ListLabelVar]$VAR[WidgetYearVar]</label>
+					<font>font52_title</font>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+					<height>65</height>
+					<align>left</align>
+					<scroll>true</scroll>
+					<visible>Skin.HasSetting(hide_pubyear) + !String.IsEmpty(ListItem.Year)</visible>
 				</control>
 				<control type="label">
 					<top>55</top>
