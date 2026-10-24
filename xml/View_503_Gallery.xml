@@ -192,7 +192,7 @@
                                 <align>center</align>
                                 <aligny>center</aligny>
                                 <font>font30_title</font>
-                                <label>$VAR[ListLabelVar]$INFO[ListItem.Year, (,)]</label>
+                                <label>$VAR[ListLabelVar]$VAR[WidgetYearVar]</label>
                                 <scroll>true</scroll>
                                 <visible>String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,set)</visible>
                             </control>

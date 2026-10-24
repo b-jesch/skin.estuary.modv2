@@ -148,7 +148,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]</label>
+							<label>$VAR[ListYearVar]</label>
 							<font>font12</font>
 							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 							<visible>Container.Content(tvshows)</visible>
@@ -284,7 +284,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]</label>
+							<label>$VAR[ListYearVar]</label>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
 							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -372,7 +372,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Style), / ,]</label>
+							<label>$VAR[ListYearVar]$INFO[ListItem.Property(Album_Style), / ,]</label>
 							<font>font12</font>
 							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
@@ -416,7 +416,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Style), / ,]</label>
+							<label>$VAR[ListYearVar]$INFO[ListItem.Property(Album_Style), / ,]</label>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
 							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
@@ -511,7 +511,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]</label>
+							<label>$VAR[ListYearVar]</label>
 							<font>font12</font>
 							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						</control>
@@ -593,7 +593,7 @@
 							<height>40</height>
 							<right>30</right>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]</label>
+							<label>$VAR[ListYearVar]</label>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
 							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>

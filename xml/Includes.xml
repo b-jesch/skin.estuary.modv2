@@ -607,7 +607,7 @@
 		</definition>
 	</include>
 	<include name="InfoList">
-		<param name="item_label">$INFO[ListItem.Year,,[COLOR white]  -  ]$INFO[ListItem.Label,,[/COLOR]]</param>
+		<param name="item_label">$VAR[ListYearDashVar]$INFO[ListItem.Label,,[/COLOR]]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
 		<param name="item_height">40</param>
 		<param name="bottom">100</param>
