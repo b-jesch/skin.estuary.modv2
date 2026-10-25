@@ -56,7 +56,8 @@ supports animated poster only.
 - start upgrading to skinshortcus V3
 - implementing new labels (Piers)
 - inverting some standard settings
-- skin reset added, popup warning dialog to skin full reset added 
+- skin reset added, popup warning dialog to skin full reset added
+- smaller changes in DialogProcessInfo, SettingsSystemInfo
 
 Previous changes see README.md of Omega Tree
  

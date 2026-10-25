@@ -157,7 +157,7 @@
 					<width>690</width>
 					<height>35</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.CpuFrequency,$LOCALIZE[13284] [COLOR white],[/COLOR]]</label>
+					<label>$INFO[System.CpuFrequency,$LOCALIZE[13284] [COLOR white],] $INFO[Window(home).Property(numCPUCores), - , $LOCALIZE[31731]][/COLOR]</label>
 					<font>font12</font>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 				    <visible>!System.Platform.Android</visible>
@@ -318,7 +318,7 @@
 						<width>690</width>
 						<aligny>bottom</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[VideoPlayer.AudioLanguageEx,$LOCALIZE[21447] : [COLOR white]]$INFO[VideoPlayer.Audioname, - ,][/COLOR]</label>
+						<label>$INFO[VideoPlayer.AudioLanguageEx,$LOCALIZE[21447] : [COLOR white],[/COLOR]] $INFO[VideoPlayer.Audioname,[COLOR white] - ,[/COLOR]]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>!String.IsEqual(VideoPlayer.AudioLanguageEx,VideoPlayer.AudioName)</visible>
@@ -338,7 +338,7 @@
 						<width>690</width>
 						<aligny>bottom</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[VideoPlayer.SubtitleName,$LOCALIZE[21448] : [COLOR white]] $INFO[VideoPlayer.SubtitlesLanguage,[UPPERCASE],[/UPPERCASE]] $INFO[VideoPlayer.SubtitleCodec,(,)][/COLOR]</label>
+						<label>$INFO[VideoPlayer.SubtitleName,$LOCALIZE[21448] : [COLOR white]] $INFO[VideoPlayer.SubtitlesLanguage,[UPPERCASE],[/UPPERCASE]] $INFO[VideoPlayer.SubtitleCodec,(,)[/COLOR]]</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>VideoPlayer.SubtitlesEnabled</visible>

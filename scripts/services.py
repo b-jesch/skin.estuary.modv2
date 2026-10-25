@@ -66,6 +66,7 @@ if __name__ == '__main__':
     while not monitor.abortRequested():
         if monitor.waitForAbort(2): break
         cores = [int(core) for core in re.findall('(\\d+)%', xbmc.getInfoLabel('System.CpuUsage'))]
+        xbmcgui.Window(10000).setProperty('numCPUCores', str(len(cores)))
         if len(cores) > 0: xbmcgui.Window(10000).setProperty('avgCPU', '{}%'.format(sum(cores) // len(cores)))
         else: xbmcgui.Window(10000).setProperty('avgCPU', 'n/a')
 
