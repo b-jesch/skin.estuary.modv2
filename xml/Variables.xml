@@ -27,6 +27,51 @@
 		<value condition="System.Platform.Linux">Linux</value>
 		<value>unknown</value>
 	</variable>
+	<variable name="CPUCoreCountVar">
+		<value condition="String.Contains(System.CPUUsage,#31:) | String.Contains(System.CPUUsage,CPU31)">32</value>
+		<value condition="String.Contains(System.CPUUsage,#30:) | String.Contains(System.CPUUsage,CPU30)">31</value>
+		<value condition="String.Contains(System.CPUUsage,#29:) | String.Contains(System.CPUUsage,CPU29)">30</value>
+		<value condition="String.Contains(System.CPUUsage,#28:) | String.Contains(System.CPUUsage,CPU28)">29</value>
+		<value condition="String.Contains(System.CPUUsage,#27:) | String.Contains(System.CPUUsage,CPU27)">28</value>
+		<value condition="String.Contains(System.CPUUsage,#26:) | String.Contains(System.CPUUsage,CPU26)">27</value>
+		<value condition="String.Contains(System.CPUUsage,#25:) | String.Contains(System.CPUUsage,CPU25)">26</value>
+		<value condition="String.Contains(System.CPUUsage,#24:) | String.Contains(System.CPUUsage,CPU24)">25</value>
+		<value condition="String.Contains(System.CPUUsage,#23:) | String.Contains(System.CPUUsage,CPU23)">24</value>
+		<value condition="String.Contains(System.CPUUsage,#22:) | String.Contains(System.CPUUsage,CPU22)">23</value>
+		<value condition="String.Contains(System.CPUUsage,#21:) | String.Contains(System.CPUUsage,CPU21)">22</value>
+		<value condition="String.Contains(System.CPUUsage,#20:) | String.Contains(System.CPUUsage,CPU20)">21</value>
+		<value condition="String.Contains(System.CPUUsage,#19:) | String.Contains(System.CPUUsage,CPU19)">20</value>
+		<value condition="String.Contains(System.CPUUsage,#18:) | String.Contains(System.CPUUsage,CPU18)">19</value>
+		<value condition="String.Contains(System.CPUUsage,#17:) | String.Contains(System.CPUUsage,CPU17)">18</value>
+		<value condition="String.Contains(System.CPUUsage,#16:) | String.Contains(System.CPUUsage,CPU16)">17</value>
+		<value condition="String.Contains(System.CPUUsage,#15:) | String.Contains(System.CPUUsage,CPU15)">16</value>
+		<value condition="String.Contains(System.CPUUsage,#14:) | String.Contains(System.CPUUsage,CPU14)">15</value>
+		<value condition="String.Contains(System.CPUUsage,#13:) | String.Contains(System.CPUUsage,CPU13)">14</value>
+		<value condition="String.Contains(System.CPUUsage,#12:) | String.Contains(System.CPUUsage,CPU12)">13</value>
+		<value condition="String.Contains(System.CPUUsage,#11:) | String.Contains(System.CPUUsage,CPU11)">12</value>
+		<value condition="String.Contains(System.CPUUsage,#10:) | String.Contains(System.CPUUsage,CPU10)">11</value>
+		<value condition="String.Contains(System.CPUUsage,#9:) | String.Contains(System.CPUUsage,CPU9)">10</value>
+		<value condition="String.Contains(System.CPUUsage,#8:) | String.Contains(System.CPUUsage,CPU8)">9</value>
+		<value condition="String.Contains(System.CPUUsage,#7:) | String.Contains(System.CPUUsage,CPU7)">8</value>
+		<value condition="String.Contains(System.CPUUsage,#6:) | String.Contains(System.CPUUsage,CPU6)">7</value>
+		<value condition="String.Contains(System.CPUUsage,#5:) | String.Contains(System.CPUUsage,CPU5)">6</value>
+		<value condition="String.Contains(System.CPUUsage,#4:) | String.Contains(System.CPUUsage,CPU4)">5</value>
+		<value condition="String.Contains(System.CPUUsage,#3:) | String.Contains(System.CPUUsage,CPU3)">4</value>
+		<value condition="String.Contains(System.CPUUsage,#2:) | String.Contains(System.CPUUsage,CPU2)">3</value>
+		<value condition="String.Contains(System.CPUUsage,#1:) | String.Contains(System.CPUUsage,CPU1)">2</value>
+		<value>1</value>
+	</variable>
+	<variable name="CPUUsageCompactVar">
+		<value condition="!String.IsEmpty(System.CPUUsage(used.percent)) + !String.Contains(System.CPUUsage(used.percent),CPU)">$INFO[System.CPUUsage(used.percent)]</value>
+		<value condition="String.Contains(System.CPUUsage,CPU) + !String.IsEmpty(System.CoreUsage(0))">$INFO[System.CoreUsage(0)]</value>
+		<value>$INFO[System.CPUUsage]</value>
+	</variable>
+	<variable name="CPUUsageHomeValueVar">
+		<value condition="!String.IsEmpty(System.CPUUsage(used.percent))">$INFO[System.CPUUsage(used.percent)]</value>
+		<value condition="!String.IsEmpty(System.CoreUsage(0)) + !String.Contains(System.CoreUsage(0),CPU)">$INFO[System.CoreUsage(0)]</value>
+		<value condition="!String.IsEmpty(System.CoreUsage(1)) + !String.Contains(System.CoreUsage(1),CPU)">$INFO[System.CoreUsage(1)]</value>
+		<value>N/A</value>
+	</variable>
 	<variable name="BrowseVar">
 		<value condition="String.IsEqual(Skin.String(widget_action),31590)">never</value>
 		<value>auto</value>
