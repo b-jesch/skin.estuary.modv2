@@ -607,7 +607,7 @@
 				<onright>9010</onright>
 				<onup/>
 				<ondown>105</ondown>
-				<visible>!Control.IsVisible(313)</visible>
+				<visible>!Control.IsVisible(313) + !String.IsEmpty(Control.GetLabel(312).index(1))</visible>
 				<itemlayout width="500" height="60">
 					<control type="image">
 						<left>10</left>
