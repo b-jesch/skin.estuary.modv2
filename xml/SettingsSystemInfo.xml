@@ -123,7 +123,7 @@
 						<description>CPU Text</description>
 						<width>800</width>
 						<height>80</height>
-						<label>$LOCALIZE[13271] $INFO[System.CPUUsage] $INFO[Window(home).Property(numCPUCores), - , $LOCALIZE[31731]]</label>
+						<label>$LOCALIZE[13271] $INFO[Window(home).Property(avgCPU)] $INFO[Window(home).Property(numCPUCores), - , $LOCALIZE[31731]]</label>
 						<aligny>top</aligny>
 						<textoffsety>40</textoffsety>
 						<shadowcolor>black</shadowcolor>
