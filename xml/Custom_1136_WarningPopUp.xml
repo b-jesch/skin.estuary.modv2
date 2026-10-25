@@ -37,8 +37,13 @@
 					<label>$LOCALIZE[106]</label>
 					<font>font25_title</font>
 					<textoffsetx>30</textoffsetx>
+
+					<!-- Action sequence for button "No" -->
+					<onclick>ClearProperty(PopUp_Header,home)</onclick>
 					<onclick>ClearProperty(PopUp_Text,home)</onclick>
 					<onclick>Dialog.Close(1136)</onclick>
+					<!-- End of action sequence -->
+
 					<align>center</align>
 					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
@@ -49,10 +54,15 @@
 					<label>$LOCALIZE[107]</label>
 					<font>font25_title</font>
 					<textoffsetx>30</textoffsetx>
+
+					<!-- Action sequence for button "Yes" -->
+					<onclick>ClearProperty(PopUp_Header,home)</onclick>
 					<onclick>ClearProperty(PopUp_Text,home)</onclick>
 					<onclick>Skin.ResetSettings</onclick>
 					<onclick>ReloadSkin()</onclick>
 					<onclick>Dialog.Close(1136)</onclick>
+					<!-- End of action sequence -->
+
 					<align>center</align>
 					<texturefocus border="40" colordiffuse="$VAR[SkinColorVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>

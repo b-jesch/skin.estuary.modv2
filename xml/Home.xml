@@ -897,7 +897,6 @@
 							<param name="widget_header_focus" value="$INFO[Container(16200).ListItem.Artist, | , ]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="16200"/>
-							<param name="widget_limit" value="10"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(hide_randommusicvideo)">
 							<param name="content_path" value="special://skin/playlists/random_musicvideos.xsp"/>
@@ -928,7 +927,7 @@
 					</include>
 					<control type="grouplist" id="4001">
 						<include>WidgetGroupListCommon</include>
-						<include content="WidgetListCategoriesSmall">
+						<include content="WidgetListCategories">
 							<param name="content_path" value="sources://pictures/"/>
 							<param name="widget_header" value="$LOCALIZE[31375]"/>
 							<param name="widget_header_focus" value="$INFO[Container(4100).ListItem.Label, | ]"/>
