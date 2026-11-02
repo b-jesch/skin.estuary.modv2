@@ -724,6 +724,13 @@
 					<onclick>Skin.ToggleSetting(DisableThemes)</onclick>
 					<selected>!Skin.HasSetting(DisableThemes)</selected>
 				</control>
+				<control type="radiobutton" id="515">
+					<label>  ∟$LOCALIZE[31732]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(DisableThemeAnimations)</onclick>
+					<selected>!Skin.HasSetting(DisableThemeAnimations)</selected>
+					<enable>!Skin.HasSetting(DisableThemes)</enable>
+				</control>				
 				<control type="button" id="510">
 					<label>$LOCALIZE[31670]</label>
 					<label2>$VAR[ShowVideoResolutionVar]</label2>
