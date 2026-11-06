@@ -28,7 +28,7 @@
                     <orientation>horizontal</orientation>
                     <viewtype label="$LOCALIZE[31205]">bigwide</viewtype>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
-                    <visible>$PARAM[visible]</visible>
+                    <visible>$PARAM[visible] + !Container.Content(videoversions)</visible>
                     <itemlayout height="700" width="88">
                         <control type="group">
                             <left>0</left>

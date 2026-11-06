@@ -142,6 +142,7 @@
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Duration,$LOCALIZE[2050] : ]</label>
+						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="115" width="880">
@@ -225,6 +226,7 @@
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Duration,$LOCALIZE[2050] : ]</label>
+						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 				</focusedlayout>
 			</control>

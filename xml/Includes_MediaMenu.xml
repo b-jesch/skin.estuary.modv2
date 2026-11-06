@@ -440,7 +440,7 @@
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 				<onclick>SetFocus(50)</onclick>
 				<onclick>ActivateWindow(1131)</onclick>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(images)</visible>
+				<visible>!Container.Content(videoversions) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(images)]</visible>
 			</control>
 			<control type="button" id="6053">
 				<include>MediaMenuItemsCommon</include>

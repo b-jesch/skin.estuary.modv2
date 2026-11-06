@@ -145,7 +145,7 @@
 				<onup>$PARAM[list_id]</onup>
 				<ondown>$PARAM[list_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(games) | Container.Content(musicvideos) | Window.IsActive(MyPlaylist.xml)</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(games) | Container.Content(musicvideos) | Container.Content(videoversions) | Window.IsActive(MyPlaylist.xml)</visible>
 				<focusedlayout height="list_item_height">
 					<control type="image">
 						<left>0</left>
@@ -172,7 +172,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<font>font27</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.VideoversionName, - ,]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 					</control>
@@ -184,7 +184,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<font>font27</font>
-						<label>$VAR[ListLabelVar]</label>
+						<label>$VAR[ListLabelVar]$INFO[ListItem.VideoversionName, - ,]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 					</control>
@@ -227,7 +227,7 @@
 						<bottom>0</bottom>
 						<aligny>center</aligny>
 						<font>font27</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.VideoversionName, - ,]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 					</control>
@@ -238,7 +238,7 @@
 						<bottom>0</bottom>
 						<aligny>center</aligny>
 						<font>font27</font>
-						<label>$VAR[ListLabelVar]</label>
+						<label>$VAR[ListLabelVar]$INFO[ListItem.VideoversionName, - ,]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 					</control>
