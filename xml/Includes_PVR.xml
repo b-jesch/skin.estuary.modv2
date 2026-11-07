@@ -1273,17 +1273,7 @@
 					<top>5</top>
 					<bottom>5</bottom>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultTVShows.png">$INFO[ListItem.ChannelLogo]</texture>
-					<fadetime>200</fadetime>
-					<visible>![Skin.HasSetting(background_showvideo) + Player.HasVideo] + String.IsEmpty(Control.GetLabel(24002))</visible>
-				</control>
-				<control type="image" id="24002">
-					<left>5</left>
-					<right>5</right>
-					<top>5</top>
-					<bottom>5</bottom>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$VAR[PVRArtworksVar]</texture>
+					<texture fallback="DefaultTVShows.png">$VAR[PVRArtworksVar]</texture>
 					<visible>![Skin.HasSetting(background_showvideo) + Player.HasVideo]</visible>
 					<fadetime>200</fadetime>
 				</control>

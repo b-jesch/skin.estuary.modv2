@@ -44,6 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 22.0+piers ###
+- .2
+  * Assignment of channel logos and EPG preview images in the EPG guide fixed
+  * color.xbt updated
+
+
 - .1
   * disabling theme animations toggle added
   * fix visibility of media flags in playe OSD

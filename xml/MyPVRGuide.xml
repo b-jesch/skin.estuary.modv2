@@ -103,17 +103,6 @@
 								<aligny>center</aligny>
 								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(11)</visible>
-							</control>
-							<control type="label">
-								<top>-4</top>
-								<left>5</left>
-								<width>358</width>
-								<align>center</align>
-								<aligny>center</aligny>
-								<scroll>true</scroll>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>!Control.HasFocus(11)</visible>
 							</control>
 						</focusedlayout>
 					</control>
