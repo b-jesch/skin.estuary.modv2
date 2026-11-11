@@ -164,29 +164,40 @@
 						<visible>Control.HasFocus($PARAM[list_id])</visible>
 						<visible>Skin.HasSetting(EnableGradientColor)</visible>
 					</control>
-					<control type="label">
-						<left>70</left>
-						<right>70</right>
-						<top>0</top>
-						<bottom>0</bottom>
-						<aligny>center</aligny>
-						<scroll>true</scroll>
-						<font>font27</font>
-						<label>$INFO[ListItem.Label]$INFO[ListItem.VideoversionName, - ,]</label>
-						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+					<control type="group">
+						<visible>Container.Content(videoversions) + ListItem.HasVideoVersions</visible>
+						<control type="label">
+							<left>70</left>
+							<height>40</height>
+							<top>0</top>
+							<right>70</right>
+							<aligny>top</aligny>
+							<font>font27</font>
+							<label>[B]$VAR[ListLabelVar][/B]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<height>45</height>
+							<bottom>0</bottom>
+							<right>70</right>
+							<aligny>bottom</aligny>
+							<font>font27</font>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.VideoCodec, ● [UPPERCASE],[/UPPERCASE]]$INFO[ListItem.VideoAspect, ● ,]$INFO[ListItem.HDRType, ● ,]$VAR[ListItemAudioCodecVar, ● ,]$VAR[ListItemAudioChannelsVar, ● ,]$INFO[ListItem.AudioLanguage, ● [UPPERCASE],[/UPPERCASE]]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+							<visible>ListItem.HasVideoversions</visible>
+						</control>
 					</control>
 					<control type="label">
 						<left>70</left>
-						<right>70</right>
 						<top>0</top>
 						<bottom>0</bottom>
+						<right>70</right>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
-						<font>font27</font>
-						<label>$VAR[ListLabelVar]$INFO[ListItem.VideoversionName, - ,]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-						<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+						<visible>![Container.Content(videoversions) + ListItem.HasVideoVersions]</visible>
 					</control>
 					<control type="label">
 						<top>0</top>
@@ -219,28 +230,39 @@
 						<visible>!Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 				</focusedlayout>
-				<itemlayout height="list_item_height">
-					<control type="label">
-						<left>70</left>
-						<right>70</right>
-						<top>0</top>
-						<bottom>0</bottom>
-						<aligny>center</aligny>
-						<font>font27</font>
-						<label>$INFO[ListItem.Label]$INFO[ListItem.VideoversionName, - ,]</label>
-						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+				<itemlayout height="list_item_height"  condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)">
+					<control type="group">
+						<visible>Container.Content(videoversions) + ListItem.HasVideoVersions</visible>
+						<control type="label">
+							<left>70</left>
+							<height>40</height>
+							<top>0</top>
+							<right>70</right>
+							<aligny>top</aligny>
+							<font>font27</font>
+							<label>[B]$VAR[ListLabelVar][/B]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
+						<control type="label">
+							<left>70</left>
+							<height>45</height>
+							<bottom>0</bottom>
+							<right>70</right>
+							<aligny>bottom</aligny>
+							<font>font27</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.VideoCodec, ● [UPPERCASE],[/UPPERCASE]]$INFO[ListItem.VideoAspect, ● ,]$INFO[ListItem.HDRType, ● ,]$VAR[ListItemAudioCodecVar, ● ,]$VAR[ListItemAudioChannelsVar, ● ,]$INFO[ListItem.AudioLanguage, ● [UPPERCASE],[/UPPERCASE]]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
 					</control>
 					<control type="label">
 						<left>70</left>
-						<right>70</right>
 						<top>0</top>
 						<bottom>0</bottom>
+						<right>70</right>
 						<aligny>center</aligny>
-						<font>font27</font>
-						<label>$VAR[ListLabelVar]$INFO[ListItem.VideoversionName, - ,]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
-						<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+						<visible>![Container.Content(videoversions) + ListItem.HasVideoVersions]</visible>
 					</control>
 					<control type="label">
 						<left>20</left>

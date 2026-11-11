@@ -44,6 +44,10 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 22.0+piers ###
+- .3
+  * Video version view fixed and info label extended (list/extended list/fanart view).
+
+
 - .2
   * Assignment of channel logos and EPG preview images in the EPG guide fixed
   * color.xbt updated
@@ -51,7 +55,7 @@ supports animated poster only.
 
 - .1
   * disabling theme animations toggle added
-  * fix visibility of media flags in playe OSD
+  * fix visibility of media flags in player OSD
   * smaller fixes in DialogProcessInfo, SettingsSystemInfo
   * Picture widget updated
   * Video version implemented in listview, extended listview,  fanart view

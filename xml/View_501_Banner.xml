@@ -45,7 +45,7 @@
 							<texture background="true">dialogs/dialog-bg-nobo.png</texture>
 							<aspectratio aligny="center">scale</aspectratio>
 							<bordersize>20</bordersize>
-							<visible!Skin.HasSetting(show_borders)</visible>
+							<visible>!Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
 							<left>0</left>

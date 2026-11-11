@@ -1238,7 +1238,7 @@
 					<visible>!Skin.HasSetting(show_borders)</visible>
 				</control>
 				<include content="DefaultColorSettingButton">
-					<param name="visible">Skin.HasSetting(show_borders)</param>
+					<param name="visible">!Skin.HasSetting(show_borders)</param>
 					<param name="id">710</param>
 					<param name="label">  ∟$LOCALIZE[31221]</param>
 					<param name="label2">$VAR[Label_SkinSetting_BorderColor]</param>

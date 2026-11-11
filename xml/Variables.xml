@@ -2190,7 +2190,7 @@
     	<value condition="!String.IsEmpty(MusicPlayer.Property(Album_Description))">$INFO[MusicPlayer.Property(Album_Description)]</value>
     	<value condition="!String.IsEmpty(MusicPlayer.Property(Artist_Description))">$INFO[MusicPlayer.Property(Artist_Description)]</value>
     </variable>
-    <variable name="LabelAudioCodecVar">
+    <variable name="PlayerAudioCodecVar">
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,he_aac)">AAC HE</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,he_aac_v2)">AAC HE V.2</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_ssr)">AAC SSR</value>
@@ -2221,7 +2221,38 @@
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,wmav2)">WMA</value>
 		<value>$INFO[VideoPlayer.AudioCodec,[UPPERCASE],[/UPPERCASE]]</value>
     </variable>
-    <variable name="LabelAudioChannelsVar">
+    <variable name="ListItemAudioCodecVar">
+		<value condition="String.IsEqual(ListItem.AudioCodec,he_aac)">AAC HE</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,he_aac_v2)">AAC HE V.2</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,aac_ssr)">AAC SSR</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,aac_latm)">AAC LATM</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,aac_lc)">AAC LC</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,aac_ltp)">AAC LTP</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dca)">DTS</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,ac3)">Dolby Digital</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dolbydigital)">Dolby Digital</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,aif)">AIFF</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,aifc)">AIFF</value>
+		<value condition="String.Contains(ListItem.AudioCodec,dtshd_ma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">DTS-X [FN]</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma)">DTS-HD MA</value>
+		<value condition="String.Contains(ListItem.AudioCodec,dtshdma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">DTS-X [FN]</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtsma)">DTS-HD MA</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS-HD HRA</value>
+		<value condition="String.Contains(ListItem.AudioCodec,truehd_atmos)">Dolby Digital with Atmos</value>
+		<value condition="String.Contains(ListItem.AudioCodec,truehd)">DD True HD</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma)">DTS-HD MA</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">DD Plus with Atmos</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,eac3)">Dolby Digital Plus</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,pcm_bluray)">PCM</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s16le)">PCM</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s24le)">PCM</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,mp3float)">MP3</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,wavpack)">WAVP</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,wmapro)">WMA-PRO</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,wmav2)">WMA</value>
+		<value>$INFO[ListItem.AudioCodec,[UPPERCASE],[/UPPERCASE]]</value>
+    </variable>	
+    <variable name="PlayerAudioChannelsVar">
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1)">1.0</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2)">2.0</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,3)">2.1</value>
@@ -2232,6 +2263,17 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">7.1</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,10)">9.1</value>
     </variable>
+    <variable name="ListItemAudioChannelsVar">
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,1)">1.0</value>
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,2)">2.0</value>
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,3)">2.1</value>
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,4)">4.0</value>
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,5)">5.0</value>
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,6)">5.1</value>
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,7)">6.1</value>
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,8)">7.1</value>
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,10)">9.1</value>
+    </variable>	
 	<variable name="LabelHdrTypeVar">
 		<value condition="String.IsEqual(VideoPlayer.HdrType,dolbyvision)">Dolby Vision</value>
 		<value condition="!String.IsEmpty(VideoPlayer.HdrType)">$INFO[VideoPlayer.HdrType,[UPPERCASE],[/UPPERCASE]]</value>

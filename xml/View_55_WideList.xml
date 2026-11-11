@@ -116,15 +116,38 @@
 						<height>32</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 					</control>
+					<control type="group">
+						<visible>ListItem.HasVideoVersions</visible>
+						<control type="label">
+							<left>105</left>
+							<height>40</height>
+							<top>0</top>
+							<right>40</right>
+							<aligny>top</aligny>
+							<font>font27</font>
+							<label>[B]$VAR[ListLabelVar][/B]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
+						<control type="label">
+							<left>105</left>
+							<height>45</height>
+							<bottom>0</bottom>
+							<right>40</right>
+							<aligny>bottom</aligny>
+							<font>font27</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.VideoCodec, ● [UPPERCASE],[/UPPERCASE]]$INFO[ListItem.VideoAspect, ● ,]$INFO[ListItem.HDRType, ● ,]$VAR[ListItemAudioCodecVar, ● ,]$VAR[ListItemAudioChannelsVar, ● ,]$INFO[ListItem.AudioLanguage, ● [UPPERCASE],[/UPPERCASE]]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
+					</control>
 					<control type="label">
 						<left>105</left>
 						<top>0</top>
 						<bottom>0</bottom>
 						<right>40</right>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						<visible>!ListItem.HasVideoVersions</visible>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -145,6 +168,29 @@
 						<height>32</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 					</control>
+					<control type="group">
+						<visible>ListItem.HasVideoVersions</visible>
+						<control type="label">
+							<left>105</left>
+							<height>40</height>
+							<top>0</top>
+							<right>40</right>
+							<aligny>top</aligny>
+							<font>font27</font>
+							<label>[B]$VAR[ListLabelVar][/B]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
+						<control type="label">
+							<left>105</left>
+							<height>45</height>
+							<bottom>0</bottom>
+							<right>40</right>
+							<aligny>bottom</aligny>
+							<font>font27</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.VideoCodec, ● [UPPERCASE],[/UPPERCASE]]$INFO[ListItem.VideoAspect, ● ,]$INFO[ListItem.HDRType, ● ,]$VAR[ListItemAudioCodecVar, ● ,]$VAR[ListItemAudioChannelsVar, ● ,]$INFO[ListItem.AudioLanguage, ● [UPPERCASE],[/UPPERCASE]]</label>
+							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						</control>
+					</control>
 					<control type="label">
 						<left>105</left>
 						<top>0</top>
@@ -153,6 +199,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						<visible>!ListItem.HasVideoVersions</visible>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -198,6 +245,7 @@
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						<visible>!ListItem.HasVideoVersions</visible>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(playlists) | Container.Content()">
