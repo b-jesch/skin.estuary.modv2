@@ -482,11 +482,13 @@
 	<variable name="LogoVar">
 		<value condition="System.HasAddon(service.libreelec.settings)">icons/le-logo.png</value>
 		<value condition="System.HasAddon(service.coreelec.settings)">icons/ce-logo.png</value>
+		<value condition="System.Platform.Android">icons/android-logo.png</value>
 		<value>icons/logo.png</value>
 	</variable>
 	<variable name="LogoTextVar">
 		<value condition="System.HasAddon(service.libreelec.settings)">icons/le-logo-text.png</value>
 		<value condition="System.HasAddon(service.coreelec.settings)">icons/ce-logo-text.png</value>
+		<value condition="System.Platform.Android">icons/android-logo-text.png</value>
 		<value>icons/logo-text.png</value>
 	</variable>
 		<variable name="LogoColorVar">

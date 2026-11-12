@@ -32,7 +32,7 @@
 					<top>115</top>
 					<height>644</height>
 					<fadetime>800</fadetime>
-					<texture border="2">$VAR[FanartAnimated]</texture>
+					<texture border="2" fallback="special://skin/extras/home-images/movies.jpg">$VAR[FanartAnimated]</texture>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -49,7 +49,7 @@
 					<top>474</top>
 					<width>218</width>
 					<height>300</height>
-					<texture background="true">$VAR[IconWallPosterVar]</texture>
+					<texture background="true" fallback="special://skin/extras/home-images/Thumbnail-dark.png">$VAR[IconWallPosterVar]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordertexture>colors/white.png</bordertexture>
 					<bordersize>2</bordersize>
@@ -179,7 +179,7 @@
 					<top>779</top>
 					<bottom>95</bottom>
 					<align>justify</align>
-					<label>$VAR[PlotSpoilerVar]</label>
+					<label fallback="[CR][CR][B]$LOCALIZE[19055][/B]">$VAR[PlotSpoilerVar]</label>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<autoscroll delay="10000" time="5000" repeat="10000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!ListItem.IsCollection</visible>

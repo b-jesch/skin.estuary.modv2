@@ -1574,12 +1574,6 @@
 					<onclick condition="String.IsEqual(Skin.String(EpisodesDisplay),31681)">Skin.SetString(EpisodesDisplay,31578)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(EpisodesDisplay),31578)">Skin.SetString(EpisodesDisplay,31680)</onclick>
 				</control>
-				<!--<control type="radiobutton" id="10017">
-					<label>$LOCALIZE[31364]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(greyedout_watched_home)</onclick>
-					<selected>Skin.HasSetting(greyedout_watched_home)</selected>
-				</control>-->
 				<control type="radiobutton" id="10020">
 					<label>$LOCALIZE[31397]</label>
 					<include>DefaultSettingButton</include>
