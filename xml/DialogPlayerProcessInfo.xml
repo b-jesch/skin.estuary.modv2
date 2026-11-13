@@ -728,44 +728,45 @@
 					<height>40</height>
 				</control>
 				<control type="group">
-					<height>30</height>
-					<width>710</width>
+					<height>35</height>
+					<width>690</width>
 					<visible>System.GetBool(pvrplayback.signalquality) + [Integer.IsGreater(PVR.ActStreamSignal,0) | !Skin.HasSetting(disable_pvr_zerovalues)]</visible>
 					<control type="label">
-						<width>350</width>
-						<height>30</height>
+						<width>300</width>
 						<aligny>bottom</aligny>
-						<label>$LOCALIZE[31715] : $INFO[PVR.ActStreamSignal,[COLOR white],[/COLOR]]</label>
+						<label>$LOCALIZE[31715] / $LOCALIZE[19009] :</label>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 					</control>
 					<control type="progress">
-						<top>15</top>
-						<left>360</left>
-						<width>350</width>
-						<height>10</height>
+						<description>PVR signal strength</description>
+						<left>260</left>
+						<width>150</width>
+						<top>12</top>
+						<height>14</height>
 						<info>PVR.ActStreamProgrSignal</info>
 					</control>
-				</control>
-				<control type="group">
-					<top>5</top>
-					<height>30</height>
-					<width>710</width>
-					<visible>System.GetBool(pvrplayback.signalquality) + [Integer.IsGreater(PVR.ActStreamSnr,0) | !Skin.HasSetting(disable_pvr_zerovalues)]</visible>
 					<control type="label">
-						<width>350</width>
-						<height>30</height>
-						<aligny>bottom</aligny>
-						<label>$LOCALIZE[19009] : $INFO[PVR.ActStreamSnr,[COLOR white],[/COLOR]]</label>
-						<font>font12</font>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<top>1</top>
+						<left>420</left>
+						<width>80</width>
+						<label>$INFO[PVR.ActStreamSignal]</label>
+						<font>font10</font>
 					</control>
 					<control type="progress">
-						<top>15</top>
-						<left>360</left>
-						<width>350</width>
-						<height>10</height>
-						<info>PVR.ActStreamProgrSnr</info>
+						<description>PVR SNR</description>
+						<left>490</left>
+						<width>150</width>
+						<top>12</top>
+						<height>14</height>
+						<info>$INFO[PVR.ActStreamProgSnr</info>
+					</control>
+					<control type="label">
+						<top>1</top>
+						<left>650</left>
+						<width>80</width>
+						<label>$INFO[PVR.ActStreamSnr]</label>
+						<font>font10</font>
 					</control>
 				</control>
 			</control>

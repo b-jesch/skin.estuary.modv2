@@ -1423,6 +1423,12 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
+				<control type="radiobutton" id="10023">
+					<label>$LOCALIZE[31733]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(ShowDistriLogos)</selected>
+					<onclick>Skin.ToggleSetting(ShowDistriLogos)</onclick>
+				</control>
 				<control type="radiobutton" id="10024">
 					<label>$LOCALIZE[31416]</label>
 					<include>DefaultSettingButton</include>

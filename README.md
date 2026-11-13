@@ -44,6 +44,11 @@ supports animated poster only.
 ![](resources/setup_ap.png)
 
 ### 22.0+piers ###
+- .4
+  * Android Distributionlogo implemented
+  * Default- / Distributionlogo toggle switch implemented
+
+
 - .3
   * Video version view fixed and info label extended (list/extended list/fanart view).
 
@@ -62,19 +67,19 @@ supports animated poster only.
 
 
 - .0 
-* start development for Kodi 22 (Piers)
-* code cleanup pt.1/2/3/4
-* Power menu updated
-* Mediaflags to piers updated
-* Romanian language strings added
-* code cleanup pt.5/6/7/8
-* new infolabels in PPI implemented/updated
-* colored flags updated (thanks to frodo19)
-* start upgrading to skinshortcus V3
-* implementing new labels (Piers)
-* inverting some standard settings
-* skin reset added, popup warning dialog to skin full reset added
-* smaller changes in DialogProcessInfo, SettingsSystemInfo
+  * start development for Kodi 22 (Piers)
+  * code cleanup pt.1/2/3/4
+  * Power menu updated
+  * Mediaflags to piers updated
+  * Romanian language strings added
+  * code cleanup pt.5/6/7/8
+  * new infolabels in PPI implemented/updated
+  * colored flags updated (thanks to frodo19)
+  * start upgrading to skinshortcus V3
+  * implementing new labels (Piers)
+  * inverting some standard settings
+  * skin reset added, popup warning dialog to skin full reset added
+  * smaller changes in DialogProcessInfo, SettingsSystemInfo
 
 Previous changes see README.md of Omega Tree
  
